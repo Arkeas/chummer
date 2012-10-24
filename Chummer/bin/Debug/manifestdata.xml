@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+	<file>
+		<name>chummer.exe</name>
+		<type>Application</type>
+		<version>0.0.0.420</version>
+		<description>Chummer</description>
+		<notes>- Chummer Application</notes>
+	</file>
+	<file>
+		<name>sheets/Commlinks.xsl</name>
+		<type>Character Sheets</type>
+		<version>-997</version>
+		<description>Commlinks Sheet</description>
+		<notes>- Commlinks sheet based on the one created by ChinaGreenElvis</notes>
+	</file>
+	<file>
+		<name>sheets/ConditionMonitor.xslt</name>
+		<type>Character Sheets</type>
+		<version>-998</version>
+		<description>Condition Monitor Base</description>
+		<notes>- Condition Monitor sheet</notes>
+	</file>
+	<file>
+		<name>sheets/Game Master Summary.xsl</name>
+		<type>Character Sheets</type>
+		<version>-918</version>
+		<description>Game Master Summary Character Sheet</description>
+		<notes>- Character sheet that displays a Game Master's summary version of multiple characters</notes>
+	</file>
+	<file>
+		<name>sheets/Shadowrun 4 Base.xslt</name>
+		<type>Character Sheets</type>
+		<version>-895</version>
+		<description>Shadowrun 4 Character Sheet Base</description>
+		<notes>- Character sheet based on the Shadowrun 4 sheet</notes>
+	</file>
+	<file>
+		<name>sheets/Shadowrun 4.xsl</name>
+		<type>Character Sheets</type>
+		<version>-911</version>
+		<description>Shadowrun 4 Character Sheet</description>
+		<notes>- Character sheet based on the Shadowrun 4 sheet</notes>
+	</file>
+	<file>
+		<name>sheets/Shadowrun 4 (Grouped Skills by Name).xsl</name>
+		<type>Character Sheets</type>
+		<version>-911</version>
+		<description>Shadowrun 4 Character Sheet (Grouped Skills by Name)</description>
+		<notes>- Character sheet based on the Shadowrun 4 sheet</notes>
+	</file>
+	<file>
+		<name>sheets/Shadowrun 4 (Grouped Skills by Rating).xsl</name>
+		<type>Character Sheets</type>
+		<version>-911</version>
+		<description>Shadowrun 4 Character Sheet (Grouped Skills by Rating)</description>
+		<notes>- Character sheet based on the Shadowrun 4 sheet</notes>
+	</file>
+	<file>
+		<name>sheets/Text-Only.xsl</name>
+		<type>Character Sheets</type>
+		<version>-912</version>
+		<description>Text-Only Character Sheet</description>
+		<notes>- Text-only version of a character sheet</notes>
+	</file>
+	<file>
+		<name>sheets/Vehicle Block.xsl</name>
+		<type>Character Sheets</type>
+		<version>-994</version>
+		<description>Vehicle Stat Block</description>
+		<notes>- Vehicle Stat Block</notes>
+	</file>
+	<file>
+		<name>sheets/fr/Text-Only.xsl</name>
+		<type>French Character Sheets</type>
+		<version>-912</version>
+		<description>Text-Only Character Sheet</description>
+		<notes>- Text-only version of a character sheet</notes>
+	</file>
+	<file>
+		<name>sheets/de/Commlinks.xsl</name>
+		<type>German Character Sheets</type>
+		<version>-997</version>
+		<description>Commlinks Sheet</description>
+		<notes>- Commlinks sheet based on the one created by ChinaGreenElvis</notes>
+	</file>
+	<file>
+		<name>sheets/de/ConditionMonitor.xslt</name>
+		<type>German Character Sheets</type>
+		<version>-998</version>
+		<description>Condition Monitor Base</description>
+		<notes>- Condition Monitor sheet</notes>
+	</file>
+	<file>
+		<name>sheets/de/Game Master Summary.xsl</name>
+		<type>German Character Sheets</type>
+		<version>-918</version>
+		<description>Game Master Summary Character Sheet</description>
+		<notes>- Character sheet that displays a Game Master's summary version of multiple characters</notes>
+	</file>
+	<file>
+		<name>sheets/de/Shadowrun 4 Base.xslt</name>
+		<type>German Character Sheets</type>
+		<version>-895</version>
+		<description>Shadowrun 4 Character Sheet Base</description>
+		<notes>- Character sheet based on the Shadowrun 4 sheet</notes>
+	</file>
+	<file>
+		<name>sheets/de/Shadowrun 4.xsl</name>
+		<type>German Character Sheets</type>
+		<version>-911</version>
+		<description>Shadowrun 4 Character Sheet</description>
+		<notes>- Character sheet based on the Shadowrun 4 sheet</notes>
+	</file>
+	<file>
+		<name>sheets/de/Shadowrun 4 (Grouped Skills by Name).xsl</name>
+		<type>German Character Sheets</type>
+		<version>-911</version>
+		<description>Shadowrun 4 Character Sheet (Grouped Skills by Name)</description>
+		<notes>- Character sheet based on the Shadowrun 4 sheet</notes>
+	</file>
+	<file>
+		<name>sheets/de/Shadowrun 4 (Grouped Skills by Rating).xsl</name>
+		<type>German Character Sheets</type>
+		<version>-911</version>
+		<description>Shadowrun 4 Character Sheet (Grouped Skills by Rating)</description>
+		<notes>- Character sheet based on the Shadowrun 4 sheet</notes>
+	</file>
+	<file>
+		<name>sheets/de/Text-Only.xsl</name>
+		<type>German Character Sheets</type>
+		<version>-912</version>
+		<description>Text-Only Character Sheet</description>
+		<notes>- Text-only version of a character sheet</notes>
+	</file>
+	<file>
+		<name>sheets/de/Vehicle Block.xsl</name>
+		<type>German Character Sheets</type>
+		<version>-994</version>
+		<description>Vehicle Stat Block</description>
+		<notes>- Vehicle Stat Block</notes>
+	</file>
+	<file>
+		<name>export/Squad Manager.xsl</name>
+		<type>Export Template</type>
+		<version>-998</version>
+		<description>Squad Manager</description>
+		<notes>- Squad Manager (http://stauder-online.de/sr/english.htm)</notes>
+	</file>
+	<file>
+		<name>data/armor.xml</name>
+		<type>Data Files</type>
+		<version>-885</version>
+		<description>Armor</description>
+		<notes>- Armor data file</notes>
+	</file>
+	<file>
+		<name>data/bioware.xml</name>
+		<type>Data Files</type>
+		<version>-908</version>
+		<description>Bioware</description>
+		<notes>- Bioware data file</notes>
+	</file>
+	<file>
+		<name>data/books.xml</name>
+		<type>Data Files</type>
+		<version>-911</version>
+		<description>Books</description>
+		<notes>- Books data file</notes>
+	</file>
+	<file>
+		<name>data/critterpowers.xml</name>
+		<type>Data Files</type>
+		<version>-918</version>
+		<description>Critter Powers</description>
+		<notes>- Critter Powers data file</notes>
+	</file>
+	<file>
+		<name>data/critters.xml</name>
+		<type>Data Files</type>
+		<version>-906</version>
+		<description>Critters</description>
+		<notes>- Critters data file</notes>
+	</file>
+	<file>
+		<name>data/cyberware.xml</name>
+		<type>Data Files</type>
+		<version>-897</version>
+		<description>Cyberware</description>
+		<notes>- Cyberware data file</notes>
+	</file>
+	<file>
+		<name>data/echoes.xml</name>
+		<type>Data Files</type>
+		<version>-921</version>
+		<description>Echoes</description>
+		<notes>- Echoes data file</notes>
+	</file>
+	<file>
+		<name>data/gear.xml</name>
+		<type>Data Files</type>
+		<version>-835</version>
+		<description>Gear</description>
+		<notes>- Gear data file</notes>
+	</file>
+	<file>
+		<name>data/improvements.xml</name>
+		<type>Data Files</type>
+		<version>-993</version>
+		<description>Improvements</description>
+		<notes>- Improvements data file</notes>
+	</file>
+	<file>
+		<name>data/lifestyles.xml</name>
+		<type>Data Files</type>
+		<version>-924</version>
+		<description>Lifestyles</description>
+		<notes>- Lifestyles data file</notes>
+	</file>
+	<file>
+		<name>data/martialarts.xml</name>
+		<type>Data Files</type>
+		<version>-925</version>
+		<description>Martial Arts</description>
+		<notes>- Martial Arts data file</notes>
+	</file>
+	<file>
+		<name>data/mentors.xml</name>
+		<type>Data Files</type>
+		<version>-923</version>
+		<description>Mentor Spirits</description>
+		<notes>- Mentor Spirits data file</notes>
+	</file>
+	<file>
+		<name>data/metamagic.xml</name>
+		<type>Data Files</type>
+		<version>-923</version>
+		<description>Metamagic</description>
+		<notes>- Metamagic data file</notes>
+	</file>
+	<file>
+		<name>data/metatypes.xml</name>
+		<type>Data Files</type>
+		<version>-916</version>
+		<description>Metatypes</description>
+		<notes>- Metatypes data file</notes>
+	</file>
+	<file>
+		<name>data/packs.xml</name>
+		<type>Data Files</type>
+		<version>-921</version>
+		<description>PACKS</description>
+		<notes>- PACKS data file</notes>
+	</file>
+	<file>
+		<name>data/paragons.xml</name>
+		<type>Data Files</type>
+		<version>-925</version>
+		<description>Paragons</description>
+		<notes>- Paragons data file</notes>
+	</file>
+	<file>
+		<name>data/powers.xml</name>
+		<type>Data Files</type>
+		<version>-905</version>
+		<description>Powers</description>
+		<notes>- Powers data file</notes>
+	</file>
+	<file>
+		<name>data/programs.xml</name>
+		<type>Data Files</type>
+		<version>-919</version>
+		<description>Programs</description>
+		<notes>- Programs data file</notes>
+	</file>
+	<file>
+		<name>data/qualities.xml</name>
+		<type>Data Files</type>
+		<version>-882</version>
+		<description>Qualities</description>
+		<notes>- Qualities data file</notes>
+	</file>
+	<file>
+		<name>data/ranges.xml</name>
+		<type>Data Files</type>
+		<version>-925</version>
+		<description>Ranges</description>
+		<notes>- Weapon Ranges data file</notes>
+	</file>
+	<file>
+		<name>data/skills.xml</name>
+		<type>Data Files</type>
+		<version>-915</version>
+		<description>Skills</description>
+		<notes>- Skills data file</notes>
+	</file>
+	<file>
+		<name>data/spells.xml</name>
+		<type>Data Files</type>
+		<version>-919</version>
+		<description>Spells</description>
+		<notes>- Spells data file</notes>
+	</file>
+	<file>
+		<name>data/streams.xml</name>
+		<type>Data Files</type>
+		<version>-923</version>
+		<description>Streams</description>
+		<notes>- Streams data file</notes>
+	</file>
+	<file>
+		<name>data/traditions.xml</name>
+		<type>Data Files</type>
+		<version>-923</version>
+		<description>Traditions</description>
+		<notes>- Magic Traditions data file</notes>
+	</file>
+	<file>
+		<name>data/vehicles.xml</name>
+		<type>Data Files</type>
+		<version>-880</version>
+		<description>Vehicles</description>
+		<notes>- Vehicles data file</notes>
+	</file>
+	<file>
+		<name>data/vessels.xml</name>
+		<type>Data Files</type>
+		<version>-999</version>
+		<description>Vessels</description>
+		<notes>- Vessels data file</notes>
+	</file>
+	<file>
+		<name>data/weapons.xml</name>
+		<type>Data Files</type>
+		<version>-861</version>
+		<description>Weapons</description>
+		<notes>- Weapons data file</notes>
+	</file>
+</manifest>

@@ -1,0 +1,1860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chummer>
+	<version>-908</version>
+	<grades>
+		<grade>
+			<name>Standard</name>
+			<ess>1</ess>
+			<cost>1</cost>
+			<avail>0</avail>
+			<source>SR4</source>
+		</grade>
+		<grade>
+			<name>Standard (Second-Hand)</name>
+			<ess>1.2</ess>
+			<cost>0.5</cost>
+			<avail>-1</avail>
+			<source>AU</source>
+		</grade>
+		<grade>
+			<name>Alphaware</name>
+			<ess>0.8</ess>
+			<cost>2</cost>
+			<avail>0</avail>
+			<source>SR4</source>
+		</grade>
+		<grade>
+			<name>Betaware</name>
+			<ess>0.7</ess>
+			<cost>4</cost>
+			<avail>0</avail>
+			<source>SR4</source>
+		</grade>
+		<grade>
+			<name>Deltaware</name>
+			<ess>0.5</ess>
+			<cost>10</cost>
+			<avail>0</avail>
+			<source>SR4</source>
+		</grade>
+	</grades>
+	<categories>
+		<category>Basic</category>
+		<category>Biosculpting</category>
+		<category>Cosmetic</category>
+		<category>Cultured</category>
+		<category>Endosymbiont</category>
+		<category>Genetech: Genetic Restoration</category>
+		<category>Genetech: Phenotype Adjustments</category>
+		<category>Genetech: Transgenics</category>
+		<category>Genetic Infusions</category>
+		<category>Organs and Limbs</category>
+		<category>Symbiont</category>
+	</categories>
+	<biowares>
+		<bioware>
+			<name>Essence Hole</name>
+			<category>Basic</category>
+			<rating>600</rating>
+			<ess>Rating * 0.01</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>0</cost>
+			<source>SR4</source>
+			<page>0</page>
+		</bioware>
+		<bioware>
+			<name>Adrenaline Pump</name>
+			<category>Basic</category>
+			<rating>3</rating>
+			<ess>Rating * 0.75</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 6)F</avail>
+			<cost>Rating * 30000</cost>
+			<source>SR4</source>
+			<page>345</page>
+		</bioware>
+		<bioware>
+			<name>Bone Density Augmentation</name>
+			<category>Basic</category>
+			<rating>4</rating>
+			<ess>Rating * 0.3</ess>
+			<capacity>0</capacity>
+			<avail>12</avail>
+			<cost>Rating * 20000</cost>
+			<bonus>
+				<damageresistance>Rating</damageresistance>
+				<unarmeddv>Rating-1</unarmeddv>
+				<unarmeddvphysical />
+			</bonus>
+			<source>SR4</source>
+			<page>345</page>
+		</bioware>
+		<bioware>
+			<name>Booster</name>
+			<category>Endosymbiont</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>16</avail>
+			<cost>30000</cost>
+			<source>AU</source>
+			<page>71</page>
+		</bioware>
+		<bioware>
+			<name>Carapace</name>
+			<category>Symbiont</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>16</avail>
+			<cost>30000</cost>
+			<bonus>
+				<armor>
+					<b>1</b>
+					<i>1</i>
+				</armor>
+			</bonus>
+			<source>AU</source>
+			<page>71</page>
+		</bioware>
+		<bioware>
+			<name>Cat's Eyes</name>
+			<category>Basic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>7500</cost>
+			<source>SR4</source>
+			<page>345</page>
+		</bioware>
+		<bioware>
+			<name>Cerebral Booster</name>
+			<category>Cultured</category>
+			<rating>3</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>Rating * 6</avail>
+			<cost>Rating * 10000</cost>
+			<bonus>
+				<specificattribute>
+					<name>LOG</name>
+					<val>Rating</val>
+				</specificattribute>
+			</bonus>
+			<source>SR4</source>
+			<page>347</page>
+		</bioware>
+		<bioware>
+			<name>Chameleon Skin</name>
+			<category>Cosmetic</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>4000</cost>
+			<source>AU</source>
+			<page>62</page>
+		</bioware>
+		<bioware>
+			<name>Chemical Gland</name>
+			<category>Basic</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>12</avail>
+			<cost>Variable(30000+)</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>AU</source>
+			<page>68</page>
+		</bioware>
+		<bioware>
+			<name>Chemical Gland: Exhalation Spray</name>
+			<category>Basic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>5000</cost>
+			<source>AU</source>
+			<page>68</page>
+		</bioware>
+		<bioware>
+			<name>Chemical Gland: Internal Release</name>
+			<category>Basic</category>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>1000</cost>
+			<source>AU</source>
+			<page>68</page>
+		</bioware>
+		<bioware>
+			<name>Chemical Gland: Spit</name>
+			<category>Basic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>3000</cost>
+			<source>AU</source>
+			<page>68</page>
+		</bioware>
+		<bioware>
+			<name>Chemical Gland: Weapon Reservoir</name>
+			<category>Basic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>2000</cost>
+			<source>AU</source>
+			<page>68</page>
+		</bioware>
+		<bioware>
+			<name>Clean Metabolism</name>
+			<category>Cosmetic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>2500</cost>
+			<source>AU</source>
+			<page>62</page>
+		</bioware>
+		<bioware>
+			<name>Chloroplash Skin</name>
+			<category>Cosmetic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>2500</cost>
+			<source>AU</source>
+			<page>62</page>
+		</bioware>
+		<bioware>
+			<name>Damage Compensators</name>
+			<category>Cultured</category>
+			<rating>12</rating>
+			<ess>Rating * 0.1</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 3)F</avail>
+			<cost>Rating * 15000</cost>
+			<bonus>
+				<conditionmonitor>
+					<thresholdoffset>Rating</thresholdoffset>
+				</conditionmonitor>
+			</bonus>
+			<source>SR4</source>
+			<page>347</page>
+		</bioware>
+		<bioware>
+			<name>Dietware</name>
+			<category>Cosmetic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>2500</cost>
+			<source>AU</source>
+			<page>62</page>
+		</bioware>
+		<bioware>
+			<name>Digester</name>
+			<category>Endosymbiont</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>12</avail>
+			<cost>20000</cost>
+			<source>AU</source>
+			<page>71</page>
+		</bioware>
+		<bioware>
+			<name>Digestive Expansion</name>
+			<category>Basic</category>
+			<ess>0.5</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>20000</cost>
+			<source>SR4</source>
+			<page>345</page>
+		</bioware>
+		<bioware>
+			<name>Dynamic Chameleon Skin</name>
+			<category>Cosmetic</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>7000</cost>
+			<source>AU</source>
+			<page>62</page>
+		</bioware>
+		<bioware>
+			<name>Echolocation</name>
+			<category>Basic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>15000</cost>
+			<source>AU</source>
+			<page>63</page>
+		</bioware>
+		<bioware>
+			<name>Elastic Joints</name>
+			<category>Basic</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>10</avail>
+			<cost>15000</cost>
+			<bonus>
+				<specificskill>
+					<name>Escape Artist</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>64</page>
+		</bioware>
+		<bioware>
+			<name>Electroreceptor</name>
+			<category>Endosymbiont</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>12</avail>
+			<cost>20000</cost>
+			<source>AU</source>
+			<page>71</page>
+		</bioware>
+		<bioware>
+			<name>Enhanced Articulation</name>
+			<category>Basic</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>12</avail>
+			<cost>40000</cost>
+			<bonus>
+				<skillarticulation>
+					<bonus>1</bonus>
+				</skillarticulation>
+			</bonus>
+			<source>SR4</source>
+			<page>345</page>
+		</bioware>
+		<bioware>
+			<name>Enhanced Pheromone Receptors</name>
+			<category>Basic</category>
+			<rating>3</rating>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>10</avail>
+			<cost>Rating * 5000</cost>
+			<source>AU</source>
+			<page>64</page>
+		</bioware>
+		<bioware>
+			<name>Extended Volume</name>
+			<category>Basic</category>
+			<rating>3</rating>
+			<ess>Rating * 0.1</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>Rating * 4000</cost>
+			<source>AU</source>
+			<page>64</page>
+		</bioware>
+		<bioware>
+			<name>False Front</name>
+			<category>Basic</category>
+			<rating>4</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 4)R</avail>
+			<cost>Rating * 12000</cost>
+			<bonus>
+				<specificskill precedence="2">
+					<name>Disguise</name>
+					<bonus>Rating</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>68</page>
+		</bioware>
+		<bioware>
+			<name>False Front with Mimic Option</name>
+			<category>Basic</category>
+			<rating>4</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 4) + 4R</avail>
+			<cost>(Rating * 12000) + 10000</cost>
+			<bonus>
+				<specificskill precedence="2">
+					<name>Disguise</name>
+					<bonus>Rating</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>69</page>
+		</bioware>
+		<bioware>
+			<name>Gecko Hands</name>
+			<category>Basic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>12000</cost>
+			<source>AU</source>
+			<page>64</page>
+		</bioware>
+		<bioware>
+			<name>Gills</name>
+			<category>Basic</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>12000</cost>
+			<source>AU</source>
+			<page>65</page>
+		</bioware>
+		<bioware>
+			<name>Glow</name>
+			<category>Symbiont</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>16</avail>
+			<cost>40000</cost>
+			<source>AU</source>
+			<page>71</page>
+		</bioware>
+		<bioware>
+			<name>Hair Growth</name>
+			<category>Cosmetic</category>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>500</cost>
+			<source>AU</source>
+			<page>62</page>
+		</bioware>
+		<bioware>
+			<name>Hand and Foot Webbing</name>
+			<category>Basic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>6000</cost>
+			<bonus>
+				<specificskill>
+					<name>Swimming</name>
+					<bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>65</page>
+		</bioware>
+		<bioware>
+			<name>Hearing Enhancement</name>
+			<category>Basic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>5000</cost>
+			<source>AU</source>
+			<page>65</page>
+		</bioware>
+		<bioware>
+			<name>Mender</name>
+			<category>Endosymbiont</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>16</avail>
+			<cost>40000</cost>
+			<source>AU</source>
+			<page>71</page>
+		</bioware>
+		<bioware>
+			<name>Metabolic Arrester</name>
+			<category>Basic</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>10000</cost>
+			<source>AU</source>
+			<page>66</page>
+		</bioware>
+		<bioware>
+			<name>Mnemonic Enhancer</name>
+			<category>Cultured</category>
+			<rating>3</rating>
+			<ess>Rating * 0.1</ess>
+			<capacity>0</capacity>
+			<avail>Rating * 5</avail>
+			<cost>Rating * 7500</cost>
+			<bonus>
+				<skillcategory>
+					<name>Academic</name>
+					<bonus>Rating</bonus>
+				</skillcategory>
+				<skillcategory>
+					<name>Language</name>
+					<bonus>Rating</bonus>
+				</skillcategory>
+				<skillcategory>
+					<name>Professional</name>
+					<bonus>Rating</bonus>
+				</skillcategory>
+				<skillcategory>
+					<name>Street</name>
+					<bonus>Rating</bonus>
+				</skillcategory>
+			</bonus>
+			<source>SR4</source>
+			<page>347</page>
+		</bioware>
+		<bioware>
+			<name>Muscle Augmentation</name>
+			<category>Basic</category>
+			<rating>4</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 5)R</avail>
+			<cost>Rating * 7000</cost>
+			<bonus>
+				<specificattribute>
+					<name>STR</name>
+					<val>Rating</val>
+				</specificattribute>
+			</bonus>
+			<source>SR4</source>
+			<page>345</page>
+		</bioware>
+		<bioware>
+			<name>Muscle Toner</name>
+			<category>Basic</category>
+			<rating>4</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 5)R</avail>
+			<cost>Rating * 8000</cost>
+			<bonus>
+				<specificattribute>
+					<name>AGI</name>
+					<val>Rating</val>
+				</specificattribute>
+			</bonus>
+			<source>SR4</source>
+			<page>346</page>
+		</bioware>
+		<bioware>
+			<name>Nephritic Screen</name>
+			<category>Basic</category>
+			<rating>4</rating>
+			<ess>Rating * 0.1</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>Rating * 10000</cost>
+			<source>AU</source>
+			<page>66</page>
+		</bioware>
+		<bioware>
+			<name>Nictitating Membrane</name>
+			<category>Basic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>2000</cost>
+			<source>AU</source>
+			<page>66</page>
+		</bioware>
+		<bioware>
+			<name>Orthoskin</name>
+			<category>Basic</category>
+			<rating>3</rating>
+			<ess>Rating * 0.25</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 4)R</avail>
+			<cost>Rating * 30000</cost>
+			<bonus>
+				<armor>
+					<b>Rating</b>
+					<i>Rating</i>
+				</armor>
+			</bonus>
+			<source>SR4</source>
+			<page>346</page>
+		</bioware>
+		<bioware>
+			<name>Orthoskin Upgrade: Dragon's Hide</name>
+			<category>Basic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>7000</cost>
+			<source>AU</source>
+			<page>69</page>
+		</bioware>
+		<bioware>
+			<name>Orthoskin Upgrade: Electroshock</name>
+			<category>Basic</category>
+			<ess>0.25</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>25000</cost>
+			<source>AU</source>
+			<page>69</page>
+		</bioware>
+		<bioware>
+			<name>Orthoskin Upgrade: Sharkskin</name>
+			<category>Basic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>5000</cost>
+			<source>AU</source>
+			<page>69</page>
+		</bioware>
+		<bioware>
+			<name>Orthoskin Upgrade: Smart Insulation</name>
+			<category>Basic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>12000</cost>
+			<source>AU</source>
+			<page>69</page>
+		</bioware>
+		<bioware>
+			<name>Pain Editor</name>
+			<category>Cultured</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>18F</avail>
+			<cost>40000</cost>
+			<source>SR4</source>
+			<page>347</page>
+		</bioware>
+		<bioware>
+			<name>Pathogenic Defense</name>
+			<category>Basic</category>
+			<rating>6</rating>
+			<ess>Rating * 0.1</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>Rating * 10000</cost>
+			<source>SR4</source>
+			<page>346</page>
+		</bioware>
+		<bioware>
+			<name>Platelet Factories</name>
+			<category>Basic</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>12</avail>
+			<cost>25000</cost>
+			<source>SR4</source>
+			<page>346</page>
+		</bioware>
+		<bioware>
+			<name>Quills</name>
+			<category>Basic</category>
+			<ess>0.25</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<addweapon>Quills</addweapon>
+			<cost>2500</cost>
+			<source>AU</source>
+			<page>66</page>
+		</bioware>
+		<bioware>
+			<name>Reception Enhancer</name>
+			<category>Cultured</category>
+			<rating>3</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>Rating * 3</avail>
+			<cost>Rating * 20000</cost>
+			<bonus>
+				<specificskill>
+					<name>Perception</name>
+					<bonus>Rating</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>70</page>
+		</bioware>
+		<bioware>
+			<name>Reflex Recorder (Skill Group)</name>
+			<category>Cultured</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>12</avail>
+			<cost>25000</cost>
+			<bonus>
+				<selectskillgroup excludecategory="Magical Active,Resonance Active,Social Active,Technical Active,Vechicle Active">
+					<bonus>1</bonus>
+					<applytorating>yes</applytorating>
+				</selectskillgroup>
+			</bonus>
+			<source>SR4</source>
+			<page>347</page>
+		</bioware>
+		<bioware>
+			<name>Reflex Recorder (Skill)</name>
+			<category>Cultured</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>10</avail>
+			<cost>10000</cost>
+			<bonus>
+				<selectskill excludecategory="Magical Active,Resonance Active,Social Active,Technical Active,Vechicle Active">
+					<val>1</val>
+					<applytorating>yes</applytorating>
+				</selectskill>
+			</bonus>
+			<source>SR4</source>
+			<page>347</page>
+		</bioware>
+		<bioware>
+			<name>Sac</name>
+			<category>Symbiont</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>24</avail>
+			<cost>30000</cost>
+			<source>AU</source>
+			<page>71</page>
+		</bioware>
+		<bioware>
+			<name>Sensitive Skin</name>
+			<category>Cosmetic</category>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>2500</cost>
+			<source>AU</source>
+			<page>63</page>
+		</bioware>
+		<bioware>
+			<name>Slimworm</name>
+			<category>Endosymbiont</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>1000</cost>
+			<source>AU</source>
+			<page>71</page>
+		</bioware>
+		<bioware>
+			<name>Silky Skin</name>
+			<category>Cosmetic</category>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>1500</cost>
+			<source>AU</source>
+			<page>63</page>
+		</bioware>
+		<bioware>
+			<name>Skin Pigmentation + Biotattoos</name>
+			<category>Cosmetic</category>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>1500</cost>
+			<source>AU</source>
+			<page>63</page>
+		</bioware>
+		<bioware>
+			<name>Skin Pocket</name>
+			<category>Basic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>5000</cost>
+			<source>SR4</source>
+			<page>346</page>
+		</bioware>
+		<bioware>
+			<name>Sleep Regulator</name>
+			<category>Cultured</category>
+			<ess>0.15</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>10000</cost>
+			<source>SR4</source>
+			<page>347</page>
+		</bioware>
+		<bioware>
+			<name>Spidersilk Gland</name>
+			<category>Basic</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>10</avail>
+			<cost>40000</cost>
+			<source>AU</source>
+			<page>66</page>
+		</bioware>
+		<bioware>
+			<name>Stalwart</name>
+			<category>Endosymbiont</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>16</avail>
+			<cost>30000</cost>
+			<source>AU</source>
+			<page>71</page>
+		</bioware>
+		<bioware>
+			<name>Suprathyroid Gland</name>
+			<category>Basic</category>
+			<ess>0.7</ess>
+			<capacity>0</capacity>
+			<avail>20F</avail>
+			<cost>45000</cost>
+			<bonus>
+				<specificattribute>
+					<name>BOD</name>
+					<val>1</val>
+				</specificattribute>
+				<specificattribute>
+					<name>AGI</name>
+					<val>1</val>
+				</specificattribute>
+				<specificattribute>
+					<name precedence="1">REA</name>
+					<val>1</val>
+				</specificattribute>
+				<specificattribute>
+					<name>STR</name>
+					<val>1</val>
+				</specificattribute>
+			</bonus>
+			<source>SR4</source>
+			<page>346</page>
+		</bioware>
+		<bioware>
+			<name>Symbiotes</name>
+			<category>Basic</category>
+			<rating>3</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>Rating * 5</avail>
+			<cost>Rating * 10000</cost>
+			<source>SR4</source>
+			<page>346</page>
+		</bioware>
+		<bioware>
+			<name>Synaptic Booster</name>
+			<category>Cultured</category>
+			<rating>3</rating>
+			<ess>Rating * 0.5</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 6)R</avail>
+			<cost>Rating * 80000</cost>
+			<bonus>
+				<initiativepass>Rating</initiativepass>
+				<specificattribute>
+					<name precedence="1">REA</name>
+					<val>Rating</val>
+				</specificattribute>
+			</bonus>
+			<source>SR4</source>
+			<page>347</page>
+		</bioware>
+		<bioware>
+			<name>Synthacardium</name>
+			<category>Basic</category>
+			<rating>3</rating>
+			<ess>Rating * 0.1</ess>
+			<capacity>0</capacity>
+			<avail>Rating * 4</avail>
+			<cost>Rating * 10000</cost>
+			<bonus>
+				<skillgroup>
+					<name>Athletics</name>
+					<bonus>Rating</bonus>
+				</skillgroup>
+			</bonus>
+			<source>SR4</source>
+			<page>346</page>
+		</bioware>
+		<bioware>
+			<name>Tactile Sensitivity</name>
+			<category>Basic</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>4000</cost>
+			<source>AU</source>
+			<page>67</page>
+		</bioware>
+		<bioware>
+			<name>Tailored Critter Pheromones</name>
+			<category>Basic</category>
+			<rating>3</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>Rating * 4</avail>
+			<cost>Rating * 15000</cost>
+			<source>AU</source>
+			<page>67</page>
+		</bioware>
+		<bioware>
+			<name>Tailored Pheromones</name>
+			<category>Basic</category>
+			<rating>3</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 4)F</avail>
+			<cost>Rating * 15000</cost>
+			<bonus>
+				<skillcategory>
+					<name>Social Active</name>
+					<bonus>Rating</bonus>
+				</skillcategory>
+			</bonus>
+			<source>SR4</source>
+			<page>346</page>
+		</bioware>
+		<bioware>
+			<name>Thermosense Organs</name>
+			<category>Cultured</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>10</avail>
+			<cost>15000</cost>
+			<source>AU</source>
+			<page>70</page>
+		</bioware>
+		<bioware>
+			<name>Toxin Extractor</name>
+			<category>Basic</category>
+			<rating>6</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>Rating * 3</avail>
+			<cost>Rating * 20000</cost>
+			<source>SR4</source>
+			<page>346</page>
+		</bioware>
+		<bioware>
+			<name>Tracheal Filter</name>
+			<category>Basic</category>
+			<rating>6</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>Rating * 3</avail>
+			<cost>Rating * 15000</cost>
+			<source>SR4</source>
+			<page>346</page>
+		</bioware>
+		<bioware>
+			<name>Trauma Damper</name>
+			<category>Cultured</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>8R</avail>
+			<cost>40000</cost>
+			<source>AU</source>
+			<page>70</page>
+		</bioware>
+		<bioware>
+			<name>Troll's Eyes</name>
+			<category>Basic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>8000</cost>
+			<source>AU</source>
+			<page>67</page>
+		</bioware>
+		<bioware>
+			<name>Vocal Range Enhancer</name>
+			<category>Basic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>12000</cost>
+			<source>AU</source>
+			<page>67</page>
+		</bioware>
+		<bioware>
+			<name>Age Rejuvenation, Léonization</name>
+			<category>Genetech: Genetic Restoration</category>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>12R</avail>
+			<cost>400000</cost>
+			<source>AU</source>
+			<page>88</page>
+		</bioware>
+		<bioware>
+			<name>Age Rejuvenation, Life-span Expansion</name>
+			<category>Genetech: Genetic Restoration</category>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>10R</avail>
+			<cost>250000</cost>
+			<source>AU</source>
+			<page>88</page>
+		</bioware>
+		<bioware>
+			<name>Age Rejuvenation, Physical Vigor</name>
+			<category>Genetech: Genetic Restoration</category>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>10R</avail>
+			<cost>250000</cost>
+			<source>AU</source>
+			<page>88</page>
+		</bioware>
+		<bioware>
+			<name>Age Rejuvenation, Maintenance Session</name>
+			<category>Genetech: Genetic Restoration</category>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>50000</cost>
+			<source>AU</source>
+			<page>88</page>
+		</bioware>
+		<bioware>
+			<name>Augmented Healing</name>
+			<category>Genetech: Genetic Restoration</category>
+			<rating>8</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>Rating * 15000</cost>
+			<source>AU</source>
+			<page>88</page>
+		</bioware>
+		<bioware>
+			<name>Augmented Healing, Cellular Repair</name>
+			<category>Genetech: Genetic Restoration</category>
+			<rating>8</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>Rating * 15000</cost>
+			<source>AU</source>
+			<page>88</page>
+		</bioware>
+		<bioware>
+			<name>Corrective Therapies</name>
+			<category>Genetech: Genetic Restoration</category>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>15000</cost>
+			<source>AU</source>
+			<page>88</page>
+		</bioware>
+		<bioware>
+			<name>Revitalization</name>
+			<category>Genetech: Genetic Restoration</category>
+			<rating>24</rating>
+			<ess>Rating * -0.1</ess>
+			<capacity>0</capacity>
+			<avail>12</avail>
+			<cost>75000 + (Rating * 20000)</cost>
+			<source>AU</source>
+			<page>88</page>
+		</bioware>
+		<bioware>
+			<name>DNA Masking, Genewipe</name>
+			<category>Genetech: Phenotype Adjustments</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>16F</avail>
+			<cost>45000</cost>
+			<source>AU</source>
+			<page>89</page>
+		</bioware>
+		<bioware>
+			<name>DNA Masking, Masque</name>
+			<category>Genetech: Phenotype Adjustments</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>10F</avail>
+			<cost>25000</cost>
+			<source>AU</source>
+			<page>89</page>
+		</bioware>
+		<bioware>
+			<name>DNA Masking, Reprint</name>
+			<category>Genetech: Phenotype Adjustments</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>12F</avail>
+			<cost>30000</cost>
+			<source>AU</source>
+			<page>89</page>
+		</bioware>
+		<bioware>
+			<name>DNA Masking, Shuffle</name>
+			<category>Genetech: Phenotype Adjustments</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>12F</avail>
+			<cost>30000</cost>
+			<source>AU</source>
+			<page>89</page>
+		</bioware>
+		<bioware>
+			<name>Genetic Optimization</name>
+			<category>Genetech: Phenotype Adjustments</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>10</avail>
+			<cost>45000</cost>
+			<bonus>
+				<selectattribute>
+					<excludeattribute>EDG</excludeattribute>
+					<excludeattribute>MAG</excludeattribute>
+					<excludeattribute>RES</excludeattribute>
+					<max>1</max>
+				</selectattribute>
+			</bonus>
+			<source>AU</source>
+			<page>89</page>
+		</bioware>
+		<bioware>
+			<name>Phenotypic Alteration</name>
+			<category>Genetech: Phenotype Adjustments</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>Variable(40000+)</cost>
+			<source>AU</source>
+			<page>89</page>
+		</bioware>
+		<bioware>
+			<name>Phenotypic Alteration, Ethnicity Alteration</name>
+			<category>Genetech: Phenotype Adjustments</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>40000</cost>
+			<source>AU</source>
+			<page>89</page>
+		</bioware>
+		<bioware>
+			<name>Phenotypic Alteration, Print Removal</name>
+			<category>Genetech: Phenotype Adjustments</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>8F</avail>
+			<cost>25000</cost>
+			<source>AU</source>
+			<page>89</page>
+		</bioware>
+		<bioware>
+			<name>Phenotypic Alteration, Metaposeur</name>
+			<category>Genetech: Phenotype Adjustments</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>40000</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>AU</source>
+			<page>90</page>
+		</bioware>
+		<bioware>
+			<name>Enhanced Protein Exchange, Adapsin</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>16</avail>
+			<cost>30000</cost>
+			<bonus>
+				<adapsin />
+			</bonus>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>90</page>
+		</bioware>
+		<bioware>
+			<name>Enhanced Protein Exchange, Daredrenaline</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>25000</cost>
+			<bonus>
+				<drainresist>1</drainresist>
+				<skillattribute>
+					<name>WIL</name>
+					<bonus>1</bonus>
+				</skillattribute>
+			</bonus>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>90</page>
+		</bioware>
+		<bioware>
+			<name>Enhanced Protein Exchange, Double Elastin</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>12000</cost>
+			<bonus>
+				<armor>
+					<i>1</i>
+				</armor>
+			</bonus>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>90</page>
+		</bioware>
+		<bioware>
+			<name>Enhanced Protein Exchange, Dynomitan</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>25000</cost>
+			<bonus>
+				<skillattribute>
+					<name>INT</name>
+					<bonus>1</bonus>
+				</skillattribute>
+			</bonus>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>90</page>
+		</bioware>
+		<bioware>
+			<name>Enhanced Protein Exchange, Hyper-Glucagon</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>20000</cost>
+			<bonus>
+				<lifestylecost>10</lifestylecost>
+			</bonus>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>90</page>
+		</bioware>
+		<bioware>
+			<name>Enhanced Protein Exchange, Magnesense</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>20000</cost>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>90</page>
+		</bioware>
+		<bioware>
+			<name>Enhanced Protein Exchange, Neo-EPO</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>25000</cost>
+			<bonus>
+				<skillgroup>
+					<name>Athletics</name>
+					<bonus>1</bonus>
+				</skillgroup>
+			</bonus>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>91</page>
+		</bioware>
+		<bioware>
+			<name>Enhanced Protein Exchange, PuSHeD</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>15000</cost>
+			<bonus>
+				<skillattribute>
+					<name>LOG</name>
+					<bonus>1</bonus>
+				</skillattribute>
+			</bonus>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>91</page>
+		</bioware>
+		<bioware>
+			<name>Enhanced Protein Exchange, Qualia</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.4</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>25000</cost>
+			<bonus>
+				<skillattribute>
+					<name>INT</name>
+					<bonus>1</bonus>
+				</skillattribute>
+			</bonus>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>91</page>
+		</bioware>
+		<bioware>
+			<name>Enhanced Protein Exchange, Reakt</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.4</ess>
+			<capacity>0</capacity>
+			<avail>10</avail>
+			<cost>30000</cost>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>91</page>
+		</bioware>
+		<bioware>
+			<name>Enhanced Protein Exchange, Synch</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>30000</cost>
+			<bonus>
+				<specificskill>
+					<name>Perception</name>
+					<bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>91</page>
+		</bioware>
+		<bioware>
+			<name>Enhanced Protein Exchange, Vasocon</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>25000</cost>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>91</page>
+		</bioware>
+		<bioware>
+			<name>Enhanced Protein Exchange, Vegsin</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>15000</cost>
+			<bonus>
+				<lifestylecost>-10</lifestylecost>
+			</bonus>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>91</page>
+		</bioware>
+		<bioware>
+			<name>Environmental Microadaptation, Cold Adaptation</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.5</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>40000</cost>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>91</page>
+		</bioware>
+		<bioware>
+			<name>Environmental Microadaptation, Heat Adaptation</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.5</ess>
+			<capacity>0</capacity>
+			<avail>5</avail>
+			<cost>40000</cost>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>91</page>
+		</bioware>
+		<bioware>
+			<name>Environmental Microadaptation, Low Oxygen Tolerance</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.5</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>35000</cost>
+			<bonus>
+				<lifestylecost>10</lifestylecost>
+			</bonus>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>91</page>
+		</bioware>
+		<bioware>
+			<name>Environmental Microadaptation, Microgravity Adaptation</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.5</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>30000</cost>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>92</page>
+		</bioware>
+		<bioware>
+			<name>Environmental Microadaptation, Pollution Tolerance</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>5</avail>
+			<cost>35000</cost>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>92</page>
+		</bioware>
+		<bioware>
+			<name>Environmental Microadaptation, Radiation Tolerance</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.5</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>35000</cost>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>92</page>
+		</bioware>
+		<bioware>
+			<name>Immunization, Basic Immunity</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>20000</cost>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>93</page>
+		</bioware>
+		<bioware>
+			<name>Immunization, Allergy Immunization</name>
+			<category>Genetech: Transgenics</category>
+			<rating>20</rating>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>Rating * 5000</cost>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>93</page>
+		</bioware>
+		<bioware>
+			<name>Immunization, Neurotoxin Immunization</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>8R</avail>
+			<cost>30000</cost>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>93</page>
+		</bioware>
+		<bioware>
+			<name>Immunization, Soft-Nanite Immunization</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>25000</cost>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>93</page>
+		</bioware>
+		<bioware>
+			<name>Transgenic Alteration</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>10R</avail>
+			<cost>Variable(40000+)</cost>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>93</page>
+		</bioware>
+		<bioware>
+			<name>Transgenic Alteration, Alien Look</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>10R</avail>
+			<cost>40000</cost>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>93</page>
+		</bioware>
+		<bioware>
+			<name>Transgenic Alteration, Animal Features</name>
+			<category>Genetech: Transgenics</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>10R</avail>
+			<cost>Variable(45000+)</cost>
+			<forcegrade>Standard</forcegrade>
+			<source>AU</source>
+			<page>93</page>
+		</bioware>
+		<bioware>
+			<name>Adrenal Regulator</name>
+			<category>Basic</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>9000</cost>
+			<source>WAR</source>
+			<page>164</page>
+		</bioware>
+		<bioware>
+			<name>MPC Bridge</name>
+			<category>Cultured</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>10</avail>
+			<cost>14000</cost>
+			<source>WAR</source>
+			<page>164</page>
+		</bioware>
+		<bioware>
+			<name>Braveheart</name>
+			<category>Genetic Infusions</category>
+			<ess>0.4</ess>
+			<capacity>0</capacity>
+			<avail>16F</avail>
+			<cost>1000</cost>
+			<bonus>
+				<armor>
+					<i>2</i>
+				</armor>
+				<specificattribute>
+					<name>WIL</name>
+					<val>1</val>
+				</specificattribute>
+				<specificattribute>
+					<name>INT</name>
+					<val>-1</val>
+				</specificattribute>
+			</bonus>
+			<source>AU</source>
+			<page>94</page>
+		</bioware>
+		<bioware>
+			<name>Endure</name>
+			<category>Genetic Infusions</category>
+			<ess>0.4</ess>
+			<capacity>0</capacity>
+			<avail>16F</avail>
+			<cost>1000</cost>
+			<bonus>
+				<skillgroup>
+					<name>Athletics</name>
+					<bonus>1</bonus>
+				</skillgroup>
+			</bonus>
+			<source>AU</source>
+			<page>94</page>
+		</bioware>
+		<bioware>
+			<name>Inspiration</name>
+			<category>Genetic Infusions</category>
+			<ess>0.4</ess>
+			<capacity>0</capacity>
+			<avail>16F</avail>
+			<cost>1000</cost>
+			<bonus>
+				<specificattribute>
+					<name>LOG</name>
+					<val>1</val>
+				</specificattribute>
+				<specificattribute>
+					<name>INT</name>
+					<val>1</val>
+				</specificattribute>
+				<specificattribute>
+					<name>WIL</name>
+					<val>-1</val>
+				</specificattribute>
+			</bonus>
+			<source>AU</source>
+			<page>94</page>
+		</bioware>
+		<bioware>
+			<name>Sideways</name>
+			<category>Genetic Infusions</category>
+			<ess>0.4</ess>
+			<capacity>0</capacity>
+			<avail>16F</avail>
+			<cost>1000</cost>
+			<bonus>
+				<specificskill>
+					<name>Perception</name>
+					<bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>94</page>
+		</bioware>
+		<bioware>
+			<name>Biosculpting, Minor Modification</name>
+			<category>Biosculpting</category>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>Variable(100-2000)</cost>
+			<bonus />
+			<source>AU</source>
+			<page>61</page>
+		</bioware>
+		<bioware>
+			<name>Biosculpting, Moderate Modification</name>
+			<category>Biosculpting</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>Variable(1000-5000)</cost>
+			<bonus />
+			<source>AU</source>
+			<page>61</page>
+		</bioware>
+		<bioware>
+			<name>Biosculpting, Severe Modification (0.3)</name>
+			<category>Biosculpting</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>Variable(10000+)</cost>
+			<bonus />
+			<source>AU</source>
+			<page>62</page>
+		</bioware>
+		<bioware>
+			<name>Biosculpting, Severe Modification (0.4)</name>
+			<category>Biosculpting</category>
+			<ess>0.4</ess>
+			<capacity>0</capacity>
+			<avail>9</avail>
+			<cost>Variable(10000+)</cost>
+			<bonus />
+			<source>AU</source>
+			<page>62</page>
+		</bioware>
+		<bioware>
+			<name>Biosculpting, Severe Modification (0.5)</name>
+			<category>Biosculpting</category>
+			<ess>0.5</ess>
+			<capacity>0</capacity>
+			<avail>12</avail>
+			<cost>Variable(10000+)</cost>
+			<bonus />
+			<source>AU</source>
+			<page>62</page>
+		</bioware>
+		<bioware>
+			<name>Biosculpting, Metatype Change</name>
+			<category>Biosculpting</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>25000</cost>
+			<bonus />
+			<source>AU</source>
+			<page>62</page>
+		</bioware>
+		<bioware>
+			<name>Biosculpting, Sex Change</name>
+			<category>Biosculpting</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>20000</cost>
+			<bonus />
+			<source>AU</source>
+			<page>62</page>
+		</bioware>
+		<bioware>
+			<name>Eye</name>
+			<category>Organs and Limbs</category>
+			<rating>0</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>4000</cost>
+			<source>AU</source>
+			<page>126</page>
+		</bioware>
+		<bioware>
+			<name>Organ (Type O)</name>
+			<category>Organs and Limbs</category>
+			<rating>0</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>6000</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>AU</source>
+			<page>126</page>
+		</bioware>
+		<bioware>
+			<name>Organ (Cultured)</name>
+			<category>Organs and Limbs</category>
+			<rating>0</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>9000</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>AU</source>
+			<page>126</page>
+		</bioware>
+		<bioware>
+			<name>Hand</name>
+			<category>Organs and Limbs</category>
+			<rating>0</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>8000</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>AU</source>
+			<page>126</page>
+		</bioware>
+		<bioware>
+			<name>Foot</name>
+			<category>Organs and Limbs</category>
+			<rating>0</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>8000</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>AU</source>
+			<page>126</page>
+		</bioware>
+		<bioware>
+			<name>Full Limb (Type O)</name>
+			<category>Organs and Limbs</category>
+			<rating>0</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>21000</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>AU</source>
+			<page>126</page>
+		</bioware>
+		<bioware>
+			<name>Full Limb (Cultured)</name>
+			<category>Organs and Limbs</category>
+			<rating>0</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>25000</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>AU</source>
+			<page>126</page>
+		</bioware>
+		<bioware>
+			<name>Skin (Type O)</name>
+			<category>Organs and Limbs</category>
+			<rating>0</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>300</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>AU</source>
+			<page>126</page>
+		</bioware>
+		<bioware>
+			<name>Skin (Cultured)</name>
+			<category>Organs and Limbs</category>
+			<rating>0</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>500</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>AU</source>
+			<page>126</page>
+		</bioware>
+		<bioware>
+			<name>Hair (Type O)</name>
+			<category>Organs and Limbs</category>
+			<rating>0</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>300</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>AU</source>
+			<page>126</page>
+		</bioware>
+		<bioware>
+			<name>Hair (Cultured)</name>
+			<category>Organs and Limbs</category>
+			<rating>0</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>500</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>AU</source>
+			<page>126</page>
+		</bioware>
+		<bioware>
+			<name>Spinal Cord</name>
+			<category>Organs and Limbs</category>
+			<rating>0</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>70000</cost>
+			<source>AU</source>
+			<page>126</page>
+		</bioware>
+		<bioware>
+			<name>Full Body (Type O)</name>
+			<category>Organs and Limbs</category>
+			<rating>0</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>25000</cost>
+			<source>AU</source>
+			<page>126</page>
+		</bioware>
+		<bioware>
+			<name>Full Body (Cultured)</name>
+			<category>Organs and Limbs</category>
+			<rating>0</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>40000</cost>
+			<source>AU</source>
+			<page>126</page>
+		</bioware>
+	</biowares>
+</chummer>

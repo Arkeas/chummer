@@ -1,0 +1,2599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chummer>
+	<version>-915</version>
+	<skillgroups>
+		<name>Animal Husbandry</name>
+		<name>Athletics</name>
+		<name>Biotech</name>
+		<name>Close Combat</name>
+		<name>Conjuring</name>
+		<name>Cracking</name>
+		<name>Electronics</name>
+		<name>Firearms</name>
+		<name>Influence</name>
+		<name>Mechanic</name>
+		<name>Outdoors</name>
+		<name>Sorcery</name>
+		<name>Stealth</name>
+		<name>Tasking</name>
+	</skillgroups>
+	<categories>
+		<category type="active">Combat Active</category>
+		<category type="active">Magical Active</category>
+		<category type="active">Physical Active</category>
+		<category type="active">Resonance Active</category>
+		<category type="active">Social Active</category>
+		<category type="active">Technical Active</category>
+		<category type="active">Vehicle Active</category>
+		<category type="knowledge">Academic</category>
+		<category type="knowledge">Interest</category>
+		<category type="knowledge">Language</category>
+		<category type="knowledge">Professional</category>
+		<category type="knowledge">Street</category>
+	</categories>
+	<skills>
+		<skill>
+			<name>Aeronautics Mechanic</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>No</default>
+			<skillgroup>Mechanic</skillgroup>
+			<specs>
+				<spec>Aerospace</spec>
+				<spec>Fixed Wing</spec>
+				<spec>LTA</spec>
+				<spec>Rotary Wing</spec>
+				<spec>Tilt Wing</spec>
+				<spec>Vector Thrust</spec>
+			</specs>
+			<source>SR4</source>
+			<page>126</page>
+		</skill>
+		<skill>
+			<name>Animal Handling</name>
+			<attribute>INT</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup>Animal Husbandry</skillgroup>
+			<specs>
+				<spec>Animal Type</spec>
+				<spec>Security</spec>
+				<spec>Veterinary</spec>
+				<spec>Wildlife</spec>
+			</specs>
+			<source>RW</source>
+			<page>34</page>
+		</skill>
+		<skill>
+			<name>Animal Training</name>
+			<attribute>INT</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup>Animal Husbandry</skillgroup>
+			<specs>
+				<spec>Animal Type</spec>
+			</specs>
+			<source>RW</source>
+			<page>34</page>
+		</skill>
+		<skill>
+			<name>Arcana</name>
+			<attribute>LOG</attribute>
+			<category>Magical Active</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Spell Design</spec>
+				<spec>Focus Design</spec>
+				<spec>Ally Spirit Formula</spec>
+				<spec>Free Spirit Formula</spec>
+			</specs>
+			<source>SR4</source>
+			<page>122</page>
+		</skill>
+		<skill>
+			<name>Archery</name>
+			<attribute>AGI</attribute>
+			<category>Combat Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>Bows</spec>
+				<spec>Crossbows</spec>
+				<spec>Slingshots</spec>
+			</specs>
+			<source>SR4</source>
+			<page>121</page>
+		</skill>
+		<skill>
+			<name>Armorer</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>Armor</spec>
+				<spec>Artillery</spec>
+				<spec>Explosives</spec>
+				<spec>Firearms</spec>
+				<spec>Heavy Weapons</spec>
+				<spec>Weapon Accessories</spec>
+			</specs>
+			<source>SR4</source>
+			<page>126</page>
+		</skill>
+		<skill>
+			<name>Artisan</name>
+			<attribute>INT</attribute>
+			<category>Technical Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>Carpentry</spec>
+				<spec>Guitars</spec>
+				<spec>Painting</spec>
+				<spec>Sculpture</spec>
+			</specs>
+			<source>SR4</source>
+			<page>126</page>
+		</skill>
+		<skill>
+			<name>Assensing</name>
+			<attribute>INT</attribute>
+			<category>Magical Active</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Aura Reading</spec>
+				<spec>Astral Signatures</spec>
+				<spec>Psychometry</spec>
+				<spec>Aura Type</spec>
+			</specs>
+			<source>SR4</source>
+			<page>122</page>
+		</skill>
+		<skill>
+			<name>Astral Combat</name>
+			<attribute>WIL</attribute>
+			<category>Magical Active</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Focus Type</spec>
+			</specs>
+			<source>SR4</source>
+			<page>122</page>
+		</skill>
+		<skill>
+			<name>Automatics</name>
+			<attribute>AGI</attribute>
+			<category>Combat Active</category>
+			<default>Yes</default>
+			<skillgroup>Firearms</skillgroup>
+			<specs>
+				<spec>Assault Rifles</spec>
+				<spec>Battle Rifles</spec>
+				<spec>Carbines</spec>
+				<spec>Machine Pistols</spec>
+				<spec>Submachine Guns</spec>
+			</specs>
+			<source>SR4</source>
+			<page>121</page>
+		</skill>
+		<skill>
+			<name>Automotive Mechanic</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>No</default>
+			<skillgroup>Mechanic</skillgroup>
+			<specs>
+				<spec>Anthroform</spec>
+				<spec>Hover</spec>
+				<spec>Tracked</spec>
+				<spec>Wheeled</spec>
+			</specs>
+			<source>SR4</source>
+			<page>126</page>
+		</skill>
+		<skill>
+			<name>Banishing</name>
+			<attribute>MAG</attribute>
+			<category>Magical Active</category>
+			<default>No</default>
+			<skillgroup>Conjuring</skillgroup>
+			<specs>
+				<spec>Spirit Type</spec>
+			</specs>
+			<source>SR4</source>
+			<page>123</page>
+		</skill>
+		<skill>
+			<name>Binding</name>
+			<attribute>MAG</attribute>
+			<category>Magical Active</category>
+			<default>No</default>
+			<skillgroup>Conjuring</skillgroup>
+			<specs>
+				<spec>Spirit Type</spec>
+			</specs>
+			<source>SR4</source>
+			<page>123</page>
+		</skill>
+		<skill>
+			<name>Blades</name>
+			<attribute>AGI</attribute>
+			<category>Combat Active</category>
+			<default>Yes</default>
+			<skillgroup>Close Combat</skillgroup>
+			<specs>
+				<spec>Axes</spec>
+				<spec>Cyber-Implant Blades</spec>
+				<spec>Knives</spec>
+				<spec>Swords</spec>
+				<spec>Parrying</spec>
+			</specs>
+			<source>SR4</source>
+			<page>122</page>
+		</skill>
+		<skill>
+			<name>Chemistry</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Compounds</spec>
+				<spec>Drugs</spec>
+				<spec>Toxins</spec>
+			</specs>
+			<source>SR4</source>
+			<page>126</page>
+		</skill>
+		<skill>
+			<name>Climbing</name>
+			<attribute>STR</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup>Athletics</skillgroup>
+			<specs>
+				<spec>Assisted</spec>
+				<spec>Freehand</spec>
+				<spec>Rappelling</spec>
+			</specs>
+			<source>SR4</source>
+			<page>124</page>
+		</skill>
+		<skill>
+			<name>Clubs</name>
+			<attribute>AGI</attribute>
+			<category>Combat Active</category>
+			<default>Yes</default>
+			<skillgroup>Close Combat</skillgroup>
+			<specs>
+				<spec>Batons</spec>
+				<spec>Hammers</spec>
+				<spec>Saps</spec>
+				<spec>Staves</spec>
+				<spec>Parrying</spec>
+			</specs>
+			<source>SR4</source>
+			<page>122</page>
+		</skill>
+		<skill>
+			<name>Compiling</name>
+			<attribute>RES</attribute>
+			<category>Resonance Active</category>
+			<default>No</default>
+			<skillgroup>Tasking</skillgroup>
+			<specs>
+				<spec>Sprite Type</spec>
+			</specs>
+			<source>SR4</source>
+			<page>125</page>
+		</skill>
+		<skill>
+			<name>Computer</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>Yes</default>
+			<skillgroup>Electronics</skillgroup>
+			<specs>
+				<spec>Program or Device Type</spec>
+			</specs>
+			<source>SR4</source>
+			<page>126</page>
+		</skill>
+		<skill>
+			<name>Con</name>
+			<attribute>CHA</attribute>
+			<category>Social Active</category>
+			<default>Yes</default>
+			<skillgroup>Influence</skillgroup>
+			<specs>
+				<spec>Fast Talk</spec>
+				<spec>Impersonation</spec>
+				<spec>Seduction</spec>
+			</specs>
+			<source>SR4</source>
+			<page>125</page>
+		</skill>
+		<skill>
+			<name>Counterspelling</name>
+			<attribute>MAG</attribute>
+			<category>Magical Active</category>
+			<default>No</default>
+			<skillgroup>Sorcery</skillgroup>
+			<specs>
+				<spec>Spell Type</spec>
+			</specs>
+			<source>SR4</source>
+			<page>123</page>
+		</skill>
+		<skill>
+			<name>Cybercombat</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>Yes</default>
+			<skillgroup>Cracking</skillgroup>
+			<specs>
+				<spec>Specific Opponents</spec>
+			</specs>
+			<source>SR4</source>
+			<page>126</page>
+		</skill>
+		<skill>
+			<name>Cybertechnology</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>No</default>
+			<skillgroup>Biotech</skillgroup>
+			<specs>
+				<spec>Bioware</spec>
+				<spec>Bodyware</spec>
+				<spec>Cyberlimbs</spec>
+				<spec>Headware</spec>
+				<spec>Nanoware</spec>
+			</specs>
+			<source>SR4</source>
+			<page>126</page>
+		</skill>
+		<skill>
+			<name>Data Search</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>Yes</default>
+			<skillgroup>Electronics</skillgroup>
+			<specs>
+				<spec>Source or Data Type</spec>
+			</specs>
+			<source>SR4</source>
+			<page>127</page>
+		</skill>
+		<skill>
+			<name>Decompiling</name>
+			<attribute>RES</attribute>
+			<category>Resonance Active</category>
+			<default>No</default>
+			<skillgroup>Tasking</skillgroup>
+			<specs>
+				<spec>Sprite Type</spec>
+			</specs>
+			<source>SR4</source>
+			<page>125</page>
+		</skill>
+		<skill>
+			<name>Demolitions</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>Commercial Explosives</spec>
+				<spec>Defusing</spec>
+				<spec>Improvised Explosives</spec>
+				<spec>Plastic Explosives</spec>
+			</specs>
+			<source>SR4</source>
+			<page>127</page>
+		</skill>
+		<skill>
+			<name>Disguise</name>
+			<attribute>INT</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup>Stealth</skillgroup>
+			<specs>
+				<spec>Camouflage</spec>
+				<spec>Cosmetic</spec>
+				<spec>Theatrical</spec>
+				<spec>Trideo</spec>
+			</specs>
+			<source>SR4</source>
+			<page>124</page>
+		</skill>
+		<skill>
+			<name>Diving</name>
+			<attribute>BOD</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>Liquid Breathing Apparatus</spec>
+				<spec>Mixed Gas</spec>
+				<spec>Oxygen Extraction</spec>
+				<spec>SCUBA</spec>
+			</specs>
+			<source>SR4</source>
+			<page>124</page>
+		</skill>
+		<skill>
+			<name>Dodge</name>
+			<attribute>REA</attribute>
+			<category>Combat Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>Melee Combat</spec>
+				<spec>Ranged Combat</spec>
+			</specs>
+			<source>SR4</source>
+			<page>122</page>
+		</skill>
+		<skill>
+			<name>Electronic Warfare</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>No</default>
+			<skillgroup>Cracking</skillgroup>
+			<specs>
+				<spec>Communications</spec>
+				<spec>Encryption</spec>
+				<spec>Jamming</spec>
+				<spec>Sensor Operations</spec>
+			</specs>
+			<source>SR4</source>
+			<page>127</page>
+		</skill>
+		<skill>
+			<name>Enchanting</name>
+			<attribute>MAG</attribute>
+			<category>Magical Active</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Artificing</spec>
+				<spec>Alchemy</spec>
+				<spec>Vessel Preparation</spec>
+			</specs>
+			<source>SR4</source>
+			<page>123</page>
+		</skill>
+		<skill>
+			<name>Escape Artist</name>
+			<attribute>AGI</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>By Restraint</spec>
+			</specs>
+			<source>SR4</source>
+			<page>124</page>
+		</skill>
+		<skill>
+			<name>Etiquette</name>
+			<attribute>CHA</attribute>
+			<category>Social Active</category>
+			<default>Yes</default>
+			<skillgroup>Influence</skillgroup>
+			<specs>
+				<spec>Culture or Subculture</spec>
+			</specs>
+			<source>SR4</source>
+			<page>125</page>
+		</skill>
+		<skill>
+			<name>First Aid</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>Yes</default>
+			<skillgroup>Biotech</skillgroup>
+			<specs>
+				<spec>Type of Treatment</spec>
+			</specs>
+			<source>SR4</source>
+			<page>127</page>
+		</skill>
+		<skill>
+			<name>Flight</name>
+			<attribute>STR</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup>Athletics</skillgroup>
+			<specs>
+				<spec>Diving</spec>
+				<spec>Long Distance</spec>
+				<spec>Rough Weather</spec>
+			</specs>
+			<source>RC</source>
+			<page>88</page>
+		</skill>
+		<skill>
+			<name>Forgery</name>
+			<attribute>AGI</attribute>
+			<category>Technical Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>Counterfeiting</spec>
+				<spec>Credstick Forgery</spec>
+				<spec>False ID</spec>
+				<spec>Image Doctoring</spec>
+				<spec>Paper Forgery</spec>
+			</specs>
+			<source>SR4</source>
+			<page>127</page>
+		</skill>
+		<skill>
+			<name>Gunnery</name>
+			<attribute>AGI</attribute>
+			<category>Vehicle Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>Artillery</spec>
+				<spec>Ballistic</spec>
+				<spec>Energy</spec>
+				<spec>Guided Missile</spec>
+				<spec>Rocket</spec>
+			</specs>
+			<source>SR4</source>
+			<page>128</page>
+		</skill>
+		<skill>
+			<name>Gymnastics</name>
+			<attribute>AGI</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup>Athletics</skillgroup>
+			<specs>
+				<spec>Balance</spec>
+				<spec>Breakfall</spec>
+				<spec>Dance</spec>
+				<spec>Jumping</spec>
+				<spec>Parkour</spec>
+				<spec>Tumbling</spec>
+			</specs>
+			<source>SR4</source>
+			<page>124</page>
+		</skill>
+		<skill>
+			<name>Hacking</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>Yes</default>
+			<skillgroup>Cracking</skillgroup>
+			<specs>
+				<spec>Program or Device Type</spec>
+			</specs>
+			<source>SR4</source>
+			<page>127</page>
+		</skill>
+		<skill>
+			<name>Hardware</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>No</default>
+			<skillgroup>Electronics</skillgroup>
+			<specs>
+				<spec>Specific Devices</spec>
+			</specs>
+			<source>SR4</source>
+			<page>127</page>
+		</skill>
+		<skill>
+			<name>Heavy Weapons</name>
+			<attribute>AGI</attribute>
+			<category>Combat Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>Assault Cannons</spec>
+				<spec>Grenade Launchers</spec>
+				<spec>Guided Missiles</spec>
+				<spec>Machine Guns</spec>
+				<spec>Rocket Launchers</spec>
+			</specs>
+			<source>SR4</source>
+			<page>122</page>
+		</skill>
+		<skill>
+			<name>Industrial Mechanic</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>No</default>
+			<skillgroup>Mechanic</skillgroup>
+			<specs>
+				<spec>Electrical Power Systems</spec>
+				<spec>Hydraulics</spec>
+				<spec>Robotics</spec>
+				<spec>Structural</spec>
+				<spec>Welding</spec>
+			</specs>
+			<source>SR4</source>
+			<page>127</page>
+		</skill>
+		<skill>
+			<name>Infiltration</name>
+			<attribute>AGI</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup>Stealth</skillgroup>
+			<specs>
+				<spec>Urban</spec>
+				<spec>Vehicle</spec>
+				<spec>Wilderness</spec>
+			</specs>
+			<source>SR4</source>
+			<page>124</page>
+		</skill>
+		<skill>
+			<name>Instruction</name>
+			<attribute>CHA</attribute>
+			<category>Social Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>Active or Knowledge Skill Category</spec>
+			</specs>
+			<source>SR4</source>
+			<page>125</page>
+		</skill>
+		<skill>
+			<name>Intimidation</name>
+			<attribute>CHA</attribute>
+			<category>Social Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>Interrogation</spec>
+				<spec>Mental</spec>
+				<spec>Physical</spec>
+				<spec>Torture</spec>
+			</specs>
+			<source>SR4</source>
+			<page>125</page>
+		</skill>
+		<skill>
+			<name>Leadership</name>
+			<attribute>CHA</attribute>
+			<category>Social Active</category>
+			<default>Yes</default>
+			<skillgroup>Influence</skillgroup>
+			<specs>
+				<spec>Gut Check</spec>
+				<spec>Morale</spec>
+				<spec>Persuasion</spec>
+				<spec>Strategy</spec>
+				<spec>Tactics</spec>
+			</specs>
+			<source>SR4</source>
+			<page>125</page>
+		</skill>
+		<skill>
+			<name>Locksmith</name>
+			<attribute>AGI</attribute>
+			<category>Technical Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>Lock Type</spec>
+			</specs>
+			<source>SR4</source>
+			<page>127</page>
+		</skill>
+		<skill>
+			<name>Longarms</name>
+			<attribute>AGI</attribute>
+			<category>Combat Active</category>
+			<default>Yes</default>
+			<skillgroup>Firearms</skillgroup>
+			<specs>
+				<spec>Shotguns</spec>
+				<spec>Sniper Rifles</spec>
+				<spec>Sporting Rifles</spec>
+			</specs>
+			<source>SR4</source>
+			<page>122</page>
+		</skill>
+		<skill>
+			<name>Medicine</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>No</default>
+			<skillgroup>Biotech</skillgroup>
+			<specs>
+				<spec>Cosmetic Surgery</spec>
+				<spec>Extended Care</spec>
+				<spec>Implant Surgery</spec>
+				<spec>Magical Health</spec>
+				<spec>Organ Culture</spec>
+				<spec>Trauma Surgery</spec>
+			</specs>
+			<source>SR4</source>
+			<page>127</page>
+		</skill>
+		<skill>
+			<name>Nautical Mechanic</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>No</default>
+			<skillgroup>Mechanic</skillgroup>
+			<specs>
+				<spec>Motorboat</spec>
+				<spec>Sailboat</spec>
+				<spec>Ship</spec>
+				<spec>Submarine</spec>
+			</specs>
+			<source>SR4</source>
+			<page>127</page>
+		</skill>
+		<skill>
+			<name>Navigation</name>
+			<attribute>INT</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup>Outdoors</skillgroup>
+			<specs>
+				<spec>Desert</spec>
+				<spec>Forest</spec>
+				<spec>Jungle</spec>
+				<spec>Mountain</spec>
+				<spec>Polar</spec>
+				<spec>Urban</spec>
+			</specs>
+			<source>SR4</source>
+			<page>124</page>
+		</skill>
+		<skill>
+			<name>Negotiation</name>
+			<attribute>CHA</attribute>
+			<category>Social Active</category>
+			<default>Yes</default>
+			<skillgroup>Influence</skillgroup>
+			<specs>
+				<spec>Bargaining</spec>
+				<spec>Diplomacy</spec>
+				<spec>Sense Motive</spec>
+			</specs>
+			<source>SR4</source>
+			<page>125</page>
+		</skill>
+		<skill>
+			<name>Palming</name>
+			<attribute>AGI</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup>Stealth</skillgroup>
+			<specs>
+				<spec>Legerdemain</spec>
+				<spec>Pickpocket</spec>
+				<spec>Shoplifting</spec>
+			</specs>
+			<source>SR4</source>
+			<page>124</page>
+		</skill>
+		<skill>
+			<name>Parachuting</name>
+			<attribute>BOD</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>BASE Jumping</spec>
+				<spec>HALO</spec>
+				<spec>Low Altitude</spec>
+				<spec>Recreational</spec>
+				<spec>Static Line</spec>
+			</specs>
+			<source>SR4</source>
+			<page>124</page>
+		</skill>
+		<skill>
+			<name>Perception</name>
+			<attribute>INT</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>Hearing</spec>
+				<spec>Scent</spec>
+				<spec>Taste</spec>
+				<spec>Touch</spec>
+				<spec>Visual</spec>
+			</specs>
+			<source>SR4</source>
+			<page>124</page>
+		</skill>
+		<skill>
+			<name>Pilot Aerospace</name>
+			<attribute>REA</attribute>
+			<category>Vehicle Active</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Deep Space</spec>
+				<spec>Launch Craft</spec>
+				<spec>Remote Operation</spec>
+				<spec>Semiballistic</spec>
+				<spec>Suborbital</spec>
+			</specs>
+			<source>SR4</source>
+			<page>128</page>
+		</skill>
+		<skill>
+			<name>Pilot Aircraft</name>
+			<attribute>REA</attribute>
+			<category>Vehicle Active</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Fixed-Wing</spec>
+				<spec>Lighter-Than-Air</spec>
+				<spec>Remote Operation</spec>
+				<spec>Rotary Wing</spec>
+				<spec>Tilt Wing</spec>
+				<spec>Vectored Thrust</spec>
+			</specs>
+			<source>SR4</source>
+			<page>128</page>
+		</skill>
+		<skill>
+			<name>Pilot Anthroform</name>
+			<attribute>REA</attribute>
+			<category>Vehicle Active</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Biped</spec>
+				<spec>Quadruped</spec>
+				<spec>Remote Operation</spec>
+			</specs>
+			<source>SR4</source>
+			<page>128</page>
+		</skill>
+		<skill>
+			<name>Pilot Ground Craft</name>
+			<attribute>REA</attribute>
+			<category>Vehicle Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>Bike</spec>
+				<spec>Car</spec>
+				<spec>Hovercraft</spec>
+				<spec>Remote Operation</spec>
+				<spec>Tracked</spec>
+				<spec>Wheeled</spec>
+			</specs>
+			<source>SR4</source>
+			<page>128</page>
+		</skill>
+		<skill>
+			<name>Pilot Watercraft</name>
+			<attribute>REA</attribute>
+			<category>Vehicle Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>Motorboat</spec>
+				<spec>Remote Operation</spec>
+				<spec>Sail</spec>
+				<spec>Ship</spec>
+				<spec>Submarine</spec>
+			</specs>
+			<source>SR4</source>
+			<page>128</page>
+		</skill>
+		<skill>
+			<name>Pistols</name>
+			<attribute>AGI</attribute>
+			<category>Combat Active</category>
+			<default>Yes</default>
+			<skillgroup>Firearms</skillgroup>
+			<specs>
+				<spec>Holdouts</spec>
+				<spec>Revolvers</spec>
+				<spec>Semi-Automatics</spec>
+				<spec>Tasers</spec>
+			</specs>
+			<source>SR4</source>
+			<page>122</page>
+		</skill>
+		<skill>
+			<name>Registering</name>
+			<attribute>RES</attribute>
+			<category>Resonance Active</category>
+			<default>No</default>
+			<skillgroup>Tasking</skillgroup>
+			<specs>
+				<spec>Sprite Type</spec>
+			</specs>
+			<source>SR4</source>
+			<page>125</page>
+		</skill>
+		<skill>
+			<name>Riding</name>
+			<attribute>REA</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup>Animal Husbandry</skillgroup>
+			<specs>
+				<spec>Animal Type</spec>
+				<spec>Riding Style</spec>
+			</specs>
+			<source>RW</source>
+			<page>35</page>
+		</skill>
+		<skill>
+			<name>Ritual Spellcasting</name>
+			<attribute>MAG</attribute>
+			<category>Magical Active</category>
+			<default>No</default>
+			<skillgroup>Sorcery</skillgroup>
+			<specs>
+				<spec>Combat</spec>
+				<spec>Detection</spec>
+				<spec>Health</spec>
+				<spec>Illusion</spec>
+				<spec>Manipulation</spec>
+			</specs>
+			<source>SR4</source>
+			<page>123</page>
+		</skill>
+		<skill>
+			<name>Running</name>
+			<attribute>STR</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup>Athletics</skillgroup>
+			<specs>
+				<spec>Long Distance</spec>
+				<spec>Sprinting</spec>
+				<spec>Urban</spec>
+				<spec>Wilderness</spec>
+			</specs>
+			<source>SR4</source>
+			<page>124</page>
+		</skill>
+		<skill>
+			<name>Shadowing</name>
+			<attribute>INT</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup>Stealth</skillgroup>
+			<specs>
+				<spec>Stakeouts</spec>
+				<spec>Tail Evasion</spec>
+				<spec>Tailing</spec>
+			</specs>
+			<source>SR4</source>
+			<page>124</page>
+		</skill>
+		<skill>
+			<name>Software</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>No</default>
+			<skillgroup>Electronics</skillgroup>
+			<specs>
+				<spec>Defensive Utilities</spec>
+				<spec>Offensive Utilities</spec>
+				<spec>Masking Utilities</spec>
+			</specs>
+			<source>SR4</source>
+			<page>127</page>
+		</skill>
+		<skill>
+			<name>Spellcasting</name>
+			<attribute>MAG</attribute>
+			<category>Magical Active</category>
+			<default>No</default>
+			<skillgroup>Sorcery</skillgroup>
+			<specs>
+				<spec>Combat</spec>
+				<spec>Detection</spec>
+				<spec>Health</spec>
+				<spec>Illusion</spec>
+				<spec>Manipulation</spec>
+			</specs>
+			<source>SR4</source>
+			<page>123</page>
+		</skill>
+		<skill>
+			<name>Summoning</name>
+			<attribute>MAG</attribute>
+			<category>Magical Active</category>
+			<default>No</default>
+			<skillgroup>Conjuring</skillgroup>
+			<specs>
+				<spec>Spirit Type</spec>
+			</specs>
+			<source>SR4</source>
+			<page>123</page>
+		</skill>
+		<skill>
+			<name>Survival</name>
+			<attribute>WIL</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup>Outdoors</skillgroup>
+			<specs>
+				<spec>Desert</spec>
+				<spec>Forest</spec>
+				<spec>Jungle</spec>
+				<spec>Mountain</spec>
+				<spec>Polar</spec>
+				<spec>Urban</spec>
+			</specs>
+			<source>SR4</source>
+			<page>124</page>
+		</skill>
+		<skill>
+			<name>Swimming</name>
+			<attribute>STR</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup>Athletics</skillgroup>
+			<specs>
+				<spec>Long Distance</spec>
+				<spec>Sprinting</spec>
+			</specs>
+			<source>SR4</source>
+			<page>124</page>
+		</skill>
+		<skill>
+			<name>Throwing Weapons</name>
+			<attribute>AGI</attribute>
+			<category>Combat Active</category>
+			<default>Yes</default>
+			<skillgroup />
+			<specs>
+				<spec>Lobbed</spec>
+				<spec>Overhand</spec>
+				<spec>Shuriken</spec>
+				<spec>Throwing Knives</spec>
+			</specs>
+			<source>SR4</source>
+			<page>122</page>
+		</skill>
+		<skill>
+			<name>Tracking</name>
+			<attribute>INT</attribute>
+			<category>Physical Active</category>
+			<default>Yes</default>
+			<skillgroup>Outdoors</skillgroup>
+			<specs>
+				<spec>Desert</spec>
+				<spec>Forest</spec>
+				<spec>Jungle</spec>
+				<spec>Mountain</spec>
+				<spec>Polar</spec>
+				<spec>Urban</spec>
+			</specs>
+			<source>SR4</source>
+			<page>125</page>
+		</skill>
+		<skill>
+			<name>Unarmed Combat</name>
+			<attribute>AGI</attribute>
+			<category>Combat Active</category>
+			<default>Yes</default>
+			<skillgroup>Close Combat</skillgroup>
+			<specs>
+				<spec>Cyber-Implants</spec>
+				<spec>Martial Arts</spec>
+				<spec>Subdual Combat</spec>
+				<spec>Parrying</spec>
+			</specs>
+			<source>SR4</source>
+			<page>122</page>
+		</skill>
+		<skill>
+			<name>VetTech</name>
+			<attribute>LOG</attribute>
+			<category>Technical Active</category>
+			<default>No</default>
+			<skillgroup>Animal Husbandry</skillgroup>
+			<specs>
+				<spec>Animal Type</spec>
+			</specs>
+			<source>RW</source>
+			<page>35</page>
+		</skill>
+		<skill>
+			<name>Exotic Melee Weapon</name>
+			<attribute>AGI</attribute>
+			<category>Combat Active</category>
+			<default>Yes</default>
+			<exotic>Yes</exotic>
+			<skillgroup />
+			<specs />
+			<source>SR4</source>
+			<page>122</page>
+		</skill>
+		<skill>
+			<name>Exotic Ranged Weapon</name>
+			<attribute>AGI</attribute>
+			<category>Combat Active</category>
+			<default>Yes</default>
+			<exotic>Yes</exotic>
+			<skillgroup />
+			<specs>
+				<spec>Flamethrowers</spec>
+				<spec>Laser Weapons</spec>
+			</specs>
+			<source>SR4</source>
+			<page>122</page>
+		</skill>
+		<skill>
+			<name>Pilot Exotic Vehicle</name>
+			<attribute>REA</attribute>
+			<category>Vehicle Active</category>
+			<default>No</default>
+			<exotic>Yes</exotic>
+			<skillgroup />
+			<specs />
+			<source>SR4</source>
+			<page>128</page>
+		</skill>
+	</skills>
+	<knowledgeskills>
+		<skill>
+			<name>Arabic</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Bengali</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Bulgarian</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+		<name>Croatian</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Cantonese</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Danish</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>English</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+		<name>French</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+		<name>German</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Hebrew</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Hindi-Urdu</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Indonesian</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Italian</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Japanese</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Korean</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Latin</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Mandarin</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Or'zet</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Persian</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Portuguese</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Punjabi</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Polish</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Russian</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Sioux</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Spanish</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Sperethiel</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Thai</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Turkish</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Wu</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Xiang</name>
+			<attribute>INT</attribute>
+			<category>Language</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Read/Write</spec>
+				<spec>Speak</spec>
+				<spec>Dialect</spec>
+				<spec>Lingo</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Area Knowledge: Atlanta</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs />
+		</skill>
+		<skill>
+			<name>Area Knowledge: Cheyenne</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs />
+		</skill>
+		<skill>
+			<name>Area Knowledge: Chicago</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs />
+		</skill>
+		<skill>
+			<name>Area Knowledge: Denver</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs />
+		</skill>
+		<skill>
+			<name>Area Knowledge: FDC</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs />
+		</skill>
+		<skill>
+			<name>Area Knowledge: Hong-Kong</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs />
+		</skill>
+		<skill>
+			<name>Area Knowledge: LA</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs />
+		</skill>
+		<skill>
+			<name>Area Knowledge: Manhattan</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs />
+		</skill>
+		<skill>
+			<name>Area Knowledge: Portland</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs />
+		</skill>
+		<skill>
+			<name>Area Knowledge: Seattle</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Auburn</spec>
+				<spec>Bellevue</spec>
+				<spec>Council Island</spec>
+				<spec>Downtown</spec>
+				<spec>Everett</spec>
+				<spec>Puyallup</spec>
+				<spec>Redmond</spec>
+				<spec>Renton</spec>
+				<spec>Snohomish</spec>
+				<spec>Outremer</spec>
+				<spec>Seattle Matrix</spec>
+				<spec>Salish-Shide</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Alcohol</name>
+			<attribute>INT</attribute>
+			<category>Interest</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Beers</spec>
+				<spec>Coolers</spec>
+				<spec>Hard Liquor</spec>
+				<spec>Wines</spec>
+				<spec>Atlanta</spec>
+				<spec>Cheyenne</spec>
+				<spec>Chicago</spec>
+				<spec>Denver</spec>
+				<spec>Hong-Kong</spec>
+				<spec>LA</spec>
+				<spec>Manhattan</spec>
+				<spec>FDC</spec>
+				<spec>Portland</spec>
+				<spec>Seattle</spec>
+				<spec>Saskatoon</spec>
+				<spec>Sacramento</spec>
+				<spec>Quebec City</spec>
+				<spec>Algonkian-Manitou Council</spec>
+				<spec>Athabaskan Council</spec>
+				<spec>Amazonia</spec>
+				<spec>Aztlan</spec>
+				<spec>Carribean League</spec>
+				<spec>California Free State</spec>
+				<spec>Pueblo Corporate Council</spec>
+				<spec>CAS</spec>
+				<spec>UCAS</spec>
+				<spec>Quebec</spec>
+				<spec>Salish-Shidhe Council</spec>
+				<spec>Sioux</spec>
+				<spec>Tir Tairngaire</spec>
+				<spec>Tsimshian Protectorate</spec>
+				<spec>Yukutan</spec>
+				<spec>N. America</spec>
+				<spec>S. America</spec>
+				<spec>Antarctica</spec>
+				<spec>Africa</spec>
+				<spec>Western Europe</spec>
+				<spec>Eastern Europe</spec>
+				<spec>Northern Europe</spec>
+				<spec>Asia - Pacific</spec>
+				<spec>Asia - Minor</spec>
+				<spec>Middle East</spec>
+				<spec>Australia</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Architecture</name>
+			<attribute>LOG</attribute>
+			<category>Professional</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Commercial</spec>
+				<spec>Residential</spec>
+				<spec>Elven</spec>
+				<spec>Orcish</spec>
+				<spec>Medieval</spec>
+				<spec>Gothic</spec>
+				<spec>Renaissance</spec>
+				<spec>Baroque</spec>
+				<spec>Victorian</spec>
+				<spec>Neo-Classical</spec>
+				<spec>Modern</spec>
+				<spec>High-Tech</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Art</name>
+			<attribute>LOG</attribute>
+			<category>Academic</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Da Vinci</spec>
+				<spec>Monet</spec>
+				<spec>Matisse</spec>
+				<spec>Michelangelo</spec>
+				<spec>Picasso</spec>
+				<spec>Rembrandt</spec>
+				<spec>Van Gogh</spec>
+				<spec>N. America</spec>
+				<spec>S. America</spec>
+				<spec>Antarctica</spec>
+				<spec>Africa</spec>
+				<spec>Western Europe</spec>
+				<spec>Eastern Europe</spec>
+				<spec>Northern Europe</spec>
+				<spec>Asia - Pacific</spec>
+				<spec>Asia - Minor</spec>
+				<spec>Middle East</spec>
+				<spec>Australia</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Biology</name>
+			<attribute>LOG</attribute>
+			<category>Academic</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Anatomy</spec>
+				<spec>Microbiology</spec>
+				<spec>Physiology</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Business</name>
+			<attribute>LOG</attribute>
+			<category>Professional</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Budgeting</spec>
+				<spec>Compliance</spec>
+				<spec>Reporting</spec>
+				<spec>Manufacturing</spec>
+				<spec>People Management</spec>
+				<spec>Project Management</spec>
+				<spec>Retail</spec>
+				<spec>Supply and Demand</spec>
+				<spec>Small Business</spec>
+				<spec>Time Management</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Chemistry</name>
+			<attribute>LOG</attribute>
+			<category>Academic</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Industrial</spec>
+				<spec>Organic</spec>
+				<spec>Pharmaceuticals</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Combat Tactics</name>
+			<attribute>LOG</attribute>
+			<category>Professional</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Ambush</spec>
+				<spec>Guerilla</spec>
+				<spec>Hostage Rescue</spec>
+				<spec>Magic</spec>
+				<spec>Anti-Magic</spec>
+				<spec>Open Field</spec>
+				<spec>Outer Space</spec>
+				<spec>Terror</spec>
+				<spec>Underwater</spec>
+				<spec>Urban</spec>
+				<spec>Wilderness</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Bars and Clubs</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Atlanta</spec>
+				<spec>Awakened</spec>
+				<spec>Biker</spec>
+				<spec>Cheyenne</spec>
+				<spec>Chicago</spec>
+				<spec>Corporate</spec>
+				<spec>Denver</spec>
+				<spec>Dwarf</spec>
+				<spec>Elf</spec>
+				<spec>FDC</spec>
+				<spec>Gay</spec>
+				<spec>High-Class</spec>
+				<spec>Hotel</spec>
+				<spec>Jazz</spec>
+				<spec>Hong-Kong</spec>
+				<spec>LA</spec>
+				<spec>Low-Class</spec>
+				<spec>Mafia</spec>
+				<spec>Matrix</spec>
+				<spec>Manhattan</spec>
+				<spec>Ork</spec>
+				<spec>Portland</spec>
+				<spec>Piano</spec>
+				<spec>Pubs</spec>
+				<spec>Quebec City</spec>
+				<spec>Rock</spec>
+				<spec>Sacramento</spec>
+				<spec>Saskatoon</spec>
+				<spec>Seattle</spec>
+				<spec>Sports</spec>
+				<spec>Surge</spec>
+				<spec>Triad</spec>
+				<spec>Troll</spec>
+				<spec>Vory</spec>
+				<spec>Yakuza</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Data Havens</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Hacking</spec>
+				<spec>Magic</spec>
+				<spec>Matrix</spec>
+				<spec>Shadows</spec>
+				<spec>N. America</spec>
+				<spec>S. America</spec>
+				<spec>Antarctica</spec>
+				<spec>Africa</spec>
+				<spec>Western Europe</spec>
+				<spec>Eastern Europe</spec>
+				<spec>Northern Europe</spec>
+				<spec>Asia - Pacific</spec>
+				<spec>Asia - Minor</spec>
+				<spec>Middle East</spec>
+				<spec>Australia</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Economics</name>
+			<attribute>LOG</attribute>
+			<category>Academic</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Corporate</spec>
+				<spec>Tribal</spec>
+				<spec>Underworld</spec>
+				<spec>Atlanta</spec>
+				<spec>Cheyenne</spec>
+				<spec>Chicago</spec>
+				<spec>Denver</spec>
+				<spec>Hong-Kong</spec>
+				<spec>LA</spec>
+				<spec>Manhattan</spec>
+				<spec>FDC</spec>
+				<spec>Portland</spec>
+				<spec>Seattle</spec>
+				<spec>Saskatoon</spec>
+				<spec>Sacramento</spec>
+				<spec>Quebec City</spec>
+				<spec>Algonkian-Manitou Council</spec>
+				<spec>Athabaskan Council</spec>
+				<spec>Amazonia</spec>
+				<spec>Aztlan</spec>
+				<spec>Carribean League</spec>
+				<spec>California Free State</spec>
+				<spec>Pueblo Corporate Council</spec>
+				<spec>CAS</spec>
+				<spec>UCAS</spec>
+				<spec>Quebec</spec>
+				<spec>Salish-Shidhe Council</spec>
+				<spec>Sioux</spec>
+				<spec>Tir Tairngaire</spec>
+				<spec>Tsimshian Protectorate</spec>
+				<spec>Yukutan</spec>
+				<spec>N. America</spec>
+				<spec>S. America</spec>
+				<spec>Antarctica</spec>
+				<spec>Africa</spec>
+				<spec>Western Europe</spec>
+				<spec>Eastern Europe</spec>
+				<spec>Northern Europe</spec>
+				<spec>Asia - Pacific</spec>
+				<spec>Asia - Minor</spec>
+				<spec>Middle East</spec>
+				<spec>Australia</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Engineering</name>
+			<attribute>LOG</attribute>
+			<category>Academic</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Chemical</spec>
+				<spec>Civil</spec>
+				<spec>Electrical</spec>
+				<spec>Mechanical</spec>
+				<spec>Nuclear</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Firearms</name>
+			<attribute>LOG</attribute>
+			<category>Professional</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Accessories</spec>
+				<spec>Ammunition</spec>
+				<spec>Automatics</spec>
+				<spec>Design</spec>
+				<spec>Heavy Weapons</spec>
+				<spec>History</spec>
+				<spec>Longarms</spec>
+				<spec>Modification</spec>
+				<spec>Pistols</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Gaming</name>
+			<attribute>INT</attribute>
+			<category>Interest</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Dawn of Atlantis</spec>
+				<spec>Dark Eye</spec>
+				<spec>Grand Larceny</spec>
+				<spec>Killing Floor</spec>
+				<spec>Paranormal Crisis</spec>
+				<spec>Miracle Shooter</spec>
+				<spec>Spectrum Delta</spec>
+				<spec>SC IV: Protoss Gate</spec>
+				<spec>World of Shadows</spec>
+				<spec>Urban Brawl League 70</spec>
+				<spec>Guild Ages</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Gangs</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Ancients</spec>
+				<spec>Area Boys</spec>
+				<spec>Cirque du Sorciere</spec>
+				<spec>Chaos Engine</spec>
+				<spec>Cocotona</spec>
+				<spec>Comando Verdge</spec>
+				<spec>Cutters</spec>
+				<spec>Desolation Angels</spec>
+				<spec>First Nations</spec>
+				<spec>Ghost Cartels</spec>
+				<spec>Haloweeners</spec>
+				<spec>Hell's Angels</spec>
+				<spec>Iron Crosses</spec>
+				<spec>Los Verdugos</spec>
+				<spec>Los Angeles Ardientes</spec>
+				<spec>Lynch Mob</spec>
+				<spec>Merlyns</spec>
+				<spec>Numbers Gang</spec>
+				<spec>Spikes</spec>
+				<spec>Steppin Wulfs</spec>
+				<spec>Thunder Boys</spec>
+				<spec>Yardies</spec>
+				<spec>Vikings</spec>
+				<spec>Atlanta</spec>
+				<spec>Cheyenne</spec>
+				<spec>Chicago</spec>
+				<spec>Denver</spec>
+				<spec>Hong-Kong</spec>
+				<spec>LA</spec>
+				<spec>Manhattan</spec>
+				<spec>FDC</spec>
+				<spec>Portland</spec>
+				<spec>Seattle</spec>
+				<spec>Saskatoon</spec>
+				<spec>Sacramento</spec>
+				<spec>Quebec City</spec>
+				<spec>Algonkian-Manitou Council</spec>
+				<spec>Athabaskan Council</spec>
+				<spec>Amazonia</spec>
+				<spec>Aztlan</spec>
+				<spec>Carribean League</spec>
+				<spec>California Free State</spec>
+				<spec>Pueblo Corporate Council</spec>
+				<spec>CAS</spec>
+				<spec>UCAS</spec>
+				<spec>Quebec</spec>
+				<spec>Salish-Shidhe Council</spec>
+				<spec>Sioux</spec>
+				<spec>Tir Tairngaire</spec>
+				<spec>Tsimshian Protectorate</spec>
+				<spec>Yukutan</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Ghost Cartels</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Turf</spec>
+				<spec>Politics</spec>
+				<spec>Signs</spec>
+				<spec>History</spec>
+				<spec>Organizations</spec>
+				<spec>Safe Houses</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>History</name>
+			<attribute>LOG</attribute>
+			<category>Academic</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Art</spec>
+				<spec>Corporate</spec>
+				<spec>Military</spec>
+				<spec>Political</spec>
+				<spec>Religion</spec>
+				<spec>Social</spec>
+				<spec>Tribal</spec>
+				<spec>Underworld</spec>
+				<spec>Atlanta</spec>
+				<spec>Cheyenne</spec>
+				<spec>Chicago</spec>
+				<spec>Denver</spec>
+				<spec>Hong-Kong</spec>
+				<spec>LA</spec>
+				<spec>Manhattan</spec>
+				<spec>FDC</spec>
+				<spec>Portland</spec>
+				<spec>Seattle</spec>
+				<spec>Saskatoon</spec>
+				<spec>Sacramento</spec>
+				<spec>Quebec City</spec>
+				<spec>Algonkian-Manitou Council</spec>
+				<spec>Athabaskan Council</spec>
+				<spec>Amazonia</spec>
+				<spec>Aztlan</spec>
+				<spec>Carribean League</spec>
+				<spec>California Free State</spec>
+				<spec>Pueblo Corporate Council</spec>
+				<spec>CAS</spec>
+				<spec>UCAS</spec>
+				<spec>Quebec</spec>
+				<spec>Salish-Shidhe Council</spec>
+				<spec>Sioux</spec>
+				<spec>Tir Tairngaire</spec>
+				<spec>Tsimshian Protectorate</spec>
+				<spec>Yukutan</spec>
+				<spec>N. America</spec>
+				<spec>S. America</spec>
+				<spec>Antarctica</spec>
+				<spec>Africa</spec>
+				<spec>Western Europe</spec>
+				<spec>Eastern Europe</spec>
+				<spec>Northern Europe</spec>
+				<spec>Asia - Pacific</spec>
+				<spec>Asia - Minor</spec>
+				<spec>Middle East</spec>
+				<spec>Australia</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Music</name>
+			<attribute>INT</attribute>
+			<category>Interest</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Goblin Rock</spec>
+				<spec>Powernoize</spec>
+				<spec>Rockabilly</spec>
+				<spec>Sinthcore</spec>
+				<spec>Wizpunk</spec>
+				<spec>Trash Metal Troll</spec>
+				<spec>Retro Gothic</spec>
+				<spec>Elven Rap</spec>
+				<spec>Neo-J Pop</spec>
+				<spec>Nova K Rock</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>News</name>
+			<attribute>INT</attribute>
+			<category>Interest</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Business</spec>
+				<spec>Entertainment</spec>
+				<spec>Health</spec>
+				<spec>Science/Environment</spec>
+				<spec>Sports</spec>
+				<spec>Technology</spec>
+				<spec>Underworld</spec>
+				<spec>Atlanta</spec>
+				<spec>Cheyenne</spec>
+				<spec>Chicago</spec>
+				<spec>Denver</spec>
+				<spec>Hong-Kong</spec>
+				<spec>LA</spec>
+				<spec>Manhattan</spec>
+				<spec>FDC</spec>
+				<spec>Portland</spec>
+				<spec>Seattle</spec>
+				<spec>Saskatoon</spec>
+				<spec>Sacramento</spec>
+				<spec>Quebec City</spec>
+				<spec>Algonkian-Manitou Council</spec>
+				<spec>Athabaskan Council</spec>
+				<spec>Amazonia</spec>
+				<spec>Aztlan</spec>
+				<spec>Carribean League</spec>
+				<spec>California Free State</spec>
+				<spec>Pueblo Corporate Council</spec>
+				<spec>CAS</spec>
+				<spec>UCAS</spec>
+				<spec>Quebec</spec>
+				<spec>Salish-Shidhe Council</spec>
+				<spec>Sioux</spec>
+				<spec>Tir Tairngaire</spec>
+				<spec>Tsimshian Protectorate</spec>
+				<spec>Yukutan</spec>
+				<spec>N. America</spec>
+				<spec>S. America</spec>
+				<spec>Antarctica</spec>
+				<spec>Africa</spec>
+				<spec>Western Europe</spec>
+				<spec>Eastern Europe</spec>
+				<spec>Northern Europe</spec>
+				<spec>Asia - Pacific</spec>
+				<spec>Asia - Minor</spec>
+				<spec>Middle East</spec>
+				<spec>Australia</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Parazoology</name>
+			<attribute>LOG</attribute>
+			<category>Academic</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Spirits</spec>
+				<spec>N. America</spec>
+				<spec>S. America</spec>
+				<spec>Antarctica</spec>
+				<spec>Africa</spec>
+				<spec>Western Europe</spec>
+				<spec>Eastern Europe</spec>
+				<spec>Northern Europe</spec>
+				<spec>Asia - Pacific</spec>
+				<spec>Asia - Minor</spec>
+				<spec>Middle East</spec>
+				<spec>Australia</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Politics</name>
+			<attribute>LOG</attribute>
+			<category>Academic</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Corporate</spec>
+				<spec>Military</spec>
+				<spec>Political</spec>
+				<spec>Social</spec>
+				<spec>Tribal</spec>
+				<spec>Underworld</spec>
+				<spec>Atlanta</spec>
+				<spec>Cheyenne</spec>
+				<spec>Chicago</spec>
+				<spec>Denver</spec>
+				<spec>Hong-Kong</spec>
+				<spec>LA</spec>
+				<spec>Manhattan</spec>
+				<spec>FDC</spec>
+				<spec>Portland</spec>
+				<spec>Seattle</spec>
+				<spec>Saskatoon</spec>
+				<spec>Sacramento</spec>
+				<spec>Quebec City</spec>
+				<spec>Algonkian-Manitou Council</spec>
+				<spec>Athabaskan Council</spec>
+				<spec>Amazonia</spec>
+				<spec>Aztlan</spec>
+				<spec>Carribean League</spec>
+				<spec>California Free State</spec>
+				<spec>Pueblo Corporate Council</spec>
+				<spec>CAS</spec>
+				<spec>UCAS</spec>
+				<spec>Quebec</spec>
+				<spec>Salish-Shidhe Council</spec>
+				<spec>Sioux</spec>
+				<spec>Tir Tairngaire</spec>
+				<spec>Tsimshian Protectorate</spec>
+				<spec>Yukutan</spec>
+				<spec>N. America</spec>
+				<spec>S. America</spec>
+				<spec>Antarctica</spec>
+				<spec>Africa</spec>
+				<spec>Western Europe</spec>
+				<spec>Eastern Europe</spec>
+				<spec>Northern Europe</spec>
+				<spec>Asia - Pacific</spec>
+				<spec>Asia - Minor</spec>
+				<spec>Middle East</spec>
+				<spec>Australia</spec>
+				<spec>Politics</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Literature</name>
+			<attribute>LOG</attribute>
+			<category>Academic</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Science Fiction</spec>
+				<spec>Poetry</spec>
+				<spec>Romance</spec>
+				<spec>N. America</spec>
+				<spec>S. America</spec>
+				<spec>Antarctica</spec>
+				<spec>Africa</spec>
+				<spec>Western Europe</spec>
+				<spec>Eastern Europe</spec>
+				<spec>Northern Europe</spec>
+				<spec>Asia - Pacific</spec>
+				<spec>Asia - Minor</spec>
+				<spec>Middle East</spec>
+				<spec>Australia</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Mafia</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Turf</spec>
+				<spec>Politics</spec>
+				<spec>Signs</spec>
+				<spec>History</spec>
+				<spec>Organizations</spec>
+				<spec>Safe Houses</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Magic Traditions</name>
+			<attribute>LOG</attribute>
+			<category>Academic</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Adepts</spec>
+				<spec>Shamans</spec>
+				<spec>Mages</spec>
+				<spec>Magic Adepts</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Magical Theory</name>
+			<attribute>LOG</attribute>
+			<category>Academic</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Sorcery</spec>
+				<spec>Conjuring</spec>
+				<spec>Enchanting</spec>
+				<spec>Foci</spec>
+				<spec>Astral World</spec>
+				<spec>Metaplanes</spec>
+				<spec>Initiation</spec>
+				<spec>Mentor Spirits</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Magical Threats</name>
+			<attribute>LOG</attribute>
+			<category>Academic</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Blood Magic</spec>
+				<spec>Toxic Magic</spec>
+				<spec>Insect Spirits</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Military</name>
+			<attribute>INT</attribute>
+			<category>Interest</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Air Force</spec>
+				<spec>Army</spec>
+				<spec>Coast Guard</spec>
+				<spec>Marines</spec>
+				<spec>Military Magic</spec>
+				<spec>Navy</spec>
+				<spec>Special Forces</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Religion</name>
+			<attribute>LOG</attribute>
+			<category>Academic</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Islam</spec>
+				<spec>Judaism</spec>
+				<spec>Buddhism</spec>
+				<spec>Christianity</spec>
+				<spec>Hinduism</spec>
+				<spec>Zoroastrianism</spec>
+				<spec>Shinto</spec>
+				<spec>Paganism</spec>
+				<spec>Taoism</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Security Design</name>
+			<attribute>INT</attribute>
+			<category>Interest</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Bank</spec>
+				<spec>Corporate</spec>
+				<spec>Government</spec>
+				<spec>Home</spec>
+				<spec>Public Event</spec>
+				<spec>Vehicle</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Security Companies</name>
+			<attribute>LOG</attribute>
+			<category>Academic</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Lone Star</spec>
+				<spec>Knight Errant</spec>
+				<spec>Hard Corps</spec>
+				<spec>Minutemen Security</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Security Tactics</name>
+			<attribute>LOG</attribute>
+			<category>Academic</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Corporate</spec>
+				<spec>Crimson Rush</spec>
+				<spec>Entertainment</spec>
+				<spec>Government</spec>
+				<spec>Security Company</spec>
+				<spec>Rapid Response</spec>
+				<spec>Border Patrol</spec>
+				<spec>Customs</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Shadow Community</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Turf</spec>
+				<spec>Politics</spec>
+				<spec>History</spec>
+				<spec>Organizations</spec>
+				<spec>Safe Houses</spec>
+				<spec>News</spec>
+				<spec>Personalities</spec>
+				<spec>Rumours</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Spirits</name>
+			<attribute>LOG</attribute>
+			<category>Professional</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Beast</spec>
+				<spec>Earth</spec>
+				<spec>Fire</spec>
+				<spec>Guardian</spec>
+				<spec>Guidance</spec>
+				<spec>Man</spec>
+				<spec>Plant</spec>
+				<spec>Task</spec>
+				<spec>Wind</spec>
+				<spec>Water</spec>
+				<spec>Watcher</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Sports</name>
+			<attribute>INT</attribute>
+			<category>Interest</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Baseball</spec>
+				<spec>Combat Biking</spec>
+				<spec>Football</spec>
+				<spec>Hockey</spec>
+				<spec>Soccer</spec>
+				<spec>UFC</spec>
+				<spec>Urban Brawl</spec>
+				<spec>Wrestling</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Syndicates</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Ghost Cartels</spec>
+				<spec>Mafia</spec>
+				<spec>Triad</spec>
+				<spec>Yakuza</spec>
+				<spec>Vory</spec>
+				<spec>Atlanta</spec>
+				<spec>Cheyenne</spec>
+				<spec>Chicago</spec>
+				<spec>Denver</spec>
+				<spec>Hong-Kong</spec>
+				<spec>LA</spec>
+				<spec>Manhattan</spec>
+				<spec>FDC</spec>
+				<spec>Portland</spec>
+				<spec>Seattle</spec>
+				<spec>Saskatoon</spec>
+				<spec>Sacramento</spec>
+				<spec>Quebec City</spec>
+				<spec>Algonkian-Manitou Council</spec>
+				<spec>Athabaskan Council</spec>
+				<spec>Amazonia</spec>
+				<spec>Aztlan</spec>
+				<spec>Carribean League</spec>
+				<spec>California Free State</spec>
+				<spec>Pueblo Corporate Council</spec>
+				<spec>CAS</spec>
+				<spec>UCAS</spec>
+				<spec>Quebec</spec>
+				<spec>Salish-Shidhe Council</spec>
+				<spec>Sioux</spec>
+				<spec>Tir Tairngaire</spec>
+				<spec>Tsimshian Protectorate</spec>
+				<spec>Yukutan</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Triads</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Turf</spec>
+				<spec>Politics</spec>
+				<spec>Signs</spec>
+				<spec>History</spec>
+				<spec>Organizations</spec>
+				<spec>Safe Houses</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Trids</name>
+			<attribute>INT</attribute>
+			<category>Interest</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Action</spec>
+				<spec>Cop</spec>
+				<spec>Documentary</spec>
+				<spec>Fantasy</spec>
+				<spec>Rom-Com</spec>
+				<spec>Sci-fi</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Underworld</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Arson</spec>
+				<spec>Black Magic</spec>
+				<spec>Blackmail</spec>
+				<spec>BTL</spec>
+				<spec>Counterfitting</spec>
+				<spec>Drugs</spec>
+				<spec>Fencing</spec>
+				<spec>Financial Crime</spec>
+				<spec>Fixing</spec>
+				<spec>Forgery</spec>
+				<spec>Gambling</spec>
+				<spec>Grifting</spec>
+				<spec>Hijacking</spec>
+				<spec>Kidnapping</spec>
+				<spec>Loansharking</spec>
+				<spec>Medicine</spec>
+				<spec>Matrix Crime</spec>
+				<spec>Money Laundering</spec>
+				<spec>Pornography</spec>
+				<spec>Prostitution</spec>
+				<spec>Protection</spec>
+				<spec>Robbery</spec>
+				<spec>Smuggling</spec>
+				<spec>White Collar</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Vory</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Turf</spec>
+				<spec>Politics</spec>
+				<spec>Signs</spec>
+				<spec>History</spec>
+				<spec>Organizations</spec>
+				<spec>Safe Houses</spec>
+			</specs>
+		</skill>
+		<skill>
+			<name>Yakuza</name>
+			<attribute>INT</attribute>
+			<category>Street</category>
+			<default>No</default>
+			<skillgroup />
+			<specs>
+				<spec>Turf</spec>
+				<spec>Politics</spec>
+				<spec>Signs</spec>
+				<spec>History</spec>
+				<spec>Organizations</spec>
+				<spec>Safe Houses</spec>
+			</specs>
+		</skill>
+	</knowledgeskills>
+</chummer>

@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chummer>
+	<version>-918</version>
+	<categories>
+		<category>Allowed Optional Powers</category>
+		<category>Emergent</category>
+		<category>Free Spirit</category>
+		<category>Mundane</category>
+		<category>Paranormal</category>
+		<category>Shapeshifter</category>
+		<category>Toxic Critter Powers</category>
+		<category>Weakness</category>
+	</categories>
+	<powers>
+		<power>
+			<name>Sense Link</name>
+			<category>Mundane</category>
+			<type>M</type>
+			<action>Simple</action>
+			<range>MAG x 10</range>
+			<duration>Always</duration>
+			<source>SM</source>
+			<page>54</page>
+		</power>
+		<power>
+			<name>Accident</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Instant</duration>
+			<source>RW</source>
+			<page>208</page>
+		</power>
+		<power>
+			<name>Animal Control</name>
+			<category>Paranormal</category>
+			<toxic>yes</toxic>
+			<type>M</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>208</page>
+		</power>
+		<power>
+			<name>Armor (Ballistic)</name>
+			<category>Mundane</category>
+			<rating>yes</rating>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<bonus>
+				<armor>
+					<b>Rating</b>
+				</armor>
+			</bonus>
+			<source>RW</source>
+			<page>204</page>
+		</power>
+		<power>
+			<name>Armor (Impact)</name>
+			<category>Mundane</category>
+			<rating>yes</rating>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<bonus>
+				<armor>
+					<i>Rating</i>
+				</armor>
+			</bonus>
+			<source>RW</source>
+			<page>204</page>
+		</power>
+		<power>
+			<name>Astral Form</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<source>RW</source>
+			<page>208</page>
+		</power>
+		<power>
+			<name>Binding</name>
+			<category>Mundane</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Instant</duration>
+			<source>SR4</source>
+			<page>293</page>
+		</power>
+		<power>
+			<name>Compulsion</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>209</page>
+		</power>
+		<power>
+			<name>Concealment</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Simple</action>
+			<range>LOS</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>209</page>
+		</power>
+		<power>
+			<name>Confusion</name>
+			<category>Paranormal</category>
+			<toxic>yes</toxic>
+			<type>P</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>209</page>
+		</power>
+		<power>
+			<name>Corrosive Spit</name>
+			<category>Paranormal</category>
+			<toxic>yes</toxic>
+			<type>P</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Special</duration>
+			<source>RW</source>
+			<page>209</page>
+		</power>
+		<power>
+			<name>Dual Natured</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<source>RW</source>
+			<page>210</page>
+		</power>
+		<power>
+			<name>Elemental Attack</name>
+			<category>Paranormal</category>
+			<toxic>yes</toxic>
+			<type>P</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Instant</duration>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>RW</source>
+			<page>210</page>
+		</power>
+		<power>
+			<name>Energy Aura</name>
+			<category>Paranormal</category>
+			<toxic>yes</toxic>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<source>RW</source>
+			<page>210</page>
+		</power>
+		<power>
+			<name>Engulf</name>
+			<category>Mundane</category>
+			<toxic>yes</toxic>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Touch</range>
+			<duration>Sustained</duration>
+			<source>SR4</source>
+			<page>294</page>
+		</power>
+		<power>
+			<name>Enhanced Senses</name>
+			<category>Mundane</category>
+			<toxic>yes</toxic>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>RW</source>
+			<page>204</page>
+		</power>
+		<power>
+			<name>Essence Drain</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Touch</range>
+			<duration>Permanent</duration>
+			<source>RW</source>
+			<page>211</page>
+		</power>
+		<power>
+			<name>Fear</name>
+			<category>Paranormal</category>
+			<toxic>yes</toxic>
+			<type>M</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Special</duration>
+			<source>RW</source>
+			<page>212</page>
+		</power>
+		<power>
+			<name>Guard</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>212</page>
+		</power>
+		<power>
+			<name>Hardened Armor</name>
+			<category>Paranormal</category>
+			<rating>yes</rating>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<source>RW</source>
+			<page>212</page>
+		</power>
+		<power>
+			<name>Immunity</name>
+			<category>Paranormal</category>
+			<toxic>yes</toxic>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>RW</source>
+			<page>212</page>
+		</power>
+		<power>
+			<name>Infection</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Touch</range>
+			<duration>Permanent</duration>
+			<source>RW</source>
+			<page>212</page>
+		</power>
+		<power>
+			<name>Influence</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Instant</duration>
+			<source>RW</source>
+			<page>213</page>
+		</power>
+		<power>
+			<name>Innate Spell</name>
+			<category>Paranormal</category>
+			<type>As Spell</type>
+			<action>Complex</action>
+			<range>Per Spell</range>
+			<duration>Per Spell</duration>
+			<bonus>
+				<selectspell />
+			</bonus>
+			<source>RW</source>
+			<page>213</page>
+		</power>
+		<power>
+			<name>Materialization</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Self</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>213</page>
+		</power>
+		<power>
+			<name>Mimicry</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Simple</action>
+			<range>LOS</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>213</page>
+		</power>
+		<power>
+			<name>Mist Form</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Self</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>213</page>
+		</power>
+		<power>
+			<name>Movement</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>213</page>
+		</power>
+		<power>
+			<name>Mystic Armor</name>
+			<category>Paranormal</category>
+			<rating>yes</rating>
+			<type>M</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<source>RW</source>
+			<page>213</page>
+		</power>
+		<power>
+			<name>Natural Weapon</name>
+			<category>Mundane</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Touch</range>
+			<duration>Instant</duration>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>RW</source>
+			<page>206</page>
+		</power>
+		<power>
+			<name>Noxious Breath</name>
+			<category>Paranormal</category>
+			<toxic>yes</toxic>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Special</range>
+			<duration>Instant</duration>
+			<source>RW</source>
+			<page>213</page>
+		</power>
+		<power>
+			<name>Paralyzing Howl</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<source>RW</source>
+			<page>213</page>
+		</power>
+		<power>
+			<name>Psychokinesis</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>214</page>
+		</power>
+		<power>
+			<name>Regeneration</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<source>RW</source>
+			<page>215</page>
+		</power>
+		<power>
+			<name>Search</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<source>RW</source>
+			<page>215</page>
+		</power>
+		<power>
+			<name>Sapience</name>
+			<category>Mundane</category>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<source>RW</source>
+			<page>206</page>
+		</power>
+		<power>
+			<name>Venom</name>
+			<category>Mundane</category>
+			<toxic>yes</toxic>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Touch</range>
+			<duration>Instant</duration>
+			<source>RW</source>
+			<page>208</page>
+		</power>
+		<power>
+			<name>Weather Control</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Sustained</duration>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>RW</source>
+			<page>215</page>
+		</power>
+		<power>
+			<name>Astral Gateway</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Complex</action>
+			<range>LOS (A)</range>
+			<duration>Sustained</duration>
+			<source>SM</source>
+			<page>98</page>
+		</power>
+		<power>
+			<name>Aura Masking</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Free</action>
+			<range>Self</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>208</page>
+		</power>
+		<power>
+			<name>Banishing Resistance</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Special</duration>
+			<source>RW</source>
+			<page>208</page>
+		</power>
+		<power>
+			<name>Desire Reflection</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>209</page>
+		</power>
+		<power>
+			<name>Divining</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<source>RW</source>
+			<page>210</page>
+		</power>
+		<power>
+			<name>Endowment</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Complex</action>
+			<range>Touch</range>
+			<duration>Sustained</duration>
+			<source>SM</source>
+			<page>99</page>
+		</power>
+		<power>
+			<name>Energy Drain</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Complex</action>
+			<range>Touch or LOS</range>
+			<duration>Permanent</duration>
+			<source>RW</source>
+			<page>210</page>
+		</power>
+		<power>
+			<name>Engulf</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Touch</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>210</page>
+		</power>
+		<power>
+			<name>Inhabitation</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Special</duration>
+			<source>SM</source>
+			<page>100</page>
+		</power>
+		<power>
+			<name>Magical Guard</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Free</action>
+			<range>LOS</range>
+			<duration>Instant</duration>
+			<source>RW</source>
+			<page>213</page>
+		</power>
+		<power>
+			<name>Mind Link</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Simple</action>
+			<range>LOS</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>213</page>
+		</power>
+		<power>
+			<name>Possession</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Self</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>214</page>
+		</power>
+		<power>
+			<name>Quake</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Special</range>
+			<duration>Instant</duration>
+			<source>RW</source>
+			<page>214</page>
+		</power>
+		<power>
+			<name>Realistic Form</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Special</duration>
+			<source>RW</source>
+			<page>215</page>
+		</power>
+		<power>
+			<name>Shadow Cloak</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Free</action>
+			<range>Self</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>215</page>
+		</power>
+		<power>
+			<name>Silence</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Special</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>215</page>
+		</power>
+		<power>
+			<name>Storm</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<source>RW</source>
+			<page>215</page>
+		</power>
+		<power>
+			<name>Astral Projection</name>
+			<category>Free Spirit</category>
+			<type>M</type>
+			<action>Complex</action>
+			<range>Self</range>
+			<duration>Special</duration>
+			<source>SM</source>
+			<page>109</page>
+		</power>
+		<power>
+			<name>Mutable Form</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Special</duration>
+			<source>RW</source>
+			<page>213</page>
+		</power>
+		<power>
+			<name>Personal Domain</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Auto</action>
+			<range>LOS</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>214</page>
+		</power>
+		<power>
+			<name>Spirit Pact</name>
+			<category>Free Spirit</category>
+			<type>M</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<source>SM</source>
+			<page>110</page>
+		</power>
+		<power>
+			<name>Hidden Life</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Touch</range>
+			<duration>Permanent</duration>
+			<source>RW</source>
+			<page>212</page>
+		</power>
+		<power>
+			<name>Vessel Trading</name>
+			<category>Free Spirit</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Touch</range>
+			<duration>Instant</duration>
+			<source>SM</source>
+			<page>110</page>
+		</power>
+		<power>
+			<name>Wealth</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Special</duration>
+			<source>RW</source>
+			<page>216</page>
+		</power>
+		<power>
+			<name>Anaphylaxis</name>
+			<category>Paranormal</category>
+			<toxic>yes</toxic>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Touch</range>
+			<duration>Instant</duration>
+			<source>RW</source>
+			<page>208</page>
+		</power>
+		<power>
+			<name>Mutagen</name>
+			<category>Paranormal</category>
+			<toxic>yes</toxic>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Self</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>213</page>
+		</power>
+		<power>
+			<name>Devouring</name>
+			<category>Paranormal</category>
+			<toxic>yes</toxic>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Touch</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>209</page>
+		</power>
+		<power>
+			<name>Hive Mind</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Auto</action>
+			<range>Special</range>
+			<duration>Always</duration>
+			<source>SM</source>
+			<page>154</page>
+		</power>
+		<power>
+			<name>Pestilence</name>
+			<category>Mundane</category>
+			<toxic>yes</toxic>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Touch</range>
+			<duration>Instant</duration>
+			<source>RW</source>
+			<page>206</page>
+		</power>
+		<power>
+			<name>Reinforcement</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Touch</range>
+			<duration>Special</duration>
+			<source>SM</source>
+			<page>154</page>
+		</power>
+		<power>
+			<name>Sonic Projection</name>
+			<category>Paranroaml</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Special</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>215</page>
+		</power>
+		<power>
+			<name>Adaptive Camouflage</name>
+			<category>Mundane</category>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<source>RW</source>
+			<page>204</page>
+		</power>
+		<power>
+			<name>Gestalt Consciousness</name>
+			<category>Mundane</category>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<source>RW</source>
+			<page>205</page>
+		</power>
+		<power>
+			<name>Gills</name>
+			<category>Mundane</category>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<source>RW</source>
+			<page>205</page>
+		</power>
+		<power>
+			<name>Substance Extrusion</name>
+			<category>Mundane</category>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>RW</source>
+			<page>207</page>
+		</power>
+		<power>
+			<name>Wall Walking</name>
+			<category>Mundane</category>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<source>RW</source>
+			<page>208</page>
+		</power>
+		<power>
+			<name>Adaptive Coloration</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<source>RW</source>
+			<page>208</page>
+		</power>
+		<power>
+			<name>Binding</name>
+			<category>Paranormal</category>
+			<toxic>yes</toxic>
+			<type>P</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Instant</duration>
+			<source>RW</source>
+			<page>209</page>
+		</power>
+		<power>
+			<name>Control Focus</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Auto</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<source>RW</source>
+			<page>209</page>
+		</power>
+		<power>
+			<name>Corrosive Secretions</name>
+			<category>Paranormal</category>
+			<toxic>yes</toxic>
+			<type>P</type>
+			<action>Auto</action>
+			<range>Self</range>
+			<duration>Always</duration>
+			<source>RW</source>
+			<page>209</page>
+		</power>
+		<power>
+			<name>Deathly Aura</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Simple</action>
+			<range>Special</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>209</page>
+		</power>
+		<power>
+			<name>Dragonspeech</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Auto</action>
+			<range>LOS</range>
+			<duration>Instant</duration>
+			<source>RW</source>
+			<page>210</page>
+		</power>
+		<power>
+			<name>Empathy</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>210</page>
+		</power>
+		<power>
+			<name>Fey Glamour</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Complex</action>
+			<range>Special</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>212</page>
+		</power>
+		<power>
+			<name>Magic Sense</name>
+			<category>Paranormal</category>
+			<toxic>yes</toxic>
+			<type>M</type>
+			<action>Auto</action>
+			<range>LOS</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>213</page>
+		</power>
+		<power>
+			<name>Metahuman Form</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Self</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>213</page>
+		</power>
+		<power>
+			<name>Paralyzing Touch</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Touch</range>
+			<duration>Special</duration>
+			<source>RW</source>
+			<page>214</page>
+		</power>
+		<power>
+			<name>Petrification</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>LOS</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>214</page>
+		</power>
+		<power>
+			<name>Phasing</name>
+			<category>Paranormal</category>
+			<type>P</type>
+			<action>Complex</action>
+			<range>Self</range>
+			<duration>Sustained</duration>
+			<source>RW</source>
+			<page>214</page>
+		</power>
+		<power>
+			<name>Spirit Pact</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<source>RW</source>
+			<page>215</page>
+		</power>
+		<power>
+			<name>Taint</name>
+			<category>Paranormal</category>
+			<toxic>yes</toxic>
+			<type>M</type>
+			<action>Complex</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<source>RW</source>
+			<page>215</page>
+		</power>
+		<power>
+			<name>Vanishing</name>
+			<category>Paranormal</category>
+			<type>M</type>
+			<action>Free</action>
+			<range>Self</range>
+			<duration>Special</duration>
+			<source>RW</source>
+			<page>215</page>
+		</power>
+		<power>
+			<name>Anthropomorphism</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>216</page>
+		</power>
+		<power>
+			<name>AR-Parallelism</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>216</page>
+		</power>
+		<power>
+			<name>Blend</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>216</page>
+		</power>
+		<power>
+			<name>Cozenage</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>216</page>
+		</power>
+		<power>
+			<name>Diagnostics</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>216</page>
+		</power>
+		<power>
+			<name>E-Hive</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>216</page>
+		</power>
+		<power>
+			<name>Gremlins</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>217</page>
+		</power>
+		<power>
+			<name>Hardening</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>217</page>
+		</power>
+		<power>
+			<name>Holographic Concealment</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>217</page>
+		</power>
+		<power>
+			<name>Resonance Bond</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>217</page>
+		</power>
+		<power>
+			<name>Resonant Conditioning</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>217</page>
+		</power>
+		<power>
+			<name>Spraying</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>218</page>
+		</power>
+		<power>
+			<name>Suppression</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>218</page>
+		</power>
+		<power>
+			<name>Technovantage [Echo]</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>RW</source>
+			<page>218</page>
+		</power>
+		<power>
+			<name>Traceroute</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>218</page>
+		</power>
+		<power>
+			<name>Tunnel</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>218</page>
+		</power>
+		<power>
+			<name>Venomous Code</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>218</page>
+		</power>
+		<power>
+			<name>Virtual Mimicry</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>218</page>
+		</power>
+		<power>
+			<name>Assault</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>156</page>
+		</power>
+		<power>
+			<name>Castling</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>156</page>
+		</power>
+		<power>
+			<name>Info Sortilege</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>156</page>
+		</power>
+		<power>
+			<name>Probability Distribution</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>156</page>
+		</power>
+		<power>
+			<name>Proficiency</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>156</page>
+		</power>
+		<power>
+			<name>Transfer</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>157</page>
+		</power>
+		<power>
+			<name>Credit</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>160</page>
+		</power>
+		<power>
+			<name>Denial</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>160</page>
+		</power>
+		<power>
+			<name>Doorstop</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>160</page>
+		</power>
+		<power>
+			<name>Resonance Rift</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>160</page>
+		</power>
+		<power>
+			<name>Datavore</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>181</page>
+		</power>
+		<power>
+			<name>Distortion</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>181</page>
+		</power>
+		<power>
+			<name>Peak</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>181</page>
+		</power>
+		<power>
+			<name>Resonance Drain</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>181</page>
+		</power>
+		<power>
+			<name>Siphon</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>181</page>
+		</power>
+		<power>
+			<name>Sparky</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>181</page>
+		</power>
+		<power>
+			<name>Surge</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>181</page>
+		</power>
+		<power>
+			<name>Virulence</name>
+			<category>Emergent</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>UN</source>
+			<page>181</page>
+		</power>
+		<power>
+			<name>Allergy</name>
+			<category>Weakness</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>RW</source>
+			<page>219</page>
+		</power>
+		<power>
+			<name>Dietary Requirement</name>
+			<category>Weakness</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>RW</source>
+			<page>219</page>
+		</power>
+		<power>
+			<name>Essence Loss</name>
+			<category>Weakness</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>219</page>
+		</power>
+		<power>
+			<name>Evanescence</name>
+			<category>Weakness</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RW</source>
+			<page>219</page>
+		</power>
+		<power>
+			<name>Fragile</name>
+			<category>Weakness</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<bonus>
+				<conditionmonitor>
+					<physical>Rating * -2</physical>
+					<stun>Rating * -2</stun>
+				</conditionmonitor>
+			</bonus>
+			<source>RW</source>
+			<page>219</page>
+		</power>
+		<power>
+			<name>Reduced Senses</name>
+			<category>Weakness</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>RW</source>
+			<page>219</page>
+		</power>
+		<power>
+			<name>Uneducated</name>
+			<category>Weakness</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<bonus>
+				<uneducated />
+			</bonus>
+			<source>RW</source>
+			<page>219</page>
+		</power>
+		<power>
+			<name>Vulnerability</name>
+			<category>Weakness</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>RW</source>
+			<page>219</page>
+		</power>
+		<power>
+			<name>Twist Fate</name>
+			<category>Dracoforms</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>SR4</source>
+			<page>304</page>
+		</power>
+		<power>
+			<name>Cookie</name>
+			<category>Emergent</category>
+			<type />
+			<action>OT</action>
+			<range>Node</range>
+			<duration>Predetermined by Sprite</duration>
+			<source>SR4</source>
+			<page>242</page>
+		</power>
+		<power>
+			<name>Electron Storm</name>
+			<category>Emergent</category>
+			<type>S</type>
+			<action>C</action>
+			<range>Node</range>
+			<duration>Instant</duration>
+			<source>SR4</source>
+			<page>242</page>
+		</power>
+		<power>
+			<name>Hash</name>
+			<category>Emergent</category>
+			<type />
+			<action>Complex</action>
+			<range>Node</range>
+			<duration>Sustained</duration>
+			<source>SR4</source>
+			<page>243</page>
+		</power>
+		<power>
+			<name>Steganography</name>
+			<category>Emergent</category>
+			<type />
+			<action>Complex</action>
+			<range>Node</range>
+			<duration>Indefinate</duration>
+			<source>SR4</source>
+			<page>243</page>
+		</power>
+		<power>
+			<name>Stability</name>
+			<category>Emergent</category>
+			<type />
+			<action>Complex</action>
+			<range>Node</range>
+			<duration>Sustained</duration>
+			<source>SR4</source>
+			<page>243</page>
+		</power>
+		<power>
+			<name>Watermark</name>
+			<category>Emergent</category>
+			<type />
+			<action>Complex</action>
+			<range>Node</range>
+			<duration>Indefinate</duration>
+			<source>SR4</source>
+			<page>243</page>
+		</power>
+		<power>
+			<name>Shift (Human)</name>
+			<category>Shapeshifter</category>
+			<type>M</type>
+			<action>Complex</action>
+			<range>Self</range>
+			<duration>Special</duration>
+			<source>RC</source>
+			<page>85</page>
+		</power>
+		<power>
+			<name>Shift (Elf)</name>
+			<category>Shapeshifter</category>
+			<type>M</type>
+			<action>Complex</action>
+			<range>Self</range>
+			<duration>Special</duration>
+			<source>RC</source>
+			<page>85</page>
+		</power>
+		<power>
+			<name>Shift (Dwarf)</name>
+			<category>Shapeshifter</category>
+			<type>M</type>
+			<action>Complex</action>
+			<range>Self</range>
+			<duration>Special</duration>
+			<source>RC</source>
+			<page>85</page>
+		</power>
+		<power>
+			<name>Shift (Ork)</name>
+			<category>Shapeshifter</category>
+			<type>M</type>
+			<action>Complex</action>
+			<range>Self</range>
+			<duration>Special</duration>
+			<source>RC</source>
+			<page>85</page>
+		</power>
+		<power>
+			<name>Shift (Troll)</name>
+			<category>Shapeshifter</category>
+			<type>M</type>
+			<action>Complex</action>
+			<range>Self</range>
+			<duration>Special</duration>
+			<source>RC</source>
+			<page>85</page>
+		</power>
+		<power>
+			<name>Shift (Drake)</name>
+			<category>Shapeshifter</category>
+			<type>M</type>
+			<action>Complex</action>
+			<range>Self</range>
+			<duration>Special</duration>
+			<source>RC</source>
+			<page>76</page>
+		</power>
+		<power>
+			<name>Induced Dormancy</name>
+			<category>Weakness</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>RC</source>
+			<page>83</page>
+		</power>
+		<power>
+			<name>Attribute Enhancement</name>
+			<category>Mundane</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus>
+				<selectattribute />
+			</bonus>
+			<source>RW</source>
+			<page>28</page>
+		</power>
+		<power>
+			<name>Skill Enhancement</name>
+			<category>Mundane</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus>
+				<selectskill>
+					<val>2</val>
+				</selectskill>
+			</bonus>
+			<source>RW</source>
+			<page>28</page>
+		</power>
+		<power>
+			<name>Thicker Hide</name>
+			<category>Mundane</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>RW</source>
+			<page>28</page>
+		</power>
+		<power>
+			<name>Pheromone Coding</name>
+			<category>Mundane</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>RW</source>
+			<page>28</page>
+		</power>
+		<power>
+			<name>Potent Venom</name>
+			<category>Mundane</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>RW</source>
+			<page>28</page>
+		</power>
+		<power>
+			<name>Chimeric Ability</name>
+			<category>Mundane</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>RW</source>
+			<page>28</page>
+		</power>
+	</powers>
+</chummer>

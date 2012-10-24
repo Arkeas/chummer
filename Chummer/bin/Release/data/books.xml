@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chummer>
+	<version>-911</version>
+	<books>
+		<book>
+			<name>Arsenal</name>
+			<code>AR</code>
+		</book>
+		<book>
+			<name>Arsenal French Content</name>
+			<code>ARF</code>
+		</book>
+		<book>
+			<name>Arsenal German Content</name>
+			<code>ARG</code>
+		</book>
+		<book>
+			<name>Artifacts Unbound</name>
+			<code>ART</code>
+		</book>
+		<book>
+			<name>Attitude</name>
+			<code>AT</code>
+		</book>
+		<book>
+			<name>Augmentation</name>
+			<code>AU</code>
+		</book>
+		<book>
+			<name>Augmentation German Content</name>
+			<code>AUG</code>
+		</book>
+		<book>
+			<name>Corporate Intrigue</name>
+			<code>CI</code>
+		</book>
+		<book>
+			<name>Deadly Waves</name>
+			<code>DW</code>
+		</book>
+		<book>
+			<name>Digital Grimoire</name>
+			<code>DG</code>
+		</book>
+		<book>
+			<name>Ghost Cartels</name>
+			<code>GC</code>
+		</book>
+		<book>
+			<name>Gun Heaven</name>
+			<code>GH</code>
+		</book>
+		<book>
+			<name>Gun Heaven 2</name>
+			<code>GH2</code>
+		</book>
+		<book>
+			<name>Hazard Pay</name>
+			<code>HP</code>
+		</book>
+		<book>
+			<name>The Land of Promise</name>
+			<code>LOP</code>
+		</book>
+		<book>
+			<name>MilSpecTech</name>
+			<code>MST</code>
+		</book>
+		<book>
+			<name>MilSpecTech 2</name>
+			<code>MST2</code>
+		</book>
+		<book>
+			<name>Parabotany</name>
+			<code>PB</code>
+		</book>
+		<book>
+			<name>Parazoology</name>
+			<code>PZ</code>
+		</book>
+		<book>
+			<name>Runner's Black Book</name>
+			<code>RBB</code>
+		</book>
+		<book>
+			<name>Runner's Black Book German Content</name>
+			<code>RBBG</code>
+		</book>
+		<book>
+			<name>Runner's Companion</name>
+			<code>RC</code>
+		</book>
+		<book>
+			<name>Running Wild</name>
+			<code>RW</code>
+		</book>
+		<book>
+			<name>Safehouses</name>
+			<code>SH</code>
+		</book>
+		<book>
+			<name>Shadowrun 2050</name>
+			<code>2050</code>
+		</book>
+		<book>
+			<name>Shadowrun 4th Edition</name>
+			<code>SR4</code>
+		</book>
+		<book>
+			<name>S.O.X.</name>
+			<code>SOX</code>
+		</book>
+		<book>
+			<name>Spy Games</name>
+			<code>SG</code>
+		</book>
+		<book>
+			<name>State of the Art: 2073</name>
+			<code>SA</code>
+		</book>
+		<book>
+			<name>Street Legends</name>
+			<code>SL</code>
+		</book>
+		<book>
+			<name>Street Magic</name>
+			<code>SM</code>
+		</book>
+		<book>
+			<name>This Old Drone</name>
+			<code>TOD</code>
+		</book>
+		<book>
+			<name>Unfriendly Skies</name>
+			<code>US</code>
+		</book>
+		<book>
+			<name>Unwired</name>
+			<code>UN</code>
+		</book>
+		<book>
+			<name>Used Car Lot</name>
+			<code>UCL</code>
+		</book>
+		<book>
+			<name>War!</name>
+			<code>WAR</code>
+		</book>
+		<book>
+			<name>The Way of the Adept</name>
+			<code>WA</code>
+		</book>
+	</books>
+</chummer>

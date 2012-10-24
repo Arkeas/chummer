@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chummer>
+	<version>-919</version>
+	<categories>
+		<category>Advanced</category>
+		<category>ARE Programs</category>
+		<category>Autosoft</category>
+		<category>Common Use</category>
+		<category>Hacking</category>
+		<category>Malware</category>
+		<category>Sensor Software</category>
+		<category>Skillsofts</category>
+		<category>Tactical AR Software</category>
+	</categories>
+	<programs>
+		<program>
+			<name>Analyze</name>
+			<skill>Computer</skill>
+			<category>Common Use</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>232</page>
+		</program>
+		<program>
+			<name>Browse</name>
+			<skill>Data Search</skill>
+			<category>Common Use</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>232</page>
+		</program>
+		<program>
+			<name>Command</name>
+			<skill>Varies</skill>
+			<category>Common Use</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>232</page>
+		</program>
+		<program>
+			<name>Edit</name>
+			<skill>Computer</skill>
+			<category>Common Use</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>233</page>
+		</program>
+		<program>
+			<name>Encrypt</name>
+			<skill>Electronic Warfare</skill>
+			<category>Common Use</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>233</page>
+		</program>
+		<program>
+			<name>Purge</name>
+			<skill>Computer</skill>
+			<category>Common Use</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>111</page>
+		</program>
+		<program>
+			<name>Reality Filter</name>
+			<skill>Response</skill>
+			<category>Common Use</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>233</page>
+		</program>
+		<program>
+			<name>Scan</name>
+			<skill>Electronic Warfare</skill>
+			<category>Common Use</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>233</page>
+		</program>
+		<program>
+			<name>CarnivoreGold</name>
+			<skill>Computer</skill>
+			<category>Common Use</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SG</source>
+			<page>149</page>
+		</program>
+		<program>
+			<name>Lip Reader</name>
+			<skill>Computer</skill>
+			<category>Common Use</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SG</source>
+			<page>149</page>
+		</program>
+		<program>
+			<name>MonaLisa</name>
+			<skill>Computer</skill>
+			<category>Common Use</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SG</source>
+			<page>149</page>
+		</program>
+		<program>
+			<name>Data Translation</name>
+			<skill>Hardware</skill>
+			<category>Common Use</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>GH</source>
+			<page>14</page>
+		</program>
+		<program>
+			<name>Armor</name>
+			<skill>None</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>233</page>
+		</program>
+		<program>
+			<name>Attack</name>
+			<skill>Cybercombat</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Combat</tag>
+				<tag>Attack</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>233</page>
+		</program>
+		<program>
+			<name>Black Hammer</name>
+			<skill>Cybercombat</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Combat</tag>
+				<tag>Black</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>233</page>
+		</program>
+		<program>
+			<name>Blackout</name>
+			<skill>Cybercombat</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Combat</tag>
+				<tag>Black</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>233</page>
+		</program>
+		<program>
+			<name>Corrupt</name>
+			<skill>Hacking</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>111</page>
+		</program>
+		<program>
+			<name>Data Bomb</name>
+			<skill>None</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Combat</tag>
+				<tag>Bomb</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>233</page>
+		</program>
+		<program>
+			<name>Decrypt</name>
+			<skill>Electronic Warfare</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>233</page>
+		</program>
+		<program>
+			<name>Defuse</name>
+			<skill>Hacking</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>233</page>
+		</program>
+		<program>
+			<name>Disarm</name>
+			<skill>Hacking</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>111</page>
+		</program>
+		<program>
+			<name>ECCM</name>
+			<skill>None</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>233</page>
+		</program>
+		<program>
+			<name>Exploit</name>
+			<skill>Hacking</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>233</page>
+		</program>
+		<program>
+			<name>Medic</name>
+			<skill>Computer</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>233</page>
+		</program>
+		<program>
+			<name>Nuke</name>
+			<skill>Hacking</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Combat</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>111</page>
+		</program>
+		<program>
+			<name>Sniffer</name>
+			<skill>Electronic Warfare</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>234</page>
+		</program>
+		<program>
+			<name>Spoof</name>
+			<skill>Hacking</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>234</page>
+		</program>
+		<program>
+			<name>Stealth</name>
+			<skill>Hacking</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>234</page>
+		</program>
+		<program>
+			<name>Track</name>
+			<skill>Computer</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>234</page>
+		</program>
+		<program>
+			<name>Simrig</name>
+			<skill>Varies</skill>
+			<category>Advanced</category>
+			<maxrating>1</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>136</page>
+		</program>
+		<program>
+			<name>Smartlink</name>
+			<skill>Varies</skill>
+			<category>Advanced</category>
+			<maxrating>1</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>136</page>
+		</program>
+		<program>
+			<name>Shield</name>
+			<skill>Varies</skill>
+			<category>Advanced</category>
+			<maxrating />
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>136</page>
+		</program>
+		<program>
+			<name>Activesoft</name>
+			<skill>Varies</skill>
+			<category>Skillsofts</category>
+			<maxrating>4</maxrating>
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Skillsoft</tag>
+				<tag>Activesoft</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<bonus>
+				<selectskill />
+			</bonus>
+			<source>SR4</source>
+			<page>330</page>
+		</program>
+		<program>
+			<name>Knowsoft</name>
+			<skill>Varies</skill>
+			<category>Skillsofts</category>
+			<maxrating>5</maxrating>
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Skillsoft</tag>
+				<tag>Knowsoft</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SR4</source>
+			<page>330</page>
+		</program>
+		<program>
+			<name>Linguasoft</name>
+			<skill>Varies</skill>
+			<category>Skillsofts</category>
+			<maxrating>5</maxrating>
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Skillsoft</tag>
+				<tag>Linguasoft</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SR4</source>
+			<page>330</page>
+		</program>
+		<program>
+			<name>Virtual Surround Music</name>
+			<skill>Varies</skill>
+			<category>ARE Programs</category>
+			<maxrating>1</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>331</page>
+		</program>
+		<program>
+			<name>Wall Space</name>
+			<skill>Varies</skill>
+			<category>ARE Programs</category>
+			<maxrating>1</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>331</page>
+		</program>
+		<program>
+			<name>Virtual Pet</name>
+			<skill>Varies</skill>
+			<category>ARE Programs</category>
+			<maxrating>1</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>331</page>
+		</program>
+		<program>
+			<name>Virtual Person</name>
+			<skill>Varies</skill>
+			<category>ARE Programs</category>
+			<maxrating>1</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>331</page>
+		</program>
+		<program>
+			<name>Virtual Weather</name>
+			<skill>Varies</skill>
+			<category>ARE Programs</category>
+			<maxrating>1</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>331</page>
+		</program>
+		<program>
+			<name>Miracle Shooter</name>
+			<skill>Varies</skill>
+			<category>ARE Programs</category>
+			<maxrating>1</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>SR4</source>
+			<page>331</page>
+		</program>
+		<program>
+			<name>Empathy Software</name>
+			<skill>Varies</skill>
+			<category>Sensor Software</category>
+			<maxrating>6</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<bonus>
+				<skillcategory>
+					<name>Social Active</name>
+					<bonus>Rating</bonus>
+				</skillcategory>
+			</bonus>
+			<source>AR</source>
+			<page>60</page>
+		</program>
+		<program>
+			<name>Facial Recognition Software</name>
+			<skill>Varies</skill>
+			<category>Sensor Software</category>
+			<maxrating>6</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>AR</source>
+			<page>61</page>
+		</program>
+		<program>
+			<name>Gait Analysis Software</name>
+			<skill>Varies</skill>
+			<category>Sensor Software</category>
+			<maxrating>6</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>AR</source>
+			<page>61</page>
+		</program>
+		<program>
+			<name>Lie Detection Software</name>
+			<skill>Varies</skill>
+			<category>Sensor Software</category>
+			<maxrating>6</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>AR</source>
+			<page>61</page>
+		</program>
+		<program>
+			<name>Noise Analysis Software</name>
+			<skill>Varies</skill>
+			<category>Sensor Software</category>
+			<maxrating>6</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>AR</source>
+			<page>61</page>
+		</program>
+		<program>
+			<name>Visual Spotter Software</name>
+			<skill>Varies</skill>
+			<category>Sensor Software</category>
+			<maxrating>6</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>AR</source>
+			<page>61</page>
+		</program>
+		<program>
+			<name>Vehicle Identification Software</name>
+			<skill>Varies</skill>
+			<category>Sensor Software</category>
+			<maxrating>6</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>AR</source>
+			<page>61</page>
+		</program>
+		<program>
+			<name>Voice Recognition Software</name>
+			<skill>Varies</skill>
+			<category>Sensor Software</category>
+			<maxrating>6</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>AR</source>
+			<page>61</page>
+		</program>
+		<program>
+			<name>Weapon Watcher Software</name>
+			<skill>Varies</skill>
+			<category>Sensor Software</category>
+			<maxrating>6</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>AR</source>
+			<page>61</page>
+		</program>
+		<program>
+			<name>Wildlife Spotter Software</name>
+			<skill>Varies</skill>
+			<category>Sensor Software</category>
+			<maxrating>6</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>AR</source>
+			<page>61</page>
+		</program>
+		<program>
+			<name>Tacsoft</name>
+			<skill>Varies</skill>
+			<category>Tactical AR Software</category>
+			<maxrating>4</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>125</page>
+		</program>
+		<program>
+			<name>Body Shop</name>
+			<skill>Varies</skill>
+			<category>ARE Programs</category>
+			<maxrating>1</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>108</page>
+		</program>
+		<program>
+			<name>Glyphs</name>
+			<skill>Varies</skill>
+			<category>ARE Programs</category>
+			<maxrating>1</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>108</page>
+		</program>
+		<program>
+			<name>Negator</name>
+			<skill>Varies</skill>
+			<category>ARE Programs</category>
+			<maxrating>1</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>108</page>
+		</program>
+		<program>
+			<name>Ractives</name>
+			<skill>Varies</skill>
+			<category>ARE Programs</category>
+			<maxrating>1</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>108</page>
+		</program>
+		<program>
+			<name>Scentsation</name>
+			<skill>Varies</skill>
+			<category>ARE Programs</category>
+			<maxrating>1</maxrating>
+			<capacity>0</capacity>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>108</page>
+		</program>
+		<program>
+			<name>Node Mine</name>
+			<skill>None</skill>
+			<category>Hacking</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Combat</tag>
+				<tag>Bomb</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>178</page>
+		</program>
+		<program>
+			<name>Adaptability</name>
+			<skill>None</skill>
+			<category>Autosoft</category>
+			<maxrating>3</maxrating>
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Agent</tag>
+				<tag>Drone</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>112</page>
+		</program>
+		<program>
+			<name>Cascading</name>
+			<skill>None</skill>
+			<category>Autosoft</category>
+			<maxrating>3</maxrating>
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Agent</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>113</page>
+		</program>
+		<program>
+			<name>Chaser</name>
+			<skill>None</skill>
+			<category>Autosoft</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Drone</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>114</page>
+		</program>
+		<program>
+			<name>Covert Ops</name>
+			<skill>None</skill>
+			<category>Autosoft</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Drone</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>114</page>
+		</program>
+		<program>
+			<name>Profession</name>
+			<skill>None</skill>
+			<category>Autosoft</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Drone</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>UN</source>
+			<page>114</page>
+		</program>
+		<program>
+			<name>Trailblazer</name>
+			<skill>None</skill>
+			<category>Autosoft</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Drone</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>114</page>
+		</program>
+		<program>
+			<name>Expert Defense</name>
+			<skill>None</skill>
+			<category>Autosoft</category>
+			<maxrating>3</maxrating>
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Agent</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>113</page>
+		</program>
+		<program>
+			<name>Expert Offense</name>
+			<skill>None</skill>
+			<category>Autosoft</category>
+			<maxrating>3</maxrating>
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Agent</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>113</page>
+		</program>
+		<program>
+			<name>Homeground</name>
+			<skill>None</skill>
+			<category>Autosoft</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Agent</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>UN</source>
+			<page>113</page>
+		</program>
+		<program>
+			<name>Replicate</name>
+			<skill>None</skill>
+			<category>Autosoft</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<tags>
+				<tag>Agent</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>113</page>
+		</program>
+		<program>
+			<name>Trojan</name>
+			<skill>Varies</skill>
+			<category>Malware</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>123</page>
+		</program>
+		<program>
+			<name>Virus</name>
+			<skill>Varies</skill>
+			<category>Malware</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>120</page>
+		</program>
+		<program>
+			<name>Worm</name>
+			<skill>Varies</skill>
+			<category>Malware</category>
+			<maxrating />
+			<capacity>Rating/2</capacity>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>122</page>
+		</program>
+	</programs>
+	<options>
+		<option>
+			<name>Biofeedback</name>
+			<category>General</category>
+			<maxrating>0</maxrating>
+			<programtypes>
+				<programtype tags="Bomb">Hacking</programtype>
+				<programtype>Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<tags>
+				<tag>Black</tag>
+			</tags>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>114</page>
+		</option>
+		<option>
+			<name>Copy Protection</name>
+			<category>General</category>
+			<maxrating />
+			<programtypes>
+				<programtype>Common Use</programtype>
+				<programtype>Hacking</programtype>
+				<programtype>Autosoft</programtype>
+				<programtype>Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>114</page>
+		</option>
+		<option>
+			<name>Crashguard</name>
+			<category>General</category>
+			<maxrating>0</maxrating>
+			<programtypes>
+				<programtype>Common Use</programtype>
+				<programtype>Hacking</programtype>
+				<programtype>Autosoft</programtype>
+				<programtype>Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>114</page>
+		</option>
+		<option>
+			<name>Ergonomic</name>
+			<category>General</category>
+			<maxrating>0</maxrating>
+			<programtypes>
+				<programtype>Common Use</programtype>
+				<programtype>Hacking</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>114</page>
+		</option>
+		<option>
+			<name>Limitation</name>
+			<category>General</category>
+			<maxrating>0</maxrating>
+			<programtypes>
+				<programtype>Common Use</programtype>
+				<programtype>Hacking</programtype>
+				<programtype>Autosoft</programtype>
+				<programtype>Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<bonus>
+				<selecttext/>
+			</bonus>
+			<source>UN</source>
+			<page>114</page>
+		</option>
+		<option>
+			<name>Mute</name>
+			<category>General</category>
+			<maxrating>0</maxrating>
+			<programtypes>
+				<programtype>Common Use</programtype>
+				<programtype>Hacking</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>115</page>
+		</option>
+		<option>
+			<name>Optimization</name>
+			<category>General</category>
+			<maxrating />
+			<programtypes>
+				<programtype>Common Use</programtype>
+				<programtype>Hacking</programtype>
+				<programtype>Autosoft</programtype>
+				<programtype>Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>115</page>
+		</option>
+		<option>
+			<name>Psychotropic</name>
+			<category>General</category>
+			<maxrating />
+			<programtypes>
+				<programtype tags="Black">Hacking</programtype>
+				<programtype>Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>115</page>
+		</option>
+		<option>
+			<name>Registration</name>
+			<category>General</category>
+			<maxrating>0</maxrating>
+			<programtypes>
+				<programtype>Common Use</programtype>
+				<programtype>Hacking</programtype>
+				<programtype>Autosoft</programtype>
+				<programtype>Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>115</page>
+		</option>
+		<option>
+			<name>Timer</name>
+			<category>General</category>
+			<maxrating>0</maxrating>
+			<programtypes>
+				<programtype>Common Use</programtype>
+				<programtype>Hacking</programtype>
+				<programtype>Autosoft</programtype>
+				<programtype>Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>115</page>
+		</option>
+		<option>
+			<name>Viral Resistance</name>
+			<category>General</category>
+			<maxrating />
+			<programtypes>
+				<programtype>Common Use</programtype>
+				<programtype>Hacking</programtype>
+				<programtype>Autosoft</programtype>
+				<programtype>Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>116</page>
+		</option>
+		<option>
+			<name>Dissonant Virus</name>
+			<category>General</category>
+			<maxrating />
+			<programtypes>
+				<programtype>Common Use</programtype>
+				<programtype>Hacking</programtype>
+				<programtype>Autosoft</programtype>
+				<programtype>Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>178</page>
+		</option>
+		<option>
+			<name>Area</name>
+			<category>Hacking</category>
+			<maxrating />
+			<programtypes>
+				<programtype tags="Combat">Hacking</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>116</page>
+		</option>
+		<option>
+			<name>Armor Piercing</name>
+			<category>Hacking</category>
+			<maxrating>3</maxrating>
+			<programtypes>
+				<programtype tags="Combat">Hacking</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>116</page>
+		</option>
+		<option>
+			<name>Pavlov</name>
+			<category>Hacking</category>
+			<maxrating>0</maxrating>
+			<programtypes>
+				<programtype tags="Bomb">Hacking</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>116</page>
+		</option>
+		<option>
+			<name>Rust</name>
+			<category>Hacking</category>
+			<maxrating>0</maxrating>
+			<programtypes>
+				<programtype tags="Combat">Hacking</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>116</page>
+		</option>
+		<option>
+			<name>Shredder</name>
+			<category>Hacking</category>
+			<maxrating>0</maxrating>
+			<programtypes>
+				<programtype tags="Attack">Hacking</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>117</page>
+		</option>
+		<option>
+			<name>Targeting</name>
+			<category>Hacking</category>
+			<maxrating>0</maxrating>
+			<programtypes>
+				<programtype tags="Combat">Hacking</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>117</page>
+		</option>
+		<option>
+			<name>Adaptive Scale</name>
+			<category>Simsense</category>
+			<maxrating>0</maxrating>
+			<programtypes>
+				<programtype tags="Skillsoft">Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>117</page>
+		</option>
+		<option>
+			<name>Addictive</name>
+			<category>Simsense</category>
+			<maxrating>2</maxrating>
+			<programtypes>
+				<programtype tags="BTL">Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>117</page>
+		</option>
+		<option>
+			<name>DIMAP</name>
+			<category>Simsense</category>
+			<maxrating>0</maxrating>
+			<programtypes>
+				<programtype tags="Skillsoft">Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>117</page>
+		</option>
+		<option>
+			<name>Lifeline</name>
+			<category>Simsense</category>
+			<maxrating>0</maxrating>
+			<programtypes>
+				<programtype tags="Knowsoft,Linguasoft">Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>117</page>
+		</option>
+		<option>
+			<name>Overdrive</name>
+			<category>Simsense</category>
+			<maxrating>3</maxrating>
+			<programtypes>
+				<programtype tags="Activesoft">Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>117</page>
+		</option>
+		<option>
+			<name>Personalized</name>
+			<category>Simsense</category>
+			<maxrating>0</maxrating>
+			<programtypes>
+				<programtype>Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>117</page>
+		</option>
+		<option>
+			<name>Pluscode</name>
+			<category>Simsense</category>
+			<maxrating />
+			<programtypes>
+				<programtype tags="Activesoft">Simsense</programtype>
+				<programtype>Skillsofts</programtype>
+			</programtypes>
+			<complexform>yes</complexform>
+			<source>UN</source>
+			<page>117</page>
+		</option>
+	</options>
+</chummer>

@@ -1,0 +1,3584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chummer>
+	<version>-897</version>
+	<grades>
+		<grade>
+			<name>Standard</name>
+			<ess>1</ess>
+			<cost>1</cost>
+			<avail>0</avail>
+			<source>SR4</source>
+		</grade>
+		<grade>
+			<name>Standard (Second-Hand)</name>
+			<ess>1.2</ess>
+			<cost>0.5</cost>
+			<avail>-1</avail>
+			<source>AU</source>
+		</grade>
+		<grade>
+			<name>Alphaware</name>
+			<ess>0.8</ess>
+			<cost>2</cost>
+			<avail>0</avail>
+			<source>SR4</source>
+		</grade>
+		<grade>
+			<name>Alphaware (Second-Hand)</name>
+			<ess>0.96</ess>
+			<cost>1</cost>
+			<avail>-1</avail>
+			<source>AU</source>
+		</grade>
+		<grade>
+			<name>Betaware</name>
+			<ess>0.7</ess>
+			<cost>4</cost>
+			<avail>0</avail>
+			<source>SR4</source>
+		</grade>
+		<grade>
+			<name>Deltaware</name>
+			<ess>0.5</ess>
+			<cost>10</cost>
+			<avail>0</avail>
+			<source>SR4</source>
+		</grade>
+		<grade>
+			<name>Standard (Adapsin)</name>
+			<ess>0.9</ess>
+			<cost>1</cost>
+			<avail>0</avail>
+			<source>SR4</source>
+		</grade>
+		<grade>
+			<name>Standard (Second-Hand) (Adapsin)</name>
+			<ess>1.1</ess>
+			<cost>0.5</cost>
+			<avail>-1</avail>
+			<source>AU</source>
+		</grade>
+		<grade>
+			<name>Alphaware (Adapsin)</name>
+			<ess>0.7</ess>
+			<cost>2</cost>
+			<avail>0</avail>
+			<source>SR4</source>
+		</grade>
+		<grade>
+			<name>Alphaware (Second-Hand) (Adapsin)</name>
+			<ess>0.86</ess>
+			<cost>1</cost>
+			<avail>-1</avail>
+			<source>AU</source>
+		</grade>
+		<grade>
+			<name>Betaware (Adapsin)</name>
+			<ess>0.6</ess>
+			<cost>4</cost>
+			<avail>0</avail>
+			<source>SR4</source>
+		</grade>
+		<grade>
+			<name>Deltaware (Adapsin)</name>
+			<ess>0.4</ess>
+			<cost>10</cost>
+			<avail>0</avail>
+			<source>SR4</source>
+		</grade>
+	</grades>
+	<categories>
+		<category>Headware</category>
+		<category>Eyeware</category>
+		<category>Earware</category>
+		<category>Biodrone Control</category>
+		<category>Bodyware</category>
+		<category>Cyberlimb</category>
+		<category>Cyberlimb Enhancement</category>
+		<category>Cyberlimb Accessory</category>
+		<category>Cyberweapon</category>
+		<category>Cosmetic Modification</category>
+		<category>Cosmetic Implant</category>
+		<category show="false">Modular Plug-In</category>
+		<category>Nanocybernetics</category>
+	</categories>
+	<cyberwares>
+		<cyberware>
+			<name>Attention Coprocessor</name>
+			<category>Headware</category>
+			<rating>3</rating>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>Rating * 3000</cost>
+			<bonus>
+				<specificskill>
+					<name>Perception</name>
+					<bonus>Rating</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>36</page>
+		</cyberware>
+		<cyberware>
+			<name>Commlink</name>
+			<category>Headware</category>
+			<ess>0.2</ess>
+			<capacity>[2]</capacity>
+			<avail>0</avail>
+			<cost>2000</cost>
+			<allowgear>
+				<gearcategory>Commlink</gearcategory>
+			</allowgear>
+			<source>SR4</source>
+			<page>338</page>
+		</cyberware>
+		<cyberware>
+			<name>Control Rig</name>
+			<category>Headware</category>
+			<ess>0.5</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>10000</cost>
+			<source>SR4</source>
+			<page>338</page>
+		</cyberware>
+		<cyberware>
+			<name>Cranial Bomb - Kink Bomb</name>
+			<category>Headware</category>
+			<ess>0</ess>
+			<capacity>[1]</capacity>
+			<avail>16F</avail>
+			<cost>2000</cost>
+			<source>SR4</source>
+			<page>339</page>
+		</cyberware>
+		<cyberware>
+			<name>Cranial Bomb - Microbomb</name>
+			<category>Headware</category>
+			<ess>0</ess>
+			<capacity>[2]</capacity>
+			<avail>16F</avail>
+			<cost>5000</cost>
+			<source>SR4</source>
+			<page>339</page>
+		</cyberware>
+		<cyberware>
+			<name>Cranial Bomb - Area Bomb</name>
+			<category>Headware</category>
+			<ess>0</ess>
+			<capacity>[3]</capacity>
+			<avail>20F</avail>
+			<cost>10000</cost>
+			<source>SR4</source>
+			<page>339</page>
+		</cyberware>
+		<cyberware>
+			<name>Data Filter</name>
+			<category>Headware</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>12</avail>
+			<cost>2500</cost>
+			<source>AU</source>
+			<page>36</page>
+		</cyberware>
+		<cyberware>
+			<name>Datajack</name>
+			<category>Headware</category>
+			<ess>0.1</ess>
+			<capacity>[1]</capacity>
+			<avail>0</avail>
+			<cost>500</cost>
+			<bonus>
+				<skillsoftaccess />
+			</bonus>
+			<source>SR4</source>
+			<page>339</page>
+		</cyberware>
+		<cyberware>
+			<name>Data Lock</name>
+			<category>Headware</category>
+			<ess>0.1</ess>
+			<capacity>[1]</capacity>
+			<avail>12</avail>
+			<cost>1000</cost>
+			<source>SR4</source>
+			<page>339</page>
+		</cyberware>
+		<cyberware>
+			<name>Encephalon Rating 1</name>
+			<category>Headware</category>
+			<ess>0.75</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>30000</cost>
+			<bonus>
+				<skillattribute>
+					<name>LOG</name>
+					<bonus>1</bonus>
+				</skillattribute>
+			</bonus>
+			<source>AU</source>
+			<page>36</page>
+		</cyberware>
+		<cyberware>
+			<name>Encephalon Rating 2</name>
+			<category>Headware</category>
+			<ess>1.5</ess>
+			<capacity>0</capacity>
+			<avail>10</avail>
+			<cost>75000</cost>
+			<bonus>
+				<skillattribute>
+					<name>LOG</name>
+					<bonus>1</bonus>
+				</skillattribute>
+				<skillgroup>
+					<name>Cracking</name>
+					<bonus>1</bonus>
+				</skillgroup>
+				<skillgroup>
+					<name>Electronics</name>
+					<bonus>1</bonus>
+				</skillgroup>
+			</bonus>
+			<source>AU</source>
+			<page>36</page>
+		</cyberware>
+		<cyberware>
+			<name>Invoked Memory Stimulator</name>
+			<category>Headware</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>24</avail>
+			<cost>50000</cost>
+			<source>AU</source>
+			<page>157</page>
+		</cyberware>
+		<cyberware>
+			<name>Math SPU</name>
+			<category>Headware</category>
+			<ess>0.15</ess>
+			<capacity>0</capacity>
+			<avail>9</avail>
+			<cost>4500</cost>
+			<source>AU</source>
+			<page>36</page>
+		</cyberware>
+		<cyberware>
+			<name>Olfactory Booster</name>
+			<category>Headware</category>
+			<rating>6</rating>
+			<ess>0.2</ess>
+			<capacity>[2]</capacity>
+			<avail>Rating * 4</avail>
+			<cost>Rating * 1000</cost>
+			<source>SR4</source>
+			<page>339</page>
+		</cyberware>
+		<cyberware>
+			<name>Orientation System</name>
+			<category>Headware</category>
+			<ess>0.2</ess>
+			<capacity>[1]</capacity>
+			<avail>4</avail>
+			<cost>1250</cost>
+			<bonus>
+				<specificskill>
+					<name>Navigation</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>36</page>
+		</cyberware>
+		<cyberware>
+			<name>Radar Sensor</name>
+			<category>Headware</category>
+			<rating>4</rating>
+			<ess>0.3</ess>
+			<capacity>[2]</capacity>
+			<avail>12</avail>
+			<cost>Rating * 3000</cost>
+			<source>AU</source>
+			<page>36</page>
+		</cyberware>
+		<cyberware>
+			<name>Sim Module</name>
+			<category>Headware</category>
+			<ess>0.2</ess>
+			<capacity>[2]</capacity>
+			<avail>0</avail>
+			<cost>2000</cost>
+			<bonus>
+				<matrixinitiativepass>1</matrixinitiativepass>
+				<skillsoftaccess />
+			</bonus>
+			<source>SR4</source>
+			<page>339</page>
+		</cyberware>
+		<cyberware>
+			<name>Sim Module (Hot-Sim Modified)</name>
+			<category>Headware</category>
+			<ess>0.2</ess>
+			<capacity>[2]</capacity>
+			<avail>12F</avail>
+			<cost>5000</cost>
+			<bonus>
+				<matrixinitiativepass>2</matrixinitiativepass>
+				<skillsoftaccess />
+			</bonus>
+			<source>SR4</source>
+			<page>339</page>
+		</cyberware>
+		<cyberware>
+			<name>Simsense Booster</name>
+			<category>Headware</category>
+			<ess>0.5</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>65000</cost>
+			<bonus>
+				<matrixinitiativepassadd>1</matrixinitiativepassadd>
+			</bonus>
+			<source>AU</source>
+			<page>37</page>
+		</cyberware>
+		<cyberware>
+			<name>Taste Booster</name>
+			<category>Headware</category>
+			<rating>6</rating>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>Rating * 4</avail>
+			<cost>Rating * 1500</cost>
+			<source>SR4</source>
+			<page>339</page>
+		</cyberware>
+		<cyberware>
+			<name>Tooth Storage Compartment</name>
+			<category>Headware</category>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>200</cost>
+			<source>SR4</source>
+			<page>339</page>
+		</cyberware>
+		<cyberware>
+			<name>Tooth Breakable Compartment</name>
+			<category>Headware</category>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>12</avail>
+			<cost>500</cost>
+			<source>SR4</source>
+			<page>339</page>
+		</cyberware>
+		<cyberware>
+			<name>Ultrasound Sensor</name>
+			<category>Headware</category>
+			<ess>0.3</ess>
+			<capacity>[2]</capacity>
+			<avail>10</avail>
+			<cost>6000</cost>
+			<source>SR4</source>
+			<page>339</page>
+		</cyberware>
+		<cyberware>
+			<name>Voice Mask</name>
+			<category>Headware</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>7F</avail>
+			<cost>3000</cost>
+			<source>AU</source>
+			<page>37</page>
+		</cyberware>
+		<cyberware>
+			<name>Voice Modulator</name>
+			<category>Headware</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>7500</cost>
+			<source>SR4</source>
+			<page>339</page>
+		</cyberware>
+		<cyberware>
+			<name>Voice Modulator (Secondary Pattern)</name>
+			<category>Headware</category>
+			<rating>6</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 3)F</avail>
+			<cost>Rating * 5000</cost>
+			<source>SR4</source>
+			<page>339</page>
+		</cyberware>
+		<cyberware>
+			<name>Cybereyes Basic System</name>
+			<category>Eyeware</category>
+			<rating>4</rating>
+			<ess>(Rating * 0.1) + 0.1</ess>
+			<capacity>(Rating * 4)</capacity>
+			<avail>FixedValues(0,4,6,8)</avail>
+			<cost>FixedValues(500,750,1000,1500)</cost>
+			<subsystems>
+				<subsystem>Eyeware</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>340</page>
+		</cyberware>
+		<cyberware>
+			<name>Eye Laser Designator</name>
+			<category>Eyeware</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>12R</avail>
+			<cost>1000</cost>
+			<source>AU</source>
+			<page>39</page>
+		</cyberware>
+		<cyberware>
+			<name>Eye Laser Microphone</name>
+			<category>Eyeware</category>
+			<rating>3</rating>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>12R</avail>
+			<cost>Rating * 500</cost>
+			<source>AU</source>
+			<page>39</page>
+		</cyberware>
+		<cyberware>
+			<name>Eye Laser Range Finder</name>
+			<category>Eyeware</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>10</avail>
+			<cost>1000</cost>
+			<source>AU</source>
+			<page>39</page>
+		</cyberware>
+		<cyberware>
+			<name>Eye Laser System</name>
+			<category>Eyeware</category>
+			<ess>0</ess>
+			<capacity>[3]</capacity>
+			<avail>10</avail>
+			<cost>2000</cost>
+			<source>AU</source>
+			<page>38</page>
+		</cyberware>
+		<cyberware>
+			<name>Eye Light System</name>
+			<category>Eyeware</category>
+			<ess>0.1</ess>
+			<capacity>[2]</capacity>
+			<avail>6</avail>
+			<cost>750</cost>
+			<source>AU</source>
+			<page>38</page>
+		</cyberware>
+		<cyberware>
+			<name>Eye Recording Unit</name>
+			<category>Eyeware</category>
+			<ess>0.1</ess>
+			<capacity>[*]</capacity>
+			<avail>4</avail>
+			<cost>2000</cost>
+			<source>SR4</source>
+			<page>340</page>
+		</cyberware>
+		<cyberware>
+			<name>Eye Tool Laser</name>
+			<category>Eyeware</category>
+			<ess>0</ess>
+			<capacity>[6]</capacity>
+			<avail>10R</avail>
+			<addweapon>Eye Tool Laser</addweapon>
+			<cost>2000</cost>
+			<source>AU</source>
+			<page>39</page>
+		</cyberware>
+		<cyberware>
+			<name>Eyeband</name>
+			<category>Eyeware</category>
+			<rating>3</rating>
+			<ess>(Rating * 0.1) + 0.2</ess>
+			<capacity>FixedValues(6,8,12)</capacity>
+			<avail>(Rating * 2) + 2</avail>
+			<cost>FixedValues(800,1000,1250)</cost>
+			<subsystems>
+				<subsystem>Eyeware</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>AU</source>
+			<page>37</page>
+		</cyberware>
+		<cyberware>
+			<name>Flare Compensation</name>
+			<category>Eyeware</category>
+			<ess>0.1</ess>
+			<capacity>[1]</capacity>
+			<avail>4</avail>
+			<cost>750</cost>
+			<source>SR4</source>
+			<page>340</page>
+		</cyberware>
+		<cyberware>
+			<name>Image Link</name>
+			<category>Eyeware</category>
+			<ess>0.1</ess>
+			<capacity>[*]</capacity>
+			<avail>4</avail>
+			<cost>500</cost>
+			<source>SR4</source>
+			<page>340</page>
+		</cyberware>
+		<cyberware>
+			<name>Low-Light Vision</name>
+			<category>Eyeware</category>
+			<ess>0.1</ess>
+			<capacity>[2]</capacity>
+			<avail>4</avail>
+			<cost>1000</cost>
+			<source>SR4</source>
+			<page>340</page>
+		</cyberware>
+		<cyberware>
+			<name>Microscopic Vision</name>
+			<category>Eyeware</category>
+			<ess>0.2</ess>
+			<capacity>[3]</capacity>
+			<avail>4</avail>
+			<cost>1300</cost>
+			<source>AU</source>
+			<page>38</page>
+		</cyberware>
+		<cyberware>
+			<name>Ocular Drone</name>
+			<category>Eyeware</category>
+			<ess>0</ess>
+			<capacity>[6]</capacity>
+			<avail>6</avail>
+			<cost>3000</cost>
+			<source>SR4</source>
+			<page>340</page>
+		</cyberware>
+		<cyberware>
+			<name>Protective Covers</name>
+			<category>Eyeware</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>4</avail>
+			<cost>100</cost>
+			<source>SR4</source>
+			<page>340</page>
+		</cyberware>
+		<cyberware>
+			<name>Retinal Duplication</name>
+			<category>Eyeware</category>
+			<rating>6</rating>
+			<ess>0.1</ess>
+			<capacity>[1]</capacity>
+			<avail>16F</avail>
+			<cost>Rating * 15000</cost>
+			<source>SR4</source>
+			<page>340</page>
+		</cyberware>
+		<cyberware>
+			<name>Single Cybereye</name>
+			<category>Eyeware</category>
+			<rating>4</rating>
+			<ess>(Rating * 0.05) + 0.05</ess>
+			<capacity>Rating * 2</capacity>
+			<avail>FixedValues(0,4,6,8)</avail>
+			<cost>FixedValues(300,450,600,900)</cost>
+			<bonus>
+				<selectside />
+			</bonus>
+			<subsystems>
+				<subsystem>Eyeware</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>AU</source>
+			<page>38</page>
+		</cyberware>
+		<cyberware>
+			<name>Smartlink</name>
+			<category>Eyeware</category>
+			<ess>0.1</ess>
+			<capacity>[3]</capacity>
+			<avail>8R</avail>
+			<cost>1000</cost>
+			<bonus>
+				<smartlink />
+			</bonus>
+			<source>SR4</source>
+			<page>340</page>
+		</cyberware>
+		<cyberware>
+			<name>Thermographic Vision</name>
+			<category>Eyeware</category>
+			<ess>0.1</ess>
+			<capacity>[2]</capacity>
+			<avail>4</avail>
+			<cost>1000</cost>
+			<source>SR4</source>
+			<page>340</page>
+		</cyberware>
+		<cyberware>
+			<name>Vision Enhancement</name>
+			<category>Eyeware</category>
+			<rating>3</rating>
+			<ess>0.1</ess>
+			<capacity>[Rating]</capacity>
+			<avail>Rating * 3</avail>
+			<cost>Rating * 1500</cost>
+			<source>SR4</source>
+			<page>340</page>
+		</cyberware>
+		<cyberware>
+			<name>Vision Magnification</name>
+			<category>Eyeware</category>
+			<ess>0.1</ess>
+			<capacity>[2]</capacity>
+			<avail>4</avail>
+			<cost>1000</cost>
+			<source>SR4</source>
+			<page>340</page>
+		</cyberware>
+		<cyberware>
+			<name>Cyberears</name>
+			<category>Earware</category>
+			<rating>4</rating>
+			<ess>(Rating * 0.1) + 0.1</ess>
+			<capacity>Rating * 4</capacity>
+			<avail>FixedValues(0,4,6,8)</avail>
+			<cost>FixedValues(500,750,1000,1500)</cost>
+			<subsystems>
+				<subsystem>Earware</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>341</page>
+		</cyberware>
+		<cyberware>
+			<name>Audio Enhancement</name>
+			<category>Earware</category>
+			<rating>3</rating>
+			<ess>0.1</ess>
+			<capacity>[Rating]</capacity>
+			<avail>Rating * 3</avail>
+			<cost>Rating * 1500</cost>
+			<source>SR4</source>
+			<page>341</page>
+		</cyberware>
+		<cyberware>
+			<name>Balance Augmenter</name>
+			<category>Earware</category>
+			<ess>0.1</ess>
+			<capacity>[4]</capacity>
+			<avail>10</avail>
+			<cost>5000</cost>
+			<source>SR4</source>
+			<page>341</page>
+		</cyberware>
+		<cyberware>
+			<name>Damper</name>
+			<category>Earware</category>
+			<ess>0.1</ess>
+			<capacity>[1]</capacity>
+			<avail>4</avail>
+			<cost>750</cost>
+			<source>SR4</source>
+			<page>341</page>
+		</cyberware>
+		<cyberware>
+			<name>Ear Recording Unit</name>
+			<category>Earware</category>
+			<ess>0.1</ess>
+			<capacity>[*]</capacity>
+			<avail>4</avail>
+			<cost>500</cost>
+			<source>SR4</source>
+			<page>341</page>
+		</cyberware>
+		<cyberware>
+			<name>Increased Sensitivity</name>
+			<category>Earware</category>
+			<ess>0.1</ess>
+			<capacity>[1]</capacity>
+			<avail>6</avail>
+			<cost>1000</cost>
+			<source>AU</source>
+			<page>37</page>
+		</cyberware>
+		<cyberware>
+			<name>Select Sound Filter</name>
+			<category>Earware</category>
+			<rating>6</rating>
+			<ess>0.1</ess>
+			<capacity>[Rating]</capacity>
+			<avail>Rating * 3</avail>
+			<cost>Rating * 1000</cost>
+			<source>SR4</source>
+			<page>341</page>
+		</cyberware>
+		<cyberware>
+			<name>Sound Link</name>
+			<category>Earware</category>
+			<ess>0.1</ess>
+			<capacity>[*]</capacity>
+			<avail>0</avail>
+			<cost>250</cost>
+			<source>SR4</source>
+			<page>341</page>
+		</cyberware>
+		<cyberware>
+			<name>Spatial Recognizer</name>
+			<category>Earware</category>
+			<ess>0.1</ess>
+			<capacity>[2]</capacity>
+			<avail>8</avail>
+			<cost>750</cost>
+			<source>SR4</source>
+			<page>341</page>
+		</cyberware>
+		<cyberware>
+			<name>Essence Hole</name>
+			<category>Bodyware</category>
+			<rating>600</rating>
+			<ess>Rating * 0.01</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>0</cost>
+			<source>SR4</source>
+			<page>0</page>
+		</cyberware>
+		<cyberware>
+			<name>Auto-Injector (One-shot)</name>
+			<category>Bodyware</category>
+			<rating>6</rating>
+			<ess>0.05</ess>
+			<capacity>[0]</capacity>
+			<avail>8</avail>
+			<cost>600 + (Rating * 100)</cost>
+			<source>AU</source>
+			<page>39</page>
+		</cyberware>
+		<cyberware>
+			<name>Auto-Injector (Reusable)</name>
+			<category>Bodyware</category>
+			<rating>6</rating>
+			<ess>0.1</ess>
+			<capacity>[0]</capacity>
+			<avail>4</avail>
+			<cost>400 + (Rating * 100)</cost>
+			<source>AU</source>
+			<page>39</page>
+		</cyberware>
+		<cyberware>
+			<name>Balance Tail</name>
+			<category>Bodyware</category>
+			<ess>0.5</ess>
+			<capacity>[2]</capacity>
+			<avail>9</avail>
+			<cost>5500</cost>
+			<source>AU</source>
+			<page>39</page>
+		</cyberware>
+		<cyberware>
+			<name>Biomonitor</name>
+			<category>Bodyware</category>
+			<ess>0.3</ess>
+			<capacity>[1]</capacity>
+			<avail>4</avail>
+			<cost>1000</cost>
+			<source>AU</source>
+			<page>39</page>
+		</cyberware>
+		<cyberware>
+			<name>Blood Circuit Control System</name>
+			<category>Bodyware</category>
+			<ess>1</ess>
+			<capacity>0</capacity>
+			<avail>15</avail>
+			<cost>30000</cost>
+			<source>AU</source>
+			<page>39</page>
+		</cyberware>
+		<cyberware>
+			<name>Bone Lacing (Aluminum)</name>
+			<category>Bodyware</category>
+			<ess>1</ess>
+			<capacity>0</capacity>
+			<avail>12F</avail>
+			<addweapon>Aluminum Bone Lacing</addweapon>
+			<cost>15000</cost>
+			<bonus>
+				<armor>
+					<i>1</i>
+				</armor>
+				<damageresistance>2</damageresistance>
+			</bonus>
+			<source>SR4</source>
+			<page>341</page>
+		</cyberware>
+		<cyberware>
+			<name>Bone Lacing (Ceramic)</name>
+			<category>Bodyware</category>
+			<ess>1.2</ess>
+			<capacity>0</capacity>
+			<avail>12F</avail>
+			<addweapon>Ceramic Bone Lacing</addweapon>
+			<cost>22500</cost>
+			<bonus>
+				<armor>
+					<i>2</i>
+				</armor>
+				<damageresistance>2</damageresistance>
+			</bonus>
+			<source>AU</source>
+			<page>39</page>
+		</cyberware>
+		<cyberware>
+			<name>Bone Lacing (Kevlar)</name>
+			<category>Bodyware</category>
+			<ess>1</ess>
+			<capacity>0</capacity>
+			<avail>10F</avail>
+			<cost>10000</cost>
+			<bonus>
+				<armor>
+					<b>1</b>
+				</armor>
+				<damageresistance>1</damageresistance>
+			</bonus>
+			<source>AU</source>
+			<page>39</page>
+		</cyberware>
+		<cyberware>
+			<name>Bone Lacing (Plastic)</name>
+			<category>Bodyware</category>
+			<ess>0.5</ess>
+			<capacity>0</capacity>
+			<avail>8F</avail>
+			<addweapon>Plastic Bone Lacing</addweapon>
+			<cost>5000</cost>
+			<bonus>
+				<damageresistance>1</damageresistance>
+			</bonus>
+			<source>SR4</source>
+			<page>341</page>
+		</cyberware>
+		<cyberware>
+			<name>Bone Lacing (Titanium)</name>
+			<category>Bodyware</category>
+			<ess>1.5</ess>
+			<capacity>0</capacity>
+			<avail>16F</avail>
+			<addweapon>Titanium Bone Lacing</addweapon>
+			<cost>40000</cost>
+			<bonus>
+				<armor>
+					<b>1</b>
+					<i>1</i>
+				</armor>
+				<damageresistance>3</damageresistance>
+			</bonus>
+			<source>SR4</source>
+			<page>341</page>
+		</cyberware>
+		<cyberware>
+			<name>Cyber Safety</name>
+			<category>Bodyware</category>
+			<ess>0</ess>
+			<capacity>[1]</capacity>
+			<avail>7</avail>
+			<cost>350</cost>
+			<source>AU</source>
+			<page>39</page>
+		</cyberware>
+		<cyberware>
+			<name>Cyberfins</name>
+			<category>Bodyware</category>
+			<ess>0.3</ess>
+			<capacity>[3]</capacity>
+			<avail>9</avail>
+			<cost>3500</cost>
+			<bonus>
+				<specificskill>
+					<name>Swimming</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<swimpercent>50</swimpercent>
+			</bonus>
+			<source>AU</source>
+			<page>39</page>
+		</cyberware>
+		<cyberware>
+			<name>Dermal Plating</name>
+			<category>Bodyware</category>
+			<rating>3</rating>
+			<ess>Rating * 0.5</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 5)R</avail>
+			<cost>Rating * 5000</cost>
+			<bonus>
+				<armor>
+					<b>Rating</b>
+					<i>Rating</i>
+				</armor>
+			</bonus>
+			<source>SR4</source>
+			<page>342</page>
+		</cyberware>
+		<cyberware>
+			<name>Dermal Sheath</name>
+			<category>Bodyware</category>
+			<rating>3</rating>
+			<ess>FixedValues(0.6,1.0,1.6)</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 4) + 4</avail>
+			<cost>FixedValues(10000,20000,40000)</cost>
+			<bonus>
+				<armor>
+					<b>Rating</b>
+					<i>Rating+1</i>
+				</armor>
+			</bonus>
+			<source>AU</source>
+			<page>40</page>
+		</cyberware>
+		<cyberware>
+			<name>Dermal Sheath, Ruthenium Polymer Coating</name>
+			<category>Bodyware</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+2</avail>
+			<cost>2500</cost>
+			<source>AU</source>
+			<page>40</page>
+		</cyberware>
+		<cyberware>
+			<name>Dermal Sheath, Chameleon Modification</name>
+			<category>Bodyware</category>
+			<ess>0.2</ess>
+			<capacity>[0]</capacity>
+			<avail>+4R</avail>
+			<cost>4000</cost>
+			<source>AU</source>
+			<page>40</page>
+		</cyberware>
+		<cyberware>
+			<name>Fingertip Compartment</name>
+			<category>Bodyware</category>
+			<ess>0.1</ess>
+			<capacity>[1]</capacity>
+			<avail>4</avail>
+			<cost>750</cost>
+			<allowgear />
+			<source>SR4</source>
+			<page>342</page>
+		</cyberware>
+		<cyberware>
+			<name>Flex Hands</name>
+			<category>Bodyware</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>10</avail>
+			<cost>3500</cost>
+			<bonus>
+				<specificskill>
+					<name>Escape Artist</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>40</page>
+		</cyberware>
+		<cyberware>
+			<name>Foot Anchor</name>
+			<category>Bodyware</category>
+			<ess>0.4</ess>
+			<capacity>[3]</capacity>
+			<avail>10</avail>
+			<addweapon>Foot Anchor</addweapon>
+			<cost>4000</cost>
+			<source>AU</source>
+			<page>40</page>
+		</cyberware>
+		<cyberware>
+			<name>Gastric Neurostimulator</name>
+			<category>Bodyware</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>2500</cost>
+			<source>AU</source>
+			<page>40</page>
+		</cyberware>
+		<cyberware>
+			<name>Grapple Gun</name>
+			<category>Bodyware</category>
+			<ess>0.5</ess>
+			<capacity>[5]</capacity>
+			<avail>8</avail>
+			<cost>1500</cost>
+			<source>SR4</source>
+			<page>342</page>
+		</cyberware>
+		<cyberware>
+			<name>Grip Feet</name>
+			<category>Bodyware</category>
+			<ess>0.3</ess>
+			<capacity>[2]</capacity>
+			<avail>10</avail>
+			<cost>6000</cost>
+			<source>AU</source>
+			<page>40</page>
+		</cyberware>
+		<cyberware>
+			<name>Internal Air Tank</name>
+			<category>Bodyware</category>
+			<ess>0.25</ess>
+			<capacity>[3]</capacity>
+			<avail>4</avail>
+			<cost>650</cost>
+			<source>SR4</source>
+			<page>342</page>
+		</cyberware>
+		<cyberware>
+			<name>Magnetic System</name>
+			<category>Bodyware</category>
+			<ess>0.25</ess>
+			<capacity>[2]</capacity>
+			<avail>8</avail>
+			<cost>1200</cost>
+			<source>AU</source>
+			<page>40</page>
+		</cyberware>
+		<cyberware>
+			<name>Move-by-Wire System</name>
+			<category>Bodyware</category>
+			<rating>3</rating>
+			<ess>FixedValues(2,3,5)</ess>
+			<capacity>0</capacity>
+			<avail>FixedValues(12R,18R,25R)</avail>
+			<cost>FixedValues(50000,85000,175000)</cost>
+			<bonus>
+				<initiativepass>Rating</initiativepass>
+				<skillwire>FixedValues(2,4,5)</skillwire>
+				<specificattribute>
+					<name precedence="1">REA</name>
+					<val>2 * Rating</val>
+				</specificattribute>
+				<specificskill>
+					<name>Dodge</name>
+					<bonus>Rating</bonus>
+					<applytorating>yes</applytorating>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>40</page>
+		</cyberware>
+		<cyberware>
+			<name>Muscle Replacement</name>
+			<category>Bodyware</category>
+			<rating>4</rating>
+			<ess>Rating * 1</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 5)R</avail>
+			<cost>Rating * 5000</cost>
+			<bonus>
+				<specificattribute>
+					<name>AGI</name>
+					<val>Rating</val>
+				</specificattribute>
+				<specificattribute>
+					<name>STR</name>
+					<val>Rating</val>
+				</specificattribute>
+			</bonus>
+			<source>SR4</source>
+			<page>342</page>
+		</cyberware>
+		<cyberware>
+			<name>OXSYS Cybergill</name>
+			<category>Bodyware</category>
+			<ess>0.25</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>4500</cost>
+			<source>AU</source>
+			<page>42</page>
+		</cyberware>
+		<cyberware>
+			<name>Reaction Enhancers</name>
+			<category>Bodyware</category>
+			<rating>3</rating>
+			<ess>Rating * 0.3</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 5)R</avail>
+			<cost>Rating * 10000</cost>
+			<bonus>
+				<specificattribute>
+					<name precedence="1">REA</name>
+					<val>Rating</val>
+				</specificattribute>
+			</bonus>
+			<source>SR4</source>
+			<page>342</page>
+		</cyberware>
+		<cyberware>
+			<name>Retractable Climbing Claws</name>
+			<category>Bodyware</category>
+			<ess>0.2</ess>
+			<capacity>[2]</capacity>
+			<avail>8</avail>
+			<addweapon>Retractable Climbing Claws</addweapon>
+			<cost>2200</cost>
+			<bonus>
+				<specificskill>
+					<name>Climbing</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>42</page>
+		</cyberware>
+		<cyberware>
+			<name>Simrig</name>
+			<category>Bodyware</category>
+			<ess>0.5</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>5000</cost>
+			<bonus>
+				<matrixinitiativepass>1</matrixinitiativepass>
+			</bonus>
+			<source>SR4</source>
+			<page>342</page>
+		</cyberware>
+		<cyberware>
+			<name>Skillwire Expert System</name>
+			<category>Bodyware</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>3000</cost>
+			<source>AU</source>
+			<page>42</page>
+		</cyberware>
+		<cyberware>
+			<name>Skillwires</name>
+			<category>Bodyware</category>
+			<rating>5</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 4)</avail>
+			<cost>Rating * 2000</cost>
+			<bonus>
+				<skillwire>Rating</skillwire>
+			</bonus>
+			<source>SR4</source>
+			<page>342</page>
+		</cyberware>
+		<cyberware>
+			<name>Skinlink</name>
+			<category>Bodyware</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>6</avail>
+			<cost>50</cost>
+			<source>SR4</source>
+			<page>328</page>
+		</cyberware>
+		<cyberware>
+			<name>Smart Articulation</name>
+			<category>Bodyware</category>
+			<ess>0.8</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>15000</cost>
+			<bonus>
+				<specificskill>
+					<name>Escape Artist</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<specificskill>
+					<name>Gymnastics</name>
+					<bonus>1</bonus>
+				</specificskill>
+				<specificskill>
+					<name>Climbing</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>42</page>
+		</cyberware>
+		<cyberware>
+			<name>Smuggling Compartment</name>
+			<category>Bodyware</category>
+			<ess>0.2</ess>
+			<capacity>[2]</capacity>
+			<avail>6</avail>
+			<cost>1500</cost>
+			<allowgear />
+			<source>SR4</source>
+			<page>342</page>
+		</cyberware>
+		<cyberware>
+			<name>Touch Link</name>
+			<category>Bodyware</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>1000</cost>
+			<source>SR4</source>
+			<page>342</page>
+		</cyberware>
+		<cyberware>
+			<name>Wired Reflexes</name>
+			<category>Bodyware</category>
+			<rating>3</rating>
+			<ess>FixedValues(2,3,5)</ess>
+			<capacity>0</capacity>
+			<avail>FixedValues(8R,12R,20R)</avail>
+			<cost>FixedValues(11000,32000,100000)</cost>
+			<bonus>
+				<initiativepass>Rating</initiativepass>
+				<specificattribute>
+					<name precedence="1">REA</name>
+					<val>Rating</val>
+				</specificattribute>
+			</bonus>
+			<source>SR4</source>
+			<page>342</page>
+		</cyberware>
+		<cyberware>
+			<name>Fingerprint Morphing</name>
+			<category>Bodyware</category>
+			<rating>10</rating>
+			<ess>0.2</ess>
+			<capacity>[0]</capacity>
+			<avail>12F</avail>
+			<cost>Rating * 10000</cost>
+			<source>SG</source>
+			<page>151</page>
+		</cyberware>
+		<cyberware>
+			<name>Obvious Full Arm</name>
+			<category>Cyberlimb</category>
+			<limbslot>arm</limbslot>
+			<ess>1</ess>
+			<capacity>15</capacity>
+			<avail>4</avail>
+			<cost>15000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+				<selectside />
+			</bonus>
+			<subsystems>
+				<subsystem>Bodyware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cyberlimb Accessory</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Obvious Full Leg</name>
+			<category>Cyberlimb</category>
+			<limbslot>leg</limbslot>
+			<ess>1</ess>
+			<capacity>20</capacity>
+			<avail>4</avail>
+			<cost>15000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+				<selectside />
+			</bonus>
+			<subsystems>
+				<subsystem>Bodyware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cyberlimb Accessory</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Obvious Foot</name>
+			<category>Cyberlimb</category>
+			<ess>0.25</ess>
+			<capacity>4</capacity>
+			<avail>2</avail>
+			<cost>5000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+				<selectside />
+			</bonus>
+			<subsystems>
+				<subsystem>Bodyware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cyberlimb Accessory</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Obvious Hand</name>
+			<category>Cyberlimb</category>
+			<ess>0.25</ess>
+			<capacity>4</capacity>
+			<avail>2</avail>
+			<cost>5000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+				<selectside />
+			</bonus>
+			<subsystems>
+				<subsystem>Bodyware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cyberlimb Accessory</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Obvious Lower Arm</name>
+			<category>Cyberlimb</category>
+			<ess>0.45</ess>
+			<capacity>10</capacity>
+			<avail>4</avail>
+			<cost>10000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+				<selectside />
+			</bonus>
+			<subsystems>
+				<subsystem>Bodyware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cyberlimb Accessory</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Obvious Lower Leg</name>
+			<category>Cyberlimb</category>
+			<ess>0.45</ess>
+			<capacity>12</capacity>
+			<avail>4</avail>
+			<cost>10000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+				<selectside />
+			</bonus>
+			<subsystems>
+				<subsystem>Bodyware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cyberlimb Accessory</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Obvious Torso</name>
+			<category>Cyberlimb</category>
+			<limbslot>torso</limbslot>
+			<ess>1.5</ess>
+			<capacity>10</capacity>
+			<avail>12</avail>
+			<cost>20000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+			</bonus>
+			<subsystems>
+				<subsystem>Bodyware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cosmetic</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Obvious Skull</name>
+			<category>Cyberlimb</category>
+			<limbslot>skull</limbslot>
+			<ess>0.75</ess>
+			<capacity>4</capacity>
+			<avail>16</avail>
+			<cost>10000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+			</bonus>
+			<subsystems>
+				<subsystem>Headware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cosmetic</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Jigsaw Skull</name>
+			<category>Cyberlimb</category>
+			<limbslot>skull</limbslot>
+			<rating>4</rating>
+			<ess>Rating * 0.6</ess>
+			<capacity>4</capacity>
+			<avail>12 + Rating</avail>
+			<cost>Rating * 15000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+				<specificskill precedence="2">
+					<name>Disguise</name>
+					<bonus>Rating</bonus>
+				</specificskill>
+			</bonus>
+			<subsystems>
+				<subsystem>Headware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cosmetic</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SG</source>
+			<page>144</page>
+		</cyberware>
+		<cyberware>
+			<name>Synthetic Full Arm</name>
+			<category>Cyberlimb</category>
+			<limbslot>arm</limbslot>
+			<ess>1</ess>
+			<capacity>8</capacity>
+			<avail>4</avail>
+			<cost>20000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+				<selectside />
+			</bonus>
+			<subsystems>
+				<subsystem>Bodyware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cyberlimb Accessory</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Synthetic Full Leg</name>
+			<category>Cyberlimb</category>
+			<limbslot>leg</limbslot>
+			<ess>1</ess>
+			<capacity>10</capacity>
+			<avail>4</avail>
+			<cost>20000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+				<selectside />
+			</bonus>
+			<subsystems>
+				<subsystem>Bodyware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cyberlimb Accessory</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Synthetic Foot</name>
+			<category>Cyberlimb</category>
+			<ess>0.25</ess>
+			<capacity>2</capacity>
+			<avail>2</avail>
+			<cost>6000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+				<selectside />
+			</bonus>
+			<subsystems>
+				<subsystem>Bodyware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cyberlimb Accessory</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Synthetic Hand</name>
+			<category>Cyberlimb</category>
+			<ess>0.25</ess>
+			<capacity>2</capacity>
+			<avail>2</avail>
+			<cost>6000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+				<selectside />
+			</bonus>
+			<subsystems>
+				<subsystem>Bodyware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cyberlimb Accessory</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Synthetic Lower Arm</name>
+			<category>Cyberlimb</category>
+			<ess>0.45</ess>
+			<capacity>5</capacity>
+			<avail>4</avail>
+			<cost>12000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+				<selectside />
+			</bonus>
+			<subsystems>
+				<subsystem>Bodyware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cyberlimb Accessory</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Synthetic Lower Leg</name>
+			<category>Cyberlimb</category>
+			<ess>0.45</ess>
+			<capacity>6</capacity>
+			<avail>4</avail>
+			<cost>12000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+				<selectside />
+			</bonus>
+			<subsystems>
+				<subsystem>Bodyware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cyberlimb Accessory</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Synthetic Torso</name>
+			<category>Cyberlimb</category>
+			<limbslot>torso</limbslot>
+			<ess>1.5</ess>
+			<capacity>5</capacity>
+			<avail>12</avail>
+			<cost>25000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+			</bonus>
+			<subsystems>
+				<subsystem>Bodyware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cosmetic</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Synthetic Skull</name>
+			<category>Cyberlimb</category>
+			<limbslot>skull</limbslot>
+			<ess>0.75</ess>
+			<capacity>2</capacity>
+			<avail>16</avail>
+			<cost>15000</cost>
+			<bonus>
+				<conditionmonitor>
+					<physical>1</physical>
+				</conditionmonitor>
+			</bonus>
+			<subsystems>
+				<subsystem>Headware</subsystem>
+				<subsystem>Cyberlimb Enhancement</subsystem>
+				<subsystem>Cosmetic</subsystem>
+				<subsystem>Cyberweapon</subsystem>
+				<subsystem>Nanocybernetics</subsystem>
+			</subsystems>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Armor</name>
+			<category>Cyberlimb Enhancement</category>
+			<rating>4</rating>
+			<ess>0</ess>
+			<capacity>[Rating * 2]</capacity>
+			<avail>Rating * 5</avail>
+			<cost>Rating * 300</cost>
+			<bonus>
+				<armor>
+					<b>Rating</b>
+					<i>Rating</i>
+				</armor>
+			</bonus>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Bulk Modification</name>
+			<category>Cyberlimb Enhancement</category>
+			<rating>4</rating>
+			<ess>0</ess>
+			<capacity>[-Rating]</capacity>
+			<avail>+Rating</avail>
+			<cost>Rating * 1000</cost>
+			<bonus />
+			<source>AU</source>
+			<page>44</page>
+		</cyberware>
+		<cyberware>
+			<name>Customized Body</name>
+			<category>Cyberlimb Enhancement</category>
+			<rating>20</rating>
+			<minrating>4</minrating>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+(Rating - 3)</avail>
+			<cost>(Rating - 3) * 1500</cost>
+			<bonus />
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Customized Strength</name>
+			<category>Cyberlimb Enhancement</category>
+			<rating>20</rating>
+			<minrating>4</minrating>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+(Rating - 3)</avail>
+			<cost>(Rating - 3) * 1500</cost>
+			<bonus />
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Customized Agility</name>
+			<category>Cyberlimb Enhancement</category>
+			<rating>20</rating>
+			<minrating>4</minrating>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+(Rating - 3)</avail>
+			<cost>(Rating - 3) * 1500</cost>
+			<bonus />
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Enhanced Body</name>
+			<category>Cyberlimb Enhancement</category>
+			<rating>7</rating>
+			<ess>0</ess>
+			<capacity>[Rating * 1]</capacity>
+			<avail>(Rating * 3)R</avail>
+			<cost>Rating * 200</cost>
+			<bonus />
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Enhanced Strength</name>
+			<category>Cyberlimb Enhancement</category>
+			<rating>7</rating>
+			<ess>0</ess>
+			<capacity>[Rating * 1]</capacity>
+			<avail>(Rating * 3)R</avail>
+			<cost>Rating * 250</cost>
+			<bonus />
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Enhanced Agility</name>
+			<category>Cyberlimb Enhancement</category>
+			<rating>7</rating>
+			<ess>0</ess>
+			<capacity>[Rating * 1]</capacity>
+			<avail>(Rating * 3)R</avail>
+			<cost>Rating * 250</cost>
+			<bonus />
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>MDS Subdermal Sheath</name>
+			<category>Cyberlimb Enhancement</category>
+			<rating>3</rating>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>(Rating * 5)F</avail>
+			<cost>Rating * 3000</cost>
+			<bonus />
+			<source>RC</source>
+			<page>35</page>
+		</cyberware>
+		<cyberware>
+			<name>Optimized: Body+Tech Verticalist</name>
+			<category>Cyberlimb Enhancement</category>
+			<rating>10</rating>
+			<minrating>4</minrating>
+			<ess>0</ess>
+			<capacity>[2]</capacity>
+			<avail>+4</avail>
+			<cost>5000</cost>
+			<bonus>
+				<specificskill>
+					<name>Climbing</name>
+					<bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>44</page>
+		</cyberware>
+		<cyberware>
+			<name>Optimized: Evo Kali</name>
+			<category>Cyberlimb Enhancement</category>
+			<rating>10</rating>
+			<minrating>4</minrating>
+			<ess>0</ess>
+			<capacity>[2]</capacity>
+			<avail>+4</avail>
+			<cost>5000</cost>
+			<bonus>
+				<specificskill>
+					<name>Blades</name>
+					<bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>44</page>
+		</cyberware>
+		<cyberware>
+			<name>Optimized: Ferrari Sprinter</name>
+			<category>Cyberlimb Enhancement</category>
+			<rating>10</rating>
+			<minrating>4</minrating>
+			<ess>0</ess>
+			<capacity>[2]</capacity>
+			<avail>+4</avail>
+			<cost>5000</cost>
+			<bonus>
+				<specificskill>
+					<name>Running</name>
+					<bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>44</page>
+		</cyberware>
+		<cyberware>
+			<name>Optimized: Louisville Slugger</name>
+			<category>Cyberlimb Enhancement</category>
+			<rating>10</rating>
+			<minrating>4</minrating>
+			<ess>0</ess>
+			<capacity>[2]</capacity>
+			<avail>+4</avail>
+			<cost>5000</cost>
+			<bonus>
+				<specificskill>
+					<name>Clubs</name>
+					<bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>44</page>
+		</cyberware>
+		<cyberware>
+			<name>Optimized: Nightengale Feet of Fury</name>
+			<category>Cyberlimb Enhancement</category>
+			<rating>10</rating>
+			<minrating>4</minrating>
+			<ess>0</ess>
+			<capacity>[2]</capacity>
+			<avail>+4</avail>
+			<cost>5000</cost>
+			<bonus />
+			<source>AU</source>
+			<page>44</page>
+		</cyberware>
+		<cyberware>
+			<name>Optimized: Ultimate Champion</name>
+			<category>Cyberlimb Enhancement</category>
+			<rating>10</rating>
+			<minrating>4</minrating>
+			<ess>0</ess>
+			<capacity>[2]</capacity>
+			<avail>+4</avail>
+			<cost>5000</cost>
+			<bonus>
+				<specificskill>
+					<name>Unarmed Combat</name>
+					<bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>44</page>
+		</cyberware>
+		<cyberware>
+			<name>Optimized: Yankee Pitcher</name>
+			<category>Cyberlimb Enhancement</category>
+			<rating>10</rating>
+			<minrating>4</minrating>
+			<ess>0</ess>
+			<capacity>[2]</capacity>
+			<avail>+4</avail>
+			<cost>5000</cost>
+			<bonus>
+				<specificskill>
+					<name>Throwing Weapons</name>
+					<bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>44</page>
+		</cyberware>
+		<cyberware>
+			<name>Rotational Joints</name>
+			<category>Cyberlimb Enhancement</category>
+			<ess>0</ess>
+			<capacity>[2]</capacity>
+			<avail>8</avail>
+			<cost>5000</cost>
+			<bonus>
+				<specificskill>
+					<name>Escape Artist</name>
+					<bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<source>SG</source>
+			<page>144</page>
+		</cyberware>
+		<cyberware>
+			<name>Cyber Holster</name>
+			<category>Cyberlimb Accessory</category>
+			<ess>0</ess>
+			<capacity>[7]</capacity>
+			<avail>8R</avail>
+			<cost>2000</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Cyberarm Gyromount</name>
+			<category>Cyberlimb Accessory</category>
+			<ess>0</ess>
+			<capacity>[4]</capacity>
+			<avail>12F</avail>
+			<cost>6000</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Cyberarm Slide</name>
+			<category>Cyberlimb Accessory</category>
+			<ess>0</ess>
+			<capacity>[8]</capacity>
+			<avail>12R</avail>
+			<cost>3000</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Cyberskates</name>
+			<category>Cyberlimb Accessory</category>
+			<ess>0</ess>
+			<capacity>[3]</capacity>
+			<avail>5</avail>
+			<cost>325</cost>
+			<bonus>
+				<movementpercent>25</movementpercent>
+			</bonus>
+			<source>AU</source>
+			<page>45</page>
+		</cyberware>
+		<cyberware>
+			<name>Hydraulic Jacks</name>
+			<category>Cyberlimb Accessory</category>
+			<rating>6</rating>
+			<ess>0</ess>
+			<capacity>[Rating]</capacity>
+			<avail>9</avail>
+			<cost>Rating * 1000</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Large Smuggling Compartment</name>
+			<category>Cyberlimb Accessory</category>
+			<ess>0</ess>
+			<capacity>[5]</capacity>
+			<avail>6</avail>
+			<cost>2000</cost>
+			<allowgear />
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Modular Cyberlimb</name>
+			<category>Cyberlimb Accessory</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+1</avail>
+			<cost>*1.1</cost>
+			<subsystems>
+				<subsystem>Modular Plug-In</subsystem>
+			</subsystems>
+			<source>AU</source>
+			<page>45</page>
+		</cyberware>
+		<cyberware>
+			<name>Modular Plug-in Adaptation</name>
+			<category>Cyberlimb Accessory</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+2</avail>
+			<cost>500</cost>
+			<subsystems>
+				<subsystem>Modular Plug-In</subsystem>
+			</subsystems>
+			<source>AU</source>
+			<page>45</page>
+		</cyberware>
+		<cyberware>
+			<name>Scanner System</name>
+			<category>Cyberlimb Accessory</category>
+			<rating>4</rating>
+			<ess>0</ess>
+			<capacity>[2]</capacity>
+			<avail>6R</avail>
+			<cost>Rating * 500</cost>
+			<source>AU</source>
+			<page>45</page>
+		</cyberware>
+		<cyberware>
+			<name>Snake Fingers</name>
+			<category>Cyberlimb Accessory</category>
+			<ess>0</ess>
+			<capacity>[1]</capacity>
+			<avail>6</avail>
+			<cost>1000</cost>
+			<source>AU</source>
+			<page>45</page>
+		</cyberware>
+		<cyberware>
+			<name>Telescoping Cyberlimb</name>
+			<category>Cyberlimb Accessory</category>
+			<ess>0</ess>
+			<capacity>[2]</capacity>
+			<avail>6</avail>
+			<cost>2500</cost>
+			<source>AU</source>
+			<page>45</page>
+		</cyberware>
+		<cyberware>
+			<name>Articulated Weapon-Arm</name>
+			<category>Cyberweapon</category>
+			<ess>0</ess>
+			<capacity>[8]</capacity>
+			<avail>24F</avail>
+			<cost>5000</cost>
+			<source>AU</source>
+			<page>43</page>
+		</cyberware>
+		<cyberware>
+			<name>Dartgun</name>
+			<category>Cyberweapon</category>
+			<ess>0.35</ess>
+			<capacity>[3]</capacity>
+			<avail>12R</avail>
+			<addweapon>Dartgun</addweapon>
+			<cost>1400</cost>
+			<source>AU</source>
+			<page>42</page>
+		</cyberware>
+		<cyberware>
+			<name>External Clip Port</name>
+			<category>Cyberweapon</category>
+			<ess>0.1</ess>
+			<capacity>[1]</capacity>
+			<avail>0</avail>
+			<cost>100</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>External Mount</name>
+			<category>Cyberweapon</category>
+			<ess>0</ess>
+			<capacity>[7]</capacity>
+			<avail>16F</avail>
+			<cost>2500</cost>
+			<source>AU</source>
+			<page>43</page>
+		</cyberware>
+		<cyberware>
+			<name>Eye Dart</name>
+			<category>Cyberweapon</category>
+			<ess>0.25</ess>
+			<capacity>[3]</capacity>
+			<avail>14R</avail>
+			<addweapon>Eye Dart</addweapon>
+			<cost>1500</cost>
+			<source>AU</source>
+			<page>42</page>
+		</cyberware>
+		<cyberware>
+			<name>Fingertip Dartgun</name>
+			<category>Cyberweapon</category>
+			<ess>0.45</ess>
+			<capacity>[4]</capacity>
+			<avail>16R</avail>
+			<addweapon>Fingertip Dartgun</addweapon>
+			<cost>2750</cost>
+			<source>AU</source>
+			<page>42</page>
+		</cyberware>
+		<cyberware>
+			<name>Grenade Launcher</name>
+			<category>Cyberweapon</category>
+			<ess>1.5</ess>
+			<capacity>[15]</capacity>
+			<avail>20F</avail>
+			<addweapon>Grenade Launcher</addweapon>
+			<cost>4000</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Hand Blade</name>
+			<category>Cyberweapon</category>
+			<ess>0.25</ess>
+			<capacity>[3]</capacity>
+			<avail>10F</avail>
+			<addweapon>Hand Blade</addweapon>
+			<cost>1500</cost>
+			<source>SR4</source>
+			<page>345</page>
+		</cyberware>
+		<cyberware>
+			<name>Hand Razors</name>
+			<category>Cyberweapon</category>
+			<ess>0.2</ess>
+			<capacity>[2]</capacity>
+			<avail>10F</avail>
+			<addweapon>Hand Razors</addweapon>
+			<cost>900</cost>
+			<source>SR4</source>
+			<page>345</page>
+		</cyberware>
+		<cyberware>
+			<name>Heavy Pistol</name>
+			<category>Cyberweapon</category>
+			<ess>0.6</ess>
+			<capacity>[6]</capacity>
+			<avail>16R</avail>
+			<addweapon>Heavy Pistol</addweapon>
+			<cost>3200</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Holdout Pistol</name>
+			<category>Cyberweapon</category>
+			<ess>0.15</ess>
+			<capacity>[2]</capacity>
+			<avail>12R</avail>
+			<addweapon>Holdout Pistol</addweapon>
+			<cost>800</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Laser Sight</name>
+			<category>Cyberweapon</category>
+			<ess>0.1</ess>
+			<capacity>[1]</capacity>
+			<avail>0</avail>
+			<cost>100</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Light Pistol</name>
+			<category>Cyberweapon</category>
+			<ess>0.35</ess>
+			<capacity>[4]</capacity>
+			<avail>14R</avail>
+			<addweapon>Light Pistol</addweapon>
+			<cost>1500</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Machine Pistol</name>
+			<category>Cyberweapon</category>
+			<ess>0.4</ess>
+			<capacity>[4]</capacity>
+			<avail>16R</avail>
+			<addweapon>Machine Pistol</addweapon>
+			<cost>2000</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Oral Dart</name>
+			<category>Cyberweapon</category>
+			<ess>0.25</ess>
+			<capacity>[3]</capacity>
+			<avail>14R</avail>
+			<addweapon>Oral Dart</addweapon>
+			<cost>1500</cost>
+			<source>AU</source>
+			<page>43</page>
+		</cyberware>
+		<cyberware>
+			<name>Oral Gun</name>
+			<category>Cyberweapon</category>
+			<ess>0.25</ess>
+			<capacity>[3]</capacity>
+			<avail>14R</avail>
+			<addweapon>Oral Gun</addweapon>
+			<cost>1600</cost>
+			<source>AU</source>
+			<page>43</page>
+		</cyberware>
+		<cyberware>
+			<name>Projectile Spur</name>
+			<category>Cyberweapon</category>
+			<ess>0.3</ess>
+			<capacity>[4]</capacity>
+			<avail>12F</avail>
+			<addweapon>Projectile Spur</addweapon>
+			<cost>2200</cost>
+			<source>AU</source>
+			<page>43</page>
+		</cyberware>
+		<cyberware>
+			<name>Oral Slasher</name>
+			<category>Cyberweapon</category>
+			<ess>0.25</ess>
+			<capacity>[3]</capacity>
+			<avail>12R</avail>
+			<addweapon>Oral Slasher</addweapon>
+			<cost>1500</cost>
+			<source>AU</source>
+			<page>43</page>
+		</cyberware>
+		<cyberware>
+			<name>Shock Hand</name>
+			<category>Cyberweapon</category>
+			<ess>0.25</ess>
+			<capacity>[3]</capacity>
+			<avail>8R</avail>
+			<addweapon>Shock Hand</addweapon>
+			<cost>1000</cost>
+			<source>SR4</source>
+			<page>345</page>
+		</cyberware>
+		<cyberware>
+			<name>Shotgun</name>
+			<category>Cyberweapon</category>
+			<ess>1.1</ess>
+			<capacity>[11]</capacity>
+			<avail>20R</avail>
+			<addweapon>Shotgun</addweapon>
+			<cost>2100</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Silencer</name>
+			<category>Cyberweapon</category>
+			<ess>0.2</ess>
+			<capacity>[2]</capacity>
+			<avail>0</avail>
+			<cost>400</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Sound Suppressor</name>
+			<category>Cyberweapon</category>
+			<ess>0.3</ess>
+			<capacity>[3]</capacity>
+			<avail>0</avail>
+			<cost>600</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Spur</name>
+			<category>Cyberweapon</category>
+			<ess>0.3</ess>
+			<capacity>[3]</capacity>
+			<avail>12F</avail>
+			<addweapon>Spur</addweapon>
+			<cost>1800</cost>
+			<source>SR4</source>
+			<page>345</page>
+		</cyberware>
+		<cyberware>
+			<name>Squirtgun</name>
+			<category>Cyberweapon</category>
+			<ess>0.3</ess>
+			<capacity>[4]</capacity>
+			<avail>10R</avail>
+			<addweapon>Squirtgun</addweapon>
+			<cost>1250</cost>
+			<source>AU</source>
+			<page>43</page>
+		</cyberware>
+		<cyberware>
+			<name>Submachine Gun</name>
+			<category>Cyberweapon</category>
+			<ess>1</ess>
+			<capacity>[10]</capacity>
+			<avail>20R</avail>
+			<addweapon>Submachine Gun</addweapon>
+			<cost>2500</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</cyberware>
+		<cyberware>
+			<name>Taser</name>
+			<category>Cyberweapon</category>
+			<ess>0.3</ess>
+			<capacity>[3]</capacity>
+			<avail>8R</avail>
+			<addweapon>Taser</addweapon>
+			<cost>1000</cost>
+			<source>AU</source>
+			<page>43</page>
+		</cyberware>
+		<cyberware>
+			<name>Cybergland</name>
+			<category>Cosmetic Modification</category>
+			<rating>6</rating>
+			<ess>0.1</ess>
+			<capacity>[1]</capacity>
+			<avail>+4</avail>
+			<cost>500+((Rating-1) * 100)</cost>
+			<source>AU</source>
+			<page>33</page>
+		</cyberware>
+		<cyberware>
+			<name>Cyberlimb Casemod Full Arm</name>
+			<category>Cosmetic Modification</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+2</avail>
+			<cost>+400</cost>
+			<source>AU</source>
+			<page>33</page>
+		</cyberware>
+		<cyberware>
+			<name>Cyberlimb Casemod Full Leg</name>
+			<category>Cosmetic Modification</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+2</avail>
+			<cost>+400</cost>
+			<source>AU</source>
+			<page>33</page>
+		</cyberware>
+		<cyberware>
+			<name>Cyberlimb Casemod Lower Arm</name>
+			<category>Cosmetic Modification</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+2</avail>
+			<cost>+300</cost>
+			<source>AU</source>
+			<page>33</page>
+		</cyberware>
+		<cyberware>
+			<name>Cyberlimb Casemod Lower Leg</name>
+			<category>Cosmetic Modification</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+2</avail>
+			<cost>+300</cost>
+			<source>AU</source>
+			<page>33</page>
+		</cyberware>
+		<cyberware>
+			<name>Cyberlimb Casemod Hand</name>
+			<category>Cosmetic Modification</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+3</avail>
+			<cost>250</cost>
+			<source>AU</source>
+			<page>33</page>
+		</cyberware>
+		<cyberware>
+			<name>Cyberlimb Casemod Foot</name>
+			<category>Cosmetic Modification</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+3</avail>
+			<cost>250</cost>
+			<source>AU</source>
+			<page>33</page>
+		</cyberware>
+		<cyberware>
+			<name>Cyberlimb Casemod Torso</name>
+			<category>Cosmetic Modification</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+4</avail>
+			<cost>1200</cost>
+			<source>AU</source>
+			<page>33</page>
+		</cyberware>
+		<cyberware>
+			<name>Cyberlimb Casemod Skull</name>
+			<category>Cosmetic Modification</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+4</avail>
+			<cost>1000</cost>
+			<source>AU</source>
+			<page>33</page>
+		</cyberware>
+		<cyberware>
+			<name>Engraved Datajack</name>
+			<category>Cosmetic Modification</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+2</avail>
+			<cost>200</cost>
+			<source>AU</source>
+			<page>34</page>
+		</cyberware>
+		<cyberware>
+			<name>Eyemod</name>
+			<category>Cosmetic Modification</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+3</avail>
+			<cost>500</cost>
+			<source>AU</source>
+			<page>34</page>
+		</cyberware>
+		<cyberware>
+			<name>Shaped Dermal Plating</name>
+			<category>Cosmetic Modification</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+5</avail>
+			<cost>1200</cost>
+			<source>AU</source>
+			<page>34</page>
+		</cyberware>
+		<cyberware>
+			<name>Wet Sheath</name>
+			<category>Cosmetic Modification</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>+2</avail>
+			<cost>1300</cost>
+			<source>AU</source>
+			<page>34</page>
+		</cyberware>
+		<cyberware>
+			<name>Breast Implants</name>
+			<category>Cosmetic Implant</category>
+			<ess>0.25</ess>
+			<capacity>[2]</capacity>
+			<avail>4</avail>
+			<cost>3000</cost>
+			<source>AU</source>
+			<page>34</page>
+		</cyberware>
+		<cyberware>
+			<name>Extendable Fang Implants</name>
+			<category>Cosmetic Implant</category>
+			<ess>0.15</ess>
+			<capacity>[1]</capacity>
+			<avail>8</avail>
+			<addweapon>Fang Implants</addweapon>
+			<cost>1200</cost>
+			<source>AU</source>
+			<page>34</page>
+		</cyberware>
+		<cyberware>
+			<name>Fang Implants</name>
+			<category>Cosmetic Implant</category>
+			<ess>0.1</ess>
+			<capacity>[1]</capacity>
+			<avail>6</avail>
+			<addweapon>Fang Implants</addweapon>
+			<cost>800</cost>
+			<source>AU</source>
+			<page>34</page>
+		</cyberware>
+		<cyberware>
+			<name>Fiberoptic Hair</name>
+			<category>Cosmetic Implant</category>
+			<ess>0.1</ess>
+			<capacity>[1]</capacity>
+			<avail>0</avail>
+			<cost>Variable(450+)</cost>
+			<source>AU</source>
+			<page>35</page>
+		</cyberware>
+		<cyberware>
+			<name>Horn Implants</name>
+			<category>Cosmetic Implant</category>
+			<ess>0.15</ess>
+			<capacity>[1]</capacity>
+			<avail>8</avail>
+			<addweapon>Horn Implants</addweapon>
+			<cost>1500</cost>
+			<source>AU</source>
+			<page>35</page>
+		</cyberware>
+		<cyberware>
+			<name>Penile Implant</name>
+			<category>Cosmetic Implant</category>
+			<ess>0.25</ess>
+			<capacity>[1]</capacity>
+			<avail>5</avail>
+			<cost>3000</cost>
+			<source>AU</source>
+			<page>35</page>
+		</cyberware>
+		<cyberware>
+			<name>Retractable Horn Implants</name>
+			<category>Cosmetic Implant</category>
+			<ess>0.25</ess>
+			<capacity>[1]</capacity>
+			<avail>10</avail>
+			<addweapon>Horn Implants</addweapon>
+			<cost>2200</cost>
+			<source>AU</source>
+			<page>35</page>
+		</cyberware>
+		<cyberware>
+			<name>Built-in Utility Kit</name>
+			<category>Modular Plug-In</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>6</avail>
+			<cost>1500</cost>
+			<source>AU</source>
+			<page>46</page>
+		</cyberware>
+		<cyberware>
+			<name>Built-in Medkit</name>
+			<category>Modular Plug-In</category>
+			<rating>6</rating>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>7</avail>
+			<cost>1000 + (Rating * 100)</cost>
+			<source>AU</source>
+			<page>46</page>
+		</cyberware>
+		<cyberware>
+			<name>Drone Hand</name>
+			<category>Modular Plug-In</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>8</avail>
+			<cost>3500</cost>
+			<source>AU</source>
+			<page>46</page>
+		</cyberware>
+		<cyberware>
+			<name>Grapple Hand</name>
+			<category>Modular Plug-In</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>12R</avail>
+			<addweapon>Grapple Hand</addweapon>
+			<cost>3000</cost>
+			<source>AU</source>
+			<page>46</page>
+		</cyberware>
+		<cyberware>
+			<name>Hydraulic Press</name>
+			<category>Modular Plug-In</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>8</avail>
+			<addweapon>Hydraulic Press (pinch)</addweapon>
+			<addweapon>Hydraulic Press (strike)</addweapon>
+			<cost>5000</cost>
+			<source>AU</source>
+			<page>46</page>
+		</cyberware>
+		<cyberware>
+			<name>Jackhammer</name>
+			<category>Modular Plug-In</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>8</avail>
+			<addweapon>Jackhammer (drill)</addweapon>
+			<addweapon>Jackhammer (ram)</addweapon>
+			<cost>5000</cost>
+			<source>AU</source>
+			<page>47</page>
+		</cyberware>
+		<cyberware>
+			<name>Nail Pistol</name>
+			<category>Modular Plug-In</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>8</avail>
+			<addweapon>Nail Pistol</addweapon>
+			<cost>900</cost>
+			<source>AU</source>
+			<page>47</page>
+		</cyberware>
+		<cyberware>
+			<name>Raptor Cyberlegs</name>
+			<category>Modular Plug-In</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>12</avail>
+			<cost>12500</cost>
+			<bonus>
+				<movementpercent>25</movementpercent>
+				<specificskill>
+					<name>Gymnastics</name>
+					<bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>47</page>
+		</cyberware>
+		<cyberware>
+			<name>Skimmer Discs</name>
+			<category>Modular Plug-In</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>8</avail>
+			<cost>2500</cost>
+			<bonus>
+				<movementpercent>50</movementpercent>
+			</bonus>
+			<source>AU</source>
+			<page>47</page>
+		</cyberware>
+		<cyberware>
+			<name>Vacuum Pump</name>
+			<category>Modular Plug-In</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>6</avail>
+			<cost>4000</cost>
+			<source>AU</source>
+			<page>48</page>
+		</cyberware>
+		<cyberware>
+			<name>Waterjets</name>
+			<category>Modular Plug-In</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>8</avail>
+			<cost>1500</cost>
+			<bonus>
+				<swimpercent>100</swimpercent>
+			</bonus>
+			<source>AU</source>
+			<page>48</page>
+		</cyberware>
+		<cyberware>
+			<name>Welding Laser</name>
+			<category>Modular Plug-In</category>
+			<ess>0</ess>
+			<capacity>[0]</capacity>
+			<avail>10R</avail>
+			<addweapon>Welding Laser</addweapon>
+			<cost>3000</cost>
+			<source>AU</source>
+			<page>48</page>
+		</cyberware>
+		<cyberware>
+			<name>CAST</name>
+			<category>Biodrone Control</category>
+			<ess>0.5</ess>
+			<capacity>0</capacity>
+			<avail>25</avail>
+			<cost>25000</cost>
+			<source>AU</source>
+			<page>152</page>
+		</cyberware>
+		<cyberware>
+			<name>Orientation Goad</name>
+			<category>Biodrone Control</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>500</cost>
+			<source>AU</source>
+			<page>152</page>
+		</cyberware>
+		<cyberware>
+			<name>Stirrup Interface</name>
+			<category>Biodrone Control</category>
+			<rating>3</rating>
+			<ess>FixedValues(2.5,3.5,5.5)</ess>
+			<capacity>0</capacity>
+			<avail>FixedValues(15R,21R,28R)</avail>
+			<cost>FixedValues(45000,80000,100000)</cost>
+			<bonus>
+				<initiativepass>Rating</initiativepass>
+				<skillwire>FixedValues(2,4,5)</skillwire>
+				<specificattribute>
+					<name precedence="1">REA</name>
+					<val>2</val>
+				</specificattribute>
+				<specificskill>
+					<name>Dodge</name>
+					<bonus>1</bonus>
+					<applytorating>yes</applytorating>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>153</page>
+		</cyberware>
+		<cyberware>
+			<name>TRACES</name>
+			<category>Biodrone Control</category>
+			<ess>0.75</ess>
+			<capacity>0</capacity>
+			<avail>25F</avail>
+			<cost>25000</cost>
+			<bonus>
+				<specificskill>
+					<name>Dodge</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<specificskill>
+					<name>Unarmed Combat</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<source>AU</source>
+			<page>153</page>
+		</cyberware>
+		<cyberware>
+			<name>SEIES</name>
+			<category>Biodrone Control</category>
+			<ess>0.75</ess>
+			<capacity>0</capacity>
+			<avail>25F</avail>
+			<cost>20000</cost>
+			<source>AU</source>
+			<page>153</page>
+		</cyberware>
+		<cyberware>
+			<name>Dynamic Handprints</name>
+			<category>Nanocybernetics</category>
+			<rating>10</rating>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>12F</avail>
+			<cost>Rating * 1000</cost>
+			<source>AU</source>
+			<page>112</page>
+		</cyberware>
+		<cyberware>
+			<name>Flashback System</name>
+			<category>Nanocybernetics</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>5000</cost>
+			<source>AU</source>
+			<page>112</page>
+		</cyberware>
+		<cyberware>
+			<name>Nano-Biomonitor</name>
+			<category>Nanocybernetics</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>10000</cost>
+			<source>AU</source>
+			<page>112</page>
+		</cyberware>
+		<cyberware>
+			<name>Nanohive</name>
+			<category>Nanocybernetics</category>
+			<rating>6</rating>
+			<ess>0.5 + (Rating * 0.25)</ess>
+			<capacity>[2]</capacity>
+			<avail>Rating * 5</avail>
+			<cost>Rating * 10000</cost>
+			<source>AU</source>
+			<page>112</page>
+		</cyberware>
+		<cyberware>
+			<name>Retinal Adjusters</name>
+			<category>Nanocybernetics</category>
+			<rating>10</rating>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>16F</avail>
+			<cost>Rating * 5000</cost>
+			<source>AU</source>
+			<page>112</page>
+		</cyberware>
+		<cyberware>
+			<name>Smart Skin</name>
+			<category>Nanocybernetics</category>
+			<rating>3</rating>
+			<ess>Rating * 0.5</ess>
+			<capacity>0</capacity>
+			<avail>Rating * 5</avail>
+			<cost>Rating * 10000</cost>
+			<source>AU</source>
+			<page>113</page>
+		</cyberware>
+		<cyberware>
+			<name>Voice Mimic</name>
+			<category>Nanocybernetics</category>
+			<rating>10</rating>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>16F</avail>
+			<cost>Rating * 3000</cost>
+			<source>AU</source>
+			<page>113</page>
+		</cyberware>
+		<cyberware>
+			<name>Freefall Balance Augmenter</name>
+			<category>Earware</category>
+			<ess>0.25</ess>
+			<capacity>[4]</capacity>
+			<avail>10R</avail>
+			<cost>5500</cost>
+			<source>HP</source>
+			<page>168</page>
+		</cyberware>
+	</cyberwares>
+	<suites>
+		<suite>
+			<name>Aztechnology Topo</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Thermographic Vision</name>
+				</cyberware>
+				<cyberware>
+					<name>Damper</name>
+				</cyberware>
+				<cyberware>
+					<name>Bone Lacing (Plastic)</name>
+				</cyberware>
+				<cyberware>
+					<name>Internal Air Tank</name>
+				</cyberware>
+				<cyberware>
+					<name>Muscle Replacement</name>
+					<rating>2</rating>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Clockwerk Bright Cloud Basic</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Balance Augmenter</name>
+				</cyberware>
+				<cyberware>
+					<name>Gastric Neurostimulator</name>
+				</cyberware>
+				<cyberware>
+					<name>Retractable Climbing Claws</name>
+				</cyberware>
+				<cyberware>
+					<name>Grip Feet</name>
+				</cyberware>
+				<cyberware>
+					<name>Balance Tail</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Clockwerk Bright Cloud Alpha</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Balance Augmenter</name>
+				</cyberware>
+				<cyberware>
+					<name>Gastric Neurostimulator</name>
+				</cyberware>
+				<cyberware>
+					<name>Retractable Climbing Claws</name>
+				</cyberware>
+				<cyberware>
+					<name>Grip Feet</name>
+				</cyberware>
+				<cyberware>
+					<name>Balance Tail</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Clockwerk Bright Cloud Beta</name>
+			<grade>Betaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Balance Augmenter</name>
+				</cyberware>
+				<cyberware>
+					<name>Gastric Neurostimulator</name>
+				</cyberware>
+				<cyberware>
+					<name>Retractable Climbing Claws</name>
+				</cyberware>
+				<cyberware>
+					<name>Grip Feet</name>
+				</cyberware>
+				<cyberware>
+					<name>Balance Tail</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Evo Aquanaut Basic</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Orientation System</name>
+				</cyberware>
+				<cyberware>
+					<name>Image Link</name>
+				</cyberware>
+				<cyberware>
+					<name>Cyberfins</name>
+				</cyberware>
+				<cyberware>
+					<name>OXSYS Cybergill</name>
+				</cyberware>
+				<cyberware>
+					<name>Internal Air Tank</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Evo Aquanaut Professional</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Orientation System</name>
+				</cyberware>
+				<cyberware>
+					<name>Image Link</name>
+				</cyberware>
+				<cyberware>
+					<name>Cyberfins</name>
+				</cyberware>
+				<cyberware>
+					<name>OXSYS Cybergill</name>
+				</cyberware>
+				<cyberware>
+					<name>Internal Air Tank</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Evo Aquanaut Luxury</name>
+			<grade>Betaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Orientation System</name>
+				</cyberware>
+				<cyberware>
+					<name>Image Link</name>
+				</cyberware>
+				<cyberware>
+					<name>Cyberfins</name>
+				</cyberware>
+				<cyberware>
+					<name>OXSYS Cybergill</name>
+				</cyberware>
+				<cyberware>
+					<name>Internal Air Tank</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>NeoNET/Spin-X Sternschutz Standard ZK</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Commlink</name>
+				</cyberware>
+				<cyberware>
+					<name>Smartlink</name>
+				</cyberware>
+				<cyberware>
+					<name>Datajack</name>
+				</cyberware>
+				<cyberware>
+					<name>Bone Lacing (Kevlar)</name>
+				</cyberware>
+				<cyberware>
+					<name>Reaction Enhancers</name>
+					<rating>1</rating>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>NeoNET/Spin-X Sternschutz Alpha ZK</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Commlink</name>
+				</cyberware>
+				<cyberware>
+					<name>Smartlink</name>
+				</cyberware>
+				<cyberware>
+					<name>Datajack</name>
+				</cyberware>
+				<cyberware>
+					<name>Bone Lacing (Kevlar)</name>
+				</cyberware>
+				<cyberware>
+					<name>Reaction Enhancers</name>
+					<rating>1</rating>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Saeder-Krupp Signifier Prime Basic</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Nano-Biomonitor</name>
+				</cyberware>
+				<cyberware>
+					<name>Nanohive</name>
+					<rating>3</rating>
+				</cyberware>
+				<cyberware>
+					<name>Dermal Sheath</name>
+					<rating>2</rating>
+				</cyberware>
+				<cyberware>
+					<name>Bone Lacing (Aluminum)</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Saeder-Krupp Signifier Prime Alpha</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Nano-Biomonitor</name>
+				</cyberware>
+				<cyberware>
+					<name>Nanohive</name>
+					<rating>3</rating>
+				</cyberware>
+				<cyberware>
+					<name>Dermal Sheath</name>
+					<rating>2</rating>
+				</cyberware>
+				<cyberware>
+					<name>Bone Lacing (Aluminum)</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Saeder-Krupp Signifier Prime Beta</name>
+			<grade>Betaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Nano-Biomonitor</name>
+				</cyberware>
+				<cyberware>
+					<name>Nanohive</name>
+					<rating>3</rating>
+				</cyberware>
+				<cyberware>
+					<name>Dermal Sheath</name>
+					<rating>2</rating>
+				</cyberware>
+				<cyberware>
+					<name>Bone Lacing (Aluminum)</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Lone Star SWAT</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Flare Compensation</name>
+				</cyberware>
+				<cyberware>
+					<name>Thermographic Vision</name>
+				</cyberware>
+				<cyberware>
+					<name>Smartlink</name>
+				</cyberware>
+				<cyberware>
+					<name>Bone Lacing (Plastic)</name>
+				</cyberware>
+				<cyberware>
+					<name>Wired Reflexes</name>
+					<rating>1</rating>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Lone Star SWAT Watchman</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Flare Compensation</name>
+				</cyberware>
+				<cyberware>
+					<name>Thermographic Vision</name>
+				</cyberware>
+				<cyberware>
+					<name>Smartlink</name>
+				</cyberware>
+				<cyberware>
+					<name>Bone Lacing (Plastic)</name>
+				</cyberware>
+				<cyberware>
+					<name>Wired Reflexes</name>
+					<rating>1</rating>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Shiawase Executive Suite Silverline</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Commlink</name>
+				</cyberware>
+				<cyberware>
+					<name>Image Link</name>
+				</cyberware>
+				<cyberware>
+					<name>Datajack</name>
+				</cyberware>
+				<cyberware>
+					<name>Attention Coprocessor</name>
+					<rating>3</rating>
+				</cyberware>
+				<cyberware>
+					<name>Math SPU</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Shiawase Executive Suite Goldline</name>
+			<grade>Betaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Commlink</name>
+				</cyberware>
+				<cyberware>
+					<name>Image Link</name>
+				</cyberware>
+				<cyberware>
+					<name>Datajack</name>
+				</cyberware>
+				<cyberware>
+					<name>Attention Coprocessor</name>
+					<rating>3</rating>
+				</cyberware>
+				<cyberware>
+					<name>Math SPU</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Saeder-Krupp Cyberlogician Standard Civilian</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Commlink</name>
+				</cyberware>
+				<cyberware>
+					<name>Datajack</name>
+				</cyberware>
+				<cyberware>
+					<name>Datajack</name>
+				</cyberware>
+				<cyberware>
+					<name>Datajack</name>
+				</cyberware>
+				<cyberware>
+					<name>Sim Module</name>
+				</cyberware>
+				<cyberware>
+					<name>Encephalon Rating 2</name>
+				</cyberware>
+				<cyberware>
+					<name>Math SPU</name>
+				</cyberware>
+				<cyberware>
+					<name>Attention Coprocessor</name>
+					<rating>3</rating>
+				</cyberware>
+				<cyberware>
+					<name>Data Lock</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Saeder-Krupp Cyberlogician Deluxe Civilian</name>
+			<grade>Betaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Commlink</name>
+				</cyberware>
+				<cyberware>
+					<name>Datajack</name>
+				</cyberware>
+				<cyberware>
+					<name>Datajack</name>
+				</cyberware>
+				<cyberware>
+					<name>Datajack</name>
+				</cyberware>
+				<cyberware>
+					<name>Sim Module</name>
+				</cyberware>
+				<cyberware>
+					<name>Encephalon Rating 2</name>
+				</cyberware>
+				<cyberware>
+					<name>Math SPU</name>
+				</cyberware>
+				<cyberware>
+					<name>Attention Coprocessor</name>
+					<rating>3</rating>
+				</cyberware>
+				<cyberware>
+					<name>Data Lock</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Saeder-Krupp Cyberlogician Standard Military</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Commlink</name>
+				</cyberware>
+				<cyberware>
+					<name>Datajack</name>
+				</cyberware>
+				<cyberware>
+					<name>Datajack</name>
+				</cyberware>
+				<cyberware>
+					<name>Datajack</name>
+				</cyberware>
+				<cyberware>
+					<name>Sim Module (Hot-Sim Modified)</name>
+				</cyberware>
+				<cyberware>
+					<name>Encephalon Rating 2</name>
+				</cyberware>
+				<cyberware>
+					<name>Math SPU</name>
+				</cyberware>
+				<cyberware>
+					<name>Attention Coprocessor</name>
+					<rating>3</rating>
+				</cyberware>
+				<cyberware>
+					<name>Data Lock</name>
+				</cyberware>
+				<cyberware>
+					<name>Orientation System</name>
+				</cyberware>
+				<cyberware>
+					<name>Simsense Booster</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Saeder-Krupp Cyberlogician Deluxe Military</name>
+			<grade>Betaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Commlink</name>
+				</cyberware>
+				<cyberware>
+					<name>Datajack</name>
+				</cyberware>
+				<cyberware>
+					<name>Datajack</name>
+				</cyberware>
+				<cyberware>
+					<name>Datajack</name>
+				</cyberware>
+				<cyberware>
+					<name>Sim Module (Hot-Sim Modified)</name>
+				</cyberware>
+				<cyberware>
+					<name>Encephalon Rating 2</name>
+				</cyberware>
+				<cyberware>
+					<name>Math SPU</name>
+				</cyberware>
+				<cyberware>
+					<name>Attention Coprocessor</name>
+					<rating>3</rating>
+				</cyberware>
+				<cyberware>
+					<name>Data Lock</name>
+				</cyberware>
+				<cyberware>
+					<name>Orientation System</name>
+				</cyberware>
+				<cyberware>
+					<name>Simsense Booster</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Urban Kshatriya Alpha</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>3</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Flare Compensation</name>
+						</cyberware>
+						<cyberware>
+							<name>Low-Light Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Smartlink</name>
+						</cyberware>
+						<cyberware>
+							<name>Thermographic Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Vision Enhancement</name>
+							<rating>2</rating>
+						</cyberware>
+						<cyberware>
+							<name>Vision Magnification</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Reaction Enhancers</name>
+					<rating>1</rating>
+				</cyberware>
+				<cyberware>
+					<name>Muscle Replacement</name>
+					<rating>1</rating>
+				</cyberware>
+				<cyberware>
+					<name>Biomonitor</name>
+				</cyberware>
+				<cyberware>
+					<name>Auto-Injector (Reusable)</name>
+					<rating>6</rating>
+				</cyberware>
+				<cyberware>
+					<name>Spur</name>
+				</cyberware>
+				<cyberware>
+					<name>Spur</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Urban Kshatriya Beta</name>
+			<grade>Betaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>3</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Flare Compensation</name>
+						</cyberware>
+						<cyberware>
+							<name>Low-Light Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Smartlink</name>
+						</cyberware>
+						<cyberware>
+							<name>Thermographic Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Vision Enhancement</name>
+							<rating>2</rating>
+						</cyberware>
+						<cyberware>
+							<name>Vision Magnification</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Reaction Enhancers</name>
+					<rating>1</rating>
+				</cyberware>
+				<cyberware>
+					<name>Muscle Replacement</name>
+					<rating>1</rating>
+				</cyberware>
+				<cyberware>
+					<name>Biomonitor</name>
+				</cyberware>
+				<cyberware>
+					<name>Auto-Injector (Reusable)</name>
+					<rating>6</rating>
+				</cyberware>
+				<cyberware>
+					<name>Spur</name>
+				</cyberware>
+				<cyberware>
+					<name>Spur</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Zeiss SenseSation Basic</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>3</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Eye Light System</name>
+						</cyberware>
+						<cyberware>
+							<name>Low-Light Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Vision Enhancement</name>
+							<rating>3</rating>
+						</cyberware>
+						<cyberware>
+							<name>Vision Magnification</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Cyberears</name>
+					<rating>2</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Audio Enhancement</name>
+						</cyberware>
+						<cyberware>
+							<name>Damper</name>
+						</cyberware>
+						<cyberware>
+							<name>Select Sound Filter</name>
+							<rating>3</rating>
+						</cyberware>
+						<cyberware>
+							<name>Spatial Recognizer</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Simrig</name>
+				</cyberware>
+				<cyberware>
+					<name>Radar Sensor</name>
+					<rating>3</rating>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Zeiss SenseSation Livecaster</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>3</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Eye Light System</name>
+						</cyberware>
+						<cyberware>
+							<name>Low-Light Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Vision Enhancement</name>
+							<rating>3</rating>
+						</cyberware>
+						<cyberware>
+							<name>Vision Magnification</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Cyberears</name>
+					<rating>2</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Audio Enhancement</name>
+						</cyberware>
+						<cyberware>
+							<name>Damper</name>
+						</cyberware>
+						<cyberware>
+							<name>Select Sound Filter</name>
+							<rating>3</rating>
+						</cyberware>
+						<cyberware>
+							<name>Spatial Recognizer</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Simrig</name>
+				</cyberware>
+				<cyberware>
+					<name>Radar Sensor</name>
+					<rating>3</rating>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Zeiss SenseSation Executive</name>
+			<grade>Betaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>3</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Eye Light System</name>
+						</cyberware>
+						<cyberware>
+							<name>Low-Light Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Vision Enhancement</name>
+							<rating>3</rating>
+						</cyberware>
+						<cyberware>
+							<name>Vision Magnification</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Cyberears</name>
+					<rating>2</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Audio Enhancement</name>
+						</cyberware>
+						<cyberware>
+							<name>Damper</name>
+						</cyberware>
+						<cyberware>
+							<name>Select Sound Filter</name>
+							<rating>3</rating>
+						</cyberware>
+						<cyberware>
+							<name>Spatial Recognizer</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Simrig</name>
+				</cyberware>
+				<cyberware>
+					<name>Radar Sensor</name>
+					<rating>3</rating>
+				</cyberware>
+			</cyberwares>
+		</suite>
+	</suites>
+</chummer>

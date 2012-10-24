@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+	<file>
+		<name>lang/en-us.xml</name>
+		<type>Language File</type>
+		<version>-964</version>
+		<description>English (US) language file</description>
+		<notes>- English (US) language file</notes>
+	</file>
+	<file>
+		<name>lang/fr.xml</name>
+		<type>Language File</type>
+		<version>-963</version>
+		<description>French language file</description>
+		<notes>- French language file</notes>
+	</file>
+	<file>
+		<name>lang/fr_data.xml</name>
+		<type>Language File</type>
+		<version>-986</version>
+		<description>French language data file</description>
+		<notes>- French language data file</notes>
+	</file>
+	<file>
+		<name>lang/de.xml</name>
+		<type>Language File</type>
+		<version>-999</version>
+		<description>German language file</description>
+		<notes>German language file</notes>
+	</file>
+</manifest>
