@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chummer>
+	<version>-923</version>
+	<traditions>
+		<tradition>
+			<name>Cyberadepts</name>
+			<drain>WIL + RES</drain>
+			<spirits>
+				<spirit>Courier Sprite</spirit>
+				<spirit>Crack Sprite</spirit>
+				<spirit>Data Sprite</spirit>
+				<spirit>Fault Sprite</spirit>
+				<spirit>Machine Sprite</spirit>
+			</spirits>
+			<source>UN</source>
+			<page>138</page>
+		</tradition>
+		<tradition>
+			<name>Default</name>
+			<drain>WIL + RES</drain>
+			<spirits>
+				<spirit>Courier Sprite</spirit>
+				<spirit>Crack Sprite</spirit>
+				<spirit>Data Sprite</spirit>
+				<spirit>Fault Sprite</spirit>
+				<spirit>Machine Sprite</spirit>
+			</spirits>
+			<source>SR4</source>
+			<page>243</page>
+		</tradition>
+		<tradition>
+			<name>Dronomancers</name>
+			<drain>INT + RES</drain>
+			<spirits>
+				<spirit>Crack Sprite</spirit>
+				<spirit>Data Sprite</spirit>
+				<spirit>Fault Sprite</spirit>
+				<spirit>Machine Sprite</spirit>
+				<spirit>Tutor Sprite</spirit>
+			</spirits>
+			<source>UN</source>
+			<page>138</page>
+		</tradition>
+		<tradition>
+			<name>E-scapists</name>
+			<drain>WIL + RES</drain>
+			<spirits>
+				<spirit>Courier Sprite</spirit>
+				<spirit>Crack Sprite</spirit>
+				<spirit>Data Sprite</spirit>
+				<spirit>Fault Sprite</spirit>
+				<spirit>Tank Sprite</spirit>
+			</spirits>
+			<source>UN</source>
+			<page>138</page>
+		</tradition>
+		<tradition>
+			<name>Info Savants</name>
+			<drain>INT + RES</drain>
+			<spirits>
+				<spirit>Code Sprite</spirit>
+				<spirit>Courier Sprite</spirit>
+				<spirit>Data Sprite</spirit>
+				<spirit>Machine Sprite</spirit>
+				<spirit>Paladin Sprite</spirit>
+			</spirits>
+			<source>UN</source>
+			<page>139</page>
+		</tradition>
+		<tradition>
+			<name>Networkers</name>
+			<drain>CHA + RES</drain>
+			<spirits>
+				<spirit>Code Sprite</spirit>
+				<spirit>Courier Sprite</spirit>
+				<spirit>Crack Sprite</spirit>
+				<spirit>Data Sprite</spirit>
+				<spirit>Sleuth Sprite</spirit>
+			</spirits>
+			<source>UN</source>
+			<page>139</page>
+		</tradition>
+		<tradition>
+			<name>Singularitarians</name>
+			<drain>LOG + RES</drain>
+			<spirits>
+				<spirit>Courier Sprite</spirit>
+				<spirit>Crack Sprite</spirit>
+				<spirit>Data Sprite</spirit>
+				<spirit>Tutor Sprite</spirit>
+				<spirit>Tank Sprite</spirit>
+			</spirits>
+			<source>UN</source>
+			<page>139</page>
+		</tradition>
+		<tradition>
+			<name>Sourcerors</name>
+			<drain>LOG + RES</drain>
+			<spirits>
+				<spirit>Code Sprite</spirit>
+				<spirit>Courier Sprite</spirit>
+				<spirit>Crack Sprite</spirit>
+				<spirit>Data Sprite</spirit>
+				<spirit>Machine Sprite</spirit>
+			</spirits>
+			<source>UN</source>
+			<page>139</page>
+		</tradition>
+		<tradition>
+			<name>Technoshamans</name>
+			<drain>CHA + RES</drain>
+			<spirits>
+				<spirit>Crack Sprite</spirit>
+				<spirit>Data Sprite</spirit>
+				<spirit>Machine Sprite</spirit>
+				<spirit>Paladin Sprite</spirit>
+				<spirit>Sleuth Sprite</spirit>
+			</spirits>
+			<source>UN</source>
+			<page>140</page>
+		</tradition>
+	</traditions>
+</chummer>

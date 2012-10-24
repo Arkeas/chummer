@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chummer>
+	<version>-923</version>
+	<categories>
+		<category>Animal</category>
+		<category>Other</category>
+		<category>Toxic</category>
+	</categories>
+	<mentors>
+		<mentor>
+			<name>Adversary</name>
+			<category>Other</category>
+			<advantage>+2 dice for Manipulation spells.</advantage>
+			<disadvantage>Adversary magicians have issues with authority. If the Adversary magician is given orders or instructions which do not match his own desires and intentions, he must make a Willpower + Charisma (3) Test or refuse the order, going with his own decision instead, regardless of the consequences.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Manipulation</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<choices>
+				<choice>
+					<name>+2 dice to Counterspelling Tests</name>
+					<bonus>
+						<specificskill>
+							<name>Counterspelling</name>
+							<bonus>2</bonus>
+						</specificskill>
+					</bonus>
+				</choice>
+				<choice>
+					<name>+2 dice to Banishing Tests</name>
+					<bonus>
+						<specificskill>
+							<name>Banishing</name>
+							<bonus>2</bonus>
+						</specificskill>
+					</bonus>
+				</choice>
+			</choices>
+			<source>SM</source>
+			<page>180</page>
+		</mentor>
+		<mentor>
+			<name>Artificer</name>
+			<category>Other</category>
+			<advantage>+2 dice for Manipulation spells, +2 dice to Enchanting Tests.</advantage>
+			<disadvantage>Artificer magicians are easily distracted by new and unusual finds or a persistent problem. When faced with something he has never seen before or a problem he can not easily solve, the Artificer magician must make a Willpower + Charisma (3) Test to resist examining the situation at length. The magician will not put his life in danger just to examine a new device, but he will take the next safe opportunity to do so.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Enchanting</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<spellcategory>
+					<name>Manipulation</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SM</source>
+			<page>180</page>
+		</mentor>
+		<mentor>
+			<name>Bear</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Health spells, +2 dice for resisting Physical damage.</advantage>
+			<disadvantage>Bear magicians can go berserk when wounded (taking Physical damage) in combat or if someone under their care is badly injured. Make a Willpower + Charisma Test (wound modifiers apply). The character goes berserk for 3 turns, minus 1 turn per hit; 3 or more hits avert the berserk rage entirely. A berserk magician will go after the attacker(s) without regard for her own safety. If the magician incapacitates a target before the time is up, the berserk fury dissipates.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Health</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SR4</source>
+			<page>200</page>
+		</mentor>
+		<mentor>
+			<name>Bull</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Combat spells, +2 dice for Leadership Tests.</advantage>
+			<disadvantage>Bull magicians are impatient and stubborn, and insist on getting their way. If the Bull magician does not get what he wants, he must make a Willpower + Charisma (3) Test or stubbornly dig in his heels and demand compliance.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Leadership</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<spellcategory>
+					<name>Combat</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SM</source>
+			<page>180</page>
+		</mentor>
+		<mentor>
+			<name>Cat</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Illusion spells.</advantage>
+			<disadvantage>Cat magicians toy with their prey. Unless the Cat magician makes a Willpower + Charisma (3) Test, she cannot make an attack that will incapacitate her target (i.e., a Combat spell must be cast with a Force/damage level that will not disable). If the magician is wounded, all this playing around stops.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Illusion</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<choices>
+				<choice>
+					<name>+2 dice to Gynmastics Tests</name>
+					<bonus>
+						<specificskill>
+							<name>Gymnastics</name>
+							<bonus>2</bonus>
+						</specificskill>
+					</bonus>
+				</choice>
+				<choice>
+					<name>+2 dice to Infiltration Tests</name>
+					<bonus>
+						<specificskill>
+							<name>Infiltration</name>
+							<bonus>2</bonus>
+						</specificskill>
+					</bonus>
+				</choice>
+			</choices>
+			<source>SR4</source>
+			<page>200</page>
+		</mentor>
+		<mentor>
+			<name>Crocodile</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Health spells, +2 dice to Survival Tests.</advantage>
+			<disadvantage>Crocodile's magicians understand that everything comes with a price. They are truly mercenary in their outlook and must make a Willpower + Charisma (3) Test to offer anything without compensation, no matter how small.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Survival</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<spellcategory>
+					<name>Health</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SM</source>
+			<page>181</page>
+		</mentor>
+		<mentor>
+			<name>Dark Goddess</name>
+			<category>Other</category>
+			<advantage>+2 dice for Combat and Health spells.</advantage>
+			<disadvantage>Ruled by extremes of both creation and destruction, followers of the Dark Goddess often relish in confrontation. They must make a Willpower + Charisma (3) Test to avoid escalating a conflict, no matter how small, into a major clash, whether physical, mental, or social.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Combat</name>
+					<val>2</val>
+				</spellcategory>
+				<spellcategory>
+					<name>Health</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SM</source>
+			<page>181</page>
+		</mentor>
+		<mentor>
+			<name>Dark King</name>
+			<category>Other</category>
+			<advantage>+2 dice for Perception and Assensing Tests, +2 dice for spirits of man.</advantage>
+			<disadvantage>–1 die to resist Physical damage.</disadvantage>
+			<bonus>
+				<damageresistance>-1</damageresistance>
+				<specificskill>
+					<name>Assensing</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<specificskill>
+					<name>Perception</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<source>SR4</source>
+			<page>200</page>
+		</mentor>
+		<mentor>
+			<name>Dog</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Detection spells, +2 dice for spirits of man.</advantage>
+			<disadvantage>A Dog magician is stubbornly loyal. She can never leave someone behind, betray her comrades, or let another sacrifice themselves in her place without making a successful Willpower + Charisma (3) Test.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Detection</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SR4</source>
+			<page>200</page>
+		</mentor>
+		<mentor>
+			<name>Doom</name>
+			<category>Toxic</category>
+			<advantage>+2 dice to Con Tests.</advantage>
+			<disadvantage>Convinced that the end is nigh, heralds of Doom see no point in maintaining relationships, becoming attached to certain interests, or keeping hold of any possessions that are not of use to their apocalyptic plans. Such magicians must succeed in a Willpower + Charisma (3) Test to take any action that would maintain such unnecessary attachments.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Con</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<choices>
+				<choice>
+					<name>+2 dice for toxic spirits of man</name>
+					<bonus>
+						<selecttext />
+					</bonus>
+				</choice>
+				<choice>
+					<name>+2 dice for toxic guidance spirits</name>
+					<bonus>
+						<selecttext />
+					</bonus>
+				</choice>
+			</choices>
+			<source>SM</source>
+			<page>142</page>
+		</mentor>
+		<mentor>
+			<name>Dragon</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Manipulation spells, +2 dice for Negotiation Tests.</advantage>
+			<disadvantage>Dragon magicians are single-minded and confident to a fault, as well as sore losers. A Dragon magician must make a Willpower + Charisma (3) Test to follow advice or orders that are not their own, or to accept a defeat gracefully.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Negotiation</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<spellcategory>
+					<name>Manipulation</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SM</source>
+			<page>181</page>
+		</mentor>
+		<mentor>
+			<name>Dragonslayer</name>
+			<category>Other</category>
+			<advantage>+2 dice for Combat spells, +2 dice for tests with one Social skill of choice.</advantage>
+			<disadvantage>If a Dragonslayer magician breaks a promise, whether by choice or by accident, she takes –1 die to all actions until she fulfills the promise or otherwise atones for her error.</disadvantage>
+			<bonus>
+				<selectskill skillcategory="Social Active">
+					<val>2</val>
+				</selectskill>
+				<spellcategory>
+					<name>Combat</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SR4</source>
+			<page>201</page>
+		</mentor>
+		<mentor>
+			<name>Eagle</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Detection spells, +2 dice for air spirits.</advantage>
+			<disadvantage>Eagle magicians receive the Allergy (pollutants, mild) negative quality (p. 94; they do not receive bonus BP).</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Detection</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SR4</source>
+			<page>201</page>
+		</mentor>
+		<mentor>
+			<name>Fire-Bringer</name>
+			<category>Other</category>
+			<advantage>+2 dice for Manipulation spells, +2 dice for fire spirits</advantage>
+			<disadvantage>–1 die for Illusion spells.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Illusion</name>
+					<val>-1</val>
+				</spellcategory>
+				<spellcategory>
+					<name>Manipulation</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SR4</source>
+			<page>201</page>
+		</mentor>
+		<mentor>
+			<name>Great Mother</name>
+			<category>Other</category>
+			<advantage>+2 dice to Health spells.</advantage>
+			<disadvantage>–1 die for Combat spells.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Combat</name>
+					<val>-1</val>
+				</spellcategory>
+				<spellcategory>
+					<name>Health</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<choices>
+				<choice>
+					<name>+2 dice for earth spirits</name>
+					<bonus>
+						<specificskill>
+							<name>Counterspelling</name>
+							<bonus>2</bonus>
+						</specificskill>
+					</bonus>
+				</choice>
+				<choice>
+					<name>+2 dice for plant spirits</name>
+					<bonus>
+						<specificskill>
+							<name>Banishing</name>
+							<bonus>2</bonus>
+						</specificskill>
+					</bonus>
+				</choice>
+			</choices>
+			<source>SM</source>
+			<page>182</page>
+		</mentor>
+		<mentor>
+			<name>Gryphon</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Binding Tests, +2 dice for Leadership Tests.</advantage>
+			<disadvantage>Gryphon magicians must have a Charisma attribute of 4 or greater and are expected to be skilled and wise leaders. Gryphon magicians must make a Willpower + Charisma (3) Test to attack anyone other than the most potent adversary in combat, or to accept any assistance in defeating that foe.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Binding</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<specificskill>
+					<name>Leadership</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<source>SM</source>
+			<page>182</page>
+		</mentor>
+		<mentor>
+			<name>Horned Man</name>
+			<category>Other</category>
+			<advantage>+2 dice for Illusion spells.</advantage>
+			<disadvantage>Horned Man magicians know no boundaries for acceptable social behavior. As such, they suffer –1 die on all Social Tests unless they are dealing with those who are just as free-thinking.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Illusion</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<choices>
+				<choice>
+					<name>+2 dice for guidance spirits</name>
+					<bonus>
+						<selecttext />
+					</bonus>
+				</choice>
+				<choice>
+					<name>+2 dice for plant spirits</name>
+					<bonus>
+						<selecttext />
+					</bonus>
+				</choice>
+			</choices>
+			<source>SM</source>
+			<page>182</page>
+		</mentor>
+		<mentor>
+			<name>Horse</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Health spells, +2 dice for beast spirits.</advantage>
+			<disadvantage>Horse magicians do not tolerate confinement or isolation well. If bound to one location, either physically or through coercion, or otherwise cut off from others for an extended period, the Horse magician must make a Willpower + Charisma (3) Test or become irrational and self-destructive for 3 turns minus 1 turn per hit gained. While irrational, the Horse magician will do all they can to escape the confinement.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Health</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SM</source>
+			<page>182</page>
+		</mentor>
+		<mentor>
+			<name>Lion</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Combat spells, +2 dice for Banishing Tests.</advantage>
+			<disadvantage>Lion magicians refuse to back down from challenges. A Lion magician must make a Willpower + Charisma (3) Test to forgive a slight, back down from a fight, or refuse a challenge.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Banishing</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<spellcategory>
+					<name>Combat</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SM</source>
+			<page>182</page>
+		</mentor>
+		<mentor>
+			<name>Moon Maiden</name>
+			<category>Other</category>
+			<advantage>+2 dice to Illusion spells, +2 dice to Negotiation Tests.</advantage>
+			<disadvantage>–1 die for Combat spells.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Negotiation</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<spellcategory>
+					<name>Combat</name>
+					<val>-1</val>
+				</spellcategory>
+				<spellcategory>
+					<name>Illusion</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SR4</source>
+			<page>201</page>
+		</mentor>
+		<mentor>
+			<name>Mountain</name>
+			<category>Other</category>
+			<advantage>+2 dice for Counterspelling Tests, +2 dice for earth spirits.</advantage>
+			<disadvantage>When a Mountain magician makes a plan, she sticks to it. The magician must make a Willpower + Charisma (3) Test to abandon a planned course of action in favor of a new one. If she fails, she will endeavor to continue with her original plan, even if it means going on alone.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Counterspelling</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<source>SR4</source>
+			<page>201</page>
+		</mentor>
+		<mentor>
+			<name>Mutation</name>
+			<category>Toxic</category>
+			<advantage>+2 dice for Health spells.</advantage>
+			<disadvantage>Followers of Mutation despise weakness. If the magician should ever exhibit a weakness or prove inferior to another, he suffers a -1 dice pool modifier to all actions until he somehow compensates for the wekness or overcomes his rival (leading many magicians to acquire new implants or other enhancements).</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Health</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<choices>
+				<choice>
+					<name>+2 dice for toxic spirits of man</name>
+					<bonus>
+						<selecttext />
+					</bonus>
+				</choice>
+				<choice>
+					<name>+2 dice for toxic spirits of beast</name>
+					<bonus>
+						<selecttext />
+					</bonus>
+				</choice>
+			</choices>
+			<source>SM</source>
+			<page>142</page>
+		</mentor>
+		<mentor>
+			<name>Oak</name>
+			<category>Other</category>
+			<advantage>+2 dice for Plant spirits, +2 dice for Arcana Tests.</advantage>
+			<disadvantage>If an Oak magician fails to protect or guard someone or something important to him, he suffers a –1 dice pool modifier on all actions until he atones for the failure.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Arcana</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<source>SM</source>
+			<page>182</page>
+		</mentor>
+		<mentor>
+			<name>Owl</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Perception and Assensing Tests.</advantage>
+			<disadvantage>–1 die for Combat spells.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Perception</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<specificskill>
+					<name>Assensing</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<spellcategory>
+					<name>Combat</name>
+					<val>-1</val>
+				</spellcategory>
+			</bonus>
+			<choices>
+				<choice>
+					<name>+2 dice for spirits of man</name>
+					<bonus>
+						<specificskill>
+							<name>Counterspelling</name>
+							<bonus>2</bonus>
+						</specificskill>
+					</bonus>
+				</choice>
+				<choice>
+					<name>+2 dice for guidance spirits</name>
+					<bonus>
+						<specificskill>
+							<name>Banishing</name>
+							<bonus>2</bonus>
+						</specificskill>
+					</bonus>
+				</choice>
+			</choices>
+			<source>SM</source>
+			<page>182</page>
+		</mentor>
+		<mentor>
+			<name>Pestilent Rat</name>
+			<category>Toxic</category>
+			<advantage>+2 dice to resist pathogens and toxins.</advantage>
+			<disadvantage>A Pestilent Rat magician must make a Willpower + Charisma (3) Test to not immediately flee or seek cover when caught in a combat situation. If there is nowhere to flee, she is forced to fight.</disadvantage>
+			<choices>
+				<choice>
+					<name>+2 dice for toxic spirits of man</name>
+					<bonus>
+						<selecttext />
+					</bonus>
+				</choice>
+				<choice>
+					<name>+2 dice for toxic spirits of beast</name>
+					<bonus>
+						<selecttext />
+					</bonus>
+				</choice>
+			</choices>
+			<source>SM</source>
+			<page>143</page>
+		</mentor>
+		<mentor>
+			<name>Phoenix</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Health spells, +2 dice for fire spirits.</advantage>
+			<disadvantage>–1 die for Binding Tests.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Binding</name>
+					<bonus>-1</bonus>
+				</specificskill>
+				<spellcategory>
+					<name>Health</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SM</source>
+			<page>183</page>
+		</mentor>
+		<mentor>
+			<name>Pollution</name>
+			<category>Toxic</category>
+			<advantage>+2 dice to resist pathogens and toxins.</advantage>
+			<disadvantage>A Pollution magician must take a Willpower + Charisma (3) Test to restrain himself from despoiling or tainting any pristine natural environment in some way.</disadvantage>
+			<choices>
+				<choice>
+					<name>+2 dice for toxic water spirits</name>
+					<bonus>
+						<selecttext />
+					</bonus>
+				</choice>
+				<choice>
+					<name>+2 dice for toxic air spirits</name>
+					<bonus>
+						<selecttext />
+					</bonus>
+				</choice>
+				<choice>
+					<name>+2 dice for toxic earth spirits</name>
+					<bonus>
+						<selecttext />
+					</bonus>
+				</choice>
+			</choices>
+			<source>SM</source>
+			<page>143</page>
+		</mentor>
+		<mentor>
+			<name>Rabid Dog</name>
+			<category>Toxic</category>
+			<advantage>+2 to Detection spells.</advantage>
+			<disadvantage>Rabid Dog magicians are bloodthirsty and will take every opportunity to twist the knife or prolong a victim's pain. They must succeed in a Willpower + Strength (3) Test to leave an unfinished victim, to end a victim's life quickly or without pain, or to break off from a predatory hunt.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Detection</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<choices>
+				<choice>
+					<name>+2 dice for toxic beast spirits</name>
+					<bonus>
+						<selecttext />
+					</bonus>
+				</choice>
+				<choice>
+					<name>+2 dice for toxic guardian spirits</name>
+					<bonus>
+						<selecttext />
+					</bonus>
+				</choice>
+			</choices>
+			<source>SM</source>
+			<page>143</page>
+		</mentor>
+		<mentor>
+			<name>Radiation</name>
+			<category>Toxic</category>
+			<advantage>+2 dice for nuclear/toxic fire spirits, +2 dice to resist pathogens, toxins, and radiation.</advantage>
+			<disadvantage>-1 dice for Health spells.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Health</name>
+					<val>-1</val>
+				</spellcategory>
+			</bonus>
+			<source>SM</source>
+			<page>143</page>
+		</mentor>
+		<mentor>
+			<name>Rat</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Infiltration Tests, +2 dice for resisting disease and poisons</advantage>
+			<disadvantage>A Rat magician must make a Willpower + Charisma (3) Test to not immediately flee or seek cover whenever caught in a combat situation. If there is nowhere to flee, then she is forced to fight.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Infiltration</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<source>SR4</source>
+			<page>201</page>
+		</mentor>
+		<mentor>
+			<name>Raven</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Manipulation spells, +2 dice for air spirits.</advantage>
+			<disadvantage>A Raven magician must make a Willpower + Charisma (3) Test to avoid exploiting someone else's misfortune to her own advantage.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Manipulation</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SR4</source>
+			<page>201</page>
+		</mentor>
+		<mentor>
+			<name>Sea</name>
+			<category>Other</category>
+			<advantage>+2 dice for water spirits, +2 dice for Swimming Tests.</advantage>
+			<disadvantage>–1 die on Negotiations Tests.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Swimming</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<specificskill>
+					<name>Negotiation</name>
+					<bonus>-1</bonus>
+				</specificskill>
+			</bonus>
+			<source>SR4</source>
+			<page>201</page>
+		</mentor>
+		<mentor>
+			<name>Seductress</name>
+			<category>Other</category>
+			<advantage>+2 dice for Illusion spells, +2 dice for Con Tests.</advantage>
+			<disadvantage>Seductresses must succeed in a Willpower + Charisma (3) Test to avoid pursuing a vice or indulgence (drugs, BTLs, sex, and so on) when it is made available.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Con</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<spellcategory>
+					<name>Illusion</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SR4</source>
+			<page>201</page>
+		</mentor>
+		<mentor>
+			<name>Shark</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Combat spells, +2 dice for water spirits.</advantage>
+			<disadvantage>Shark magicians can go berserk in combat (similar to Bear magicians) when they are wounded or when they wound an opponent (p. 200). A berserk Shark character may continue to attack the body of her last victim instead of moving on to attack a new target, if the player chooses.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Combat</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SR4</source>
+			<page>201</page>
+		</mentor>
+		<mentor>
+			<name>Sky Father</name>
+			<category>Other</category>
+			<advantage>+2 dice for Detection and Manipulation spells.</advantage>
+			<disadvantage>Pride is the greatest weakness for followers of Sky Father. If insulted in any way, they must make a Willpower + Charisma (3) Test or they will aggressively confront or retaliate against the source of the slight. Sky Father magicians are also vulnerable to flattery, and suffer a –1 dice pool modifier for resisting Con attempts.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Detection</name>
+					<val>2</val>
+				</spellcategory>
+				<spellcategory>
+					<name>Manipulation</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SM</source>
+			<page>183</page>
+		</mentor>
+		<mentor>
+			<name>Spider</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Detection and Illusion spells.</advantage>
+			<disadvantage>Spider magicians are not quick on their feet. They must make a Willpower + Charisma (3) Test to make any quick decisions in situations they have not planned for.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Detection</name>
+					<val>2</val>
+				</spellcategory>
+				<spellcategory>
+					<name>Illusion</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SM</source>
+			<page>183</page>
+		</mentor>
+		<mentor>
+			<name>Snake</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Detection spells, +2 to Binding Tests.</advantage>
+			<disadvantage>–1 die for Combat spells.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Binding</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<spellcategory>
+					<name>Combat</name>
+					<val>-1</val>
+				</spellcategory>
+				<spellcategory>
+					<name>Detection</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SR4</source>
+			<page>201</page>
+		</mentor>
+		<mentor>
+			<name>Sun</name>
+			<category>Other</category>
+			<advantage />
+			<disadvantage>Sun expects perfection from his followers, or at least a harsh lesson for them if they fail. Sun magicians must spend 2 points of Edge to negate a glitch or downgrade a critical glitch.</disadvantage>
+			<choices>
+				<choice>
+					<name>+2 dice for fire spirits</name>
+					<bonus>
+						<selecttext />
+					</bonus>
+				</choice>
+				<choice>
+					<name>+2 dice for guardian spirits</name>
+					<bonus>
+						<selecttext />
+					</bonus>
+				</choice>
+				<choice set="2">
+					<name>+2 dice for Combat Spells</name>
+					<bonus>
+						<spellcategory>
+							<name>Combat</name>
+							<val>2</val>
+						</spellcategory>
+					</bonus>
+				</choice>
+				<choice set="2">
+					<name>+2 dice for Healing Spells</name>
+					<bonus>
+						<selecttext />
+					</bonus>
+				</choice>
+			</choices>
+			<source>SM</source>
+			<page>183</page>
+		</mentor>
+		<mentor>
+			<name>Thunderbird</name>
+			<category>Animal</category>
+			<advantage>+2 dice for air spirits, +2 dice for Intimidation Tests</advantage>
+			<disadvantage>A Thunderbird magician must succeed in a Willpower + Charisma (3) Test to avoid responding to an insult in kind.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Intimidation</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<source>SR4</source>
+			<page>201</page>
+		</mentor>
+		<mentor>
+			<name>Trickster</name>
+			<category>Other</category>
+			<advantage>+2 dice for Illusion spells, +2 dice for Con Tests.</advantage>
+			<disadvantage>A Trickster character must make a Willpower + Charisma (3) Test to resist an opportunity to pull a clever trick or prank, even if it is to the detriment of herself or her friends.</disadvantage>
+			<bonus>
+				<specificskill>
+					<name>Con</name>
+					<bonus>2</bonus>
+				</specificskill>
+				<spellcategory>
+					<name>Illusion</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SR4</source>
+			<page>201</page>
+		</mentor>
+		<mentor>
+			<name>Wise Warrior</name>
+			<category>Other</category>
+			<advantage>+2 dice for Combat and Detection spells</advantage>
+			<disadvantage>–1 die to all tests if acting dishonorably, until the character atones for her action.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Combat</name>
+					<val>2</val>
+				</spellcategory>
+				<spellcategory>
+					<name>Detection</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SR4</source>
+			<page>201</page>
+		</mentor>
+		<mentor>
+			<name>Wolf</name>
+			<category>Animal</category>
+			<advantage>+2 dice for Combat spells, +2 dice for beast spirits.</advantage>
+			<disadvantage>A Wolf magician must succeed in a Willpower + Charisma (3) Test to retreat from a fight.</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Combat</name>
+					<val>2</val>
+				</spellcategory>
+			</bonus>
+			<source>SR4</source>
+			<page>201</page>
+		</mentor>
+		<mentor>
+			<name>The King</name>
+			<category>Other</category>
+			<advantage>+1 dice for Illusion spells, +1 dice for Health spells, +1 dice for Performance Tests.</advantage>
+			<disadvantage>–1 dice to Combat spells, –10 percent to all income (they always tithe 10 percent to their local church).</disadvantage>
+			<bonus>
+				<spellcategory>
+					<name>Illusion</name>
+					<val>1</val>
+				</spellcategory>
+				<spellcategory>
+					<name>Health</name>
+					<val>1</val>
+				</spellcategory>
+				<spellcategory>
+					<name>Combat</name>
+					<val>-1</val>
+				</spellcategory>
+			</bonus>
+			<source>ART</source>
+			<page>71</page>
+		</mentor>
+	</mentors>
+</chummer>

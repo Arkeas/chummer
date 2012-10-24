@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chummer>
+	<version>-925</version>
+	<martialarts>
+		<martialart>
+			<name>Aikido</name>
+			<advantages>
+				<advantage>
+					<name>+1 die for Full Dodge</name>
+				</advantage>
+				<advantage>
+					<name>+1 die for Full Parry</name>
+				</advantage>
+				<advantage>
+					<name>+1 die of Subduing</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Attacks to Knockdown</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>156</page>
+		</martialart>
+		<martialart>
+			<name>Judo</name>
+			<advantages>
+				<advantage>
+					<name>+1 die for Full Dodge</name>
+				</advantage>
+				<advantage>
+					<name>+1 die for Full Parry</name>
+				</advantage>
+				<advantage>
+					<name>+1 die of Subduing</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Attacks to Knockdown</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>156</page>
+		</martialart>
+		<martialart>
+			<name>Jujutsu</name>
+			<advantages>
+				<advantage>
+					<name>+1 die for Full Dodge</name>
+				</advantage>
+				<advantage>
+					<name>+1 die for Full Parry</name>
+				</advantage>
+				<advantage>
+					<name>+1 die of Subduing</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Attacks to Knockdown</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>156</page>
+		</martialart>
+		<martialart>
+			<name>Arnis De Mano</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on Called Shots to disarm</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV on Club attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Clubs</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>+1 DV on Blades attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Blades</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>inflict dmage when making Called Shot to disarm</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Escrima</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on Called Shots to disarm</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV on Club attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Clubs</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>+1 DV on Blades attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Blades</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>inflict dmage when making Called Shot to disarm</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Kali</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on Called Shots to disarm</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV on Club attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Clubs</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>+1 DV on Blades attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Blades</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>inflict dmage when making Called Shot to disarm</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Boxing</name>
+			<advantages>
+				<advantage>
+					<name>+1 DV on Unarmed Combat attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Unarmed</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>+1 on Defense Tests again unarmed attacks</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Musti Yudha</name>
+			<advantages>
+				<advantage>
+					<name>+1 DV on Unarmed Combat attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Unarmed</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>+1 on Defense Tests again unarmed attacks</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Rince an Bhata Uisce Bheatha</name>
+			<advantages>
+				<advantage>
+					<name>+1 DV on Unarmed Combat attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Unarmed</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>+1 on Defense Tests again unarmed attacks</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Capoeira</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on melee dodge Defense Tests</name>
+				</advantage>
+				<advantage>
+					<name>+1 die for Gymnastics Dodge</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Attacks to Knockdown</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Hopak</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on melee dodge Defense Tests</name>
+				</advantage>
+				<advantage>
+					<name>+1 die for Gymnastics Dodge</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Attacks to Knockdown</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Kalari-payattu</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on melee dodge Defense Tests</name>
+				</advantage>
+				<advantage>
+					<name>+1 die for Gymnastics Dodge</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Attacks to Knockdown</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Carromeleg</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on Surprise Tests when initiating an attack</name>
+				</advantage>
+				<advantage>
+					<name>+1 die for Receiving a Charge</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Interception attacks</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Firefight</name>
+			<advantages>
+				<advantage>
+					<name>Reduce ranged combat &apos;attacker in melee combat&apos; modifier by 1</name>
+				</advantage>
+				<advantage>
+					<name>+1 die to Defense Tests to dodge Ranged Attacks if engaged in melee</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on melee dodge Defense Test</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Karate</name>
+			<advantages>
+				<advantage>
+					<name>+1 DV on Unarmed Combat attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Unarmed</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>+1 die for Full Parry</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on melee block Defense Tests</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Kenpo</name>
+			<advantages>
+				<advantage>
+					<name>+1 DV on Unarmed Combat attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Unarmed</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>+1 die for Full Parry</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on melee block Defense Tests</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Soo Bahk Do</name>
+			<advantages>
+				<advantage>
+					<name>+1 DV on Unarmed Combat attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Unarmed</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>+1 die for Full Parry</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on melee block Defense Tests</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Kiai</name>
+			<advantages>
+				<advantage>
+					<name>+1 DV on Attacks of Will</name>
+				</advantage>
+				<advantage>
+					<name>+1 on Intimidation Tests</name>
+					<bonus>
+						<specificskill>
+							<name>Intimidation</name>
+							<bonus>1</bonus>
+						</specificskill>
+					</bonus>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Tai Chi Ch&apos;uan</name>
+			<advantages>
+				<advantage>
+					<name>+1 DV on Attacks of Will</name>
+				</advantage>
+				<advantage>
+					<name>+1 on Intimidation Tests</name>
+					<bonus>
+						<specificskill>
+							<name>Intimidation</name>
+							<bonus>1</bonus>
+						</specificskill>
+					</bonus>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Krav Maga</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on Called Shots to disarm</name>
+				</advantage>
+				<advantage>
+					<name>Take Aim as Free Action</name>
+				</advantage>
+				<advantage>
+					<name>Ready Weapon as Free Action</name>
+				</advantage>
+				<advantage>
+					<name>Reduce ranged combat &apos;attacker in melee combat&apos; modifier by 1</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Hasidut</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on Called Shots to disarm</name>
+				</advantage>
+				<advantage>
+					<name>Take Aim as Free Action</name>
+				</advantage>
+				<advantage>
+					<name>Ready Weapon as Free Action</name>
+				</advantage>
+				<advantage>
+					<name>Reduce ranged combat &apos;attacker in melee combat&apos; modifier by 1</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>ROSS</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on Called Shots to disarm</name>
+				</advantage>
+				<advantage>
+					<name>Take Aim as Free Action</name>
+				</advantage>
+				<advantage>
+					<name>Ready Weapon as Free Action</name>
+				</advantage>
+				<advantage>
+					<name>Reduce ranged combat &apos;attacker in melee combat&apos; modifier by 1</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Kung Fu</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on block melee Defense Tests</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on dodge melee Defense Tests</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on parry melee Defense Tests</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV on Unarmed Combat attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Unarmed</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Hwarang-do</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on block melee Defense Tests</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on dodge melee Defense Tests</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on parry melee Defense Tests</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV on Unarmed Combat attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Unarmed</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Wushu</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on block melee Defense Tests</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on dodge melee Defense Tests</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on parry melee Defense Tests</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV on Unarmed Combat attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Unarmed</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>157</page>
+		</martialart>
+		<martialart>
+			<name>Muay Thai</name>
+			<advantages>
+				<advantage>
+					<name>+1 DV on Unarmed Combat attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Unarmed</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>+1 on Defense Tests against unarmed attacks</name>
+				</advantage>
+				<advantage>
+					<name>+1 Full Parry</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Kickboxing</name>
+			<advantages>
+				<advantage>
+					<name>+1 DV on Unarmed Combat attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Unarmed</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>+1 on Defense Tests against unarmed attacks</name>
+				</advantage>
+				<advantage>
+					<name>+1 Full Parry</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Savate</name>
+			<advantages>
+				<advantage>
+					<name>+1 DV on Unarmed Combat attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Unarmed</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>+1 on Defense Tests against unarmed attacks</name>
+				</advantage>
+				<advantage>
+					<name>+1 Full Parry</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Ninjutsu</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on Surprise Tests when initiating an attack</name>
+				</advantage>
+				<advantage>
+					<name>+1 die for Gymnastics Dodge</name>
+				</advantage>
+				<advantage>
+					<name>+reduce Visibility modifiers in melee combat by 1</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Infiltration Tests</name>
+					<bonus>
+						<specificskill>
+							<name>Infiltration</name>
+							<bonus>1</bonus>
+						</specificskill>
+					</bonus>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Pentjak-Silat</name>
+			<advantages>
+				<advantage>
+					<name>+1 die when using Called Shot to increase attack damage</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV for Astral Combat attacks</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Attacks to Knockdown</name>
+				</advantage>
+				<advantage>
+					<name>+1 Full Parry</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Bersilat</name>
+			<advantages>
+				<advantage>
+					<name>+1 die when using Called Shot to increase attack damage</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV for Astral Combat attacks</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Attacks to Knockdown</name>
+				</advantage>
+				<advantage>
+					<name>+1 Full Parry</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Gatka</name>
+			<advantages>
+				<advantage>
+					<name>+1 die when using Called Shot to increase attack damage</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV for Astral Combat attacks</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Attacks to Knockdown</name>
+				</advantage>
+				<advantage>
+					<name>+1 Full Parry</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Sangre y Acero</name>
+			<advantages>
+				<advantage>
+					<name>+1 die for Exotic Melee Weapon attacks using a cyber-implant in an unusual location</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV on Blades attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Blades</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>Reduce ranged combat &apos;attacker in melee combat&apos; modifier by 1</name>
+				</advantage>
+				<advantage>
+					<name>Reduce an opponent&apos;s &apos;friends in melee&apos; bonus by 1</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Eztlitzli</name>
+			<advantages>
+				<advantage>
+					<name>+1 die for Exotic Melee Weapon attacks using a cyber-implant in an unusual location</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV on Blades attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Blades</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>Reduce ranged combat &apos;attacker in melee combat&apos; modifier by 1</name>
+				</advantage>
+				<advantage>
+					<name>Reduce an opponent&apos;s &apos;friends in melee&apos; bonus by 1</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Ars Cybernetica</name>
+			<advantages>
+				<advantage>
+					<name>+1 die for Exotic Melee Weapon attacks using a cyber-implant in an unusual location</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV on Blades attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Blades</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>Reduce ranged combat &apos;attacker in melee combat&apos; modifier by 1</name>
+				</advantage>
+				<advantage>
+					<name>Reduce an opponent&apos;s &apos;friends in melee&apos; bonus by 1</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Tae Kwon Do</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on Charging attacks</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV on Unarmed Combat attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Unarmed</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>+1 die on using Unarmed Combat when attacking multiple targets</name>
+				</advantage>
+				<advantage>
+					<name>+1 on Attacks to Knockdown</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Hapkido</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on Charging attacks</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV on Unarmed Combat attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Unarmed</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>+1 die on using Unarmed Combat when attacking multiple targets</name>
+				</advantage>
+				<advantage>
+					<name>+1 on Attacks to Knockdown</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Savate (Alternate)</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on Charging attacks</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV on Unarmed Combat attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Unarmed</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>+1 die on using Unarmed Combat when attacking multiple targets</name>
+				</advantage>
+				<advantage>
+					<name>+1 on Attacks to Knockdown</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Wildcat</name>
+			<advantages>
+				<advantage>
+					<name>+1 DV on Unarmed Combat attacks</name>
+					<bonus>
+						<weaponcategorydv>
+							<name>Unarmed</name>
+							<bonus>1</bonus>
+						</weaponcategorydv>
+					</bonus>
+				</advantage>
+				<advantage>
+					<name>+1 die on Called Shots to target an unprotected area</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Called Shots to increase damage</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Subduing</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Wrestling</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on Attacks to Knockdown</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Subduing</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV when inflicting damage to a subdued opponent</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Glima</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on Attacks to Knockdown</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Subduing</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV when inflicting damage to a subdued opponent</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Sumo</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on Attacks to Knockdown</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Subduing</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV when inflicting damage to a subdued opponent</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+		<martialart>
+			<name>Brazilian Jiu-Jitsu</name>
+			<advantages>
+				<advantage>
+					<name>+1 die on Attacks to Knockdown</name>
+				</advantage>
+				<advantage>
+					<name>+1 die on Subduing</name>
+				</advantage>
+				<advantage>
+					<name>+1 DV when inflicting damage to a subdued opponent</name>
+				</advantage>
+			</advantages>
+			<source>AR</source>
+			<page>158</page>
+		</martialart>
+	</martialarts>
+	<maneuvers>
+		<maneuver>
+			<name>Blind Fighting</name>
+			<source>AR</source>
+			<page>158</page>
+		</maneuver>
+		<maneuver>
+			<name>Break Weapon</name>
+			<source>AR</source>
+			<page>159</page>
+		</maneuver>
+		<maneuver>
+			<name>Clinch</name>
+			<source>AR</source>
+			<page>159</page>
+		</maneuver>
+		<maneuver>
+			<name>Disarm</name>
+			<source>AR</source>
+			<page>159</page>
+		</maneuver>
+		<maneuver>
+			<name>Disorient</name>
+			<source>AR</source>
+			<page>159</page>
+		</maneuver>
+		<maneuver>
+			<name>Evasion</name>
+			<source>AR</source>
+			<page>159</page>
+		</maneuver>
+		<maneuver>
+			<name>Finishing Move</name>
+			<source>AR</source>
+			<page>159</page>
+		</maneuver>
+		<maneuver>
+			<name>Focus Will</name>
+			<source>AR</source>
+			<page>160</page>
+		</maneuver>
+		<maneuver>
+			<name>Full Offense</name>
+			<source>AR</source>
+			<page>160</page>
+		</maneuver>
+		<maneuver>
+			<name>Ground Fighting</name>
+			<source>AR</source>
+			<page>160</page>
+		</maneuver>
+		<maneuver>
+			<name>Herding</name>
+			<source>AR</source>
+			<page>160</page>
+		</maneuver>
+		<maneuver>
+			<name>Iaijutsu</name>
+			<source>AR</source>
+			<page>160</page>
+		</maneuver>
+		<maneuver>
+			<name>Kick Attack</name>
+			<source>AR</source>
+			<page>160</page>
+		</maneuver>
+		<maneuver>
+			<name>Multi-Strike</name>
+			<source>AR</source>
+			<page>160</page>
+		</maneuver>
+		<maneuver>
+			<name>Off-Hand Training</name>
+			<source>AR</source>
+			<page>160</page>
+		</maneuver>
+		<maneuver>
+			<name>Riposte</name>
+			<source>AR</source>
+			<page>160</page>
+		</maneuver>
+		<maneuver>
+			<name>Set-Up</name>
+			<source>AR</source>
+			<page>160</page>
+		</maneuver>
+		<maneuver>
+			<name>Sweep</name>
+			<source>AR</source>
+			<page>160</page>
+		</maneuver>
+		<maneuver>
+			<name>Throw</name>
+			<source>AR</source>
+			<page>160</page>
+		</maneuver>
+		<maneuver>
+			<name>Two Weapon Style</name>
+			<source>AR</source>
+			<page>160</page>
+		</maneuver>
+		<maneuver>
+			<name>Vicious Blow</name>
+			<source>AR</source>
+			<page>160</page>
+		</maneuver>
+		<maneuver>
+			<name>Watchful Guard</name>
+			<source>AR</source>
+			<page>160</page>
+		</maneuver>
+	</maneuvers>
+</chummer>

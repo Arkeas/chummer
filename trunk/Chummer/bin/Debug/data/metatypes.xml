@@ -1,0 +1,2954 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chummer>
+	<version>-916</version>
+	<categories>
+		<category>Metahuman</category>
+		<category>Sapient Critter</category>
+		<category>Shapeshifter</category>
+		<category>Special</category>
+	</categories>
+	<metatypes>
+		<metatype>
+			<name>Human</name>
+			<category>Metahuman</category>
+			<bp>0</bp>
+			<bodmin>1</bodmin>
+			<bodmax>6</bodmax>
+			<bodaug>9</bodaug>
+			<agimin>1</agimin>
+			<agimax>6</agimax>
+			<agiaug>9</agiaug>
+			<reamin>1</reamin>
+			<reamax>6</reamax>
+			<reaaug>9</reaaug>
+			<strmin>1</strmin>
+			<strmax>6</strmax>
+			<straug>9</straug>
+			<chamin>1</chamin>
+			<chamax>6</chamax>
+			<chaaug>9</chaaug>
+			<intmin>1</intmin>
+			<intmax>6</intmax>
+			<intaug>9</intaug>
+			<logmin>1</logmin>
+			<logmax>6</logmax>
+			<logaug>9</logaug>
+			<wilmin>1</wilmin>
+			<wilmax>6</wilmax>
+			<wilaug>9</wilaug>
+			<inimin>2</inimin>
+			<inimax>12</inimax>
+			<iniaug>18</iniaug>
+			<edgmin>2</edgmin>
+			<edgmax>7</edgmax>
+			<edgaug>7</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>10/25, Swim 5</movement>
+			<source>SR4</source>
+			<page>66</page>
+			<metavariants>
+				<metavariant>
+					<name>Nartaki</name>
+					<bp>25</bp>
+					<qualities>
+						<positive>
+							<quality>Shiva Arms</quality>
+						</positive>
+						<negative>
+							<quality>Distinctive Style</quality>
+							<quality>Striking Skin Pigmentation</quality>
+						</negative>
+					</qualities>
+					<source>RC</source>
+					<page>49</page>
+				</metavariant>
+			</metavariants>
+		</metatype>
+		<metatype>
+			<name>Ork</name>
+			<category>Metahuman</category>
+			<bp>20</bp>
+			<bodmin>4</bodmin>
+			<bodmax>9</bodmax>
+			<bodaug>13</bodaug>
+			<agimin>1</agimin>
+			<agimax>6</agimax>
+			<agiaug>9</agiaug>
+			<reamin>1</reamin>
+			<reamax>6</reamax>
+			<reaaug>9</reaaug>
+			<strmin>3</strmin>
+			<strmax>8</strmax>
+			<straug>12</straug>
+			<chamin>1</chamin>
+			<chamax>5</chamax>
+			<chaaug>7</chaaug>
+			<intmin>1</intmin>
+			<intmax>6</intmax>
+			<intaug>9</intaug>
+			<logmin>1</logmin>
+			<logmax>5</logmax>
+			<logaug>7</logaug>
+			<wilmin>1</wilmin>
+			<wilmax>6</wilmax>
+			<wilaug>9</wilaug>
+			<inimin>2</inimin>
+			<inimax>12</inimax>
+			<iniaug>18</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>6</edgmax>
+			<edgaug>6</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>10/25, Swim 5</movement>
+			<qualities>
+				<positive>
+					<quality>Low-Light Vision</quality>
+				</positive>
+			</qualities>
+			<bonus />
+			<source>SR4</source>
+			<page>66</page>
+			<metavariants>
+				<metavariant>
+					<name>Hobgoblin</name>
+					<bp>20</bp>
+					<qualities>
+						<positive>
+							<quality>Fangs</quality>
+							<quality>Low-Light Vision</quality>
+						</positive>
+						<negative>
+							<quality>Distinctive Style</quality>
+							<quality>Poor Self Control (Vindictive)</quality>
+						</negative>
+					</qualities>
+					<source>RC</source>
+					<page>49</page>
+				</metavariant>
+				<metavariant>
+					<name>Ogre</name>
+					<bp>20</bp>
+					<qualities>
+						<positive>
+							<quality>Low-Light Vision</quality>
+							<quality>Ogre Stomach</quality>
+						</positive>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<source>RC</source>
+					<page>50</page>
+				</metavariant>
+				<metavariant>
+					<name>Oni</name>
+					<bp>25</bp>
+					<qualities>
+						<positive>
+							<quality>Low-Light Vision</quality>
+						</positive>
+						<negative>
+							<quality>Distinctive Style</quality>
+							<quality>Striking Skin Pigmentation</quality>
+						</negative>
+					</qualities>
+					<source>RC</source>
+					<page>51</page>
+				</metavariant>
+				<metavariant>
+					<name>Satyr</name>
+					<bp>25</bp>
+					<qualities>
+						<positive>
+							<quality>Low-Light Vision</quality>
+							<quality>Satyr Legs</quality>
+						</positive>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<source>RC</source>
+					<page>51</page>
+				</metavariant>
+			</metavariants>
+		</metatype>
+		<metatype>
+			<name>Dwarf</name>
+			<category>Metahuman</category>
+			<bp>25</bp>
+			<bodmin>2</bodmin>
+			<bodmax>7</bodmax>
+			<bodaug>10</bodaug>
+			<agimin>1</agimin>
+			<agimax>6</agimax>
+			<agiaug>9</agiaug>
+			<reamin>1</reamin>
+			<reamax>5</reamax>
+			<reaaug>7</reaaug>
+			<strmin>3</strmin>
+			<strmax>8</strmax>
+			<straug>12</straug>
+			<chamin>1</chamin>
+			<chamax>6</chamax>
+			<chaaug>9</chaaug>
+			<intmin>1</intmin>
+			<intmax>6</intmax>
+			<intaug>9</intaug>
+			<logmin>1</logmin>
+			<logmax>6</logmax>
+			<logaug>9</logaug>
+			<wilmin>2</wilmin>
+			<wilmax>7</wilmax>
+			<wilaug>10</wilaug>
+			<inimin>2</inimin>
+			<inimax>11</inimax>
+			<iniaug>16</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>6</edgmax>
+			<edgaug>6</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>8/20, Swim 4</movement>
+			<qualities>
+				<positive>
+					<quality>Thermographic Vision</quality>
+				</positive>
+			</qualities>
+			<bonus />
+			<source>SR4</source>
+			<page>66</page>
+			<metavariants>
+				<metavariant>
+					<name>Gnome</name>
+					<bp>25</bp>
+					<qualities>
+						<positive>
+							<quality>Arcane Arrester</quality>
+							<quality>Thermographic Vision</quality>
+						</positive>
+						<negative>
+							<quality>Distinctive Style</quality>
+							<quality>Neoteny</quality>
+						</negative>
+					</qualities>
+					<source>RC</source>
+					<page>54</page>
+				</metavariant>
+				<metavariant>
+					<name>Haruman</name>
+					<bp>50</bp>
+					<qualities>
+						<positive>
+							<quality>Low-Light Vision</quality>
+							<quality select="AGI">Metagenetic Improvement</quality>
+							<quality>Monkey Paws</quality>
+							<quality>Functional Tail (Prehensile)</quality>
+						</positive>
+						<negative>
+							<quality>Distinctive Style</quality>
+							<quality>Unusual Hair</quality>
+						</negative>
+					</qualities>
+					<source>RC</source>
+					<page>55</page>
+				</metavariant>
+				<metavariant>
+					<name>Koborokuru</name>
+					<bp>35</bp>
+					<qualities>
+						<positive>
+							<quality>Celerity</quality>
+							<quality>Resistance to Pathogens and Toxins</quality>
+							<quality>Thermographic Vision</quality>
+						</positive>
+						<negative>
+							<quality>Distinctive Style</quality>
+							<quality>Unusual Hair</quality>
+						</negative>
+					</qualities>
+					<source>RC</source>
+					<page>53</page>
+				</metavariant>
+				<metavariant>
+					<name>Menehune</name>
+					<bp>25</bp>
+					<qualities>
+						<positive>
+							<quality>Resistance to Pathogens and Toxins</quality>
+							<quality>Thermographic Vision</quality>
+							<quality>Underwater Vision</quality>
+						</positive>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<source>RC</source>
+					<page>54</page>
+				</metavariant>
+			</metavariants>
+		</metatype>
+		<metatype>
+			<name>Elf</name>
+			<category>Metahuman</category>
+			<bp>30</bp>
+			<bodmin>1</bodmin>
+			<bodmax>6</bodmax>
+			<bodaug>9</bodaug>
+			<agimin>2</agimin>
+			<agimax>7</agimax>
+			<agiaug>10</agiaug>
+			<reamin>1</reamin>
+			<reamax>6</reamax>
+			<reaaug>9</reaaug>
+			<strmin>1</strmin>
+			<strmax>6</strmax>
+			<straug>9</straug>
+			<chamin>3</chamin>
+			<chamax>8</chamax>
+			<chaaug>12</chaaug>
+			<intmin>1</intmin>
+			<intmax>6</intmax>
+			<intaug>9</intaug>
+			<logmin>1</logmin>
+			<logmax>6</logmax>
+			<logaug>9</logaug>
+			<wilmin>1</wilmin>
+			<wilmax>6</wilmax>
+			<wilaug>9</wilaug>
+			<inimin>2</inimin>
+			<inimax>12</inimax>
+			<iniaug>18</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>6</edgmax>
+			<edgaug>6</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>10/25, Swim 6</movement>
+			<qualities>
+				<positive>
+					<quality>Low-Light Vision</quality>
+				</positive>
+			</qualities>
+			<bonus />
+			<source>SR4</source>
+			<page>66</page>
+			<metavariants>
+				<metavariant>
+					<name>Dryad</name>
+					<bp>45</bp>
+					<qualities>
+						<positive>
+							<quality>Glamour</quality>
+							<quality>Low-Light Vision</quality>
+						</positive>
+						<negative>
+							<quality>Distinctive Style</quality>
+							<quality>Symbiosis</quality>
+						</negative>
+					</qualities>
+					<source>RC</source>
+					<page>51</page>
+				</metavariant>
+				<metavariant>
+					<name>Night One</name>
+					<bp>35</bp>
+					<qualities>
+						<positive>
+							<quality>Keen-Eared</quality>
+							<quality>Low-Light Vision</quality>
+						</positive>
+						<negative>
+							<quality select="Sunlight">Allergy (Common, Mild)</quality>
+							<quality>Distinctive Style</quality>
+							<quality>Nocturnal</quality>
+							<quality>Unusual Hair</quality>
+						</negative>						
+					</qualities>
+					<source>RC</source>
+					<page>52</page>
+				</metavariant>
+				<metavariant>
+					<name>Wakyambi</name>
+					<bp>35</bp>
+					<qualities>
+						<positive>
+							<quality>Celerity</quality>
+							<quality>Elongated Limbs</quality>
+							<quality>Low-Light Vision</quality>
+						</positive>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<source>RC</source>
+					<page>52</page>
+				</metavariant>
+				<metavariant>
+					<name>Xapiri Thëpë</name>
+					<bp>40</bp>
+					<qualities>
+						<positive>
+							<quality>Low-Light Vision</quality>
+							<quality>Photometabolism</quality>
+						</positive>
+						<negative>
+							<quality>Allergy (Uncommon, Mild)</quality>
+							<quality>Allergy (Uncommon, Mild)</quality>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<source>RC</source>
+					<page>53</page>
+				</metavariant>
+			</metavariants>
+		</metatype>
+		<metatype>
+			<name>Troll</name>
+			<category>Metahuman</category>
+			<bp>40</bp>
+			<bodmin>5</bodmin>
+			<bodmax>10</bodmax>
+			<bodaug>15</bodaug>
+			<agimin>1</agimin>
+			<agimax>5</agimax>
+			<agiaug>7</agiaug>
+			<reamin>1</reamin>
+			<reamax>6</reamax>
+			<reaaug>9</reaaug>
+			<strmin>5</strmin>
+			<strmax>10</strmax>
+			<straug>15</straug>
+			<chamin>1</chamin>
+			<chamax>4</chamax>
+			<chaaug>6</chaaug>
+			<intmin>1</intmin>
+			<intmax>5</intmax>
+			<intaug>7</intaug>
+			<logmin>1</logmin>
+			<logmax>5</logmax>
+			<logaug>7</logaug>
+			<wilmin>1</wilmin>
+			<wilmax>6</wilmax>
+			<wilaug>9</wilaug>
+			<inimin>2</inimin>
+			<inimax>11</inimax>
+			<iniaug>16</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>6</edgmax>
+			<edgaug>6</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>15/35, Swim 7</movement>
+			<qualities>
+				<positive>
+					<quality>Thermographic Vision</quality>
+				</positive>
+			</qualities>
+			<bonus>
+				<armor>
+					<b>1</b>
+					<i>1</i>
+				</armor>
+				<reach>1</reach>
+			</bonus>
+			<source>SR4</source>
+			<page>66</page>
+			<metavariants>
+				<metavariant>
+					<name>Cyclops</name>
+					<bp>45</bp>
+					<qualities>
+						<positive>
+							<quality select="STR">Metagenetic Improvement</quality>
+						</positive>
+						<negative>
+							<quality>Cyclopean Eye</quality>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>55</page>
+				</metavariant>
+				<metavariant>
+					<name>Fomori</name>
+					<bp>45</bp>
+					<qualities>
+						<positive>
+							<quality>Arcane Arrester</quality>
+							<quality select="BOD">Metagenetic Improvement</quality>
+							<quality>Thermographic Vision</quality>
+						</positive>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>55</page>
+				</metavariant>
+				<metavariant>
+					<name>Giant</name>
+					<bp>40</bp>
+					<qualities>
+						<positive>
+							<quality>Dermal Alteration (Bark Skin)</quality>
+							<quality>Thermographic Vision</quality>
+						</positive>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>56</page>
+				</metavariant>
+				<metavariant>
+					<name>Minotaur</name>
+					<bp>45</bp>
+					<qualities>
+						<positive>
+							<quality>Goring Horns</quality>
+							<quality select="BOD">Metagenetic Improvement</quality>
+							<quality>Thermographic Vision</quality>
+						</positive>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>57</page>
+				</metavariant>
+			</metavariants>
+		</metatype>
+		<metatype>
+			<name>Centaur</name>
+			<category>Sapient Critter</category>
+			<bp>30</bp>
+			<bodmin>2</bodmin>
+			<bodmax>7</bodmax>
+			<bodaug>10</bodaug>
+			<agimin>1</agimin>
+			<agimax>6</agimax>
+			<agiaug>9</agiaug>
+			<reamin>1</reamin>
+			<reamax>6</reamax>
+			<reaaug>9</reaaug>
+			<strmin>2</strmin>
+			<strmax>7</strmax>
+			<straug>10</straug>
+			<chamin>1</chamin>
+			<chamax>6</chamax>
+			<chaaug>9</chaaug>
+			<intmin>1</intmin>
+			<intmax>5</intmax>
+			<intaug>7</intaug>
+			<logmin>1</logmin>
+			<logmax>5</logmax>
+			<logaug>7</logaug>
+			<wilmin>1</wilmin>
+			<wilmax>6</wilmax>
+			<wilaug>9</wilaug>
+			<inimin>2</inimin>
+			<inimax>11</inimax>
+			<iniaug>16</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>5</edgmax>
+			<edgaug>5</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>20/100</movement>
+			<qualities>
+				<negative>
+					<quality>Distinctive Style</quality>
+					<quality removable="true">Uncouth</quality>
+					<quality removable="true">Uneducated</quality>
+				</negative>
+			</qualities>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+				<lifestylecost>50</lifestylecost>
+				<reach>1</reach>
+			</bonus>
+			<powers>
+				<power select="Low-Light Vision, Thermographic Vision">Enhanced Senses</power>
+				<power>Magic Sense</power>
+				<power select="Kick: DV (STR/2)P, AP 0">Natural Weapon</power>
+				<power>Sapience</power>
+			</powers>
+			<source>RC</source>
+			<page>84</page>
+		</metatype>
+		<metatype>
+			<name>Naga</name>
+			<category>Sapient Critter</category>
+			<bp>30</bp>
+			<bodmin>3</bodmin>
+			<bodmax>8</bodmax>
+			<bodaug>12</bodaug>
+			<agimin>1</agimin>
+			<agimax>4</agimax>
+			<agiaug>6</agiaug>
+			<reamin>2</reamin>
+			<reamax>7</reamax>
+			<reaaug>10</reaaug>
+			<strmin>4</strmin>
+			<strmax>9</strmax>
+			<straug>12</straug>
+			<chamin>2</chamin>
+			<chamax>7</chamax>
+			<chaaug>10</chaaug>
+			<intmin>1</intmin>
+			<intmax>6</intmax>
+			<intaug>9</intaug>
+			<logmin>1</logmin>
+			<logmax>6</logmax>
+			<logaug>9</logaug>
+			<wilmin>2</wilmin>
+			<wilmax>7</wilmax>
+			<wilaug>10</wilaug>
+			<inimin>4</inimin>
+			<inimax>14</inimax>
+			<iniaug>19</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>5</edgmax>
+			<edgaug>5</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>5/20, Swim 8/20</movement>
+			<qualities>
+				<negative>
+					<quality>Distinctive Style</quality>
+					<quality removable="true">Uneducated</quality>
+				</negative>
+			</qualities>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+				<lifestylecost>50</lifestylecost>
+			</bonus>
+			<powers>
+				<power rating="2">Armor (Ballistic)</power>
+				<power rating="3">Armor (Impact)</power>
+				<power>Dual Natured</power>
+				<power>Guard</power>
+				<power select="Bite: DV (STR/2)P, AP 0">Natural Weapon</power>
+				<power>Sapience</power>
+				<power>Venom</power>
+			</powers>
+			<source>RC</source>
+			<page>84</page>
+		</metatype>
+		<metatype>
+			<name>Pixie</name>
+			<category>Sapient Critter</category>
+			<bp>35</bp>
+			<bodmin>1</bodmin>
+			<bodmax>3</bodmax>
+			<bodaug>5</bodaug>
+			<agimin>3</agimin>
+			<agimax>8</agimax>
+			<agiaug>12</agiaug>
+			<reamin>3</reamin>
+			<reamax>8</reamax>
+			<reaaug>12</reaaug>
+			<strmin>1</strmin>
+			<strmax>3</strmax>
+			<straug>5</straug>
+			<chamin>3</chamin>
+			<chamax>8</chamax>
+			<chaaug>12</chaaug>
+			<intmin>2</intmin>
+			<intmax>7</intmax>
+			<intaug>10</intaug>
+			<logmin>2</logmin>
+			<logmax>7</logmax>
+			<logaug>10</logaug>
+			<wilmin>3</wilmin>
+			<wilmax>8</wilmax>
+			<wilaug>12</wilaug>
+			<inimin>5</inimin>
+			<inimax>15</inimax>
+			<iniaug>22</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>7</edgmax>
+			<edgaug>7</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>1/4, Fly 20/50</movement>
+			<qualities>
+				<negative>
+					<quality>Distinctive Style</quality>
+					<quality removable="true">Uneducated</quality>
+				</negative>
+			</qualities>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+				<lifestylecost>50</lifestylecost>
+			</bonus>
+			<powers>
+				<power>Concealment</power>
+				<power select="Astral Perception">Enhanced Senses</power>
+				<power>Sapience</power>
+				<power>Vanishing</power>
+			</powers>
+			<source>RC</source>
+			<page>84</page>
+		</metatype>
+		<metatype>
+			<name>Sasquatch</name>
+			<category>Sapient Critter</category>
+			<bp>40</bp>
+			<bodmin>6</bodmin>
+			<bodmax>11</bodmax>
+			<bodaug>16</bodaug>
+			<agimin>1</agimin>
+			<agimax>6</agimax>
+			<agiaug>9</agiaug>
+			<reamin>1</reamin>
+			<reamax>6</reamax>
+			<reaaug>9</reaaug>
+			<strmin>5</strmin>
+			<strmax>10</strmax>
+			<straug>15</straug>
+			<chamin>1</chamin>
+			<chamax>6</chamax>
+			<chaaug>9</chaaug>
+			<intmin>1</intmin>
+			<intmax>6</intmax>
+			<intaug>9</intaug>
+			<logmin>1</logmin>
+			<logmax>6</logmax>
+			<logaug>9</logaug>
+			<wilmin>1</wilmin>
+			<wilmax>6</wilmax>
+			<wilaug>9</wilaug>
+			<inimin>2</inimin>
+			<inimax>12</inimax>
+			<iniaug>18</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>5</edgmax>
+			<edgaug>5</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>15/35</movement>
+			<qualities>
+				<negative>
+					<quality>Distinctive Style</quality>
+					<quality removable="true">Uneducated</quality>
+				</negative>
+			</qualities>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+				<lifestylecost>50</lifestylecost>
+				<reach>1</reach>
+			</bonus>
+			<powers>
+				<power>Dual Natured</power>
+				<power>Mimicry</power>
+				<power>Sapience</power>
+			</powers>
+			<source>RC</source>
+			<page>84</page>
+		</metatype>
+		<metatype>
+			<name>Fox Shapeshifter</name>
+			<category>Shapeshifter</category>
+			<bp>50</bp>
+			<bodmin>1</bodmin>
+			<bodmax>5</bodmax>
+			<bodaug>7</bodaug>
+			<agimin>2</agimin>
+			<agimax>7</agimax>
+			<agiaug>10</agiaug>
+			<reamin>2</reamin>
+			<reamax>7</reamax>
+			<reaaug>10</reaaug>
+			<strmin>1</strmin>
+			<strmax>4</strmax>
+			<straug>6</straug>
+			<chamin>1</chamin>
+			<chamax>6</chamax>
+			<chaaug>9</chaaug>
+			<intmin>2</intmin>
+			<intmax>7</intmax>
+			<intaug>10</intaug>
+			<logmin>1</logmin>
+			<logmax>6</logmax>
+			<logaug>9</logaug>
+			<wilmin>1</wilmin>
+			<wilmax>6</wilmax>
+			<wilaug>9</wilaug>
+			<inimin>4</inimin>
+			<inimax>14</inimax>
+			<iniaug>20</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>6</edgmax>
+			<edgaug>6</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>12/30</movement>
+			<qualities>
+				<negative>
+					<quality>Distinctive Style</quality>
+				</negative>
+			</qualities>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+				<reach>-1</reach>
+			</bonus>
+			<powers>
+				<power>Dual Natured</power>
+				<power>Regeneration</power>
+				<power>Sapience</power>
+				<power select="Hearing, Low Light Vision, Smell, Taste">Enhanced Senses</power>
+				<power select="Silver, Severe">Allergy</power>
+				<power select="Silver">Vulnerability</power>
+				<power select="Claws/Bite: DV STR/2 + 2, AP 0">Natural Weapon</power>
+			</powers>
+			<source>RC</source>
+			<page>86</page>
+			<metavariants>
+				<metavariant>
+					<name>Human</name>
+					<bp>50</bp>
+					<powers>
+						<power>Shift (Human)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>-1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Dwarf</name>
+					<bp>65</bp>
+					<powers>
+						<power>Shift (Dwarf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>-1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Elf</name>
+					<bp>70</bp>
+					<powers>
+						<power>Shift (Elf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>-1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Ork</name>
+					<bp>60</bp>
+					<powers>
+						<power>Shift (Ork)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>-1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Troll</name>
+					<bp>80</bp>
+					<powers>
+						<power>Shift (Troll)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>-1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+			</metavariants>
+		</metatype>
+		<metatype>
+			<name>Wolf Shapeshifter</name>
+			<category>Shapeshifter</category>
+			<bp>55</bp>
+			<bodmin>1</bodmin>
+			<bodmax>6</bodmax>
+			<bodaug>9</bodaug>
+			<agimin>1</agimin>
+			<agimax>6</agimax>
+			<agiaug>9</agiaug>
+			<reamin>1</reamin>
+			<reamax>6</reamax>
+			<reaaug>9</reaaug>
+			<strmin>1</strmin>
+			<strmax>6</strmax>
+			<straug>9</straug>
+			<chamin>1</chamin>
+			<chamax>6</chamax>
+			<chaaug>9</chaaug>
+			<intmin>1</intmin>
+			<intmax>6</intmax>
+			<intaug>9</intaug>
+			<logmin>1</logmin>
+			<logmax>6</logmax>
+			<logaug>9</logaug>
+			<wilmin>1</wilmin>
+			<wilmax>6</wilmax>
+			<wilaug>9</wilaug>
+			<inimin>2</inimin>
+			<inimax>12</inimax>
+			<iniaug>18</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>6</edgmax>
+			<edgaug>6</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>15/50</movement>
+			<qualities>
+				<negative>
+					<quality>Distinctive Style</quality>
+				</negative>
+			</qualities>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+			</bonus>
+			<powers>
+				<power>Dual Natured</power>
+				<power>Regeneration</power>
+				<power>Sapience</power>
+				<power select="Hearing, Low Light Vision, Smell, Taste">Enhanced Senses</power>
+				<power select="Silver, Severe">Allergy</power>
+				<power select="Silver">Vulnerability</power>
+				<power select="Claws/Bite: DV STR/2 + 2, AP 0">Natural Weapon</power>
+			</powers>
+			<source>RC</source>
+			<page>86</page>
+			<metavariants>
+				<metavariant>
+					<name>Human</name>
+					<bp>55</bp>
+					<powers>
+						<power>Shift (Human)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Dwarf</name>
+					<bp>70</bp>
+					<powers>
+						<power>Shift (Dwarf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Elf</name>
+					<bp>75</bp>
+					<powers>
+						<power>Shift (Elf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Ork</name>
+					<bp>65</bp>
+					<powers>
+						<power>Shift (Ork)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Troll</name>
+					<bp>85</bp>
+					<powers>
+						<power>Shift (Troll)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+			</metavariants>
+		</metatype>
+		<metatype>
+			<name>Eagle Shapeshifter</name>
+			<category>Shapeshifter</category>
+			<bp>60</bp>
+			<bodmin>1</bodmin>
+			<bodmax>6</bodmax>
+			<bodaug>9</bodaug>
+			<agimin>1</agimin>
+			<agimax>6</agimax>
+			<agiaug>9</agiaug>
+			<reamin>1</reamin>
+			<reamax>6</reamax>
+			<reaaug>9</reaaug>
+			<strmin>1</strmin>
+			<strmax>6</strmax>
+			<straug>9</straug>
+			<chamin>2</chamin>
+			<chamax>7</chamax>
+			<chaaug>10</chaaug>
+			<intmin>1</intmin>
+			<intmax>6</intmax>
+			<intaug>9</intaug>
+			<logmin>1</logmin>
+			<logmax>6</logmax>
+			<logaug>9</logaug>
+			<wilmin>3</wilmin>
+			<wilmax>9</wilmax>
+			<wilaug>13</wilaug>
+			<inimin>2</inimin>
+			<inimax>12</inimax>
+			<iniaug>18</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>6</edgmax>
+			<edgaug>6</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>3/6, Fly 18/80</movement>
+			<qualities>
+				<negative>
+					<quality>Distinctive Style</quality>
+				</negative>
+			</qualities>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+			</bonus>
+			<powers>
+				<power>Dual Natured</power>
+				<power>Regeneration</power>
+				<power>Sapience</power>
+				<power select="Vision Enhancement (2), Vision Magnification">Enhanced Senses</power>
+				<power select="Silver, Severe">Allergy</power>
+				<power select="Silver">Vulnerability</power>
+				<power select="Claws/Bite: DV STR/2 + 2, AP 0">Natural Weapon</power>
+			</powers>
+			<source>RC</source>
+			<page>86</page>
+			<metavariants>
+				<metavariant>
+					<name>Human</name>
+					<bp>55</bp>
+					<powers>
+						<power>Shift (Human)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Dwarf</name>
+					<bp>70</bp>
+					<powers>
+						<power>Shift (Dwarf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Elf</name>
+					<bp>75</bp>
+					<powers>
+						<power>Shift (Elf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Ork</name>
+					<bp>65</bp>
+					<powers>
+						<power>Shift (Ork)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Troll</name>
+					<bp>85</bp>
+					<powers>
+						<power>Shift (Troll)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+			</metavariants>
+		</metatype>
+		<metatype>
+			<name>Leopard Shapeshifter</name>
+			<category>Shapeshifter</category>
+			<bp>65</bp>
+			<bodmin>3</bodmin>
+			<bodmax>8</bodmax>
+			<bodaug>12</bodaug>
+			<agimin>5</agimin>
+			<agimax>8</agimax>
+			<agiaug>12</agiaug>
+			<reamin>2</reamin>
+			<reamax>7</reamax>
+			<reaaug>10</reaaug>
+			<strmin>2</strmin>
+			<strmax>7</strmax>
+			<straug>10</straug>
+			<chamin>1</chamin>
+			<chamax>5</chamax>
+			<chaaug>7</chaaug>
+			<intmin>1</intmin>
+			<intmax>5</intmax>
+			<intaug>7</intaug>
+			<logmin>1</logmin>
+			<logmax>5</logmax>
+			<logaug>7</logaug>
+			<wilmin>1</wilmin>
+			<wilmax>5</wilmax>
+			<wilaug>7</wilaug>
+			<inimin>3</inimin>
+			<inimax>12</inimax>
+			<iniaug>18</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>6</edgmax>
+			<edgaug>6</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>15/80</movement>
+			<qualities>
+				<negative>
+					<quality>Distinctive Style</quality>
+				</negative>
+			</qualities>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+			</bonus>
+			<powers>
+				<power>Dual Natured</power>
+				<power>Regeneration</power>
+				<power>Sapience</power>
+				<power select="Hearing, Low Light Vision, Smell">Enhanced Senses</power>
+				<power select="Silver, Severe">Allergy</power>
+				<power select="Silver">Vulnerability</power>
+				<power select="Claws/Bite: DV STR/2 + 2, AP 0">Natural Weapon</power>
+			</powers>
+			<source>RC</source>
+			<page>86</page>
+			<metavariants>
+				<metavariant>
+					<name>Human</name>
+					<bp>65</bp>
+					<powers>
+						<power>Shift (Human)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Dwarf</name>
+					<bp>80</bp>
+					<powers>
+						<power>Shift (Dwarf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Elf</name>
+					<bp>85</bp>
+					<powers>
+						<power>Shift (Elf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Ork</name>
+					<bp>75</bp>
+					<powers>
+						<power>Shift (Ork)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Troll</name>
+					<bp>95</bp>
+					<powers>
+						<power>Shift (Troll)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+			</metavariants>
+		</metatype>
+		<metatype>
+			<name>Jaguar Shapeshifter</name>
+			<category>Shapeshifter</category>
+			<bp>65</bp>
+			<bodmin>3</bodmin>
+			<bodmax>8</bodmax>
+			<bodaug>12</bodaug>
+			<agimin>5</agimin>
+			<agimax>8</agimax>
+			<agiaug>12</agiaug>
+			<reamin>2</reamin>
+			<reamax>7</reamax>
+			<reaaug>10</reaaug>
+			<strmin>2</strmin>
+			<strmax>7</strmax>
+			<straug>10</straug>
+			<chamin>1</chamin>
+			<chamax>5</chamax>
+			<chaaug>7</chaaug>
+			<intmin>1</intmin>
+			<intmax>5</intmax>
+			<intaug>7</intaug>
+			<logmin>1</logmin>
+			<logmax>5</logmax>
+			<logaug>7</logaug>
+			<wilmin>1</wilmin>
+			<wilmax>5</wilmax>
+			<wilaug>7</wilaug>
+			<inimin>3</inimin>
+			<inimax>12</inimax>
+			<iniaug>18</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>6</edgmax>
+			<edgaug>6</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>15/80</movement>
+			<qualities>
+				<negative>
+					<quality>Distinctive Style</quality>
+				</negative>
+			</qualities>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+			</bonus>
+			<powers>
+				<power>Dual Natured</power>
+				<power>Regeneration</power>
+				<power>Sapience</power>
+				<power select="Hearing, Low Light Vision, Smell">Enhanced Senses</power>
+				<power select="Silver, Severe">Allergy</power>
+				<power select="Silver">Vulnerability</power>
+				<power select="Claws/Bite: DV STR/2 + 2, AP 0">Natural Weapon</power>
+			</powers>
+			<source>RC</source>
+			<page>86</page>
+			<metavariants>
+				<metavariant>
+					<name>Human</name>
+					<bp>65</bp>
+					<powers>
+						<power>Shift (Human)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Dwarf</name>
+					<bp>80</bp>
+					<powers>
+						<power>Shift (Dwarf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Elf</name>
+					<bp>85</bp>
+					<powers>
+						<power>Shift (Elf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Ork</name>
+					<bp>75</bp>
+					<powers>
+						<power>Shift (Ork)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Troll</name>
+					<bp>95</bp>
+					<powers>
+						<power>Shift (Troll)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+			</metavariants>
+		</metatype>
+		<metatype>
+			<name>Seal Shapeshifter</name>
+			<category>Shapeshifter</category>
+			<bp>70</bp>
+			<bodmin>4</bodmin>
+			<bodmax>9</bodmax>
+			<bodaug>13</bodaug>
+			<agimin>4</agimin>
+			<agimax>9</agimax>
+			<agiaug>13</agiaug>
+			<reamin>1</reamin>
+			<reamax>6</reamax>
+			<reaaug>9</reaaug>
+			<strmin>2</strmin>
+			<strmax>7</strmax>
+			<straug>10</straug>
+			<chamin>1</chamin>
+			<chamax>6</chamax>
+			<chaaug>9</chaaug>
+			<intmin>1</intmin>
+			<intmax>6</intmax>
+			<intaug>9</intaug>
+			<logmin>1</logmin>
+			<logmax>6</logmax>
+			<logaug>9</logaug>
+			<wilmin>1</wilmin>
+			<wilmax>5</wilmax>
+			<wilaug>7</wilaug>
+			<inimin>2</inimin>
+			<inimax>12</inimax>
+			<iniaug>18</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>6</edgmax>
+			<edgaug>6</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>3/6, Swim 8/20</movement>
+			<qualities>
+				<negative>
+					<quality>Distinctive Style</quality>
+				</negative>
+			</qualities>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+			</bonus>
+			<powers>
+				<power>Dual Natured</power>
+				<power>Regeneration</power>
+				<power>Sapience</power>
+				<power select="Low Light Vision">Enhanced Senses</power>
+				<power select="Silver, Severe">Allergy</power>
+				<power select="Silver">Vulnerability</power>
+				<power select="Claws/Bite: DV STR/2 + 2, AP 0">Natural Weapon</power>
+			</powers>
+			<source>RC</source>
+			<page>86</page>
+			<metavariants>
+				<metavariant>
+					<name>Human</name>
+					<bp>70</bp>
+					<powers>
+						<power>Shift (Human)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Dwarf</name>
+					<bp>85</bp>
+					<powers>
+						<power>Shift (Dwarf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Elf</name>
+					<bp>90</bp>
+					<powers>
+						<power>Shift (Elf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Ork</name>
+					<bp>80</bp>
+					<powers>
+						<power>Shift (Ork)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Troll</name>
+					<bp>100</bp>
+					<powers>
+						<power>Shift (Troll)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+			</metavariants>
+		</metatype>
+		<metatype>
+			<name>Tiger Shapeshifter</name>
+			<category>Shapeshifter</category>
+			<bp>75</bp>
+			<bodmin>4</bodmin>
+			<bodmax>9</bodmax>
+			<bodaug>13</bodaug>
+			<agimin>5</agimin>
+			<agimax>8</agimax>
+			<agiaug>12</agiaug>
+			<reamin>2</reamin>
+			<reamax>7</reamax>
+			<reaaug>10</reaaug>
+			<strmin>3</strmin>
+			<strmax>8</strmax>
+			<straug>12</straug>
+			<chamin>1</chamin>
+			<chamax>6</chamax>
+			<chaaug>9</chaaug>
+			<intmin>1</intmin>
+			<intmax>5</intmax>
+			<intaug>7</intaug>
+			<logmin>1</logmin>
+			<logmax>5</logmax>
+			<logaug>7</logaug>
+			<wilmin>1</wilmin>
+			<wilmax>5</wilmax>
+			<wilaug>7</wilaug>
+			<inimin>3</inimin>
+			<inimax>12</inimax>
+			<iniaug>18</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>6</edgmax>
+			<edgaug>6</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>15/50</movement>
+			<qualities>
+				<negative>
+					<quality>Distinctive Style</quality>
+				</negative>
+			</qualities>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+				<reach>1</reach>
+			</bonus>
+			<powers>
+				<power>Dual Natured</power>
+				<power>Regeneration</power>
+				<power>Sapience</power>
+				<power select="Hearing, Low Light Vision, Smell">Enhanced Senses</power>
+				<power select="Silver, Severe">Allergy</power>
+				<power select="Silver">Vulnerability</power>
+				<power select="Claws/Bite: DV STR/2 + 2, AP 0">Natural Weapon</power>
+			</powers>
+			<source>RC</source>
+			<page>86</page>
+			<metavariants>
+				<metavariant>
+					<name>Human</name>
+					<bp>75</bp>
+					<powers>
+						<power>Shift (Human)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Dwarf</name>
+					<bp>90</bp>
+					<powers>
+						<power>Shift (Dwarf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Elf</name>
+					<bp>95</bp>
+					<powers>
+						<power>Shift (Elf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Ork</name>
+					<bp>85</bp>
+					<powers>
+						<power>Shift (Ork)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Troll</name>
+					<bp>105</bp>
+					<powers>
+						<power>Shift (Troll)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+			</metavariants>
+		</metatype>
+		<metatype>
+			<name>Lion Shapeshifter</name>
+			<category>Shapeshifter</category>
+			<bp>75</bp>
+			<bodmin>4</bodmin>
+			<bodmax>9</bodmax>
+			<bodaug>13</bodaug>
+			<agimin>5</agimin>
+			<agimax>8</agimax>
+			<agiaug>12</agiaug>
+			<reamin>2</reamin>
+			<reamax>7</reamax>
+			<reaaug>10</reaaug>
+			<strmin>3</strmin>
+			<strmax>8</strmax>
+			<straug>12</straug>
+			<chamin>1</chamin>
+			<chamax>6</chamax>
+			<chaaug>9</chaaug>
+			<intmin>1</intmin>
+			<intmax>5</intmax>
+			<intaug>7</intaug>
+			<logmin>1</logmin>
+			<logmax>5</logmax>
+			<logaug>7</logaug>
+			<wilmin>1</wilmin>
+			<wilmax>5</wilmax>
+			<wilaug>7</wilaug>
+			<inimin>3</inimin>
+			<inimax>12</inimax>
+			<iniaug>18</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>6</edgmax>
+			<edgaug>6</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>15/50</movement>
+			<qualities>
+				<negative>
+					<quality>Distinctive Style</quality>
+				</negative>
+			</qualities>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+				<reach>1</reach>
+			</bonus>
+			<powers>
+				<power>Dual Natured</power>
+				<power>Regeneration</power>
+				<power>Sapience</power>
+				<power select="Hearing, Low Light Vision, Smell">Enhanced Senses</power>
+				<power select="Silver, Severe">Allergy</power>
+				<power select="Silver">Vulnerability</power>
+				<power select="Claws/Bite: DV STR/2 + 2, AP 0">Natural Weapon</power>
+			</powers>
+			<source>RC</source>
+			<page>86</page>
+			<metavariants>
+				<metavariant>
+					<name>Human</name>
+					<bp>75</bp>
+					<powers>
+						<power>Shift (Human)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Dwarf</name>
+					<bp>90</bp>
+					<powers>
+						<power>Shift (Dwarf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Elf</name>
+					<bp>95</bp>
+					<powers>
+						<power>Shift (Elf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Ork</name>
+					<bp>85</bp>
+					<powers>
+						<power>Shift (Ork)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Troll</name>
+					<bp>105</bp>
+					<powers>
+						<power>Shift (Troll)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+			</metavariants>
+		</metatype>
+		<metatype>
+			<name>Bear Shapeshifter</name>
+			<category>Shapeshifter</category>
+			<bp>80</bp>
+			<bodmin>7</bodmin>
+			<bodmax>13</bodmax>
+			<bodaug>19</bodaug>
+			<agimin>1</agimin>
+			<agimax>4</agimax>
+			<agiaug>6</agiaug>
+			<reamin>1</reamin>
+			<reamax>5</reamax>
+			<reaaug>7</reaaug>
+			<strmin>7</strmin>
+			<strmax>13</strmax>
+			<straug>19</straug>
+			<chamin>1</chamin>
+			<chamax>6</chamax>
+			<chaaug>9</chaaug>
+			<intmin>1</intmin>
+			<intmax>5</intmax>
+			<intaug>7</intaug>
+			<logmin>1</logmin>
+			<logmax>5</logmax>
+			<logaug>7</logaug>
+			<wilmin>1</wilmin>
+			<wilmax>5</wilmax>
+			<wilaug>7</wilaug>
+			<inimin>2</inimin>
+			<inimax>10</inimax>
+			<iniaug>16</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>6</edgmax>
+			<edgaug>6</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>15/50</movement>
+			<qualities>
+				<negative>
+					<quality>Distinctive Style</quality>
+				</negative>
+			</qualities>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+				<reach>1</reach>
+			</bonus>
+			<powers>
+				<power>Dual Natured</power>
+				<power>Regeneration</power>
+				<power>Sapience</power>
+				<power select="Smell">Enhanced Senses</power>
+				<power select="Silver, Severe">Allergy</power>
+				<power select="Silver">Vulnerability</power>
+				<power select="Claws/Bite: DV STR/2 + 2, AP 0">Natural Weapon</power>
+			</powers>
+			<source>RC</source>
+			<page>86</page>
+			<metavariants>
+				<metavariant>
+					<name>Human</name>
+					<bp>80</bp>
+					<powers>
+						<power>Shift (Human)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Dwarf</name>
+					<bp>95</bp>
+					<powers>
+						<power>Shift (Dwarf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Elf</name>
+					<bp>100</bp>
+					<powers>
+						<power>Shift (Elf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Ork</name>
+					<bp>90</bp>
+					<powers>
+						<power>Shift (Ork)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+				<metavariant>
+					<name>Troll</name>
+					<bp>110</bp>
+					<powers>
+						<power>Shift (Troll)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>1</reach>
+					</bonus>
+					<source>RC</source>
+					<page>87</page>
+				</metavariant>
+			</metavariants>
+		</metatype>
+		<metatype>
+			<name>Free Spirit</name>
+			<category>Special</category>
+			<bp>250</bp>
+			<bodmin>2</bodmin>
+			<bodmax>2</bodmax>
+			<bodaug>2</bodaug>
+			<agimin>2</agimin>
+			<agimax>2</agimax>
+			<agiaug>2</agiaug>
+			<reamin>2</reamin>
+			<reamax>2</reamax>
+			<reaaug>2</reaaug>
+			<strmin>2</strmin>
+			<strmax>2</strmax>
+			<straug>2</straug>
+			<chamin>2</chamin>
+			<chamax>2</chamax>
+			<chaaug>2</chaaug>
+			<intmin>2</intmin>
+			<intmax>2</intmax>
+			<intaug>2</intaug>
+			<logmin>2</logmin>
+			<logmax>2</logmax>
+			<logaug>2</logaug>
+			<wilmin>2</wilmin>
+			<wilmax>2</wilmax>
+			<wilaug>2</wilaug>
+			<inimin>2</inimin>
+			<inimax>4</inimax>
+			<iniaug>4</iniaug>
+			<edgmin>2</edgmin>
+			<edgmax>2</edgmax>
+			<edgaug>2</edgaug>
+			<magmin>2</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>0</resmin>
+			<resmax>0</resmax>
+			<resaug>0</resaug>
+			<essmin>0</essmin>
+			<essmax>2</essmax>
+			<essaug>2</essaug>
+			<movement>10/25</movement>
+			<qualities>
+				<positive>
+					<quality>Magician</quality>
+				</positive>
+				<negative>
+					<quality>Distinctive Style</quality>
+				</negative>
+			</qualities>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>2</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>2</val>
+				</addattribute>
+				<basiclifestylecost>-10</basiclifestylecost>
+				<enabletab>
+					<name>critter</name>
+					<name>magician</name>
+				</enabletab>
+				<initiativepass>1</initiativepass>
+			</bonus>
+			<powers>
+				<power>Astral Form</power>
+				<power>Banishing Resistance</power>
+				<power select="Normal Weapons">Immunity</power>
+				<power>Sapience</power>
+				<power>Spirit Pact</power>
+			</powers>
+			<optionalpowers>
+				<power cost="0.5">Accident</power>
+				<power cost="1">Animal Control</power>
+				<power cost="3">Aura Masking</power>
+				<power cost="2">Binding</power>
+				<power cost="2">Concealment</power>
+				<power cost="1">Confusion</power>
+				<power cost="1">Divining</power>
+				<power cost="3">Elemental Attack</power>
+				<power cost="3">Energy Aura</power>
+				<power cost="2">Engulf</power>
+				<power cost="0.25">Enhanced Senses</power>
+				<power cost="1.5">Fear</power>
+				<power cost="0.5">Guard</power>
+				<power cost="2">Influence</power>
+				<power cost="0">Materialization</power>
+				<power cost="1">Movement</power>
+				<power cost="1">Mutable Form</power>
+				<power cost="1">Natural Weapon</power>
+				<power cost="1.5">Noxious Breath</power>
+				<power cost="3">Personal Domain</power>
+				<power cost="0">Possession</power>
+				<power cost="0.5">Psychokinesis</power>
+				<power cost="0.5">Realistic Form</power>
+				<power cost="5">Regeneration</power>
+				<power cost="1">Shadow Cloak</power>
+				<power cost="1">Silence</power>
+				<power cost="1">Spirit Pact</power>
+				<power cost="1">Venom</power>
+				<power cost="2">Weather Control</power>
+			</optionalpowers>
+			<source>RC</source>
+			<page>91</page>
+		</metatype>
+		<metatype>
+			<name>A.I.</name>
+			<category>Special</category>
+			<bp>110</bp>
+			<bodmin>0</bodmin>
+			<bodmax>0</bodmax>
+			<bodaug>0</bodaug>
+			<agimin>0</agimin>
+			<agimax>0</agimax>
+			<agiaug>0</agiaug>
+			<reamin>0</reamin>
+			<reamax>0</reamax>
+			<reaaug>0</reaaug>
+			<strmin>0</strmin>
+			<strmax>0</strmax>
+			<straug>0</straug>
+			<chamin>1</chamin>
+			<chamax>6</chamax>
+			<chaaug>6</chaaug>
+			<intmin>1</intmin>
+			<intmax>6</intmax>
+			<intaug>6</intaug>
+			<logmin>1</logmin>
+			<logmax>6</logmax>
+			<logaug>6</logaug>
+			<wilmin>1</wilmin>
+			<wilmax>6</wilmax>
+			<wilaug>6</wilaug>
+			<inimin>2</inimin>
+			<inimax>12</inimax>
+			<iniaug>12</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>1</edgmax>
+			<edgaug>1</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>0</essmax>
+			<essaug>0</essaug>
+			<movement>Special</movement>
+			<qualityrestriction>
+				<positive>
+					<quality>Aptitude</quality>
+					<quality>Authority</quality>
+					<quality>Code Flux</quality>
+					<quality>Codeslinger</quality>
+					<quality>Codivore</quality>
+					<quality>Designer</quality>
+					<quality>Drone Pilot</quality>
+					<quality>Emulate</quality>
+					<quality>Exceptional Attribute</quality>
+					<quality>First Impression</quality>
+					<quality>Guts</quality>
+					<quality>High Pain Tolerance (Rating 1)</quality>
+					<quality>High Pain Tolerance (Rating 2)</quality>
+					<quality>High Pain Tolerance (Rating 3)</quality>
+					<quality>Home Ground</quality>
+					<quality>Improved Realignment</quality>
+					<quality>Intuitive Hacking</quality>
+					<quality>Lucky</quality>
+					<quality>Obscure</quality>
+					<quality>Photographic Memory</quality>
+					<quality>Piloting Origin (Rating 1)</quality>
+					<quality>Piloting Origin (Rating 2)</quality>
+					<quality>Redundancy</quality>
+					<quality>Rootkit</quality>
+					<quality>Sapper</quality>
+					<quality>Snooper</quality>
+					<quality>Spawn</quality>
+				</positive>
+				<negative>
+					<quality>Addiction (Mild)</quality>
+					<quality>Addiction (Moderate)</quality>
+					<quality>Addiction (Severe)</quality>
+					<quality>Addiction (Burnout)</quality>
+					<quality>Bad Luck</quality>
+					<quality>Codeblock</quality>
+					<quality>Combat Paralysis</quality>
+					<quality>Corruptor</quality>
+					<quality>Data Shadow (Rating 1)</quality>
+					<quality>Data Shadow (Rating 2)</quality>
+					<quality>Data Shadow (Rating 3)</quality>
+					<quality>Fragmentation</quality>
+					<quality>Ghost in the Machine</quality>
+					<quality>Gremlins (Rating 1)</quality>
+					<quality>Gremlins (Rating 2)</quality>
+					<quality>Gremlins (Rating 3)</quality>
+					<quality>Gremlins (Rating 4)</quality>
+					<quality>Incompetent</quality>
+					<quality>Low Pain Tolerance</quality>
+					<quality>Media Junkie (Mild)</quality>
+					<quality>Media Junkie (Moderate)</quality>
+					<quality>Media Junkie (Severe)</quality>
+					<quality>Media Junkie (Burnout)</quality>
+					<quality>Real World Naivete</quality>
+					<quality>SINner (Standard)</quality>
+					<quality>SINner (Criminal)</quality>
+					<quality>Uncouth</quality>
+					<quality>Uneducated</quality>
+				</negative>
+			</qualityrestriction>
+			<qualities>
+				<negative>
+					<quality>Distinctive Style</quality>
+				</negative>
+			</qualities>
+			<source>RC</source>
+			<page>88</page>
+		</metatype>
+	</metatypes>
+</chummer>

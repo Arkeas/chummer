@@ -1,0 +1,3090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chummer>
+	<version>-919</version>
+	<categories>
+		<category>Combat</category>
+		<category>Detection</category>
+		<category>Health</category>
+		<category>Illusion</category>
+		<category>Manipulation</category>
+	</categories>
+	<spells>
+		<spell>
+			<name>Acid Stream</name>
+			<descriptor>Indirect, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+3</dv>
+			<source>SR4</source>
+			<page>204</page>
+		</spell>
+		<spell>
+			<name>Ball Lightning</name>
+			<descriptor>Indirect, Elemental, Area</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+5</dv>
+			<source>SR4</source>
+			<page>205</page>
+		</spell>
+		<spell>
+			<name>Blast</name>
+			<descriptor>Indirect, Area</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>S</damage>
+			<duration>I</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>204</page>
+		</spell>
+		<spell>
+			<name>Clout</name>
+			<descriptor>Indirect</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>S</damage>
+			<duration>I</duration>
+			<dv>(F/2)</dv>
+			<source>SR4</source>
+			<page>204</page>
+		</spell>
+		<spell>
+			<name>Corrode [Object]</name>
+			<descriptor>Indirect, Touch, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>164</page>
+		</spell>
+		<spell>
+			<name>Death Touch</name>
+			<descriptor>Direct, Touch</descriptor>
+			<category>Combat</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)-2</dv>
+			<source>SR4</source>
+			<page>204</page>
+		</spell>
+		<spell>
+			<name>Demolish [Object]</name>
+			<descriptor>Direct</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+2</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>165</page>
+		</spell>
+		<spell>
+			<name>Destroy [Free Spirit]</name>
+			<descriptor>Direct</descriptor>
+			<category>Combat</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)-2</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>DG</source>
+			<page>16</page>
+		</spell>
+		<spell>
+			<name>Disrupt [Focus]</name>
+			<descriptor>Direct</descriptor>
+			<category>Combat</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>S</damage>
+			<duration>I</duration>
+			<dv>(F/2)-1</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>DG</source>
+			<page>16</page>
+		</spell>
+		<spell>
+			<name>[Element] Grenade</name>
+			<descriptor>Indirect, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+4</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>WAR</source>
+			<page>177</page>
+		</spell>
+		<spell>
+			<name>Fireball</name>
+			<descriptor>Indirect, Elemental, Area</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+5</dv>
+			<source>SR4</source>
+			<page>204</page>
+		</spell>
+		<spell>
+			<name>Firewater</name>
+			<descriptor>Indirect, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+5</dv>
+			<source>SM</source>
+			<page>164</page>
+		</spell>
+		<spell>
+			<name>Flamethrower</name>
+			<descriptor>Indirect, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+3</dv>
+			<source>SR4</source>
+			<page>204</page>
+		</spell>
+		<spell>
+			<name>Knockout</name>
+			<descriptor>Direct, Touch</descriptor>
+			<category>Combat</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>S</damage>
+			<duration>I</duration>
+			<dv>(F/2)-3</dv>
+			<source>SR4</source>
+			<page>205</page>
+		</spell>
+		<spell>
+			<name>Lightning Bolt</name>
+			<descriptor>Indirect, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+3</dv>
+			<source>SR4</source>
+			<page>205</page>
+		</spell>
+		<spell>
+			<name>Manaball</name>
+			<descriptor>Direct, Area</descriptor>
+			<category>Combat</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>204</page>
+		</spell>
+		<spell>
+			<name>Manabolt</name>
+			<descriptor>Direct</descriptor>
+			<category>Combat</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)</dv>
+			<source>SR4</source>
+			<page>204</page>
+		</spell>
+		<spell>
+			<name>Melt [Object]</name>
+			<descriptor>Indirect, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+2</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>164</page>
+		</spell>
+		<spell>
+			<name>Napalm</name>
+			<descriptor>Indirect, Area, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+7</dv>
+			<source>SM</source>
+			<page>164</page>
+		</spell>
+		<spell>
+			<name>One Less [Metatype/Species]</name>
+			<descriptor>Direct, Touch</descriptor>
+			<category>Combat</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)-3</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>165</page>
+		</spell>
+		<spell>
+			<name>Powerball</name>
+			<descriptor>Direct, Area</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+3</dv>
+			<source>SR4</source>
+			<page>205</page>
+		</spell>
+		<spell>
+			<name>Powerbolt</name>
+			<descriptor>Direct</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+1</dv>
+			<source>SR4</source>
+			<page>205</page>
+		</spell>
+		<spell>
+			<name>Punch</name>
+			<descriptor>Indirect, Touch</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>S</damage>
+			<duration>I</duration>
+			<dv>(F/2)-2</dv>
+			<source>SR4</source>
+			<page>204</page>
+		</spell>
+		<spell>
+			<name>Ram [Object]</name>
+			<descriptor>Direct, Touch</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)-2</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>165</page>
+		</spell>
+		<spell>
+			<name>Shatter</name>
+			<descriptor>Direct, Touch</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)-1</dv>
+			<source>SR4</source>
+			<page>205</page>
+		</spell>
+		<spell>
+			<name>Shattershield</name>
+			<descriptor>Direct, Touch</descriptor>
+			<category>Combat</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)-3</dv>
+			<source>SM</source>
+			<page>165</page>
+		</spell>
+		<spell>
+			<name>Slaughter [Metatype/Species]</name>
+			<descriptor>Direct, Area</descriptor>
+			<category>Combat</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+1</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>165</page>
+		</spell>
+		<spell>
+			<name>Slay [Metatype/Species]</name>
+			<descriptor>Direct</descriptor>
+			<category>Combat</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)-1</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>165</page>
+		</spell>
+		<spell>
+			<name>Sludge [Object]</name>
+			<descriptor>Indirect, Area, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+4</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>164</page>
+		</spell>
+		<spell>
+			<name>Stunball</name>
+			<descriptor>Direct, Area</descriptor>
+			<category>Combat</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>S</damage>
+			<duration>I</duration>
+			<dv>(F/2)+1</dv>
+			<source>SR4</source>
+			<page>205</page>
+		</spell>
+		<spell>
+			<name>Stunbolt</name>
+			<descriptor>Direct</descriptor>
+			<category>Combat</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>S</damage>
+			<duration>I</duration>
+			<dv>(F/2)-1</dv>
+			<source>SR4</source>
+			<page>205</page>
+		</spell>
+		<spell>
+			<name>Toxic Wave</name>
+			<descriptor>Indirect, Elemental, Area</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+5</dv>
+			<source>SR4</source>
+			<page>204</page>
+		</spell>
+		<spell>
+			<name>Wreck [Object]</name>
+			<descriptor>Direct</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>165</page>
+		</spell>
+		<spell>
+			<name>Boom</name>
+			<descriptor>Indirect, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Shockwave</name>
+			<descriptor>Indirect, Elemental, Area</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+5</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Frost</name>
+			<descriptor>Indirect, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Blizzard</name>
+			<descriptor>Indirect, Elemental, Area</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+5</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Laser</name>
+			<descriptor>Indirect, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Nova</name>
+			<descriptor>Indirect, Elemental, Area</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+5</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Frag</name>
+			<descriptor>Indirect, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Shred</name>
+			<descriptor>Indirect, Elemental, Area</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+5</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Dust Devil</name>
+			<descriptor>Indirect, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Sandstorm</name>
+			<descriptor>Indirect, Elemental, Area</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+5</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Steam</name>
+			<descriptor>Indirect, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Smoke Cloud</name>
+			<descriptor>Indirect, Elemental, Area</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+5</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Screech</name>
+			<descriptor>Indirect, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Soundwave</name>
+			<descriptor>Indirect, Elemental, Area</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+5</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Hose</name>
+			<descriptor>Indirect, Elemental</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Tsunami</name>
+			<descriptor>Indirect, Elemental, Area</descriptor>
+			<category>Combat</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>P</damage>
+			<duration>I</duration>
+			<dv>(F/2)+5</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Analyze Device</name>
+			<descriptor>Active, Directional</descriptor>
+			<category>Detection</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SR4</source>
+			<page>206</page>
+		</spell>
+		<spell>
+			<name>Analyze Magic</name>
+			<descriptor>Active, Directional</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>165</page>
+		</spell>
+		<spell>
+			<name>Analyze Truth</name>
+			<descriptor>Active, Directional</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SR4</source>
+			<page>206</page>
+		</spell>
+		<spell>
+			<name>Animal Sense</name>
+			<descriptor>Active, Directional</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SM</source>
+			<page>166</page>
+		</spell>
+		<spell>
+			<name>Area Thought Recognition</name>
+			<descriptor>Active, Psychic, Area</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Astral Clairvoyance</name>
+			<descriptor>Passive, Directional</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SM</source>
+			<page>166</page>
+		</spell>
+		<spell>
+			<name>Astral Window</name>
+			<descriptor>Active, Directional</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Blood Sight</name>
+			<descriptor>Active</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SG</source>
+			<page>163</page>
+		</spell>
+		<spell>
+			<name>Borrow Sense</name>
+			<descriptor>Active, Directional</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>166</page>
+		</spell>
+		<spell>
+			<name>Catalog</name>
+			<descriptor>Active, Area</descriptor>
+			<category>Detection</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SM</source>
+			<page>167</page>
+		</spell>
+		<spell>
+			<name>Clairaudience</name>
+			<descriptor>Passive, Directional</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SR4</source>
+			<page>206</page>
+		</spell>
+		<spell>
+			<name>Clairvoyance</name>
+			<descriptor>Passive, Directional</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SR4</source>
+			<page>206</page>
+		</spell>
+		<spell>
+			<name>Combat Sense</name>
+			<descriptor>Active, Psychic</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>206</page>
+		</spell>
+		<spell>
+			<name>Detect Enemies</name>
+			<descriptor>Active, Area</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SR4</source>
+			<page>206</page>
+		</spell>
+		<spell>
+			<name>Detect Enemies, Extended</name>
+			<descriptor>Active, Extended Area</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SR4</source>
+			<page>206</page>
+		</spell>
+		<spell>
+			<name>Detect Individual</name>
+			<descriptor>Active, Area</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SR4</source>
+			<page>206</page>
+		</spell>
+		<spell>
+			<name>Detect Life</name>
+			<descriptor>Active, Area</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SR4</source>
+			<page>206</page>
+		</spell>
+		<spell>
+			<name>Detect Life, Extended</name>
+			<descriptor>Active, Extended Area</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>206</page>
+		</spell>
+		<spell>
+			<name>Detect [Life Form]</name>
+			<descriptor>Active, Area</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SR4</source>
+			<page>207</page>
+		</spell>
+		<spell>
+			<name>Detect [Life Form], Extended</name>
+			<descriptor>Active, Extended Area</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SR4</source>
+			<page>207</page>
+		</spell>
+		<spell>
+			<name>Detect Magic</name>
+			<descriptor>Active, Area</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SR4</source>
+			<page>207</page>
+		</spell>
+		<spell>
+			<name>Detect Magic, Extended Area</name>
+			<descriptor>Active, Extended Area</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>207</page>
+		</spell>
+		<spell>
+			<name>Detect [Object]</name>
+			<descriptor>Active, Area</descriptor>
+			<category>Detection</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SR4</source>
+			<page>207</page>
+		</spell>
+		<spell>
+			<name>Diagnose</name>
+			<descriptor>Active, Directional</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>I</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>167</page>
+		</spell>
+		<spell>
+			<name>Enhance Aim</name>
+			<descriptor>Passive, Directional</descriptor>
+			<category>Detection</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SM</source>
+			<page>167</page>
+		</spell>
+		<spell>
+			<name>Eyes of the Pack</name>
+			<descriptor>Passive, Directional</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SM</source>
+			<page>166</page>
+		</spell>
+		<spell>
+			<name>Hawkeye</name>
+			<descriptor>Passive, Directional</descriptor>
+			<category>Detection</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SM</source>
+			<page>167</page>
+		</spell>
+		<spell>
+			<name>Mana Window</name>
+			<descriptor>Active, Directional</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Mind Probe</name>
+			<descriptor>Active, Directional</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>207</page>
+		</spell>
+		<spell>
+			<name>Mindlink</name>
+			<descriptor>Active, Psychic</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SR4</source>
+			<page>207</page>
+		</spell>
+		<spell>
+			<name>Mindnet</name>
+			<descriptor>Active, Psychic, Area</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Mindnet, Extended</name>
+			<descriptor>Active, Psychic, Extended Area</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+5</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Night Vision</name>
+			<descriptor>Passive, Directional</descriptor>
+			<category>Detection</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Passenger</name>
+			<descriptor>Active, Psychic</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>DG</source>
+			<page>17</page>
+		</spell>
+		<spell>
+			<name>Recorded Room</name>
+			<descriptor>Passive, Area</descriptor>
+			<category>Detection</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SG</source>
+			<page>163</page>
+		</spell>
+		<spell>
+			<name>Secret Handshake</name>
+			<descriptor>Active, Area</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-2</dv>
+			<source>SG</source>
+			<page>163</page>
+		</spell>
+		<spell>
+			<name>Sending</name>
+			<descriptor>Active, Area, Psychic</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>WAR</source>
+			<page>177</page>
+		</spell>
+		<spell>
+			<name>[Sense] Cryptesthesia</name>
+			<descriptor>Passive, Directional</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>[Sense] Link</name>
+			<descriptor>Active, Psychic</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>DG</source>
+			<page>17</page>
+		</spell>
+		<spell>
+			<name>Spatial Sense</name>
+			<descriptor>Passive, Area</descriptor>
+			<category>Detection</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Spatial Sense, Extended</name>
+			<descriptor>Passive, Extended Area</descriptor>
+			<category>Detection</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+4</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Thermographic Vision</name>
+			<descriptor>Passive, Directional</descriptor>
+			<category>Detection</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Thought Recognition</name>
+			<descriptor>Active, Psychic, Directional</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>168</page>
+		</spell>
+		<spell>
+			<name>Translate</name>
+			<descriptor>Active, Psychic, Directional</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>169</page>
+		</spell>
+		<spell>
+			<name>Alleviate Addiction</name>
+			<descriptor />
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-4</dv>
+			<source>SM</source>
+			<page>169</page>
+		</spell>
+		<spell>
+			<name>Alleviate Allergy</name>
+			<descriptor />
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-4</dv>
+			<source>SM</source>
+			<page>169</page>
+		</spell>
+		<spell>
+			<name>Alleviate Nausea</name>
+			<descriptor />
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-3</dv>
+			<source>DG</source>
+			<page>17</page>
+		</spell>
+		<spell>
+			<name>Antidote</name>
+			<descriptor />
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(Toxin DV)-2</dv>
+			<source>SR4</source>
+			<page>207</page>
+		</spell>
+		<spell>
+			<name>Awaken</name>
+			<descriptor />
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-4</dv>
+			<source>SM</source>
+			<page>169</page>
+		</spell>
+		<spell>
+			<name>Calm Mind</name>
+			<descriptor />
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-2</dv>
+			<source>WAR</source>
+			<page>178</page>
+		</spell>
+		<spell>
+			<name>Crank</name>
+			<descriptor />
+			<category>Health</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>169</page>
+		</spell>
+		<spell>
+			<name>Cure Disease</name>
+			<descriptor />
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(Disease DV)-2</dv>
+			<source>SR4</source>
+			<page>207</page>
+		</spell>
+		<spell>
+			<name>Decontamination</name>
+			<descriptor />
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(Radiation Power)-2</dv>
+			<source>DG</source>
+			<page>17</page>
+		</spell>
+		<spell>
+			<name>Decrease [Attribute]</name>
+			<descriptor>Negative</descriptor>
+			<category>Health</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<bonus>
+				<selectattribute>
+					<excludeattribute>MAG</excludeattribute>
+					<excludeattribute>RES</excludeattribute>
+					<excludeattribute>EDG</excludeattribute>
+				</selectattribute>
+			</bonus>
+			<source>SR4</source>
+			<page>207</page>
+		</spell>
+		<spell>
+			<name>Decrease Reflexes</name>
+			<descriptor>Negative</descriptor>
+			<category>Health</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SM</source>
+			<page>169</page>
+		</spell>
+		<spell>
+			<name>Detox</name>
+			<descriptor />
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(Toxin DV)-4</dv>
+			<source>SR4</source>
+			<page>207</page>
+		</spell>
+		<spell>
+			<name>Enabler</name>
+			<descriptor>Negative</descriptor>
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>169</page>
+		</spell>
+		<spell>
+			<name>Fast</name>
+			<descriptor />
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-5</dv>
+			<source>SM</source>
+			<page>169</page>
+		</spell>
+		<spell>
+			<name>Heal</name>
+			<descriptor />
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(Damage Value)-2</dv>
+			<source>SR4</source>
+			<page>208</page>
+		</spell>
+		<spell>
+			<name>Healthy Glow</name>
+			<descriptor />
+			<category>Health</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)-1</dv>
+			<source>SM</source>
+			<page>169</page>
+		</spell>
+		<spell>
+			<name>Hibernate</name>
+			<descriptor />
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-3</dv>
+			<source>SR4</source>
+			<page>208</page>
+		</spell>
+		<spell>
+			<name>Increase [Attribute]</name>
+			<descriptor />
+			<category>Health</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-2</dv>
+			<bonus>
+				<selectattribute>
+					<excludeattribute>MAG</excludeattribute>
+					<excludeattribute>RES</excludeattribute>
+					<excludeattribute>EDG</excludeattribute>
+				</selectattribute>
+			</bonus>
+			<source>SR4</source>
+			<page>208</page>
+		</spell>
+		<spell>
+			<name>Increase Reflexes</name>
+			<descriptor />
+			<category>Health</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>208</page>
+		</spell>
+		<spell>
+			<name>Intoxication</name>
+			<descriptor>Negative</descriptor>
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>169</page>
+		</spell>
+		<spell>
+			<name>Nauseate</name>
+			<descriptor>Negative</descriptor>
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>I</duration>
+			<dv>(F/2)</dv>
+			<source>DG</source>
+			<page>17</page>
+		</spell>
+		<spell>
+			<name>Nutrition</name>
+			<descriptor />
+			<category>Health</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>170</page>
+		</spell>
+		<spell>
+			<name>Oxygenate</name>
+			<descriptor />
+			<category>Health</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SR4</source>
+			<page>208</page>
+		</spell>
+		<spell>
+			<name>Prophylaxis</name>
+			<descriptor />
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-2</dv>
+			<source>SR4</source>
+			<page>208</page>
+		</spell>
+		<spell>
+			<name>Resist Pain</name>
+			<descriptor />
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(Damage Value)-4</dv>
+			<source>SR4</source>
+			<page>208</page>
+		</spell>
+		<spell>
+			<name>Stabilize</name>
+			<descriptor />
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(Overflow damage)-2</dv>
+			<source>SR4</source>
+			<page>208</page>
+		</spell>
+		<spell>
+			<name>Stim</name>
+			<descriptor />
+			<category>Health</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-5</dv>
+			<source>SM</source>
+			<page>170</page>
+		</spell>
+		<spell>
+			<name>Agony</name>
+			<descriptor>Realistic, Single-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-2</dv>
+			<source>SM</source>
+			<page>170</page>
+		</spell>
+		<spell>
+			<name>Bugs</name>
+			<descriptor>Realistic, Multi-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>170</page>
+		</spell>
+		<spell>
+			<name>Camouflage</name>
+			<descriptor>Realistic, Single-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-2</dv>
+			<source>SM</source>
+			<page>170</page>
+		</spell>
+		<spell>
+			<name>Chaff</name>
+			<descriptor>Realistic, Multi-Sense</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>170</page>
+		</spell>
+		<spell>
+			<name>Chaos</name>
+			<descriptor>Realistic, Multi-Sense</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SR4</source>
+			<page>209</page>
+		</spell>
+		<spell>
+			<name>Chaotic World</name>
+			<descriptor>Realistic, Multi-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SR4</source>
+			<page>209</page>
+		</spell>
+		<spell>
+			<name>Confusion</name>
+			<descriptor>Realistic, Multi-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SR4</source>
+			<page>209</page>
+		</spell>
+		<spell>
+			<name>Designate</name>
+			<descriptor>Realistic, Single-Sense</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>WAR</source>
+			<page>178</page>
+		</spell>
+		<spell>
+			<name>Double Image</name>
+			<descriptor>Realistic, Multi-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-3</dv>
+			<source>SM</source>
+			<page>170</page>
+		</spell>
+		<spell>
+			<name>Dream</name>
+			<descriptor>Realistic, Multi-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SM</source>
+			<page>170</page>
+		</spell>
+		<spell>
+			<name>Entertainment</name>
+			<descriptor>Obvious, Multi-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SR4</source>
+			<page>209</page>
+		</spell>
+		<spell>
+			<name>False Impression</name>
+			<descriptor>Realistic, Multi-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>DG</source>
+			<page>17</page>
+		</spell>
+		<spell>
+			<name>Flak</name>
+			<descriptor>Realistic, Multi-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SM</source>
+			<page>170</page>
+		</spell>
+		<spell>
+			<name>Flash</name>
+			<descriptor>Realistic, Single-Sense</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>I</duration>
+			<dv>(F/2)</dv>
+			<source>WAR</source>
+			<page>178</page>
+		</spell>
+		<spell>
+			<name>Flicker</name>
+			<descriptor>Realistic, Single-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>I</duration>
+			<dv>(F/2)-1</dv>
+			<source>WAR</source>
+			<page>178</page>
+		</spell>
+		<spell>
+			<name>Foreboding</name>
+			<descriptor>Realistic, Multi-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SM</source>
+			<page>171</page>
+		</spell>
+		<spell>
+			<name>Hot Potato</name>
+			<descriptor>Realistic, Single-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SM</source>
+			<page>171</page>
+		</spell>
+		<spell>
+			<name>Hush</name>
+			<descriptor>Realistic, Single-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>209</page>
+		</spell>
+		<spell>
+			<name>Improved Invisibility</name>
+			<descriptor>Realistic, Single-Sense</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SR4</source>
+			<page>209</page>
+		</spell>
+		<spell>
+			<name>Invisibility</name>
+			<descriptor>Realistic, Single-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SR4</source>
+			<page>209</page>
+		</spell>
+		<spell>
+			<name>Manascape</name>
+			<descriptor>Realistic, Multi-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>DG</source>
+			<page>17</page>
+		</spell>
+		<spell>
+			<name>Mask</name>
+			<descriptor>Realistic, Multi-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SR4</source>
+			<page>209</page>
+		</spell>
+		<spell>
+			<name>Mass Agony</name>
+			<descriptor>Realistic, Single-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>170</page>
+		</spell>
+		<spell>
+			<name>Mass Confusion</name>
+			<descriptor>Realistic, Multi-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>209</page>
+		</spell>
+		<spell>
+			<name>Mass [Sense] Removal</name>
+			<descriptor>Realistic, Single-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>171</page>
+		</spell>
+		<spell>
+			<name>Orgasm</name>
+			<descriptor>Realistic, Single-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-2</dv>
+			<source>SM</source>
+			<page>171</page>
+		</spell>
+		<spell>
+			<name>Orgy</name>
+			<descriptor>Realistic, Single-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>171</page>
+		</spell>
+		<spell>
+			<name>Phantasm</name>
+			<descriptor>Realistic, Multi-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>209</page>
+		</spell>
+		<spell>
+			<name>Physical Camouflage</name>
+			<descriptor>Realistic, Single-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SM</source>
+			<page>170</page>
+		</spell>
+		<spell>
+			<name>Physical Double Image</name>
+			<descriptor>Realistic, Multi-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-2</dv>
+			<source>SM</source>
+			<page>170</page>
+		</spell>
+		<spell>
+			<name>Physical Mask</name>
+			<descriptor>Realistic, Multi-Sense</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SR4</source>
+			<page>209</page>
+		</spell>
+		<spell>
+			<name>[Sense] Removal</name>
+			<descriptor>Realistic, Single-Sense</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>171</page>
+		</spell>
+		<spell>
+			<name>Silence</name>
+			<descriptor>Realistic, Single-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SR4</source>
+			<page>209</page>
+		</spell>
+		<spell>
+			<name>Sound Barrier</name>
+			<descriptor>Realistic, Single-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>171</page>
+		</spell>
+		<spell>
+			<name>Stealth</name>
+			<descriptor>Realistic, Single-Sense</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SR4</source>
+			<page>209</page>
+		</spell>
+		<spell>
+			<name>Stench</name>
+			<descriptor>Realistic, Single-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>171</page>
+		</spell>
+		<spell>
+			<name>Stink</name>
+			<descriptor>Realistic, Single-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-2</dv>
+			<source>SM</source>
+			<page>171</page>
+		</spell>
+		<spell>
+			<name>Swarm</name>
+			<descriptor>Realistic, Multi-Sense</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SM</source>
+			<page>170</page>
+		</spell>
+		<spell>
+			<name>Trid Entertainment</name>
+			<descriptor>Obvious, Multi-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>209</page>
+		</spell>
+		<spell>
+			<name>Trid Phantasm</name>
+			<descriptor>Realistic, Multi-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SR4</source>
+			<page>209</page>
+		</spell>
+		<spell>
+			<name>Vehicle Mask</name>
+			<descriptor>Realistic, Multi-Sense</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-2</dv>
+			<source>SM</source>
+			<page>171</page>
+		</spell>
+		<spell>
+			<name>Alter Memory</name>
+			<descriptor>Mental</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)+2</dv>
+			<source>SM</source>
+			<page>171</page>
+		</spell>
+		<spell>
+			<name>Alter Temperature</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SM</source>
+			<page>171</page>
+		</spell>
+		<spell>
+			<name>Animate</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>172</page>
+		</spell>
+		<spell>
+			<name>Armor</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SR4</source>
+			<page>210</page>
+		</spell>
+		<spell>
+			<name>Astral Armor</name>
+			<descriptor>Mana</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SM</source>
+			<page>172</page>
+		</spell>
+		<spell>
+			<name>Bind</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SM</source>
+			<page>172</page>
+		</spell>
+		<spell>
+			<name>Calm Animal</name>
+			<descriptor>Mental</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SM</source>
+			<page>172</page>
+		</spell>
+		<spell>
+			<name>Calm Pack</name>
+			<descriptor>Mental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SM</source>
+			<page>172</page>
+		</spell>
+		<spell>
+			<name>Catfall</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>172</page>
+		</spell>
+		<spell>
+			<name>Clean [Element]</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)+2</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>172</page>
+		</spell>
+		<spell>
+			<name>Compel Truth</name>
+			<descriptor>Mental</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SM</source>
+			<page>172</page>
+		</spell>
+		<spell>
+			<name>Control Actions</name>
+			<descriptor>Mental</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SR4</source>
+			<page>210</page>
+		</spell>
+		<spell>
+			<name>Control Animal</name>
+			<descriptor>Mental</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SM</source>
+			<page>172</page>
+		</spell>
+		<spell>
+			<name>Control Emotions</name>
+			<descriptor>Mental</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SR4</source>
+			<page>210</page>
+		</spell>
+		<spell>
+			<name>Control Pack</name>
+			<descriptor>Mental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>172</page>
+		</spell>
+		<spell>
+			<name>Control Thoughts</name>
+			<descriptor>Mental</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>210</page>
+		</spell>
+		<spell>
+			<name>Critter Form [Critter]</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SR4</source>
+			<page>211</page>
+		</spell>
+		<spell>
+			<name>Deflection</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SM</source>
+			<page>172</page>
+		</spell>
+		<spell>
+			<name>[Elemental] Aura</name>
+			<descriptor>Environmental</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>173</page>
+		</spell>
+		<spell>
+			<name>[Elemental] Cloud</name>
+			<descriptor>Environmental</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+5</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>WAR</source>
+			<page>178</page>
+		</spell>
+		<spell>
+			<name>[Elemental] Wall</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+5</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>173</page>
+		</spell>
+		<spell>
+			<name>Fashion</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>173</page>
+		</spell>
+		<spell>
+			<name>Firewater Aura</name>
+			<descriptor>Environmental</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+6</dv>
+			<source>DG</source>
+			<page>17</page>
+		</spell>
+		<spell>
+			<name>Fix</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)+1</dv>
+			<source>SM</source>
+			<page>173</page>
+		</spell>
+		<spell>
+			<name>Fling</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>I</duration>
+			<dv>(F/2)+1</dv>
+			<source>SR4</source>
+			<page>210</page>
+		</spell>
+		<spell>
+			<name>Gecko Crawl</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SM</source>
+			<page>173</page>
+		</spell>
+		<spell>
+			<name>Glue</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SM</source>
+			<page>173</page>
+		</spell>
+		<spell>
+			<name>Glue Strip</name>
+			<descriptor>Physical, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>173</page>
+		</spell>
+		<spell>
+			<name>Hidden Pocket</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SG</source>
+			<page>163</page>
+		</spell>
+		<spell>
+			<name>Ice Sheet</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>I</duration>
+			<dv>(F/2)+3</dv>
+			<source>SR4</source>
+			<page>210</page>
+		</spell>
+		<spell>
+			<name>Ignite</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)</dv>
+			<source>SR4</source>
+			<page>210</page>
+		</spell>
+		<spell>
+			<name>Influence</name>
+			<descriptor>Mental</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)+1</dv>
+			<source>SR4</source>
+			<page>210</page>
+		</spell>
+		<spell>
+			<name>Interference</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>173</page>
+		</spell>
+		<spell>
+			<name>Levitate</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SR4</source>
+			<page>210</page>
+		</spell>
+		<spell>
+			<name>Light</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>SR4</source>
+			<page>211</page>
+		</spell>
+		<spell>
+			<name>Lock</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>173</page>
+		</spell>
+		<spell>
+			<name>Looking Glass</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SG</source>
+			<page>163</page>
+		</spell>
+		<spell>
+			<name>Magic Fingers</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SR4</source>
+			<page>211</page>
+		</spell>
+		<spell>
+			<name>Makeover</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>173</page>
+		</spell>
+		<spell>
+			<name>Mana Barrier</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SR4</source>
+			<page>211</page>
+		</spell>
+		<spell>
+			<name>Mana Bind</name>
+			<descriptor>Mana</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>172</page>
+		</spell>
+		<spell>
+			<name>Mana Net</name>
+			<descriptor>Mana, Area</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SM</source>
+			<page>172</page>
+		</spell>
+		<spell>
+			<name>Mana Static</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)+4</dv>
+			<source>SM</source>
+			<page>173</page>
+		</spell>
+		<spell>
+			<name>Mass Animate</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SM</source>
+			<page>172</page>
+		</spell>
+		<spell>
+			<name>Mist</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>I</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>174</page>
+		</spell>
+		<spell>
+			<name>Mob Control</name>
+			<descriptor>Mental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>210</page>
+		</spell>
+		<spell>
+			<name>Mob Mind</name>
+			<descriptor>Mental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+4</dv>
+			<source>SR4</source>
+			<page>210</page>
+		</spell>
+		<spell>
+			<name>Mob Mood</name>
+			<descriptor>Mental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>210</page>
+		</spell>
+		<spell>
+			<name>Napalm Wall</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+8</dv>
+			<source>DG</source>
+			<page>17</page>
+		</spell>
+		<spell>
+			<name>Net</name>
+			<descriptor>Physical, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>172</page>
+		</spell>
+		<spell>
+			<name>Offensive Mana Barrier</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>174</page>
+		</spell>
+		<spell>
+			<name>Petrify</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>211</page>
+		</spell>
+		<spell>
+			<name>Physical Barrier</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SR4</source>
+			<page>211</page>
+		</spell>
+		<spell>
+			<name>Poltergeist</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SR4</source>
+			<page>211</page>
+		</spell>
+		<spell>
+			<name>Preserve</name>
+			<descriptor>Physical, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>174</page>
+		</spell>
+		<spell>
+			<name>Pulse</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>I</duration>
+			<dv>(F/2)+3</dv>
+			<source>SM</source>
+			<page>174</page>
+		</spell>
+		<spell>
+			<name>Radiation Barrier</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+5</dv>
+			<source>DG</source>
+			<page>17</page>
+		</spell>
+		<spell>
+			<name>Radiation Shield</name>
+			<descriptor>Environmental</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>DG</source>
+			<page>17</page>
+		</spell>
+		<spell>
+			<name>Recharge</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)+1</dv>
+			<source>WAR</source>
+			<page>178</page>
+		</spell>
+		<spell>
+			<name>Reinforce</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SM</source>
+			<page>174</page>
+		</spell>
+		<spell>
+			<name>Shadow</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>SR4</source>
+			<page>211</page>
+		</spell>
+		<spell>
+			<name>Shape [Material]</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>174</page>
+		</spell>
+		<spell>
+			<name>Shapechange</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>211</page>
+		</spell>
+		<spell>
+			<name>Slow</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)+3</dv>
+			<source>WAR</source>
+			<page>178</page>
+		</spell>
+		<spell>
+			<name>Spirit Barrier</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>SM</source>
+			<page>174</page>
+		</spell>
+		<spell>
+			<name>Spirit Zapper</name>
+			<descriptor>Environmental, Area</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SM</source>
+			<page>174</page>
+		</spell>
+		<spell>
+			<name>Sterilize</name>
+			<descriptor>Physical, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>I</duration>
+			<dv>(F/2)+2</dv>
+			<source>SM</source>
+			<page>174</page>
+		</spell>
+		<spell>
+			<name>Turn to Goo</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>SR4</source>
+			<page>211</page>
+		</spell>
+		<spell>
+			<name>Antirad Shield</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>SOX</source>
+			<page>59</page>
+		</spell>
+		<spell>
+			<name>Antirad Barrier</name>
+			<descriptor>Physical, Area</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS (A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+5</dv>
+			<source>SOX</source>
+			<page>59</page>
+		</spell>
+		<spell>
+			<name>Radiation Therapy</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)+3</dv>
+			<source>SOX</source>
+			<page>59</page>
+		</spell>
+		<spell>
+			<name>Air Filter</name>
+			<descriptor />
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>HP</source>
+			<page>162</page>
+		</spell>
+		<spell>
+			<name>Convert Blood to Ichor</name>
+			<descriptor />
+			<category>Health</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>I</duration>
+			<dv>(F/2)+1</dv>
+			<source>HP</source>
+			<page>162</page>
+		</spell>
+		<spell>
+			<name>Dehydrate</name>
+			<descriptor>Negative</descriptor>
+			<category>Health</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+2</dv>
+			<source>HP</source>
+			<page>162</page>
+		</spell>
+		<spell>
+			<name>Detect Air Pocket</name>
+			<descriptor>Active, Area</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>HP</source>
+			<page>162</page>
+		</spell>
+		<spell>
+			<name>Detect Air Pocket, Extended</name>
+			<descriptor>Active, Extended Area</descriptor>
+			<category>Detection</category>
+			<type>M</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+3</dv>
+			<source>HP</source>
+			<page>162</page>
+		</spell>
+		<spell>
+			<name>Evaporate</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>M</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)+2</dv>
+			<source>HP</source>
+			<page>162</page>
+		</spell>
+		<spell>
+			<name>Hydrate</name>
+			<descriptor />
+			<category>Health</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)</dv>
+			<source>HP</source>
+			<page>162</page>
+		</spell>
+		<spell>
+			<name>Inflict Disease</name>
+			<descriptor />
+			<category>Health</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>I</duration>
+			<dv>(F/2)+1</dv>
+			<source>HP</source>
+			<page>162</page>
+		</spell>
+		<spell>
+			<name>Insulate</name>
+			<descriptor />
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS(A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>HP</source>
+			<page>162</page>
+		</spell>
+		<spell>
+			<name>Pack Snow</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS(A)</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)+4</dv>
+			<source>HP</source>
+			<page>162</page>
+		</spell>
+		<spell>
+			<name>Personal Warmth</name>
+			<descriptor />
+			<category>Health</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)</dv>
+			<source>HP</source>
+			<page>162</page>
+		</spell>
+		<spell>
+			<name>Polar Fog</name>
+			<descriptor>Realistic, Single-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>M</type>
+			<range>LOS(A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)-1</dv>
+			<source>HP</source>
+			<page>162</page>
+		</spell>
+		<spell>
+			<name>Improved Polar Fog</name>
+			<descriptor>Realistic, Single-Sense, Area</descriptor>
+			<category>Illusion</category>
+			<type>P</type>
+			<range>LOS(A)</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+1</dv>
+			<source>HP</source>
+			<page>162</page>
+		</spell>
+		<spell>
+			<name>Rot</name>
+			<descriptor />
+			<category>Health</category>
+			<type>P</type>
+			<range>T</range>
+			<damage>0</damage>
+			<duration>I</duration>
+			<dv>(F/2)+3</dv>
+			<source>HP</source>
+			<page>162</page>
+		</spell>
+		<spell>
+			<name>Snow Tunnel</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)+3</dv>
+			<source>HP</source>
+			<page>163</page>
+		</spell>
+		<spell>
+			<name>Shape Ice</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>P</duration>
+			<dv>(F/2)</dv>
+			<source>HP</source>
+			<page>163</page>
+		</spell>
+		<spell>
+			<name>Body Glove</name>
+			<descriptor>Physical</descriptor>
+			<category>Manipulation</category>
+			<type>P</type>
+			<range>LOS</range>
+			<damage>0</damage>
+			<duration>S</duration>
+			<dv>(F/2)+4</dv>
+			<source>LOP</source>
+			<page>23</page>
+		</spell>
+	</spells>
+</chummer>

@@ -1,0 +1,3254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chummer>
+	<version>-885</version>
+	<categories>
+		<category>Armor</category>
+		<category>Clothing</category>
+		<category>Environmental Armor</category>
+		<category>Fashion</category>
+		<category>Helmets and Shields</category>
+		<category>Military Grade Armor</category>
+		<category>SecureTech PPP System</category>
+	</categories>
+	<armors>
+		<armor>
+			<name>Clothing</name>
+			<category>Clothing</category>
+			<b>0</b>
+			<i>0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>0</avail>
+			<cost>Variable(20-100000)</cost>
+			<source>SR4</source>
+			<page>326</page>
+		</armor>
+		<armor>
+			<name>Feedback Clothing</name>
+			<category>Clothing</category>
+			<b>0</b>
+			<i>0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>8</avail>
+			<cost>500</cost>
+			<source>SR4</source>
+			<page>326</page>
+		</armor>
+		<armor>
+			<name>Leather Jacket</name>
+			<category>Clothing</category>
+			<b>2</b>
+			<i>2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>0</avail>
+			<cost>200</cost>
+			<source>SR4</source>
+			<page>326</page>
+		</armor>
+		<armor>
+			<name>Mortimer of London: Berwick Suit Jacket</name>
+			<category>Clothing</category>
+			<b>+3</b>
+			<i>+2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>12</avail>
+			<cost>1500</cost>
+			<source>AR</source>
+			<page>45</page>
+		</armor>
+		<armor>
+			<name>Mortimer of London: Berwick Dinner Jacket</name>
+			<category>Clothing</category>
+			<b>+2</b>
+			<i>+2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>12</avail>
+			<cost>1750</cost>
+			<source>AR</source>
+			<page>45</page>
+		</armor>
+		<armor>
+			<name>Mortimer of London: Berwick Skirt/Trousers</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>12</avail>
+			<cost>800</cost>
+			<source>AR</source>
+			<page>45</page>
+		</armor>
+		<armor>
+			<name>Mortimer of London: Berwick Blouse/Shirt</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>12</avail>
+			<cost>550</cost>
+			<source>AR</source>
+			<page>45</page>
+		</armor>
+		<armor>
+			<name>Mortimer of London: Greatcoat Line</name>
+			<category>Clothing</category>
+			<b>6</b>
+			<i>5</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>8</avail>
+			<cost>3000</cost>
+			<bonus>
+				<concealability>-2</concealability>
+			</bonus>
+			<mods>
+				<name rating="2">Chemical Protection</name>
+				<name rating="2">Insulation</name>
+			</mods>
+			<source>AR</source>
+			<page>45</page>
+		</armor>
+		<armor>
+			<name>Mortimer of London: Ulysses Line</name>
+			<category>Clothing</category>
+			<b>6</b>
+			<i>4</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>8</avail>
+			<cost>2800</cost>
+			<bonus>
+				<concealability>-2</concealability>
+			</bonus>
+			<mods>
+				<name rating="4">Chemical Protection</name>
+			</mods>
+			<source>AR</source>
+			<page>45</page>
+		</armor>
+		<armor>
+			<name>Vashon Island: Aces High Jacket Line</name>
+			<category>Clothing</category>
+			<b>3</b>
+			<i>3</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>7</avail>
+			<cost>1250</cost>
+			<mods>
+				<name rating="1">Chemical Protection</name>
+				<name rating="1">Insulation</name>
+			</mods>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Vashon Island: Steampunk Overcoat</name>
+			<category>Clothing</category>
+			<b>+3</b>
+			<i>+3</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>7</avail>
+			<cost>1000</cost>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Vashon Island: Steampunk Corset/Vest</name>
+			<category>Clothing</category>
+			<b>+2</b>
+			<i>+2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>7</avail>
+			<cost>600</cost>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Vashon Island: Steampunk Slacks or Knickers/Petticoat and Skirt</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>7</avail>
+			<cost>400</cost>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Vashon Island: Steampunk Blouse/Shirt</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>7</avail>
+			<cost>250</cost>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Vashon Island: Steampunk Dressing Gown</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>7</avail>
+			<cost>750</cost>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Vashon Island: Synergist Suit Jacket</name>
+			<category>Clothing</category>
+			<b>+3</b>
+			<i>+2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>8</avail>
+			<cost>800</cost>
+			<bonus>
+				<concealability>-2</concealability>
+			</bonus>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Vashon Island: Synergist Short Jacket</name>
+			<category>Clothing</category>
+			<b>+2</b>
+			<i>+2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>8</avail>
+			<cost>500</cost>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Vashon Island: Synergist Skirt/Slacks</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>8</avail>
+			<cost>400</cost>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Vashon Island: Synergist High-collar Shirt</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>8</avail>
+			<cost>300</cost>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Vashon Island: Synergist Longcoat</name>
+			<category>Clothing</category>
+			<b>+4</b>
+			<i>+2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>8</avail>
+			<cost>1300</cost>
+			<bonus>
+				<concealability>-4</concealability>
+			</bonus>
+			<gears>
+				<usegear>Concealable Holster</usegear>
+			</gears>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Victory: Globetrotter Camouflage Jacket</name>
+			<category>Clothing</category>
+			<b>6</b>
+			<i>4</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>5</avail>
+			<cost>1000</cost>
+			<addmodcategory>Victory Liners</addmodcategory>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Victory: Globetrotter Camouflage Jumpsuit</name>
+			<category>Clothing</category>
+			<b>5</b>
+			<i>3</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>5</avail>
+			<cost>750</cost>
+			<addmodcategory>Victory Liners</addmodcategory>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Victory: Globetrotter Camouflage Vest</name>
+			<category>Clothing</category>
+			<b>3</b>
+			<i>3</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>5</avail>
+			<cost>400</cost>
+			<addmodcategory>Victory Liners</addmodcategory>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Victory: Globetrotter Light Armor Clothing</name>
+			<category>Clothing</category>
+			<b>3</b>
+			<i>0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>5</avail>
+			<cost>400</cost>
+			<addmodcategory>Victory Liners</addmodcategory>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Victory: Globetrotter Heavy Armor Clothing</name>
+			<category>Clothing</category>
+			<b>4</b>
+			<i>2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>5</avail>
+			<cost>600</cost>
+			<addmodcategory>Victory Liners</addmodcategory>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Victory: Globetrotter Fatigues</name>
+			<category>Clothing</category>
+			<b>3</b>
+			<i>0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>5</avail>
+			<cost>500</cost>
+			<addmodcategory>Victory Liners</addmodcategory>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Victory: Industrious Jumpsuit</name>
+			<category>Clothing</category>
+			<b>4</b>
+			<i>2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>4</avail>
+			<cost>700</cost>
+			<mods>
+				<name rating="2">Chemical Protection</name>
+				<name rating="2">Fire Resistance</name>
+			</mods>
+			<source>AR</source>
+			<page>47</page>
+		</armor>
+		<armor>
+			<name>Victory: Industrious Coverall</name>
+			<category>Clothing</category>
+			<b>5</b>
+			<i>4</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>4</avail>
+			<cost>900</cost>
+			<mods>
+				<name rating="2">Chemical Protection</name>
+				<name rating="2">Fire Resistance</name>
+			</mods>
+			<source>AR</source>
+			<page>47</page>
+		</armor>
+		<armor>
+			<name>Victory: Industrious Winterized Coverall</name>
+			<category>Clothing</category>
+			<b>6</b>
+			<i>5</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>4</avail>
+			<cost>1000</cost>
+			<mods>
+				<name rating="2">Chemical Protection</name>
+				<name rating="2">Fire Resistance</name>
+				<name rating="2">Insulation</name>
+			</mods>
+			<source>AR</source>
+			<page>47</page>
+		</armor>
+		<armor>
+			<name>Victory: Industrious Hard Hat</name>
+			<category>Helmets and Shields</category>
+			<b>+0</b>
+			<i>+2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>4</avail>
+			<cost>50</cost>
+			<mods>
+				<name rating="2">Chemical Protection</name>
+				<name rating="2">Fire Resistance</name>
+			</mods>
+			<source>AR</source>
+			<page>47</page>
+		</armor>
+		<armor>
+			<name>Zoé: Executive Suite Long Jacket</name>
+			<category>Clothing</category>
+			<b>+4</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>9</avail>
+			<cost>1000</cost>
+			<source>AR</source>
+			<page>47</page>
+		</armor>
+		<armor>
+			<name>Zoé: Executive Suite Short Jacket</name>
+			<category>Clothing</category>
+			<b>+3</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>9</avail>
+			<cost>750</cost>
+			<source>AR</source>
+			<page>47</page>
+		</armor>
+		<armor>
+			<name>Zoé: Executive Suite Plain Blouse/Shirt</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>9</avail>
+			<cost>400</cost>
+			<source>AR</source>
+			<page>47</page>
+		</armor>
+		<armor>
+			<name>Zoé: Executive Suite Skirt/Trousers</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>9</avail>
+			<cost>550</cost>
+			<source>AR</source>
+			<page>47</page>
+		</armor>
+		<armor>
+			<name>Zoé: Moonsilver Evening Gown</name>
+			<category>Clothing</category>
+			<b>4</b>
+			<i>1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>7500</cost>
+			<source>AR</source>
+			<page>47</page>
+		</armor>
+		<armor>
+			<name>Zoé: Moonsilver Cocktail Dress</name>
+			<category>Clothing</category>
+			<b>3</b>
+			<i>1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>5000</cost>
+			<source>AR</source>
+			<page>47</page>
+		</armor>
+		<armor>
+			<name>Zoé: Moonsilver Scarf</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>Variable(500-1000)</cost>
+			<source>AR</source>
+			<page>47</page>
+		</armor>
+		<armor>
+			<name>Zoé: Second Skin</name>
+			<category>Clothing</category>
+			<b>4</b>
+			<i>1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>12</avail>
+			<cost>5000</cost>
+			<addmodcategory>Second Skin Polymer</addmodcategory>
+			<source>AR</source>
+			<page>48</page>
+		</armor>
+		<armor>
+			<name>Clockwork Vest</name>
+			<category>Clothing</category>
+			<b>1</b>
+			<i>1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>6</avail>
+			<cost>200</cost>
+			<source>AT</source>
+			<page>154</page>
+		</armor>
+		<armor>
+			<name>Tiffany Dress</name>
+			<category>Clothing</category>
+			<b>4</b>
+			<i>3</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>8500</cost>
+			<source>AT</source>
+			<page>154</page>
+		</armor>
+		<armor>
+			<name>Strict-9 Jacket</name>
+			<category>Clothing</category>
+			<b>4</b>
+			<i>1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>8</avail>
+			<cost>2200</cost>
+			<source>AT</source>
+			<page>157</page>
+		</armor>
+		<armor>
+			<name>Teg-mentum</name>
+			<category>Clothing</category>
+			<b>4</b>
+			<i>1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>3000</cost>
+			<source>AT</source>
+			<page>157</page>
+		</armor>
+		<armor>
+			<name>H-jumpsuit</name>
+			<category>Clothing</category>
+			<b>3</b>
+			<i>2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>2500</cost>
+			<source>AT</source>
+			<page>157</page>
+		</armor>
+		<armor>
+			<name>Holo Gloves</name>
+			<category>Clothing</category>
+			<b>0</b>
+			<i>0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>500</cost>
+			<source>AT</source>
+			<page>157</page>
+		</armor>
+		<armor>
+			<name>Holo Hood</name>
+			<category>Clothing</category>
+			<b>0</b>
+			<i>0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>475</cost>
+			<source>AT</source>
+			<page>157</page>
+		</armor>
+		<armor>
+			<name>Livingware Coat</name>
+			<category>Clothing</category>
+			<b>1</b>
+			<i>3</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>15</avail>
+			<cost>8000</cost>
+			<source>AT</source>
+			<page>159</page>
+		</armor>
+		<armor>
+			<name>Symbiote Earrings</name>
+			<category>Clothing</category>
+			<b>0</b>
+			<i>0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>12</avail>
+			<cost>2000</cost>
+			<source>AT</source>
+			<page>159</page>
+		</armor>
+		<armor>
+			<name>Symbiote Anemone Ring</name>
+			<category>Clothing</category>
+			<b>0</b>
+			<i>0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>2300</cost>
+			<source>AT</source>
+			<page>159</page>
+		</armor>
+		<armor>
+			<name>Symbiote Pendant</name>
+			<category>Clothing</category>
+			<b>0</b>
+			<i>0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>1800</cost>
+			<source>AT</source>
+			<page>159</page>
+		</armor>
+		<armor>
+			<name>Anielski-Joop Reconquista Overcoat</name>
+			<category>Clothing</category>
+			<b>+3</b>
+			<i>+2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>2000</cost>
+			<mods>
+				<name rating="3">Chemical Protection</name>
+			</mods>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>Anielski-Joop Reconquista Waistcoat</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>1250</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>Anielski-Joop Reconquista Frock-Coat/Trousers</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>850</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>Anielski-Joop Reconquista Boots</name>
+			<category>Clothing</category>
+			<b>+0</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>500</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>dressCODE CYBERPIRATE Jacket</name>
+			<category>Clothing</category>
+			<b>+3</b>
+			<i>+2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>7</avail>
+			<cost>500</cost>
+			<mods>
+				<name rating="2">Chemical Protection</name>
+			</mods>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>dressCODE CYBERPIRATE T-Shirt/Tube Top</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>7</avail>
+			<cost>200</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>dressCODE CYBERPIRATE Trousers/Skirt</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>7</avail>
+			<cost>300</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>dressCODE CYBERPIRATE Hotpants</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>7</avail>
+			<cost>200</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>dressCODE CYBERPIRATE Hotpants with Chaps</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>7</avail>
+			<cost>350</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>Rheingold zeitloS Aurora Overcoat</name>
+			<category>Clothing</category>
+			<b>3</b>
+			<i>2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>2000</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>Rheingold zeitloS Aurora Blazer</name>
+			<category>Clothing</category>
+			<b>1</b>
+			<i>1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>1250</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>Rheingold zeitloS Aurora Blouse/Shirt</name>
+			<category>Clothing</category>
+			<b>+1</b>
+			<i>+0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>850</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>Rheingold zeitloS Aurora Trousers/Skirt</name>
+			<category>Clothing</category>
+			<b>+0</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>500</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>Actioneer Business Clothes</name>
+			<category>Armor</category>
+			<b>5</b>
+			<i>3</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>8</avail>
+			<cost>1500</cost>
+			<bonus>
+				<concealability>-2</concealability>
+			</bonus>
+			<source>SR4</source>
+			<page>326</page>
+		</armor>
+		<armor>
+			<name>Armor Clothing</name>
+			<category>Armor</category>
+			<b>4</b>
+			<i>0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>2</avail>
+			<cost>500</cost>
+			<addmodcategory>Clothing</addmodcategory>
+			<source>SR4</source>
+			<page>326</page>
+		</armor>
+		<armor>
+			<name>Armor Jacket</name>
+			<category>Armor</category>
+			<b>8</b>
+			<i>6</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>2</avail>
+			<cost>900</cost>
+			<source>SR4</source>
+			<page>326</page>
+		</armor>
+		<armor>
+			<name>Armor Vest</name>
+			<category>Armor</category>
+			<b>6</b>
+			<i>4</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>4</avail>
+			<cost>600</cost>
+			<source>SR4</source>
+			<page>326</page>
+		</armor>
+		<armor>
+			<name>Bike Racing Armor</name>
+			<category>Armor</category>
+			<b>4</b>
+			<i>7</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>6</avail>
+			<cost>500</cost>
+			<source>AR</source>
+			<page>48</page>
+		</armor>
+		<armor>
+			<name>Body Armor Bag</name>
+			<category>Armor</category>
+			<b>6</b>
+			<i>2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>8</avail>
+			<cost>750</cost>
+			<source>AR</source>
+			<page>48</page>
+		</armor>
+		<armor>
+			<name>Bunker Gear</name>
+			<category>Armor</category>
+			<b>3</b>
+			<i>6</i>
+			<armorcapacity>4</armorcapacity>
+			<avail>6</avail>
+			<cost>2500</cost>
+			<mods>
+				<name rating="4">Chemical Protection</name>
+				<name rating="6">Fire Resistance</name>
+			</mods>
+			<source>AR</source>
+			<page>49</page>
+		</armor>
+		<armor>
+			<name>Camouflage Suit</name>
+			<category>Armor</category>
+			<b>8</b>
+			<i>6</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>4</avail>
+			<cost>1200</cost>
+			<addmodcategory>Chemical Seal</addmodcategory>
+			<source>SR4</source>
+			<page>326</page>
+		</armor>
+		<armor>
+			<name>Chain Shirt</name>
+			<category>Armor</category>
+			<b>2</b>
+			<i>7</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>8</avail>
+			<cost>900</cost>
+			<source>AR</source>
+			<page>48</page>
+		</armor>
+		<armor>
+			<name>Chameleon Suit</name>
+			<category>Armor</category>
+			<b>6</b>
+			<i>4</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10R</avail>
+			<cost>8000</cost>
+			<addmodcategory>Chemical Seal</addmodcategory>
+			<source>SR4</source>
+			<page>326</page>
+		</armor>
+		<armor>
+			<name>Form-Fitting Shirt</name>
+			<category>Armor</category>
+			<b>+3</b>
+			<i>+0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>6</avail>
+			<cost>500</cost>
+			<source>AR</source>
+			<page>48</page>
+		</armor>
+		<armor>
+			<name>Form-Fitting Half-Body Suit</name>
+			<category>Armor</category>
+			<b>+4</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>7</avail>
+			<cost>900</cost>
+			<source>AR</source>
+			<page>48</page>
+		</armor>
+		<armor>
+			<name>Form-Fitting Full-Body Suit</name>
+			<category>Armor</category>
+			<b>+6</b>
+			<i>+2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>8</avail>
+			<cost>1600</cost>
+			<addmodcategory>Chemical Seal</addmodcategory>
+			<source>AR</source>
+			<page>48</page>
+		</armor>
+		<armor>
+			<name>Full Body Armor</name>
+			<category>Armor</category>
+			<b>10</b>
+			<i>8</i>
+			<armorcapacity>8</armorcapacity>
+			<avail>14R</avail>
+			<cost>6000</cost>
+			<addmodcategory>Chemical Seal</addmodcategory>
+			<source>SR4</source>
+			<page>326</page>
+		</armor>
+		<armor>
+			<name>Lined Coat</name>
+			<category>Armor</category>
+			<b>6</b>
+			<i>4</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>2</avail>
+			<cost>700</cost>
+			<bonus>
+				<concealability>-2</concealability>
+			</bonus>
+			<source>SR4</source>
+			<page>326</page>
+		</armor>
+		<armor>
+			<name>Padded Leather Armor</name>
+			<category>Armor</category>
+			<b>2</b>
+			<i>5</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>8</avail>
+			<cost>600</cost>
+			<source>AR</source>
+			<page>48</page>
+		</armor>
+		<armor>
+			<name>Paper Armor</name>
+			<category>Armor</category>
+			<b>1</b>
+			<i>4</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>4</avail>
+			<cost>100</cost>
+			<source>AT</source>
+			<page>155</page>
+		</armor>
+		<armor>
+			<name>Riot Control Armor</name>
+			<category>Armor</category>
+			<b>6</b>
+			<i>9</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>10R</avail>
+			<cost>3000</cost>
+			<addmodcategory>Chemical Seal</addmodcategory>
+			<mods>
+				<name>Shock Frills</name>
+				<name rating="2">Fire Resistance</name>
+			</mods>
+			<source>AR</source>
+			<page>49</page>
+		</armor>
+		<armor>
+			<name>SWAT Armor</name>
+			<category>Armor</category>
+			<b>12</b>
+			<i>10</i>
+			<armorcapacity>8</armorcapacity>
+			<avail>16R</avail>
+			<cost>8000</cost>
+			<mods>
+				<name rating="4">Fire Resistance</name>
+				<name>Biomonitor</name>
+			</mods>
+			<source>AR</source>
+			<page>49</page>
+		</armor>
+		<armor>
+			<name>Urban Explorer Jumpsuit</name>
+			<category>Armor</category>
+			<b>6</b>
+			<i>6</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>8</avail>
+			<cost>500</cost>
+			<mods>
+				<name>Biomonitor</name>
+			</mods>
+			<addmodcategory>Chemical Seal</addmodcategory>
+			<source>SR4</source>
+			<page>326</page>
+		</armor>
+		<armor>
+			<name>Diving Armor</name>
+			<category>Environmental Armor</category>
+			<b>5</b>
+			<i>4</i>
+			<armorcapacity>3</armorcapacity>
+			<avail>6</avail>
+			<cost>1750</cost>
+			<mods>
+				<name rating="4">Chemical Protection</name>
+				<name rating="1">Insulation</name>
+			</mods>
+			<source>AR</source>
+			<page>55</page>
+		</armor>
+		<armor>
+			<name>Evo HEL Suit</name>
+			<category>Environmental Armor</category>
+			<b>4</b>
+			<i>6</i>
+			<armorcapacity>5</armorcapacity>
+			<avail>10</avail>
+			<cost>3000</cost>
+			<mods>
+				<name rating="4">Insulation</name>
+				<name rating="2">Fire Resistance</name>
+				<name rating="3">Radiation Shielding</name>
+				<name rating="2">Chemical Protection</name>
+			</mods>
+			<source>AR</source>
+			<page>54</page>
+		</armor>
+		<armor>
+			<name>Mitsuhama EE Suit</name>
+			<category>Environmental Armor</category>
+			<b>3</b>
+			<i>3</i>
+			<armorcapacity>5</armorcapacity>
+			<avail>4</avail>
+			<cost>1500</cost>
+			<mods>
+				<name>Chemical Seal</name>
+				<name rating="3">Fire Resistance</name>
+				<name rating="6">Radiation Shielding</name>
+			</mods>
+			<source>AR</source>
+			<page>55</page>
+		</armor>
+		<armor>
+			<name>Polar Survival Suit</name>
+			<category>Environmental Armor</category>
+			<b>1</b>
+			<i>3</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>8</avail>
+			<cost>1000</cost>
+			<bonus>
+				<specificskill>
+					<name>Climbing</name>
+					<bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<mods>
+				<name rating="6">Insulation</name>
+				<name rating="4">Thermal Damping</name>
+			</mods>
+			<source>AR</source>
+			<page>52</page>
+		</armor>
+		<armor>
+			<name>Security Spacesuit</name>
+			<category>Environmental Armor</category>
+			<b>12</b>
+			<i>12</i>
+			<armorcapacity>8</armorcapacity>
+			<avail>24</avail>
+			<cost>25000</cost>
+			<mods>
+				<name>Biomonitor</name>
+				<name rating="6">Chemical Protection</name>
+				<name rating="6">Insulation</name>
+				<name rating="4">Thermal Damping</name>
+			</mods>
+			<source>AR</source>
+			<page>54</page>
+		</armor>
+		<armor>
+			<name>Spacesuit</name>
+			<category>Environmental Armor</category>
+			<b>6</b>
+			<i>8</i>
+			<armorcapacity>4</armorcapacity>
+			<avail>16</avail>
+			<cost>12000</cost>
+			<mods>
+				<name>Biomonitor</name>
+				<name rating="6">Chemical Protection</name>
+				<name rating="6">Insulation</name>
+				<name rating="4">Thermal Damping</name>
+			</mods>
+			<source>AR</source>
+			<page>55</page>
+		</armor>
+		<armor>
+			<name>SK Myrmidon Armor</name>
+			<category>Military Grade Armor</category>
+			<b>16</b>
+			<i>14</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>18F</avail>
+			<cost>32500</cost>
+			<addmodcategory>Military Grade Armor</addmodcategory>
+			<mods>
+				<name>Chemical Seal</name>
+				<name rating="3">Thermal Damping</name>
+				<name>Articulated Weapon Arm</name>
+			</mods>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>Light Military Armor</name>
+			<category>Military Grade Armor</category>
+			<b>12</b>
+			<i>10</i>
+			<armorcapacity>10</armorcapacity>
+			<avail>16F</avail>
+			<cost>12000</cost>
+			<addmodcategory>Chemical Seal</addmodcategory>
+			<addmodcategory>Military Grade Armor</addmodcategory>
+			<mods>
+				<name>Biomonitor</name>
+			</mods>
+			<source>AR</source>
+			<page>51</page>
+		</armor>
+		<armor>
+			<name>Medium Military Armor</name>
+			<category>Military Grade Armor</category>
+			<b>14</b>
+			<i>12</i>
+			<armorcapacity>15</armorcapacity>
+			<avail>18F</avail>
+			<cost>16000</cost>
+			<addmodcategory>Chemical Seal</addmodcategory>
+			<addmodcategory>Military Grade Armor</addmodcategory>
+			<mods>
+				<name>Biomonitor</name>
+			</mods>
+			<source>AR</source>
+			<page>51</page>
+		</armor>
+		<armor>
+			<name>Heavy Military Armor</name>
+			<category>Military Grade Armor</category>
+			<b>16</b>
+			<i>14</i>
+			<armorcapacity>20</armorcapacity>
+			<avail>20F</avail>
+			<cost>20000</cost>
+			<addmodcategory>Chemical Seal</addmodcategory>
+			<addmodcategory>Military Grade Armor</addmodcategory>
+			<mods>
+				<name>Biomonitor</name>
+			</mods>
+			<source>AR</source>
+			<page>51</page>
+		</armor>
+		<armor>
+			<name>Oyoroi Armor</name>
+			<category>Military Grade Armor</category>
+			<b>11</b>
+			<i>11</i>
+			<armorcapacity>11</armorcapacity>
+			<avail>18F</avail>
+			<cost>11000</cost>
+			<addmodcategory>Chemical Seal</addmodcategory>
+			<addmodcategory>Military Grade Armor</addmodcategory>
+			<mods>
+				<name>Biomonitor</name>
+			</mods>
+			<source>AR</source>
+			<page>51</page>
+		</armor>
+		<armor>
+			<name>Red Samurai Armor</name>
+			<category>Military Grade Armor</category>
+			<b>13</b>
+			<i>13</i>
+			<armorcapacity>12</armorcapacity>
+			<avail>20F</avail>
+			<cost>15000</cost>
+			<addmodcategory>Chemical Seal</addmodcategory>
+			<addmodcategory>Military Grade Armor</addmodcategory>
+			<mods>
+				<name>Biomonitor</name>
+				<name rating="2">Mobility Upgrade</name>
+			</mods>
+			<source>AR</source>
+			<page>51</page>
+		</armor>
+		<armor>
+			<name>Helmet</name>
+			<category>Helmets and Shields</category>
+			<addoncategory>Vision Enhancements</addoncategory>
+			<addoncategory>Audio Enhancements</addoncategory>
+			<b>+1</b>
+			<i>+2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>2</avail>
+			<cost>100</cost>
+			<source>SR4</source>
+			<page>327</page>
+		</armor>
+		<armor>
+			<name>Ballistic Shield</name>
+			<category>Helmets and Shields</category>
+			<b>+6</b>
+			<i>+4</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>12R</avail>
+			<cost>1500</cost>
+			<source>SR4</source>
+			<page>327</page>
+		</armor>
+		<armor>
+			<name>Riot Shield</name>
+			<category>Helmets and Shields</category>
+			<b>+2</b>
+			<i>+6</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>6R</avail>
+			<cost>200</cost>
+			<source>SR4</source>
+			<page>327</page>
+		</armor>
+		<armor>
+			<name>Taser Shield</name>
+			<category>Helmets and Shields</category>
+			<b>+2</b>
+			<i>+6</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10R</avail>
+			<cost>750</cost>
+			<source>SR4</source>
+			<page>327</page>
+		</armor>
+		<armor>
+			<name>Riot Control Helmet</name>
+			<category>Helmets and Shields</category>
+			<addoncategory>Vision Enhancements</addoncategory>
+			<addoncategory>Audio Enhancements</addoncategory>
+			<b>+1</b>
+			<i>+2</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>10R</avail>
+			<cost>1000</cost>
+			<gears>
+				<usegear>Image Link</usegear>
+			</gears>
+			<source>AR</source>
+			<page>49</page>
+		</armor>
+		<armor>
+			<name>SWAT Helmet</name>
+			<category>Helmets and Shields</category>
+			<addoncategory>Vision Enhancements</addoncategory>
+			<addoncategory>Audio Enhancements</addoncategory>
+			<b>+2</b>
+			<i>+2</i>
+			<armorcapacity>4</armorcapacity>
+			<avail>16R</avail>
+			<cost>1200</cost>
+			<gears>
+				<usegear>Gas Mask</usegear>
+				<usegear>Image Link</usegear>
+				<usegear>Low Light</usegear>
+				<usegear>Smartlink</usegear>
+				<usegear>Flare Compensation</usegear>
+			</gears>
+			<source>AR</source>
+			<page>51</page>
+		</armor>
+		<armor>
+			<name>Urban Explorer Helmet</name>
+			<category>Helmets and Shields</category>
+			<addoncategory>Vision Enhancements</addoncategory>
+			<addoncategory>Audio Enhancements</addoncategory>
+			<b>+0</b>
+			<i>+2</i>
+			<armorcapacity>5</armorcapacity>
+			<avail>8</avail>
+			<cost>50</cost>
+			<source>SR4</source>
+			<page>326</page>
+		</armor>
+		<armor>
+			<name>Military Helmet (Rating 4)</name>
+			<category>Helmets and Shields</category>
+			<addoncategory>Vision Enhancements</addoncategory>
+			<addoncategory>Audio Enhancements</addoncategory>
+			<b>+2</b>
+			<i>+2</i>
+			<armorcapacity>5</armorcapacity>
+			<avail>16F</avail>
+			<cost>10000</cost>
+			<gears>
+				<usegear rating="1">Camera</usegear>
+				<usegear>Flare Compensation</usegear>
+				<usegear>Image Link</usegear>
+				<usegear>Smartlink</usegear>
+				<usegear>Custom Commlink</usegear>
+				<usegear>Firewall 4</usegear>
+				<usegear>Response 4</usegear>
+				<usegear>Signal 4</usegear>
+				<usegear>System 4</usegear>
+				<usegear rating="4">Encrypt</usegear>
+			</gears>
+			<source>AR</source>
+			<page>51</page>
+		</armor>
+		<armor>
+			<name>Military Helmet (Rating 5)</name>
+			<category>Helmets and Shields</category>
+			<addoncategory>Vision Enhancements</addoncategory>
+			<addoncategory>Audio Enhancements</addoncategory>
+			<b>+2</b>
+			<i>+2</i>
+			<armorcapacity>5</armorcapacity>
+			<avail>16F</avail>
+			<cost>12500</cost>
+			<gears>
+				<usegear rating="1">Camera</usegear>
+				<usegear>Flare Compensation</usegear>
+				<usegear>Image Link</usegear>
+				<usegear>Smartlink</usegear>
+				<usegear>Custom Commlink</usegear>
+				<usegear>Firewall 5</usegear>
+				<usegear>Response 5</usegear>
+				<usegear>Signal 5</usegear>
+				<usegear>System 5</usegear>
+				<usegear rating="5">Encrypt</usegear>
+			</gears>
+			<source>AR</source>
+			<page>51</page>
+		</armor>
+		<armor>
+			<name>Military Helmet (Rating 6)</name>
+			<category>Helmets and Shields</category>
+			<addoncategory>Vision Enhancements</addoncategory>
+			<addoncategory>Audio Enhancements</addoncategory>
+			<b>+2</b>
+			<i>+2</i>
+			<armorcapacity>5</armorcapacity>
+			<avail>16F</avail>
+			<cost>18500</cost>
+			<gears>
+				<usegear rating="1">Camera</usegear>
+				<usegear>Flare Compensation</usegear>
+				<usegear>Image Link</usegear>
+				<usegear>Smartlink</usegear>
+				<usegear>Custom Commlink</usegear>
+				<usegear>Firewall 6</usegear>
+				<usegear>Response 6</usegear>
+				<usegear>Signal 6</usegear>
+				<usegear>System 6</usegear>
+				<usegear rating="6">Encrypt</usegear>
+			</gears>
+			<source>AR</source>
+			<page>51</page>
+		</armor>
+		<armor>
+			<name>Kabuto Helmet</name>
+			<category>Helmets and Shields</category>
+			<addoncategory>Vision Enhancements</addoncategory>
+			<addoncategory>Audio Enhancements</addoncategory>
+			<b>+2</b>
+			<i>+2</i>
+			<armorcapacity>4</armorcapacity>
+			<avail>18F</avail>
+			<cost>10000</cost>
+			<source>AR</source>
+			<page>51</page>
+		</armor>
+		<armor>
+			<name>SK Myrmidon Helmet</name>
+			<category>Helmets and Shields</category>
+			<addoncategory>Vision Enhancements</addoncategory>
+			<addoncategory>Audio Enhancements</addoncategory>
+			<b>+2</b>
+			<i>+2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>24F</avail>
+			<cost>15000</cost>
+			<gears>
+				<usegear>Ultrasound</usegear>
+				<usegear>Olfactory Sensor</usegear>
+			</gears>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>Bike Racing Helmet</name>
+			<category>Helmets and Shields</category>
+			<addoncategory>Vision Enhancements</addoncategory>
+			<addoncategory>Audio Enhancements</addoncategory>
+			<b>+1</b>
+			<i>+2</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>6</avail>
+			<cost>200</cost>
+			<gears>
+				<usegear>Image Link</usegear>
+				<usegear>Flare Compensation</usegear>
+			</gears>
+			<source>AR</source>
+			<page>48</page>
+		</armor>
+		<armor>
+			<name>Bunker Gear Helmet</name>
+			<category>Helmets and Shields</category>
+			<addoncategory>Vision Enhancements</addoncategory>
+			<addoncategory>Audio Enhancements</addoncategory>
+			<b>+1</b>
+			<i>+2</i>
+			<armorcapacity>3</armorcapacity>
+			<avail>6</avail>
+			<cost>750</cost>
+			<mods>
+				<name rating="4">Chemical Protection</name>
+				<name rating="6">Fire Resistance</name>
+			</mods>
+			<gears>
+				<usegear>Thermographic</usegear>
+				<usegear>Low Light</usegear>
+				<usegear>Flare Compensation</usegear>
+				<usegear>Gas Mask</usegear>
+			</gears>
+			<source>AR</source>
+			<page>49</page>
+		</armor>
+		<armor>
+			<name>Full Body Armor Helmet</name>
+			<category>Helmets and Shields</category>
+			<addoncategory>Vision Enhancements</addoncategory>
+			<addoncategory>Audio Enhancements</addoncategory>
+			<b>+2</b>
+			<i>+2</i>
+			<armorcapacity>7</armorcapacity>
+			<avail>14R</avail>
+			<cost>1000</cost>
+			<source>SR4</source>
+			<page>326</page>
+		</armor>
+		<armor>
+			<name>Ballistic Mask</name>
+			<category>Helmets and Shields</category>
+			<addoncategory>Vision Enhancements</addoncategory>
+			<addoncategory>Audio Enhancements</addoncategory>
+			<b>+2</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>7</avail>
+			<cost>130</cost>
+			<source>WAR</source>
+			<page>160</page>
+		</armor>
+		<armor>
+			<name>Death Mask</name>
+			<category>Helmets and Shields</category>
+			<addoncategory>Vision Enhancements</addoncategory>
+			<addoncategory>Audio Enhancements</addoncategory>
+			<b>+0</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>2</avail>
+			<cost>275</cost>
+			<bonus>
+				<specificskill>
+					<name>Intimidation</name>
+					<bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<source>AT</source>
+			<page>155</page>
+		</armor>
+        <armor>
+            <name>6 Tees casualwear (Horizon)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+			<avail>0</avail>
+            <cost>20</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>6 Tees urban fashion (Horizon)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>150</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Ami Feather designer fashion</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>7000</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Armanté designer fashion</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>5000</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Aston designer fashion</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>5000</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Beaux Retail casualwear (Mitsuhama)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+			<avail>0</avail>
+            <cost>20</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Beaux Retail businesswear (Mitsuhama)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>100</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Berwick businesswear (Mortimer of London)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>1000</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Berwick designer fashion (Mortimer of London)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>5000</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Bodyline casualwear(Spinrad Industries)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+			<avail>0</avail>
+            <cost>30</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Bodyline urban fashion (Spinrad Industries)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>50</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Brilliance businesswear (Horizon)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>100</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Brilliance formalwear (Horizon)</name>
+            <category>Fashion</category>
+			<b>0</b>
+			<i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>285</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>CD/Common Denominator (Evo)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>20</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>De Button (Aztechnology)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>85</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>DressCode (Amalgamated Studios)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>60</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Europa (Renraku)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>90</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Furba (NeoNET)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>55</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Jean-Paul designer fashion</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>7000</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>KoGo (Wuxing)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>205</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Laurentine de Lion (Proteus)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>250</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Lyric of Portland (Telestrian)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+			<avail>0</avail>
+            <cost>50</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>ME MetaL casualwear (Evo)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+			<avail>0</avail>
+            <cost>45</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>ME MetaL urban fashion(Evo)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>60</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>MetaTribe (Evo)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>85</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>NuZoot casualwear (Monobe)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+			<avail>0</avail>
+            <cost>150</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>NuZoot urban fashion (Monobe)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>110</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>RhineGold (Saeder-Krupp)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>300</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Ripon of Mumbai designer fashion</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>5000</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Soul of Seoul (Proteus)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>300</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Très Chic Clothing casualwear (Aztechnology)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+			<avail>0</avail>
+            <cost>175</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Très Chic Clothing formalwear (Aztechnology)</name>
+            <category>Fashion</category>
+			<b>0</b>
+			<i>0</i>
+			<armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>300</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Tribale (Aztechnology)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>75</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Tropicaliente (UO)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+			<avail>0</avail>
+            <cost>50</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Vashon Island casualwear (Shiawase Fashion)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+			<avail>0</avail>
+            <cost>100</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Vashon Island businesswear (Shiawase Fashion)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>500</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Victory (Ares)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>25</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Wellington Bros (Shiawase Fashion)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>250</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Zoë businesswear (Zoë)</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>500</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+        <armor>
+            <name>Zoë de Paris</name>
+            <category>Fashion</category>
+            <b>0</b>
+            <i>0</i>
+            <armorcapacity>6</armorcapacity>
+            <avail>0</avail>
+            <cost>10000</cost>
+			<addmodcategory>Clothing</addmodcategory>
+            <source>AT</source>
+            <page>161</page>
+        </armor>
+		<armor>
+			<name>SecureTech Forearm Guards</name>
+			<category>SecureTech PPP System</category>
+			<b>+0</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>6</avail>
+			<cost>200</cost>
+			<source>AR</source>
+			<page>49</page>
+		</armor>
+		<armor>
+			<name>SecureTech Helmet</name>
+			<category>SecureTech PPP System</category>
+			<b>+0</b>
+			<i>+2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>4</avail>
+			<cost>100</cost>
+			<source>AR</source>
+			<page>49</page>
+		</armor>
+		<armor>
+			<name>SecureTech Arm Casings</name>
+			<category>SecureTech PPP System</category>
+			<b>+0</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>6</avail>
+			<cost>175</cost>
+			<source>AR</source>
+			<page>49</page>
+		</armor>
+		<armor>
+			<name>SecureTech Leg Casings</name>
+			<category>SecureTech PPP System</category>
+			<b>+0</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>6</avail>
+			<cost>175</cost>
+			<source>AR</source>
+			<page>49</page>
+		</armor>
+		<armor>
+			<name>SecureTech Leg and Arm Casings</name>
+			<category>SecureTech PPP System</category>
+			<b>+1</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>6</avail>
+			<cost>350</cost>
+			<source>AR</source>
+			<page>49</page>
+		</armor>
+		<armor>
+			<name>SecureTech Shin Guards</name>
+			<category>SecureTech PPP System</category>
+			<b>+0</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>5</avail>
+			<cost>150</cost>
+			<source>AR</source>
+			<page>49</page>
+		</armor>
+		<armor>
+			<name>SecureTech Vitals Protector</name>
+			<category>SecureTech PPP System</category>
+			<b>+1</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>4</avail>
+			<cost>200</cost>
+			<source>AR</source>
+			<page>49</page>
+		</armor>
+		<armor>
+			<name>Mortimer of London: Berwick Suit Jacket (Ensemble)</name>
+			<category>Clothing</category>
+			<b>+5</b>
+			<i>+3</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>12</avail>
+			<cost>2850</cost>
+			<gears>
+				<usegear>Concealable Holster</usegear>
+			</gears>
+			<source>AR</source>
+			<page>45</page>
+		</armor>
+		<armor>
+			<name>Mortimer of London: Berwick Dinner Jacket (Ensemble)</name>
+			<category>Clothing</category>
+			<b>+4</b>
+			<i>+3</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>12</avail>
+			<cost>3100</cost>
+			<source>AR</source>
+			<page>45</page>
+		</armor>
+		<armor>
+			<name>Vashon Island: Steampunk Corset/Vest (Ensemble)</name>
+			<category>Clothing</category>
+			<b>+7</b>
+			<i>+7</i>
+			<armorcapacity>7</armorcapacity>
+			<avail>7</avail>
+			<cost>2250</cost>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Vashon Island: Steampunk Dressing Gown (Ensemble)</name>
+			<category>Clothing</category>
+			<b>+6</b>
+			<i>+5</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>7</avail>
+			<cost>2400</cost>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Vashon Island: Synergist Suit Jacket (Ensemble)</name>
+			<category>Clothing</category>
+			<b>+5</b>
+			<i>+3</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>8</avail>
+			<cost>1500</cost>
+			<gears>
+				<usegear>Concealable Holster</usegear>
+			</gears>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Vashon Island: Synergist Short Jacket (Ensemble)</name>
+			<category>Clothing</category>
+			<b>+4</b>
+			<i>+3</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>8</avail>
+			<cost>1200</cost>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Vashon Island: Synergist Longcoat (Ensemble)</name>
+			<category>Clothing</category>
+			<b>+6</b>
+			<i>+3</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>8</avail>
+			<cost>2000</cost>
+			<gears>
+				<usegear>Concealable Holster</usegear>
+			</gears>
+			<source>AR</source>
+			<page>46</page>
+		</armor>
+		<armor>
+			<name>Zoé: Executive Suite Long Jacket (Ensemble)</name>
+			<category>Clothing</category>
+			<b>+6</b>
+			<i>+2</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>9</avail>
+			<cost>1950</cost>
+			<source>AR</source>
+			<page>47</page>
+		</armor>
+		<armor>
+			<name>Zoé: Executive Suite Short Jacket (Ensemble)</name>
+			<category>Clothing</category>
+			<b>+5</b>
+			<i>+2</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>9</avail>
+			<cost>1700</cost>
+			<source>AR</source>
+			<page>47</page>
+		</armor>
+		<armor>
+			<name>Anielski-Joop Reconquista (Ensemble)</name>
+			<category>Clothing</category>
+			<b>+5</b>
+			<i>+4</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>10</avail>
+			<cost>4600</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>dressCODE CYBERPIRATE Trousers/Skirt (Ensemble)</name>
+			<category>Clothing</category>
+			<b>5</b>
+			<i>3</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>7</avail>
+			<cost>1000</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>dressCODE CYBERPIRATE Hotpants (Ensemble)</name>
+			<category>Clothing</category>
+			<b>5</b>
+			<i>2</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>7</avail>
+			<cost>900</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>dressCODE CYBERPIRATE Hotpants w/ Chaps (Ensemble)</name>
+			<category>Clothing</category>
+			<b>5</b>
+			<i>3</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>7</avail>
+			<cost>1050</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>Rheingold zeitloS Aurora Overcoat (Ensemble)</name>
+			<category>Clothing</category>
+			<b>4</b>
+			<i>3</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>10</avail>
+			<cost>3350</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>Rheingold zeitloS Aurora Blazer (Ensemble)</name>
+			<category>Clothing</category>
+			<b>2</b>
+			<i>2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>10</avail>
+			<cost>2600</cost>
+			<source>ARG</source>
+			<page>0</page>
+		</armor>
+		<armor>
+			<name>Runflat Sandals</name>
+			<category>Clothing</category>
+			<b>0</b>
+			<i>0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>2</avail>
+			<cost>20</cost>
+			<source>AT</source>
+			<page>155</page>
+		</armor>
+		<armor>
+			<name>SecureTech PPP Armor (Ensemble with Helmet)</name>
+			<category>SecureTech PPP System</category>
+			<b>+2</b>
+			<i>+6</i>
+			<armorcapacity>30</armorcapacity>
+			<avail>6</avail>
+			<cost>1000</cost>
+			<source>AR</source>
+			<page>49</page>
+		</armor>
+		<armor>
+			<name>SecureTech PPP Armor (Ensemble)</name>
+			<category>SecureTech PPP System</category>
+			<b>+2</b>
+			<i>+4</i>
+			<armorcapacity>24</armorcapacity>
+			<avail>6</avail>
+			<cost>900</cost>
+			<source>AR</source>
+			<page>49</page>
+		</armor>
+		<armor>
+			<name>Arctic Diver Suit</name>
+			<category>Environmental Armor</category>
+			<b>0</b>
+			<i>1</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>8</avail>
+			<cost>3000</cost>
+			<mods>
+				<name rating="5">Insulation</name>
+			</mods>
+			<source>HP</source>
+			<page>167</page>
+		</armor>
+		<armor>
+			<name>Ares Arctic Forces Suit</name>
+			<category>Environmental Armor</category>
+			<b>12</b>
+			<i>10</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>18R</avail>
+			<cost>10000</cost>
+			<bonus>
+				<specificskill>
+					<name>Climbing</name>
+					<bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<mods>
+				<name rating="5">Insulation</name>
+				<name rating="3">Thermal Damping</name>
+			</mods>
+			<source>HP</source>
+			<page>167</page>
+		</armor>
+		<armor>
+			<name>Ares Armored Coldsuit</name>
+			<category>Environmental Armor</category>
+			<b>6</b>
+			<i>4</i>
+			<armorcapacity>9</armorcapacity>
+			<avail>6</avail>
+			<cost>1000</cost>
+			<mods>
+				<name rating="4">Insulation</name>
+			</mods>
+			<source>HP</source>
+			<page>167</page>
+		</armor>
+		<armor>
+			<name>Ares Armored Survivalist</name>
+			<category>Environmental Armor</category>
+			<b>4</b>
+			<i>4</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>10</avail>
+			<cost>1500</cost>
+			<gears>
+				<usegear>Flare Compensation</usegear>
+			</gears>
+			<source>HP</source>
+			<page>167</page>
+		</armor>
+		<armor>
+			<name>Ares Polar Sneak Suit</name>
+			<category>Environmental Armor</category>
+			<b>1</b>
+			<i>3</i>
+			<armorcapacity>6</armorcapacity>
+			<avail>10R</avail>
+			<cost>9000</cost>
+			<mods>
+				<name rating="5">Insulation</name>
+				<name rating="3">Thermal Damping</name>
+			</mods>
+			<source>HP</source>
+			<page>168</page>
+		</armor>
+		<armor>
+			<name>Evo Armadillo Armored Space Suit</name>
+			<category>Environmental Armor</category>
+			<b>12</b>
+			<i>12</i>
+			<armorcapacity>8</armorcapacity>
+			<avail>26F</avail>
+			<cost>35000</cost>
+			<source>HP</source>
+			<page>168</page>
+		</armor>
+		<armor>
+			<name>Armor Jacket (2050)</name>
+			<category>Armor</category>
+			<b>8</b>
+			<i>6</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>3</avail>
+			<cost>900</cost>
+			<source>2050</source>
+			<page>176</page>
+		</armor>
+		<armor>
+			<name>Armor Vest (2050)</name>
+			<category>Armor</category>
+			<b>6</b>
+			<i>4</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>2</avail>
+			<cost>200</cost>
+			<source>2050</source>
+			<page>176</page>
+		</armor>
+		<armor>
+			<name>Form-Fitting Full Suit (2050)</name>
+			<category>Armor</category>
+			<b>+2</b>
+			<i>+2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>5</avail>
+			<cost>500</cost>
+			<source>2050</source>
+			<page>177</page>
+		</armor>
+		<armor>
+			<name>Form-Fitting Half Suit (2050)</name>
+			<category>Armor</category>
+			<b>+2</b>
+			<i>+1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>4</avail>
+			<cost>250</cost>
+			<source>2050</source>
+			<page>177</page>
+		</armor>
+		<armor>
+			<name>Form-Fitting Shirt (2050)</name>
+			<category>Armor</category>
+			<b>+1</b>
+			<i>+0</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>3</avail>
+			<cost>150</cost>
+			<source>2050</source>
+			<page>177</page>
+		</armor>
+		<armor>
+			<name>Heavy Armor, Full (2050)</name>
+			<category>Armor</category>
+			<b>12</b>
+			<i>10</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>16R</avail>
+			<cost>20000</cost>
+			<source>2050</source>
+			<page>177</page>
+		</armor>
+		<armor>
+			<name>Heavy Armor, Partial (2050)</name>
+			<category>Armor</category>
+			<b>11</b>
+			<i>9</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>8R</avail>
+			<cost>10000</cost>
+			<source>2050</source>
+			<page>177</page>
+		</armor>
+		<armor>
+			<name>Helmet (2050)</name>
+			<category>Helmets and Shields</category>
+			<addoncategory>Vision Enhancements</addoncategory>
+			<addoncategory>Audio Enhancements</addoncategory>
+			<b>+2</b>
+			<i>+2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>12</avail>
+			<cost>200</cost>
+			<source>2050</source>
+			<page>177</page>
+		</armor>
+		<armor>
+			<name>Leather, Real (2050)</name>
+			<category>Armor</category>
+			<b>2</b>
+			<i>2</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>0</avail>
+			<cost>750</cost>
+			<source>2050</source>
+			<page>177</page>
+		</armor>
+		<armor>
+			<name>Leather, Synthetic (2050)</name>
+			<category>Armor</category>
+			<b>1</b>
+			<i>1</i>
+			<armorcapacity>0</armorcapacity>
+			<avail>0</avail>
+			<cost>250</cost>
+			<source>2050</source>
+			<page>177</page>
+		</armor>
+	</armors>
+	<mods>
+		<mod>
+			<name>Auto-Injector</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[2]</armorcapacity>
+			<avail>4</avail>
+			<cost>1500</cost>
+			<source>AR</source>
+			<page>50</page>
+		</mod>
+		<mod>
+			<name>Chemical Protection</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>6</maxrating>
+			<armorcapacity>[2]</armorcapacity>
+			<avail>9</avail>
+			<cost>Rating * 250</cost>
+			<source>SR4</source>
+			<page>327</page>
+		</mod>
+		<mod>
+			<name>Fire Resistance</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>6</maxrating>
+			<armorcapacity>FixedValues([1],[1],[1],[2],[2],[2])</armorcapacity>
+			<avail>4</avail>
+			<cost>Rating * 100</cost>
+			<source>SR4</source>
+			<page>327</page>
+		</mod>
+		<mod>
+			<name>Gel Packs</name>
+			<category>General</category>
+			<b>1</b>
+			<i>1</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>8R</avail>
+			<cost>1500</cost>
+			<source>AR</source>
+			<page>50</page>
+		</mod>
+		<mod>
+			<name>Insulation</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>6</maxrating>
+			<armorcapacity>FixedValues([1],[1],[1],[2],[2],[2])</armorcapacity>
+			<avail>4</avail>
+			<cost>Rating * 150</cost>
+			<source>SR4</source>
+			<page>327</page>
+		</mod>
+		<mod>
+			<name>Nonconductivity</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>6</maxrating>
+			<armorcapacity>FixedValues([2],[2],[2],[3],[3],[3])</armorcapacity>
+			<avail>6</avail>
+			<cost>Rating * 200</cost>
+			<source>SR4</source>
+			<page>327</page>
+		</mod>
+		<mod>
+			<name>Radiation Shielding</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>6</maxrating>
+			<armorcapacity>[4]</armorcapacity>
+			<avail>8</avail>
+			<cost>Rating * 200</cost>
+			<source>AR</source>
+			<page>50</page>
+		</mod>
+		<mod>
+			<name>Ruthenium Polymer Coating</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>12R</avail>
+			<cost>7500</cost>
+			<source>AR</source>
+			<page>50</page>
+		</mod>
+		<mod>
+			<name>Shock Frills</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>6R</avail>
+			<cost>200</cost>
+			<source>SR4</source>
+			<page>327</page>
+		</mod>
+		<mod>
+			<name>Thermal Damping</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>6</maxrating>
+			<armorcapacity>FixedValues([3],[3],[3],[5],[5],[5])</armorcapacity>
+			<avail>10F</avail>
+			<cost>Rating * 500</cost>
+			<source>SR4</source>
+			<page>327</page>
+		</mod>
+		<mod>
+			<name>Responsive Interface Gear (Helmet, Cold Sim)</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>8</avail>
+			<cost>2400</cost>
+			<bonus>
+				<matrixinitiativepass>1</matrixinitiativepass>
+				<skillsoftaccess />
+			</bonus>
+			<source>WAR</source>
+			<page>161</page>
+		</mod>
+		<mod>
+			<name>Responsive Interface Gear (Helmet, Hot Sim)</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>8</avail>
+			<cost>2400</cost>
+			<bonus>
+				<matrixinitiative>1</matrixinitiative>
+				<matrixinitiativepass>2</matrixinitiativepass>
+				<skillsoftaccess />
+			</bonus>
+			<source>WAR</source>
+			<page>161</page>
+		</mod>
+		<mod>
+			<name>Responsive Interface Gear (Armor)</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[2]</armorcapacity>
+			<avail>8</avail>
+			<cost>2400</cost>
+			<source>WAR</source>
+			<page>161</page>
+		</mod>
+		<mod>
+			<name>Quizzel Dragon Wings</name>
+			<category>General</category>
+			<b>1</b>
+			<i>1</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>2000</cost>
+			<source>AT</source>
+			<page>154</page>
+		</mod>
+		<mod>
+			<name>Quizzel Fairy Wings</name>
+			<category>General</category>
+			<b>1</b>
+			<i>1</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>2000</cost>
+			<source>AT</source>
+			<page>154</page>
+		</mod>
+		<mod>
+			<name>Carbon-Boron</name>
+			<category>Clothing</category>
+			<b>1</b>
+			<i>2</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>200</cost>
+			<source>AT</source>
+			<page>160</page>
+		</mod>
+		<mod>
+			<name>Kevlar-Threading</name>
+			<category>Clothing</category>
+			<b>2</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>100</cost>
+			<source>AT</source>
+			<page>160</page>
+		</mod>
+		<mod>
+			<name>Delta-Amyloid</name>
+			<category>Clothing</category>
+			<b>3</b>
+			<i>1</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>400</cost>
+			<source>AT</source>
+			<page>160</page>
+		</mod>
+		<mod>
+			<name>AR Enhanced</name>
+			<category>Clothing</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>25</cost>
+			<source>AT</source>
+			<page>160</page>
+		</mod>
+		<mod>
+			<name>Color Changing</name>
+			<category>Clothing</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>175</cost>
+			<source>AT</source>
+			<page>160</page>
+		</mod>
+		<mod>
+			<name>Natural Fiber</name>
+			<category>Clothing</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>Armor Cost * 0.1</cost>
+			<source>AT</source>
+			<page>160</page>
+		</mod>
+		<mod>
+			<name>Massaging Liners</name>
+			<category>Victory Liners</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>+2</avail>
+			<cost>800</cost>
+			<source>AR</source>
+			<page>47</page>
+		</mod>
+		<mod>
+			<name>Chemical Seal</name>
+			<category>Chemical Seal</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[4]</armorcapacity>
+			<avail>+6</avail>
+			<cost>5000</cost>
+			<source>SR4</source>
+			<page>327</page>
+		</mod>
+		<mod>
+			<name>Environment Adaptation</name>
+			<category>Full Body Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[3]</armorcapacity>
+			<avail>+3</avail>
+			<cost>2000</cost>
+			<source>SR4</source>
+			<page>326</page>
+		</mod>
+		<mod>
+			<name>YNT SoftWeave</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>+3</avail>
+			<cost>Armor Cost * 0.1</cost>
+			<bonus>
+				<softweave />
+			</bonus>
+			<source>WAR</source>
+			<page>160</page>
+		</mod>
+		<mod>
+			<name>Pulse Weave</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>+8</avail>
+			<cost>3000</cost>
+			<source>SG</source>
+			<page>151</page>
+		</mod>
+		<mod>
+			<name>Biomonitor</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>300</cost>
+			<source>SR4</source>
+			<page>337</page>
+		</mod>
+		<mod>
+			<name>Articulated Weapon Arm</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[8]</armorcapacity>
+			<avail>16F</avail>
+			<cost>3000</cost>
+			<source>AR</source>
+			<page>51</page>
+		</mod>
+		<mod>
+			<name>Flotation System</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[8]</armorcapacity>
+			<avail>8</avail>
+			<cost>2000</cost>
+			<source>AR</source>
+			<page>51</page>
+		</mod>
+		<mod>
+			<name>Foot Anchor</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[3]</armorcapacity>
+			<avail>10</avail>
+			<cost>3000</cost>
+			<source>AR</source>
+			<page>51</page>
+		</mod>
+		<mod>
+			<name>Gyromount</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[4]</armorcapacity>
+			<avail>8F</avail>
+			<cost>4000</cost>
+			<source>AR</source>
+			<page>51</page>
+		</mod>
+		<mod>
+			<name>Hydraulic Jacks</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>6</maxrating>
+			<armorcapacity>[Rating+1]</armorcapacity>
+			<avail>9</avail>
+			<cost>Rating * 1500</cost>
+			<source>AR</source>
+			<page>51</page>
+		</mod>
+		<mod>
+			<name>Integrated Weapon: Dartgun</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[3]</armorcapacity>
+			<avail>12R</avail>
+			<addweapon>Dartgun</addweapon>
+			<cost>1400</cost>
+			<source>AU</source>
+			<page>42</page>
+		</mod>
+		<mod>
+			<name>Integrated Weapon: Grenade Launcher</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[15]</armorcapacity>
+			<avail>20F</avail>
+			<addweapon>Grenade Launcher</addweapon>
+			<cost>4000</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</mod>
+		<mod>
+			<name>Integrated Weapon: Hand Blade</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[3]</armorcapacity>
+			<avail>10F</avail>
+			<addweapon>Hand Blade</addweapon>
+			<cost>1500</cost>
+			<source>SR4</source>
+			<page>345</page>
+		</mod>
+		<mod>
+			<name>Integrated Weapon: Hand Razors</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[2]</armorcapacity>
+			<avail>10F</avail>
+			<addweapon>Hand Razors</addweapon>
+			<cost>900</cost>
+			<source>SR4</source>
+			<page>345</page>
+		</mod>
+		<mod>
+			<name>Integrated Weapon: Heavy Pistol</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[6]</armorcapacity>
+			<avail>16R</avail>
+			<addweapon>Heavy Pistol</addweapon>
+			<cost>3200</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</mod>
+		<mod>
+			<name>Integrated Weapon: Holdout Pistol</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[2]</armorcapacity>
+			<avail>12R</avail>
+			<addweapon>Holdout Pistol</addweapon>
+			<cost>800</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</mod>
+		<mod>
+			<name>Integrated Weapon: Light Pistol</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[4]</armorcapacity>
+			<avail>14R</avail>
+			<addweapon>Light Pistol</addweapon>
+			<cost>1500</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</mod>
+		<mod>
+			<name>Integrated Weapon: Machine Pistol</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[4]</armorcapacity>
+			<avail>16R</avail>
+			<addweapon>Machine Pistol</addweapon>
+			<cost>2000</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</mod>
+		<mod>
+			<name>Integrated Weapon: Projectile Spur</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[4]</armorcapacity>
+			<avail>12F</avail>
+			<addweapon>Projectile Spur</addweapon>
+			<cost>2200</cost>
+			<source>AU</source>
+			<page>43</page>
+		</mod>
+		<mod>
+			<name>Integrated Weapon: Shock Hand</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[3]</armorcapacity>
+			<avail>8R</avail>
+			<addweapon>Shock Hand</addweapon>
+			<cost>1000</cost>
+			<source>SR4</source>
+			<page>345</page>
+		</mod>
+		<mod>
+			<name>Integrated Weapon: Shotgun</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[11]</armorcapacity>
+			<avail>20R</avail>
+			<addweapon>Shotgun</addweapon>
+			<cost>2100</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</mod>
+		<mod>
+			<name>Integrated Weapon: Spur</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[3]</armorcapacity>
+			<avail>12F</avail>
+			<addweapon>Spur</addweapon>
+			<cost>1800</cost>
+			<source>SR4</source>
+			<page>345</page>
+		</mod>
+		<mod>
+			<name>Integrated Weapon: Squirtgun</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[4]</armorcapacity>
+			<avail>10R</avail>
+			<addweapon>Squirtgun</addweapon>
+			<cost>1250</cost>
+			<source>AU</source>
+			<page>43</page>
+		</mod>
+		<mod>
+			<name>Integrated Weapon: Submachine Gun</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[10]</armorcapacity>
+			<avail>20R</avail>
+			<addweapon>Submachine Gun</addweapon>
+			<cost>2500</cost>
+			<source>SR4</source>
+			<page>344</page>
+		</mod>
+		<mod>
+			<name>Integrated Weapon: Taser</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[3]</armorcapacity>
+			<avail>8R</avail>
+			<addweapon>Taser</addweapon>
+			<cost>1000</cost>
+			<source>AU</source>
+			<page>43</page>
+		</mod>
+		<mod>
+			<name>Magnetic System</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[2]</armorcapacity>
+			<avail>8</avail>
+			<cost>1000</cost>
+			<source>AR</source>
+			<page>51</page>
+		</mod>
+		<mod>
+			<name>Mobility Upgrade</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>3</maxrating>
+			<armorcapacity>[Rating * 2]</armorcapacity>
+			<avail>(Rating * 6)R</avail>
+			<cost>Rating * 2500</cost>
+			<bonus>
+				<armorencumbrancepenalty>-Rating</armorencumbrancepenalty>
+				<specificskill>
+					<name>Running</name>
+					<bonus>Rating</bonus>
+				</specificskill>
+			</bonus>
+			<source>AR</source>
+			<page>51</page>
+		</mod>
+		<mod>
+			<name>Quick Release</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[2]</armorcapacity>
+			<avail>8</avail>
+			<cost>500</cost>
+			<source>AR</source>
+			<page>51</page>
+		</mod>
+		<mod>
+			<name>Strength Upgrade</name>
+			<category>Military Grade Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>3</maxrating>
+			<armorcapacity>[Rating]</armorcapacity>
+			<avail>(Rating * 4)R</avail>
+			<cost>Rating * 1500</cost>
+			<bonus>
+				<specificattribute>
+					<name>STR</name>
+					<val>Rating</val>
+				</specificattribute>
+			</bonus>
+			<source>AR</source>
+			<page>51</page>
+		</mod>
+		<mod>
+			<name>Feywear (Glamour)</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>150000</cost>
+			<bonus>
+				<skillcategory>
+					<name>Social Active</name>
+					<bonus>3</bonus>
+					<exclude>Intimidation</exclude>
+				</skillcategory>
+			</bonus>
+			<source>AT</source>
+			<page>157</page>
+		</mod>
+		<mod>
+			<name>Feywear (Inspired)</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>50000</cost>
+			<bonus>
+				<selecttext />
+				<specificskill>
+					<name>Artisan</name>
+					<bonus>2</bonus>
+					<applytorating>yes</applytorating>
+				</specificskill>
+			</bonus>
+			<source>AT</source>
+			<page>157</page>
+		</mod>
+		<mod>
+			<name>Feywear (Trustworthy, 1 Skill)</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>50000</cost>
+			<bonus>
+				<selectskill skillgroup="Influence">
+					<val>1</val>
+					<applytorating>yes</applytorating>
+				</selectskill>
+			</bonus>
+			<source>AT</source>
+			<page>157</page>
+		</mod>
+		<mod>
+			<name>Feywear (Trustworthy, Skill Group)</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>200000</cost>
+			<bonus>
+				<skillgroup>
+					<name>Influence</name>
+					<bonus>1</bonus>
+					<applytorating>yes</applytorating>
+				</skillgroup>
+			</bonus>
+			<source>AT</source>
+			<page>157</page>
+		</mod>
+		<mod>
+			<name>Feywear (Magic Resistance, Rating 1)</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>50000</cost>
+			<source>AT</source>
+			<page>157</page>
+		</mod>
+		<mod>
+			<name>Feywear (Magic Resistance, Rating 2)</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>100000</cost>
+			<source>AT</source>
+			<page>157</page>
+		</mod>
+		<mod>
+			<name>Feywear (Magic Resistance, Rating 3)</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>150000</cost>
+			<source>AT</source>
+			<page>157</page>
+		</mod>
+		<mod>
+			<name>Feywear (Magic Resistance, Rating 4)</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>200000</cost>
+			<source>AT</source>
+			<page>157</page>
+		</mod>
+		<mod>
+			<name>Transparent Ruthenium Polymer Coating</name>
+			<category>Second Skin Polymer</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>0</avail>
+			<cost>1000</cost>
+			<source>AR</source>
+			<page>48</page>
+		</mod>
+		<mod>
+			<name>Transparent Ruthenium Polymer Coating</name>
+			<category>Environmental Armor</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>4</avail>
+			<cost>200</cost>
+			<source>HP</source>
+			<page>168</page>
+		</mod>
+	</mods>
+</chummer>

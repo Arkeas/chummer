@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chummer>
+	<version>-905</version>
+	<powers>
+		<power>
+			<name>Analytics</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>174</page>
+		</power>
+		<power>
+			<name>Animal Empathy</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<bonus>
+				<skillgroup>
+					<name>Animal Husbandry</name>
+					<bonus>Rating</bonus>
+				</skillgroup>
+			</bonus>
+			<source>SM</source>
+			<page>175</page>
+		</power>
+		<power>
+			<name>Astral Perception</name>
+			<points>1</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SR4</source>
+			<page>195</page>
+		</power>
+		<power>
+			<name>Attribute Boost</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>4</limit>
+			<bonus>
+				<selectattribute>
+					<attribute>AGI</attribute>
+					<attribute>BOD</attribute>
+					<attribute>REA</attribute>
+					<attribute>STR</attribute>
+				</selectattribute>
+			</bonus>
+			<source>SR4</source>
+			<page>195</page>
+		</power>
+		<power>
+			<name>Berserk</name>
+			<points>1</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>175</page>
+		</power>
+		<power>
+			<name>Blind Fighting</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>175</page>
+		</power>
+		<power>
+			<name>Cloak</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>175</page>
+		</power>
+		<power>
+			<name>Combat Sense</name>
+			<points>.5</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SR4</source>
+			<page>195</page>
+		</power>
+		<power>
+			<name>Commanding Voice</name>
+			<points>.25</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>176</page>
+		</power>
+		<power>
+			<name>Confidence Man</name>
+			<points>1</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<required>
+				<quality>The Speaker's Way</quality>
+			</required>
+			<source>WA</source>
+			<page>14</page>
+		</power>
+		<power>
+			<name>Cool Resolve</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>176</page>
+		</power>
+		<power>
+			<name>Counterstrike</name>
+			<points>.5</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>176</page>
+		</power>
+		<power>
+			<name>Creative Eye</name>
+			<points>.75</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<bonus>
+				<specificattribute>
+					<name>INT</name>
+					<val>Rating</val>
+					<affectbase>yes</affectbase>
+				</specificattribute>
+			</bonus>
+			<required>
+				<quality>The Artist's Way</quality>
+			</required>
+			<source>WA</source>
+			<page>15</page>
+		</power>
+		<power>
+			<name>Critical Strike</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<bonus>
+				<unarmeddv>Rating</unarmeddv>
+			</bonus>
+			<source>SR4</source>
+			<page>195</page>
+		</power>
+		<power>
+			<name>Demara</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SG</source>
+			<page>164</page>
+		</power>
+		<power>
+			<name>Distance Strike</name>
+			<points>2</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>176</page>
+		</power>
+		<power>
+			<name>Eidetic Sense Memory</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>176</page>
+		</power>
+		<power>
+			<name>Elemental Resistance</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>DG</source>
+			<page>17</page>
+		</power>
+		<power>
+			<name>Elemental Strike</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SM</source>
+			<page>176</page>
+		</power>
+		<power>
+			<name>Empathic Healing</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>176</page>
+		</power>
+		<power>
+			<name>Enhanced Perception</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<cap>INT</cap>
+			<bonus>
+				<specificskill>
+					<name>Perception</name>
+					<bonus>Rating</bonus>
+				</specificskill>
+				<specificskill>
+					<name>Assensing</name>
+					<bonus>Rating</bonus>
+				</specificskill>
+			</bonus>
+			<source>SR4</source>
+			<page>195</page>
+		</power>
+		<power>
+			<name>Enthralling Performance</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<bonus>
+				<selectskill />
+			</bonus>
+			<source>SM</source>
+			<page>176</page>
+		</power>
+		<power>
+			<name>Facial Sculpt</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<bonus>
+				<specificskill>
+					<name>Disguise</name>
+					<bonus>Rating</bonus>
+				</specificskill>
+			</bonus>
+			<source>SM</source>
+			<page>177</page>
+		</power>
+		<power>
+			<name>Flexibility</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<bonus>
+				<specificskill>
+					<name>Escape Artist</name>
+					<bonus>Rating</bonus>
+				</specificskill>
+			</bonus>
+			<source>SM</source>
+			<page>177</page>
+		</power>
+		<power>
+			<name>Freefall</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>177</page>
+		</power>
+		<power>
+			<name>Gliding</name>
+			<points>1</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>177</page>
+		</power>
+		<power>
+			<name>Great Leap</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SR4</source>
+			<page>195</page>
+		</power>
+		<power>
+			<name>Heightened Concentration</name>
+			<points>1</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>DG</source>
+			<page>18</page>
+		</power>
+		<power>
+			<name>Improved Ability (Combat)</name>
+			<points>.5</points>
+			<levels>yes</levels>
+			<limit>100</limit>
+			<bonus>
+				<selectskill skillcategory="Combat Active">
+					<val>Rating</val>
+					<applytorating>yes</applytorating>
+				</selectskill>
+			</bonus>
+			<source>SR4</source>
+			<page>196</page>
+		</power>
+		<power>
+			<name>Improved Ability (Non-Combat)</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>100</limit>
+			<bonus>
+				<selectskill excludecategory="Combat Active,Magical Active,Resonance Active">
+					<val>Rating</val>
+					<applytorating>yes</applytorating>
+				</selectskill>
+			</bonus>
+			<source>SR4</source>
+			<page>196</page>
+		</power>
+		<power>
+			<name>Improved Physical Attribute</name>
+			<points>.75</points>
+			<levels>yes</levels>
+			<limit>12</limit>
+			<bonus>
+				<selectattribute>
+					<attribute>BOD</attribute>
+					<attribute>AGI</attribute>
+					<attribute>REA</attribute>
+					<attribute>STR</attribute>
+					<val>Rating</val>
+					<affectbase>yes</affectbase>
+				</selectattribute>
+			</bonus>
+			<source>SR4</source>
+			<page>196</page>
+		</power>
+		<power>
+			<name>Improved Reflexes 1</name>
+			<points>1.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<doublecost>no</doublecost>
+			<bonus>
+				<initiativepass>1</initiativepass>
+				<specificattribute>
+					<name precedence="0">REA</name>
+					<val>1</val>
+				</specificattribute>
+			</bonus>
+			<source>SR4</source>
+			<page>196</page>
+		</power>
+		<power>
+			<name>Improved Reflexes 2</name>
+			<points>2.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<doublecost>no</doublecost>
+			<bonus>
+				<initiativepass>2</initiativepass>
+				<specificattribute>
+					<name precedence="0">REA</name>
+					<val>2</val>
+				</specificattribute>
+			</bonus>
+			<source>SR4</source>
+			<page>196</page>
+		</power>
+		<power>
+			<name>Improved Reflexes 3</name>
+			<points>4</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<doublecost>no</doublecost>
+			<bonus>
+				<initiativepass>3</initiativepass>
+				<specificattribute>
+					<name precedence="0">REA</name>
+					<val>3</val>
+				</specificattribute>
+			</bonus>
+			<source>SR4</source>
+			<page>196</page>
+		</power>
+		<power>
+			<name>Improved Sense</name>
+			<points>.25</points>
+			<levels>no</levels>
+			<limit>100</limit>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SR4</source>
+			<page>196</page>
+		</power>
+		<power>
+			<name>Indomitable Will</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>DG</source>
+			<page>18</page>
+		</power>
+		<power>
+			<name>Inertia Strike</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>177</page>
+		</power>
+		<power>
+			<name>Iron Gut</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>177</page>
+		</power>
+		<power>
+			<name>Iron Lungs</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>177</page>
+		</power>
+		<power>
+			<name>Iron Will</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>177</page>
+		</power>
+		<power>
+			<name>Keen Wits</name>
+			<points>.75</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<bonus>
+				<specificattribute>
+					<name>LOG</name>
+					<val>Rating</val>
+					<affectbase>yes</affectbase>
+				</specificattribute>
+			</bonus>
+			<required>
+				<quality>The Artisan's Way</quality>
+			</required>
+			<source>WA</source>
+			<page>15</page>
+		</power>
+		<power>
+			<name>Keratin Control</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SG</source>
+			<page>164</page>
+		</power>
+		<power>
+			<name>Killing Hands</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<bonus>
+				<unarmeddvphysical />
+			</bonus>
+			<source>SR4</source>
+			<page>196</page>
+		</power>
+		<power>
+			<name>Kinesics</name>
+			<points>.5</points>
+			<levels>3</levels>
+			<limit>1</limit>
+			<bonus>
+				<judgeintentions>Rating</judgeintentions>
+				<skillcategory>
+					<name>Social Active</name>
+					<bonus>Rating</bonus>
+				</skillcategory>
+			</bonus>
+			<source>SR4</source>
+			<page>196</page>
+		</power>
+		<power>
+			<name>Kinesics Mastery</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SG</source>
+			<page>164</page>
+		</power>
+		<power>
+			<name>Light Touch</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SG</source>
+			<page>164</page>
+		</power>
+		<power>
+			<name>Linguistics</name>
+			<points>.25</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<bonus>
+				<adeptlinguistics />
+			</bonus>
+			<source>SM</source>
+			<page>177</page>
+		</power>
+		<power>
+			<name>Living Focus</name>
+			<points>1</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>178</page>
+		</power>
+		<power>
+			<name>Magic Sense</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>178</page>
+		</power>
+		<power>
+			<name>Master of 1000 Faces</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<bonus>
+				<specificskill>
+					<name>Disguise</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<source>SG</source>
+			<page>164</page>
+		</power>
+		<power>
+			<name>Melanin Control</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>178</page>
+		</power>
+		<power>
+			<name>Memory Displacement</name>
+			<points>.25</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>DG</source>
+			<page>18</page>
+		</power>
+		<power>
+			<name>Metabolic Control</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>178</page>
+		</power>
+		<power>
+			<name>Mind Over Matter</name>
+			<points>1.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<bonus>
+				<swapskillattribute />
+			</bonus>
+			<source>WAR</source>
+			<page>178</page>
+		</power>
+		<power>
+			<name>Missile Mastery</name>
+			<points>1</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<bonus>
+				<weaponcategorydv>
+					<name>Throwing Weapons</name>
+					<bonus>1</bonus>
+				</weaponcategorydv>
+			</bonus>
+			<source>SM</source>
+			<page>178</page>
+		</power>
+		<power>
+			<name>Missile Parry</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SR4</source>
+			<page>196</page>
+		</power>
+		<power>
+			<name>Motion Sense</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>178</page>
+		</power>
+		<power>
+			<name>Multi-Tasking</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>178</page>
+		</power>
+		<power>
+			<name>Mystic Armor</name>
+			<points>.5</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<bonus>
+				<armor>
+					<b>Rating</b>
+					<i>Rating</i>
+				</armor>
+			</bonus>
+			<source>SR4</source>
+			<page>197</page>
+		</power>
+		<power>
+			<name>Natural Immunity</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SR4</source>
+			<page>197</page>
+		</power>
+		<power>
+			<name>Natural Survivors (Active Skills)</name>
+			<points>.5</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<bonus>
+				<specificskill>
+					<name>Navigation</name>
+					<bonus>Rating</bonus>
+				</specificskill>
+				<specificskill>
+					<name>Survival</name>
+					<bonus>Rating</bonus>
+				</specificskill>
+				<specificskill>
+					<name>Tracking</name>
+					<bonus>Rating</bonus>
+				</specificskill>
+			</bonus>
+			<required>
+				<quality>The Totem's Way</quality>
+			</required>
+			<source>WA</source>
+			<page>15</page>
+		</power>
+		<power>
+			<name>Natural Survivors (Street Skills)</name>
+			<points>.5</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<bonus>
+				<skillcategory>
+					<name>Street</name>
+					<bonus>Rating</bonus>
+				</skillcategory>
+				<specificskill>
+					<name>Shadowing</name>
+					<bonus>Rating</bonus>
+				</specificskill>
+				<specificskill>
+					<name>Survival</name>
+					<bonus>Rating</bonus>
+				</specificskill>
+			</bonus>
+			<required>
+				<quality>The Totem's Way</quality>
+			</required>
+			<source>WA</source>
+			<page>15</page>
+		</power>
+		<power>
+			<name>Nerve Strike</name>
+			<points>1</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>178</page>
+		</power>
+		<power>
+			<name>Nimble Fingers</name>
+			<points>.25</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<bonus>
+				<specificskill>
+					<name>Palming</name>
+					<bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<source>SM</source>
+			<page>179</page>
+		</power>
+		<power>
+			<name>Pain Relief</name>
+			<points>1</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>179</page>
+		</power>
+		<power>
+			<name>Pain Resistance</name>
+			<points>.5</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<bonus>
+				<conditionmonitor>
+					<thresholdoffset>Rating</thresholdoffset>
+				</conditionmonitor>
+			</bonus>
+			<source>SR4</source>
+			<page>197</page>
+		</power>
+		<power>
+			<name>Penetrating Strike</name>
+			<points>.25</points>
+			<levels>3</levels>
+			<limit>1</limit>
+			<bonus>
+				<unarmedap>-Rating</unarmedap>
+			</bonus>
+			<source>SM</source>
+			<page>179</page>
+		</power>
+		<power>
+			<name>Piercing Senses</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>179</page>
+		</power>
+		<power>
+			<name>Power Swimming</name>
+			<points>1</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<bonus>
+				<swimpercent>100</swimpercent>
+			</bonus>
+			<source>DG</source>
+			<page>18</page>
+		</power>
+		<power>
+			<name>Power Throw</name>
+			<points>.25</points>
+			<levels>3</levels>
+			<limit>1</limit>
+			<bonus>
+				<throwrange>Rating * 2</throwrange>
+				<throwstr>Rating * 2</throwstr>
+			</bonus>
+			<source>SM</source>
+			<page>179</page>
+		</power>
+		<power>
+			<name>Prodigious Physicality</name>
+			<points>.5</points>
+			<levels>3</levels>
+			<limit>1</limit>
+			<bonus>
+				<skillgroup>
+					<name>Athletics</name>
+					<bonus>Rating</bonus>
+				</skillgroup>
+			</bonus>
+			<required>
+				<quality>The Athlete's Way</quality>
+			</required>
+			<source>WA</source>
+			<page>15</page>
+		</power>
+		<power>
+			<name>Quick Draw</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>179</page>
+		</power>
+		<power>
+			<name>Rapid Healing</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SR4</source>
+			<page>197</page>
+		</power>
+		<power>
+			<name>Rooting</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>179</page>
+		</power>
+		<power>
+			<name>Rush</name>
+			<points>0.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>WAR</source>
+			<page>179</page>
+		</power>
+		<power>
+			<name>Smashing Blow</name>
+			<points>1</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>179</page>
+		</power>
+		<power>
+			<name>Sorcerous Parry</name>
+			<points>.5</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<bonus>
+				<specificskill>
+					<name>Counterspelling</name>
+					<bonus>Rating</bonus>
+				</specificskill>
+			</bonus>
+			<required>
+				<quality>The Magician's Way</quality>
+			</required>
+			<source>WA</source>
+			<page>15</page>
+		</power>
+		<power>
+			<name>Spell Resistance</name>
+			<points>.5</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SR4</source>
+			<page>197</page>
+		</power>
+		<power>
+			<name>Supernatural Toughness (Physical)</name>
+			<points>.5</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<bonus>
+				<conditionmonitor>
+					<physical>Rating</physical>
+				</conditionmonitor>
+			</bonus>
+			<source>DG</source>
+			<page>18</page>
+		</power>
+		<power>
+			<name>Supernatural Toughness (Stun)</name>
+			<points>.5</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<bonus>
+				<conditionmonitor>
+					<stun>Rating</stun>
+				</conditionmonitor>
+			</bonus>
+			<source>DG</source>
+			<page>18</page>
+		</power>
+		<power>
+			<name>Sustenance</name>
+			<points>.25</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>179</page>
+		</power>
+		<power>
+			<name>Swift and Terrible</name>
+			<points>.5</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<required>
+				<quality>The Warrior's Way</quality>
+			</required>
+			<source>WA</source>
+			<page>15</page>
+		</power>
+		<power>
+			<name>Temperature Tolerance</name>
+			<points>.25</points>
+			<levels>yes</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>179</page>
+		</power>
+		<power>
+			<name>Three-Dimensional Memory</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>180</page>
+		</power>
+		<power>
+			<name>Traceless Walk</name>
+			<points>1</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>180</page>
+		</power>
+		<power>
+			<name>Unseen Hands</name>
+			<points>.5</points>
+			<levels>3</levels>
+			<limit>1</limit>
+			<bonus>
+				<skillgroup>
+					<name>Stealth</name>
+					<bonus>Rating</bonus>
+				</skillgroup>
+			</bonus>
+			<required>
+				<quality>The Invisible Way</quality>
+			</required>
+			<source>WA</source>
+			<page>15</page>
+		</power>
+		<power>
+			<name>Voice Control</name>
+			<points>.5</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SR4</source>
+			<page>197</page>
+		</power>
+		<power>
+			<name>Wall Running</name>
+			<points>1</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>SM</source>
+			<page>180</page>
+		</power>
+		<power>
+			<name>Maintain Warmth</name>
+			<points>.25</points>
+			<levels>no</levels>
+			<limit>1</limit>
+			<source>HP</source>
+			<page>163</page>
+		</power>
+	</powers>
+</chummer>

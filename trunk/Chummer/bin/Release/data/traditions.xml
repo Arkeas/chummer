@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chummer>
+	<version>-923</version>
+	<traditions>
+		<tradition>
+			<name>Aboriginal</name>
+			<drain>WIL + CHA</drain>
+			<spirits>
+				<spirit>Spirit of Beasts</spirit>
+				<spirit>Spirit of Earth</spirit>
+				<spirit>Plant Spirit</spirit>
+				<spirit>Guidance Spirit</spirit>
+				<spirit>Spirit of Air</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>35</page>
+		</tradition>
+		<tradition>
+			<name>Aztec</name>
+			<drain>WIL + CHA</drain>
+			<spirits>
+				<spirit>Guardian Spirit</spirit>
+				<spirit>Spirit of Fire</spirit>
+				<spirit>Plant Spirit</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Spirit of Beasts</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>35</page>
+		</tradition>
+		<tradition>
+			<name>Black Magic</name>
+			<drain>WIL + CHA</drain>
+			<spirits>
+				<spirit>Spirit of Fire</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Spirit of Earth</spirit>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Spirit of Man</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>36</page>
+		</tradition>
+		<tradition>
+			<name>Buddhist</name>
+			<drain>WIL + INT</drain>
+			<spirits>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Guidance Spirit</spirit>
+				<spirit>Spirit of Earth</spirit>
+				<spirit>Spirit of Fire</spirit>
+				<spirit>Spirit of Water</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>36</page>
+		</tradition>
+		<tradition>
+			<name>Chaos Magic</name>
+			<drain>WIL + LOG</drain>
+			<spirits>
+				<spirit>Spirit of Fire</spirit>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Spirit of Earth</spirit>
+				<spirit>Spirit of Man</spirit>
+				<spirit>Spirit of Water</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>37</page>
+		</tradition>
+		<tradition>
+			<name>Christian Theurgy</name>
+			<drain>WIL + CHA</drain>
+			<spirits>
+				<spirit>Spirit of Fire</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Spirit of Earth</spirit>
+				<spirit>Guidance Spirit</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>37</page>
+		</tradition>
+		<tradition>
+			<name>Druidic</name>
+			<drain>WIL + INT</drain>
+			<spirits>
+				<spirit>Spirit of Beasts</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Plant Spirit</spirit>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Spirit of Earth</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>38</page>
+		</tradition>
+		<tradition>
+			<name>Egyptian</name>
+			<drain>WIL + INT</drain>
+			<spirits>
+				<spirit>Spirit of Fire</spirit>
+				<spirit>Spirit of Earth</spirit>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Guidance Spirit</spirit>
+				<spirit>Spirit of Water</spirit>
+			</spirits>
+			<source>DG</source>
+			<page>3</page>
+		</tradition>
+		<tradition>
+			<name>Gardnerian Wicca</name>
+			<drain>WIL + LOG</drain>
+			<spirits>
+				<spirit>Spirit of Fire</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Plant Spirit</spirit>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Spirit of Earth</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>42</page>
+		</tradition>
+		<tradition>
+			<name>Goddess Wicca</name>
+			<drain>WIL + INT</drain>
+			<spirits>
+				<spirit>Spirit of Fire</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Plant Spirit</spirit>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Spirit of Earth</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>42</page>
+		</tradition>
+		<tradition>
+			<name>Hermetic</name>
+			<drain>WIL + LOG</drain>
+			<spirits>
+				<spirit>Spirit of Fire</spirit>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Spirit of Man</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Spirit of Earth</spirit>
+			</spirits>
+			<source>SR4</source>
+			<page>180</page>
+		</tradition>
+		<tradition>
+			<name>Hindu</name>
+			<drain>WIL + LOG</drain>
+			<spirits>
+				<spirit>Spirit of Beasts</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Plant Spirit</spirit>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Spirit of Fire</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>38</page>
+		</tradition>
+		<tradition>
+			<name>Insect</name>
+			<drain>WIL + INT</drain>
+			<spirits>
+				<spirit>Soldier Spirit</spirit>
+				<spirit>Scout Spirit</spirit>
+				<spirit>Caretaker Spirit</spirit>
+				<spirit>Nymph Spirit</spirit>
+				<spirit>Worker Spirit</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>149</page>
+		</tradition>
+		<tradition>
+			<name>Islamic</name>
+			<drain>WIL + LOG</drain>
+			<spirits>
+				<spirit>Guardian Spirit</spirit>
+				<spirit>Spirit of Earth</spirit>
+				<spirit>Plant Spirit</spirit>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Spirit of Fire</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>39</page>
+		</tradition>
+		<tradition>
+			<name>Norse</name>
+			<drain>WIL + CHA</drain>
+			<spirits>
+				<spirit>Guardian Spirit</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Spirit of Fire</spirit>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Spirit of Earth</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>39</page>
+		</tradition>
+		<tradition>
+			<name>Path of the Wheel</name>
+			<drain>WIL + CHA</drain>
+			<spirits>
+				<spirit>Spirit of Earth</spirit>
+				<spirit>Guidance Spirit</spirit>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Spirit of Fire</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>40</page>
+		</tradition>
+		<tradition>
+			<name>Poisoner</name>
+			<drain>WIL + INT</drain>
+			<spirits>
+				<spirit>Nuclear Spirit</spirit>
+				<spirit>Acid Spirit</spirit>
+				<spirit>Sludge Spirit</spirit>
+				<spirit>Smog Spirit</spirit>
+				<spirit>Abomination Spirit</spirit>
+			</spirits>
+			<source>DG</source>
+			<page>14</page>
+		</tradition>
+		<tradition>
+			<name>Psionic</name>
+			<drain>WIL + INT</drain>
+			<spirits>
+				<spirit>Spirit of Fire</spirit>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Spirit of Man</spirit>
+				<spirit>Guidance Spirit</spirit>
+				<spirit>Task Spirit</spirit>
+			</spirits>
+			<source>DG</source>
+			<page>4</page>
+		</tradition>
+		<tradition>
+			<name>Qabbalistic</name>
+			<drain>WIL + LOG</drain>
+			<spirits>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Spirit of Earth</spirit>
+				<spirit>Spirit of Fire</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Task Spirit</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>40</page>
+		</tradition>
+		<tradition>
+			<name>Rastafarian</name>
+			<drain>WIL + INT</drain>
+			<spirits>
+				<spirit>Spirit of Man</spirit>
+				<spirit>Spirit of Beasts</spirit>
+				<spirit>Plant Spirit</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Guidance Spirit</spirit>
+			</spirits>
+			<source>DG</source>
+			<page>4</page>
+		</tradition>
+		<tradition>
+			<name>Shamanic</name>
+			<drain>WIL + CHA</drain>
+			<spirits>
+				<spirit>Spirit of Beasts</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Spirit of Earth</spirit>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Spirit of Man</spirit>
+			</spirits>
+			<source>SR4</source>
+			<page>181</page>
+		</tradition>
+		<tradition>
+			<name>Shinto</name>
+			<drain>WIL + CHA</drain>
+			<spirits>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Plant Spirit</spirit>
+				<spirit>Spirit of Beasts</spirit>
+				<spirit>Spirit of Man</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>41</page>
+		</tradition>
+		<tradition>
+			<name>Voodoo</name>
+			<drain>WIL + CHA</drain>
+			<spirits>
+				<spirit>Guardian Spirit</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Spirit of Man</spirit>
+				<spirit>Guidance Spirit</spirit>
+				<spirit>Task Spirit</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>42</page>
+		</tradition>
+		<tradition>
+			<name>Witchcraft</name>
+			<drain>WIL + INT</drain>
+			<spirits>
+				<spirit>Spirit of Earth</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Plant Spirit</spirit>
+				<spirit>Spirit of Air</spirit>
+				<spirit>Task Spirit</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>41</page>
+		</tradition>
+		<tradition>
+			<name>Wuxing</name>
+			<drain>WIL + LOG</drain>
+			<spirits>
+				<spirit>Spirit of Fire</spirit>
+				<spirit>Spirit of Earth</spirit>
+				<spirit>Plant Spirit</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Guidance Spirit</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>43</page>
+		</tradition>
+		<tradition>
+			<name>Zoroastrian</name>
+			<drain>WIL + LOG</drain>
+			<spirits>
+				<spirit>Guardian Spirit</spirit>
+				<spirit>Spirit of Fire</spirit>
+				<spirit>Spirit of Earth</spirit>
+				<spirit>Spirit of Water</spirit>
+				<spirit>Spirit of Man</spirit>
+			</spirits>
+			<source>SM</source>
+			<page>43</page>
+		</tradition>
+	</traditions>
+</chummer>
