@@ -539,6 +539,7 @@ namespace Chummer
 		private bool _blnPrintNotes = false;
 		private bool _blnFreeSpiritPowerPointsMAG = false;
 		private bool _blnSpecialAttributeKarmaLimit = false;
+		private bool _blnTechnomancerAllowAutosoft = false;
 		private string _strBookXPath = "";
 		private int _intNuyenPerBP = 5000;
 		private int _intFreeContactsMultiplier = 2;
@@ -780,6 +781,8 @@ namespace Chummer
 			objWriter.WriteElementString("freespiritpowerpointsmag", _blnFreeSpiritPowerPointsMAG.ToString());
 			// <specialattributekarmalimit />
 			objWriter.WriteElementString("specialattributekarmalimit", _blnSpecialAttributeKarmaLimit.ToString());
+			// <technomancerallowautosoft />
+			objWriter.WriteElementString("technomancerallowautosoft", _blnTechnomancerAllowAutosoft.ToString());
 
 			// <bpcost>
 			objWriter.WriteStartElement("bpcost");
@@ -1321,6 +1324,14 @@ namespace Chummer
 			try
 			{
 				_blnSpecialAttributeKarmaLimit = Convert.ToBoolean(objXmlDocument.SelectSingleNode("/settings/specialattributekarmalimit").InnerText);
+			}
+			catch
+			{
+			}
+			// House rule: Whether or not Technomancers can select Autosofts as Complex Forms.
+			try
+			{
+				_blnTechnomancerAllowAutosoft = Convert.ToBoolean(objXmlDocument.SelectSingleNode("/settings/technomancerallowautosoft").InnerText);
 			}
 			catch
 			{
@@ -2707,6 +2718,21 @@ namespace Chummer
 			set
 			{
 				_blnSpecialAttributeKarmaLimit = value;
+			}
+		}
+
+		/// <summary>
+		/// Whether or not Technomancers can select Autosofts as Complex Forms.
+		/// </summary>
+		public bool TechnomancerAllowAutosoft
+		{
+			get
+			{
+				return _blnTechnomancerAllowAutosoft;
+			}
+			set
+			{
+				_blnTechnomancerAllowAutosoft = value;
 			}
 		}
 		#endregion

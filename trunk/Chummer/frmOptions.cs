@@ -244,6 +244,7 @@ namespace Chummer
 			_objOptions.AllowBiowareSuites = chkAllowBiowareSuites.Checked;
 			_objOptions.FreeSpiritPowerPointsMAG = chkFreeSpiritsPowerPointsMAG.Checked;
 			_objOptions.SpecialAttributeKarmaLimit = chkSpecialAttributeKarmaLimit.Checked;
+			_objOptions.TechnomancerAllowAutosoft = chkTechnomancerAllowAutosoft.Checked;
 			_objOptions.AllowSkillDiceRolling = chkAllowSkillDiceRolling.Checked;
 			_objOptions.CreateBackupOnCareer = chkCreateBackupOnCareer.Checked;
 			_objOptions.PrintLeadershipAlternates = chkPrintLeadershipAlternates.Checked;
@@ -549,6 +550,7 @@ namespace Chummer
 
 			// Change the window size.
 			this.Width = intWidth + 29;
+			this.Height = tabControl1.Top + tabControl1.Height + cmdOK.Height + 45;
 			// Centre the OK button.
 			cmdOK.Left = (this.Width / 2) - (cmdOK.Width / 2);
 		}
@@ -1156,6 +1158,16 @@ namespace Chummer
 			{
 			}
 			chkSpecialAttributeKarmaLimit.Checked = blnSpecialAttributeKarmaLimit;
+
+			bool blnTechnomancerAllowAutosoft = false;
+			try
+			{
+				blnTechnomancerAllowAutosoft = _objOptions.TechnomancerAllowAutosoft;
+			}
+			catch
+			{
+			}
+			chkTechnomancerAllowAutosoft.Checked = blnTechnomancerAllowAutosoft;
 
 			if (_objOptions.LimbCount == 6)
 				cboLimbCount.SelectedValue = "all";

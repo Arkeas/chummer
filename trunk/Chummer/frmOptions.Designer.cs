@@ -228,6 +228,7 @@
 			this.chkCapSkillRating = new System.Windows.Forms.CheckBox();
 			this.chkNoSingleArmorEncumbrance = new System.Windows.Forms.CheckBox();
 			this.tabHouseRules = new System.Windows.Forms.TabPage();
+			this.chkSpecialAttributeKarmaLimit = new System.Windows.Forms.CheckBox();
 			this.chkFreeSpiritsPowerPointsMAG = new System.Windows.Forms.CheckBox();
 			this.chkAllowBiowareSuites = new System.Windows.Forms.CheckBox();
 			this.chkAllowObsolescentUpgrade = new System.Windows.Forms.CheckBox();
@@ -253,7 +254,7 @@
 			this.lblSetting = new System.Windows.Forms.Label();
 			this.lblSettingName = new System.Windows.Forms.Label();
 			this.txtSettingName = new System.Windows.Forms.TextBox();
-			this.chkSpecialAttributeKarmaLimit = new System.Windows.Forms.CheckBox();
+			this.chkTechnomancerAllowAutosoft = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaComplexFormOption)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaMetamagic)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaInitiation)).BeginInit();
@@ -329,7 +330,8 @@
 			// 
 			// cmdOK
 			// 
-			this.cmdOK.Location = new System.Drawing.Point(370, 604);
+			this.cmdOK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+			this.cmdOK.Location = new System.Drawing.Point(370, 626);
 			this.cmdOK.Name = "cmdOK";
 			this.cmdOK.Size = new System.Drawing.Size(75, 23);
 			this.cmdOK.TabIndex = 5;
@@ -1004,7 +1006,7 @@
 			this.tabControl1.Location = new System.Drawing.Point(0, 32);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(815, 566);
+			this.tabControl1.Size = new System.Drawing.Size(815, 588);
 			this.tabControl1.TabIndex = 4;
 			// 
 			// tabGeneral
@@ -1016,7 +1018,7 @@
 			this.tabGeneral.Location = new System.Drawing.Point(4, 22);
 			this.tabGeneral.Name = "tabGeneral";
 			this.tabGeneral.Padding = new System.Windows.Forms.Padding(3);
-			this.tabGeneral.Size = new System.Drawing.Size(807, 540);
+			this.tabGeneral.Size = new System.Drawing.Size(807, 562);
 			this.tabGeneral.TabIndex = 0;
 			this.tabGeneral.Tag = "Tab_Options_General";
 			this.tabGeneral.Text = "General";
@@ -1029,7 +1031,7 @@
 			this.tabControl2.Location = new System.Drawing.Point(243, 6);
 			this.tabControl2.Name = "tabControl2";
 			this.tabControl2.SelectedIndex = 0;
-			this.tabControl2.Size = new System.Drawing.Size(556, 528);
+			this.tabControl2.Size = new System.Drawing.Size(556, 550);
 			this.tabControl2.TabIndex = 2;
 			// 
 			// tabGlobal
@@ -1045,7 +1047,7 @@
 			this.tabGlobal.Location = new System.Drawing.Point(4, 22);
 			this.tabGlobal.Name = "tabGlobal";
 			this.tabGlobal.Padding = new System.Windows.Forms.Padding(3);
-			this.tabGlobal.Size = new System.Drawing.Size(548, 502);
+			this.tabGlobal.Size = new System.Drawing.Size(548, 524);
 			this.tabGlobal.TabIndex = 0;
 			this.tabGlobal.Tag = "Tab_Options_Global";
 			this.tabGlobal.Text = "Global";
@@ -1135,7 +1137,7 @@
 			this.tabPage2.Location = new System.Drawing.Point(4, 22);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(548, 502);
+			this.tabPage2.Size = new System.Drawing.Size(548, 524);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Tag = "Tab_Options_Character";
 			this.tabPage2.Text = "Character and Printing";
@@ -1276,7 +1278,7 @@
 			this.tabPage1.Controls.Add(this.chkEnforceSkillMaximumModifiedRating);
 			this.tabPage1.Location = new System.Drawing.Point(4, 22);
 			this.tabPage1.Name = "tabPage1";
-			this.tabPage1.Size = new System.Drawing.Size(548, 502);
+			this.tabPage1.Size = new System.Drawing.Size(548, 524);
 			this.tabPage1.TabIndex = 2;
 			this.tabPage1.Tag = "Tab_Options_Miscellaneous";
 			this.tabPage1.Text = "Miscellaneous";
@@ -1355,7 +1357,7 @@
 			this.treSourcebook.ShowLines = false;
 			this.treSourcebook.ShowPlusMinus = false;
 			this.treSourcebook.ShowRootLines = false;
-			this.treSourcebook.Size = new System.Drawing.Size(226, 512);
+			this.treSourcebook.Size = new System.Drawing.Size(226, 534);
 			this.treSourcebook.TabIndex = 1;
 			// 
 			// tabBPCosts
@@ -2438,6 +2440,7 @@
 			// tabHouseRules
 			// 
 			this.tabHouseRules.BackColor = System.Drawing.SystemColors.Control;
+			this.tabHouseRules.Controls.Add(this.chkTechnomancerAllowAutosoft);
 			this.tabHouseRules.Controls.Add(this.chkSpecialAttributeKarmaLimit);
 			this.tabHouseRules.Controls.Add(this.chkFreeSpiritsPowerPointsMAG);
 			this.tabHouseRules.Controls.Add(this.chkAllowBiowareSuites);
@@ -2467,10 +2470,22 @@
 			this.tabHouseRules.Controls.Add(this.chkSpiritForceBasedOnTotalMAG);
 			this.tabHouseRules.Location = new System.Drawing.Point(4, 22);
 			this.tabHouseRules.Name = "tabHouseRules";
-			this.tabHouseRules.Size = new System.Drawing.Size(807, 540);
+			this.tabHouseRules.Size = new System.Drawing.Size(807, 562);
 			this.tabHouseRules.TabIndex = 3;
 			this.tabHouseRules.Tag = "Tab_Options_HouseRules";
 			this.tabHouseRules.Text = "House Rules";
+			// 
+			// chkSpecialAttributeKarmaLimit
+			// 
+			this.chkSpecialAttributeKarmaLimit.AutoSize = true;
+			this.chkSpecialAttributeKarmaLimit.Location = new System.Drawing.Point(8, 512);
+			this.chkSpecialAttributeKarmaLimit.Name = "chkSpecialAttributeKarmaLimit";
+			this.chkSpecialAttributeKarmaLimit.Size = new System.Drawing.Size(414, 17);
+			this.chkSpecialAttributeKarmaLimit.TabIndex = 26;
+			this.chkSpecialAttributeKarmaLimit.Tag = "Checkbox_Option_SpecialAttributeKarmaLimit";
+			this.chkSpecialAttributeKarmaLimit.Text = "Special Attributes do not count towards 50% Karama limit during character creatio" +
+    "n";
+			this.chkSpecialAttributeKarmaLimit.UseVisualStyleBackColor = true;
 			// 
 			// chkFreeSpiritsPowerPointsMAG
 			// 
@@ -2765,24 +2780,23 @@
 			this.txtSettingName.Size = new System.Drawing.Size(190, 20);
 			this.txtSettingName.TabIndex = 3;
 			// 
-			// chkSpecialAttributeKarmaLimit
+			// chkTechnomancerAllowAutosoft
 			// 
-			this.chkSpecialAttributeKarmaLimit.AutoSize = true;
-			this.chkSpecialAttributeKarmaLimit.Location = new System.Drawing.Point(8, 512);
-			this.chkSpecialAttributeKarmaLimit.Name = "chkSpecialAttributeKarmaLimit";
-			this.chkSpecialAttributeKarmaLimit.Size = new System.Drawing.Size(414, 17);
-			this.chkSpecialAttributeKarmaLimit.TabIndex = 26;
-			this.chkSpecialAttributeKarmaLimit.Tag = "Checkbox_Option_SpecialAttributeKarmaLimit";
-			this.chkSpecialAttributeKarmaLimit.Text = "Special Attributes do not count towards 50% Karama limit during character creatio" +
-    "n";
-			this.chkSpecialAttributeKarmaLimit.UseVisualStyleBackColor = true;
+			this.chkTechnomancerAllowAutosoft.AutoSize = true;
+			this.chkTechnomancerAllowAutosoft.Location = new System.Drawing.Point(8, 535);
+			this.chkTechnomancerAllowAutosoft.Name = "chkTechnomancerAllowAutosoft";
+			this.chkTechnomancerAllowAutosoft.Size = new System.Drawing.Size(291, 17);
+			this.chkTechnomancerAllowAutosoft.TabIndex = 27;
+			this.chkTechnomancerAllowAutosoft.Tag = "Checkbox_Option_TechnomancerAllowAutosoft";
+			this.chkTechnomancerAllowAutosoft.Text = "Technomancers may select Autosofts as Complex Forms";
+			this.chkTechnomancerAllowAutosoft.UseVisualStyleBackColor = true;
 			// 
 			// frmOptions
 			// 
 			this.AcceptButton = this.cmdOK;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(815, 661);
+			this.ClientSize = new System.Drawing.Size(815, 658);
 			this.ControlBox = false;
 			this.Controls.Add(this.txtSettingName);
 			this.Controls.Add(this.lblSettingName);
@@ -3110,5 +3124,6 @@
 		private System.Windows.Forms.CheckBox chkAllowBiowareSuites;
 		private System.Windows.Forms.CheckBox chkFreeSpiritsPowerPointsMAG;
 		private System.Windows.Forms.CheckBox chkSpecialAttributeKarmaLimit;
+		private System.Windows.Forms.CheckBox chkTechnomancerAllowAutosoft;
 	}
 }
