@@ -111,6 +111,8 @@ namespace Chummer
 
 				if (objXmlProgram["category"].InnerText == "Skillsofts" && !_blnBiowireEnabled && !_objCharacter.IgnoreRules)
 					blnAdd = false;
+				if (objXmlProgram["category"].InnerText == "Autosoft" && !_objCharacter.Options.TechnomancerAllowAutosoft)
+					blnAdd = false;
 
                 // Add the Program to the Category node.
 				if (blnAdd)
@@ -225,7 +227,7 @@ namespace Chummer
 			{
 				if (_strLimitCategory == "" || _strLimitCategory == objXmlCategory.InnerText)
 				{
-					if (objXmlCategory.InnerText != "Skillsofts" || (objXmlCategory.InnerText == "Skillsofts" && _blnBiowireEnabled))
+					if (objXmlCategory.InnerText != "Skillsofts" && objXmlCategory.InnerText != "Autosoft" || (objXmlCategory.InnerText == "Skillsofts" && _blnBiowireEnabled) || (objXmlCategory.InnerText == "Autosoft" && _objCharacter.Options.TechnomancerAllowAutosoft))
 					{
 						TreeNode nodCategory = new TreeNode();
 						nodCategory.Tag = objXmlCategory.InnerText;

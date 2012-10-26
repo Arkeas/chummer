@@ -1,3 +1,9 @@
+Build XXX
+- added a house rule to allow Technomancers to select Autosofts as Complex Forms
+
+New Strings
+- Checkbox_Option_TechnomancerAllowAutosoft
+
 Build 420
 - fixed an issue where plugins would not be properly added to a Commlink when adding a PACKS Kit and selecting them would throw an error
 - when adding Armor to a Vehicle, the Vehicle now reduces the selected Rating to the maximum allowed value before accepting the Mod to avoid invalid configurations and throwing errors when the misconfigured Mod is selected
