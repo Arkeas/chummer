@@ -402,6 +402,32 @@ namespace Chummer
 		}
 
 		/// <summary>
+		/// Whether or not the Attribute has any modifiers from Improvements.
+		/// </summary>
+		public bool HasModifiers
+		{
+			get
+			{
+				foreach (Improvement objImprovement in _objCharacter.Improvements)
+				{
+					if (objImprovement.ImproveType == Improvement.ImprovementType.Attribute && objImprovement.ImprovedName == _strAbbrev && objImprovement.Enabled && objImprovement.Augmented != 0)
+						return true;
+				}
+
+				// If this is AGI, BOD, or STR, factor in any Cyberlimbs.
+				if (_strAbbrev == "AGI" || _strAbbrev == "BOD" || _strAbbrev == "STR")
+				{
+					foreach (Cyberware objCyberware in _objCharacter.Cyberware)
+					{
+						if (objCyberware.Category == "Cyberlimb" && objCyberware.LimbSlot != "")
+							return true;
+					}
+				}
+				return false;
+			}
+		}
+
+		/// <summary>
 		/// The total amount of the modifiers that affect the Attribute's Minimum value.
 		/// </summary>
 		public int MinimumModifiers
@@ -3895,6 +3921,7 @@ namespace Chummer
 				string strReturn = _strRange;
 				strReturn = strReturn.Replace("Self", LanguageManager.Instance.GetString("String_SpellRangeSelf"));
 				strReturn = strReturn.Replace("LOS", LanguageManager.Instance.GetString("String_SpellRangeLineOfSight"));
+				strReturn = strReturn.Replace("LOI", LanguageManager.Instance.GetString("String_SpellRangeLineOfInfluence"));
 				strReturn = strReturn.Replace("T", LanguageManager.Instance.GetString("String_SpellRangeTouch"));
 				strReturn = strReturn.Replace("(A)", "(" + LanguageManager.Instance.GetString("String_SpellRangeArea") + ")");
 				strReturn = strReturn.Replace("MAG", LanguageManager.Instance.GetString("String_AttributeMAGShort"));
@@ -7698,6 +7725,7 @@ namespace Chummer
 				strReturn = strReturn.Replace("Self", LanguageManager.Instance.GetString("String_SpellRangeSelf"));
 				strReturn = strReturn.Replace("Special", LanguageManager.Instance.GetString("String_SpellDurationSpecial"));
 				strReturn = strReturn.Replace("LOS", LanguageManager.Instance.GetString("String_SpellRangeLineOfSight"));
+				strReturn = strReturn.Replace("LOI", LanguageManager.Instance.GetString("String_SpellRangeLineOfInfluence"));
 				strReturn = strReturn.Replace("T", LanguageManager.Instance.GetString("String_SpellRangeTouch"));
 				strReturn = strReturn.Replace("(A)", "(" + LanguageManager.Instance.GetString("String_SpellRangeArea") + ")");
 				strReturn = strReturn.Replace("MAG", LanguageManager.Instance.GetString("String_AttributeMAGShort"));

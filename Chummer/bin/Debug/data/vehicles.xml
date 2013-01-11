@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-880</version>
+	<version>-877</version>
 	<categories>
 		<category>Personal Mobility Vehicles</category>
 		<category>Bikes</category>
@@ -1089,7 +1089,7 @@
 			<avail>8</avail>
 			<cost>60000</cost>
 			<mods>
-				<name>Extreme Environment Mod</name>
+				<name select="Desert">Extreme Environment Mod</name>
 				<name rating="3">Personal Armor</name>
 				<name>Off-Road Suspension</name>
 				<name>Engine Customization, Acceleration</name>
@@ -7921,7 +7921,7 @@
 			<mods>
 				<name>Ballast Tanks Level 2</name>
 				<name>Drone Rack, Small</name>
-				<name>Extreme Environment Mod</name>
+				<name select="Deep Ocean">Extreme Environment Mod</name>
 				<name>Life Support Level 2</name>
 				<name>Mechanical Arm</name>
 			</mods>
@@ -7945,7 +7945,7 @@
 			<avail>18</avail>
 			<cost>620000</cost>
 			<mods>
-				<name>Extreme Environment Mod</name>
+				<name select="Space">Extreme Environment Mod</name>
 				<name>Life Support Level 2</name>
 				<name>Reflective Hull</name>
 			</mods>
@@ -7969,7 +7969,7 @@
 			<avail>14</avail>
 			<cost>1600000</cost>
 			<mods>
-				<name>Extreme Environment Mod</name>
+				<name select="High Altitude">Extreme Environment Mod</name>
 				<name>Improved Economy</name>
 				<name>Life Support Level 2</name>
 				<name rating="2">Signature Masking</name>
@@ -8041,7 +8041,7 @@
 			<avail>16</avail>
 			<cost>230000</cost>
 			<mods>
-				<name>Extreme Environment Mod</name>
+				<name select="Subterranean">Extreme Environment Mod</name>
 			</mods>
 			<gears>
 				<gear>Vehicle Sensor</gear>
@@ -8203,7 +8203,7 @@
 			<avail>12</avail>
 			<cost>4500000</cost>
 			<mods>
-				<name>Extreme Environment Mod</name>
+				<name select="Icebreaker">Extreme Environment Mod</name>
 				<name>Satellite Communication</name>
 			</mods>
 			<gears>
@@ -8227,7 +8227,7 @@
 			<cost>450000</cost>
 			<mods>
 				<name rating="3">ECM</name>
-				<name>Extreme Environment Mod</name>
+				<name select="Arctic">Extreme Environment Mod</name>
 				<name>Improved Takeoff and Landing Level 2</name>
 				<name>Lock-On Countermeasures</name>
 				<name>Rigger Adaptation</name>
@@ -8252,7 +8252,7 @@
 			<avail>30F</avail>
 			<cost>2650000</cost>
 			<mods>
-				<name>Extreme Environment Mod</name>
+				<name select="Arctic Waters">Extreme Environment Mod</name>
 				<name>Satellite Communication</name>
 				<name rating="2">Signature Masking</name>
 				<name>Weapon Mount (Normal, External, Flexible, Armored)</name>
@@ -8280,7 +8280,7 @@
 			<cost>35000</cost>
 			<mods>
 				<name>Ducted Waterjet</name>
-				<name>Extreme Environment Mod</name>
+				<name select="Arctic Waters">Extreme Environment Mod</name>
 			</mods>
 			<gears>
 				<gear>Vehicle Sensor</gear>
@@ -8302,7 +8302,7 @@
 			<avail>12R</avail>
 			<cost>27600</cost>
 			<mods>
-				<name>Extreme Environment Mod</name>
+				<name select="Arctic Air">Extreme Environment Mod</name>
 				<name>Tracked Vehicle, Permanent</name>
 			</mods>
 			<gears>
@@ -8325,7 +8325,7 @@
 			<avail>4</avail>
 			<cost>60000</cost>
 			<mods>
-				<name>Extreme Environment Mod</name>
+				<name select="Arctic Waters">Extreme Environment Mod</name>
 				<name>Hydrofoil Capability</name>
 			</mods>
 			<gears>
@@ -8350,7 +8350,7 @@
 			<mods>
 				<name rating="3">ECM</name>
 				<name>Drone Rack, Small</name>
-				<name>Extreme Environment Mod</name>
+				<name select="Arctic">Extreme Environment Mod</name>
 				<name>Mechanical Arm</name>
 				<name>Mechanical Arm</name>
 				<name>Mechanical Arm</name>
@@ -8380,7 +8380,7 @@
 			<cost>18000</cost>
 			<mods>
 				<name rating="4">ECM</name>
-				<name>Extreme Environment Mod</name>
+				<name select="Space">Extreme Environment Mod</name>
 				<name>Weapon Mount (Normal, External, Turret, Remote)</name>
 			</mods>
 			<gears>
@@ -8435,7 +8435,7 @@
 			<avail>0</avail>
 			<cost>40000</cost>
 			<mods>
-				<name>Extreme Environment Mod</name>
+				<name select="Arctic">Extreme Environment Mod</name>
 				<name>Tracked Vehicle, Permanent</name>
 			</mods>
 			<gears>
@@ -8459,7 +8459,7 @@
 			<cost>17000</cost>
 			<mods>
 				<name rating="3">ECM</name>
-				<name>Extreme Environment Mod</name>
+				<name select="Space">Extreme Environment Mod</name>
 				<name>Retrans Unit</name>
 			</mods>
 			<gears>
@@ -8485,7 +8485,7 @@
 			<avail>0</avail>
 			<cost>12000</cost>
 			<mods>
-				<name>Extreme Environment Mod</name>
+				<name select="Arctic">Extreme Environment Mod</name>
 				<name>Tracked Vehicle, Permanent</name>
 			</mods>
 			<gears>
@@ -8508,7 +8508,7 @@
 			<avail>0</avail>
 			<cost>40000</cost>
 			<mods>
-				<name>Extreme Environment Mod</name>
+				<name select="Arctic">Extreme Environment Mod</name>
 				<name>Tracked Vehicle, Permanent</name>
 			</mods>
 			<gears>
@@ -9996,6 +9996,603 @@
 			<source>MST2</source>
 			<page>20</page>
 		</vehicle>
+		<vehicle>
+			<name>Mitsubishi Runabout (Subcompact) (2050)</name>
+			<category>Cars</category>
+			<handling>-1</handling>
+			<accel>10/20</accel>
+			<speed>80</speed>
+			<pilot>1</pilot>
+			<body>8</body>
+			<armor>6</armor>
+			<sensor>1</sensor>
+			<devicerating>3</devicerating>
+			<avail>0</avail>
+			<cost>10000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>191</page>
+		</vehicle>
+		<vehicle>
+			<name>Chrysler-Nissan Jackrabbit (Subcompact) (2050)</name>
+			<category>Cars</category>
+			<handling>0</handling>
+			<accel>15/35</accel>
+			<speed>120</speed>
+			<pilot>1</pilot>
+			<body>8</body>
+			<armor>2</armor>
+			<sensor>1</sensor>
+			<devicerating>3</devicerating>
+			<avail>0</avail>
+			<cost>15000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>191</page>
+		</vehicle>
+		<vehicle>
+			<name>Ford Americar (Sedan) (2050)</name>
+			<category>Cars</category>
+			<handling>0</handling>
+			<accel>15/30</accel>
+			<speed>110</speed>
+			<pilot>2</pilot>
+			<body>10</body>
+			<armor>6</armor>
+			<sensor>1</sensor>
+			<devicerating>3</devicerating>
+			<avail>0</avail>
+			<cost>20000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>191</page>
+		</vehicle>
+		<vehicle>
+			<name>Eurocar Westwind 2000 (Sports Car) (2050)</name>
+			<category>Cars</category>
+			<handling>3</handling>
+			<accel>20/60</accel>
+			<speed>240</speed>
+			<pilot>3</pilot>
+			<body>10</body>
+			<armor>6</armor>
+			<sensor>1</sensor>
+			<devicerating>3</devicerating>
+			<avail>0</avail>
+			<cost>100000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>191</page>
+		</vehicle>
+		<vehicle>
+			<name>Toyota Elite (Sedan) (2050)</name>
+			<category>Cars</category>
+			<handling>2</handling>
+			<accel>20/45</accel>
+			<speed>160</speed>
+			<pilot>1</pilot>
+			<body>10</body>
+			<armor>5</armor>
+			<sensor>1</sensor>
+			<devicerating>3</devicerating>
+			<avail>0</avail>
+			<cost>125000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>191</page>
+		</vehicle>
+		<vehicle>
+			<name>Mitsubishi Nightsky (Limousine) (2050)</name>
+			<category>Cars</category>
+			<handling>-2</handling>
+			<accel>15/25</accel>
+			<speed>100</speed>
+			<pilot>3</pilot>
+			<body>12</body>
+			<armor>10</armor>
+			<sensor>1</sensor>
+			<devicerating>3</devicerating>
+			<avail>0</avail>
+			<cost>250000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>191</page>
+		</vehicle>
+		<vehicle>
+			<name>Dodge Scoot (Scooter)</name>
+			<category>Bikes</category>
+			<handling>1</handling>
+			<accel>10/15</accel>
+			<speed>60</speed>
+			<pilot>1</pilot>
+			<body>4</body>
+			<armor>2</armor>
+			<sensor>1</sensor>
+			<devicerating>3</devicerating>
+			<avail>0</avail>
+			<cost>2000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>191</page>
+		</vehicle>
+		<vehicle>
+			<name>Yamaha Rapier (Racing Bike) (2050)</name>
+			<category>Bikes</category>
+			<handling>2</handling>
+			<accel>20/50</accel>
+			<speed>200</speed>
+			<pilot>1</pilot>
+			<body>6</body>
+			<armor>4</armor>
+			<sensor>1</sensor>
+			<devicerating>3</devicerating>
+			<avail>0</avail>
+			<cost>10000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>191</page>
+		</vehicle>
+		<vehicle>
+			<name>Harley-Davidson Scorpion (Chopper) (2050)</name>
+			<category>Bikes</category>
+			<handling>2</handling>
+			<accel>15/30</accel>
+			<speed>120</speed>
+			<pilot>2</pilot>
+			<body>8</body>
+			<armor>4</armor>
+			<sensor>1</sensor>
+			<devicerating>3</devicerating>
+			<avail>0</avail>
+			<cost>15000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>193</page>
+		</vehicle>
+		<vehicle>
+			<name>SC Otter (Sport Cruiser) (2050)</name>
+			<category>Boats &amp; Subs</category>
+			<handling>1</handling>
+			<accel>5/10</accel>
+			<speed>45</speed>
+			<pilot>1</pilot>
+			<body>12</body>
+			<armor>6</armor>
+			<sensor>1</sensor>
+			<devicerating>3</devicerating>
+			<avail>0</avail>
+			<cost>20000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>193</page>
+		</vehicle>
+		<vehicle>
+			<name>Aztechnology Nightrunner (Utility) (2050)</name>
+			<category>Watercraft</category>
+			<handling>2</handling>
+			<accel>10/30</accel>
+			<speed>80</speed>
+			<pilot>1</pilot>
+			<body>12</body>
+			<armor>6</armor>
+			<sensor>1</sensor>
+			<devicerating>3</devicerating>
+			<avail>4R</avail>
+			<cost>30000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>193</page>
+		</vehicle>
+		<vehicle>
+			<name>Sendanko Marlin (Yacht) (2050)</name>
+			<category>Watercraft</category>
+			<handling>-2</handling>
+			<accel>20/30</accel>
+			<speed>30</speed>
+			<pilot>0</pilot>
+			<body>14</body>
+			<armor>4</armor>
+			<sensor>1</sensor>
+			<devicerating>3</devicerating>
+			<avail>0</avail>
+			<cost>15000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>193</page>
+		</vehicle>
+		<vehicle>
+			<name>Cessna C750 (Twin-Prop Airplane) (2050)</name>
+			<category>Winged Planes</category>
+			<handling>-1</handling>
+			<accel>20/90</accel>
+			<speed>340</speed>
+			<pilot>2</pilot>
+			<body>18</body>
+			<armor>4</armor>
+			<sensor>0</sensor>
+			<devicerating>3</devicerating>
+			<avail>4</avail>
+			<cost>200000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>193</page>
+		</vehicle>
+		<vehicle>
+			<name>Lear-Cessna Platinum 1 (Jet) (2050)</name>
+			<category>Winged Planes</category>
+			<handling>1</handling>
+			<accel>40/150</accel>
+			<speed>800</speed>
+			<pilot>3</pilot>
+			<body>14</body>
+			<armor>10</armor>
+			<sensor>3</sensor>
+			<devicerating>3</devicerating>
+			<avail>8</avail>
+			<cost>500000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>193</page>
+		</vehicle>
+		<vehicle>
+			<name>Fed Boeing Commuter (Tilt-Wing Airplane) (2050)</name>
+			<category>VTOL/VSTOL</category>
+			<handling>-2</handling>
+			<accel>10/30</accel>
+			<speed>120</speed>
+			<pilot>3</pilot>
+			<body>16</body>
+			<armor>8</armor>
+			<sensor>0</sensor>
+			<devicerating>3</devicerating>
+			<avail>8R</avail>
+			<cost>625000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>193</page>
+		</vehicle>
+		<vehicle>
+			<name>Hughes WK-2 Stallion (Utility Helicopter)</name>
+			<category>Rotorcraft</category>
+			<handling>-1</handling>
+			<accel>15/50</accel>
+			<speed>190</speed>
+			<pilot>3</pilot>
+			<body>14</body>
+			<armor>8</armor>
+			<sensor>0</sensor>
+			<devicerating>3</devicerating>
+			<avail>6</avail>
+			<cost>300000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>193</page>
+		</vehicle>
+		<vehicle>
+			<name>Ares Dragon (Cargo Helicopter) (2050)</name>
+			<category>Rotorcraft</category>
+			<handling>-1</handling>
+			<accel>10/40</accel>
+			<speed>260</speed>
+			<pilot>3</pilot>
+			<body>22</body>
+			<armor>8</armor>
+			<sensor>0</sensor>
+			<devicerating>3</devicerating>
+			<avail>6</avail>
+			<cost>600000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>193</page>
+		</vehicle>
+		<vehicle>
+			<name>Hughes Aerospace Airstar (Cargo Helicopter) (2050)</name>
+			<category>Rotorcraft</category>
+			<handling>-1</handling>
+			<accel>15/30</accel>
+			<speed>300</speed>
+			<pilot>2</pilot>
+			<body>18</body>
+			<armor>6</armor>
+			<sensor>2</sensor>
+			<devicerating>3</devicerating>
+			<avail>7</avail>
+			<cost>900000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>193</page>
+		</vehicle>
+		<vehicle>
+			<name>EFA Variant (Fighter) (2050)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>1</handling>
+			<accel>70/280</accel>
+			<speed>1600</speed>
+			<pilot>3</pilot>
+			<body>18</body>
+			<armor>16</armor>
+			<sensor>2</sensor>
+			<devicerating>5</devicerating>
+			<avail>13F</avail>
+			<cost>5000000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>194</page>
+		</vehicle>
+		<vehicle>
+			<name>GMC Banshee (Thunderbird) (2050)</name>
+			<category>VTOL/VSTOL</category>
+			<handling>1</handling>
+			<accel>50/250</accel>
+			<speed>1000</speed>
+			<pilot>2</pilot>
+			<body>20</body>
+			<armor>18</armor>
+			<sensor>0</sensor>
+			<devicerating>3</devicerating>
+			<avail>99F</avail>
+			<cost>1000000000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>194</page>
+		</vehicle>
+		<vehicle>
+			<name>Ares Citymaster (Riot Control Vehicle) (2050)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-1</handling>
+			<accel>5/30</accel>
+			<speed>120</speed>
+			<pilot>3</pilot>
+			<body>16</body>
+			<armor>20</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>20R</avail>
+			<cost>500000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>194</page>
+		</vehicle>
+		<vehicle>
+			<name>Chrysler-Nissan Patrol-1 (Patrol Car) (2050)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>3</handling>
+			<accel>10/45</accel>
+			<speed>180</speed>
+			<pilot>3</pilot>
+			<body>10</body>
+			<armor>10</armor>
+			<sensor>1</sensor>
+			<devicerating>4</devicerating>
+			<avail>12R</avail>
+			<cost>100000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>194</page>
+		</vehicle>
+		<vehicle>
+			<name>GMC Beachcraft Patroller (Patrol Hovercraft) (2050)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>2</handling>
+			<accel>10/40</accel>
+			<speed>160</speed>
+			<pilot>2</pilot>
+			<body>12</body>
+			<armor>16</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>16R</avail>
+			<cost>750000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>194</page>
+		</vehicle>
+		<vehicle>
+			<name>GMC Riverine (Speedboat) (2050)</name>
+			<category>Watercraft</category>
+			<handling>1</handling>
+			<accel>10/20</accel>
+			<speed>290</speed>
+			<pilot>2</pilot>
+			<body>12</body>
+			<armor>16</armor>
+			<sensor>2</sensor>
+			<devicerating>3</devicerating>
+			<avail>16R</avail>
+			<cost>125000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>194</page>
+		</vehicle>
+		<vehicle>
+			<name>Northrup Wasp (Autogyro) (2050)</name>
+			<category>Rotorcraft</category>
+			<handling>0</handling>
+			<accel>15/30</accel>
+			<speed>130</speed>
+			<pilot>0</pilot>
+			<body>10</body>
+			<armor>6</armor>
+			<sensor>0</sensor>
+			<devicerating>3</devicerating>
+			<avail>12R</avail>
+			<cost>220000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>194</page>
+		</vehicle>
+		<vehicle>
+			<name>Northup PRC-44B Yellowjacket (Military Helicopter) (2050)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>0</handling>
+			<accel>15/30</accel>
+			<speed>130</speed>
+			<pilot>0</pilot>
+			<body>10</body>
+			<armor>8</armor>
+			<sensor>2</sensor>
+			<devicerating>5</devicerating>
+			<avail>12F</avail>
+			<cost>280000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>194</page>
+		</vehicle>
+		<vehicle>
+			<name>Federated Boeing Eagle (VSTOL Fighter-Bomber) (2050)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>2</handling>
+			<accel>60/240</accel>
+			<speed>1200</speed>
+			<pilot>3</pilot>
+			<body>20</body>
+			<armor>12</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>26F</avail>
+			<cost>10000000</cost>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>194</page>
+		</vehicle>
+		<vehicle>
+			<name>Surveillance Drone (Medium) (2050)</name>
+			<category>Drones: Medium</category>
+			<handling>0</handling>
+			<accel>10/25</accel>
+			<speed>100</speed>
+			<pilot>3</pilot>
+			<body>3</body>
+			<armor>2</armor>
+			<sensor>3</sensor>
+			<devicerating>3</devicerating>
+			<avail>6</avail>
+			<cost>10000</cost>
+			<gears>
+				<gear>Medium Drone Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>195</page>
+		</vehicle>
+		<vehicle>
+			<name>Spotter Drone (Medium) (2050)</name>
+			<category>Drones: Medium</category>
+			<handling>1</handling>
+			<accel>30/150</accel>
+			<speed>300</speed>
+			<pilot>3</pilot>
+			<body>3</body>
+			<armor>0</armor>
+			<sensor>2</sensor>
+			<devicerating>3</devicerating>
+			<avail>4</avail>
+			<cost>15000</cost>
+			<gears>
+				<gear>Medium Drone Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>195</page>
+		</vehicle>
+		<vehicle>
+			<name>Hunter Drone (Small) (2050)</name>
+			<category>Drones: Small</category>
+			<handling>0</handling>
+			<accel>5/20</accel>
+			<speed>90</speed>
+			<pilot>3</pilot>
+			<body>3</body>
+			<armor>6</armor>
+			<sensor>3</sensor>
+			<devicerating>3</devicerating>
+			<avail>6R</avail>
+			<cost>20000</cost>
+			<mods>
+				<name>Weapon Mount (Normal, External, Fixed, Manual)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Manual)</name>
+			</mods>
+			<gears>
+				<gear>Small Drone Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>195</page>
+		</vehicle>
+		<vehicle>
+			<name>Patrol Vehicle (Large) (2050)</name>
+			<category>Drones: Large</category>
+			<handling>0</handling>
+			<accel>10/25</accel>
+			<speed>75</speed>
+			<pilot>3</pilot>
+			<body>3</body>
+			<armor>6</armor>
+			<sensor>3</sensor>
+			<devicerating>3</devicerating>
+			<avail>6R</avail>
+			<cost>10000</cost>
+			<mods>
+				<name>Weapon Mount (Normal, External, Fixed, Manual)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Manual)</name>
+			</mods>
+			<gears>
+				<gear>Large Drone Sensor</gear>
+			</gears>
+			<source>2050</source>
+			<page>195</page>
+		</vehicle>
 	</vehicles>
 	<mods>
 		<mod>
@@ -10373,6 +10970,9 @@
 			<slots>1</slots>
 			<avail>6</avail>
 			<cost>2000</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
 			<source>AR</source>
 			<page>135</page>
 		</mod>
@@ -13295,6 +13895,49 @@
 			<cost>1600</cost>
 			<source>MST2</source>
 			<page>28</page>
+		</mod>
+		<mod>
+			<name>Rigger Adaptation (2050)</name>
+			<category>Standard</category>
+			<rating>0</rating>
+			<slots>1</slots>
+			<avail>4</avail>
+			<cost>2800</cost>
+			<source>2050</source>
+			<page>196</page>
+		</mod>
+		<mod>
+			<name>Remote Adaptation (2050)</name>
+			<category>Standard</category>
+			<rating>0</rating>
+			<slots>1</slots>
+			<avail>4</avail>
+			<cost>Body * 1000</cost>
+			<source>2050</source>
+			<page>196</page>
+		</mod>
+		<mod>
+			<name>Remote Control Deck (2050)</name>
+			<category>Standard</category>
+			<rating>6</rating>
+			<slots>1</slots>
+			<avail>Rating * 2</avail>
+			<cost>Body * 5000</cost>
+			<source>2050</source>
+			<page>196</page>
+		</mod>
+		<mod>
+			<name>Generic Mod</name>
+			<category>Standard</category>
+			<rating>0</rating>
+			<slots>0</slots>
+			<avail>0</avail>
+			<cost>Variable(0-999999)</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>SR4</source>
+			<page>0</page>
 		</mod>
 	</mods>
 </chummer>

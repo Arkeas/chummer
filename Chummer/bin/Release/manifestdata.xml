@@ -3,7 +3,7 @@
 	<file>
 		<name>chummer.exe</name>
 		<type>Application</type>
-		<version>0.0.0.420</version>
+		<version>0.0.0.439</version>
 		<description>Chummer</description>
 		<notes>- Chummer Application</notes>
 	</file>
@@ -20,6 +20,13 @@
 		<version>-998</version>
 		<description>Condition Monitor Base</description>
 		<notes>- Condition Monitor sheet</notes>
+	</file>
+	<file>
+		<name>sheets/Dossier.xsl</name>
+		<type>Character Sheets</type>
+		<version>-910</version>
+		<description>Dossier Sheet</description>
+		<notes>- Dossier sheet</notes>
 	</file>
 	<file>
 		<name>sheets/Game Master Summary.xsl</name>
@@ -143,35 +150,35 @@
 	<file>
 		<name>export/Squad Manager.xsl</name>
 		<type>Export Template</type>
-		<version>-998</version>
+		<version>-997</version>
 		<description>Squad Manager</description>
 		<notes>- Squad Manager (http://stauder-online.de/sr/english.htm)</notes>
 	</file>
 	<file>
 		<name>data/armor.xml</name>
 		<type>Data Files</type>
-		<version>-885</version>
+		<version>-884</version>
 		<description>Armor</description>
 		<notes>- Armor data file</notes>
 	</file>
 	<file>
 		<name>data/bioware.xml</name>
 		<type>Data Files</type>
-		<version>-908</version>
+		<version>-907</version>
 		<description>Bioware</description>
 		<notes>- Bioware data file</notes>
 	</file>
 	<file>
 		<name>data/books.xml</name>
 		<type>Data Files</type>
-		<version>-911</version>
+		<version>-910</version>
 		<description>Books</description>
 		<notes>- Books data file</notes>
 	</file>
 	<file>
 		<name>data/critterpowers.xml</name>
 		<type>Data Files</type>
-		<version>-918</version>
+		<version>-917</version>
 		<description>Critter Powers</description>
 		<notes>- Critter Powers data file</notes>
 	</file>
@@ -185,35 +192,35 @@
 	<file>
 		<name>data/cyberware.xml</name>
 		<type>Data Files</type>
-		<version>-897</version>
+		<version>-893</version>
 		<description>Cyberware</description>
 		<notes>- Cyberware data file</notes>
 	</file>
 	<file>
 		<name>data/echoes.xml</name>
 		<type>Data Files</type>
-		<version>-921</version>
+		<version>-920</version>
 		<description>Echoes</description>
 		<notes>- Echoes data file</notes>
 	</file>
 	<file>
 		<name>data/gear.xml</name>
 		<type>Data Files</type>
-		<version>-835</version>
+		<version>-829</version>
 		<description>Gear</description>
 		<notes>- Gear data file</notes>
 	</file>
 	<file>
 		<name>data/improvements.xml</name>
 		<type>Data Files</type>
-		<version>-993</version>
+		<version>-992</version>
 		<description>Improvements</description>
 		<notes>- Improvements data file</notes>
 	</file>
 	<file>
 		<name>data/lifestyles.xml</name>
 		<type>Data Files</type>
-		<version>-924</version>
+		<version>-923</version>
 		<description>Lifestyles</description>
 		<notes>- Lifestyles data file</notes>
 	</file>
@@ -234,7 +241,7 @@
 	<file>
 		<name>data/metamagic.xml</name>
 		<type>Data Files</type>
-		<version>-923</version>
+		<version>-922</version>
 		<description>Metamagic</description>
 		<notes>- Metamagic data file</notes>
 	</file>
@@ -248,7 +255,7 @@
 	<file>
 		<name>data/packs.xml</name>
 		<type>Data Files</type>
-		<version>-921</version>
+		<version>-920</version>
 		<description>PACKS</description>
 		<notes>- PACKS data file</notes>
 	</file>
@@ -276,7 +283,7 @@
 	<file>
 		<name>data/qualities.xml</name>
 		<type>Data Files</type>
-		<version>-882</version>
+		<version>-880</version>
 		<description>Qualities</description>
 		<notes>- Qualities data file</notes>
 	</file>
@@ -297,7 +304,7 @@
 	<file>
 		<name>data/spells.xml</name>
 		<type>Data Files</type>
-		<version>-919</version>
+		<version>-918</version>
 		<description>Spells</description>
 		<notes>- Spells data file</notes>
 	</file>
@@ -318,7 +325,7 @@
 	<file>
 		<name>data/vehicles.xml</name>
 		<type>Data Files</type>
-		<version>-880</version>
+		<version>-877</version>
 		<description>Vehicles</description>
 		<notes>- Vehicles data file</notes>
 	</file>
@@ -332,7 +339,7 @@
 	<file>
 		<name>data/weapons.xml</name>
 		<type>Data Files</type>
-		<version>-861</version>
+		<version>-859</version>
 		<description>Weapons</description>
 		<notes>- Weapons data file</notes>
 	</file>

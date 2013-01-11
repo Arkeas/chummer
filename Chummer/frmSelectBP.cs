@@ -8,12 +8,14 @@ namespace Chummer
     {
 		private readonly Character _objCharacter;
 		private readonly CharacterOptions _objOptions;
+		private bool _blnUseCurrentValues = false;
 
 		#region Control Events
-		public frmSelectBP(Character objCharacter)
+		public frmSelectBP(Character objCharacter, bool blnUseCurrentValues = false)
         {
 			_objCharacter = objCharacter;
 			_objOptions = _objCharacter.Options;
+			_blnUseCurrentValues = blnUseCurrentValues;
             InitializeComponent();
 			LanguageManager.Instance.Load(GlobalOptions.Instance.Language, this);
 
@@ -38,6 +40,24 @@ namespace Chummer
 			nudMaxAvail.Value = _objOptions.Availability;
 
 			toolTip1.SetToolTip(chkIgnoreRules, LanguageManager.Instance.GetString("Tip_SelectBP_IgnoreRules"));
+
+			if (blnUseCurrentValues)
+			{
+				if (objCharacter.BuildMethod == CharacterBuildMethod.Karma)
+				{
+					cboBuildMethod.SelectedValue = "Karma";
+					nudBP.Value = objCharacter.BuildKarma;
+				}
+				else
+				{
+					cboBuildMethod.SelectedValue = "BP";
+					nudBP.Value = objCharacter.BuildPoints;
+				}
+
+				nudMaxAvail.Value = objCharacter.MaximumAvailability;
+
+				cboBuildMethod.Enabled = false;
+			}
         }
 
         private void cmdOK_Click(object sender, EventArgs e)
@@ -73,12 +93,14 @@ namespace Chummer
 				if (_objOptions.BuildMethod == "BP")
 				{
 					lblDescription.Text = LanguageManager.Instance.GetString("String_SelectBP_BPSummary").Replace("{0}", _objOptions.BuildPoints.ToString());
-					nudBP.Value = _objOptions.BuildPoints;
+					if (!_blnUseCurrentValues)
+						nudBP.Value = _objOptions.BuildPoints;
 				}
 				else
 				{
 					lblDescription.Text = LanguageManager.Instance.GetString("String_SelectBP_BPSummary").Replace("{0}", "400");
-					nudBP.Value = 400;
+					if (!_blnUseCurrentValues)
+						nudBP.Value = 400;
 				}
 			}
 			else if (cboBuildMethod.SelectedValue.ToString() == "Karma")
@@ -86,12 +108,14 @@ namespace Chummer
 				if (_objOptions.BuildMethod == "Karma")
 				{
 					lblDescription.Text = LanguageManager.Instance.GetString("String_SelectBP_KarmaSummary").Replace("{0}", _objOptions.BuildPoints.ToString());
-					nudBP.Value = _objOptions.BuildPoints;
+					if (!_blnUseCurrentValues)
+						nudBP.Value = _objOptions.BuildPoints;
 				}
 				else
 				{
 					lblDescription.Text = LanguageManager.Instance.GetString("String_SelectBP_KarmaSummary").Replace("{0}", "750");
-					nudBP.Value = 750;
+					if (!_blnUseCurrentValues)
+						nudBP.Value = 750;
 				}
 			}
 		}

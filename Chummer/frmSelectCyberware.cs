@@ -10,7 +10,7 @@ namespace Chummer
     public partial class frmSelectCyberware : Form
     {
 		private string _strSelectedCyberware = "";
-		private CyberwareGrade _objSelectedGrade;
+		private Grade _objSelectedGrade;
 		private int _intSelectedRating = 0;
 		private readonly Character _objCharacter;
 		private int _intSelectedESSDiscount = 0;
@@ -591,7 +591,7 @@ namespace Chummer
 		/// <summary>
 		/// Grade of the selected piece of Cyberware.
 		/// </summary>
-		public CyberwareGrade SelectedGrade
+		public Grade SelectedGrade
 		{
 			get
 			{
@@ -831,12 +831,12 @@ namespace Chummer
 				{
 					string[] strValues = objXmlCyberware["ess"].InnerText.Replace("FixedValues(", string.Empty).Replace(")", string.Empty).Split(',');
 					decimal decESS = Convert.ToDecimal(strValues[Convert.ToInt32(nudRating.Value) - 1], GlobalOptions.Instance.CultureInfo);
-					dblESS = Math.Round(Convert.ToDouble(decESS, GlobalOptions.Instance.CultureInfo) * dblCharacterESSModifier, 2, MidpointRounding.AwayFromZero);
+					dblESS = Math.Round(Convert.ToDouble(decESS, GlobalOptions.Instance.CultureInfo) * dblCharacterESSModifier, _objCharacter.Options.EssenceDecimals, MidpointRounding.AwayFromZero);
 				}
 				else
 				{
 					XPathExpression xprEssence = nav.Compile(objXmlCyberware["ess"].InnerText.Replace("Rating", nudRating.Value.ToString()));
-					dblESS = Math.Round(Convert.ToDouble(nav.Evaluate(xprEssence), GlobalOptions.Instance.CultureInfo) * dblCharacterESSModifier, 2, MidpointRounding.AwayFromZero);
+					dblESS = Math.Round(Convert.ToDouble(nav.Evaluate(xprEssence), GlobalOptions.Instance.CultureInfo) * dblCharacterESSModifier, _objCharacter.Options.EssenceDecimals, MidpointRounding.AwayFromZero);
 				}
 				// Check if the character has Sensitive System.
 				if (_objMode == Mode.Cyberware)
@@ -853,24 +853,78 @@ namespace Chummer
 				// XPathExpression cannot evaluate while there are square brackets, so remove them if necessary.
 				bool blnSquareBrackets = objXmlCyberware["capacity"].InnerText.Contains('[');
 				string strCapacity = objXmlCyberware["capacity"].InnerText;
-				if (blnSquareBrackets)
-					strCapacity = strCapacity.Substring(1, strCapacity.Length - 2);
-				XPathExpression xprCapacity = nav.Compile(strCapacity.Replace("Rating", nudRating.Value.ToString()));
+				XPathExpression xprCapacity;
 
-				if (objXmlCyberware["capacity"].InnerText == "[*]")
-					lblCapacity.Text = "*";
+				if (objXmlCyberware["capacity"].InnerText.Contains("/["))
+				{
+					int intPos = objXmlCyberware["capacity"].InnerText.IndexOf("/[");
+					string strFirstHalf = objXmlCyberware["capacity"].InnerText.Substring(0, intPos);
+					string strSecondHalf = objXmlCyberware["capacity"].InnerText.Substring(intPos + 1, objXmlCyberware["capacity"].InnerText.Length - intPos - 1);
+
+					try
+					{
+						blnSquareBrackets = strFirstHalf.Contains('[');
+						strCapacity = strFirstHalf;
+						if (blnSquareBrackets)
+							strCapacity = strCapacity.Substring(1, strCapacity.Length - 2);
+					}
+					catch
+					{
+					}
+					xprCapacity = nav.Compile(strCapacity.Replace("Rating", nudRating.Value.ToString()));
+
+					try
+					{
+						if (objXmlCyberware["capacity"].InnerText == "[*]")
+							lblCapacity.Text = "*";
+						else
+						{
+							if (objXmlCyberware["capacity"].InnerText.StartsWith("FixedValues"))
+							{
+								string[] strValues = objXmlCyberware["capacity"].InnerText.Replace("FixedValues(", string.Empty).Replace(")", string.Empty).Split(',');
+								lblCapacity.Text = strValues[Convert.ToInt32(nudRating.Value) - 1];
+							}
+							else
+								lblCapacity.Text = nav.Evaluate(xprCapacity).ToString();
+						}
+						if (blnSquareBrackets)
+							lblCapacity.Text = "[" + lblCapacity.Text + "]";
+					}
+					catch
+					{
+						lblCapacity.Text = "0";
+					}
+
+					if (strSecondHalf.Contains("Rating"))
+					{
+						strSecondHalf = strSecondHalf.Replace("[", string.Empty).Replace("]", string.Empty);
+						xprCapacity = nav.Compile(strSecondHalf.Replace("Rating", nudRating.Value.ToString()));
+						strSecondHalf = "[" + nav.Evaluate(xprCapacity).ToString() + "]";
+					}
+
+					lblCapacity.Text += "/" + strSecondHalf;
+				}
 				else
 				{
-					if (objXmlCyberware["capacity"].InnerText.StartsWith("FixedValues"))
-					{
-						string[] strValues = objXmlCyberware["capacity"].InnerText.Replace("FixedValues(", string.Empty).Replace(")", string.Empty).Split(',');
-						lblCapacity.Text = strValues[Convert.ToInt32(nudRating.Value) - 1];
-					}
+					if (blnSquareBrackets)
+						strCapacity = strCapacity.Substring(1, strCapacity.Length - 2);
+					xprCapacity = nav.Compile(strCapacity.Replace("Rating", nudRating.Value.ToString()));
+
+					if (objXmlCyberware["capacity"].InnerText == "[*]")
+						lblCapacity.Text = "*";
 					else
-						lblCapacity.Text = nav.Evaluate(xprCapacity).ToString();
+					{
+						if (objXmlCyberware["capacity"].InnerText.StartsWith("FixedValues"))
+						{
+							string[] strValues = objXmlCyberware["capacity"].InnerText.Replace("FixedValues(", string.Empty).Replace(")", string.Empty).Split(',');
+							lblCapacity.Text = strValues[Convert.ToInt32(nudRating.Value) - 1];
+						}
+						else
+							lblCapacity.Text = nav.Evaluate(xprCapacity).ToString();
+					}
+					if (blnSquareBrackets)
+						lblCapacity.Text = "[" + lblCapacity.Text + "]";
 				}
-				if (blnSquareBrackets)
-					lblCapacity.Text = "[" + lblCapacity.Text + "]";
 			}
         }
 		
@@ -895,45 +949,11 @@ namespace Chummer
 				_strSelectedCyberware = objNode["name"].InnerText;
 			}
 
-			switch (cboGrade.SelectedValue.ToString())
-			{
-				case "Alphaware":
-					_objSelectedGrade = CyberwareGrade.Alphaware;
-					break;
-				case "Betaware":
-					_objSelectedGrade = CyberwareGrade.Betaware;
-					break;
-				case "Deltaware":
-					_objSelectedGrade = CyberwareGrade.Deltaware;
-					break;
-				case "Standard (Second-Hand)":
-					_objSelectedGrade = CyberwareGrade.StandardSecondHand;
-					break;
-				case "Alphaware (Second-Hand)":
-					_objSelectedGrade = CyberwareGrade.AlphawareSecondHand;
-					break;
-				case "Standard (Adapsin)":
-					_objSelectedGrade = CyberwareGrade.StandardAdapsin;
-					break;
-				case "Alphaware (Adapsin)":
-					_objSelectedGrade = CyberwareGrade.AlphawareAdapsin;
-					break;
-				case "Betaware (Adapsin)":
-					_objSelectedGrade = CyberwareGrade.BetawareAdapsin;
-					break;
-				case "Deltaware (Adapsin)":
-					_objSelectedGrade = CyberwareGrade.DeltawareAdapsin;
-					break;
-				case "Standard (Second-Hand) (Adapsin)":
-					_objSelectedGrade = CyberwareGrade.StandardSecondHandAdapsin;
-					break;
-				case "Alphaware (Second-Hand) (Adapsin)":
-					_objSelectedGrade = CyberwareGrade.AlphawareSecondHandAdapsin;
-					break;
-				default:
-					_objSelectedGrade = CyberwareGrade.Standard;
-					break;
-			}
+			if (_objMode == Mode.Bioware)
+				_objSelectedGrade = GlobalOptions.BiowareGrades.GetGrade(cboGrade.SelectedValue.ToString());
+			else
+				_objSelectedGrade = GlobalOptions.CyberwareGrades.GetGrade(cboGrade.SelectedValue.ToString());
+
 			_strSelectedGrade = cboGrade.SelectedValue.ToString();
 			_intSelectedRating = Convert.ToInt32(nudRating.Value);
 
@@ -949,32 +969,28 @@ namespace Chummer
 		/// <param name="blnIgnoreSecondHand">Whether or not Secon-Hand Grades should be added to the list.</param>
 		private void PopulateGrades(bool blnIgnoreSecondHand = false)
 		{
-			string strXPath = "";
-			if (_objCharacter.AdapsinEnabled)
-				strXPath = "/chummer/grades/grade[" + _objCharacter.Options.BookXPath();
+			GradeList objGradeList;
+			if (_objMode == Mode.Bioware)
+				objGradeList = GlobalOptions.BiowareGrades;
 			else
-				strXPath = "/chummer/grades/grade[not(contains(., 'Adapsin')) and (" + _objCharacter.Options.BookXPath() + ")";
-			if (blnIgnoreSecondHand)
-				strXPath += " and not(contains(., 'Second-Hand'))";
-			strXPath += "]";
-
-			XmlNodeList objXmlGradeList = _objXmlDocument.SelectNodes(strXPath);
+				objGradeList = GlobalOptions.CyberwareGrades;
 
 			_lstGrade.Clear();
-			foreach (XmlNode objXmlGrade in objXmlGradeList)
+			foreach (Grade objGrade in objGradeList)
 			{
+				bool blnAddItem = true;
+
 				ListItem objItem = new ListItem();
-				objItem.Value = objXmlGrade["name"].InnerText;
-				if (objXmlGrade["translate"] != null)
-				{
-					if (objXmlGrade["translate"] != null)
-						objItem.Name = objXmlGrade["translate"].InnerText;
-					else
-						objItem.Name = objXmlGrade["name"].InnerText;
-				}
-				else
-					objItem.Name = objXmlGrade["name"].InnerXml;
-				_lstGrade.Add(objItem);
+				objItem.Value = objGrade.Name;
+				objItem.Name = objGrade.DisplayName;
+				
+				if (blnIgnoreSecondHand && objGrade.SecondHand)
+					blnAddItem = false;
+				if (!_objCharacter.AdapsinEnabled && objGrade.Adapsin)
+					blnAddItem = false;
+
+				if (blnAddItem)
+					_lstGrade.Add(objItem);
 			}
 			cboGrade.DataSource = null;
 			cboGrade.ValueMember = "Value";

@@ -1,3 +1,122 @@
+Build 439
+- Cyberware attached to the character can now have plugins attached to plugins (recursive to any number)
+- Cyberware now supports items that both grant and consume capacity (X/[Y])
+- Commlinks on the Gear tab can now be marked as being the character's Active Commlink which automatically updates Matrix Initiative to use the proper Response
+- Program Packages and Software Suites can now be Hacked
+- added support for deleting Custom PACKS Kits through the Add PACKS Kits window
+- fixed an issue where Commlinks that came with plugins would create multiple copies of them when purchased
+- items in Custom PACKS Kits no longer include all of their default plugins and instead only add the plugins that were attached to them when the Kit was saved
+- added a "Generic Mod" Vehicle Mod to allow one-off Mods for Vehicles (typically Drones) more easily
+- fixed an issue where Gear with a <selecttext /> Improvement would not prompt for a value when added to a Vehicle
+- undoing a Nuyen Expense for a piece of Cyberware now removes any Weapons that the Cyberware created
+- added an Essence Consumption section to the Cyberware and Bioware tab that show the character's total values for Cyberware, Bioware, and Essence Hole deductions
+- added an option to control the number of decimal places that Essence is rounded to (2 by default)
+- a Complex Form's Rating can now be selected when in Career Mode with the Use alternate Complex Form cost optional rule turned on to see what the Dice Pool would be for the desired Rating
+
+New Strings
+- Label_EssenceConsumption
+- Label_Cyberware
+- Label_Bioware
+- Label_EssenceHole
+- Label_Options_EssenceDecimals
+
+Build 434
+- Improvements can now use division and will round resulting fractions downs
+- fixed an issue where deleting a piece of Cyberware could cause the next item in the list to suddenly change its Grade
+
+Build 433
+- added support for custom Cyberware and Bioware Grades
+- removing the last Adapsin-enabling Improvement now changes the Grade of all Cyberware to their non-Adapsin Grades
+- Cyberware and Bioware Grades on the printouts now show their full, translated names
+- save files now include the application build number they were last saved with
+
+Build 432
+- added an Add & More button to the Select Critter Power window
+- Notes window no longer appears in the Windows Taskbar
+- Attributes should now only show their Augmented value when they have Improvements that affect their actual value
+- Vehicle Weapon information is now shown in Create Mode
+- Sai (and any Weapon whose DV type is "P or S") now displays its calculated DV properly instead of the formula
+- Gear data file now supports recursive use of <usegear /> to add plugins to other plugins
+- Gear category is now recorded when creating a new custom PACKS Kit
+- adding a PACKS Kit now uses the recorded category (if available) to add the correct piece of Gear
+- Update window now moves the archived copy of the application back if downloading an updated version fails to hopefully prevent the app from being unusable
+
+Build 430
+- added support for <rangebonus /> to Gear for Ammo to affect a Weapon's Range
+- added support for Geomancy Rituals to Spells
+- Vehicle Nexi Plugins are no longer restricted to only Commlink Module category
+- Physical Attributes now show their Augmented value and tooltips if the character has a Cyberlimb
+
+New Strings
+- String_SpellRangeLineOfInfluence
+- Node_SelectedGeomancyRituals
+
+Build 429
+- fixed an issue where attempting to add a plugin to a Nexus on a Vehicle would throw an error
+- added support for creating custom Improvements for Knowledge Skills
+- fixed an issue where deleting a piece of Cyberware would not refresh the character's displayed Attribute totals immediately
+- Attributes now show their augmented value any time the Attribute has one or more modifiers instead of when the natural and augmented values do not match so that tooltips are always visible to explain how the value was calculated
+- Vehicles now allow any System or Firewall instead of being limited to Device Rating +2 which is a limitation that is only applied to Hardware properties
+- fixed an issue where Weapons that did not have at least one Accessory or Modification would not receive their STR bonus to RC if the optional rule for it was enabled
+- Armor no longer includes Avail modifiers from Armor Mods that come included with it by default
+- Armor no longer includes Avail modifiers from Gear that comes included with it by default
+- added Change BP/Avail Limit to the Special menu to change the maximum BP (or Karma) and Avail the character is allowed in Create Mode
+- Commlinks now add any Gear that is attached to the in the data files, such as the plugins that should come with all military spec Commlinks
+- fixed an issue where newly created Gear that is moved to a new container would cause duplicate items to be created in the save file
+- added support for Free Sprites (see below)
+
+Free Sprites
+Any Sprite can now be converted to a Free Sprite by selecting Special > Convert to Free Sprite. Free Sprites gain the Denial Power and access to Echoes Critter Powers as per UN 157.
+
+New Strings
+- Menu_SpecialBPAvailLimit
+- Menu_SpecialConvertToFreeSprite
+
+Build 426
+- fixed an issue where Cyberware Plugins were attempting to use their parent's Gear properties instead of their own and would throw an error when trying to bulid a list of Locations used by Cyberware
+- Gear Capacity now factors in the Quantity of each plugin
+
+Build 425
+- Create Mode tooltips that refer to BP values now use the BP values set in the Options window
+- fixed an issue where increasing a Skill Group Rating would also increase the Rating of an associated Active Skill that was affected by the Incompetence Negative Quality
+- fixed an issue where loading a character that had Incompetence Negative Quality applied to an Active Skill that belonged to a Skill Group with a Rating would throw an error
+- fixed an issue where adding a new Knowledge Skill and attempting to give it a Specialization while in Career Mode without saving and reloading the character would throw an exception
+- Mentor Spirits now show their player-selected bonuses on the Spells and Spirits tab in Career Mode in the same way they do in Create Mode
+- added an option to toggle whether or not Ergonomic Programs count towards a Commlink's effective Response value (enabled by default)
+- Commlink Operating Systems now allow any System or Firewall instead of being limited to +2 which is a limitation that is only applied to Hardware properties
+- added support for <metagenetic /> to qualities.xml to easily mark additional Qualities that count was Metagenetic Qualities
+- deleting an Emotitoy from a character now removes the bonuses for its Empathy Software
+- Weapons with only FA Firing Mode can now fire Short Bursts as described on SR4 154
+
+New Strings
+- Checkbox_Commlinks
+- Checkbox_ActiveCommlink
+- Tip_ActiveCommlink
+
+Modified Strings
+- Tip_CommonContacts
+- Tip_CommonNuyen
+- Tip_SkillsSkillGroups
+- Tip_SkillsActiveSkills
+- Tip_SkillsKnowledgeSkills
+- Tip_SpellsSelectedSpells
+- Tip_SpellsSpirits
+- Tip_TechnomancerSprites
+- Tip_BuildFoci
+- Tip_TechnomancerComplexForms
+- Tip_BuildManeuvers
+- Checkbox_Options_ErgonomicProgramLimit
+
+Build 423
+- added a house rule to allow Technomancers to select Autosofts as Complex Forms
+- fixed an issue where an error would be thrown when attempting to load a character that (somehow) possessed an Adept Power at Rating 1 (now assumes it should be Rating 1)
+- fixed an issue where attempting to create a Critter that had a starting Skill Group Rating higher than 6 would throw an error
+- corrected the rounding method for calculating Street Cred
+- Programs with the Ergonomic Program Option no longer count towards the number of Programs running on the Commlink to affect its Response
+
+New Strings
+- Checkbox_Option_TechnomancerAllowAutosoft
+
 Build 420
 - fixed an issue where plugins would not be properly added to a Commlink when adding a PACKS Kit and selecting them would throw an error
 - when adding Armor to a Vehicle, the Vehicle now reduces the selected Rating to the maximum allowed value before accepting the Mod to avoid invalid configurations and throwing errors when the misconfigured Mod is selected

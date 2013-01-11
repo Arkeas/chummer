@@ -538,7 +538,7 @@ namespace Chummer
 					Cyberware objTemp = new Cyberware(objCharacter);
 					List<Weapon> lstWeapons = new List<Weapon>();
 					List<TreeNode> lstNodes = new List<TreeNode>();
-					objTemp.Create(objXmlGear, objCharacter, CyberwareGrade.Standard, objSource, 1, objTempNode, lstWeapons, lstNodes);
+					objTemp.Create(objXmlGear, objCharacter, GlobalOptions.CyberwareGrades.GetGrade("Standard"), objSource, 1, objTempNode, lstWeapons, lstNodes);
 					try
 					{
 						int objValue = objTemp.TotalCost;

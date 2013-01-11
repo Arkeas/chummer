@@ -33,6 +33,22 @@ namespace Chummer
 			cboBuildMethod.ValueMember = "Value";
 			cboBuildMethod.DisplayMember = "Name";
 
+			// Populate the Essence Decimals list.
+			List<ListItem> lstDecimals = new List<ListItem>();
+			ListItem objTwo = new ListItem();
+			objTwo.Value = "2";
+			objTwo.Name = "2";
+
+			ListItem objFour = new ListItem();
+			objFour.Value = "4";
+			objFour.Name = "4";
+
+			lstDecimals.Add(objTwo);
+			lstDecimals.Add(objFour);
+			cboEssenceDecimals.DataSource = lstDecimals;
+			cboEssenceDecimals.ValueMember = "Value";
+			cboEssenceDecimals.DisplayMember = "Name";
+
 			// Populate the Limb Count list.
 			List<ListItem> lstLimbCount = new List<ListItem>();
 			ListItem objLimbCount6 = new ListItem();
@@ -207,6 +223,7 @@ namespace Chummer
 			_objOptions.FreeContactsFlatNumber = Convert.ToInt32(nudFreeContactsFlatNumber.Value);
 			_objOptions.FreeKarmaKnowledge = chkFreeKarmaKnowledge.Checked;
 			_objOptions.NuyenPerBP = Convert.ToInt32(nudNuyenPerBP.Value);
+			_objOptions.EssenceDecimals = Convert.ToInt32(cboEssenceDecimals.SelectedValue);
 			_objOptions.NoSingleArmorEncumbrance = chkNoSingleArmorEncumbrance.Checked;
 			_objOptions.IgnoreArmorEncumbrance = chkIgnoreArmorEncumbrance.Checked;
 			_objOptions.AlternateArmorEncumbrance = chkAlternateArmorEncumbrance.Checked;
@@ -237,6 +254,7 @@ namespace Chummer
 			_objOptions.AllowExceedAttributeBP = chkAllowExceedAttributeBP.Checked;
 			_objOptions.UnrestrictedNuyen = chkUnrestrictedNuyen.Checked;
 			_objOptions.CalculateCommlinkResponse = chkCalculateCommlinkResponse.Checked;
+			_objOptions.ErgonomicProgramLimit = chkErgonomicProgramLimit.Checked;
 			_objOptions.AllowHigherStackedFoci = chkAllowHigherStackedFoci.Checked;
 			_objOptions.AllowEditPartOfBaseWeapon = chkAllowEditPartOfBaseWeapon.Checked;
 			_objOptions.AlternateMetatypeAttributeKarma = chkAlternateMetatypeAttributeKarma.Checked;
@@ -415,6 +433,7 @@ namespace Chummer
 			nudFreeContactsFlatNumber.Left = chkFreeContactsFlat.Left + chkFreeContactsFlat.Width;
 			nudRestrictedCostMultiplier.Left = chkMultiplyRestrictedCost.Left + chkMultiplyRestrictedCost.Width;
 			nudForbiddenCostMultiplier.Left = chkMultiplyForbiddenCost.Left + chkMultiplyForbiddenCost.Width;
+			cboEssenceDecimals.Left = lblEssenceDecimals.Left + lblEssenceDecimals.Width + 6;
 
 			// BP fields.
 			int intWidth = Math.Max(lblBPAttribute.Width, lblBPAttributeMax.Width);
@@ -736,6 +755,18 @@ namespace Chummer
 			}
 			nudNuyenPerBP.Value = intNuyenPerBP;
 
+			int intEssenceDecimals = 2;
+			try
+			{
+				intEssenceDecimals = _objOptions.EssenceDecimals;
+			}
+			catch
+			{
+			}
+			if (intEssenceDecimals == 0)
+				intEssenceDecimals = 2;
+			cboEssenceDecimals.SelectedValue = intEssenceDecimals.ToString();
+
 			bool blnNoSingleArmorEncumbrance = false;
 			try
 			{
@@ -1038,6 +1069,16 @@ namespace Chummer
 			{
 			}
 			chkCalculateCommlinkResponse.Checked = blnCalculateCommlinkResponse;
+
+			bool blnErgonomicProgramLimit = true;
+			try
+			{
+				blnErgonomicProgramLimit = _objOptions.ErgonomicProgramLimit;
+			}
+			catch
+			{
+			}
+			chkErgonomicProgramLimit.Checked = blnErgonomicProgramLimit;
 
 			bool blnAllowSkillDiceRolling = false;
 			try

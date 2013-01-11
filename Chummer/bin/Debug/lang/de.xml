@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-952</version>
+	<version>-949</version>
 	<name>Deutsch (DE)</name>
 	<strings>
 		<string>
@@ -6469,6 +6469,37 @@
 		<string>
 			<key>Message_DeletePACKSKit</key>
 			<text>Möchten Sie wirklich das selbsterstellte PACKS Kit {0} löschen?</text>
+		</string>
+		<!-- Version 423 -->
+		<string>
+			<key>Checkbox_Options_ErgonomicProgramLimit</key>
+			<text>Ergonomische Programme beeinflussen die Prozessorleistung des Kommlinks nicht (UN114)</text>
+		</string>
+		<string>
+			<key>Checkbox_Option_TechnomancerAllowAutosoft</key>
+			<text>Technomancer dürfen Autosofts als Komplexe Form wählen</text>
+		</string>
+		<!-- Version 425 -->
+		<string>
+			<key>Checkbox_Commlinks</key>
+			<text>Zeige nur Kommlinks</text>
+		</string>
+		<string>
+			<key>Checkbox_ActiveCommlink</key>
+			<text>Kommlink aktivieren</text>
+		</string>
+		<string>
+			<key>Tip_ActiveCommlink</key>
+			<text>Dieses ausgewählte Kommlink als das gerade aktive makieren. Die Matrix Initiative wird mit diesem Kommlink berechnet.</text>
+		</string>
+		<!-- Version ??? -->
+		<string>
+			<key>Menu_SpecialBPAvailLimit</key>
+			<text>Maximale BP ändern</text>
+		</string>
+		<string>
+			<key>Menu_SpecialConvertToFreeSprite</key>
+			<text>In freien Geist konvertieren</text>
 		</string>
 	</strings>
 </chummer>

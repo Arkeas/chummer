@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-861</version>
+	<version>-859</version>
 	<categories>
 		<category>Blades</category>
 		<category>Clubs</category>
@@ -3078,12 +3078,15 @@
 			<ammo>12(c)</ammo>
 			<conceal>0</conceal>
 			<avail>12R</avail>
-			<cost>750</cost>
+			<cost>850</cost>
 			<allowaccessory>true</allowaccessory>
 			<accessorymounts>
 				<mount>Barrel</mount>
 				<mount>Top</mount>
 			</accessorymounts>
+			<mods>
+				<mod>Laser Sight</mod>
+			</mods>
 			<source>AR</source>
 			<page>24</page>
 		</weapon>
@@ -14648,6 +14651,60 @@
 			<range>Shotguns</range>
 			<source>2050</source>
 			<page>173</page>
+		</weapon>
+		<weapon>
+			<name>Autocannon (2050)</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>13P</damage>
+			<ap>-6</ap>
+			<mode>SS</mode>
+			<rc>0</rc>
+			<ammo>10(c)</ammo>
+			<conceal>10</conceal>
+			<avail>12F</avail>
+			<cost>12000</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Assault Cannons</range>
+			<source>2050</source>
+			<page>195</page>
+		</weapon>
+		<weapon>
+			<name>Launcher (2050)</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>Rocket</damage>
+			<ap>-</ap>
+			<mode>SS</mode>
+			<rc>0</rc>
+			<ammo>6(b)</ammo>
+			<conceal>10</conceal>
+			<avail>15F</avail>
+			<cost>15000</cost>
+			<allowaccessory>true</allowaccessory>
+			<source>2050</source>
+			<page>195</page>
+		</weapon>
+		<weapon>
+			<name>Water Cannon</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>8S</damage>
+			<ap>-half</ap>
+			<mode>FA</mode>
+			<rc>0</rc>
+			<ammo>200(belt)</ammo>
+			<requireammo>false</requireammo>
+			<conceal>10</conceal>
+			<avail>15R</avail>
+			<cost>20000</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Submachine Guns</range>
+			<source>2050</source>
+			<page>195</page>
 		</weapon>
 	</weapons>
 	<accessories>

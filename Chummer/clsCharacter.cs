@@ -234,6 +234,9 @@ namespace Chummer
 			// <character>
 			objWriter.WriteStartElement("character");
 
+			// <appversion />
+			objWriter.WriteElementString("appversion", Application.ProductVersion.ToString().Replace("0.0.0.", string.Empty));
+
 			// <settings />
 			objWriter.WriteElementString("settings", _strSettingsFileName);
 
@@ -3484,10 +3487,104 @@ namespace Chummer
 					decESS -= decCyberware + (decBioware / 2);
 				else
 					decESS -= decBioware + (decCyberware / 2);
-				// Deduce the Essence Hole value.
+				// Deduct the Essence Hole value.
 				decESS -= decHole;
 
 				return decESS;
+			}
+		}
+
+		/// <summary>
+		/// Essence consumed by Cyberware.
+		/// </summary>
+		public decimal CyberwareEssence
+		{
+			get
+			{
+				decimal decESS = Convert.ToDecimal(_attESS.MetatypeMaximum, GlobalOptions.Instance.CultureInfo) + Convert.ToDecimal(_objImprovementManager.ValueOf(Improvement.ImprovementType.Essence), GlobalOptions.Instance.CultureInfo);
+				// Run through all of the pieces of Cyberware and include their Essence cost. Cyberware and Bioware costs are calculated separately. The higher value removes its full cost from the
+				// character's ESS while the lower removes half of its cost from the character's ESS.
+				decimal decCyberware = 0m;
+				decimal decBioware = 0m;
+				decimal decHole = 0m;
+				foreach (Cyberware objCyberware in _lstCyberware)
+				{
+					if (objCyberware.Name == "Essence Hole")
+						decHole += objCyberware.CalculatedESS;
+					else
+					{
+						if (objCyberware.SourceType == Improvement.ImprovementSource.Cyberware)
+							decCyberware += objCyberware.CalculatedESS;
+						else if (objCyberware.SourceType == Improvement.ImprovementSource.Bioware)
+							decBioware += objCyberware.CalculatedESS;
+					}
+				}
+				if (decCyberware > decBioware)
+					return decCyberware;
+				else
+					return decCyberware / 2;
+			}
+		}
+
+		/// <summary>
+		/// Essence consumed by Bioware.
+		/// </summary>
+		public decimal BiowareEssence
+		{
+			get
+			{
+				decimal decESS = Convert.ToDecimal(_attESS.MetatypeMaximum, GlobalOptions.Instance.CultureInfo) + Convert.ToDecimal(_objImprovementManager.ValueOf(Improvement.ImprovementType.Essence), GlobalOptions.Instance.CultureInfo);
+				// Run through all of the pieces of Cyberware and include their Essence cost. Cyberware and Bioware costs are calculated separately. The higher value removes its full cost from the
+				// character's ESS while the lower removes half of its cost from the character's ESS.
+				decimal decCyberware = 0m;
+				decimal decBioware = 0m;
+				decimal decHole = 0m;
+				foreach (Cyberware objCyberware in _lstCyberware)
+				{
+					if (objCyberware.Name == "Essence Hole")
+						decHole += objCyberware.CalculatedESS;
+					else
+					{
+						if (objCyberware.SourceType == Improvement.ImprovementSource.Cyberware)
+							decCyberware += objCyberware.CalculatedESS;
+						else if (objCyberware.SourceType == Improvement.ImprovementSource.Bioware)
+							decBioware += objCyberware.CalculatedESS;
+					}
+				}
+				if (decCyberware > decBioware)
+					return decBioware / 2;
+				else
+					return decBioware;
+			}
+		}
+
+		/// <summary>
+		/// Essence consumed by Essence Holes.
+		/// </summary>
+		public decimal EssenceHole
+		{
+			get
+			{
+				decimal decESS = Convert.ToDecimal(_attESS.MetatypeMaximum, GlobalOptions.Instance.CultureInfo) + Convert.ToDecimal(_objImprovementManager.ValueOf(Improvement.ImprovementType.Essence), GlobalOptions.Instance.CultureInfo);
+				// Run through all of the pieces of Cyberware and include their Essence cost. Cyberware and Bioware costs are calculated separately. The higher value removes its full cost from the
+				// character's ESS while the lower removes half of its cost from the character's ESS.
+				decimal decCyberware = 0m;
+				decimal decBioware = 0m;
+				decimal decHole = 0m;
+				foreach (Cyberware objCyberware in _lstCyberware)
+				{
+					if (objCyberware.Name == "Essence Hole")
+						decHole += objCyberware.CalculatedESS;
+					else
+					{
+						if (objCyberware.SourceType == Improvement.ImprovementSource.Cyberware)
+							decCyberware += objCyberware.CalculatedESS;
+						else if (objCyberware.SourceType == Improvement.ImprovementSource.Bioware)
+							decBioware += objCyberware.CalculatedESS;
+					}
+				}
+
+				return decHole;
 			}
 		}
 
@@ -3615,10 +3712,10 @@ namespace Chummer
 					intMatrixInit = _attINT.TotalValue;
 					int intCommlinkResponse = 0;
 
-					// Retrieve the highest Response in case the Character has more than 1 Commlink.
+					// Retrieve the Response for the character's active Commlink.
 					foreach (Commlink objCommlink in _lstGear.OfType<Commlink>())
 					{
-						if (objCommlink.TotalResponse > intCommlinkResponse)
+						if (objCommlink.IsActive)
 							intCommlinkResponse = objCommlink.TotalResponse;
 					}
 					intMatrixInit += intCommlinkResponse;
@@ -3824,8 +3921,13 @@ namespace Chummer
 		{
 			get
 			{
-				// Street Cred = Career Karma / 10, rounded up.
-				double dblEarned = Math.Ceiling(Convert.ToDouble(CareerKarma, GlobalOptions.Instance.CultureInfo) / 10.0);
+				// Street Cred = Career Karma / 10, rounded normally (34 = 3 Street Cred, 35 = 4 Street Cred; .5 is rounded up).
+				int intRemainder = (int)(Convert.ToDouble(CareerKarma, GlobalOptions.Instance.CultureInfo) % 10.0);
+				double dblEarned = 0.0;
+				if (intRemainder < 5)
+					dblEarned = Math.Floor(Convert.ToDouble(CareerKarma, GlobalOptions.Instance.CultureInfo) / 10.0);
+				else
+					dblEarned = Math.Ceiling(Convert.ToDouble(CareerKarma, GlobalOptions.Instance.CultureInfo) / 10.0);
 				int intReturn = Convert.ToInt32(dblEarned);
 
 				// Deduct burnt Street Cred.
@@ -5192,6 +5294,34 @@ namespace Chummer
 			set
 			{
 				_intMetatypeBP = value;
+			}
+		}
+
+		/// <summary>
+		/// Whether or not the character is a non-Free Sprite.
+		/// </summary>
+		public bool IsSprite
+		{
+			get
+			{
+				if (_strMetatypeCategory.EndsWith("Sprites") && !_strMetatypeCategory.StartsWith("Free"))
+					return true;
+				else
+					return false;
+			}
+		}
+
+		/// <summary>
+		/// Whether or not the character is a Free Sprite.
+		/// </summary>
+		public bool IsFreeSprite
+		{
+			get
+			{
+				if (_strMetatypeCategory == "Free Sprite")
+					return true;
+				else
+					return false;
 			}
 		}
 		#endregion

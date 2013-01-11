@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-919</version>
+	<version>-914</version>
 	<name>English (US)</name>
 	<strings>
 		<!-- Common Strings -->
@@ -75,6 +75,14 @@
 		<string>
 			<key>Checkbox_HomeNode</key>
 			<text>Home Node</text>
+		</string>
+		<string>
+			<key>Checkbox_Commlinks</key>
+			<text>Only show Commlinks</text>
+		</string>
+		<string>
+			<key>Checkbox_ActiveCommlink</key>
+			<text>Active Commlink</text>
 		</string>
 		<string>
 			<key>Label_BP</key>
@@ -688,6 +696,14 @@
 		<string>
 			<key>Menu_SpecialPossessInanimate</key>
 			<text>Possess/Inhabit Inanimate Vessel</text>
+		</string>
+		<string>
+			<key>Menu_SpecialBPAvailLimit</key>
+			<text>Change BP/Avail Limit</text>
+		</string>
+		<string>
+			<key>Menu_SpecialConvertToFreeSprite</key>
+			<text>Convert to Free Sprite</text>
 		</string>
 		<string>
 			<key>Menu_AddAsPlugin</key>
@@ -2434,6 +2450,10 @@
 			<text>LOS</text>
 		</string>
 		<string>
+			<key>String_SpellRangeLineOfInfluence</key>
+			<text>LOI</text>
+		</string>
+		<string>
 			<key>String_SpellRangeArea</key>
 			<text>A</text>
 		</string>
@@ -2665,7 +2685,7 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		</string>
 		<string>
 			<key>Tip_CommonNuyen</key>
-			<text>The amount of Nuyen your character has to purchase equipment. 1 BP = 5,000¥.</text>
+			<text>The amount of Nuyen your character has to purchase equipment. 1 BP = {0}¥.</text>
 		</string>
 		<string>
 			<key>Tip_CommonAIRating</key>
@@ -2689,7 +2709,7 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		</string>
 		<string>
 			<key>Tip_CommonContacts</key>
-			<text>Each point of Connection or Loyalty costs 1 BP.</text>
+			<text>Each point of Connection or Loyalty costs {0} BP.</text>
 		</string>
 		<string>
 			<key>Tip_CommonEnemies</key>
@@ -2742,15 +2762,15 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		</string>
 		<string>
 			<key>Tip_SkillsSkillGroups</key>
-			<text>Skill Groups cost 10 BP per point.</text>
+			<text>Skill Groups cost {0} BP per point.</text>
 		</string>
 		<string>
 			<key>Tip_SkillsActiveSkills</key>
-			<text>Skills cost 4 BP per point and 2 BP for a Specialization. Characters may have up to 1 Active Skill at Rating 6 or two at Rating 5. The rest must be at Rating 4 or lower.</text>
+			<text>Skills cost {0} BP per point and {1} BP for a Specialization. Characters may have up to 1 Active Skill at Rating 6 or two at Rating 5. The rest must be at Rating 4 or lower.</text>
 		</string>
 		<string>
 			<key>Tip_SkillsKnowledgeSkills</key>
-			<text>Characters receive (INT + LOG) x 3 free points to spend on general Knowledge Skills including Languages. Additional Knowledge Skill points cost 2 BP each. A Language with a Rating of 0 is considered to be your Native Language.</text>
+			<text>Characters receive (INT + LOG) x 3 free points to spend on general Knowledge Skills including Languages. Additional Knowledge Skill points cost {0} BP each. A Language with a Rating of 0 is considered to be your Native Language.</text>
 		</string>
 		<!-- Martial Arts Tab -->
 		<string>
@@ -2823,12 +2843,16 @@ Only one attribute may be at its Maximum value during character creation.</text>
 			<text>Selected Manipulation Spells</text>
 		</string>
 		<string>
+			<key>Node_SelectedGeomancyRituals</key>
+			<text>Selected Geomancy Rituals</text>
+		</string>
+		<string>
 			<key>Tip_SpellsSelectedSpells</key>
-			<text>Each Spell costs 3 BP.</text>
+			<text>Each Spell costs {0} BP.</text>
 		</string>
 		<string>
 			<key>Tip_SpellsSpirits</key>
-			<text>Each Service a Spirit owes costs 1 BP.</text>
+			<text>Each Service a Spirit owes costs {0} BP.</text>
 		</string>
 		<!-- Adept Tab -->
 		<string>
@@ -2910,11 +2934,11 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		</string>
 		<string>
 			<key>Tip_TechnomancerComplexForms</key>
-			<text>Complex Forms cost a number of BP equal to their Rating.</text>
+			<text>Complex Forms cost {0} BP per Rating.</text>
 		</string>
 		<string>
 			<key>Tip_TechnomancerSprites</key>
-			<text>Each Task a Sprite owes costs 1 BP.</text>
+			<text>Each Task a Sprite owes costs {0} BP.</text>
 		</string>
 		<string>
 			<key>Tip_TechnomancerResponse</key>
@@ -3022,6 +3046,22 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		<string>
 			<key>Node_SelectedBioware</key>
 			<text>Selected Bioware</text>
+		</string>
+		<string>
+			<key>Label_EssenceConsumption</key>
+			<text>Essence Consumption</text>
+		</string>
+		<string>
+			<key>Label_Cyberware</key>
+			<text>Cyberware:</text>
+		</string>
+		<string>
+			<key>Label_Bioware</key>
+			<text>Bioware:</text>
+		</string>
+		<string>
+			<key>Label_EssenceHole</key>
+			<text>Essence Hole:</text>
 		</string>
 		<!-- Street Gear/Lifestyle Tab -->
 		<string>
@@ -3250,6 +3290,10 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		<string>
 			<key>Tip_TransferToVehicle</key>
 			<text>Transfer to Vehicle.</text>
+		</string>
+		<string>
+			<key>Tip_ActiveCommlink</key>
+			<text>Mark the selected Commlink as being the one that the character is currently using. This will adjust the character's Matrix Initiative appropriately.</text>
 		</string>
 		<string>
 			<key>String_AddLocation</key>
@@ -3572,11 +3616,11 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		</string>
 		<string>
 			<key>Tip_BuildFoci</key>
-			<text>Each bonded Focus costs a number of BP equal to its Force.</text>
+			<text>Each bonded Focus costs {0} BP per point of Force.</text>
 		</string>
 		<string>
 			<key>Tip_BuildManeuvers</key>
-			<text>Each Martial Art Maneuver costs 2 BP.</text>
+			<text>Each Martial Art Maneuver costs {0} BP.</text>
 		</string>
 		<!-- Other Info Tab -->
 		<string>
@@ -5233,6 +5277,10 @@ Only one attribute may be at its Maximum value during character creation.</text>
 			<text>Allow any Bioware to be converted to Transgenic (AU 93)</text>
 		</string>
 		<string>
+			<key>Checkbox_Options_ErgonomicProgramLimit</key>
+			<text>Ergonomic Programs do not affect a Commlink's effective Response (UN 114)</text>
+		</string>
+		<string>
 			<key>Checkbox_Options_UseRestrictionsToRecoilCompensation</key>
 			<text>Use Restrictions to Recoil Compensation (AR 148)</text>
 		</string>
@@ -5329,12 +5377,20 @@ Only one attribute may be at its Maximum value during character creation.</text>
 			<text>Print Notes</text>
 		</string>
 		<string>
+			<key>Label_Options_EssenceDecimals</key>
+			<text>Number of decimal places to round Essence to:</text>
+		</string>
+		<string>
 			<key>Checkbox_Option_FreeSpiritPowerPointsMAG</key>
 			<text>Free Spirits receive Power Points based on MAG instead of EDG</text>
 		</string>
 		<string>
 			<key>Checkbox_Option_SpecialAttributeKarmaLimit</key>
 			<text>Special Attributes do not count towards 50% Karma limit during character creation</text>
+		</string>
+		<string>
+			<key>Checkbox_Option_TechnomancerAllowAutosoft</key>
+			<text>Technomancers may select Autosofts as Complex Forms</text>
 		</string>
 		<!-- Print Multiple Window -->
 		<string>

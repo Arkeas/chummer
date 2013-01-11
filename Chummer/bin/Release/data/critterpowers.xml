@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-918</version>
+	<version>-917</version>
 	<categories>
 		<category>Allowed Optional Powers</category>
+		<category>Echoes</category>
 		<category>Emergent</category>
 		<category>Free Spirit</category>
 		<category>Mundane</category>
@@ -1644,6 +1645,412 @@
 			<bonus />
 			<source>RW</source>
 			<page>28</page>
+		</power>
+		<power>
+			<name>Firewall Upgrade</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus>
+				<livingpersona>
+					<firewall>1</firewall>
+				</livingpersona>
+			</bonus>
+			<source>SR4</source>
+			<page>243</page>
+		</power>
+		<power>
+			<name>NeuroFilter</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus>
+				<livingpersona>
+					<biofeedback>1</biofeedback>
+				</livingpersona>
+			</bonus>
+			<source>SR4</source>
+			<page>243</page>
+		</power>
+		<power>
+			<name>Overclocking</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus>
+				<livingpersona>
+					<response>1</response>
+				</livingpersona>
+				<matrixinitiativepassadd>1</matrixinitiativepassadd>
+			</bonus>
+			<source>SR4</source>
+			<page>244</page>
+		</power>
+		<power>
+			<name>Resonance Link</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>SR4</source>
+			<page>244</page>
+		</power>
+		<power>
+			<name>System Upgrade</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus>
+				<livingpersona>
+					<system>1</system>
+				</livingpersona>
+			</bonus>
+			<source>SR4</source>
+			<page>244</page>
+		</power>
+		<power>
+			<name>Amplification</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus>
+				<livingpersona>
+					<signal>1</signal>
+				</livingpersona>
+			</bonus>
+			<source>UN</source>
+			<page>145</page>
+		</power>
+		<power>
+			<name>Biowire</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus>
+				<skillwire>Rating</skillwire>
+			</bonus>
+			<source>UN</source>
+			<page>145</page>
+		</power>
+		<power>
+			<name>Blur</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>145</page>
+		</power>
+		<power>
+			<name>Coenesthesia</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>145</page>
+		</power>
+		<power>
+			<name>Defragmentation</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>145</page>
+		</power>
+		<power>
+			<name>E-sensing</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>146</page>
+		</power>
+		<power>
+			<name>Flexible Touch</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>146</page>
+		</power>
+		<power>
+			<name>Immersion</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>146</page>
+		</power>
+		<power>
+			<name>Living ECM</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>146</page>
+		</power>
+		<power>
+			<name>Macro</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>146</page>
+		</power>
+		<power>
+			<name>Multiprocessing</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>146</page>
+		</power>
+		<power>
+			<name>Sift</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>147</page>
+		</power>
+		<power>
+			<name>Skinlink</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>147</page>
+		</power>
+		<power>
+			<name>Sprite Link</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus>
+				<selectsprite />
+			</bonus>
+			<source>UN</source>
+			<page>147</page>
+		</power>
+		<power>
+			<name>Swap</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>147</page>
+		</power>
+		<power>
+			<name>Widget Crafting</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>147</page>
+		</power>
+		<power>
+			<name>Acceleration</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus>
+				<initiativepassadd>1</initiativepassadd>
+			</bonus>
+			<source>UN</source>
+			<page>147</page>
+		</power>
+		<power>
+			<name>Advanced Overclocking</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus>
+				<livingpersona>
+					<response>1</response>
+				</livingpersona>
+				<matrixinitiativepassadd>1</matrixinitiativepassadd>
+			</bonus>
+			<source>UN</source>
+			<page>147</page>
+		</power>
+		<power>
+			<name>Enhanced Resonance Link</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>147</page>
+		</power>
+		<power>
+			<name>Mesh Reality</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>147</page>
+		</power>
+		<power>
+			<name>Mind Over Machine</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>148</page>
+		</power>
+		<power>
+			<name>Resonance Exchange</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>148</page>
+		</power>
+		<power>
+			<name>Resonance Trodes</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>148</page>
+		</power>
+		<power>
+			<name>Connectivity</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>WAR</source>
+			<page>179</page>
+		</power>
+		<power>
+			<name>Feral Resonance</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>WAR</source>
+			<page>179</page>
+		</power>
+		<power>
+			<name>Bio-Radar</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>WAR</source>
+			<page>179</page>
+		</power>
+		<power>
+			<name>Contaminate</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>178</page>
+		</power>
+		<power>
+			<name>Malfunction</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>179</page>
+		</power>
+		<power>
+			<name>Pryon</name>
+			<category>Echoes</category>
+			<type>P</type>
+			<action>Special</action>
+			<range>Special</range>
+			<duration>Special</duration>
+			<bonus />
+			<source>UN</source>
+			<page>179</page>
 		</power>
 	</powers>
 </chummer>

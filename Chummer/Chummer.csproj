@@ -1033,6 +1033,12 @@
   <ItemGroup>
     <None Include="icons\bomb.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\table_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\emoticon_waii.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

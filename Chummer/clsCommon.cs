@@ -736,6 +736,34 @@ namespace Chummer
 			}
 			return null;
 		}
+
+		/// <summary>
+		/// Find all of the Commlinks carried by the character.
+		/// </summary>
+		/// <param name="lstGear">List of Gear to search within for Commlinks.</param>
+		public List<Commlink> FindCharacterCommlinks(List<Gear> lstGear)
+		{
+			List<Commlink> lstReturn = new List<Commlink>();
+			foreach (Gear objGear in lstGear)
+			{
+				if (objGear.GetType() == typeof(Commlink))
+					lstReturn.Add((Commlink)objGear);
+
+				if (objGear.Children.Count > 0)
+				{
+					// Retrieve the list of Commlinks in child items.
+					List<Commlink> lstAppend = FindCharacterCommlinks(objGear.Children);
+					if (lstAppend.Count > 0)
+					{
+						// Append the entries to the current list.
+						foreach (Commlink objCommlink in lstAppend)
+							lstReturn.Add(objCommlink);
+					}
+				}
+			}
+
+			return lstReturn;
+		}
 		#endregion
 
 		#region Delete Functions
@@ -879,6 +907,7 @@ namespace Chummer
 		/// </summary>
 		/// <param name="objGear">Gear to iterate through.</param>
 		/// <param name="objNode">TreeNode to append to.</param>
+		/// <param name="objMenu">ContextMenuStrip that the new TreeNodes should use.</param>
 		public void BuildGearTree(Gear objGear, TreeNode objNode, ContextMenuStrip objMenu)
 		{
 			foreach (Gear objChild in objGear.Children)
@@ -899,6 +928,47 @@ namespace Chummer
 
 				BuildGearTree(objChild, objChildNode, objMenu);
 			}
+		}
+
+		/// <summary>
+		/// Build up the Tree for the current piece of Cyberware and all of its children.
+		/// </summary>
+		/// <param name="objCyberware">Cyberware to iterate through.</param>
+		/// <param name="objParentNode">TreeNode to append to.</param>
+		/// <param name="objMenu">ContextMenuStrip that the new Cyberware TreeNodes should use.</param>
+		/// <param name="objGearMenu">ContextMenuStrip that the new Gear TreeNodes should use.</param>
+		public void BuildCyberwareTree(Cyberware objCyberware, TreeNode objParentNode, ContextMenuStrip objMenu, ContextMenuStrip objGearMenu)
+		{
+				TreeNode objNode = new TreeNode();
+				objNode.Text = objCyberware.DisplayName;
+				objNode.Tag = objCyberware.InternalId;
+				if (objCyberware.Notes != string.Empty)
+					objNode.ForeColor = Color.SaddleBrown;
+				objNode.ToolTipText = objCyberware.Notes;
+				objNode.ContextMenuStrip = objMenu;
+
+				objParentNode.Nodes.Add(objNode);
+				objParentNode.Expand();
+
+				foreach (Cyberware objChild in objCyberware.Children)
+					BuildCyberwareTree(objChild, objNode, objMenu, objGearMenu);
+
+				foreach (Gear objGear in objCyberware.Gear)
+				{
+					TreeNode objGearNode = new TreeNode();
+					objGearNode.Text = objGear.DisplayName;
+					objGearNode.Tag = objGear.InternalId;
+					if (objGear.Notes != string.Empty)
+						objGearNode.ForeColor = Color.SaddleBrown;
+					objGearNode.ToolTipText = objGear.Notes;
+					objGearNode.ContextMenuStrip = objGearMenu;
+
+					BuildGearTree(objGear, objGearNode, objGearMenu);
+
+					objNode.Nodes.Add(objGearNode);
+					objNode.Expand();
+				}
+
 		}
 		#endregion
 

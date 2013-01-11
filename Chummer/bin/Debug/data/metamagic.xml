@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-923</version>
+	<version>-922</version>
 	<metamagics>
 		<metamagic>
 			<name>Centering</name>
@@ -396,6 +396,32 @@
 			</required>
 			<source>RW</source>
 			<page>210</page>
+		</metamagic>
+		<metamagic>
+			<name>Home Advantage</name>
+			<adept>no</adept>
+			<magician>yes</magician>
+			<required>
+				<oneof>
+					<metamagic>Geomancy</metamagic>
+					<metamagic>Geomasonry</metamagic>
+				</oneof>
+			</required>
+			<source>PG</source>
+			<page>31</page>
+		</metamagic>
+		<metamagic>
+			<name>Patronage</name>
+			<adept>no</adept>
+			<magician>yes</magician>
+			<required>
+				<oneof>
+					<metamagic>Geomancy</metamagic>
+					<metamagic>Geomasonry</metamagic>
+				</oneof>
+			</required>
+			<source>PG</source>
+			<page>31</page>
 		</metamagic>
 	</metamagics>
 </chummer>

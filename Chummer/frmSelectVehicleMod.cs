@@ -341,8 +341,8 @@ namespace Chummer
 			set
 			{
 				_intMaxResponse = value + 2;
-				_intMaxSystem = value + 2;
-				_intMaxFirewall = value + 2;
+				_intMaxSystem = value;
+				_intMaxFirewall = value;
 				_intMaxSignal = value + 2;
 				_intDeviceRating = value;
 
@@ -403,12 +403,12 @@ namespace Chummer
 				}
 				if (objXmlMod["system"] != null)
 				{
-					if (Convert.ToInt32(objXmlMod["system"].InnerText) > _intMaxSystem || Convert.ToInt32(objXmlMod["system"].InnerText) <= _intDeviceRating)
+					if (Convert.ToInt32(objXmlMod["system"].InnerText) <= _intDeviceRating)
 						blnAdd = false;
 				}
 				if (objXmlMod["firewall"] != null)
 				{
-					if (Convert.ToInt32(objXmlMod["firewall"].InnerText) > _intMaxFirewall || Convert.ToInt32(objXmlMod["firewall"].InnerText) <= _intDeviceRating)
+					if (Convert.ToInt32(objXmlMod["firewall"].InnerText) <= _intDeviceRating)
 						blnAdd = false;
 				}
 				if (objXmlMod["signal"] != null)

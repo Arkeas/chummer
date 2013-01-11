@@ -209,6 +209,16 @@ namespace Chummer
 				if (frmPickSkill.DialogResult == DialogResult.OK)
 					txtSelect.Text = frmPickSkill.SelectedSkill;
 			}
+			if (_strSelect == "SelectKnowSkill")
+			{
+				frmSelectSkill frmPickSkill = new frmSelectSkill(_objCharacter);
+				frmPickSkill.ShowKnowledgeSkills = true;
+				frmPickSkill.Description = LanguageManager.Instance.GetString("Title_SelectSkill");
+				frmPickSkill.ShowDialog(this);
+
+				if (frmPickSkill.DialogResult == DialogResult.OK)
+					txtSelect.Text = frmPickSkill.SelectedSkill;
+			}
 			if (_strSelect == "SelectSkillCategory")
 			{
 				frmSelectSkillCategory frmPickSkillCategory = new frmSelectSkillCategory();

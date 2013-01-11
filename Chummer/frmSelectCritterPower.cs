@@ -12,6 +12,7 @@ namespace Chummer
 		private int _intSelectedRating = 0;
 		private static string _strSelectCategory = "";
 		private double _dblPowerPoints = 0.0;
+		private bool _blnAddAgain = false;
 
 		private XmlDocument _objXmlDocument = new XmlDocument();
 		private XmlDocument _objXmlCritterDocument = new XmlDocument();
@@ -108,11 +109,24 @@ namespace Chummer
 			}
 
 			// Remove Emergent Powers if the critter is not a Sprite or A.I.
-			if (!_objCharacter.MetatypeCategory.EndsWith("Sprites") && !_objCharacter.MetatypeCategory.EndsWith("A.I.s") & _objCharacter.MetatypeCategory != "Technocritters" && _objCharacter.MetatypeCategory != "Protosapients")
+			if (!_objCharacter.MetatypeCategory.EndsWith("Sprites") && !_objCharacter.MetatypeCategory.EndsWith("Sprite") && !_objCharacter.MetatypeCategory.EndsWith("A.I.s") & _objCharacter.MetatypeCategory != "Technocritters" && _objCharacter.MetatypeCategory != "Protosapients")
 			{
 				foreach (ListItem objItem in _lstCategory)
 				{
 					if (objItem.Value == "Emergent")
+					{
+						_lstCategory.Remove(objItem);
+						break;
+					}
+				}
+			}
+
+			// Remove Echoes Powers if the critter is not a Free Sprite.
+			if (!_objCharacter.IsFreeSprite)
+			{
+				foreach (ListItem objItem in _lstCategory)
+				{
+					if (objItem.Value == "Echoes")
 					{
 						_lstCategory.Remove(objItem);
 						break;
@@ -215,6 +229,7 @@ namespace Chummer
 					strRange = strRange.Replace("Self", LanguageManager.Instance.GetString("String_SpellRangeSelf"));
 					strRange = strRange.Replace("Special", LanguageManager.Instance.GetString("String_SpellDurationSpecial"));
 					strRange = strRange.Replace("LOS", LanguageManager.Instance.GetString("String_SpellRangeLineOfSight"));
+					strRange = strRange.Replace("LOI", LanguageManager.Instance.GetString("String_SpellRangeLineOfInfluence"));
 					strRange = strRange.Replace("T", LanguageManager.Instance.GetString("String_SpellRangeTouch"));
 					strRange = strRange.Replace("(A)", "(" + LanguageManager.Instance.GetString("String_SpellRangeArea") + ")");
 					strRange = strRange.Replace("MAG", LanguageManager.Instance.GetString("String_AttributeMAGShort"));
@@ -431,6 +446,12 @@ namespace Chummer
 		{
 			AcceptForm();
 		}
+
+		private void cmdOKAdd_Click(object sender, EventArgs e)
+		{
+			_blnAddAgain = true;
+			cmdOK_Click(sender, e);
+		}
 		#endregion
 
 		#region Methods
@@ -487,6 +508,17 @@ namespace Chummer
 		#endregion
 
 		#region Properties
+		/// <summary>
+		/// Whether or not the user wants to add another item after this one.
+		/// </summary>
+		public bool AddAgain
+		{
+			get
+			{
+				return _blnAddAgain;
+			}
+		}
+
 		/// <summary>
 		/// Criter Power that was selected in the dialogue.
 		/// </summary>

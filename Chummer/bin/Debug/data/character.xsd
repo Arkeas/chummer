@@ -299,6 +299,7 @@
 			  <xs:element name="damagereplace" type="xs:string" minOccurs="0" maxOccurs="1" />
 			  <xs:element name="damagetype" type="xs:string" minOccurs="0" maxOccurs="1" />
 			  <xs:element name="pool" type="xs:string" minOccurs="0" maxOccurs="1" />
+			  <xs:element name="rangebonus" type="xs:integer" minOccurs="0" maxOccurs="1" />
 			  <xs:element name="rc" type="xs:string" minOccurs="0" maxOccurs="1" />
 			</xs:sequence>
 		  </xs:complexType>
@@ -310,6 +311,7 @@
 		<xs:element name="system" type="xs:integer" minOccurs="0" maxOccurs="1" />
 		<xs:element name="signal" type="xs:integer" minOccurs="0" maxOccurs="1" />
 		<xs:element name="gearname" type="xs:string" minOccurs="1" maxOccurs="1" />
+		<xs:element name="includedinparent" type="xs:string" minOccurs="1" maxOccurs="1" />
 		<xs:element name="maxskillrating" type="xs:integer" minOccurs="0" maxOccurs="1" />
 		<xs:element name="childcostmultiplier" type="xs:integer" minOccurs="0" maxOccurs="1" />
 		<xs:element name="childavailmodifier" type="xs:integer" minOccurs="0" maxOccurs="1" />
@@ -323,6 +325,7 @@
 		<xs:element name="location" type="xs:string" minOccurs="1" maxOccurs="1" />
 		<xs:element name="notes" type="xs:string" minOccurs="1" maxOccurs="1" />
 		<xs:element name="discountedcost" type="xs:string" minOccurs="1" maxOccurs="1" />
+		<xs:element name="active" type="xs:string" minOccurs="0" maxOccurs="1" />
 	  </xs:sequence>
 	</xs:complexType>
   </xs:element>

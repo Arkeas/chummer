@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-911</version>
+	<version>-910</version>
 	<books>
 		<book>
 			<name>Arsenal</name>
@@ -73,6 +73,10 @@
 		<book>
 			<name>Parabotany</name>
 			<code>PB</code>
+		</book>
+		<book>
+			<name>Parageology</name>
+			<code>PG</code>
 		</book>
 		<book>
 			<name>Parazoology</name>

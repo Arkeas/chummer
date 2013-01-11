@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-924</version>
+	<version>-923</version>
 	<lifestyles>
 		<lifestyle>
 			<name>Street</name>
@@ -960,7 +960,7 @@
 		<quality>
 			<name>Ultramodern</name>
 			<category>Positive</category>
-			<lp>2</lp>
+			<lp>1</lp>
 			<allowed>Advanced,BoltHole,Safehouse</allowed>
 			<source>SH</source>
 			<page>16</page>

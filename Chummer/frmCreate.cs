@@ -449,6 +449,8 @@ namespace Chummer
 
 				// Populate the control, set its vertical position and add it to the Skill Groups Panel. A Skill Group cannot start with a Rating higher than 4.
 				objGroupControl.GroupName = objGroup.Name;
+				if (objGroup.Rating > objGroup.RatingMaximum)
+					objGroup.RatingMaximum = objGroup.Rating;
 				objGroupControl.GroupRatingMaximum = objGroup.RatingMaximum;
 				objGroupControl.GroupRating = objGroup.Rating;
 				objGroupControl.Top = i * objGroupControl.Height;
@@ -606,117 +608,7 @@ namespace Chummer
 				_objFunctions.CreateWeaponTreeNode(objWeapon, treWeapons.Nodes[0], cmsWeapon, cmsWeaponMod, cmsWeaponAccessory, cmsWeaponAccessoryGear);
 			}
 
-			// Populate Cyberware.
-			foreach (Cyberware objCyberware in _objCharacter.Cyberware)
-			{
-				if (objCyberware.SourceType == Improvement.ImprovementSource.Cyberware)
-				{
-					TreeNode objNode = new TreeNode();
-					objNode.Text = objCyberware.DisplayName;
-					objNode.Tag = objCyberware.InternalId;
-					if (objCyberware.Notes != string.Empty)
-						objNode.ForeColor = Color.SaddleBrown;
-					objNode.ToolTipText = objCyberware.Notes;
-
-					foreach (Cyberware objChildCyberware in objCyberware.Children)
-					{
-						TreeNode objChildNode = new TreeNode();
-						objChildNode.Text = objChildCyberware.DisplayName;
-						objChildNode.Tag = objChildCyberware.InternalId;
-						objChildNode.ContextMenuStrip = cmsCyberwarePlugin;
-						if (objChildCyberware.Capacity == "[*]")
-							objChildNode.ForeColor = SystemColors.GrayText;
-						if (objChildCyberware.Notes != string.Empty)
-							objChildNode.ForeColor = Color.SaddleBrown;
-						objChildNode.ToolTipText = objChildCyberware.Notes;
-
-						foreach (Gear objGear in objChildCyberware.Gear)
-						{
-							TreeNode objChild = new TreeNode();
-							objChild.Text = objGear.DisplayName;
-							objChild.Tag = objGear.InternalId;
-							if (objGear.Notes != string.Empty)
-								objChild.ForeColor = Color.SaddleBrown;
-							objChild.ToolTipText = objGear.Notes;
-
-							foreach (Gear objSubChild in objGear.Children)
-							{
-								TreeNode objSubChildNode = new TreeNode();
-								objSubChildNode.Text = objSubChild.DisplayName;
-								objSubChildNode.Tag = objSubChild.InternalId;
-								if (objSubChild.Notes != string.Empty)
-									objSubChildNode.ForeColor = Color.SaddleBrown;
-								objSubChildNode.ToolTipText = objSubChild.Notes;
-								objChild.Nodes.Add(objSubChildNode);
-								objChild.Expand();
-							}
-
-							objChild.ContextMenuStrip = cmsCyberwareGear;
-							objChildNode.Nodes.Add(objChild);
-							objChildNode.Expand();
-						}
-
-						objNode.Nodes.Add(objChildNode);
-						objNode.Expand();
-					}
-
-					foreach (Gear objGear in objCyberware.Gear)
-					{
-						TreeNode objChild = new TreeNode();
-						objChild.Text = objGear.DisplayName;
-						objChild.Tag = objGear.InternalId;
-						if (objGear.Notes != string.Empty)
-							objChild.ForeColor = Color.SaddleBrown;
-
-						foreach (Gear objSubChild in objGear.Children)
-						{
-							TreeNode objSubChildNode = new TreeNode();
-							objSubChildNode.Text = objSubChild.DisplayName;
-							objSubChildNode.Tag = objSubChild.InternalId;
-							if (objSubChild.Notes != string.Empty)
-								objSubChildNode.ForeColor = Color.SaddleBrown;
-							objChild.Nodes.Add(objSubChildNode);
-							objChild.Expand();
-						}
-
-						objChild.ContextMenuStrip = cmsCyberwareGear;
-						objNode.Nodes.Add(objChild);
-						objNode.Expand();
-					}
-
-					objNode.ContextMenuStrip = cmsCyberware;
-					treCyberware.Nodes[0].Nodes.Add(objNode);
-					treCyberware.Nodes[0].Expand();
-				}
-			}
-
-			// Populate Bioware.
-			foreach (Cyberware objCyberware in _objCharacter.Cyberware)
-			{
-				if (objCyberware.SourceType == Improvement.ImprovementSource.Bioware)
-				{
-					TreeNode objNode = new TreeNode();
-					objNode.Text = objCyberware.DisplayName;
-					objNode.Tag = objCyberware.InternalId;
-					if (objCyberware.Notes != string.Empty)
-						objNode.ForeColor = Color.SaddleBrown;
-
-					foreach (Cyberware objChildCyberware in objCyberware.Children)
-					{
-						TreeNode objChildNode = new TreeNode();
-						objChildNode.Text = objChildCyberware.DisplayName;
-						objChildNode.Tag = objChildCyberware.InternalId;
-						if (objChildCyberware.Notes != string.Empty)
-							objChildNode.ForeColor = Color.SaddleBrown;
-						objNode.Nodes.Add(objChildNode);
-						objNode.Expand();
-					}
-
-					objNode.ContextMenuStrip = cmsBioware;
-					treCyberware.Nodes[1].Nodes.Add(objNode);
-					treCyberware.Nodes[1].Expand();
-				}
-			}
+			PopulateCyberwareList();
 
 			// Populate Spell list.
 			foreach (Spell objSpell in _objCharacter.Spells)
@@ -751,6 +643,10 @@ namespace Chummer
 						treSpells.Nodes[4].Nodes.Add(objNode);
 						treSpells.Nodes[4].Expand();
 						break;
+					case "Geomancy Ritual":
+						treSpells.Nodes[5].Nodes.Add(objNode);
+						treSpells.Nodes[5].Expand();
+						break;
 				}
 			}
 
@@ -773,6 +669,8 @@ namespace Chummer
 				if (objPower.MaxLevels > 0)
 					objPowerControl.MaxLevels = objPower.MaxLevels;
 				objPowerControl.RefreshMaximum(_objCharacter.MAG.TotalValue);
+				if (objPower.Rating < 1)
+					objPower.Rating = 1;
 				objPowerControl.PowerLevel = Convert.ToInt32(objPower.Rating);
 				if (objPower.DiscountedAdeptWay)
 					objPowerControl.DiscountedByAdeptWay = true;
@@ -978,46 +876,7 @@ namespace Chummer
 			}
 			treLifestyles.Nodes[0].Expand();
 
-			// Populate Gear.
-			// Start by populating Locations.
-			foreach (string strLocation in _objCharacter.Locations)
-			{
-				TreeNode objLocation = new TreeNode();
-				objLocation.Tag = strLocation;
-				objLocation.Text = strLocation;
-				objLocation.ContextMenuStrip = cmsGearLocation;
-				treGear.Nodes.Add(objLocation);
-			}
-			foreach (Gear objGear in _objCharacter.Gear)
-			{
-				TreeNode objNode = new TreeNode();
-				objNode.Text = objGear.DisplayName;
-				objNode.Tag = objGear.InternalId;
-				if (objGear.Notes != string.Empty)
-					objNode.ForeColor = Color.SaddleBrown;
-				objNode.ToolTipText = objGear.Notes;
-
-				_objFunctions.BuildGearTree(objGear, objNode, cmsGear);
-
-				objNode.ContextMenuStrip = cmsGear;
-
-				TreeNode objParent = new TreeNode();
-				if (objGear.Location == "")
-					objParent = treGear.Nodes[0];
-				else
-				{
-					foreach (TreeNode objFind in treGear.Nodes)
-					{
-						if (objFind.Text == objGear.Location)
-						{
-							objParent = objFind;
-							break;
-						}
-					}
-				}
-				objParent.Nodes.Add(objNode);
-				objParent.Expand();
-			}
+			PopulateGearList();
 
 			// Populate Foci.
 			PopulateFocusList();
@@ -1076,25 +935,12 @@ namespace Chummer
 			objXmlDocument = XmlManager.Instance.Load("cyberware.xml");
 
 			// Populate the Grade list.
-			if (_objCharacter.AdapsinEnabled)
-				objXmlNodeList = objXmlDocument.SelectNodes("/chummer/grades/grade[" + _objOptions.BookXPath() + "]");
-			else
-				objXmlNodeList = objXmlDocument.SelectNodes("/chummer/grades/grade[not(contains(., 'Adapsin')) and (" + _objOptions.BookXPath() + ")]");
-
 			List<ListItem> lstCyberwareGrades = new List<ListItem>();
-			foreach (XmlNode objXmlGradeList in objXmlNodeList)
+			foreach (Grade objGrade in GlobalOptions.CyberwareGrades)
 			{
 				ListItem objItem = new ListItem();
-				objItem.Value = objXmlGradeList["name"].InnerText;
-				if (objXmlGradeList["translate"] != null)
-				{
-					if (objXmlGradeList["translate"] != null)
-						objItem.Name = objXmlGradeList["translate"].InnerText;
-					else
-						objItem.Name = objXmlGradeList["name"].InnerText;
-				}
-				else
-					objItem.Name = objXmlGradeList["name"].InnerXml;
+				objItem.Value = objGrade.Name;
+				objItem.Name = objGrade.DisplayName;
 				lstCyberwareGrades.Add(objItem);
 			}
 			cboCyberwareGrade.ValueMember = "Value";
@@ -1186,6 +1032,8 @@ namespace Chummer
 				nudREA.Enabled = false;
 				nudSTR.Enabled = false;
 			}
+
+			mnuSpecialConvertToFreeSprite.Visible = _objCharacter.IsSprite;
 
 			// Run through all of the Skills and Enable/Disable them as needed.
 			foreach (SkillControl objSkillControl in panActiveSkills.Controls)
@@ -3786,6 +3634,42 @@ namespace Chummer
 		{
 			mnuEditPaste_Click(sender, e);
 		}
+
+		private void mnuSpecialBPAvailLimit_Click(object sender, EventArgs e)
+		{
+			frmSelectBP frmPickBP = new frmSelectBP(_objCharacter, true);
+			frmPickBP.ShowDialog(this);
+
+			if (frmPickBP.DialogResult == DialogResult.Cancel)
+				UpdateCharacterInfo();
+		}
+
+		private void mnuSpecialConvertToFreeSprite_Click(object sender, EventArgs e)
+		{
+			XmlDocument objXmlDocument = XmlManager.Instance.Load("critterpowers.xml");
+			XmlNode objXmlPower = objXmlDocument.SelectSingleNode("/chummer/powers/power[name = \"Denial\"]");
+			TreeNode objNode = new TreeNode();
+			CritterPower objPower = new CritterPower(_objCharacter);
+			objPower.Create(objXmlPower, _objCharacter, objNode);
+			objPower.CountTowardsLimit = false;
+			objNode.ContextMenuStrip = cmsCritterPowers;
+			if (objPower.InternalId == Guid.Empty.ToString())
+				return;
+
+			_objCharacter.CritterPowers.Add(objPower);
+
+			treCritterPowers.Nodes[0].Nodes.Add(objNode);
+			treCritterPowers.Nodes[0].Expand();
+
+			_objCharacter.MetatypeCategory = "Free Sprite";
+			mnuSpecialConvertToFreeSprite.Visible = false;
+
+			SortTree(treCritterPowers);
+			UpdateCharacterInfo();
+
+			_blnIsDirty = true;
+			UpdateWindowTitle();
+		}
 		#endregion
 
 		#region Attribute Events
@@ -5519,6 +5403,10 @@ namespace Chummer
 					treSpells.Nodes[4].Nodes.Add(objNode);
 					treSpells.Nodes[4].Expand();
 					break;
+				case "Geomancy Ritual":
+					treSpells.Nodes[5].Nodes.Add(objNode);
+					treSpells.Nodes[5].Expand();
+					break;
 			}
 
 			treSpells.SelectedNode = objNode;
@@ -5834,7 +5722,8 @@ namespace Chummer
 					treCyberware.Nodes.Remove(treCyberware.SelectedNode);
 
 					// If the Parent is populated, remove the item from its Parent.
-					objParent.Children.Remove(objCyberware);
+					if (objParent != null)
+						objParent.Children.Remove(objCyberware);
 				}
 				RefreshSelectedCyberware();
 			}
@@ -5843,7 +5732,6 @@ namespace Chummer
 				return;
 			}
 
-			PopulateCyberwareGradeList();
 			UpdateCharacterInfo();
 
 			_blnIsDirty = true;
@@ -6549,6 +6437,10 @@ namespace Chummer
 			{
 				// Locate the Vehicle that is selected in the tree.
 				Vehicle objVehicle = _objFunctions.FindVehicle(treVehicles.SelectedNode.Tag.ToString(), _objCharacter.Vehicles);
+
+				// Remove any Gear Improvements from the character (primarily those provided by an Emotitoy).
+				foreach (Gear objGear in objVehicle.Gear)
+					_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.Gear, objGear.InternalId);
 
 				_objCharacter.Vehicles.Remove(objVehicle);
 				treVehicles.SelectedNode.Remove();
@@ -7419,6 +7311,9 @@ namespace Chummer
 
 			_blnIsDirty = true;
 			UpdateWindowTitle();
+
+			if (frmPickCritterPower.AddAgain)
+				cmdAddCritterPower_Click(sender, e);
 		}
 
 		private void cmdDeleteCritterPower_Click(object sender, EventArgs e)
@@ -8432,9 +8327,6 @@ namespace Chummer
 				return;
 			}
 
-			if (treCyberware.SelectedNode.Level > 1)
-				treCyberware.SelectedNode = treCyberware.SelectedNode.Parent;
-
 			if (treCyberware.SelectedNode.Parent == treCyberware.Nodes[1])
 			{
 				MessageBox.Show(LanguageManager.Instance.GetString("Message_SelectCyberware"), LanguageManager.Instance.GetString("MessageTitle_SelectCyberware"), MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -9306,18 +9198,18 @@ namespace Chummer
 			frmSelectGear frmPickGear = new frmSelectGear(_objCharacter);
 			//frmPickGear.ShowNegativeCapacityOnly = true;
 
-			if (objXmlGear.InnerXml.Contains("<addoncategory>"))
+			if (objXmlGear != null)
 			{
-				string strCategories = "";
-				foreach (XmlNode objXmlCategory in objXmlGear.SelectNodes("addoncategory"))
-					strCategories += objXmlCategory.InnerText + ",";
-				// Remove the trailing comma.
-				strCategories = strCategories.Substring(0, strCategories.Length - 1);
-				frmPickGear.AddCategory(strCategories);
+				if (objXmlGear.InnerXml.Contains("<addoncategory>"))
+				{
+					string strCategories = "";
+					foreach (XmlNode objXmlCategory in objXmlGear.SelectNodes("addoncategory"))
+						strCategories += objXmlCategory.InnerText + ",";
+					// Remove the trailing comma.
+					strCategories = strCategories.Substring(0, strCategories.Length - 1);
+					frmPickGear.AddCategory(strCategories);
+				}
 			}
-
-			if (objSensor.Category == "Nexus")
-				frmPickGear.AllowedCategories += "Commlink Modules,";
 
 			if (frmPickGear.AllowedCategories != "")
 				frmPickGear.AllowedCategories += objSensor.Category + ",";
@@ -10119,52 +10011,7 @@ namespace Chummer
 			treWeapons.SelectedNode.ToolTipText = objAccessory.Notes;
 		}
 
-
-
 		private void tsCyberwareNotes_Click(object sender, EventArgs e)
-		{
-			try
-			{
-				bool blnFound = false;
-				Cyberware objCyberware = _objFunctions.FindCyberware(treCyberware.SelectedNode.Tag.ToString(), _objCharacter.Cyberware);
-				if (objCyberware != null)
-					blnFound = true;
-
-				if (blnFound)
-				{
-					frmNotes frmItemNotes = new frmNotes();
-					frmItemNotes.Notes = objCyberware.Notes;
-					string strOldValue = objCyberware.Notes;
-					frmItemNotes.ShowDialog(this);
-
-					if (frmItemNotes.DialogResult == DialogResult.OK)
-					{
-						objCyberware.Notes = frmItemNotes.Notes;
-						if (objCyberware.Notes != strOldValue)
-						{
-							_blnIsDirty = true;
-							UpdateWindowTitle();
-						}
-					}
-
-					if (objCyberware.Notes != string.Empty)
-						treCyberware.SelectedNode.ForeColor = Color.SaddleBrown;
-					else
-					{
-						if (objCyberware.Capacity == "[*]")
-							treCyberware.SelectedNode.ForeColor = SystemColors.GrayText;
-						else
-							treCyberware.SelectedNode.ForeColor = SystemColors.WindowText;
-					}
-					treCyberware.SelectedNode.ToolTipText = objCyberware.Notes;
-				}
-			}
-			catch
-			{
-			}
-		}
-
-		private void tsCyberwarePluginNotes_Click(object sender, EventArgs e)
 		{
 			try
 			{
@@ -11071,6 +10918,10 @@ namespace Chummer
 					treSpells.Nodes[4].Nodes.Add(objNode);
 					treSpells.Nodes[4].Expand();
 					break;
+				case "Geomancy Ritual":
+					treSpells.Nodes[5].Nodes.Add(objNode);
+					treSpells.Nodes[5].Expand();
+					break;
 			}
 
 			treSpells.SelectedNode = objNode;
@@ -11344,9 +11195,6 @@ namespace Chummer
 				frmPickGear.AddCategory(strCategories);
 			}
 
-			if (objSensor.Category == "Nexus")
-				frmPickGear.AllowedCategories += "Commlink Modules,";
-
 			if (frmPickGear.AllowedCategories != "")
 				frmPickGear.AllowedCategories += objSensor.Category + ",";
 
@@ -11494,9 +11342,6 @@ namespace Chummer
 				frmPickGear.AddCategory(strCategories);
 			}
 
-			if (objSensor.Category == "Nexus")
-				frmPickGear.AllowedCategories += "Commlink Modules,";
-
 			if (frmPickGear.AllowedCategories != "")
 				frmPickGear.AllowedCategories += objSensor.Category + ",";
 
@@ -11591,11 +11436,6 @@ namespace Chummer
 
 			UpdateCharacterInfo();
 			RefreshSelectedCyberware();
-		}
-
-		private void tsCyberwarePluginAddGear_Click(object sender, EventArgs e)
-		{
-			tsCyberwareAddGear_Click(sender, e);
 		}
 
 		private void tsCyberwarePluginGearAddAsPlugin_Click(object sender, EventArgs e)
@@ -11783,9 +11623,6 @@ namespace Chummer
 				strCategories = strCategories.Substring(0, strCategories.Length - 1);
 				frmPickGear.AddCategory(strCategories);
 			}
-
-			if (objSensor.Category == "Nexus")
-				frmPickGear.AllowedCategories += "Commlink Modules,";
 
 			if (frmPickGear.AllowedCategories != "")
 				frmPickGear.AllowedCategories += objSensor.Category + ",";
@@ -12032,9 +11869,6 @@ namespace Chummer
 				strCategories = strCategories.Substring(0, strCategories.Length - 1);
 				frmPickGear.AddCategory(strCategories);
 			}
-
-			if (objSensor.Category == "Nexus")
-				frmPickGear.AllowedCategories += "Commlink Modules,";
 
 			if (frmPickGear.AllowedCategories != "")
 				frmPickGear.AllowedCategories += objSensor.Category + ",";
@@ -12313,46 +12147,14 @@ namespace Chummer
 				if (objCyberware == null)
 					return;
 
+				GradeList objGradeList;
+				if (objCyberware.SourceType == Improvement.ImprovementSource.Bioware)
+					objGradeList = GlobalOptions.BiowareGrades;
+				else
+					objGradeList = GlobalOptions.CyberwareGrades;
+
 				// Updated the selected Cyberware Grade.
-				switch (cboCyberwareGrade.SelectedValue.ToString())
-				{
-					case "Alphaware":
-						objCyberware.Grade = CyberwareGrade.Alphaware;
-						break;
-					case "Betaware":
-						objCyberware.Grade = CyberwareGrade.Betaware;
-						break;
-					case "Deltaware":
-						objCyberware.Grade = CyberwareGrade.Deltaware;
-						break;
-					case "Standard (Second-Hand)":
-						objCyberware.Grade = CyberwareGrade.StandardSecondHand;
-						break;
-					case "Alphaware (Second-Hand)":
-						objCyberware.Grade = CyberwareGrade.AlphawareSecondHand;
-						break;
-					case "Standard (Adapsin)":
-						objCyberware.Grade = CyberwareGrade.StandardAdapsin;
-						break;
-					case "Alphaware (Adapsin)":
-						objCyberware.Grade = CyberwareGrade.AlphawareAdapsin;
-						break;
-					case "Betaware (Adapsin)":
-						objCyberware.Grade = CyberwareGrade.BetawareAdapsin;
-						break;
-					case "Deltaware (Adapsin)":
-						objCyberware.Grade = CyberwareGrade.DeltawareAdapsin;
-						break;
-					case "Standard (Second-Hand) (Adapsin)":
-						objCyberware.Grade = CyberwareGrade.StandardSecondHandAdapsin;
-						break;
-					case "Alphaware (Second-Hand) (Adapsin)":
-						objCyberware.Grade = CyberwareGrade.AlphawareSecondHandAdapsin;
-						break;
-					default:
-						objCyberware.Grade = CyberwareGrade.Standard;
-						break;
-				}
+				objCyberware.Grade = objGradeList.GetGrade(cboCyberwareGrade.SelectedValue.ToString());
 
 				// Run through all of the child pieces and make sure their Grade matches.
 				foreach (Cyberware objChildCyberware in objCyberware.Children)
@@ -13240,6 +13042,42 @@ namespace Chummer
 			_blnIsDirty = true;
 			UpdateWindowTitle();
 			UpdateCharacterInfo();
+		}
+
+		private void chkCommlinks_CheckedChanged(object sender, EventArgs e)
+		{
+			PopulateGearList();
+		}
+
+		private void chkActiveCommlink_CheckedChanged(object sender, EventArgs e)
+		{
+			if (_blnSkipRefresh)
+				return;
+
+			Gear objSelectedGear = new Gear(_objCharacter);
+
+			// Attempt to locate the selected piece of Gear.
+			try
+			{
+				objSelectedGear = _objFunctions.FindGear(treGear.SelectedNode.Tag.ToString(), _objCharacter.Gear);
+
+				if (objSelectedGear.GetType() != typeof(Commlink))
+					return;
+
+				Commlink objCommlink = (Commlink)objSelectedGear;
+				objCommlink.IsActive = chkActiveCommlink.Checked;
+
+				ChangeActiveCommlink(objCommlink);
+
+				RefreshSelectedGear();
+				UpdateCharacterInfo();
+
+				_blnIsDirty = true;
+				UpdateWindowTitle();
+			}
+			catch
+			{
+			}
 		}
 		#endregion
 
@@ -14602,6 +14440,7 @@ namespace Chummer
 			treSpells.Nodes[2].Nodes.Clear();
 			treSpells.Nodes[3].Nodes.Clear();
 			treSpells.Nodes[4].Nodes.Clear();
+			treSpells.Nodes[5].Nodes.Clear();
 
 			// Remove the Spirits.
 			panSpirits.Controls.Clear();
@@ -15976,6 +15815,27 @@ namespace Chummer
 		}
 
 		/// <summary>
+		/// Calculate the number of Free Sprite Power Points used.
+		/// </summary>
+		private void CalculateFreeSpritePowerPoints()
+		{
+			// Free Sprite Power Points.
+			double dblPowerPoints = 0;
+
+			foreach (CritterPower objPower in _objCharacter.CritterPowers)
+			{
+				if (objPower.CountTowardsLimit)
+					dblPowerPoints += 1;
+			}
+
+			int intPowerPoints = _objCharacter.EDG.TotalValue + _objImprovementManager.ValueOf(Improvement.ImprovementType.FreeSpiritPowerPoints);
+
+			lblCritterPowerPointsLabel.Visible = true;
+			lblCritterPowerPoints.Visible = true;
+			lblCritterPowerPoints.Text = String.Format("{1} ({0} " + LanguageManager.Instance.GetString("String_Remaining") + ")", intPowerPoints - dblPowerPoints, intPowerPoints);
+		}
+
+		/// <summary>
 		/// Update the Character information.
 		/// </summary>
 		public void UpdateCharacterInfo()
@@ -16075,9 +15935,18 @@ namespace Chummer
 
 				lblNuyenTotal.Text = String.Format("= {0:###,###,##0¥}", intNuyen);
 
+				string strFormat;
+				if (_objCharacter.Options.EssenceDecimals == 4)
+					strFormat = "{0:0.0000}";
+				else
+					strFormat = "{0:0.00}";
 				decimal decESS = _objCharacter.Essence;
 				lblESSMax.Text = decESS.ToString();
-				tssEssence.Text = string.Format("{0:0.00}", decESS);
+				tssEssence.Text = string.Format(strFormat, decESS);
+
+				lblCyberwareESS.Text = string.Format(strFormat, _objCharacter.CyberwareEssence);
+				lblBiowareESS.Text = string.Format(strFormat, _objCharacter.BiowareEssence);
+				lblEssenceHoleESS.Text = string.Format(strFormat, _objCharacter.EssenceHole);
 
 				// Reduce a character's MAG and RES from Essence Loss.
 				int intReduction = _objCharacter.ESS.MetatypeMaximum - Convert.ToInt32(Math.Floor(decESS));
@@ -16112,133 +15981,166 @@ namespace Chummer
 				lblBODMetatype.Text = string.Format("{0} / {1} ({2})", _objCharacter.BOD.TotalMinimum, _objCharacter.BOD.TotalMaximum, _objCharacter.BOD.TotalAugmentedMaximum);
 				nudBOD.Minimum = _objCharacter.BOD.TotalMinimum;
 				nudBOD.Maximum = _objCharacter.BOD.TotalMaximum;
-				if (_objCharacter.BOD.TotalValue != nudBOD.Value)
+				if (_objCharacter.BOD.HasModifiers)
 				{
 					lblBODAug.Text = string.Format("({0})", _objCharacter.BOD.TotalValue);
 					tipTooltip.SetToolTip(lblBODAug, _objCharacter.BOD.ToolTip());
 				}
 				else
+				{
 					lblBODAug.Text = "";
+					tipTooltip.SetToolTip(lblBODAug, "");
+				}
 
 				// Attribute: Agility.
 				lblAGIMetatype.Text = string.Format("{0} / {1} ({2})", _objCharacter.AGI.TotalMinimum, _objCharacter.AGI.TotalMaximum, _objCharacter.AGI.TotalAugmentedMaximum);
 				nudAGI.Minimum = _objCharacter.AGI.TotalMinimum;
 				nudAGI.Maximum = _objCharacter.AGI.TotalMaximum;
-				if (_objCharacter.AGI.TotalValue != nudAGI.Value)
+				if (_objCharacter.AGI.HasModifiers)
 				{
 					lblAGIAug.Text = string.Format("({0})", _objCharacter.AGI.TotalValue);
 					tipTooltip.SetToolTip(lblAGIAug, _objCharacter.AGI.ToolTip());
 				}
 				else
+				{
 					lblAGIAug.Text = "";
+					tipTooltip.SetToolTip(lblAGIAug, "");
+				}
 
 				// Attribute: Reaction.
 				lblREAMetatype.Text = string.Format("{0} / {1} ({2})", _objCharacter.REA.TotalMinimum, _objCharacter.REA.TotalMaximum, _objCharacter.REA.TotalAugmentedMaximum);
 				nudREA.Minimum = _objCharacter.REA.TotalMinimum;
 				nudREA.Maximum = _objCharacter.REA.TotalMaximum;
-				if (_objCharacter.REA.TotalValue != nudREA.Value)
+				if (_objCharacter.REA.HasModifiers)
 				{
 					lblREAAug.Text = string.Format("({0})", _objCharacter.REA.TotalValue);
 					tipTooltip.SetToolTip(lblREAAug, _objCharacter.REA.ToolTip());
 				}
 				else
+				{
 					lblREAAug.Text = "";
+					tipTooltip.SetToolTip(lblREAAug, "");
+				}
 
 				// Attribute: Strength.
 				lblSTRMetatype.Text = string.Format("{0} / {1} ({2})", _objCharacter.STR.TotalMinimum, _objCharacter.STR.TotalMaximum, _objCharacter.STR.TotalAugmentedMaximum);
 				nudSTR.Minimum = _objCharacter.STR.TotalMinimum;
 				nudSTR.Maximum = _objCharacter.STR.TotalMaximum;
-				if (_objCharacter.STR.TotalValue != nudSTR.Value)
+				if (_objCharacter.STR.HasModifiers)
 				{
 					lblSTRAug.Text = string.Format("({0})", _objCharacter.STR.TotalValue);
 					tipTooltip.SetToolTip(lblSTRAug, _objCharacter.STR.ToolTip());
 				}
 				else
+				{
 					lblSTRAug.Text = "";
+					tipTooltip.SetToolTip(lblSTRAug, "");
+				}
 
 				// Attribute: Charisma.
 				lblCHAMetatype.Text = string.Format("{0} / {1} ({2})", _objCharacter.CHA.TotalMinimum, _objCharacter.CHA.TotalMaximum, _objCharacter.CHA.TotalAugmentedMaximum);
 				nudCHA.Minimum = _objCharacter.CHA.TotalMinimum;
 				nudCHA.Maximum = _objCharacter.CHA.TotalMaximum;
-				if (_objCharacter.CHA.TotalValue != nudCHA.Value)
+				if (_objCharacter.CHA.HasModifiers)
 				{
 					lblCHAAug.Text = string.Format("({0})", _objCharacter.CHA.TotalValue);
 					tipTooltip.SetToolTip(lblCHAAug, _objCharacter.CHA.ToolTip());
 				}
 				else
+				{
 					lblCHAAug.Text = "";
+					tipTooltip.SetToolTip(lblCHAAug, "");
+				}
 
 				// Attribute: Intuition.
 				lblINTMetatype.Text = string.Format("{0} / {1} ({2})", _objCharacter.INT.TotalMinimum, _objCharacter.INT.TotalMaximum, _objCharacter.INT.TotalAugmentedMaximum);
 				nudINT.Minimum = _objCharacter.INT.TotalMinimum;
 				nudINT.Maximum = _objCharacter.INT.TotalMaximum;
-				if (_objCharacter.INT.TotalValue != nudINT.Value)
+				if (_objCharacter.INT.HasModifiers)
 				{
 					lblINTAug.Text = string.Format("({0})", _objCharacter.INT.TotalValue);
 					tipTooltip.SetToolTip(lblINTAug, _objCharacter.INT.ToolTip());
 				}
 				else
+				{
 					lblINTAug.Text = "";
+					tipTooltip.SetToolTip(lblINTAug, "");
+				}
 
 				// Attribute: Logic.
 				lblLOGMetatype.Text = string.Format("{0} / {1} ({2})", _objCharacter.LOG.TotalMinimum, _objCharacter.LOG.TotalMaximum, _objCharacter.LOG.TotalAugmentedMaximum);
 				nudLOG.Minimum = _objCharacter.LOG.TotalMinimum;
 				nudLOG.Maximum = _objCharacter.LOG.TotalMaximum;
-				if (_objCharacter.LOG.TotalValue != nudLOG.Value)
+				if (_objCharacter.LOG.HasModifiers)
 				{
 					lblLOGAug.Text = string.Format("({0})", _objCharacter.LOG.TotalValue);
 					tipTooltip.SetToolTip(lblLOGAug, _objCharacter.LOG.ToolTip());
 				}
 				else
+				{
 					lblLOGAug.Text = "";
+					tipTooltip.SetToolTip(lblLOGAug, "");
+				}
 
 				// Attribute: Willpower.
 				lblWILMetatype.Text = string.Format("{0} / {1} ({2})", _objCharacter.WIL.TotalMinimum, _objCharacter.WIL.TotalMaximum, _objCharacter.WIL.TotalAugmentedMaximum);
 				nudWIL.Minimum = _objCharacter.WIL.TotalMinimum;
 				nudWIL.Maximum = _objCharacter.WIL.TotalMaximum;
-				if (_objCharacter.WIL.TotalValue != nudWIL.Value)
+				if (_objCharacter.WIL.HasModifiers)
 				{
 					lblWILAug.Text = string.Format("({0})", _objCharacter.WIL.TotalValue);
 					tipTooltip.SetToolTip(lblWILAug, _objCharacter.WIL.ToolTip());
 				}
 				else
+				{
 					lblWILAug.Text = "";
+					tipTooltip.SetToolTip(lblWILAug, "");
+				}
 
 				// Attribute: Edge.
 				lblEDGMetatype.Text = string.Format("{0} / {1} ({2})", _objCharacter.EDG.TotalMinimum, _objCharacter.EDG.TotalMaximum, _objCharacter.EDG.TotalAugmentedMaximum);
 				nudEDG.Minimum = _objCharacter.EDG.TotalMinimum;
 				nudEDG.Maximum = _objCharacter.EDG.TotalMaximum;
-				if (_objCharacter.EDG.TotalValue != nudEDG.Value)
+				if (_objCharacter.EDG.HasModifiers)
 				{
 					lblEDGAug.Text = string.Format("({0})", _objCharacter.EDG.TotalValue);
 					tipTooltip.SetToolTip(lblEDGAug, _objCharacter.EDG.ToolTip());
 				}
 				else
+				{
 					lblEDGAug.Text = "";
+					tipTooltip.SetToolTip(lblEDGAug, "");
+				}
 
 				// Attribute: Magic.
 				lblMAGMetatype.Text = string.Format("{0} / {1} ({2})", _objCharacter.MAG.TotalMinimum, _objCharacter.MAG.TotalMaximum, _objCharacter.MAG.TotalAugmentedMaximum);
 				nudMAG.Minimum = _objCharacter.MAG.TotalMinimum;
 				nudMAG.Maximum = _objCharacter.MAG.TotalMaximum;
-				if (_objCharacter.MAG.TotalValue != nudMAG.Value)
+				if (_objCharacter.MAG.HasModifiers)
 				{
 					lblMAGAug.Text = string.Format("({0})", _objCharacter.MAG.TotalValue);
 					tipTooltip.SetToolTip(lblMAGAug, _objCharacter.MAG.ToolTip());
 				}
 				else
+				{
 					lblMAGAug.Text = "";
+					tipTooltip.SetToolTip(lblMAGAug, "");
+				}
 
 				// Attribute: Resonance.
 				lblRESMetatype.Text = string.Format("{0} / {1} ({2})", _objCharacter.RES.TotalMinimum, _objCharacter.RES.TotalMaximum, _objCharacter.RES.TotalAugmentedMaximum);
 				nudRES.Minimum = _objCharacter.RES.TotalMinimum;
 				nudRES.Maximum = _objCharacter.RES.TotalMaximum;
-				if (_objCharacter.RES.TotalValue != nudRES.Value)
+				if (_objCharacter.RES.HasModifiers)
 				{
 					lblRESAug.Text = string.Format("({0})", _objCharacter.RES.TotalValue);
 					tipTooltip.SetToolTip(lblRESAug, _objCharacter.RES.ToolTip());
 				}
 				else
+				{
 					lblRESAug.Text = "";
+					tipTooltip.SetToolTip(lblRESAug, "");
+				}
 
 				// Update the MAG pseudo-Attributes if applicable.
 				if (_objCharacter.AdeptEnabled && _objCharacter.MagicianEnabled)
@@ -16497,6 +16399,8 @@ namespace Chummer
 					CalculatePowerPoints();
 				if ((_objCharacter.Metatype == "Free Spirit" && !_objCharacter.IsCritter) || _objCharacter.MetatypeCategory.EndsWith("Spirits"))
 					CalculateFreeSpiritPowerPoints();
+				if (_objCharacter.IsFreeSprite)
+					CalculateFreeSpritePowerPoints();
 
 				// Movement.
 				lblMovement.Text = _objCharacter.Movement;
@@ -16744,45 +16648,7 @@ namespace Chummer
 					blnIgnoreSecondHand = true;
 				PopulateCyberwareGradeList(objCyberware.SourceType == Improvement.ImprovementSource.Bioware, blnIgnoreSecondHand);
 
-				switch (objCyberware.Grade)
-				{
-					case CyberwareGrade.Standard:
-						cboCyberwareGrade.SelectedValue = "Standard";
-						break;
-					case CyberwareGrade.Alphaware:
-						cboCyberwareGrade.SelectedValue = "Alphaware";
-						break;
-					case CyberwareGrade.Betaware:
-						cboCyberwareGrade.SelectedValue = "Betaware";
-						break;
-					case CyberwareGrade.Deltaware:
-						cboCyberwareGrade.SelectedValue = "Deltaware";
-						break;
-					case CyberwareGrade.StandardSecondHand:
-						cboCyberwareGrade.SelectedValue = "Standard (Second-Hand)";
-						break;
-					case CyberwareGrade.AlphawareSecondHand:
-						cboCyberwareGrade.SelectedValue = "Alphaware (Second-Hand)";
-						break;
-					case CyberwareGrade.StandardAdapsin:
-						cboCyberwareGrade.SelectedValue = "Standard (Adapsin)";
-						break;
-					case CyberwareGrade.AlphawareAdapsin:
-						cboCyberwareGrade.SelectedValue = "Alphaware (Adapsin)";
-						break;
-					case CyberwareGrade.BetawareAdapsin:
-						cboCyberwareGrade.SelectedValue = "Betaware (Adapsin)";
-						break;
-					case CyberwareGrade.DeltawareAdapsin:
-						cboCyberwareGrade.SelectedValue = "Deltaware (Adapsin)";
-						break;
-					case CyberwareGrade.StandardSecondHandAdapsin:
-						cboCyberwareGrade.SelectedValue = "Standard (Second-Hand) (Adapsin)";
-						break;
-					case CyberwareGrade.AlphawareSecondHandAdapsin:
-						cboCyberwareGrade.SelectedValue = "Alphaware (Second-Hand) (Adapsin)";
-						break;
-				}
+				cboCyberwareGrade.SelectedValue = objCyberware.Grade.Name;
 
 				chkCyberwareBlackMarketDiscount.Checked = objCyberware.DiscountCost;
 
@@ -17369,6 +17235,7 @@ namespace Chummer
 				nudGearQty.Enabled = false;
 				chkGearEquipped.Text = LanguageManager.Instance.GetString("Checkbox_Equipped");
 				chkGearEquipped.Visible = false;
+				chkActiveCommlink.Visible = false;
 				_blnSkipRefresh = false;
 				return;
 			}
@@ -17411,6 +17278,12 @@ namespace Chummer
 						lblGearSystem.Text = "";
 						lblGearFirewall.Text = "";
 					}
+
+					_blnSkipRefresh = true;
+					chkActiveCommlink.Checked = objCommlink.IsActive;
+					_blnSkipRefresh = false;
+
+					chkActiveCommlink.Visible = true;
 				}
 				else if (objGear.GetType() == typeof(OperatingSystem))
 				{
@@ -17419,6 +17292,7 @@ namespace Chummer
 					lblGearSignal.Text = "";
 					lblGearSystem.Text = objOS.System.ToString();
 					lblGearFirewall.Text = objOS.Firewall.ToString();
+					chkActiveCommlink.Visible = false;
 				}
 				else
 				{
@@ -17426,8 +17300,8 @@ namespace Chummer
 					lblGearSignal.Text = objGear.Signal.ToString();
 					lblGearSystem.Text = objGear.System.ToString();
 					lblGearFirewall.Text = objGear.Firewall.ToString();
+					chkActiveCommlink.Visible = false;
 				}
-
 
 				if (objGear.MaxRating > 0)
 				{
@@ -17853,10 +17727,8 @@ namespace Chummer
 
 			// Select the node that was just added.
 			_blnSkipRefresh = true;
-			if (objNode.Level == 1 && objSource == Improvement.ImprovementSource.Cyberware)
+			if (objSource == Improvement.ImprovementSource.Cyberware)
 				objNode.ContextMenuStrip = cmsCyberware;
-			else if (objNode.Level > 1 && objSource == Improvement.ImprovementSource.Cyberware)
-				objNode.ContextMenuStrip = cmsCyberwarePlugin;
 			else if (objSource == Improvement.ImprovementSource.Bioware)
 				objNode.ContextMenuStrip = cmsBioware;
 			_blnSkipRefresh = true;
@@ -17891,9 +17763,13 @@ namespace Chummer
 		/// </summary>
 		private bool PickGear()
 		{
+			bool blnNullParent = false;
 			Gear objSelectedGear = _objFunctions.FindGear(treGear.SelectedNode.Tag.ToString(), _objCharacter.Gear);
 			if (objSelectedGear == null)
+			{
 				objSelectedGear = new Gear(_objCharacter);
+				blnNullParent = true;
+			}
 
 			// Open the Gear XML file and locate the selected Gear.
 			XmlDocument objXmlDocument = XmlManager.Instance.Load("gear.xml");
@@ -17917,9 +17793,6 @@ namespace Chummer
 						strCategories = strCategories.Substring(0, strCategories.Length - 1);
 						frmPickGear.AddCategory(strCategories);
 					}
-
-					if (objSelectedGear.Category == "Nexus")
-						frmPickGear.AllowedCategories += "Commlink Modules,";
 
 					if (frmPickGear.AllowedCategories != "")
 						frmPickGear.AllowedCategories += objSelectedGear.Category + ",";
@@ -17982,6 +17855,10 @@ namespace Chummer
 					{
 					}
 					objNode.Text = objCommlink.DisplayName;
+
+					// If a Commlink has just been added, see if the character already has one. If not, make it the active Commlink.
+					if (_objFunctions.FindCharacterCommlinks(_objCharacter.Gear).Count == 0 && frmPickGear.SelectedCategory == "Commlink")
+						objCommlink.IsActive = true;
 
 					objNewGear = objCommlink;
 					break;
@@ -18067,6 +17944,8 @@ namespace Chummer
 			}
 
 			objNewGear.Parent = objSelectedGear;
+			if (blnNullParent)
+				objNewGear.Parent = null;
 
 			try
 			{
@@ -18489,6 +18368,19 @@ namespace Chummer
 				_blnSkipRefresh = true;
 				nudVehicleRating.Enabled = false;
 				nudVehicleGearQty.Enabled = false;
+
+				lblVehicleWeaponName.Text = "";
+				lblVehicleWeaponCategory.Text = "";
+				lblVehicleWeaponAP.Text = "";
+				lblVehicleWeaponDamage.Text = "";
+				lblVehicleWeaponMode.Text = "";
+				lblVehicleWeaponAmmo.Text = "";
+
+				lblVehicleWeaponRangeShort.Text = "";
+				lblVehicleWeaponRangeMedium.Text = "";
+				lblVehicleWeaponRangeLong.Text = "";
+				lblVehicleWeaponRangeExtreme.Text = "";
+
 				_blnSkipRefresh = false;
 				chkVehicleWeaponAccessoryInstalled.Enabled = false;
 				return;
@@ -18726,6 +18618,18 @@ namespace Chummer
 
 						nudVehicleRating.Enabled = false;
 
+						lblVehicleWeaponName.Text = objWeapon.DisplayNameShort;
+						lblVehicleWeaponCategory.Text = objWeapon.DisplayCategory;
+						lblVehicleWeaponDamage.Text = objWeapon.CalculatedDamage();
+						lblVehicleWeaponAP.Text = objWeapon.TotalAP;
+						lblVehicleWeaponAmmo.Text = objWeapon.CalculatedAmmo();
+						lblVehicleWeaponMode.Text = objWeapon.CalculatedMode;
+
+						lblVehicleWeaponRangeShort.Text = objWeapon.RangeShort;
+						lblVehicleWeaponRangeMedium.Text = objWeapon.RangeMedium;
+						lblVehicleWeaponRangeLong.Text = objWeapon.RangeLong;
+						lblVehicleWeaponRangeExtreme.Text = objWeapon.RangeExtreme;
+
 						lblVehicleName.Text = objWeapon.DisplayNameShort;
 						lblVehicleCategory.Text = LanguageManager.Instance.GetString("String_VehicleWeapon");
 						lblVehicleAvail.Text = objWeapon.TotalAvail;
@@ -18833,6 +18737,18 @@ namespace Chummer
 
 					if (blnWeapon)
 					{
+						lblVehicleWeaponName.Text = objWeapon.DisplayNameShort;
+						lblVehicleWeaponCategory.Text = objWeapon.DisplayCategory;
+						lblVehicleWeaponDamage.Text = objWeapon.CalculatedDamage();
+						lblVehicleWeaponAP.Text = objWeapon.TotalAP;
+						lblVehicleWeaponAmmo.Text = objWeapon.CalculatedAmmo();
+						lblVehicleWeaponMode.Text = objWeapon.CalculatedMode;
+
+						lblVehicleWeaponRangeShort.Text = objWeapon.RangeShort;
+						lblVehicleWeaponRangeMedium.Text = objWeapon.RangeMedium;
+						lblVehicleWeaponRangeLong.Text = objWeapon.RangeLong;
+						lblVehicleWeaponRangeExtreme.Text = objWeapon.RangeExtreme;
+
 						lblVehicleName.Text = objWeapon.DisplayNameShort;
 						lblVehicleCategory.Text = LanguageManager.Instance.GetString("String_VehicleWeapon");
 						lblVehicleAvail.Text = objWeapon.TotalAvail;
@@ -19394,98 +19310,34 @@ namespace Chummer
 		/// </summary>
 		public void PopulateCyberwareGradeList(bool blnBioware = false, bool blnIgnoreSecondHand = false)
 		{
-			bool blnAdapsinGradeExists = false;
-
-			foreach (ListItem objX in cboCyberwareGrade.Items)
-			{
-				if (objX.Value.Contains("Adapsin"))
-				{
-					blnAdapsinGradeExists = true;
-					break;
-				}
-			}
-
 			// Load the Cyberware information.
-			XmlDocument objXmlDocument = new XmlDocument();
+			GradeList objGradeList;
 			if (blnBioware)
-				objXmlDocument = XmlManager.Instance.Load("bioware.xml");
+				objGradeList = GlobalOptions.BiowareGrades;
 			else
-				objXmlDocument = XmlManager.Instance.Load("cyberware.xml");
+				objGradeList = GlobalOptions.CyberwareGrades;
 			List<ListItem> lstCyberwareGrades = new List<ListItem>();
 
-			// Populate the Grade list. Do not show the Adapsin Grades if Adapsin is not enabled for the character.
-			string strXPath = "";
-			if (_objCharacter.AdapsinEnabled)
-				strXPath = "/chummer/grades/grade[" + _objCharacter.Options.BookXPath();
-			else
-				strXPath = "/chummer/grades/grade[not(contains(., 'Adapsin')) and (" + _objCharacter.Options.BookXPath() + ")";
-			if (blnIgnoreSecondHand)
-				strXPath += " and not(contains(., 'Second-Hand'))";
-			strXPath += "]";
-
-			XmlNodeList objXmlGradeList = objXmlDocument.SelectNodes(strXPath);
-
-			foreach (XmlNode objXmlGrade in objXmlGradeList)
+			foreach (Grade objWareGrade in objGradeList)
 			{
+				bool blnAddItem = true;
+
 				ListItem objItem = new ListItem();
-				objItem.Value = objXmlGrade["name"].InnerText;
-				if (objXmlGrade["translate"] != null)
-				{
-					if (objXmlGrade["translate"] != null)
-						objItem.Name = objXmlGrade["translate"].InnerText;
-					else
-						objItem.Name = objXmlGrade["name"].InnerText;
-				}
-				else
-					objItem.Name = objXmlGrade["name"].InnerXml;
-				lstCyberwareGrades.Add(objItem);
+				objItem.Value = objWareGrade.Name;
+				objItem.Name = objWareGrade.DisplayName;
+
+				if (blnIgnoreSecondHand && objWareGrade.SecondHand)
+					blnAddItem = false;
+				if (!_objCharacter.AdapsinEnabled && objWareGrade.Adapsin)
+					blnAddItem = false;
+
+				if (blnAddItem)
+					lstCyberwareGrades.Add(objItem);
 			}
 			//cboCyberwareGrade.DataSource = null;
 			cboCyberwareGrade.ValueMember = "Value";
 			cboCyberwareGrade.DisplayMember = "Name";
 			cboCyberwareGrade.DataSource = lstCyberwareGrades;
-
-			if (!_objCharacter.AdapsinEnabled)
-			{
-				// Adapsin items are in the list, so remove them.
-				if (blnAdapsinGradeExists)
-				{
-					// Update all of the Cyberware a character has to be non-Adapsin versions.
-					foreach (Cyberware objCyberware in _objCharacter.Cyberware)
-					{
-						if (objCyberware.Grade.ToString().Contains("Adapsin"))
-						{
-							CyberwareGrade objGrade = new CyberwareGrade();
-							switch (objCyberware.Grade)
-							{
-								case CyberwareGrade.StandardAdapsin:
-									objGrade = CyberwareGrade.Standard;
-									break;
-								case CyberwareGrade.AlphawareAdapsin:
-									objGrade = CyberwareGrade.Alphaware;
-									break;
-								case CyberwareGrade.BetawareAdapsin:
-									objGrade = CyberwareGrade.Betaware;
-									break;
-								case CyberwareGrade.DeltawareAdapsin:
-									objGrade = CyberwareGrade.Deltaware;
-									break;
-								case CyberwareGrade.StandardSecondHandAdapsin:
-									objGrade = CyberwareGrade.StandardSecondHand;
-									break;
-								case CyberwareGrade.AlphawareSecondHandAdapsin:
-									objGrade = CyberwareGrade.AlphawareSecondHand;
-									break;
-							}
-							objCyberware.Grade = objGrade;
-
-							// Update the child items.
-							foreach (Cyberware objChild in objCyberware.Children)
-								objChild.Grade = objGrade;
-						}
-					}
-				}
-			}
 		}
 
 		/// <summary>
@@ -20168,7 +20020,7 @@ namespace Chummer
 		/// <param name="intRating">Rating of the Cyberware.</param>
 		/// <param name="blnAddToCharacter">Whether or not the Cyberware should be added directly to the character.</param>
 		/// <param name="objParent">Parent Cyberware if the item is not being added directly to the character.</param>
-		private TreeNode CreateSuiteCyberware(XmlNode objXmlNode, CyberwareGrade objGrade, int intRating, bool blnAddToCharacter, Improvement.ImprovementSource objSource, Cyberware objParent = null)
+		private TreeNode CreateSuiteCyberware(XmlNode objXmlNode, Grade objGrade, int intRating, bool blnAddToCharacter, Improvement.ImprovementSource objSource, Cyberware objParent = null)
 		{
 			// Create the Cyberware object.
 			List<Weapon> objWeapons = new List<Weapon>();
@@ -20203,11 +20055,17 @@ namespace Chummer
 			frmSelectPACKSKit frmPickPACKSKit = new frmSelectPACKSKit(_objCharacter);
 			frmPickPACKSKit.ShowDialog(this);
 
+			bool blnCreateChildren = true;
+
 			// If the form was canceled, don't do anything.
 			if (frmPickPACKSKit.DialogResult == DialogResult.Cancel)
 				return;
 
 			XmlDocument objXmlDocument = XmlManager.Instance.Load("packs.xml");
+
+			// Do not create child items for Gear if the chosen Kit is in the Custom category since these items will contain the exact plugins desired.
+			if (frmPickPACKSKit.SelectedCategory == "Custom")
+				blnCreateChildren = false;
 
 			XmlNode objXmlKit = objXmlDocument.SelectSingleNode("/chummer/packs/pack[name = \"" + frmPickPACKSKit.SelectedKit + "\" and category = \"" + frmPickPACKSKit.SelectedCategory + "\"]");
 			// Update Qualities.
@@ -20774,6 +20632,10 @@ namespace Chummer
 								treSpells.Nodes[4].Nodes.Add(objNode);
 								treSpells.Nodes[4].Expand();
 								break;
+							case "Geomancy Ritual":
+								treSpells.Nodes[5].Nodes.Add(objNode);
+								treSpells.Nodes[5].Expand();
+								break;
 						}
 
 						SortTree(treSpells);
@@ -20889,7 +20751,7 @@ namespace Chummer
 
 					Armor objArmor = new Armor(_objCharacter);
 					TreeNode objNode = new TreeNode();
-					objArmor.Create(objXmlArmorNode, objNode, cmsArmorMod);
+					objArmor.Create(objXmlArmorNode, objNode, cmsArmorMod, false, blnCreateChildren);
 					_objCharacter.Armor.Add(objArmor);
 
 					// Look for Armor Mods.
@@ -20929,7 +20791,7 @@ namespace Chummer
 
 					XmlDocument objXmlGearDocument = XmlManager.Instance.Load("gear.xml");
 					foreach (XmlNode objXmlGear in objXmlArmor.SelectNodes("gears/gear"))
-						AddPACKSGear(objXmlGearDocument, objXmlGear, objNode, objArmor, cmsArmorGear);
+						AddPACKSGear(objXmlGearDocument, objXmlGear, objNode, objArmor, cmsArmorGear, blnCreateChildren);
 
 					objNode.ContextMenuStrip = cmsArmor;
 					treArmor.Nodes[0].Nodes.Add(objNode);
@@ -20956,7 +20818,7 @@ namespace Chummer
 
 					Weapon objWeapon = new Weapon(_objCharacter);
 					TreeNode objNode = new TreeNode();
-					objWeapon.Create(objXmlWeaponNode, _objCharacter, objNode, cmsWeapon, cmsWeaponAccessory, cmsWeaponMod);
+					objWeapon.Create(objXmlWeaponNode, _objCharacter, objNode, cmsWeapon, cmsWeaponAccessory, cmsWeaponMod, blnCreateChildren);
 					_objCharacter.Weapons.Add(objWeapon);
 
 					// Look for Weapon Accessories.
@@ -20978,7 +20840,7 @@ namespace Chummer
 
 							XmlDocument objXmlGearDocument = XmlManager.Instance.Load("gear.xml");
 							foreach (XmlNode objXmlGear in objXmlAccessory.SelectNodes("gears/gear"))
-								AddPACKSGear(objXmlGearDocument, objXmlGear, objModNode, objMod, cmsWeaponAccessoryGear);
+								AddPACKSGear(objXmlGearDocument, objXmlGear, objModNode, objMod, cmsWeaponAccessoryGear, blnCreateChildren);
 
 							objNode.Nodes.Add(objModNode);
 							objNode.Expand();
@@ -21011,7 +20873,7 @@ namespace Chummer
 
 						Weapon objUnderbarrelWeapon = new Weapon(_objCharacter);
 						TreeNode objUnderbarrelNode = new TreeNode();
-						objUnderbarrelWeapon.Create(objXmlUnderbarrelNode, _objCharacter, objUnderbarrelNode, cmsWeapon, cmsWeaponAccessory, cmsWeaponMod);
+						objUnderbarrelWeapon.Create(objXmlUnderbarrelNode, _objCharacter, objUnderbarrelNode, cmsWeapon, cmsWeaponAccessory, cmsWeaponMod, blnCreateChildren);
 						objWeapon.UnderbarrelWeapons.Add(objUnderbarrelWeapon);
 						objNode.Nodes.Add(objUnderbarrelNode);
 						objNode.Expand();
@@ -21045,14 +20907,14 @@ namespace Chummer
 					List<TreeNode> objWeaponNodes = new List<TreeNode>();
 					TreeNode objNode = new TreeNode();
 					Cyberware objCyberware = new Cyberware(_objCharacter);
-					CyberwareGrade objGrade = objCyberware.ConvertToCyberwareGrade(objXmlCyberware["grade"].InnerText);
+					Grade objGrade = objCyberware.ConvertToCyberwareGrade(objXmlCyberware["grade"].InnerText, Improvement.ImprovementSource.Cyberware);
 
 					int intRating = 0;
 					if (objXmlCyberware["rating"] != null)
 						intRating = Convert.ToInt32(objXmlCyberware["rating"].InnerText);
 
 					XmlNode objXmlCyberwareNode = objXmlCyberwareDocument.SelectSingleNode("/chummer/cyberwares/cyberware[name = \"" + objXmlCyberware["name"].InnerText + "\"]");
-					objCyberware.Create(objXmlCyberwareNode, _objCharacter, objGrade, Improvement.ImprovementSource.Cyberware, intRating, objNode, objWeapons, objWeaponNodes);
+					objCyberware.Create(objXmlCyberwareNode, _objCharacter, objGrade, Improvement.ImprovementSource.Cyberware, intRating, objNode, objWeapons, objWeaponNodes, true, blnCreateChildren);
 					_objCharacter.Cyberware.Add(objCyberware);
 
 					// Add any children.
@@ -21068,12 +20930,12 @@ namespace Chummer
 								intChildRating = Convert.ToInt32(objXmlChild["rating"].InnerText);
 
 							XmlNode objXmlChildNode = objXmlCyberwareDocument.SelectSingleNode("/chummer/cyberwares/cyberware[name = \"" + objXmlChild["name"].InnerText + "\"]");
-							objChildCyberware.Create(objXmlChildNode, _objCharacter, objGrade, Improvement.ImprovementSource.Cyberware, intChildRating, objChildNode, objWeapons, objWeaponNodes);
+							objChildCyberware.Create(objXmlChildNode, _objCharacter, objGrade, Improvement.ImprovementSource.Cyberware, intChildRating, objChildNode, objWeapons, objWeaponNodes, true, blnCreateChildren);
 							objCyberware.Children.Add(objChildCyberware);
-							objChildNode.ContextMenuStrip = cmsCyberwarePlugin;
+							objChildNode.ContextMenuStrip = cmsCyberware;
 
 							foreach (XmlNode objXmlGear in objXmlChild.SelectNodes("gears/gear"))
-								AddPACKSGear(objXmlGearDocument, objXmlGear, objChildNode, objChildCyberware, cmsCyberwareGear);
+								AddPACKSGear(objXmlGearDocument, objXmlGear, objChildNode, objChildCyberware, cmsCyberwareGear, blnCreateChildren);
 
 							objNode.Nodes.Add(objChildNode);
 							objNode.Expand();
@@ -21081,7 +20943,7 @@ namespace Chummer
 					}
 
 					foreach (XmlNode objXmlGear in objXmlCyberware.SelectNodes("gears/gear"))
-						AddPACKSGear(objXmlGearDocument, objXmlGear, objNode, objCyberware, cmsCyberwareGear);
+						AddPACKSGear(objXmlGearDocument, objXmlGear, objNode, objCyberware, cmsCyberwareGear, blnCreateChildren);
 
 					objNode.ContextMenuStrip = cmsCyberware;
 					treCyberware.Nodes[0].Nodes.Add(objNode);
@@ -21124,14 +20986,14 @@ namespace Chummer
 					List<TreeNode> objWeaponNodes = new List<TreeNode>();
 					TreeNode objNode = new TreeNode();
 					Cyberware objCyberware = new Cyberware(_objCharacter);
-					CyberwareGrade objGrade = objCyberware.ConvertToCyberwareGrade(objXmlBioware["grade"].InnerText);
+					Grade objGrade = objCyberware.ConvertToCyberwareGrade(objXmlBioware["grade"].InnerText, Improvement.ImprovementSource.Bioware);
 
 					int intRating = 0;
 					if (objXmlBioware["rating"] != null)
 						intRating = Convert.ToInt32(objXmlBioware["rating"].InnerText);
 
 					XmlNode objXmlBiowareNode = objXmlBiowareDocument.SelectSingleNode("/chummer/biowares/bioware[name = \"" + objXmlBioware["name"].InnerText + "\"]");
-					objCyberware.Create(objXmlBiowareNode, _objCharacter, objGrade, Improvement.ImprovementSource.Bioware, intRating, objNode, objWeapons, objWeaponNodes);
+					objCyberware.Create(objXmlBiowareNode, _objCharacter, objGrade, Improvement.ImprovementSource.Bioware, intRating, objNode, objWeapons, objWeaponNodes, true, blnCreateChildren);
 					_objCharacter.Cyberware.Add(objCyberware);
 
 					objNode.ContextMenuStrip = cmsBioware;
@@ -21171,7 +21033,7 @@ namespace Chummer
 					pgbProgress.Value = i;
 					Application.DoEvents();
 
-					AddPACKSGear(objXmlGearDocument, objXmlGear, treGear.Nodes[0], _objCharacter, cmsGear);
+					AddPACKSGear(objXmlGearDocument, objXmlGear, treGear.Nodes[0], _objCharacter, cmsGear, blnCreateChildren);
 
 					Application.DoEvents();
 				}
@@ -21199,7 +21061,7 @@ namespace Chummer
 					Vehicle objVehicle = new Vehicle(_objCharacter);
 
 					XmlNode objXmlVehicleNode = objXmlVehicleDocument.SelectSingleNode("/chummer/vehicles/vehicle[name = \"" + objXmlVehicle["name"].InnerText + "\"]");
-					objVehicle.Create(objXmlVehicleNode, objNode, cmsVehicle, cmsVehicleGear, cmsVehicleWeapon, cmsVehicleWeaponAccessory, cmsVehicleWeaponMod);
+					objVehicle.Create(objXmlVehicleNode, objNode, cmsVehicle, cmsVehicleGear, cmsVehicleWeapon, cmsVehicleWeaponAccessory, cmsVehicleWeaponMod, blnCreateChildren);
 					_objCharacter.Vehicles.Add(objVehicle);
 
 					// Grab the default Sensor that comes with the Vehicle.
@@ -21256,7 +21118,7 @@ namespace Chummer
 								intQty = Convert.ToInt32(objXmlGear["qty"].InnerText);
 
 							XmlNode objXmlGearNode = objXmlGearDocument.SelectSingleNode("/chummer/gears/gear[name = \"" + objXmlGear["name"].InnerText + "\"]");
-							objGear.Create(objXmlGearNode, _objCharacter, objGearNode, intRating, objWeapons, objWeaponNodes, strForceValue);
+							objGear.Create(objXmlGearNode, _objCharacter, objGearNode, intRating, objWeapons, objWeaponNodes, strForceValue, false, false, false, blnCreateChildren);
 							objGear.Quantity = intQty;
 							objGearNode.Text = objGear.DisplayName;
 							objVehicle.Gear.Add(objGear);
@@ -21266,7 +21128,7 @@ namespace Chummer
 							{
 								foreach (XmlNode objXmlChild in objXmlGear.SelectNodes("gears/gear"))
 								{
-									AddPACKSGear(objXmlGearDocument, objXmlChild, objGearNode, objGear, cmsVehicleGear);
+									AddPACKSGear(objXmlGearDocument, objXmlChild, objGearNode, objGear, cmsVehicleGear, blnCreateChildren);
 								}
 							}
 
@@ -21302,7 +21164,7 @@ namespace Chummer
 							Weapon objWeapon = new Weapon(_objCharacter);
 
 							XmlNode objXmlWeaponNode = objXmlWeaponDocument.SelectSingleNode("/chummer/weapons/weapon[name = \"" + objXmlWeapon["name"].InnerText + "\"]");
-							objWeapon.Create(objXmlWeaponNode, _objCharacter, objWeaponNode, cmsVehicleWeapon, cmsVehicleWeaponAccessory, cmsVehicleWeaponMod);
+							objWeapon.Create(objXmlWeaponNode, _objCharacter, objWeaponNode, cmsVehicleWeapon, cmsVehicleWeaponAccessory, cmsVehicleWeaponMod, blnCreateChildren);
 							objWeapon.VehicleMounted = true;
 							
 							// Find the first Weapon Mount in the Vehicle.
@@ -22283,6 +22145,8 @@ namespace Chummer
 			tipTooltip.SetToolTip(chkArmorEquipped, LanguageManager.Instance.GetString("Tip_ArmorEquipped"));
 			// Weapon Tab.
 			tipTooltip.SetToolTip(chkWeaponAccessoryInstalled, LanguageManager.Instance.GetString("Tip_WeaponInstalled"));
+			// Gear Tab.
+			tipTooltip.SetToolTip(chkActiveCommlink, LanguageManager.Instance.GetString("Tip_ActiveCommlink"));
 			// Vehicles Tab.
 			tipTooltip.SetToolTip(chkVehicleWeaponAccessoryInstalled, LanguageManager.Instance.GetString("Tip_WeaponInstalled"));
 			// Character Info Tab.
@@ -22292,18 +22156,18 @@ namespace Chummer
 			tipTooltip.SetToolTip(lblBuildSpecialAttributes, LanguageManager.Instance.GetString("Tip_BuildSpecialAttributes"));
 			tipTooltip.SetToolTip(lblBuildPositiveQualities, LanguageManager.Instance.GetString("Tip_BuildPositiveQualities"));
 			tipTooltip.SetToolTip(lblBuildNegativeQualities, LanguageManager.Instance.GetString("Tip_BuildNegativeQualities"));
-			tipTooltip.SetToolTip(lblBuildContacts, LanguageManager.Instance.GetString("Tip_CommonContacts"));
+			tipTooltip.SetToolTip(lblBuildContacts, LanguageManager.Instance.GetString("Tip_CommonContacts").Replace("{0}", _objOptions.BPContact.ToString()));
 			tipTooltip.SetToolTip(lblBuildEnemies, LanguageManager.Instance.GetString("Tip_CommonEnemies"));
-			tipTooltip.SetToolTip(lblBuildNuyen, LanguageManager.Instance.GetString("Tip_CommonNuyen"));
-			tipTooltip.SetToolTip(lblBuildSkillGroups, LanguageManager.Instance.GetString("Tip_SkillsSkillGroups"));
-			tipTooltip.SetToolTip(lblBuildActiveSkills, LanguageManager.Instance.GetString("Tip_SkillsActiveSkills"));
-			tipTooltip.SetToolTip(lblBuildKnowledgeSkills, LanguageManager.Instance.GetString("Tip_SkillsKnowledgeSkills"));
-			tipTooltip.SetToolTip(lblBuildSpells, LanguageManager.Instance.GetString("Tip_SpellsSelectedSpells"));
-			tipTooltip.SetToolTip(lblBuildFoci, LanguageManager.Instance.GetString("Tip_BuildFoci"));
-			tipTooltip.SetToolTip(lblBuildSpirits, LanguageManager.Instance.GetString("Tip_SpellsSpirits"));
-			tipTooltip.SetToolTip(lblBuildSprites, LanguageManager.Instance.GetString("Tip_TechnomancerSprites"));
-			tipTooltip.SetToolTip(lblBuildComplexForms, LanguageManager.Instance.GetString("Tip_TechnomancerComplexForms"));
-			tipTooltip.SetToolTip(lblBuildManeuvers, LanguageManager.Instance.GetString("Tip_BuildManeuvers"));
+			tipTooltip.SetToolTip(lblBuildNuyen, LanguageManager.Instance.GetString("Tip_CommonNuyen").Replace("{0}", String.Format("{0:###,###,##0}", _objOptions.NuyenPerBP)));
+			tipTooltip.SetToolTip(lblBuildSkillGroups, LanguageManager.Instance.GetString("Tip_SkillsSkillGroups").Replace("{0}", _objOptions.BPSkillGroup.ToString()));
+			tipTooltip.SetToolTip(lblBuildActiveSkills, LanguageManager.Instance.GetString("Tip_SkillsActiveSkills").Replace("{0}", _objOptions.BPActiveSkill.ToString()).Replace("{1}", _objOptions.BPActiveSkillSpecialization.ToString()));
+			tipTooltip.SetToolTip(lblBuildKnowledgeSkills, LanguageManager.Instance.GetString("Tip_SkillsKnowledgeSkills").Replace("{0}", _objOptions.BPKnowledgeSkill.ToString()));
+			tipTooltip.SetToolTip(lblBuildSpells, LanguageManager.Instance.GetString("Tip_SpellsSelectedSpells").Replace("{0}", _objOptions.BPSpell.ToString()));
+			tipTooltip.SetToolTip(lblBuildFoci, LanguageManager.Instance.GetString("Tip_BuildFoci").Replace("{0}", _objOptions.BPFocus.ToString()));
+			tipTooltip.SetToolTip(lblBuildSpirits, LanguageManager.Instance.GetString("Tip_SpellsSpirits").Replace("{0}", _objOptions.BPSpirit.ToString()));
+			tipTooltip.SetToolTip(lblBuildSprites, LanguageManager.Instance.GetString("Tip_TechnomancerSprites").Replace("{0}", _objOptions.BPSpirit.ToString()));
+			tipTooltip.SetToolTip(lblBuildComplexForms, LanguageManager.Instance.GetString("Tip_TechnomancerComplexForms").Replace("{0}", _objOptions.BPComplexForm.ToString()));
+			tipTooltip.SetToolTip(lblBuildManeuvers, LanguageManager.Instance.GetString("Tip_BuildManeuvers").Replace("{0}", _objOptions.BPMartialArtManeuver.ToString()));
 			// Other Info Tab.
 			tipTooltip.SetToolTip(lblCMPhysicalLabel, LanguageManager.Instance.GetString("Tip_OtherCMPhysical"));
 			tipTooltip.SetToolTip(lblCMStunLabel, LanguageManager.Instance.GetString("Tip_OtherCMStun"));
@@ -22512,6 +22376,11 @@ namespace Chummer
 			lblCyberwareAvail.Left = lblCyberwareAvailLabel.Left + intWidth + 6;
 			lblCyberwareSource.Left = lblCyberwareSourceLabel.Left + intWidth + 6;
 
+			intWidth = lblEssenceHoleESSLabel.Width;
+			lblCyberwareESS.Left = lblEssenceHoleESSLabel.Left + intWidth + 6;
+			lblBiowareESS.Left = lblEssenceHoleESSLabel.Left + intWidth + 6;
+			lblEssenceHoleESS.Left = lblEssenceHoleESSLabel.Left + intWidth + 6;
+
 			intWidth = Math.Max(lblCyberwareRatingLabel.Width, lblCyberwareCapacityLabel.Width);
 			intWidth = Math.Max(intWidth, lblCyberwareCostLabel.Width);
 
@@ -22614,6 +22483,8 @@ namespace Chummer
 			intWidth = Math.Max(intWidth, lblGearCapacityLabel.Width);
 			intWidth = Math.Max(intWidth, lblGearQtyLabel.Width);
 
+			chkCommlinks.Left = cmdAddLocation.Left + cmdAddLocation.Width + 16;
+
 			lblGearName.Left = lblGearNameLabel.Left + intWidth + 6;
 			lblGearCategory.Left = lblGearCategoryLabel.Left + intWidth + 6;
 			nudGearRating.Left = lblGearRatingLabel.Left + intWidth + 6;
@@ -22663,6 +22534,9 @@ namespace Chummer
 			nudVehicleRating.Left = lblVehicleRatingLabel.Left + intWidth + 6;
 			nudVehicleGearQty.Left = lblVehicleGearQtyLabel.Left + intWidth + 6;
 			lblVehicleSource.Left = lblVehicleSourceLabel.Left + intWidth + 6;
+			lblVehicleWeaponName.Left = lblVehicleWeaponNameLabel.Left + intWidth + 6;
+			lblVehicleWeaponCategory.Left = lblVehicleWeaponCategoryLabel.Left + intWidth + 6;
+			lblVehicleWeaponDamage.Left = lblVehicleWeaponDamageLabel.Left + intWidth + 6;
 
 			intWidth = Math.Max(lblVehicleAccelLabel.Width, lblVehicleBodyLabel.Width);
 			intWidth = Math.Max(intWidth, lblVehicleSignalLabel.Width);
@@ -23440,8 +23314,8 @@ namespace Chummer
 
 			XmlNode objXmlSuite = objXmlDocument.SelectSingleNode("/chummer/suites/suite[name = \"" + frmPickCyberwareSuite.SelectedSuite + "\"]");
 			Cyberware objTemp = new Cyberware(_objCharacter);
-			CyberwareGrade objGrade = new CyberwareGrade();
-			objGrade = objTemp.ConvertToCyberwareGrade(objXmlSuite["grade"].InnerText);
+			Grade objGrade = new Grade();
+			objGrade = objTemp.ConvertToCyberwareGrade(objXmlSuite["grade"].InnerText, objSource);
 
 			// Run through each of the items in the Suite and add them to the character.
 			foreach (XmlNode objXmlItem in objXmlSuite.SelectNodes(strType + "s/" + strType))
@@ -23478,7 +23352,16 @@ namespace Chummer
 			UpdateCharacterInfo();
 		}
 
-		private void AddPACKSGear(XmlDocument objXmlGearDocument, XmlNode objXmlGear, TreeNode objParent, Object objParentObject, ContextMenuStrip cmsContextMenu)
+		/// <summary>
+		/// Add a piece of Gear that was found in a PACKS Kit.
+		/// </summary>
+		/// <param name="objXmlGearDocument">XmlDocument that contains the Gear.</param>
+		/// <param name="objXmlGear">XmlNode of the Gear to add.</param>
+		/// <param name="objParent">TreeNode to attach the created items to.</param>
+		/// <param name="objParentObject">Object to associate the newly-created items with.</param>
+		/// <param name="cmsContextMenu">ContextMenuStrip to assign to the TreeNodes created.</param>
+		/// <param name="blnCreateChildren">Whether or not the default plugins for the Gear should be created.</param>
+		private void AddPACKSGear(XmlDocument objXmlGearDocument, XmlNode objXmlGear, TreeNode objParent, Object objParentObject, ContextMenuStrip cmsContextMenu, bool blnCreateChildren)
 		{
 			int intRating = 0;
 			if (objXmlGear["rating"] != null)
@@ -23487,7 +23370,11 @@ namespace Chummer
 			if (objXmlGear["qty"] != null)
 				intQty = Convert.ToInt32(objXmlGear["qty"].InnerText);
 
-			XmlNode objXmlGearNode = objXmlGearDocument.SelectSingleNode("/chummer/gears/gear[name = \"" + objXmlGear["name"].InnerText + "\"]");
+			XmlNode objXmlGearNode;
+			if (objXmlGear["category"] != null)
+				objXmlGearNode = objXmlGearDocument.SelectSingleNode("/chummer/gears/gear[name = \"" + objXmlGear["name"].InnerText + "\" and category = \"" + objXmlGear["category"].InnerText + "\"]");
+			else
+				objXmlGearNode = objXmlGearDocument.SelectSingleNode("/chummer/gears/gear[name = \"" + objXmlGear["name"].InnerText + "\"]");
 
 			List<Weapon> objWeapons = new List<Weapon>();
 			List<TreeNode> objWeaponNodes = new List<TreeNode>();
@@ -23502,20 +23389,20 @@ namespace Chummer
 				case "Commlink":
 				case "Commlink Upgrade":
 					Commlink objCommlink = new Commlink(_objCharacter);
-					objCommlink.Create(objXmlGearNode, _objCharacter, objNode, intRating);
+					objCommlink.Create(objXmlGearNode, _objCharacter, objNode, intRating, true, blnCreateChildren);
 					objCommlink.Quantity = intQty;
 					objNewGear = objCommlink;
 					break;
 				case "Commlink Operating System":
 				case "Commlink Operating System Upgrade":
 					OperatingSystem objOperatingSystem = new OperatingSystem(_objCharacter);
-					objOperatingSystem.Create(objXmlGearNode, _objCharacter, objNode, intRating);
+					objOperatingSystem.Create(objXmlGearNode, _objCharacter, objNode, intRating, true, blnCreateChildren);
 					objOperatingSystem.Quantity = intQty;
 					objNewGear = objOperatingSystem;
 					break;
 				default:
 					Gear objGear = new Gear(_objCharacter);
-					objGear.Create(objXmlGearNode, _objCharacter, objNode, intRating, objWeapons, objWeaponNodes, strForceValue, false, false, true, false);
+					objGear.Create(objXmlGearNode, _objCharacter, objNode, intRating, objWeapons, objWeaponNodes, strForceValue, false, false, true, blnCreateChildren);
 					objGear.Quantity = intQty;
 					objNode.Text = objGear.DisplayName;
 					objNewGear = objGear;
@@ -23541,7 +23428,7 @@ namespace Chummer
 			{
 				foreach (XmlNode objXmlChild in objXmlGear.SelectNodes("gears/gear"))
 				{
-					AddPACKSGear(objXmlGearDocument, objXmlChild, objNode, objNewGear, cmsContextMenu);
+					AddPACKSGear(objXmlGearDocument, objXmlChild, objNode, objNewGear, cmsContextMenu, blnCreateChildren);
 				}
 			}
 
@@ -23562,6 +23449,177 @@ namespace Chummer
 				treWeapons.Nodes[0].Expand();
 			}
 
+		}
+
+		/// <summary>
+		/// Populate the TreeView that contains all of the character's Gear.
+		/// </summary>
+		private void PopulateGearList()
+		{
+			// Populate Gear.
+			// Create the root node.
+			treGear.Nodes.Clear();
+			TreeNode objRoot = new TreeNode();
+			objRoot.Tag = "Node_SelectedGear";
+			objRoot.Text = LanguageManager.Instance.GetString("Node_SelectedGear");
+			treGear.Nodes.Add(objRoot);
+
+			// Start by populating Locations.
+			foreach (string strLocation in _objCharacter.Locations)
+			{
+				TreeNode objLocation = new TreeNode();
+				objLocation.Tag = strLocation;
+				objLocation.Text = strLocation;
+				objLocation.ContextMenuStrip = cmsGearLocation;
+				treGear.Nodes.Add(objLocation);
+			}
+
+			// Add Locations for the character's bits that can hold Commlinks.
+			// Populate the list of Commlink Locations.
+			foreach (Cyberware objCyberware in _objCharacter.Cyberware)
+			{
+				if (objCyberware.AllowGear != null)
+				{
+					if (objCyberware.AllowGear["gearcategory"] != null)
+					{
+						if (objCyberware.AllowGear["gearcategory"].InnerText == "Commlink")
+						{
+							TreeNode objNode = new TreeNode();
+							objNode.Tag = objCyberware.InternalId.ToString();
+							objNode.Text = objCyberware.DisplayCategory + ": " + objCyberware.DisplayName;
+							treGear.Nodes.Add(objNode);
+						}
+					}
+				}
+				foreach (Cyberware objPlugin in objCyberware.Children)
+				{
+					if (objPlugin.AllowGear != null)
+					{
+						if (objPlugin.AllowGear["gearcategory"] != null)
+						{
+							TreeNode objNode = new TreeNode();
+							objNode.Tag = objPlugin.InternalId.ToString();
+							objNode.Text = objPlugin.DisplayCategory + ": " + objPlugin.DisplayName;
+							treGear.Nodes.Add(objNode);
+						}
+					}
+				}
+			}
+			foreach (Weapon objWeapon in _objCharacter.Weapons)
+			{
+				foreach (WeaponAccessory objAccessory in objWeapon.WeaponAccessories)
+				{
+					if (objAccessory.AllowGear != null)
+					{
+						if (objAccessory.AllowGear["gearcategory"] != null)
+						{
+							if (objAccessory.AllowGear["gearcategory"].InnerText == "Commlink")
+							{
+								TreeNode objNode = new TreeNode();
+								objNode.Tag = objAccessory.InternalId.ToString();
+								objNode.Text = objWeapon.DisplayName + ": " + objAccessory.DisplayName;
+								treGear.Nodes.Add(objNode);
+							}
+						}
+					}
+				}
+				foreach (Weapon objUnderbarrel in objWeapon.UnderbarrelWeapons)
+				{
+					foreach (WeaponAccessory objUnderbarrelAccessory in objUnderbarrel.WeaponAccessories)
+					{
+						if (objUnderbarrelAccessory.AllowGear != null)
+						{
+							if (objUnderbarrelAccessory.AllowGear["gearcategory"] != null)
+							{
+								if (objUnderbarrelAccessory.AllowGear["gearcategory"].InnerText == "Commlink")
+								{
+									TreeNode objNode = new TreeNode();
+									objNode.Tag = objUnderbarrelAccessory.InternalId.ToString();
+									objNode.Text = objUnderbarrel.DisplayName + ": " + objUnderbarrelAccessory.DisplayName;
+									treGear.Nodes.Add(objNode);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			foreach (Gear objGear in _objCharacter.Gear)
+			{
+				bool blnAdd = true;
+				if (chkCommlinks.Checked && objGear.Category != "Commlink")
+					blnAdd = false;
+
+				if (blnAdd)
+				{
+					TreeNode objNode = new TreeNode();
+					objNode.Text = objGear.DisplayName;
+					objNode.Tag = objGear.InternalId;
+					if (objGear.Notes != string.Empty)
+						objNode.ForeColor = Color.SaddleBrown;
+					objNode.ToolTipText = objGear.Notes;
+
+					_objFunctions.BuildGearTree(objGear, objNode, cmsGear);
+
+					objNode.ContextMenuStrip = cmsGear;
+
+					TreeNode objParent = new TreeNode();
+					if (objGear.Location == "")
+						objParent = treGear.Nodes[0];
+					else
+					{
+						foreach (TreeNode objFind in treGear.Nodes)
+						{
+							if (objFind.Text == objGear.Location)
+							{
+								objParent = objFind;
+								break;
+							}
+						}
+					}
+					objParent.Nodes.Add(objNode);
+					objParent.Expand();
+				}
+			}
+		}
+
+		/// <summary>
+		/// Populate the TreeView that contains all of the character's Cyberware and Bioware.
+		/// </summary>
+		private void PopulateCyberwareList()
+		{
+			// Populate Cyberware.
+			foreach (Cyberware objCyberware in _objCharacter.Cyberware)
+			{
+				if (objCyberware.SourceType == Improvement.ImprovementSource.Cyberware)
+				{
+					_objFunctions.BuildCyberwareTree(objCyberware, treCyberware.Nodes[0], cmsCyberware, cmsCyberwareGear);
+				}
+			}
+
+			// Populate Bioware.
+			foreach (Cyberware objCyberware in _objCharacter.Cyberware)
+			{
+				if (objCyberware.SourceType == Improvement.ImprovementSource.Bioware)
+				{
+					_objFunctions.BuildCyberwareTree(objCyberware, treCyberware.Nodes[1], cmsBioware, cmsCyberwareGear);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Change the active Commlink for the Character.
+		/// </summary>
+		/// <param name="objActiveCommlink"></param>
+		private void ChangeActiveCommlink(Commlink objActiveCommlink)
+		{
+			List<Commlink> lstCommlinks = _objFunctions.FindCharacterCommlinks(_objCharacter.Gear);
+
+			foreach (Commlink objCommlink in lstCommlinks)
+			{
+				if (objCommlink.InternalId != objActiveCommlink.InternalId)
+					objCommlink.IsActive = false;
+			}
 		}
 		#endregion
 	}

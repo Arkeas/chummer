@@ -120,6 +120,7 @@
 			this.nudMaxAvail = new System.Windows.Forms.NumericUpDown();
 			this.cboLimbCount = new System.Windows.Forms.ComboBox();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.chkErgonomicProgramLimit = new System.Windows.Forms.CheckBox();
 			this.chkCalculateCommlinkResponse = new System.Windows.Forms.CheckBox();
 			this.chkCreateBackupOnCareer = new System.Windows.Forms.CheckBox();
 			this.chkAutomaticRegistration = new System.Windows.Forms.CheckBox();
@@ -228,6 +229,7 @@
 			this.chkCapSkillRating = new System.Windows.Forms.CheckBox();
 			this.chkNoSingleArmorEncumbrance = new System.Windows.Forms.CheckBox();
 			this.tabHouseRules = new System.Windows.Forms.TabPage();
+			this.chkTechnomancerAllowAutosoft = new System.Windows.Forms.CheckBox();
 			this.chkSpecialAttributeKarmaLimit = new System.Windows.Forms.CheckBox();
 			this.chkFreeSpiritsPowerPointsMAG = new System.Windows.Forms.CheckBox();
 			this.chkAllowBiowareSuites = new System.Windows.Forms.CheckBox();
@@ -254,7 +256,8 @@
 			this.lblSetting = new System.Windows.Forms.Label();
 			this.lblSettingName = new System.Windows.Forms.Label();
 			this.txtSettingName = new System.Windows.Forms.TextBox();
-			this.chkTechnomancerAllowAutosoft = new System.Windows.Forms.CheckBox();
+			this.lblEssenceDecimals = new System.Windows.Forms.Label();
+			this.cboEssenceDecimals = new System.Windows.Forms.ComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaComplexFormOption)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaMetamagic)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaInitiation)).BeginInit();
@@ -1119,6 +1122,8 @@
 			// tabPage2
 			// 
 			this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+			this.tabPage2.Controls.Add(this.cboEssenceDecimals);
+			this.tabPage2.Controls.Add(this.lblEssenceDecimals);
 			this.tabPage2.Controls.Add(this.chkPrintNotes);
 			this.tabPage2.Controls.Add(this.lblLimbCount);
 			this.tabPage2.Controls.Add(this.chkAllowSkillDiceRolling);
@@ -1267,6 +1272,7 @@
 			// tabPage1
 			// 
 			this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+			this.tabPage1.Controls.Add(this.chkErgonomicProgramLimit);
 			this.tabPage1.Controls.Add(this.chkConfirmDelete);
 			this.tabPage1.Controls.Add(this.chkCalculateCommlinkResponse);
 			this.tabPage1.Controls.Add(this.chkCreateBackupOnCareer);
@@ -1282,6 +1288,17 @@
 			this.tabPage1.TabIndex = 2;
 			this.tabPage1.Tag = "Tab_Options_Miscellaneous";
 			this.tabPage1.Text = "Miscellaneous";
+			// 
+			// chkErgonomicProgramLimit
+			// 
+			this.chkErgonomicProgramLimit.AutoSize = true;
+			this.chkErgonomicProgramLimit.Location = new System.Drawing.Point(6, 239);
+			this.chkErgonomicProgramLimit.Name = "chkErgonomicProgramLimit";
+			this.chkErgonomicProgramLimit.Size = new System.Drawing.Size(391, 17);
+			this.chkErgonomicProgramLimit.TabIndex = 16;
+			this.chkErgonomicProgramLimit.Tag = "Checkbox_Options_ErgonomicProgramLimit";
+			this.chkErgonomicProgramLimit.Text = "Ergonomic Programs do not affect a Commlink\'s effective Response (UN 114)";
+			this.chkErgonomicProgramLimit.UseVisualStyleBackColor = true;
 			// 
 			// chkCalculateCommlinkResponse
 			// 
@@ -1393,7 +1410,7 @@
 			this.tabBPCosts.Controls.Add(this.nudBPAttribute);
 			this.tabBPCosts.Location = new System.Drawing.Point(4, 22);
 			this.tabBPCosts.Name = "tabBPCosts";
-			this.tabBPCosts.Size = new System.Drawing.Size(807, 540);
+			this.tabBPCosts.Size = new System.Drawing.Size(807, 562);
 			this.tabBPCosts.TabIndex = 4;
 			this.tabBPCosts.Tag = "Tab_Options_BPCosts";
 			this.tabBPCosts.Text = "BP Costs";
@@ -1750,7 +1767,7 @@
 			this.tabKarmaCosts.Location = new System.Drawing.Point(4, 22);
 			this.tabKarmaCosts.Name = "tabKarmaCosts";
 			this.tabKarmaCosts.Padding = new System.Windows.Forms.Padding(3);
-			this.tabKarmaCosts.Size = new System.Drawing.Size(807, 540);
+			this.tabKarmaCosts.Size = new System.Drawing.Size(807, 562);
 			this.tabKarmaCosts.TabIndex = 1;
 			this.tabKarmaCosts.Tag = "Tab_Options_KarmaCosts";
 			this.tabKarmaCosts.Text = "Karma Costs";
@@ -2268,7 +2285,7 @@
 			this.tabOptionalRules.Controls.Add(this.chkMoreLethalGameplay);
 			this.tabOptionalRules.Location = new System.Drawing.Point(4, 22);
 			this.tabOptionalRules.Name = "tabOptionalRules";
-			this.tabOptionalRules.Size = new System.Drawing.Size(807, 540);
+			this.tabOptionalRules.Size = new System.Drawing.Size(807, 562);
 			this.tabOptionalRules.TabIndex = 2;
 			this.tabOptionalRules.Tag = "Tab_Options_OptionalRules";
 			this.tabOptionalRules.Text = "Optional Rules";
@@ -2474,6 +2491,17 @@
 			this.tabHouseRules.TabIndex = 3;
 			this.tabHouseRules.Tag = "Tab_Options_HouseRules";
 			this.tabHouseRules.Text = "House Rules";
+			// 
+			// chkTechnomancerAllowAutosoft
+			// 
+			this.chkTechnomancerAllowAutosoft.AutoSize = true;
+			this.chkTechnomancerAllowAutosoft.Location = new System.Drawing.Point(8, 535);
+			this.chkTechnomancerAllowAutosoft.Name = "chkTechnomancerAllowAutosoft";
+			this.chkTechnomancerAllowAutosoft.Size = new System.Drawing.Size(291, 17);
+			this.chkTechnomancerAllowAutosoft.TabIndex = 27;
+			this.chkTechnomancerAllowAutosoft.Tag = "Checkbox_Option_TechnomancerAllowAutosoft";
+			this.chkTechnomancerAllowAutosoft.Text = "Technomancers may select Autosofts as Complex Forms";
+			this.chkTechnomancerAllowAutosoft.UseVisualStyleBackColor = true;
 			// 
 			// chkSpecialAttributeKarmaLimit
 			// 
@@ -2780,23 +2808,31 @@
 			this.txtSettingName.Size = new System.Drawing.Size(190, 20);
 			this.txtSettingName.TabIndex = 3;
 			// 
-			// chkTechnomancerAllowAutosoft
+			// lblEssenceDecimals
 			// 
-			this.chkTechnomancerAllowAutosoft.AutoSize = true;
-			this.chkTechnomancerAllowAutosoft.Location = new System.Drawing.Point(8, 535);
-			this.chkTechnomancerAllowAutosoft.Name = "chkTechnomancerAllowAutosoft";
-			this.chkTechnomancerAllowAutosoft.Size = new System.Drawing.Size(291, 17);
-			this.chkTechnomancerAllowAutosoft.TabIndex = 27;
-			this.chkTechnomancerAllowAutosoft.Tag = "Checkbox_Option_TechnomancerAllowAutosoft";
-			this.chkTechnomancerAllowAutosoft.Text = "Technomancers may select Autosofts as Complex Forms";
-			this.chkTechnomancerAllowAutosoft.UseVisualStyleBackColor = true;
+			this.lblEssenceDecimals.AutoSize = true;
+			this.lblEssenceDecimals.Location = new System.Drawing.Point(6, 304);
+			this.lblEssenceDecimals.Name = "lblEssenceDecimals";
+			this.lblEssenceDecimals.Size = new System.Drawing.Size(230, 13);
+			this.lblEssenceDecimals.TabIndex = 16;
+			this.lblEssenceDecimals.Tag = "Label_Options_EssenceDecimals";
+			this.lblEssenceDecimals.Text = "Number of decimal places to round Essence to:";
+			// 
+			// cboEssenceDecimals
+			// 
+			this.cboEssenceDecimals.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cboEssenceDecimals.FormattingEnabled = true;
+			this.cboEssenceDecimals.Location = new System.Drawing.Point(242, 301);
+			this.cboEssenceDecimals.Name = "cboEssenceDecimals";
+			this.cboEssenceDecimals.Size = new System.Drawing.Size(61, 21);
+			this.cboEssenceDecimals.TabIndex = 17;
 			// 
 			// frmOptions
 			// 
 			this.AcceptButton = this.cmdOK;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(815, 658);
+			this.ClientSize = new System.Drawing.Size(815, 661);
 			this.ControlBox = false;
 			this.Controls.Add(this.txtSettingName);
 			this.Controls.Add(this.lblSettingName);
@@ -3125,5 +3161,8 @@
 		private System.Windows.Forms.CheckBox chkFreeSpiritsPowerPointsMAG;
 		private System.Windows.Forms.CheckBox chkSpecialAttributeKarmaLimit;
 		private System.Windows.Forms.CheckBox chkTechnomancerAllowAutosoft;
+		private System.Windows.Forms.CheckBox chkErgonomicProgramLimit;
+		private System.Windows.Forms.ComboBox cboEssenceDecimals;
+		private System.Windows.Forms.Label lblEssenceDecimals;
 	}
 }
