@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-835</version>
+	<version>-829</version>
 	<categories>
 		<category show="false">Altskin Function</category>
 		<category>Ammunition</category>
@@ -15,6 +15,7 @@
 		<category>Autosofts, Agent</category>
 		<category>Autosofts, Drone</category>
 		<category>Awakened Drugs</category>
+		<category>Awakened Minerals</category>
 		<category>B&amp;E Gear</category>
 		<category>Beverages</category>
 		<category>Biomeds</category>
@@ -22,6 +23,7 @@
 		<category>Camouflage Gear</category>
 		<category>Camping and Survival Gear</category>
 		<category>Chem-Sniffer Defenses</category>
+		<category>Chemicals</category>
 		<category>Chemtech</category>
 		<category>Commlink</category>
 		<category>Commlink Accessories</category>
@@ -59,6 +61,7 @@
 		<category>Magical Supplies</category>
 		<category>Magnetic Diffusion Shielding</category>
 		<category>Malware</category>
+		<category>Magical Alloys</category>
 		<category>Manatech</category>
 		<category>Matrix Programs</category>
 		<category>Metamagic Foci</category>
@@ -97,12 +100,14 @@
 		<category>Spell Formulae</category>
 		<category>Spy Toys</category>
 		<category>Storage Media</category>
+		<category>Surveillance and Security Devices</category>
 		<category>Surveillance Gear</category>
 		<category>Tactical AR Software</category>
 		<category>Telematics Infrastructure Software</category>
 		<category>Tools</category>
 		<category>Toxic Environment Gear</category>
 		<category>Toxins</category>
+		<category>True Elements</category>
 		<category>Underwater Gear</category>
 		<category>Vision Enhancers</category>
 		<category>Vision Enhancements</category>
@@ -680,6 +685,22 @@
 			<cost>10000</cost>
 			<source>WAR</source>
 			<page>162</page>
+			<gears>
+				<usegear>
+					<name>Biometric Lock</name>
+					<category>Commlink Option</category>
+				</usegear>
+				<usegear>
+					<name>Hardening</name>
+					<category>Commlink Option</category>
+					<rating>5</rating>
+				</usegear>
+				<usegear>
+					<name>Armor Case</name>
+					<category>Commlink Option</category>
+					<rating>5</rating>
+				</usegear>
+			</gears>
 		</gear>
 		<gear>
 			<name>Singularity Battle Buddy</name>
@@ -692,6 +713,22 @@
 			<cost>17000</cost>
 			<source>WAR</source>
 			<page>162</page>
+			<gears>
+				<usegear>
+					<name>Biometric Lock</name>
+					<category>Commlink Option</category>
+				</usegear>
+				<usegear>
+					<name>Hardening</name>
+					<category>Commlink Option</category>
+					<rating>5</rating>
+				</usegear>
+				<usegear>
+					<name>Armor Case</name>
+					<category>Commlink Option</category>
+					<rating>5</rating>
+				</usegear>
+			</gears>
 		</gear>
 		<gear>
 			<name>MCT Tactical</name>
@@ -704,6 +741,22 @@
 			<cost>18500</cost>
 			<source>WAR</source>
 			<page>162</page>
+			<gears>
+				<usegear>
+					<name>Biometric Lock</name>
+					<category>Commlink Option</category>
+				</usegear>
+				<usegear>
+					<name>Hardening</name>
+					<category>Commlink Option</category>
+					<rating>5</rating>
+				</usegear>
+				<usegear>
+					<name>Armor Case</name>
+					<category>Commlink Option</category>
+					<rating>5</rating>
+				</usegear>
+			</gears>
 		</gear>
 		<gear>
 			<name>Renraku Suterusu</name>
@@ -716,6 +769,22 @@
 			<cost>32750</cost>
 			<source>WAR</source>
 			<page>162</page>
+			<gears>
+				<usegear>
+					<name>Biometric Lock</name>
+					<category>Commlink Option</category>
+				</usegear>
+				<usegear>
+					<name>Hardening</name>
+					<category>Commlink Option</category>
+					<rating>5</rating>
+				</usegear>
+				<usegear>
+					<name>Armor Case</name>
+					<category>Commlink Option</category>
+					<rating>5</rating>
+				</usegear>
+			</gears>
 		</gear>
 		<gear>
 			<name>Transys Cybernaut</name>
@@ -728,6 +797,22 @@
 			<cost>65000</cost>
 			<source>WAR</source>
 			<page>162</page>
+			<gears>
+				<usegear>
+					<name>Biometric Lock</name>
+					<category>Commlink Option</category>
+				</usegear>
+				<usegear>
+					<name>Hardening</name>
+					<category>Commlink Option</category>
+					<rating>5</rating>
+				</usegear>
+				<usegear>
+					<name>Armor Case</name>
+					<category>Commlink Option</category>
+					<rating>5</rating>
+				</usegear>
+			</gears>
 		</gear>
 		<gear>
 			<name>Disposable Commlink</name>
@@ -1398,6 +1483,19 @@
 			<page>114</page>
 		</gear>
 		<gear>
+			<name>Custom Autosoft</name>
+			<category>Autosofts, Drone</category>
+			<addoncategory>Program Options</addoncategory>
+			<rating>4</rating>
+			<avail>0</avail>
+			<cost>Variable(0-999999)</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>UN</source>
+			<page>114</page>
+		</gear>
+		<gear>
 			<name>Suite: Basic User</name>
 			<category>Matrix Programs</category>
 			<rating>0</rating>
@@ -1406,10 +1504,26 @@
 			<source>SR4</source>
 			<page>232</page>
 			<gears>
-				<usegear rating="2">Analyze</usegear>
-				<usegear rating="2">Browse</usegear>
-				<usegear rating="1">Command</usegear>
-				<usegear rating="2">Edit</usegear>
+				<usegear>
+					<name>Analyze</name>
+					<category>Matrix Programs</category>
+					<rating>2</rating>
+				</usegear>
+				<usegear>
+					<name>Browse</name>
+					<category>Matrix Programs</category>
+					<rating>2</rating>
+				</usegear>
+				<usegear>
+					<name>Command</name>
+					<category>Matrix Programs</category>
+					<rating>1</rating>
+				</usegear>
+				<usegear>
+					<name>Edit</name>
+					<category>Matrix Programs</category>
+					<rating>2</rating>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -1421,10 +1535,26 @@
 			<source>SR4</source>
 			<page>232</page>
 			<gears>
-				<usegear rating="3">Analyze</usegear>
-				<usegear rating="3">Browse</usegear>
-				<usegear rating="1">Command</usegear>
-				<usegear rating="3">Edit</usegear>
+				<usegear>
+					<name>Analyze</name>
+					<category>Matrix Programs</category>
+					<rating>3</rating>
+				</usegear>
+				<usegear>
+					<name>Browse</name>
+					<category>Matrix Programs</category>
+					<rating>3</rating>
+				</usegear>
+				<usegear>
+					<name>Command</name>
+					<category>Matrix Programs</category>
+					<rating>1</rating>
+				</usegear>
+				<usegear>
+					<name>Edit</name>
+					<category>Matrix Programs</category>
+					<rating>3</rating>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -1436,10 +1566,26 @@
 			<source>SR4</source>
 			<page>232</page>
 			<gears>
-				<usegear rating="4">Analyze</usegear>
-				<usegear rating="4">Browse</usegear>
-				<usegear rating="2">Command</usegear>
-				<usegear rating="4">Edit</usegear>
+				<usegear>
+					<name>Analyze</name>
+					<category>Matrix Programs</category>
+					<rating>4</rating>
+				</usegear>
+				<usegear>
+					<name>Browse</name>
+					<category>Matrix Programs</category>
+					<rating>4</rating>
+				</usegear>
+				<usegear>
+					<name>Command</name>
+					<category>Matrix Programs</category>
+					<rating>2</rating>
+				</usegear>
+				<usegear>
+					<name>Edit</name>
+					<category>Matrix Programs</category>
+					<rating>4</rating>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -7919,7 +8065,7 @@
 			<costfor>10</costfor>
 			<cost>300</cost>
 			<source>AR</source>
-			<page>35</page>
+			<page>36</page>
 		</gear>
 		<gear>
 			<name>Battery Pack: Satchel Power Pack</name>
@@ -7929,7 +8075,7 @@
 			<costfor>30</costfor>
 			<cost>750</cost>
 			<source>AR</source>
-			<page>35</page>
+			<page>36</page>
 		</gear>
 		<gear>
 			<name>Battery Pack: Power Backpack</name>
@@ -7939,7 +8085,7 @@
 			<costfor>80</costfor>
 			<cost>2200</cost>
 			<source>AR</source>
-			<page>35</page>
+			<page>36</page>
 		</gear>
 		<gear>
 			<name>Grenade: Instant Snare</name>
@@ -9126,6 +9272,7 @@
 			<cost>160</cost>
 			<weaponbonus>
 				<damage>2</damage>
+				<rangebonus>-20</rangebonus>
 			</weaponbonus>
 			<source>WAR</source>
 			<page>156</page>
@@ -10443,10 +10590,26 @@
 			<source>UN</source>
 			<page>127</page>
 			<gears>
-				<usegear rating="4">Armor</usegear>
-				<usegear rating="3">Biofeedback Filter</usegear>
-				<usegear rating="3">Medic</usegear>
-				<usegear rating="4">Track</usegear>
+				<usegear>
+					<name>Armor</name>
+					<category>Matrix Programs</category>
+					<rating>4</rating>
+				</usegear>
+				<usegear>
+					<name>Biofeedback Filter</name>
+					<category>Matrix Programs</category>
+					<rating>3</rating>
+				</usegear>
+				<usegear>
+					<name>Medic</name>
+					<category>Matrix Programs</category>
+					<rating>3</rating>
+				</usegear>
+				<usegear>
+					<name>Track</name>
+					<category>Matrix Programs</category>
+					<rating>4</rating>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -10458,8 +10621,16 @@
 			<source>UN</source>
 			<page>127</page>
 			<gears>
-				<usegear rating="5">Decrypt</usegear>
-				<usegear rating="5">Encrypt</usegear>
+				<usegear>
+					<name>Decrypt</name>
+					<category>Matrix Programs</category>
+					<rating>5</rating>
+				</usegear>
+				<usegear>
+					<name>Encrypt</name>
+					<category>Matrix Programs</category>
+					<rating>5</rating>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -10471,11 +10642,31 @@
 			<source>UN</source>
 			<page>127</page>
 			<gears>
-				<usegear rating="3">Analyze</usegear>
-				<usegear rating="3">Browse</usegear>
-				<usegear rating="1">Command</usegear>
-				<usegear rating="2">Edit</usegear>
-				<usegear rating="3">Purge</usegear>
+				<usegear>
+					<name>Analyze</name>
+					<category>Matrix Programs</category>
+					<rating>3</rating>
+				</usegear>
+				<usegear>
+					<name>Browse</name>
+					<category>Matrix Programs</category>
+					<rating>3</rating>
+				</usegear>
+				<usegear>
+					<name>Command</name>
+					<category>Matrix Programs</category>
+					<rating>1</rating>
+				</usegear>
+				<usegear>
+					<name>Edit</name>
+					<category>Matrix Programs</category>
+					<rating>2</rating>
+				</usegear>
+				<usegear>
+					<name>Purge</name>
+					<category>Matrix Programs</category>
+					<rating>3</rating>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -10487,12 +10678,36 @@
 			<source>UN</source>
 			<page>127</page>
 			<gears>
-				<usegear rating="3">Analyze</usegear>
-				<usegear rating="4">Browse</usegear>
-				<usegear rating="2">Command</usegear>
-				<usegear rating="4">Edit</usegear>
-				<usegear rating="4">Purge</usegear>
-				<usegear rating="2">Scan</usegear>
+				<usegear>
+					<name>Analyze</name>
+					<category>Matrix Programs</category>
+					<rating>3</rating>
+				</usegear>
+				<usegear>
+					<name>Browse</name>
+					<category>Matrix Programs</category>
+					<rating>4</rating>
+				</usegear>
+				<usegear>
+					<name>Command</name>
+					<category>Matrix Programs</category>
+					<rating>2</rating>
+				</usegear>
+				<usegear>
+					<name>Edit</name>
+					<category>Matrix Programs</category>
+					<rating>4</rating>
+				</usegear>
+				<usegear>
+					<name>Purge</name>
+					<category>Matrix Programs</category>
+					<rating>4</rating>
+				</usegear>
+				<usegear>
+					<name>Scan</name>
+					<category>Matrix Programs</category>
+					<rating>2</rating>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -10504,10 +10719,33 @@
 			<source>UN</source>
 			<page>127</page>
 			<gears>
-				<usegear rating="3">Pilot</usegear>
-				<usegear rating="3">Browse</usegear>
-				<usegear rating="3">Exploit</usegear>
-				<usegear rating="3">Stealth</usegear>
+				<usegear>
+					<name>Agent</name>
+					<category>Matrix Programs</category>
+					<rating>3</rating>
+					<gears>
+						<usegear>
+							<name select="Self">Pilot</name>
+							<category>Matrix Programs</category>
+							<rating>3</rating>
+						</usegear>
+						<usegear>
+							<name>Browse</name>
+							<category>Matrix Programs</category>
+							<rating>3</rating>
+						</usegear>
+						<usegear>
+							<name>Exploit</name>
+							<category>Matrix Programs</category>
+							<rating>3</rating>
+						</usegear>
+						<usegear>
+							<name>Stealth</name>
+							<category>Matrix Programs</category>
+							<rating>3</rating>
+						</usegear>
+					</gears>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -10519,9 +10757,34 @@
 			<source>UN</source>
 			<page>127</page>
 			<gears>
-				<usegear rating="5">Browse</usegear>
-				<usegear rating="3">Pilot</usegear>
-				<usegear rating="3">Browse</usegear>
+				<usegear>
+					<name>Browse</name>
+					<category>Matrix Programs</category>
+					<rating>5</rating>
+					<gears>
+						<usegear>
+							<name>Crashguard</name>
+							<category>Program Options</category>
+						</usegear>
+					</gears>
+				</usegear>
+				<usegear>
+					<name>Agent</name>
+					<category>Matrix Programs</category>
+					<rating>3</rating>
+					<gears>
+						<usegear>
+							<name select="Self">Pilot</name>
+							<category>Matrix Programs</category>
+							<rating>3</rating>
+						</usegear>
+						<usegear>
+							<name>Browse</name>
+							<category>Matrix Programs</category>
+							<rating>3</rating>
+						</usegear>
+					</gears>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -10791,9 +11054,35 @@
 			<source>UN</source>
 			<page>128</page>
 			<gears>
-				<usegear rating="3">Attack</usegear>
-				<usegear rating="3">Shredder</usegear>
-				<usegear rating="3">Attack</usegear>
+				<usegear>
+					<name>Attack</name>
+					<category>Matrix Programs</category>
+					<rating>3</rating>
+					<gears>
+						<usegear>
+							<name>Shredder</name>
+							<category>Program Options</category>
+							<rating>3</rating>
+						</usegear>
+					</gears>
+				</usegear>
+				<usegear>
+					<name>Attack</name>
+					<category>Matrix Programs</category>
+					<rating>3</rating>
+					<gears>
+						<usegear>
+							<name>Area</name>
+							<category>Program Options</category>
+							<rating>3</rating>
+						</usegear>
+						<usegear>
+							<name>Armor Piercing</name>
+							<category>Program Options</category>
+							<rating>2</rating>
+						</usegear>
+					</gears>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -10805,10 +11094,30 @@
 			<source>UN</source>
 			<page>128</page>
 			<gears>
-				<usegear rating="5">Analyze</usegear>
-				<usegear rating="3">Viral Resistance</usegear>
-				<usegear rating="5">Purge</usegear>
-				<usegear rating="3">Viral Resistance</usegear>
+				<usegear>
+					<name>Analyze</name>
+					<category>Matrix Programs</category>
+					<rating>5</rating>
+					<gears>
+						<usegear>
+							<name>Viral Resistance</name>
+							<category>Program Options</category>
+							<rating>3</rating>
+						</usegear>
+					</gears>
+				</usegear>
+				<usegear>
+					<name>Purge</name>
+					<category>Matrix Programs</category>
+					<rating>5</rating>
+					<gears>
+						<usegear>
+							<name>Viral Resistance</name>
+							<category>Program Options</category>
+							<rating>3</rating>
+						</usegear>
+					</gears>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -10820,9 +11129,21 @@
 			<source>UN</source>
 			<page>128</page>
 			<gears>
-				<usegear rating="3">Browse</usegear>
-				<usegear rating="3">Exploit</usegear>
-				<usegear rating="4">Sniffer</usegear>
+				<usegear>
+					<name>Browse</name>
+					<category>Matrix Programs</category>
+					<rating>3</rating>
+				</usegear>
+				<usegear>
+					<name>Exploit</name>
+					<category>Matrix Programs</category>
+					<rating>3</rating>
+				</usegear>
+				<usegear>
+					<name>Sniffer</name>
+					<category>Matrix Programs</category>
+					<rating>4</rating>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -10834,9 +11155,21 @@
 			<source>UN</source>
 			<page>128</page>
 			<gears>
-				<usegear rating="3" select="DocWagon Procedures">Knowsoft</usegear>
-				<usegear rating="3" select="First Aid">Activesoft</usegear>
-				<usegear rating="2" select="Medicine">Activesoft</usegear>
+				<usegear>
+					<name select="DocWagon Procedures">Knowsoft</name>
+					<category>Skillsofts</category>
+					<rating>3</rating>
+				</usegear>
+				<usegear>
+					<name select="First Aid">Activesoft</name>
+					<category>Skillsofts</category>
+					<rating>3</rating>
+				</usegear>
+				<usegear>
+					<name select="Medicine">Activesoft</name>
+					<category>Skillsofts</category>
+					<rating>2</rating>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -10848,8 +11181,16 @@
 			<source>UN</source>
 			<page>128</page>
 			<gears>
-				<usegear rating="3" select="Dodge">Activesoft</usegear>
-				<usegear rating="3" select="Unarmed Combat">Activesoft</usegear>
+				<usegear>
+					<name select="Dodge">Activesoft</name>
+					<category>Skillsofts</category>
+					<rating>3</rating>
+				</usegear>
+				<usegear>
+					<name select="Unarmed Combat">Activesoft</name>
+					<category>Skillsofts</category>
+					<rating>3</rating>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -10861,9 +11202,21 @@
 			<source>UN</source>
 			<page>128</page>
 			<gears>
-				<usegear rating="3" select="Arcana">Activesoft</usegear>
-				<usegear rating="2" select="Magic Background">Knowsoft</usegear>
-				<usegear rating="4" select="Latin">Linguasoft</usegear>
+				<usegear>
+					<name select="Arcana">Activesoft</name>
+					<category>Skillsofts</category>
+					<rating>3</rating>
+				</usegear>
+				<usegear>
+					<name select="Magic Background">Knowsoft</name>
+					<category>Skillsofts</category>
+					<rating>2</rating>
+				</usegear>
+				<usegear>
+					<name select="Latin">Linguasoft</name>
+					<category>Skillsofts</category>
+					<rating>4</rating>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -10875,9 +11228,21 @@
 			<source>UN</source>
 			<page>128</page>
 			<gears>
-				<usegear rating="3" select="Automotive Mechanic">Activesoft</usegear>
-				<usegear rating="2" select="Hardware">Activesoft</usegear>
-				<usegear rating="3" select="Modern Vehicles">Knowsoft</usegear>
+				<usegear>
+					<name select="Automotive Mechanic">Activesoft</name>
+					<category>Skillsofts</category>
+					<rating>3</rating>
+				</usegear>
+				<usegear>
+					<name select="Hardware">Activesoft</name>
+					<category>Skillsofts</category>
+					<rating>2</rating>
+				</usegear>
+				<usegear>
+					<name select="Modern Vehicles">Knowsoft</name>
+					<category>Skillsofts</category>
+					<rating>3</rating>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -10889,9 +11254,21 @@
 			<source>UN</source>
 			<page>128</page>
 			<gears>
-				<usegear rating="4" select="Forensics">Knowsoft</usegear>
-				<usegear rating="3" select="Intimidation">Activesoft</usegear>
-				<usegear rating="2" select="Shadowing">Activesoft</usegear>
+				<usegear>
+					<name select="Forensics">Knowsoft</name>
+					<category>Skillsofts</category>
+					<rating>4</rating>
+				</usegear>
+				<usegear>
+					<name select="Intimidation">Activesoft</name>
+					<category>Skillsofts</category>
+					<rating>3</rating>
+				</usegear>
+				<usegear>
+					<name select="Shadowing">Activesoft</name>
+					<category>Skillsofts</category>
+					<rating>2</rating>
+				</usegear>
 			</gears>
 		</gear>
 		<gear>
@@ -14108,6 +14485,844 @@
 			<cost>100</cost>
 			<source>2050</source>
 			<page>176</page>
+		</gear>
+		<gear>
+			<name>Abyssitine</name>
+			<category>Awakened Minerals</category>
+			<rating>0</rating>
+			<avail>36</avail>
+			<cost>3500000</cost>
+			<source>PG</source>
+			<page>20</page>
+		</gear>
+		<gear>
+			<name>Cerrukite</name>
+			<category>Awakened Minerals</category>
+			<rating>0</rating>
+			<avail>30</avail>
+			<cost>2500000</cost>
+			<source>PG</source>
+			<page>21</page>
+		</gear>
+		<gear>
+			<name>Elichium</name>
+			<category>Awakened Minerals</category>
+			<rating>0</rating>
+			<avail>30</avail>
+			<cost>1500000</cost>
+			<source>PG</source>
+			<page>21</page>
+		</gear>
+		<gear>
+			<name>Orichalcum</name>
+			<category>Awakened Minerals</category>
+			<rating>0</rating>
+			<avail>12</avail>
+			<cost>50000</cost>
+			<source>PG</source>
+			<page>22</page>
+		</gear>
+		<gear>
+			<name>Ulmenite</name>
+			<category>Awakened Minerals</category>
+			<rating>0</rating>
+			<avail>30</avail>
+			<cost>1500000</cost>
+			<source>PG</source>
+			<page>22</page>
+		</gear>
+		<gear>
+			<name>Wertamiline</name>
+			<category>Awakened Minerals</category>
+			<rating>0</rating>
+			<avail>36</avail>
+			<cost>3500000</cost>
+			<source>PG</source>
+			<page>23</page>
+		</gear>
+		<gear>
+			<name>Corinthian Bronze</name>
+			<category>Magical Alloys</category>
+			<rating>0</rating>
+			<avail>30</avail>
+			<cost>2500000</cost>
+			<source>PG</source>
+			<page>23</page>
+		</gear>
+		<gear>
+			<name>Hepatizon</name>
+			<category>Magical Alloys</category>
+			<rating>0</rating>
+			<avail>30</avail>
+			<cost>2500000</cost>
+			<source>PG</source>
+			<page>25</page>
+		</gear>
+		<gear>
+			<name>Ithium</name>
+			<category>Magical Alloys</category>
+			<rating>0</rating>
+			<avail>30</avail>
+			<cost>2500000</cost>
+			<source>PG</source>
+			<page>25</page>
+		</gear>
+		<gear>
+			<name>Psilosen</name>
+			<category>Magical Alloys</category>
+			<rating>0</rating>
+			<avail>36</avail>
+			<cost>4000000</cost>
+			<source>PG</source>
+			<page>25</page>
+		</gear>
+		<gear>
+			<name>Ukkru</name>
+			<category>Magical Alloys</category>
+			<rating>0</rating>
+			<avail>14</avail>
+			<cost>75000</cost>
+			<source>PG</source>
+			<page>25</page>
+		</gear>
+		<gear>
+			<name>True Air (Longfeng)</name>
+			<category>True Elements</category>
+			<rating>0</rating>
+			<avail>30</avail>
+			<cost>1500000</cost>
+			<source>PG</source>
+			<page>18</page>
+		</gear>
+		<gear>
+			<name>True Earth (Longpi)</name>
+			<category>True Elements</category>
+			<rating>0</rating>
+			<avail>30</avail>
+			<cost>1500000</cost>
+			<source>PG</source>
+			<page>18</page>
+		</gear>
+		<gear>
+			<name>True Fire (Longqi)</name>
+			<category>True Elements</category>
+			<rating>0</rating>
+			<avail>30</avail>
+			<cost>1500000</cost>
+			<source>PG</source>
+			<page>19</page>
+		</gear>
+		<gear>
+			<name>True Water (Longlei)</name>
+			<category>True Elements</category>
+			<rating>0</rating>
+			<avail>30</avail>
+			<cost>1500000</cost>
+			<source>PG</source>
+			<page>20</page>
+		</gear>
+		<gear>
+			<name>Primal Stone</name>
+			<category>True Elements</category>
+			<rating>0</rating>
+			<avail>24</avail>
+			<cost>750000</cost>
+			<source>PG</source>
+			<page>176</page>
+		</gear>
+		<gear>
+			<name>Primal Breath</name>
+			<category>True Elements</category>
+			<rating>0</rating>
+			<avail>24</avail>
+			<cost>750000</cost>
+			<source>PG</source>
+			<page>176</page>
+		</gear>
+		<gear>
+			<name>Primal Forged Metals</name>
+			<category>True Elements</category>
+			<rating>0</rating>
+			<avail>24</avail>
+			<cost>750000</cost>
+			<source>PG</source>
+			<page>176</page>
+		</gear>
+		<gear>
+			<name>Binoculars (2050)</name>
+			<category>Vision Enhancers</category>
+			<rating>0</rating>
+			<capacity>1</capacity>
+			<avail>0</avail>
+			<cost>100</cost>
+			<source>2050</source>
+			<page>178</page>
+		</gear>
+		<gear>
+			<name>Magnification, Binoculars (2050)</name>
+			<category>Vision Enhancements</category>
+			<rating>0</rating>
+			<capacity>[1]</capacity>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>+4</avail>
+			<cost>50</cost>
+			<source>2050</source>
+			<page>178</page>
+		</gear>
+		<gear>
+			<name>Low-Light, Binoculars (2050)</name>
+			<category>Vision Enhancements</category>
+			<rating>0</rating>
+			<capacity>[1]</capacity>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>+4</avail>
+			<cost>200</cost>
+			<source>2050</source>
+			<page>178</page>
+		</gear>
+		<gear>
+			<name>Thermographic, Binoculars (2050)</name>
+			<category>Vision Enhancements</category>
+			<rating>0</rating>
+			<capacity>[1]</capacity>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>+4</avail>
+			<cost>250</cost>
+			<source>2050</source>
+			<page>178</page>
+		</gear>
+		<gear>
+			<name>Goggles (2050)</name>
+			<category>Vision Enhancers</category>
+			<rating>0</rating>
+			<capacity>1</capacity>
+			<avail>4</avail>
+			<cost>1500</cost>
+			<source>2050</source>
+			<page>178</page>
+		</gear>
+		<gear>
+			<name>Magnification, Goggles (2050)</name>
+			<category>Vision Enhancements</category>
+			<rating>0</rating>
+			<capacity>[1]</capacity>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>+4</avail>
+			<cost>200</cost>
+			<source>2050</source>
+			<page>178</page>
+		</gear>
+		<gear>
+			<name>Low-Light, Goggles (2050)</name>
+			<category>Vision Enhancements</category>
+			<rating>0</rating>
+			<capacity>[1]</capacity>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>+6</avail>
+			<cost>500</cost>
+			<source>2050</source>
+			<page>178</page>
+		</gear>
+		<gear>
+			<name>Thermographic, Goggles (2050)</name>
+			<category>Vision Enhancements</category>
+			<rating>0</rating>
+			<capacity>[1]</capacity>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>+6</avail>
+			<cost>700</cost>
+			<source>2050</source>
+			<page>178</page>
+		</gear>
+		<gear>
+			<name>Certified Credstick, Fake (2050)</name>
+			<category>ID/Credsticks</category>
+			<rating>6</rating>
+			<avail>(Rating * 2)F</avail>
+			<cost>Rating * 1000</cost>
+			<source>2050</source>
+			<page>178</page>
+		</gear>
+		<gear>
+			<name>Telcom (2050)</name>
+			<category>Communications</category>
+			<rating>0</rating>
+			<avail>0</avail>
+			<cost>1000</cost>
+			<source>2050</source>
+			<page>178</page>
+		</gear>
+		<gear>
+			<name>Portable Phone (2050)</name>
+			<category>Communications</category>
+			<rating>0</rating>
+			<avail>0</avail>
+			<cost>500</cost>
+			<source>2050</source>
+			<page>178</page>
+		</gear>
+		<gear>
+			<name>Pocket Secretary (2050)</name>
+			<category>Communications</category>
+			<rating>0</rating>
+			<avail>0</avail>
+			<cost>3000</cost>
+			<source>2050</source>
+			<page>178</page>
+		</gear>
+		<gear>
+			<name>Personal Computer (2050)</name>
+			<category>Communications</category>
+			<rating>0</rating>
+			<avail>0</avail>
+			<cost>5000</cost>
+			<source>2050</source>
+			<page>178</page>
+		</gear>
+		<gear>
+			<name>Data Display (2050)</name>
+			<category>Communications</category>
+			<rating>0</rating>
+			<avail>0</avail>
+			<cost>500</cost>
+			<source>2050</source>
+			<page>178</page>
+		</gear>
+		<gear>
+			<name>Tool Kit (2050)</name>
+			<category>Tools</category>
+			<rating>0</rating>
+			<armorcapacity>[6]</armorcapacity>
+			<avail>5</avail>
+			<cost>500</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>2050</source>
+			<page>180</page>
+		</gear>
+		<gear>
+			<name>Tool Shop (2050)</name>
+			<category>Tools</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<cost>5000</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>2050</source>
+			<page>180</page>
+		</gear>
+		<gear>
+			<name>Tool Facility (2050)</name>
+			<category>Tools</category>
+			<rating>0</rating>
+			<avail>14</avail>
+			<cost>100000</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>2050</source>
+			<page>180</page>
+		</gear>
+		<gear>
+			<name>Bug Scanner (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>Rating</avail>
+			<cost>Rating * 500</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Data Codebreaker (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>(Rating)R</avail>
+			<cost>Rating * 10000</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Data Encryption System (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>(Rating)R</avail>
+			<cost>Rating * 1000</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Dataline Scanner (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>Rating</avail>
+			<cost>Rating * 100</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Identification Scanner, Palm Print (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>Rating + 1</avail>
+			<cost>Rating * 300</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Identification Scanner, Retinal (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>Rating + 2</avail>
+			<cost>Rating * 1000</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Identification Scanner, Thumbprint (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>Rating</avail>
+			<cost>Rating * 200</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Jammer (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>(Rating)R</avail>
+			<cost>Rating * 1000</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Laser Microphone (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>Rating</avail>
+			<cost>Rating * 1500</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Maglock Passkey (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>(Rating)F</avail>
+			<cost>Rating * 10000</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Maglock (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>Rating</avail>
+			<cost>Rating * 100</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Micro-Camcorder (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<cost>2500</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Micro-Recorder (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<cost>1000</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Micro-Transceiver (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<cost>2500</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Restraints, Metal (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<cost>50</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Restraints, Plastic (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<cost>20</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Shotgun Microphone (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>Rating</avail>
+			<cost>Rating * 1000</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Signal Locator (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>Rating</avail>
+			<cost>Rating * 1000</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Squealer (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<cost>100</cost>
+			<source>2050</source>
+			<page>178</page>
+		</gear>
+		<gear>
+			<name>Tracking Signal (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>Rating</avail>
+			<cost>Rating * 200</cost>
+			<source>2050</source>
+			<page>179</page>
+		</gear>
+		<gear>
+			<name>Voice Identifier (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>Rating</avail>
+			<cost>Rating * 2000</cost>
+			<source>2050</source>
+			<page>180</page>
+		</gear>
+		<gear>
+			<name>Voice Mask (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>(Rating)R</avail>
+			<cost>Rating * 3000</cost>
+			<source>2050</source>
+			<page>180</page>
+		</gear>
+		<gear>
+			<name>White Noise Generator (2050)</name>
+			<category>Surveillance and Security Devices</category>
+			<rating>6</rating>
+			<avail>(Rating)R</avail>
+			<cost>Rating * 1500</cost>
+			<source>2050</source>
+			<page>180</page>
+		</gear>
+		<gear>
+			<name>Atropine (2050)</name>
+			<category>Chemicals</category>
+			<rating>0</rating>
+			<avail>5F</avail>
+			<cost>600</cost>
+			<source>2050</source>
+			<page>181</page>
+		</gear>
+		<gear>
+			<name>Cyanide (2050)</name>
+			<category>Chemicals</category>
+			<rating>0</rating>
+			<avail>3F</avail>
+			<cost>360</cost>
+			<source>2050</source>
+			<page>181</page>
+		</gear>
+		<gear>
+			<name>Dikote (2050)</name>
+			<category>Chemicals</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<cost>1000</cost>
+			<source>2050</source>
+			<page>181</page>
+		</gear>
+		<gear>
+			<name>DMSO (2050)</name>
+			<category>Chemicals</category>
+			<rating>0</rating>
+			<avail>2R</avail>
+			<cost>10</cost>
+			<source>2050</source>
+			<page>181</page>
+		</gear>
+		<gear>
+			<name>Fugu-5 (2050)</name>
+			<category>Chemicals</category>
+			<rating>0</rating>
+			<avail>6R</avail>
+			<cost>25</cost>
+			<source>2050</source>
+			<page>181</page>
+		</gear>
+		<gear>
+			<name>Hyper (2050)</name>
+			<category>Chemicals</category>
+			<rating>0</rating>
+			<avail>4F</avail>
+			<cost>180</cost>
+			<source>2050</source>
+			<page>181</page>
+		</gear>
+		<gear>
+			<name>Kamikaze (2050)</name>
+			<category>Chemicals</category>
+			<rating>0</rating>
+			<avail>5R</avail>
+			<cost>50</cost>
+			<source>2050</source>
+			<page>182</page>
+		</gear>
+		<gear>
+			<name>Narcoject (2050)</name>
+			<category>Chemicals</category>
+			<rating>0</rating>
+			<avail>4R</avail>
+			<cost>50</cost>
+			<source>2050</source>
+			<page>182</page>
+		</gear>
+		<gear>
+			<name>Neuro-Stun VII (2050)</name>
+			<category>Chemicals</category>
+			<rating>0</rating>
+			<avail>6R</avail>
+			<cost>60</cost>
+			<source>2050</source>
+			<page>182</page>
+		</gear>
+		<gear>
+			<name>Chemsuit (2050)</name>
+			<category>Toxic Environment Gear</category>
+			<rating>6</rating>
+			<avail>Rating</avail>
+			<cost>Rating * 200</cost>
+			<source>2050</source>
+			<page>182</page>
+		</gear>
+		<gear>
+			<name>Respirator (2050)</name>
+			<category>Toxic Environment Gear</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<cost>750</cost>
+			<source>2050</source>
+			<page>182</page>
+		</gear>
+		<gear>
+			<name>Survival Kit (2050)</name>
+			<category>Camping and Survival Gear</category>
+			<rating>0</rating>
+			<armorcapacity>[6]</armorcapacity>
+			<avail>2</avail>
+			<cost>100</cost>
+			<source>2050</source>
+			<page>182</page>
+		</gear>
+		<gear>
+			<name>Extra Compressed Soy Bars (10 Days) (2050)</name>
+			<category>Camping and Survival Gear</category>
+			<rating>0</rating>
+			<avail>2</avail>
+			<cost>30</cost>
+			<source>2050</source>
+			<page>182</page>
+		</gear>
+		<gear>
+			<name>DocWagon Contract: HTR Service (2050)</name>
+			<category>DocWagon Contract</category>
+			<rating>0</rating>
+			<avail>0</avail>
+			<cost>5000</cost>
+			<source>2050</source>
+			<page>182</page>
+		</gear>
+		<gear>
+			<name>DocWagon Contract: Employee Death Compensation (2050)</name>
+			<category>DocWagon Contract</category>
+			<rating>0</rating>
+			<avail>0</avail>
+			<cost>20000</cost>
+			<source>2050</source>
+			<page>182</page>
+		</gear>
+		<gear>
+			<name>DocWagon Contract: Resuscication Service (2050)</name>
+			<category>DocWagon Contract</category>
+			<rating>0</rating>
+			<avail>0</avail>
+			<cost>8000</cost>
+			<source>2050</source>
+			<page>182</page>
+		</gear>
+		<gear>
+			<name>Medkit (2050)</name>
+			<category>Biotech</category>
+			<rating>0</rating>
+			<avail>2</avail>
+			<cost>200</cost>
+			<source>2050</source>
+			<page>183</page>
+		</gear>
+		<gear>
+			<name>Medkit Supplies (2050)</name>
+			<category>Biotech</category>
+			<rating>0</rating>
+			<avail>2</avail>
+			<cost>50</cost>
+			<source>2050</source>
+			<page>183</page>
+		</gear>
+		<gear>
+			<name>Stabilization Unit, Standard (2050)</name>
+			<category>Biotech</category>
+			<rating>0</rating>
+			<avail>12</avail>
+			<cost>10000</cost>
+			<source>2050</source>
+			<page>183</page>
+		</gear>
+		<gear>
+			<name>Stabilization Unit, Deluxe (2050)</name>
+			<category>Biotech</category>
+			<rating>0</rating>
+			<avail>16</avail>
+			<cost>20000</cost>
+			<source>2050</source>
+			<page>183</page>
+		</gear>
+		<gear>
+			<name>Stabilization Unit Supplies (2050)</name>
+			<category>Biotech</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<cost>100</cost>
+			<source>2050</source>
+			<page>183</page>
+		</gear>
+		<gear>
+			<name>Antidote Patch (2050)</name>
+			<category>Slap Patches</category>
+			<rating>6</rating>
+			<avail>6</avail>
+			<cost>Rating * 50</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>2050</source>
+			<page>183</page>
+		</gear>
+		<gear>
+			<name>Stimulant Patch (2050)</name>
+			<category>Slap Patches</category>
+			<rating>6</rating>
+			<avail>2</avail>
+			<cost>Rating * 25</cost>
+			<source>2050</source>
+			<page>183</page>
+		</gear>
+		<gear>
+			<name>Tranq Patch (2050)</name>
+			<category>Slap Patches</category>
+			<rating>10</rating>
+			<avail>4</avail>
+			<cost>Rating * 20</cost>
+			<source>2050</source>
+			<page>183</page>
+		</gear>
+		<gear>
+			<name>Trauma Patch (2050)</name>
+			<category>Slap Patches</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<cost>400</cost>
+			<source>2050</source>
+			<page>183</page>
+		</gear>
+		<gear>
+			<name>Empty Patch (2050)</name>
+			<category>Chemtech</category>
+			<addoncategory>Drugs</addoncategory>
+			<addoncategory>Toxins</addoncategory>
+			<rating>0</rating>
+			<avail>3</avail>
+			<cost>20</cost>
+			<source>2050</source>
+			<page>183</page>
+		</gear>
+		<gear>
+			<name>Activesoft (2050)</name>
+			<category>Skillsofts</category>
+			<rating>4</rating>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>Rating * 10000</cost>
+			<bonus>
+				<selectskill />
+			</bonus>
+			<source>2050</source>
+			<page>184</page>
+		</gear>
+		<gear>
+			<name>Datasoft (2050)</name>
+			<category>Skillsofts</category>
+			<rating>0</rating>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>Variable(0+)</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>2050</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Knowsoft (2050)</name>
+			<category>Skillsofts</category>
+			<rating>4</rating>
+			<capacity>0</capacity>
+			<avail>5</avail>
+			<cost>Rating * 1500</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>2050</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Linguasoft (2050)</name>
+			<category>Skillsofts</category>
+			<rating>4</rating>
+			<capacity>0</capacity>
+			<avail>5</avail>
+			<cost>Rating * 500</cost>
+			<bonus>
+				<selecttext />
+			</bonus>
+			<source>2050</source>
+			<page>185</page>
 		</gear>
 	</gears>
 </chummer>

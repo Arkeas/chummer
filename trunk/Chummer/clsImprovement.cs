@@ -1067,7 +1067,12 @@ namespace Chummer
 				string strReturn = strValue.Replace("Rating", intRating.ToString());
 				XPathExpression xprValue = nav.Compile(strReturn);
 
-				return Convert.ToInt32(nav.Evaluate(xprValue).ToString());
+				// Treat this as a decimal value so any fractions can be rounded down. This is currently only used by the Boosted Reflexes Cyberware from SR2050.
+				decimal decValue = Convert.ToDecimal(nav.Evaluate(xprValue).ToString(), GlobalOptions.Instance.CultureInfo);
+				decValue = Math.Floor(decValue);
+				int intValue = Convert.ToInt32(decValue);
+
+				return Convert.ToInt32(intValue);
 			}
 			else
 			{
@@ -1133,6 +1138,49 @@ namespace Chummer
 			if (strFriendlyName == "")
 				strFriendlyName = strSourceName;
 
+			if (nodBonus.HasChildNodes)
+			{
+				// Select Text (custom entry for things like Allergy).
+				if (NodeExists(nodBonus, "selecttext"))
+				{
+					if (_strForcedValue != "")
+						_strLimitSelection = _strForcedValue;
+
+					// Display the Select Text window and record the value that was entered.
+					frmSelectText frmPickText = new frmSelectText();
+					frmPickText.Description = LanguageManager.Instance.GetString("String_Improvement_SelectText").Replace("{0}", strFriendlyName);
+
+					if (_strLimitSelection != "")
+					{
+						frmPickText.SelectedValue = _strLimitSelection;
+						frmPickText.Opacity = 0;
+					}
+
+					frmPickText.ShowDialog();
+
+					// Make sure the dialogue window was not canceled.
+					if (frmPickText.DialogResult == DialogResult.Cancel)
+					{
+						Rollback();
+						blnSuccess = false;
+						_strForcedValue = "";
+						_strLimitSelection = "";
+						return false;
+					}
+
+					_strSelectedValue = frmPickText.SelectedValue;
+					if (blnConcatSelectedValue)
+						strSourceName += " (" + _strSelectedValue + ")";
+
+					// Create the Improvement.
+					CreateImprovement(frmPickText.SelectedValue, objImprovementSource, strSourceName, Improvement.ImprovementType.Text, strUnique);
+				}
+			}
+
+			// If there is no character object, don't attempt to add any Improvements.
+			if (_objCharacter == null)
+				return true;
+
 			// Check to see what bonuses the node grants.
 			if (nodBonus.HasChildNodes)
 			{
@@ -1180,42 +1228,6 @@ namespace Chummer
 								break;
 						}
 					}
-				}
-
-				// Select Text (custom entry for things like Allergy).
-				if (NodeExists(nodBonus, "selecttext"))
-				{
-					if (_strForcedValue != "")
-						_strLimitSelection = _strForcedValue;
-
-					// Display the Select Text window and record the value that was entered.
-					frmSelectText frmPickText = new frmSelectText();
-					frmPickText.Description = LanguageManager.Instance.GetString("String_Improvement_SelectText").Replace("{0}", strFriendlyName);
-
-					if (_strLimitSelection != "")
-					{
-						frmPickText.SelectedValue = _strLimitSelection;
-						frmPickText.Opacity = 0;
-					}
-
-					frmPickText.ShowDialog();
-
-					// Make sure the dialogue window was not canceled.
-					if (frmPickText.DialogResult == DialogResult.Cancel)
-					{
-						Rollback();
-						blnSuccess = false;
-						_strForcedValue = "";
-						_strLimitSelection = "";
-						return false;
-					}
-
-					_strSelectedValue = frmPickText.SelectedValue;
-					if (blnConcatSelectedValue)
-						strSourceName += " (" + _strSelectedValue + ")";
-
-					// Create the Improvement.
-					CreateImprovement(frmPickText.SelectedValue, objImprovementSource, strSourceName, Improvement.ImprovementType.Text, strUnique);
 				}
 
 				// Select Restricted (select Restricted items for Fake Licenses).
@@ -2389,6 +2401,10 @@ namespace Chummer
 		/// <param name="strSourceName">Name of the item that granted these Improvements.</param>
 		public void RemoveImprovements(Improvement.ImprovementSource objImprovementSource, string strSourceName)
 		{
+			// If there is no character object, don't try to remove any Improvements.
+			if (_objCharacter == null)
+				return;
+
 			// A List of Improvements to hold all of the items that will eventually be deleted.
 			List<Improvement> objImprovementList = new List<Improvement>();
 			foreach (Improvement objImprovement in _objCharacter.Improvements)
@@ -2633,6 +2649,28 @@ namespace Chummer
 
 					if (!blnFound)
 						_objCharacter.Infirm = false;
+				}
+
+				// If the last instance of Adapsin is being removed, convert all Adapsin Cyberware Grades to their non-Adapsin version.
+				if (objImprovement.ImproveType == Improvement.ImprovementType.Adapsin)
+				{
+					if (!_objCharacter.AdapsinEnabled)
+					{
+						foreach (Cyberware objCyberware in _objCharacter.Cyberware)
+						{
+							if (objCyberware.Grade.Adapsin)
+							{
+								// Determine which GradeList to use for the Cyberware.
+								GradeList objGradeList;
+								if (objCyberware.SourceType == Improvement.ImprovementSource.Bioware)
+									objGradeList = GlobalOptions.BiowareGrades;
+								else
+									objGradeList = GlobalOptions.CyberwareGrades;
+
+								objCyberware.Grade = objGradeList.GetGrade(objCyberware.Grade.Name.Replace("(Adapsin)", string.Empty).Trim());
+							}
+						}
+					}
 				}
 
 				// Decrease the character's Initiation Grade.

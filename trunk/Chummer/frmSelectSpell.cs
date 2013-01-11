@@ -204,6 +204,7 @@ namespace Chummer
 				string strRange = objXmlSpell["range"].InnerText;
 				strRange = strRange.Replace("Self", LanguageManager.Instance.GetString("String_SpellRangeSelf"));
 				strRange = strRange.Replace("LOS", LanguageManager.Instance.GetString("String_SpellRangeLineOfSight"));
+				strRange = strRange.Replace("LOI", LanguageManager.Instance.GetString("String_SpellRangeLineOfInfluence"));
 				strRange = strRange.Replace("T", LanguageManager.Instance.GetString("String_SpellRangeTouch"));
 				strRange = strRange.Replace("(A)", "(" + LanguageManager.Instance.GetString("String_SpellRangeArea") + ")");
 				strRange = strRange.Replace("MAG", LanguageManager.Instance.GetString("String_AttributeMAGShort"));

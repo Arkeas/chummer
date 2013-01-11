@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-882</version>
+	<version>-880</version>
 	<categories>
 		<category>Positive</category>
 		<category>Negative</category>
@@ -302,6 +302,7 @@
 			<name>Astral Sight</name>
 			<bp>5</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<bonus>
 				<addattribute>
 					<name>MAG</name>
@@ -478,6 +479,7 @@
 			<name>Biocompatability (Bioware)</name>
 			<bp>10</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<bonus>
 				<biowareessmultiplier>90</biowareessmultiplier>
 			</bonus>
@@ -1487,6 +1489,7 @@
 			<name>Double Jointed</name>
 			<bp>5</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<bonus>
 				<specificskill>
 					<name>Escape Artist</name>
@@ -2255,6 +2258,7 @@
 			<name>High Pain Tolerance (Rating 1)</name>
 			<bp>5</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus>
 				<conditionmonitor>
@@ -2274,6 +2278,7 @@
 			<name>High Pain Tolerance (Rating 2)</name>
 			<bp>10</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus>
 				<conditionmonitor>
@@ -2293,6 +2298,7 @@
 			<name>High Pain Tolerance (Rating 3)</name>
 			<bp>15</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus>
 				<conditionmonitor>
@@ -4347,6 +4353,7 @@
 			<name>Magic Resistance (Rating 1)</name>
 			<bp>5</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<bonus />
 			<forbidden>
 				<oneof>
@@ -4382,6 +4389,7 @@
 			<name>Magic Resistance (Rating 2)</name>
 			<bp>10</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<bonus />
 			<forbidden>
 				<oneof>
@@ -4417,6 +4425,7 @@
 			<name>Magic Resistance (Rating 3)</name>
 			<bp>15</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<bonus />
 			<forbidden>
 				<oneof>
@@ -4452,6 +4461,7 @@
 			<name>Magic Resistance (Rating 4)</name>
 			<bp>20</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<bonus />
 			<forbidden>
 				<oneof>
@@ -4796,6 +4806,7 @@
 			<name>Natural Hardening</name>
 			<bp>10</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<bonus>
 				<livingpersona>
 					<biofeedback>1</biofeedback>
@@ -4813,6 +4824,7 @@
 			<name>Natural Immunity (Natural)</name>
 			<bp>5</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus />
 			<forbidden>
@@ -4828,6 +4840,7 @@
 			<name>Natural Immunity (Synthetic)</name>
 			<bp>15</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus />
 			<forbidden>
@@ -4969,6 +4982,10 @@
 			<category>Positive</category>
 			<bonus>
 				<specificskill>
+					<name>Assensing</name>
+					<bonus>1</bonus>
+				</specificskill>
+				<specificskill>
 					<name>Perception</name>
 					<bonus>1</bonus>
 				</specificskill>
@@ -4986,6 +5003,10 @@
 			<bp>10</bp>
 			<category>Positive</category>
 			<bonus>
+				<specificskill>
+					<name>Assensing</name>
+					<bonus>2</bonus>
+				</specificskill>
 				<specificskill>
 					<name>Perception</name>
 					<bonus>2</bonus>
@@ -5142,6 +5163,7 @@
 			<name>Quick Healer</name>
 			<bp>10</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus />
 			<source>SR4</source>
@@ -5203,6 +5225,7 @@
 			<name>Resistance to Pathogens</name>
 			<bp>5</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus />
 			<forbidden>
@@ -5217,6 +5240,7 @@
 			<name>Resistance to Toxins</name>
 			<bp>5</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus />
 			<forbidden>
@@ -5231,6 +5255,7 @@
 			<name>Resistance to Pathogens and Toxins</name>
 			<bp>10</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus />
 			<forbidden>
@@ -5612,6 +5637,7 @@
 			<name>Spell Knack</name>
 			<bp>5</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<bonus>
 				<addattribute>
 					<name>MAG</name>
@@ -5652,6 +5678,7 @@
 			<name>Spirit Knack</name>
 			<bp>5</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<bonus>
 				<addattribute>
 					<name>MAG</name>
@@ -6105,6 +6132,7 @@
 			<name>Toughness</name>
 			<bp>10</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus>
 				<damageresistance>1</damageresistance>
@@ -6531,6 +6559,7 @@
 			<name>Albinism</name>
 			<bp>-10</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus />
 			<source>RC</source>
@@ -6540,6 +6569,7 @@
 			<name>Allergy (Uncommon, Mild)</name>
 			<bp>-5</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<limit>no</limit>
 			<bonus>
 				<selecttext />
@@ -6551,6 +6581,7 @@
 			<name>Allergy (Uncommon, Moderate)</name>
 			<bp>-10</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<limit>no</limit>
 			<bonus>
 				<selecttext />
@@ -6562,6 +6593,7 @@
 			<name>Allergy (Uncommon, Severe)</name>
 			<bp>-15</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<limit>no</limit>
 			<bonus>
 				<selecttext />
@@ -6573,6 +6605,7 @@
 			<name>Allergy (Common, Mild)</name>
 			<bp>-10</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<limit>no</limit>
 			<bonus>
 				<selecttext />
@@ -6584,6 +6617,7 @@
 			<name>Allergy (Common, Moderate)</name>
 			<bp>-15</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<limit>no</limit>
 			<bonus>
 				<selecttext />
@@ -6595,6 +6629,7 @@
 			<name>Allergy (Common, Severe)</name>
 			<bp>-20</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<limit>no</limit>
 			<bonus>
 				<selecttext />
@@ -6863,6 +6898,7 @@
 			<name>Asthma</name>
 			<bp>-15</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus />
 			<source>RC</source>
@@ -7080,6 +7116,7 @@
 			<name>Biosystem Overstress</name>
 			<bp>-10</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<bonus />
 			<forbidden>
 				<oneof>
@@ -7173,6 +7210,7 @@
 			<name>Carrier</name>
 			<bp>-5</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<limit>no</limit>
 			<bonus>
 				<selecttext />
@@ -8057,6 +8095,7 @@
 			<name>Gene Freak</name>
 			<bp>-10</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<bonus>
 				<specificskill>
 					<name>Intimidation</name>
@@ -8531,6 +8570,7 @@
 			<name>Low Pain Tolerance</name>
 			<bp>-10</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus>
 				<conditionmonitor>
@@ -8878,6 +8918,7 @@
 			<name>Nano Intolerance</name>
 			<bp>-5</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<bonus />
 			<forbidden>
 				<oneof>
@@ -9353,6 +9394,7 @@
 			<name>Reduced Sense (Partial)</name>
 			<bp>-5</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<limit>no</limit>
 			<bonus>
@@ -9365,6 +9407,7 @@
 			<name>Reduced Sense (Partial, Neurological)</name>
 			<bp>-10</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<limit>no</limit>
 			<bonus>
@@ -9377,6 +9420,7 @@
 			<name>Reduced Sense (Complete)</name>
 			<bp>-10</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<limit>no</limit>
 			<bonus>
@@ -9389,6 +9433,8 @@
 			<name>Reduced Sense (Complete, Neurological)</name>
 			<bp>-15</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
+			<mutant>yes</mutant>
 			<limit>no</limit>
 			<bonus>
 				<selecttext />
@@ -9537,6 +9583,7 @@
 			<name>Sensitive System</name>
 			<bp>-15</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus>
 				<sensitivesystem />
@@ -9864,6 +9911,7 @@
 			<name>Uncontrolled Metastasis (Slow)</name>
 			<bp>-10</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus />
 			<forbidden>
@@ -9879,6 +9927,7 @@
 			<name>Uncontrolled Metastasis (Fast)</name>
 			<bp>-20</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus />
 			<forbidden>
@@ -10082,6 +10131,7 @@
 			<name>Weak Immune System</name>
 			<bp>-5</bp>
 			<category>Negative</category>
+			<metagenetic>yes</metagenetic>
 			<mutant>yes</mutant>
 			<bonus />
 			<forbidden>

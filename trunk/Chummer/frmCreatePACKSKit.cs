@@ -770,6 +770,7 @@ namespace Chummer
 						objWriter.WriteAttributeString("select", objGear.Extra);
 					objWriter.WriteValue(objGear.Name);
 					objWriter.WriteEndElement();
+					objWriter.WriteElementString("category", objGear.Category);
 					if (objGear.Rating > 0)
 						objWriter.WriteElementString("rating", objGear.Rating.ToString());
 					if (objGear.Quantity > 1)

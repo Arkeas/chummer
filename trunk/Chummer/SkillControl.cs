@@ -271,6 +271,8 @@ namespace Chummer
             }
             set
             {
+				if (value > _objSkill.RatingMaximum)
+					value = _objSkill.RatingMaximum;
                 nudSkill.Value = value;
 				lblSkillRating.Text = value.ToString();
 				_objSkill.Rating = value;

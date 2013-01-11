@@ -51,6 +51,9 @@ namespace Chummer
 		private XmlDocument _objXmlClipboard = new XmlDocument();
 		private ClipboardContentType _objClipboardContentType = new ClipboardContentType();
 
+		public static GradeList CyberwareGrades = new GradeList();
+		public static GradeList BiowareGrades = new GradeList();
+
 		#region Constructor and Instance
 		static GlobalOptions()
 		{
@@ -115,6 +118,9 @@ namespace Chummer
 			catch
 			{
 			}
+
+			CyberwareGrades.LoadList(Improvement.ImprovementSource.Cyberware);
+			BiowareGrades.LoadList(Improvement.ImprovementSource.Bioware);
 		}
 
 		GlobalOptions()
@@ -513,6 +519,7 @@ namespace Chummer
 		private bool _blnArmorDegradation = false;
 		private bool _blnAutomaticCopyProtection = true;
 		private bool _blnAutomaticRegistration = true;
+		private bool _blnErgonomicProgramsLimit = true;
 		private bool _blnExceedPositiveQualities = false;
 		private bool _blnExceedNegativeQualities = false;
 		private bool _blnExceedNegativeQualitiesLimit = false;
@@ -548,6 +555,7 @@ namespace Chummer
 		private int _intLimbCount = 6;
 		private int _intRestrictedCostMultiplier = 1;
 		private int _intForbiddenCostMultiplier = 1;
+		private int _intEssenceDecimals = 2;
 		private string _strExcludeLimbSlot = "";
 		private readonly XmlDocument _objBookDoc = new XmlDocument();
 
@@ -725,6 +733,8 @@ namespace Chummer
 			objWriter.WriteElementString("automaticcopyprotection", _blnAutomaticCopyProtection.ToString());
 			// <automaticregistration />
 			objWriter.WriteElementString("automaticregistration", _blnAutomaticRegistration.ToString());
+			// <ergonomicprogramlimit />
+			objWriter.WriteElementString("ergonomicprogramlimit", _blnErgonomicProgramsLimit.ToString());
 			// <exceedpositivequalities />
 			objWriter.WriteElementString("exceedpositivequalities", _blnExceedPositiveQualities.ToString());
 			// <exceednegativequalities />
@@ -741,6 +751,8 @@ namespace Chummer
 			objWriter.WriteElementString("restrictedcostmultiplier", _intRestrictedCostMultiplier.ToString());
 			// <forbiddencostmultiplier />
 			objWriter.WriteElementString("forbiddencostmultiplier", _intForbiddenCostMultiplier.ToString());
+			// <essencedecimals />
+			objWriter.WriteElementString("essencedecimals", _intEssenceDecimals.ToString());
 			// <enforcecapacity />
 			objWriter.WriteElementString("enforcecapacity", _blnEnforceCapacity.ToString());
 			// <restrictrecoil />
@@ -1104,6 +1116,14 @@ namespace Chummer
 			catch
 			{
 			}
+			// Whether or not option for Ergonomic Programs affecting a Commlink's effective Response is enabled.
+			try
+			{
+				_blnErgonomicProgramsLimit = Convert.ToBoolean(objXmlDocument.SelectSingleNode("/settings/ergonomicprogramlimit").InnerText);
+			}
+			catch
+			{
+			}
 			// Allow more than 35 BP in Positive Qualities.
 			try
 			{
@@ -1164,6 +1184,14 @@ namespace Chummer
 			try
 			{
 				_intForbiddenCostMultiplier = Convert.ToInt32(objXmlDocument.SelectSingleNode("/settings/forbiddencostmultiplier").InnerText);
+			}
+			catch
+			{
+			}
+			// Number of decimal places to round to when calculating Essence.
+			try
+			{
+				_intEssenceDecimals = Convert.ToInt32(objXmlDocument.SelectSingleNode("/settings/essencedecimals").InnerText);
 			}
 			catch
 			{
@@ -2301,6 +2329,21 @@ namespace Chummer
 		}
 
 		/// <summary>
+		/// Whether or not option for Ergonomic Programs affecting a Commlink's effective Response is enabled.
+		/// </summary>
+		public bool ErgonomicProgramLimit
+		{
+			get
+			{
+				return _blnErgonomicProgramsLimit;
+			}
+			set
+			{
+				_blnErgonomicProgramsLimit = value;
+			}
+		}
+
+		/// <summary>
 		/// Whether or not characters can have more than 35 BP in Positive Qualities.
 		/// </summary>
 		public bool ExceedPositiveQualities
@@ -2418,6 +2461,21 @@ namespace Chummer
 			set
 			{
 				_intForbiddenCostMultiplier = value;
+			}
+		}
+
+		/// <summary>
+		/// Number of decimal places to round to when calculating Essence.
+		/// </summary>
+		public int EssenceDecimals
+		{
+			get
+			{
+				return _intEssenceDecimals;
+			}
+			set
+			{
+				_intEssenceDecimals = value;
 			}
 		}
 

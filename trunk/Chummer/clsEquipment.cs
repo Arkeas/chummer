@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -926,7 +927,8 @@ namespace Chummer
 		/// <param name="objNode">TreeNode to populate a TreeView.</param>
 		/// <param name="cmsArmorMod">ContextMenuStrip to apply to Armor Mode TreeNodes.</param>
 		/// <param name="blnSkipCost">Whether or not creating the Armor should skip the Variable price dialogue (should only be used by frmSelectArmor).</param>
-		public void Create(XmlNode objXmlArmorNode, TreeNode objNode, ContextMenuStrip cmsArmorMod, bool blnSkipCost = false)
+		/// <param name="blnCreateChildren">Whether or not child items should be created.</param>
+		public void Create(XmlNode objXmlArmorNode, TreeNode objNode, ContextMenuStrip cmsArmorMod, bool blnSkipCost = false, bool blnCreateChildren = true)
 		{
 			_strName = objXmlArmorNode["name"].InnerText;
 			_strCategory = objXmlArmorNode["category"].InnerText;
@@ -1010,7 +1012,7 @@ namespace Chummer
 			}
 
 			// Add any Armor Mods that come with the Armor.
-			if (objXmlArmorNode["mods"] != null)
+			if (objXmlArmorNode["mods"] != null && blnCreateChildren)
 			{
 				XmlDocument objXmlArmorDocument = XmlManager.Instance.Load("armor.xml");
 
@@ -1045,7 +1047,7 @@ namespace Chummer
 			}
 
 			// Add any Gear that comes with the Armor.
-			if (objXmlArmorNode["gears"] != null)
+			if (objXmlArmorNode["gears"] != null && blnCreateChildren)
 			{
 				XmlDocument objXmlGearDocument = XmlManager.Instance.Load("gear.xml");
 				foreach (XmlNode objXmlArmorGear in objXmlArmorNode.SelectNodes("gears/usegear"))
@@ -1070,6 +1072,7 @@ namespace Chummer
 					objGear.Cost = "0";
 					objGear.MaxRating = objGear.Rating;
 					objGear.MinRating = objGear.Rating;
+					objGear.IncludedInParent = true;
 					_lstGear.Add(objGear);
 
 					objNode.Nodes.Add(objGearNode);
@@ -1828,7 +1831,7 @@ namespace Chummer
 				// Run through the child items and increase the Avail by any Mod whose Avail contains "+".
 				foreach (Gear objChild in _lstGear)
 				{
-					if (objChild.Avail.Contains("+"))
+					if (objChild.Avail.Contains("+") && !objChild.IncludedInParent)
 					{
 						if (objChild.Avail.Contains("R") || objChild.Avail.Contains("F"))
 						{
@@ -1844,7 +1847,7 @@ namespace Chummer
 				// Run through the child items and increase the Avail by any Mod whose Avail contains "+".
 				foreach (ArmorMod objChild in _lstArmorMods)
 				{
-					if (objChild.Avail.Contains("+"))
+					if (objChild.Avail.Contains("+") && !objChild.IncludedInArmor)
 					{
 						if (objChild.Avail.Contains("R") || objChild.Avail.Contains("F"))
 						{
@@ -2055,22 +2058,203 @@ namespace Chummer
 	}
 
 	/// <summary>
-	/// Grade of Cyberware.
+	/// Grade of Cyberware or Bioware.
 	/// </summary>
-	public enum CyberwareGrade
+	public class Grade
 	{
-		Standard = 0,
-		Alphaware = 1,
-		Betaware = 2,
-		Deltaware = 3,
-		StandardSecondHand = 4,
-		AlphawareSecondHand = 5,
-		StandardAdapsin = 6,
-		AlphawareAdapsin = 7,
-		BetawareAdapsin = 8,
-		DeltawareAdapsin = 9,
-		StandardSecondHandAdapsin = 10,
-		AlphawareSecondHandAdapsin = 11,
+		private string _strName = "Standard";
+		private string _strAltName = "";
+		private decimal _decEss = 1.0m;
+		private decimal _decCost = 1.0m;
+		private int _intAvail = 0;
+		private string _strSource = "SR4";
+
+		#region Constructor and Load Methods
+		public Grade()
+		{
+		}
+
+		/// <summary>
+		/// Load the Grade from the XmlNode.
+		/// </summary>
+		/// <param name="objNode">XmlNode to load.</param>
+		public void Load(XmlNode objNode)
+		{
+			_strName = objNode["name"].InnerText;
+			if (objNode["translate"] != null)
+				_strAltName = objNode["translate"].InnerText;
+			_decEss = Convert.ToDecimal(objNode["ess"].InnerText, GlobalOptions.Instance.CultureInfo);
+			_decCost = Convert.ToDecimal(objNode["cost"].InnerText, GlobalOptions.Instance.CultureInfo);
+			_intAvail = Convert.ToInt32(objNode["avail"].InnerText, GlobalOptions.Instance.CultureInfo);
+			_strSource = objNode["source"].InnerText;
+		}
+		#endregion
+
+		#region Properties
+		/// <summary>
+		/// The English name of the Grade.
+		/// </summary>
+		public string Name
+		{
+			get
+			{
+				return _strName;
+			}
+		}
+
+		/// <summary>
+		/// The name of the Grade as it should be displayed in lists.
+		/// </summary>
+		public string DisplayName
+		{
+			get
+			{
+				if (_strAltName != string.Empty)
+					return _strAltName;
+				else
+					return _strName;
+			}
+		}
+
+		/// <summary>
+		/// The Grade's Essence cost multiplier.
+		/// </summary>
+		public decimal Essence
+		{
+			get
+			{
+				return _decEss;
+			}
+		}
+
+		/// <summary>
+		/// The Grade's cost multiplier.
+		/// </summary>
+		public decimal Cost
+		{
+			get
+			{
+				return _decCost;
+			}
+		}
+
+		/// <summary>
+		/// The Grade's Availability modifier.
+		/// </summary>
+		public int Avail
+		{
+			get
+			{
+				return _intAvail;
+			}
+		}
+
+		/// <summary>
+		/// Sourcebook.
+		/// </summary>
+		public string Source
+		{
+			get
+			{
+				return _strSource;
+			}
+		}
+
+		/// <summary>
+		/// Whether or not the Grade is for Adapsin.
+		/// </summary>
+		public bool Adapsin
+		{
+			get
+			{
+				return _strName.Contains("(Adapsin)");
+			}
+		}
+
+		/// <summary>
+		/// Whether or not this is a Second-Hand Grade.
+		/// </summary>
+		public bool SecondHand
+		{
+			get
+			{
+				return _strName.Contains("(Second-Hand)");
+			}
+		}
+		#endregion
+	}
+
+	/// <summary>
+	/// List of Grades for either Cyberware or Bioware.
+	/// </summary>
+	public class GradeList : IEnumerable<Grade>
+	{
+		private List<Grade> _lstGrades = new List<Grade>();
+
+		#region Methods
+		/// <summary>
+		/// Fill the list of CyberwareGrades from the XML files.
+		/// </summary>
+		/// <param name="objSource">Source to load the Grades from, either Bioware or Cyberware.</param>
+		public void LoadList(Improvement.ImprovementSource objSource)
+		{
+			string strXmlFile = "";
+			if (objSource == Improvement.ImprovementSource.Bioware)
+				strXmlFile = "bioware.xml";
+			else
+				strXmlFile = "cyberware.xml";
+			XmlDocument objXMlDocument = XmlManager.Instance.Load(strXmlFile);
+			
+			foreach (XmlNode objNode in objXMlDocument.SelectNodes("/chummer/grades/grade"))
+			{
+				Grade objGrade = new Grade();
+				objGrade.Load(objNode);
+				_lstGrades.Add(objGrade);
+			}
+		}
+
+		/// <summary>
+		/// Retrieve the Standard Grade from the list.
+		/// </summary>
+		public Grade GetGrade(string strGrade)
+		{
+			Grade objReturn = new Grade();
+			foreach (Grade objGrade in _lstGrades)
+			{
+				if (objGrade.Name == "Standard")
+				{
+					objReturn = objGrade;
+					break;
+				}
+			}
+
+			if (strGrade != "Standard")
+			{
+				foreach (Grade objGrade in _lstGrades)
+				{
+					if (objGrade.Name == strGrade)
+					{
+						objReturn = objGrade;
+						break;
+					}
+				}
+			}
+
+			return objReturn;
+		}
+		#endregion
+
+		#region Enumeration Methods
+		public IEnumerator<Grade> GetEnumerator()
+		{
+			return this._lstGrades.GetEnumerator();
+		}
+
+		IEnumerator IEnumerable.GetEnumerator()
+		{
+			return GetEnumerator();
+		}
+		#endregion
 	}
 
 	/// <summary>
@@ -2095,7 +2279,7 @@ namespace Chummer
 		private bool _blnSuite = false;
 		private string _strLocation = "";
 		private Guid _guiWeaponID = new Guid();
-		private CyberwareGrade _objGrade = CyberwareGrade.Standard;
+		private Grade _objGrade = new Grade();
 		private List<Cyberware> _objChildren = new List<Cyberware>();
 		private List<Gear> _lstGear = new List<Gear>();
 		private XmlNode _nodBonus;
@@ -2114,41 +2298,30 @@ namespace Chummer
 
 		#region Helper Methods
 		/// <summary>
-		/// Convert a string to a CyberwareGrade.
+		/// Convert a string to a Grade.
 		/// </summary>
 		/// <param name="strValue">String value to convert.</param>
-		public CyberwareGrade ConvertToCyberwareGrade(string strValue)
+		public Grade ConvertToCyberwareGrade(string strValue, Improvement.ImprovementSource objSource)
 		{
-			switch (strValue)
+			if (objSource == Improvement.ImprovementSource.Bioware)
 			{
-				case "Alphaware":
-					return CyberwareGrade.Alphaware;
-				case "Betaware":
-					return CyberwareGrade.Betaware;
-				case "Deltaware":
-					return CyberwareGrade.Deltaware;
-				case "Standard (Second-Hand)":
-				case "StandardSecondHand":
-					return CyberwareGrade.StandardSecondHand;
-				case "Alphaware (Second-Hand)":
-				case "AlphawareSecondHand":
-					return CyberwareGrade.AlphawareSecondHand;
-				case "StandardAdapsin":
-					return CyberwareGrade.StandardAdapsin;
-				case "AlphawareAdapsin":
-					return CyberwareGrade.AlphawareAdapsin;
-				case "BetawareAdapsin":
-					return CyberwareGrade.BetawareAdapsin;
-				case "DeltawareAdapsin":
-					return CyberwareGrade.DeltawareAdapsin;
-				case "Standard (Second-Hand) (Adapsin)":
-				case "StandardSecondHandAdapsin":
-					return CyberwareGrade.StandardSecondHandAdapsin;
-				case "Alphaware (Second-Hand) (Adapsin)":
-				case "AlphawareSecondHandAdapsin":
-					return CyberwareGrade.AlphawareSecondHandAdapsin;
-				default:
-					return CyberwareGrade.Standard;
+				foreach (Grade objGrade in GlobalOptions.BiowareGrades)
+				{
+					if (objGrade.Name == strValue)
+						return objGrade;
+				}
+
+				return GlobalOptions.BiowareGrades.GetGrade("Standard");
+			}
+			else
+			{
+				foreach (Grade objGrade in GlobalOptions.CyberwareGrades)
+				{
+					if (objGrade.Name == strValue)
+						return objGrade;
+				}
+
+				return GlobalOptions.CyberwareGrades.GetGrade("Standard");
 			}
 		}
 		#endregion
@@ -2164,14 +2337,15 @@ namespace Chummer
 		/// Create a Cyberware from an XmlNode and return the TreeNodes for it.
 		/// <param name="objXmlCyberware">XmlNode to create the object from.</param>
 		/// <param name="objCharacter">Character object the Cyberware will be added to.</param>
-		/// <param name="objGrade">CyberwareGrade of the selected piece.</param>
+		/// <param name="objGrade">Grade of the selected piece.</param>
 		/// <param name="objSource">Source of the piece.</param>
 		/// <param name="intRating">Selected Rating of the piece of Cyberware.</param>
 		/// <param name="objNode">TreeNode to populate a TreeView.</param>
 		/// <param name="objWeapons">List of Weapons that should be added to the Character.</param>
 		/// <param name="objWeaponNodes">List of TreeNode to represent the Weapons added.</param>
 		/// <param name="blnCreateImprovements">Whether or not Improvements should be created.</param>
-		public void Create(XmlNode objXmlCyberware, Character objCharacter, CyberwareGrade objGrade, Improvement.ImprovementSource objSource, int intRating, TreeNode objNode, List<Weapon> objWeapons, List<TreeNode> objWeaponNodes, bool blnCreateImprovements = true)
+		/// <param name="blnCreateChildren">Whether or not child items should be created.</param>
+		public void Create(XmlNode objXmlCyberware, Character objCharacter, Grade objGrade, Improvement.ImprovementSource objSource, int intRating, TreeNode objNode, List<Weapon> objWeapons, List<TreeNode> objWeaponNodes, bool blnCreateImprovements = true, bool blnCreateChildren = true)
 		{
 			_strName = objXmlCyberware["name"].InnerText;
 			_strCategory = objXmlCyberware["category"].InnerText;
@@ -2326,7 +2500,7 @@ namespace Chummer
 			objNode.Tag = _guiID.ToString();
 
 			// If we've just added a new base item, see if there are any subsystems that should automatically be added.
-			if (objXmlCyberware.InnerXml.Contains("subsystems"))
+			if (objXmlCyberware.InnerXml.Contains("subsystems") && blnCreateChildren)
 			{
 				XmlDocument objXmlDocument = new XmlDocument();
 				if (objSource == Improvement.ImprovementSource.Bioware)
@@ -2406,7 +2580,7 @@ namespace Chummer
 			objWriter.WriteElementString("minrating", _intMinRating.ToString());
 			objWriter.WriteElementString("maxrating", _intMaxRating.ToString());
 			objWriter.WriteElementString("subsystems", _strSubsystems);
-			objWriter.WriteElementString("grade", _objGrade.ToString());
+			objWriter.WriteElementString("grade", _objGrade.Name);
 			objWriter.WriteElementString("location", _strLocation);
 			objWriter.WriteElementString("suite", _blnSuite.ToString());
 			objWriter.WriteElementString("essdiscount", _intEssenceDiscount.ToString());
@@ -2496,7 +2670,7 @@ namespace Chummer
 			}
 			_intMaxRating = Convert.ToInt32(objNode["maxrating"].InnerText);
 			_strSubsystems = objNode["subsystems"].InnerText;
-			_objGrade = ConvertToCyberwareGrade(objNode["grade"].InnerText);
+			_objGrade = ConvertToCyberwareGrade(objNode["grade"].InnerText, _objImprovementSource);
 			try
 			{
 				_strLocation = objNode["location"].InnerText;
@@ -2666,7 +2840,7 @@ namespace Chummer
 			objWriter.WriteElementString("minrating", _intMinRating.ToString());
 			objWriter.WriteElementString("maxrating", _intMaxRating.ToString());
 			objWriter.WriteElementString("subsystems", _strSubsystems);
-			objWriter.WriteElementString("grade", _objGrade.ToString());
+			objWriter.WriteElementString("grade", _objGrade.DisplayName);
 			objWriter.WriteElementString("location", _strLocation);
 			objWriter.WriteElementString("improvementsource", _objImprovementSource.ToString());
 			if (_lstGear.Count > 0)
@@ -3041,7 +3215,7 @@ namespace Chummer
 		/// <summary>
 		/// Grade level of the Cyberware.
 		/// </summary>
-		public CyberwareGrade Grade
+		public Grade Grade
 		{
 			get
 			{
@@ -3218,8 +3392,9 @@ namespace Chummer
 
 				// Second Hand Cyberware has a reduced Availability.
 				int intAvailModifier = 0;
-				if (Grade == CyberwareGrade.StandardSecondHand || Grade == CyberwareGrade.AlphawareSecondHand || Grade == CyberwareGrade.StandardSecondHandAdapsin || Grade == CyberwareGrade.AlphawareSecondHandAdapsin)
-					intAvailModifier = -1;
+
+				// Apply the Grade's Avail modifier.
+				intAvailModifier = Grade.Avail;
 
 				if (_strAvail.Contains("Rating"))
 				{
@@ -3331,7 +3506,63 @@ namespace Chummer
 		{
 			get
 			{
-				if (_strCapacity.Contains("Rating"))
+				if (_strCapacity.Contains("/["))
+				{
+					XmlDocument objXmlDocument = new XmlDocument();
+					XPathNavigator nav = objXmlDocument.CreateNavigator();
+
+					int intPos = _strCapacity.IndexOf("/[");
+					string strFirstHalf = _strCapacity.Substring(0, intPos);
+					string strSecondHalf = _strCapacity.Substring(intPos + 1, _strCapacity.Length - intPos - 1);
+					bool blnSquareBrackets = false;
+					string strCapacity = "";
+
+					try
+					{
+						blnSquareBrackets = strFirstHalf.Contains('[');
+						strCapacity = strFirstHalf;
+						if (blnSquareBrackets)
+							strCapacity = strCapacity.Substring(1, strCapacity.Length - 2);
+					}
+					catch
+					{
+					}
+					XPathExpression xprCapacity = nav.Compile(strCapacity.Replace("Rating", _intRating.ToString()));
+
+					string strReturn = "";
+					try
+					{
+						if (_strCapacity == "[*]")
+							strReturn = "*";
+						else
+						{
+							if (_strCapacity.StartsWith("FixedValues"))
+							{
+								string[] strValues = _strCapacity.Replace("FixedValues(", string.Empty).Replace(")", string.Empty).Split(',');
+								strReturn = strValues[Convert.ToInt32(_intRating) - 1];
+							}
+							else
+								strReturn = nav.Evaluate(xprCapacity).ToString();
+						}
+						if (blnSquareBrackets)
+							strReturn = "[" + strCapacity + "]";
+					}
+					catch
+					{
+						strReturn = "0";
+					}
+
+					if (strSecondHalf.Contains("Rating"))
+					{
+						strSecondHalf = strSecondHalf.Replace("[", string.Empty).Replace("]", string.Empty);
+						xprCapacity = nav.Compile(strSecondHalf.Replace("Rating", _intRating.ToString()));
+						strSecondHalf = "[" + nav.Evaluate(xprCapacity).ToString() + "]";
+					}
+
+					strReturn += "/" + strSecondHalf;
+					return strReturn;
+				}
+				else if (_strCapacity.Contains("Rating"))
 				{
 					// If the Capaicty is determined by the Rating, evaluate the expression.
 					XmlDocument objXmlDocument = new XmlDocument();
@@ -3404,45 +3635,7 @@ namespace Chummer
 				}
 
 				// Factor in the Essence multiplier of the selected CyberwareGrade.
-				switch (_objGrade)
-				{
-					case CyberwareGrade.Standard:
-						decESSMultiplier = 1.0m;
-						break;
-					case CyberwareGrade.Alphaware:
-						decESSMultiplier = 0.8m;
-						break;
-					case CyberwareGrade.Betaware:
-						decESSMultiplier = 0.7m;
-						break;
-					case CyberwareGrade.Deltaware:
-						decESSMultiplier = 0.5m;
-						break;
-					case CyberwareGrade.StandardSecondHand:
-						decESSMultiplier = 1.2m;
-						break;
-					case CyberwareGrade.AlphawareSecondHand:
-						decESSMultiplier = 0.96m;
-						break;
-					case CyberwareGrade.StandardAdapsin:
-						decESSMultiplier = 0.9m;
-						break;
-					case CyberwareGrade.AlphawareAdapsin:
-						decESSMultiplier = 0.7m;
-						break;
-					case CyberwareGrade.BetawareAdapsin:
-						decESSMultiplier = 0.6m;
-						break;
-					case CyberwareGrade.DeltawareAdapsin:
-						decESSMultiplier = 0.4m;
-						break;
-					case CyberwareGrade.StandardSecondHandAdapsin:
-						decESSMultiplier = 1.1m;
-						break;
-					case CyberwareGrade.AlphawareSecondHandAdapsin:
-						decESSMultiplier = 0.86m;
-						break;
-				}
+				decESSMultiplier = Grade.Essence;
 
 				if (_blnSuite)
 					decESSMultiplier -= 0.1m;
@@ -3520,7 +3713,7 @@ namespace Chummer
 					}
 				}
 
-				decReturn = Math.Round(decReturn, 2, MidpointRounding.AwayFromZero);
+				decReturn = Math.Round(decReturn, _objCharacter.Options.EssenceDecimals, MidpointRounding.AwayFromZero);
 
 				return decReturn;
 			}
@@ -3571,33 +3764,7 @@ namespace Chummer
 				}
 
 				// Factor in the Cost multiplier of the selected CyberwareGrade.
-				switch (_objGrade)
-				{
-					case CyberwareGrade.Standard:
-					case CyberwareGrade.StandardAdapsin:
-						intCost *= 1;
-						break;
-					case CyberwareGrade.Alphaware:
-					case CyberwareGrade.AlphawareAdapsin:
-						intCost *= 2;
-						break;
-					case CyberwareGrade.Betaware:
-					case CyberwareGrade.BetawareAdapsin:
-						intCost *= 4;
-						break;
-					case CyberwareGrade.Deltaware:
-					case CyberwareGrade.DeltawareAdapsin:
-						intCost *= 10;
-						break;
-					case CyberwareGrade.StandardSecondHand:
-					case CyberwareGrade.StandardSecondHandAdapsin:
-						intCost /= 2;
-						break;
-					case CyberwareGrade.AlphawareSecondHand:
-					case CyberwareGrade.AlphawareSecondHandAdapsin:
-						intCost *= 1;
-						break;
-				}
+				intCost = Convert.ToInt32(Convert.ToDecimal(intCost, GlobalOptions.Instance.CultureInfo) * Grade.Cost);
 
 				intReturn = intCost;
 
@@ -3715,33 +3882,7 @@ namespace Chummer
 				}
 
 				// Factor in the Cost multiplier of the selected CyberwareGrade.
-				switch (_objGrade)
-				{
-					case CyberwareGrade.Standard:
-					case CyberwareGrade.StandardAdapsin:
-						intCost *= 1;
-						break;
-					case CyberwareGrade.Alphaware:
-					case CyberwareGrade.AlphawareAdapsin:
-						intCost *= 2;
-						break;
-					case CyberwareGrade.Betaware:
-					case CyberwareGrade.BetawareAdapsin:
-						intCost *= 4;
-						break;
-					case CyberwareGrade.Deltaware:
-					case CyberwareGrade.DeltawareAdapsin:
-						intCost *= 10;
-						break;
-					case CyberwareGrade.StandardSecondHand:
-					case CyberwareGrade.StandardSecondHandAdapsin:
-						intCost /= 2;
-						break;
-					case CyberwareGrade.AlphawareSecondHand:
-					case CyberwareGrade.AlphawareSecondHandAdapsin:
-						intCost *= 1;
-						break;
-				}
+				intCost = Convert.ToInt32(Convert.ToDecimal(intCost, GlobalOptions.Instance.CultureInfo) * Grade.Cost);
 
 				intReturn = intCost;
 
@@ -3800,33 +3941,7 @@ namespace Chummer
 				}
 
 				// Factor in the Cost multiplier of the selected CyberwareGrade.
-				switch (_objGrade)
-				{
-					case CyberwareGrade.Standard:
-					case CyberwareGrade.StandardAdapsin:
-						intCost *= 1;
-						break;
-					case CyberwareGrade.Alphaware:
-					case CyberwareGrade.AlphawareAdapsin:
-						intCost *= 2;
-						break;
-					case CyberwareGrade.Betaware:
-					case CyberwareGrade.BetawareAdapsin:
-						intCost *= 4;
-						break;
-					case CyberwareGrade.Deltaware:
-					case CyberwareGrade.DeltawareAdapsin:
-						intCost *= 10;
-						break;
-					case CyberwareGrade.StandardSecondHand:
-					case CyberwareGrade.StandardSecondHandAdapsin:
-						intCost /= 2;
-						break;
-					case CyberwareGrade.AlphawareSecondHand:
-					case CyberwareGrade.AlphawareSecondHandAdapsin:
-						intCost *= 1;
-						break;
-				}
+				intCost = Convert.ToInt32(Convert.ToDecimal(intCost, GlobalOptions.Instance.CultureInfo) * Grade.Cost);
 
 				intReturn = intCost;
 
@@ -3874,7 +3989,28 @@ namespace Chummer
 			get
 			{
 				int intCapacity = 0;
-				if (!_strCapacity.Contains("["))
+				if (_strCapacity.Contains("/["))
+				{
+					// Get the Cyberware base Capacity.
+					string strBaseCapacity = CalculatedCapacity;
+					strBaseCapacity = strBaseCapacity.Substring(0, strBaseCapacity.IndexOf('/'));
+					intCapacity = Convert.ToInt32(strBaseCapacity);
+
+					// Run through its Children and deduct the Capacity costs.
+					foreach (Cyberware objChildCyberware in Children)
+					{
+						string strCapacity = objChildCyberware.CalculatedCapacity;
+						if (strCapacity.Contains("/["))
+							strCapacity = strCapacity.Substring(strCapacity.IndexOf('[') + 1, strCapacity.IndexOf(']') - strCapacity.IndexOf('[') - 1);
+						else if (strCapacity.Contains("["))
+							strCapacity = strCapacity.Substring(1, strCapacity.Length - 2);
+						if (strCapacity == "*")
+							strCapacity = "0";
+						intCapacity -= Convert.ToInt32(strCapacity);
+					}
+
+				}
+				else if (!_strCapacity.Contains("["))
 				{
 					// Get the Cyberware base Capacity.
 					intCapacity = Convert.ToInt32(CalculatedCapacity);
@@ -3883,7 +4019,9 @@ namespace Chummer
 					foreach (Cyberware objChildCyberware in Children)
 					{
 						string strCapacity = objChildCyberware.CalculatedCapacity;
-						if (strCapacity.Contains("["))
+						if (strCapacity.Contains("/["))
+							strCapacity = strCapacity.Substring(strCapacity.IndexOf('[') + 1, strCapacity.IndexOf(']') - strCapacity.IndexOf('[') - 1);
+						else if (strCapacity.Contains("["))
 							strCapacity = strCapacity.Substring(1, strCapacity.Length - 2);
 						if (strCapacity == "*")
 							strCapacity = "0";
@@ -4072,7 +4210,8 @@ namespace Chummer
 		/// <param name="cmsWeapon">ContextMenuStrip to use for Weapons.</param>
 		/// <param name="cmsWeaponAccessory">ContextMenuStrip to use for Accessories.</param>
 		/// <param name="cmsWeaponMod">ContextMenuStrip to use for Weapon Mods.</param>
-		public void Create(XmlNode objXmlWeapon, Character objCharacter, TreeNode objNode, ContextMenuStrip cmsWeapon, ContextMenuStrip cmsWeaponAccessory, ContextMenuStrip cmsWeaponMod)
+		/// <param name="blnCreateChildren">Whether or not child items should be created.</param>
+		public void Create(XmlNode objXmlWeapon, Character objCharacter, TreeNode objNode, ContextMenuStrip cmsWeapon, ContextMenuStrip cmsWeaponAccessory, ContextMenuStrip cmsWeaponMod, bool blnCreateChildren = true)
 		{
 			_strName = objXmlWeapon["name"].InnerText;
 			_strCategory = objXmlWeapon["category"].InnerText;
@@ -4162,7 +4301,7 @@ namespace Chummer
 			objNode.Tag = _guiID.ToString();
 
 			// If the Weapon comes with an Underbarrel Weapon, add it.
-			if (objXmlWeapon.InnerXml.Contains("<underbarrel>"))
+			if (objXmlWeapon.InnerXml.Contains("<underbarrel>") && blnCreateChildren)
 			{
 				XmlNode objXmlUnderbarrel = objXmlWeapon.SelectSingleNode("underbarrel");
 				Weapon objUnderbarrelWeapon = new Weapon(_objCharacter);
@@ -4177,7 +4316,7 @@ namespace Chummer
 			}
 
 			// If there are any Accessories that come with the Weapon, add them.
-			if (objXmlWeapon.InnerXml.Contains("<accessories>"))
+			if (objXmlWeapon.InnerXml.Contains("<accessories>") && blnCreateChildren)
 			{
 				XmlNodeList objXmlAccessoryList = objXmlWeapon.SelectNodes("accessories/accessory");
 				foreach (XmlNode objXmlWeaponAccessory in objXmlAccessoryList)
@@ -4197,7 +4336,7 @@ namespace Chummer
 			}
 
 			// If there are any Mods that come with the Weapon, add them.
-			if (objXmlWeapon.InnerXml.Contains("<mods>"))
+			if (objXmlWeapon.InnerXml.Contains("<mods>") && blnCreateChildren)
 			{
 				XmlNodeList objXmlModList = objXmlWeapon.SelectNodes("mods/mod");
 				foreach (XmlNode objXmlWeaponMod in objXmlModList)
@@ -5484,15 +5623,23 @@ namespace Chummer
 			}
 
 			// Place the Damage Type (P or S) into a string and remove it from the expression.
-			if (strDamage.Contains("P"))
+			if (strDamage.Contains("P or S"))
 			{
-				strDamageType = "P";
-				strDamage = strDamage.Replace("P", string.Empty);
+				strDamageType = "P or S";
+				strDamage = strDamage.Replace("P or S", string.Empty);
 			}
-			if (strDamage.Contains("S"))
+			else
 			{
-				strDamageType = "S";
-				strDamage = strDamage.Replace("S", string.Empty);
+				if (strDamage.Contains("P"))
+				{
+					strDamageType = "P";
+					strDamage = strDamage.Replace("P", string.Empty);
+				}
+				if (strDamage.Contains("S"))
+				{
+					strDamageType = "S";
+					strDamage = strDamage.Replace("S", string.Empty);
+				}
 			}
 			// Place any extra text like (e) and (f) in a string and remove it from the expression.
 			if (strDamage.Contains("(e)"))
@@ -6066,10 +6213,6 @@ namespace Chummer
 		{
 			get
 			{
-				// If there are no Accessories, just return the Weapon's RC.
-				if (_lstAccessories.Count == 0 && _lstWeaponMods.Count == 0)
-					return _strRC;
-
 				string strRCBase = "0";
 				string strRCFull = "0";
 				string strRC = "";
@@ -6417,8 +6560,31 @@ namespace Chummer
 			get
 			{
 				int intRangeBonus = 100;
+
+				// Weapon Mods.
 				foreach (WeaponMod objMod in _lstWeaponMods)
 					intRangeBonus += objMod.RangeBonus;
+
+				// Check if the Weapon has Ammunition loaded and look for any Range bonus.
+				if (AmmoLoaded != "")
+				{
+					CommonFunctions objFunctions = new CommonFunctions(_objCharacter);
+
+					Gear objGear = objFunctions.FindGear(AmmoLoaded, _objCharacter.Gear);
+					if (objGear == null)
+					{
+						Vehicle objFoundVehicle;
+						objGear = objFunctions.FindVehicleGear(AmmoLoaded, _objCharacter.Vehicles, out objFoundVehicle);
+					}
+
+					if (objGear != null)
+					{
+						if (objGear.WeaponBonus != null)
+						{
+							intRangeBonus += objGear.WeaponBonusRange;
+						}
+					}
+				}
 
 				double dblRangeBonus = Convert.ToDouble(intRangeBonus, GlobalOptions.Instance.CultureInfo);
 				dblRangeBonus /= 100;
@@ -9298,9 +9464,10 @@ namespace Chummer
 		private int _intSystem = 0;
 		private int _intChildCostMultiplier = 1;
 		private int _intChildAvailModifier = 0;
-		protected Gear _objParent;
+		protected Gear _objParent = null;
 		protected bool _blnDiscountCost = false;
 		protected string _strGearName = "";
+		protected bool _blnIncludedInParent = false;
 
 		#region Constructor, Create, Save, Load, and Print Methods
 		public Gear(Character objCharacter)
@@ -9604,43 +9771,8 @@ namespace Chummer
 					objNode.Expand();
 				}
 
-				// Create Gear by looking up the name of the item we're provided with.
-				if (objXmlGear.SelectNodes("gears/usegear").Count > 0)
-				{
-					XmlDocument objXmlGearDocument = XmlManager.Instance.Load("gear.xml");
-
-					foreach (XmlNode objXmlChild in objXmlGear.SelectNodes("gears/usegear"))
-					{
-						XmlNode objXmlGearNode = objXmlGearDocument.SelectSingleNode("/chummer/gears/gear[name = \"" + objXmlChild.InnerText + "\"]");
-						int intChildRating = 0;
-						int intChildQty = 1;
-						string strChildForceValue = "";
-						if (objXmlChild.Attributes["rating"] != null)
-							intChildRating = Convert.ToInt32(objXmlChild.Attributes["rating"].InnerText);
-						if (objXmlChild.Attributes["qty"] != null)
-							intChildQty = Convert.ToInt32(objXmlChild.Attributes["qty"].InnerText);
-						if (objXmlChild.Attributes["select"] != null)
-							strChildForceValue = objXmlChild.Attributes["select"].InnerText;
-
-						Gear objChild = new Gear(_objCharacter);
-						TreeNode objChildNode = new TreeNode();
-						List<Weapon> lstChildWeapons = new List<Weapon>();
-						List<TreeNode> lstChildWeaponNodes = new List<TreeNode>();
-						objChild.Create(objXmlGearNode, objCharacter, objChildNode, intChildRating, lstChildWeapons, lstChildWeaponNodes, strChildForceValue, blnHacked);
-						objChild.Quantity = intChildQty;
-						objChild.Cost = "0";
-						objChild.Cost3 = "0";
-						objChild.Cost6 = "0";
-						objChild.Cost10 = "0";
-						objChild.MinRating = intChildRating;
-						objChild.MaxRating = intChildRating;
-						objChild.Parent = this;
-						_objChildren.Add(objChild);
-
-						objNode.Nodes.Add(objChildNode);
-						objNode.Expand();
-					}
-				}
+				XmlDocument objXmlGearDocument = XmlManager.Instance.Load("gear.xml");
+				CreateChildren(objXmlGearDocument, objXmlGear, this, objNode, objCharacter, blnHacked);
 			}
 
 			// Add the Copy Protection and Registration plugins to the Matrix program. This does not apply if Unwired is not enabled, Hacked is selected, or this is a Suite being added (individual programs will add it to themselves).
@@ -9723,6 +9855,47 @@ namespace Chummer
 			if (objXmlGear.InnerXml.Contains("<weaponbonus>"))
 				_nodWeaponBonus = objXmlGear["weaponbonus"];
 			objNode.Text = DisplayName;
+		}
+
+		protected void CreateChildren(XmlDocument objXmlGearDocument, XmlNode objXmlGear, Gear objParent, TreeNode objNode, Character objCharacter, bool blnHacked)
+		{
+			// Create Gear by looking up the name of the item we're provided with.
+			if (objXmlGear.SelectNodes("gears/usegear").Count > 0)
+			{
+				foreach (XmlNode objXmlChild in objXmlGear.SelectNodes("gears/usegear"))
+				{
+					XmlNode objXmlGearNode = objXmlGearDocument.SelectSingleNode("/chummer/gears/gear[name = \"" + objXmlChild["name"].InnerText + "\" and category = \"" + objXmlChild["category"].InnerText + "\"]");
+					int intChildRating = 0;
+					int intChildQty = 1;
+					string strChildForceValue = "";
+					if (objXmlChild["rating"] != null)
+						intChildRating = Convert.ToInt32(objXmlChild["rating"].InnerText);
+					if (objXmlChild["name"].Attributes["qty"] != null)
+						intChildQty = Convert.ToInt32(objXmlChild["name"].Attributes["qty"].InnerText);
+					if (objXmlChild["name"].Attributes["select"] != null)
+						strChildForceValue = objXmlChild["name"].Attributes["select"].InnerText;
+
+					Gear objChild = new Gear(_objCharacter);
+					TreeNode objChildNode = new TreeNode();
+					List<Weapon> lstChildWeapons = new List<Weapon>();
+					List<TreeNode> lstChildWeaponNodes = new List<TreeNode>();
+					objChild.Create(objXmlGearNode, objCharacter, objChildNode, intChildRating, lstChildWeapons, lstChildWeaponNodes, strChildForceValue, blnHacked);
+					objChild.Quantity = intChildQty;
+					objChild.Cost = "0";
+					objChild.Cost3 = "0";
+					objChild.Cost6 = "0";
+					objChild.Cost10 = "0";
+					objChild.MinRating = intChildRating;
+					objChild.MaxRating = intChildRating;
+					objChild.Parent = this;
+					objParent.Children.Add(objChild);
+
+					objNode.Nodes.Add(objChildNode);
+					objNode.Expand();
+
+					CreateChildren(objXmlGearDocument, objXmlChild, objChild, objChildNode, objCharacter, blnHacked);
+				}
+			}
 		}
 
 		/// <summary>
@@ -9842,6 +10015,7 @@ namespace Chummer
 			objWriter.WriteElementString("system", _intSystem.ToString());
 			objWriter.WriteElementString("signal", _intSignal.ToString());
 			objWriter.WriteElementString("gearname", _strGearName);
+			objWriter.WriteElementString("includedinparent", _blnIncludedInParent.ToString());
 			if (_intChildCostMultiplier != 1)
 				objWriter.WriteElementString("childcostmultiplier", _intChildCostMultiplier.ToString());
 			if (_intChildAvailModifier != 0)
@@ -10035,6 +10209,14 @@ namespace Chummer
 			try
 			{
 				_strGearName = objNode["gearname"].InnerText;
+			}
+			catch
+			{
+			}
+
+			try
+			{
+				_blnIncludedInParent = Convert.ToBoolean(objNode["includedinparent"].InnerText);
 			}
 			catch
 			{
@@ -10760,6 +10942,22 @@ namespace Chummer
 		}
 
 		/// <summary>
+		/// Whether or not the Gear has the Ergonomic Program Option.
+		/// </summary>
+		public bool IsErgonomic
+		{
+			get
+			{
+				foreach (Gear objPlugin in _objChildren)
+				{
+					if (objPlugin.Name == "Ergonomic")
+						return true;
+				}
+				return false;
+			}
+		}
+
+		/// <summary>
 		/// Cost multiplier for Children attached to this Gear.
 		/// </summary>
 		public int ChildCostMultiplier
@@ -10819,6 +11017,21 @@ namespace Chummer
 			set
 			{
 				_blnDiscountCost = value;
+			}
+		}
+
+		/// <summary>
+		/// Whether or not the Gear is included in its parent item when purchased (currently applies to Armor only).
+		/// </summary>
+		public bool IncludedInParent
+		{
+			get
+			{
+				return _blnIncludedInParent;
+			}
+			set
+			{
+				_blnIncludedInParent = value;
 			}
 		}
 		#endregion
@@ -11454,7 +11667,7 @@ namespace Chummer
 							strCapacity = strCapacity.Substring(1, strCapacity.Length - 2);
 						else
 							strCapacity = "0";
-						intCapacity -= Convert.ToInt32(strCapacity);
+						intCapacity -= (Convert.ToInt32(strCapacity) * objChildGear.Quantity);
 					}
 				}
 
@@ -11575,6 +11788,27 @@ namespace Chummer
 				}
 			}
 		}
+
+		/// <summary>
+		/// Weapon Bonus Range.
+		/// </summary>
+		public int WeaponBonusRange
+		{
+			get
+			{
+				if (_nodWeaponBonus == null)
+					return 0;
+				else
+				{
+					int intReturn = 0;
+
+					if (_nodWeaponBonus["rangebonus"] != null)
+						intReturn = Convert.ToInt32(_nodWeaponBonus["rangebonus"].InnerText);
+
+					return intReturn;
+				}
+			}
+		}
 		#endregion
 	}
 
@@ -11586,6 +11820,7 @@ namespace Chummer
 		private int _intResponse = 1;
 		private new int _intSignal = 1;
 		private bool _blnIsLivingPersona = false;
+		private bool _blnActiveCommlink = false;
 
 		#region Constructor, Create, Save, Load, and Print Methods
 		public Commlink(Character objCharacter) : base(objCharacter)
@@ -11598,7 +11833,8 @@ namespace Chummer
 		/// <param name="objNode">TreeNode to populate a TreeView.</param>
 		/// <param name="intRating">Gear Rating.</param>
 		/// <param name="blnAddImprovements">Whether or not Improvements should be added to the character.</param>
-		public void Create(XmlNode objXmlGear, Character objCharacter, TreeNode objNode, int intRating, bool blnAddImprovements = true)
+		/// <param name="blnCreateChildren">Whether or not child Gear should be created.</param>
+		public void Create(XmlNode objXmlGear, Character objCharacter, TreeNode objNode, int intRating, bool blnAddImprovements = true, bool blnCreateChildren = true)
 		{
 			_strName = objXmlGear["name"].InnerText;
 			_strCategory = objXmlGear["category"].InnerText;
@@ -11695,6 +11931,109 @@ namespace Chummer
 				{
 					_strExtra = objImprovementManager.SelectedValue;
 					objNode.Text += " (" + objImprovementManager.SelectedValue + ")";
+				}
+			}
+
+			// Check to see if there are any child elements.
+			if (objXmlGear.InnerXml.Contains("<gears>") && blnCreateChildren)
+			{
+				// Create Gear using whatever information we're given.
+				foreach (XmlNode objXmlChild in objXmlGear.SelectNodes("gears/gear"))
+				{
+					Gear objChild = new Gear(_objCharacter);
+					TreeNode objChildNode = new TreeNode();
+					objChild.Name = objXmlChild["name"].InnerText;
+					objChild.Category = objXmlChild["category"].InnerText;
+					objChild.Avail = "0";
+					objChild.Cost = "0";
+					objChild.Source = _strSource;
+					objChild.Page = _strPage;
+					objChild.Parent = this;
+					_objChildren.Add(objChild);
+
+					objChildNode.Text = objChild.DisplayName;
+					objChildNode.Tag = objChild.InternalId;
+					objNode.Nodes.Add(objChildNode);
+					objNode.Expand();
+				}
+
+				XmlDocument objXmlGearDocument = XmlManager.Instance.Load("gear.xml");
+				CreateChildren(objXmlGearDocument, objXmlGear, this, objNode, objCharacter, blnCreateChildren);
+			}
+
+			// Add the Copy Protection and Registration plugins to the Matrix program. This does not apply if Unwired is not enabled, Hacked is selected, or this is a Suite being added (individual programs will add it to themselves).
+			if (blnCreateChildren)
+			{
+				if ((_strCategory == "Matrix Programs" || _strCategory == "Skillsofts" || _strCategory == "Autosofts" || _strCategory == "Autosofts, Agent" || _strCategory == "Autosofts, Drone") && objCharacter.Options.BookEnabled("UN") && !_strName.StartsWith("Suite:"))
+				{
+					XmlDocument objXmlDocument = XmlManager.Instance.Load("gear.xml");
+
+					if (_objCharacter.Options.AutomaticCopyProtection)
+					{
+						Gear objPlugin1 = new Gear(_objCharacter);
+						TreeNode objPlugin1Node = new TreeNode();
+						objPlugin1.Create(objXmlDocument.SelectSingleNode("/chummer/gears/gear[name = \"Copy Protection\"]"), objCharacter, objPlugin1Node, _intRating, null, null);
+						if (_intRating == 0)
+							objPlugin1.Rating = 1;
+						objPlugin1.Avail = "0";
+						objPlugin1.Cost = "0";
+						objPlugin1.Cost3 = "0";
+						objPlugin1.Cost6 = "0";
+						objPlugin1.Cost10 = "0";
+						objPlugin1.Capacity = "[0]";
+						objPlugin1.Parent = this;
+						_objChildren.Add(objPlugin1);
+						objNode.Nodes.Add(objPlugin1Node);
+					}
+
+					if (_objCharacter.Options.AutomaticRegistration)
+					{
+						Gear objPlugin2 = new Gear(_objCharacter);
+						TreeNode objPlugin2Node = new TreeNode();
+						objPlugin2.Create(objXmlDocument.SelectSingleNode("/chummer/gears/gear[name = \"Registration\"]"), objCharacter, objPlugin2Node, 0, null, null);
+						objPlugin2.Avail = "0";
+						objPlugin2.Cost = "0";
+						objPlugin2.Cost3 = "0";
+						objPlugin2.Cost6 = "0";
+						objPlugin2.Cost10 = "0";
+						objPlugin2.Capacity = "[0]";
+						objPlugin2.Parent = this;
+						_objChildren.Add(objPlugin2);
+						objNode.Nodes.Add(objPlugin2Node);
+						objNode.Expand();
+					}
+
+					if ((objCharacter.Metatype == "A.I." || objCharacter.MetatypeCategory == "Technocritters" || objCharacter.MetatypeCategory == "Protosapients"))
+					{
+						Gear objPlugin3 = new Gear(_objCharacter);
+						TreeNode objPlugin3Node = new TreeNode();
+						objPlugin3.Create(objXmlDocument.SelectSingleNode("/chummer/gears/gear[name = \"Ergonomic\"]"), objCharacter, objPlugin3Node, 0, null, null);
+						objPlugin3.Avail = "0";
+						objPlugin3.Cost = "0";
+						objPlugin3.Cost3 = "0";
+						objPlugin3.Cost6 = "0";
+						objPlugin3.Cost10 = "0";
+						objPlugin3.Capacity = "[0]";
+						objPlugin3.Parent = this;
+						_objChildren.Add(objPlugin3);
+						objNode.Nodes.Add(objPlugin3Node);
+
+						Gear objPlugin4 = new Gear(_objCharacter);
+						TreeNode objPlugin4Node = new TreeNode();
+						objPlugin4.Create(objXmlDocument.SelectSingleNode("/chummer/gears/gear[name = \"Optimization\" and category = \"Program Options\"]"), objCharacter, objPlugin4Node, _intRating, null, null);
+						if (_intRating == 0)
+							objPlugin4.Rating = 1;
+						objPlugin4.Avail = "0";
+						objPlugin4.Cost = "0";
+						objPlugin4.Cost3 = "0";
+						objPlugin4.Cost6 = "0";
+						objPlugin4.Cost10 = "0";
+						objPlugin4.Capacity = "[0]";
+						objPlugin4.Parent = this;
+						_objChildren.Add(objPlugin4);
+						objNode.Nodes.Add(objPlugin4Node);
+						objNode.Expand();
+					}
 				}
 			}
 		}
@@ -11822,6 +12161,7 @@ namespace Chummer
 			objWriter.WriteElementString("location", _strLocation);
 			objWriter.WriteElementString("notes", _strNotes);
 			objWriter.WriteElementString("discountedcost", DiscountCost.ToString());
+			objWriter.WriteElementString("active", _blnActiveCommlink.ToString());
 			objWriter.WriteEndElement();
 		}
 
@@ -11942,6 +12282,13 @@ namespace Chummer
 			catch
 			{
 			}
+			try
+			{
+				_blnActiveCommlink = Convert.ToBoolean(objNode["active"].InnerText);
+			}
+			catch
+			{
+			}
 
 			if (GlobalOptions.Instance.Language != "en-us")
 			{
@@ -12018,6 +12365,7 @@ namespace Chummer
 			objWriter.WriteElementString("system", TotalSystem.ToString());
 			objWriter.WriteElementString("processorlimit", ProcessorLimit.ToString());
 			objWriter.WriteElementString("conditionmonitor", ConditionMonitor.ToString());
+			objWriter.WriteElementString("active", _blnActiveCommlink.ToString());
 			objWriter.WriteStartElement("children");
 			foreach (Gear objGear in _objChildren)
 			{
@@ -12094,6 +12442,21 @@ namespace Chummer
 				_blnIsLivingPersona = value;
 			}
 		}
+
+		/// <summary>
+		/// Whether or not this Commlink is active and counting towards the character's Matrix Initiative.
+		/// </summary>
+		public bool IsActive
+		{
+			get
+			{
+				return _blnActiveCommlink;
+			}
+			set
+			{
+				_blnActiveCommlink = value;
+			}
+		}
 		#endregion
 
 		#region Complex Properties
@@ -12123,14 +12486,15 @@ namespace Chummer
 				}
 
 				// If the option to adjust a Commlink's Response based on the number of programs currently running on it is enabled, determine how many are currently
-				// running and adjust its value. Don't attempt to do this if the Commlink's TotalSystem is 0 since this number is needed.
+				// running and adjust its value. Don't attempt to do this if the Commlink's TotalSystem is 0 since this number is needed. Items with the
+				// Ergonomic Program Option also do not count towards this limit.
 				if (_objCharacter.Options.CalculateCommlinkResponse && TotalSystem != 0)
 				{
 					double dblProcessorLimit = TotalSystem;
 					double dblRunningPrograms = 0;
 					foreach (Gear objProgram in _objChildren)
 					{
-						if (objProgram.IsProgram && objProgram.Equipped)
+						if (objProgram.IsProgram && objProgram.Equipped && (!objProgram.IsErgonomic || (objProgram.IsErgonomic && !_objCharacter.Options.ErgonomicProgramLimit)))
 							dblRunningPrograms++;
 					}
 
@@ -12336,7 +12700,8 @@ namespace Chummer
 		/// <param name="objNode">TreeNode to populate a TreeView.</param>
 		/// <param name="intRating">Selected Rating for the Gear.</param>
 		/// <param name="blnAddImprovements">Whether or not Improvements should be added to the character.</param>
-		public void Create(XmlNode objXmlGear, Character objCharacter, TreeNode objNode, int intRating, bool blnAddImprovements = true)
+		/// <param name="blnCreateChildren">Whether or not child Gear should be created.</param>
+		public void Create(XmlNode objXmlGear, Character objCharacter, TreeNode objNode, int intRating, bool blnAddImprovements = true, bool blnCreateChildren = true)
 		{
 			_strName = objXmlGear["name"].InnerText;
 			_strCategory = objXmlGear["category"].InnerText;
@@ -13922,7 +14287,8 @@ namespace Chummer
 		/// <param name="cmsVehicleWeapon">ContextMenuStrip to attach to Vehicle Weapons.</param>
 		/// <param name="cmsVehicleWeaponAccessory">ContextMenuStrip to attach to Weapon Accessories.</param>
 		/// <param name="cmsVehicleWeaponMod">ContextMenuStrip to attachk to Weapon Mods.</param>
-		public void Create(XmlNode objXmlVehicle, TreeNode objNode, ContextMenuStrip cmsVehicle, ContextMenuStrip cmsVehicleGear, ContextMenuStrip cmsVehicleWeapon, ContextMenuStrip cmsVehicleWeaponAccessory, ContextMenuStrip cmsVehicleWeaponMod)
+		/// <param name="blnCreateChildren">Whether or not child items should be created.</param>
+		public void Create(XmlNode objXmlVehicle, TreeNode objNode, ContextMenuStrip cmsVehicle, ContextMenuStrip cmsVehicleGear, ContextMenuStrip cmsVehicleWeapon, ContextMenuStrip cmsVehicleWeaponAccessory, ContextMenuStrip cmsVehicleWeaponMod, bool blnCreateChildren = true)
 		{
 			_strName = objXmlVehicle["name"].InnerText;
 			_strCategory = objXmlVehicle["category"].InnerText;
@@ -13969,7 +14335,7 @@ namespace Chummer
 			objNode.Tag = _guiID.ToString();
 
 			// If there are any VehicleMods that come with the Vehicle, add them.
-			if (objXmlVehicle.InnerXml.Contains("<mods>"))
+			if (objXmlVehicle.InnerXml.Contains("<mods>") && blnCreateChildren)
 			{
 				XmlDocument objXmlDocument = new XmlDocument();
 				objXmlDocument = XmlManager.Instance.Load("vehicles.xml");
@@ -13984,6 +14350,9 @@ namespace Chummer
 
 					if (objXmlVehicleMod.Attributes["rating"] != null)
 						intRating = Convert.ToInt32(objXmlVehicleMod.Attributes["rating"].InnerText);
+
+					if (objXmlVehicleMod.Attributes["select"] != null)
+						objMod.Extra = objXmlVehicleMod.Attributes["select"].InnerText;
 
 					objMod.Create(objXmlMod, objModNode, intRating);
 					objMod.IncludedInVehicle = true;
@@ -14000,7 +14369,7 @@ namespace Chummer
 			}
 
 			// If there is any Gear that comes with the Vehicle, add them.
-			if (objXmlVehicle.InnerXml.Contains("<gears>"))
+			if (objXmlVehicle.InnerXml.Contains("<gears>") && blnCreateChildren)
 			{
 				XmlDocument objXmlDocument = XmlManager.Instance.Load("gear.xml");
 
@@ -14045,7 +14414,7 @@ namespace Chummer
 			}
 
 			// If there are any Weapons that come with the Vehicle, add them.
-			if (objXmlVehicle.InnerXml.Contains("<weapons>"))
+			if (objXmlVehicle.InnerXml.Contains("<weapons>") && blnCreateChildren)
 			{
 				XmlDocument objXmlWeaponDocument = XmlManager.Instance.Load("weapons.xml");
 

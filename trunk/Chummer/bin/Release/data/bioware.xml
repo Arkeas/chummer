@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-908</version>
+	<version>-907</version>
 	<grades>
 		<grade>
 			<name>Standard</name>
@@ -1855,6 +1855,312 @@
 			<cost>40000</cost>
 			<source>AU</source>
 			<page>126</page>
+		</bioware>
+		<bioware>
+			<name>Adrenaline Pump (2050)</name>
+			<category>Basic</category>
+			<rating>3</rating>
+			<ess>Rating * 0.75</ess>
+			<capacity>0</capacity>
+			<avail>10F</avail>
+			<cost>Rating * 50000</cost>
+			<source>2050</source>
+			<page>189</page>
+		</bioware>
+		<bioware>
+			<name>Cerebral Booster (2050)</name>
+			<category>Cultured</category>
+			<rating>3</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>Rating * 55000</cost>
+			<bonus>
+				<specificattribute>
+					<name>LOG</name>
+					<val>Rating</val>
+				</specificattribute>
+			</bonus>
+			<source>2050</source>
+			<page>189</page>
+		</bioware>
+		<bioware>
+			<name>Damage Compensators (2050)</name>
+			<category>Cultured</category>
+			<rating>12</rating>
+			<ess>Rating * 0.1</ess>
+			<capacity>0</capacity>
+			<avail>10F</avail>
+			<cost>Rating * 50000</cost>
+			<bonus>
+				<conditionmonitor>
+					<thresholdoffset>Rating</thresholdoffset>
+				</conditionmonitor>
+			</bonus>
+			<source>2050</source>
+			<page>189</page>
+		</bioware>
+		<bioware>
+			<name>Enhanced Articulation (2050)</name>
+			<category>Basic</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>5</avail>
+			<cost>40000</cost>
+			<bonus>
+				<skillarticulation>
+					<bonus>1</bonus>
+				</skillarticulation>
+			</bonus>
+			<source>2050</source>
+			<page>190</page>
+		</bioware>
+		<bioware>
+			<name>Mnemonic Enhancer (2050)</name>
+			<category>Cultured</category>
+			<rating>3</rating>
+			<ess>Rating * 0.1</ess>
+			<capacity>0</capacity>
+			<avail>6</avail>
+			<cost>Rating * 15000</cost>
+			<bonus>
+				<memory>Rating</memory>
+				<skillcategory>
+					<name>Academic</name>
+					<bonus>Rating</bonus>
+				</skillcategory>
+				<skillcategory>
+					<name>Language</name>
+					<bonus>Rating</bonus>
+				</skillcategory>
+				<skillcategory>
+					<name>Professional</name>
+					<bonus>Rating</bonus>
+				</skillcategory>
+				<skillcategory>
+					<name>Street</name>
+					<bonus>Rating</bonus>
+				</skillcategory>
+			</bonus>
+			<source>2050</source>
+			<page>190</page>
+		</bioware>
+		<bioware>
+			<name>Muscle Augmentation (2050)</name>
+			<category>Basic</category>
+			<rating>4</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 5)R</avail>
+			<cost>Rating * 20000</cost>
+			<bonus>
+				<specificattribute>
+					<name>STR</name>
+					<val>Rating</val>
+				</specificattribute>
+			</bonus>
+			<source>2050</source>
+			<page>190</page>
+		</bioware>
+		<bioware>
+			<name>Muscle Toner (2050)</name>
+			<category>Basic</category>
+			<rating>4</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>(Rating * 5)R</avail>
+			<cost>Rating * 25000</cost>
+			<bonus>
+				<specificattribute>
+					<name>AGI</name>
+					<val>Rating</val>
+				</specificattribute>
+			</bonus>
+			<source>2050</source>
+			<page>190</page>
+		</bioware>
+		<bioware>
+			<name>Nephritic Screen (2050)</name>
+			<category>Basic</category>
+			<rating>6</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>Rating * 24000</cost>
+			<source>2050</source>
+			<page>190</page>
+		</bioware>
+		<bioware>
+			<name>Orthoskin (2050)</name>
+			<category>Basic</category>
+			<rating>3</rating>
+			<ess>Rating * 0.25</ess>
+			<capacity>0</capacity>
+			<avail>8R</avail>
+			<cost>Rating * 30000</cost>
+			<bonus>
+				<armor>
+					<b>Rating</b>
+					<i>Rating</i>
+				</armor>
+			</bonus>
+			<source>2050</source>
+			<page>190</page>
+		</bioware>
+		<bioware>
+			<name>Pain Editor (2050)</name>
+			<category>Cultured</category>
+			<ess>0.3</ess>
+			<capacity>0</capacity>
+			<avail>6F</avail>
+			<cost>60000</cost>
+			<source>2050</source>
+			<page>190</page>
+		</bioware>
+		<bioware>
+			<name>Platelet Factories (2050)</name>
+			<category>Basic</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>5</avail>
+			<cost>30000</cost>
+			<source>2050</source>
+			<page>191</page>
+		</bioware>
+		<bioware>
+			<name>Reflex Recorder (Skill Group) (2050)</name>
+			<category>Cultured</category>
+			<ess>0.2</ess>
+			<capacity>0</capacity>
+			<avail>8</avail>
+			<cost>25000</cost>
+			<bonus>
+				<selectskillgroup excludecategory="Magical Active,Resonance Active,Social Active,Technical Active,Vechicle Active">
+					<bonus>1</bonus>
+					<applytorating>yes</applytorating>
+				</selectskillgroup>
+			</bonus>
+			<source>2050</source>
+			<page>191</page>
+		</bioware>
+		<bioware>
+			<name>Reflex Recorder (Skill) (2050)</name>
+			<category>Cultured</category>
+			<ess>0.1</ess>
+			<capacity>0</capacity>
+			<avail>5</avail>
+			<cost>10000</cost>
+			<bonus>
+				<selectskill excludecategory="Magical Active,Resonance Active,Social Active,Technical Active,Vechicle Active">
+					<val>1</val>
+					<applytorating>yes</applytorating>
+				</selectskill>
+			</bonus>
+			<source>2050</source>
+			<page>191</page>
+		</bioware>
+		<bioware>
+			<name>Suprathyroid Gland (2050)</name>
+			<category>Basic</category>
+			<ess>0.7</ess>
+			<capacity>0</capacity>
+			<avail>8F</avail>
+			<cost>50000</cost>
+			<bonus>
+				<lifestylecost>10</lifestylecost>
+				<specificattribute>
+					<name>BOD</name>
+					<val>1</val>
+				</specificattribute>
+				<specificattribute>
+					<name>AGI</name>
+					<val>1</val>
+				</specificattribute>
+				<specificattribute>
+					<name precedence="1">REA</name>
+					<val>1</val>
+				</specificattribute>
+				<specificattribute>
+					<name>STR</name>
+					<val>1</val>
+				</specificattribute>
+			</bonus>
+			<source>2050</source>
+			<page>191</page>
+		</bioware>
+		<bioware>
+			<name>Symbiotes (2050)</name>
+			<category>Basic</category>
+			<rating>3</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>5</avail>
+			<cost>Rating * 20000</cost>
+			<source>2050</source>
+			<page>191</page>
+		</bioware>
+		<bioware>
+			<name>Synaptic Accelerator (2050)</name>
+			<category>Cultured</category>
+			<rating>3</rating>
+			<ess>Rating * 0.5</ess>
+			<capacity>0</capacity>
+			<avail>6R</avail>
+			<cost>Rating * 100000</cost>
+			<bonus>
+				<initiativepass>Rating</initiativepass>
+				<specificattribute>
+					<name precedence="1">REA</name>
+					<val>Rating</val>
+				</specificattribute>
+			</bonus>
+			<source>2050</source>
+			<page>191</page>
+		</bioware>
+		<bioware>
+			<name>Synthacardium (2050)</name>
+			<category>Basic</category>
+			<rating>3</rating>
+			<ess>Rating * 0.1</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>Rating * 10000</cost>
+			<bonus>
+				<skillgroup>
+					<name>Athletics</name>
+					<bonus>Rating</bonus>
+				</skillgroup>
+			</bonus>
+			<source>2050</source>
+			<page>191</page>
+		</bioware>
+		<bioware>
+			<name>Tailored Pheromones (2050)</name>
+			<category>Basic</category>
+			<rating>3</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>12</avail>
+			<cost>Rating * 22000</cost>
+			<bonus>
+				<skillcategory>
+					<name>Social Active</name>
+					<bonus>Rating</bonus>
+				</skillcategory>
+			</bonus>
+			<source>2050</source>
+			<page>191</page>
+		</bioware>
+		<bioware>
+			<name>Tracheal Filter (2050)</name>
+			<category>Basic</category>
+			<rating>6</rating>
+			<ess>Rating * 0.2</ess>
+			<capacity>0</capacity>
+			<avail>4</avail>
+			<cost>Rating * 30000</cost>
+			<source>2050</source>
+			<page>191</page>
 		</bioware>
 	</biowares>
 </chummer>

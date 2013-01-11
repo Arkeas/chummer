@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-921</version>
+	<version>-920</version>
 	<echoes>
 		<echo>
 			<name>Firewall Upgrade</name>
@@ -211,7 +211,7 @@
 			<page>147</page>
 		</echo>
 		<echo>
-			<name>Mind Over machine</name>
+			<name>Mind Over Machine</name>
 			<required>
 				<allof>
 					<echo>Immersion</echo>
@@ -239,7 +239,7 @@
 				</allof>
 			</required>
 			<source>UN</source>
-			<page>147</page>
+			<page>148</page>
 		</echo>
 		<echo>
 			<name>Connectivity</name>

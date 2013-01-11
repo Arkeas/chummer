@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-885</version>
+	<version>-884</version>
 	<categories>
 		<category>Armor</category>
 		<category>Clothing</category>
@@ -3249,6 +3249,18 @@
 			<cost>200</cost>
 			<source>HP</source>
 			<page>168</page>
+		</mod>
+		<mod>
+			<name>Internal Air Tank</name>
+			<category>General</category>
+			<b>0</b>
+			<i>0</i>
+			<maxrating>1</maxrating>
+			<armorcapacity>[1]</armorcapacity>
+			<avail>4</avail>
+			<cost>650</cost>
+			<source>SR4</source>
+			<page>342</page>
 		</mod>
 	</mods>
 </chummer>

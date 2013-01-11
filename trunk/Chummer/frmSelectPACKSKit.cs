@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
+using System.IO;
+using System.Text;
 
 namespace Chummer
 {
@@ -91,10 +93,13 @@ namespace Chummer
 			lstKits.DisplayMember = "Name";
 			lstKits.DataSource = lstKit;
 
-			//if (cboCategory.SelectedValue.ToString() == "Custom")
-			//    cmdDelete.Visible = true;
-			//else
-			//    cmdDelete.Visible = false;
+			if (lstKits.Items.Count == 0)
+				treContents.Nodes.Clear();
+
+			if (cboCategory.SelectedValue.ToString() == "Custom")
+			    cmdDelete.Visible = true;
+			else
+			    cmdDelete.Visible = false;
 		}
 
 		private void lstKits_SelectedIndexChanged(object sender, EventArgs e)
@@ -694,10 +699,66 @@ namespace Chummer
 
 		private void cmdDelete_Click(object sender, EventArgs e)
 		{
+			if (lstKits.Text == string.Empty)
+				return;
+
 			if (MessageBox.Show(LanguageManager.Instance.GetString("Message_DeletePACKSKit").Replace("{0}", lstKits.Text), LanguageManager.Instance.GetString("MessageTitle_Delete"), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.No)
 				return;
 
 			// Delete the selectec custom PACKS Kit.
+			// Find a custom PACKS Kit with the name. This is done without the XmlManager since we need to check each file individually.
+			XmlDocument objXmlDocument = new XmlDocument();
+			string strCustomPath = Path.Combine(Application.StartupPath, "data");
+			foreach (string strFile in Directory.GetFiles(strCustomPath, "custom*_packs.xml"))
+			{
+				objXmlDocument.Load(strFile);
+				XmlNodeList objXmlPACKSList = objXmlDocument.SelectNodes("/chummer/packs/pack[name = \"" + lstKits.SelectedValue + "\" and category = \"Custom\"]");
+				if (objXmlPACKSList.Count > 0)
+				{
+					// Read in the entire file.
+					XmlDocument objXmlCurrentDocument = new XmlDocument();
+					objXmlCurrentDocument.Load(strFile);
+
+					FileStream objStream = new FileStream(strFile, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+					XmlTextWriter objWriter = new XmlTextWriter(objStream, Encoding.Unicode);
+					objWriter.Formatting = Formatting.Indented;
+					objWriter.Indentation = 1;
+					objWriter.IndentChar = '\t';
+					objWriter.WriteStartDocument();
+
+					// <chummer>
+					objWriter.WriteStartElement("chummer");
+					// <packs>
+					objWriter.WriteStartElement("packs");
+
+					// If this is not a new file, write out the current contents.
+					XmlNodeList objXmlNodeList = objXmlCurrentDocument.SelectNodes("/chummer/packs/*");
+					foreach (XmlNode objXmlNode in objXmlNodeList)
+					{
+						if (objXmlNode["name"].InnerText != lstKits.SelectedValue.ToString())
+						{
+							// <pack>
+							objWriter.WriteStartElement("pack");
+							objXmlNode.WriteContentTo(objWriter);
+							// </pack>
+							objWriter.WriteEndElement();
+						}
+					}
+
+					// </packs>
+					objWriter.WriteEndElement();
+					// </chummer>
+					objWriter.WriteEndElement();
+
+					objWriter.WriteEndDocument();
+					objWriter.Close();
+					objStream.Close();
+				}
+			}
+
+			// Reload the PACKS files since they have changed.
+			_objXmlDocument = XmlManager.Instance.Load("packs.xml");
+			cboCategory_SelectedIndexChanged(sender, e);
 		}
 		#endregion
 
@@ -749,7 +810,13 @@ namespace Chummer
 
 		private void WriteGear(XmlDocument objXmlItemDocument, XmlNode objXmlGear, TreeNode objParent)
 		{
-			XmlNode objNode = objXmlItemDocument.SelectSingleNode("/chummer/gears/gear[name = \"" + objXmlGear["name"].InnerText + "\"]");
+			XmlNode objNode;
+			
+			if (objXmlGear["category"] != null)
+				objNode = objXmlItemDocument.SelectSingleNode("/chummer/gears/gear[name = \"" + objXmlGear["name"].InnerText + "\" and category = \"" + objXmlGear["category"].InnerText + "\"]");
+			else
+				objNode = objXmlItemDocument.SelectSingleNode("/chummer/gears/gear[name = \"" + objXmlGear["name"].InnerText + "\"]");
+			
 			TreeNode objChild = new TreeNode();
 			if (objNode["translate"] != null)
 				objChild.Text = objNode["translate"].InnerText;

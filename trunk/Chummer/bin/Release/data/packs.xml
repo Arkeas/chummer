@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-921</version>
+	<version>-920</version>
 	<categories>
 		<category>Attribute Kits</category>
 		<category>Skill Kits</category>
@@ -2540,7 +2540,7 @@
 					<name>AK-97</name>
 				</weapon>
 				<weapon>
-					<name>Walter MA-2100</name>
+					<name>Walther MA-2100</name>
 				</weapon>
 			</weapons>
 			<gears>
@@ -4170,7 +4170,7 @@
 					<name>GTS Tower (Large)</name>
 					<weapons>
 						<weapon>
-							<name>Walter MA-2100</name>
+							<name>Walther MA-2100</name>
 						</weapon>
 					</weapons>
 				</vehicle>

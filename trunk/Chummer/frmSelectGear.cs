@@ -224,10 +224,7 @@ namespace Chummer
 				}
 				else
 				{
-					if (_intMaxFirewall == 2 && _intMaxSystem == 2)
-						objXmlGearList = _objXmlDocument.SelectNodes("/chummer/gears/gear[category = \"" + cboCategory.SelectedValue + "\" and (" + _objCharacter.Options.BookXPath() + ")]");
-					else
-						objXmlGearList = _objXmlDocument.SelectNodes("/chummer/gears/gear[category = \"" + cboCategory.SelectedValue + "\" and (" + _objCharacter.Options.BookXPath() + ") and ((firewall > " + (_intMaxFirewall - 2) + " and firewall <= " + _intMaxFirewall + ") or (system > " + (_intMaxSystem - 2) + " and system <= " + _intMaxSystem + "))]");
+					objXmlGearList = _objXmlDocument.SelectNodes("/chummer/gears/gear[category = \"" + cboCategory.SelectedValue + "\" and (" + _objCharacter.Options.BookXPath() + ") and ((firewall > " + (_intMaxFirewall) + ") or (system > " + (_intMaxSystem) + "))]");
 				}
 			}
 
@@ -518,7 +515,7 @@ namespace Chummer
 		{
 			set
 			{
-				_intMaxFirewall = value + 2;
+				_intMaxFirewall = value;
 			}
 		}
 
@@ -529,7 +526,7 @@ namespace Chummer
 		{
 			set
 			{
-				_intMaxSystem = value + 2;
+				_intMaxSystem = value;
 			}
 		}
 
@@ -800,7 +797,7 @@ namespace Chummer
 					lblGearFirewall.Text = "";
 				}
 
-				if (objXmlGear["category"].InnerText.EndsWith("Software") || objXmlGear["category"].InnerText.EndsWith("Programs") || objXmlGear["category"].InnerText == "Program Options" || objXmlGear["category"].InnerText.StartsWith("Autosofts") || objXmlGear["category"].InnerText.StartsWith("Skillsoft"))
+				if (objXmlGear["category"].InnerText.EndsWith("Software") || objXmlGear["category"].InnerText.EndsWith("Programs") || objXmlGear["category"].InnerText == "Program Options" || objXmlGear["category"].InnerText.StartsWith("Autosofts") || objXmlGear["category"].InnerText.StartsWith("Skillsoft") || objXmlGear["category"].InnerText == "Program Packages" || objXmlGear["category"].InnerText == "Software Suites")
 					chkHacked.Visible = true;
 				else
 					chkHacked.Visible = false;

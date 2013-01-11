@@ -51,6 +51,7 @@
 			this.lblPowerPoints = new System.Windows.Forms.Label();
 			this.lblPowerPointsLabel = new System.Windows.Forms.Label();
 			this.tipTooltip = new System.Windows.Forms.ToolTip(this.components);
+			this.cmdOKAdd = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.nudCritterPowerRating)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -283,6 +284,17 @@
 			this.tipTooltip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
 			this.tipTooltip.ToolTipTitle = "Chummer Help";
 			// 
+			// cmdOKAdd
+			// 
+			this.cmdOKAdd.Location = new System.Drawing.Point(448, 246);
+			this.cmdOKAdd.Name = "cmdOKAdd";
+			this.cmdOKAdd.Size = new System.Drawing.Size(75, 23);
+			this.cmdOKAdd.TabIndex = 21;
+			this.cmdOKAdd.Tag = "String_AddMore";
+			this.cmdOKAdd.Text = "&Add && More";
+			this.cmdOKAdd.UseVisualStyleBackColor = true;
+			this.cmdOKAdd.Click += new System.EventHandler(this.cmdOKAdd_Click);
+			// 
 			// frmSelectCritterPower
 			// 
 			this.AcceptButton = this.cmdOK;
@@ -290,6 +302,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.CancelButton = this.cmdCancel;
 			this.ClientSize = new System.Drawing.Size(529, 311);
+			this.Controls.Add(this.cmdOKAdd);
 			this.Controls.Add(this.lblPowerPoints);
 			this.Controls.Add(this.lblPowerPointsLabel);
 			this.Controls.Add(this.lblCategory);
@@ -350,5 +363,6 @@
 		private System.Windows.Forms.Label lblPowerPoints;
 		private System.Windows.Forms.Label lblPowerPointsLabel;
 		private System.Windows.Forms.ToolTip tipTooltip;
+		private System.Windows.Forms.Button cmdOKAdd;
 	}
 }

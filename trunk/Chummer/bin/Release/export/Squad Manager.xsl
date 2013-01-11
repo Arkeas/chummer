@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Export for Squad Manager (http://stauder-online.de/sr/english.htm) -->
-<!-- Version -998 -->
+<!-- Version -997 -->
 <!-- ext:xml -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.stauer-online.de/sr/characters.xsd">
 	<xsl:output method="xml" version="1.0" encoding="utf-8" indent="yes"/>
@@ -149,11 +149,18 @@
 						<xsl:value-of select="nuyen"/>
 					</Money>
 				</xsl:if>
-				<xsl:if test="totalkarma &gt; 0">
-					<TotalKarma>
-						<xsl:value-of select="totalkarma"/>
-					</TotalKarma>
-				</xsl:if>
+				<xsl:choose>
+					<xsl:when test="totalkarma &gt; 0">
+						<TotalKarma>
+							<xsl:value-of select="totalkarma"/>
+						</TotalKarma>
+					</xsl:when>
+					<xsl:when test="count(expenses/expense[type = 'Karma' and refund = 'False' and amount &gt; 0]) &gt; 0">
+						<TotalKarma>
+							<xsl:value-of select="sum(expenses/expense[type = 'Karma' and refund = 'False' and amount &gt; 0]/amount)"/>
+						</TotalKarma>
+					</xsl:when>
+				</xsl:choose>
 				<xsl:if test="karma &gt; 0">
 					<RemainingKarma>
 						<xsl:value-of select="karma"/>
@@ -180,12 +187,12 @@
 				</Awakened>
 				<xsl:if test="magenabled = 'True'">
 					<Magic>
-						<xsl:value-of select="attributes/attribute[name = 'MAG']/value"/>
+						<xsl:value-of select="attributes/attribute[name = 'MAG']/total" />
 					</Magic>
 				</xsl:if>
 				<xsl:if test="resenabled = 'True'">
 					<Resonance>
-						<xsl:value-of select="attributes/attribute[name = 'RES']/value"/>
+						<xsl:value-of select="attributes/attribute[name = 'RES']/total" />
 					</Resonance>
 				</xsl:if>
 				<Essence>
@@ -505,7 +512,14 @@
 						<xsl:for-each select="armors/armor">
 							<xsl:element name="Armor">
 								<xsl:attribute name="Name">
-									<xsl:value-of select="name"/>
+									<xsl:choose>
+										<xsl:when test="armorname and string-length(armorname) &gt; 0">
+											<xsl:value-of select="armorname" />
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="name"/>
+										</xsl:otherwise>
+									</xsl:choose>
 								</xsl:attribute>
 								<xsl:attribute name="active">
 									<xsl:value-of select="translate(equipped, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')"/>
@@ -661,6 +675,7 @@
 					</Ammunitions>
 				</xsl:if>
 
+				<!-- Weapons -->
 				<xsl:if test="count(weapons/weapon[type != 'Melee' and category_english != 'Gear']) &gt; 0">
 					<Weapons>
 						<xsl:for-each select="weapons/weapon[type != 'Melee' and category_english != 'Gear']">
@@ -674,13 +689,20 @@
 											<xsl:attribute name="physical">false</xsl:attribute>
 											<xsl:value-of select="substring(damage_english, 1, string-length(damage_english) - 4)"/>
 										</xsl:when>
+										<xsl:when test="substring(damage, string-length(damage) - 3) = 'S(e)'">
+											<xsl:attribute name="physical">false</xsl:attribute>
+											<xsl:value-of select="substring(damage, 1, string-length(damage) - 4)"/>
+										</xsl:when>
 										<xsl:when test="substring(damage_english, string-length(damage_english) - 3) = 'P(f)'">
 											<xsl:value-of select="substring(damage_english, 1, string-length(damage_english) - 4)"/>
 										</xsl:when>
-										<xsl:when test="not(number(substring(damage_english, 1, 1)) = number(substring(damage_english, 1, 1)))">
+										<xsl:when test="substring(damage, string-length(damage) - 3) = 'P(f)'">
+											<xsl:value-of select="substring(damage, 1, string-length(damage) - 4)"/>
+										</xsl:when>
+										<xsl:when test="not(number(substring(damage, 1, 1)) = number(substring(damage, 1, 1)))">
 											<!-- no direct DV, assume something like "as toxin", and try to reconstruct the netto value -->
 											<xsl:choose>
-												<xsl:when test="contains(damage_english, 'Toxin')">
+												<xsl:when test="contains(damage, 'Toxin')">
 													<!-- search for the first suitable toxin in the gear listing and use its values, 0 if nothing is found -->
 													<xsl:choose>
 														<xsl:when test="count(/character/gears/gear[name_english = 'Narcoject']) &gt; 0">
@@ -699,10 +721,15 @@
 											</xsl:choose>
 										</xsl:when>
 										<xsl:otherwise>
-											<xsl:if test="substring(damage_english, string-length(damage_english)) = 'S'">
-												<xsl:attribute name="physical">false</xsl:attribute>
-											</xsl:if>
-											<xsl:value-of select="substring(damage_english, 1, string-length(damage_english) - 1)"/>
+											<xsl:choose>
+												<xsl:when test="substring(damage_english, string-length(damage_english)) = 'S'">
+													<xsl:attribute name="physical">false</xsl:attribute>
+												</xsl:when>
+												<xsl:when test="substring(damage, string-length(damage)) = 'S'">
+													<xsl:attribute name="physical">false</xsl:attribute>
+												</xsl:when>
+											</xsl:choose>
+											<xsl:value-of select="substring(damage, 1, string-length(damage) - 1)"/>
 										</xsl:otherwise>
 									</xsl:choose>
 								</xsl:element>
@@ -719,7 +746,13 @@
 									<xsl:when test="substring(damage_english, string-length(damage_english) - 3) = 'S(e)'">
 										<DamageType>Electrical</DamageType>
 									</xsl:when>
+									<xsl:when test="substring(damage, string-length(damage) - 3) = 'S(e)'">
+										<DamageType>Electrical</DamageType>
+									</xsl:when>
 									<xsl:when test="substring(damage_english, string-length(damage_english) - 3) = 'P(f)'">
+										<DamageType>FlechetteOnly</DamageType>
+									</xsl:when>
+									<xsl:when test="substring(damage, string-length(damage) - 3) = 'P(f)'">
 										<DamageType>FlechetteOnly</DamageType>
 									</xsl:when>
 									<xsl:when test="category_english = 'Flamethrowers'">
@@ -728,7 +761,13 @@
 									<xsl:when test="contains(damage_english, 'Toxin') or contains(damage_english, 'Chemical')">
 										<DamageType>Chemical</DamageType>
 									</xsl:when>
+									<xsl:when test="contains(damage, 'Toxin') or contains(damage, 'Chemical')">
+										<DamageType>Chemical</DamageType>
+									</xsl:when>
 									<xsl:when test="contains(damage_english, 'Grenade') or contains(damage_english, 'Mortar')">
+										<DamageType>Explosives</DamageType>
+									</xsl:when>
+									<xsl:when test="contains(damage, 'Grenade') or contains(damage, 'Mortar')">
 										<DamageType>Explosives</DamageType>
 									</xsl:when>
 									<xsl:when test="category_english = 'Laser Weapons'">
@@ -740,11 +779,11 @@
 								</xsl:choose>
 								<AmmoSize>
 									<xsl:choose>
-										<xsl:when test="number(ammo_english) = number(ammo_english)">
+										<xsl:when test="number(ammo) = number(ammo)">
 											<xsl:value-of select="ammo"/>
 										</xsl:when>
 										<xsl:otherwise>
-											<xsl:value-of select="substring-before(ammo_english, '(')"/>
+											<xsl:value-of select="substring-before(ammo, '(')"/>
 										</xsl:otherwise>
 									</xsl:choose>
 								</AmmoSize>
@@ -757,6 +796,14 @@
 										<xsl:when test="substring-before(substring-after(ammo_english, '('), ')') = 'm'">InternalMagazine</xsl:when>
 										<xsl:when test="substring-before(substring-after(ammo_english, '('), ')') = 'cy'">Cylinder</xsl:when>
 										<xsl:when test="substring-before(substring-after(ammo_english, '('), ')') = 'belt'">Belt</xsl:when>
+
+										<xsl:when test="substring-before(substring-after(ammo, '('), ')') = 'b'">BreakAction</xsl:when>
+										<xsl:when test="substring-before(substring-after(ammo, '('), ')') = 'c'">Clip</xsl:when>
+										<xsl:when test="substring-before(substring-after(ammo, '('), ')') = 'd'">Drum</xsl:when>
+										<xsl:when test="substring-before(substring-after(ammo, '('), ')') = 'ml'">MuzzleLoader</xsl:when>
+										<xsl:when test="substring-before(substring-after(ammo, '('), ')') = 'm'">InternalMagazine</xsl:when>
+										<xsl:when test="substring-before(substring-after(ammo, '('), ')') = 'cy'">Cylinder</xsl:when>
+										<xsl:when test="substring-before(substring-after(ammo, '('), ')') = 'belt'">Belt</xsl:when>
 										<xsl:otherwise>InternalMagazine</xsl:otherwise>
 									</xsl:choose>
 								</AmmunitionType>

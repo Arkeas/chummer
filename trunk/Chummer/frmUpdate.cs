@@ -538,12 +538,13 @@ namespace Chummer
 		/// </summary>
 		private void wc_DownloadExeFileCompleted(object sender, AsyncCompletedEventArgs e)
 		{
+			string strAppPath = Application.ExecutablePath;
+			string strArchive = strAppPath + ".old";
+			string strNewPath = Path.Combine(Path.GetTempPath(), "chummer.exe");
+
 			if (ValidateExecutable())
 			{
 				_blnExeDownloadSuccess = true;
-				string strAppPath = Application.ExecutablePath;
-				string strArchive = strAppPath + ".old";
-				string strNewPath = Path.Combine(Path.GetTempPath(), "chummer.exe");
 
 				// Copy over the executable.
 				try
@@ -564,6 +565,7 @@ namespace Chummer
 				_blnExeDownloaded = false;
 				_blnExeDownloadSuccess = false;
 				File.Delete(Path.Combine(Path.GetTempPath(), "chummer.exe"));
+				File.Move(strArchive, strNewPath);
 			}
 		}
 
