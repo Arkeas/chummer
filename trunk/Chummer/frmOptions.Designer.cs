@@ -101,6 +101,8 @@
 			this.tabGeneral = new System.Windows.Forms.TabPage();
 			this.tabControl2 = new System.Windows.Forms.TabControl();
 			this.tabGlobal = new System.Windows.Forms.TabPage();
+			this.lblXSLT = new System.Windows.Forms.Label();
+			this.cboXSLT = new System.Windows.Forms.ComboBox();
 			this.lblLanguage = new System.Windows.Forms.Label();
 			this.cboLanguage = new System.Windows.Forms.ComboBox();
 			this.cmdVerify = new System.Windows.Forms.Button();
@@ -108,6 +110,8 @@
 			this.chkSingleDiceRoller = new System.Windows.Forms.CheckBox();
 			this.chkStartupFullscreen = new System.Windows.Forms.CheckBox();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.cboEssenceDecimals = new System.Windows.Forms.ComboBox();
+			this.lblEssenceDecimals = new System.Windows.Forms.Label();
 			this.chkPrintNotes = new System.Windows.Forms.CheckBox();
 			this.lblLimbCount = new System.Windows.Forms.Label();
 			this.chkAllowSkillDiceRolling = new System.Windows.Forms.CheckBox();
@@ -256,8 +260,8 @@
 			this.lblSetting = new System.Windows.Forms.Label();
 			this.lblSettingName = new System.Windows.Forms.Label();
 			this.txtSettingName = new System.Windows.Forms.TextBox();
-			this.lblEssenceDecimals = new System.Windows.Forms.Label();
-			this.cboEssenceDecimals = new System.Windows.Forms.ComboBox();
+			this.cmdRestoreDefaultsKarma = new System.Windows.Forms.Button();
+			this.cmdRestoreDefaultsBP = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaComplexFormOption)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaMetamagic)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaInitiation)).BeginInit();
@@ -863,7 +867,7 @@
 			// chkAutomaticUpdate
 			// 
 			this.chkAutomaticUpdate.AutoSize = true;
-			this.chkAutomaticUpdate.Location = new System.Drawing.Point(9, 33);
+			this.chkAutomaticUpdate.Location = new System.Drawing.Point(9, 107);
 			this.chkAutomaticUpdate.Name = "chkAutomaticUpdate";
 			this.chkAutomaticUpdate.Size = new System.Drawing.Size(116, 17);
 			this.chkAutomaticUpdate.TabIndex = 4;
@@ -1040,6 +1044,8 @@
 			// tabGlobal
 			// 
 			this.tabGlobal.BackColor = System.Drawing.SystemColors.Control;
+			this.tabGlobal.Controls.Add(this.lblXSLT);
+			this.tabGlobal.Controls.Add(this.cboXSLT);
 			this.tabGlobal.Controls.Add(this.lblLanguage);
 			this.tabGlobal.Controls.Add(this.cboLanguage);
 			this.tabGlobal.Controls.Add(this.cmdVerify);
@@ -1055,6 +1061,25 @@
 			this.tabGlobal.Tag = "Tab_Options_Global";
 			this.tabGlobal.Text = "Global";
 			// 
+			// lblXSLT
+			// 
+			this.lblXSLT.AutoSize = true;
+			this.lblXSLT.Location = new System.Drawing.Point(6, 36);
+			this.lblXSLT.Name = "lblXSLT";
+			this.lblXSLT.Size = new System.Drawing.Size(124, 13);
+			this.lblXSLT.TabIndex = 7;
+			this.lblXSLT.Tag = "Label_Options_DefaultCharacterSheet";
+			this.lblXSLT.Text = "Default Character Sheet:";
+			// 
+			// cboXSLT
+			// 
+			this.cboXSLT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cboXSLT.FormattingEnabled = true;
+			this.cboXSLT.Location = new System.Drawing.Point(136, 33);
+			this.cboXSLT.Name = "cboXSLT";
+			this.cboXSLT.Size = new System.Drawing.Size(266, 21);
+			this.cboXSLT.TabIndex = 8;
+			// 
 			// lblLanguage
 			// 
 			this.lblLanguage.AutoSize = true;
@@ -1069,7 +1094,7 @@
 			// 
 			this.cboLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboLanguage.FormattingEnabled = true;
-			this.cboLanguage.Location = new System.Drawing.Point(79, 6);
+			this.cboLanguage.Location = new System.Drawing.Point(136, 6);
 			this.cboLanguage.Name = "cboLanguage";
 			this.cboLanguage.Size = new System.Drawing.Size(162, 21);
 			this.cboLanguage.TabIndex = 1;
@@ -1078,7 +1103,7 @@
 			// cmdVerify
 			// 
 			this.cmdVerify.Enabled = false;
-			this.cmdVerify.Location = new System.Drawing.Point(247, 6);
+			this.cmdVerify.Location = new System.Drawing.Point(304, 6);
 			this.cmdVerify.Name = "cmdVerify";
 			this.cmdVerify.Size = new System.Drawing.Size(75, 23);
 			this.cmdVerify.TabIndex = 2;
@@ -1089,7 +1114,7 @@
 			// cmdVerifyData
 			// 
 			this.cmdVerifyData.Enabled = false;
-			this.cmdVerifyData.Location = new System.Drawing.Point(328, 6);
+			this.cmdVerifyData.Location = new System.Drawing.Point(385, 6);
 			this.cmdVerifyData.Name = "cmdVerifyData";
 			this.cmdVerifyData.Size = new System.Drawing.Size(90, 23);
 			this.cmdVerifyData.TabIndex = 3;
@@ -1100,7 +1125,7 @@
 			// chkSingleDiceRoller
 			// 
 			this.chkSingleDiceRoller.AutoSize = true;
-			this.chkSingleDiceRoller.Location = new System.Drawing.Point(9, 79);
+			this.chkSingleDiceRoller.Location = new System.Drawing.Point(9, 153);
 			this.chkSingleDiceRoller.Name = "chkSingleDiceRoller";
 			this.chkSingleDiceRoller.Size = new System.Drawing.Size(251, 17);
 			this.chkSingleDiceRoller.TabIndex = 6;
@@ -1111,7 +1136,7 @@
 			// chkStartupFullscreen
 			// 
 			this.chkStartupFullscreen.AutoSize = true;
-			this.chkStartupFullscreen.Location = new System.Drawing.Point(9, 56);
+			this.chkStartupFullscreen.Location = new System.Drawing.Point(9, 130);
 			this.chkStartupFullscreen.Name = "chkStartupFullscreen";
 			this.chkStartupFullscreen.Size = new System.Drawing.Size(154, 17);
 			this.chkStartupFullscreen.TabIndex = 5;
@@ -1146,6 +1171,25 @@
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Tag = "Tab_Options_Character";
 			this.tabPage2.Text = "Character and Printing";
+			// 
+			// cboEssenceDecimals
+			// 
+			this.cboEssenceDecimals.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cboEssenceDecimals.FormattingEnabled = true;
+			this.cboEssenceDecimals.Location = new System.Drawing.Point(242, 301);
+			this.cboEssenceDecimals.Name = "cboEssenceDecimals";
+			this.cboEssenceDecimals.Size = new System.Drawing.Size(61, 21);
+			this.cboEssenceDecimals.TabIndex = 17;
+			// 
+			// lblEssenceDecimals
+			// 
+			this.lblEssenceDecimals.AutoSize = true;
+			this.lblEssenceDecimals.Location = new System.Drawing.Point(6, 304);
+			this.lblEssenceDecimals.Name = "lblEssenceDecimals";
+			this.lblEssenceDecimals.Size = new System.Drawing.Size(230, 13);
+			this.lblEssenceDecimals.TabIndex = 16;
+			this.lblEssenceDecimals.Tag = "Label_Options_EssenceDecimals";
+			this.lblEssenceDecimals.Text = "Number of decimal places to round Essence to:";
 			// 
 			// chkPrintNotes
 			// 
@@ -1380,6 +1424,7 @@
 			// tabBPCosts
 			// 
 			this.tabBPCosts.BackColor = System.Drawing.SystemColors.Control;
+			this.tabBPCosts.Controls.Add(this.cmdRestoreDefaultsBP);
 			this.tabBPCosts.Controls.Add(this.lblBPComplexFormOption);
 			this.tabBPCosts.Controls.Add(this.nudBPComplexFormOption);
 			this.tabBPCosts.Controls.Add(this.lblBPComplexForm);
@@ -1656,6 +1701,7 @@
 			// tabKarmaCosts
 			// 
 			this.tabKarmaCosts.BackColor = System.Drawing.SystemColors.Control;
+			this.tabKarmaCosts.Controls.Add(this.cmdRestoreDefaultsKarma);
 			this.tabKarmaCosts.Controls.Add(this.lblKarmaWeaponFocusExtra);
 			this.tabKarmaCosts.Controls.Add(this.nudKarmaWeaponFocus);
 			this.tabKarmaCosts.Controls.Add(this.lblKarmaWeaponFocus);
@@ -2808,24 +2854,31 @@
 			this.txtSettingName.Size = new System.Drawing.Size(190, 20);
 			this.txtSettingName.TabIndex = 3;
 			// 
-			// lblEssenceDecimals
+			// cmdRestoreDefaultsKarma
 			// 
-			this.lblEssenceDecimals.AutoSize = true;
-			this.lblEssenceDecimals.Location = new System.Drawing.Point(6, 304);
-			this.lblEssenceDecimals.Name = "lblEssenceDecimals";
-			this.lblEssenceDecimals.Size = new System.Drawing.Size(230, 13);
-			this.lblEssenceDecimals.TabIndex = 16;
-			this.lblEssenceDecimals.Tag = "Label_Options_EssenceDecimals";
-			this.lblEssenceDecimals.Text = "Number of decimal places to round Essence to:";
+			this.cmdRestoreDefaultsKarma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.cmdRestoreDefaultsKarma.AutoSize = true;
+			this.cmdRestoreDefaultsKarma.Location = new System.Drawing.Point(703, 533);
+			this.cmdRestoreDefaultsKarma.Name = "cmdRestoreDefaultsKarma";
+			this.cmdRestoreDefaultsKarma.Size = new System.Drawing.Size(96, 23);
+			this.cmdRestoreDefaultsKarma.TabIndex = 108;
+			this.cmdRestoreDefaultsKarma.Tag = "Button_Options_RestoreDefaults";
+			this.cmdRestoreDefaultsKarma.Text = "Restore Defaults";
+			this.cmdRestoreDefaultsKarma.UseVisualStyleBackColor = true;
+			this.cmdRestoreDefaultsKarma.Click += new System.EventHandler(this.cmdRestoreDefaultsKarma_Click);
 			// 
-			// cboEssenceDecimals
+			// cmdRestoreDefaultsBP
 			// 
-			this.cboEssenceDecimals.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.cboEssenceDecimals.FormattingEnabled = true;
-			this.cboEssenceDecimals.Location = new System.Drawing.Point(242, 301);
-			this.cboEssenceDecimals.Name = "cboEssenceDecimals";
-			this.cboEssenceDecimals.Size = new System.Drawing.Size(61, 21);
-			this.cboEssenceDecimals.TabIndex = 17;
+			this.cmdRestoreDefaultsBP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.cmdRestoreDefaultsBP.AutoSize = true;
+			this.cmdRestoreDefaultsBP.Location = new System.Drawing.Point(703, 536);
+			this.cmdRestoreDefaultsBP.Name = "cmdRestoreDefaultsBP";
+			this.cmdRestoreDefaultsBP.Size = new System.Drawing.Size(96, 23);
+			this.cmdRestoreDefaultsBP.TabIndex = 28;
+			this.cmdRestoreDefaultsBP.Tag = "Button_Options_RestoreDefaults";
+			this.cmdRestoreDefaultsBP.Text = "Restore Defaults";
+			this.cmdRestoreDefaultsBP.UseVisualStyleBackColor = true;
+			this.cmdRestoreDefaultsBP.Click += new System.EventHandler(this.cmdRestoreDefaultsBP_Click);
 			// 
 			// frmOptions
 			// 
@@ -3164,5 +3217,9 @@
 		private System.Windows.Forms.CheckBox chkErgonomicProgramLimit;
 		private System.Windows.Forms.ComboBox cboEssenceDecimals;
 		private System.Windows.Forms.Label lblEssenceDecimals;
+		private System.Windows.Forms.Label lblXSLT;
+		private System.Windows.Forms.ComboBox cboXSLT;
+		private System.Windows.Forms.Button cmdRestoreDefaultsKarma;
+		private System.Windows.Forms.Button cmdRestoreDefaultsBP;
 	}
 }

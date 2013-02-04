@@ -1,3 +1,46 @@
+Build XXX
+- added Restore Defaults buttons to the BP Cost and Karma Cost tabs in the Options window to restore the default values
+- fixed an issue where the Special Attributes do not count towards 50% Karma limit during character creation house rule would not work correctly if a Special Attribute put the character over the 50% Karma threshold
+
+New Strings
+- Button_Options_RestoreDefaults
+- Message_Options_RestoreDefaults
+- MessageTitle_Options_RestoreDefaults
+
+Build 445
+- Qualities that require Street Cred to be equal to or greater than Notoriety now meet the requirements when Street Cred and Notoriety are the same value (previously had to be greater which was wrong)
+- Monofilament Chainsaw now adds a Weapon to the character when selected
+- fixed an issue where Weapons that did not belong to an Exotic Category but used an Exotic Active Skill would only calculate their Dice Pools correctly if the character had a non-Specialized Exotic Active Skill
+- added True Drake Qualities from The Clutch of Dragons
+- the break Skill Group confirmation window now correctly shows the name of the Skill Group the Active Skill is a member of instead of the name of the Active Skill
+- swapping a Latent Quality for its fully-realised version now allows the character to start with MAG/RES of 1 and has the same effect as turning on the "Essence loss only reduces MAG/RES maximum" house rule
+- Convert to Cyberzombie now marks the character as having unsaved changes
+- Reduce Attribute now marks the character as having unsaved changes
+- fixed an issue where a Metavariant could be selected before selecting a Metatype which causes an error to be thrown
+- added a link to the current Dumpshock Thread to the Help menu
+- corrected the DV for the Fangs Weapon created by the Positive Quality
+- corrected the sourcebook for the Body Glove Spell
+- changed how the OK button positions itself in the Settings window in an attempt to keep its text being cutoff by the bottom of the window
+- Exotic Active Skills now populate their Specialization lists with the names of Weapons that make use of the Active Skill
+- added an option to select the default character sheet that will be used when opening the print view for a character
+
+New Strings
+- String_Break
+- Label_Options_DefaultCharacterSheet
+
+Build 441
+- fixed an issue where the default plugins that come with Cyberware (such as Image Link for Cybereyes) would not have their parent associated to them until loading a saved file, allowing their Grade to be changed
+- fixed an issue where clicking the Add & More button in the Select Cyberware window would cause plugins to be added to the last added item instead of the item originally selected
+- changed how the Select a Cyberware Suite calculates the total Nuyen and Essence costs
+- Cyberware Suites allow plugins up to any depth (recursive to any number)
+- Improvement Manager now supports forcing an item to use a specific side of the body
+- adding a Cyberware Suite now marks the character as having unsaved changes
+- Qualities can now have Essence, combined Attribute values, total Attribute value, Cyberware, Bioware, Cyberware categories, combined Skill Group values, Active Skills, and Street Cred being higher than Notoriety as prerequisites for selecting them to support the new Way of the Samurai Qualities
+- changed how the total values of Lifestyles are calculated in an attempt to avoid crashes on non-Windows computers using Wine
+- changed a number of items to use OS-independent path strings
+- Active Commlink checkbox no longer appears when a Commlink Upgrade is selected
+- Gear with Signal, Response, Firewall, and System can now be affected by Commlink Upgrade and Commlink Operating System Upgrade items to improve their Ratings
+
 Build 439
 - Cyberware attached to the character can now have plugins attached to plugins (recursive to any number)
 - Cyberware now supports items that both grant and consume capacity (X/[Y])

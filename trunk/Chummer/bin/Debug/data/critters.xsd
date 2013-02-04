@@ -80,7 +80,15 @@
 		<xs:element name="genetechcostmultiplier" minOccurs="0" maxOccurs="1" />
 		<xs:element name="infirm" type="xs:string" minOccurs="0" maxOccurs="1" />
 		<xs:element name="initiation" type="xs:string" minOccurs="0" maxOccurs="1" />
-		<xs:element name="initiative" type="xs:string" minOccurs="0" maxOccurs="1" />
+		<xs:element name="initiative" minOccurs="0" maxOccurs="1">
+		  <xs:complexType>
+		    <xs:simpleContent>
+			  <xs:extension base="xs:string">
+			    <xs:attribute name="precedence" type="xs:integer" use="optional" />
+			  </xs:extension>
+		    </xs:simpleContent>
+		  </xs:complexType>
+		</xs:element>
         <xs:element name="initiativepass" type="xs:string" minOccurs="0" maxOccurs="1" />
 		<xs:element name="initiativepassadd" type="xs:string" minOccurs="0" maxOccurs="1" />
 		<xs:element name="judgeintentions" type="xs:string" minOccurs="0" maxOccurs="1" />
@@ -261,6 +269,45 @@
       </xs:sequence>
 	  <xs:attribute name="unique" type="xs:string" use="optional" />
     </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="metavariant">
+    <xs:complexType>
+	  <xs:sequence>
+	    <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" />
+		<xs:element name="bp" type="xs:string" minOccurs="1" maxOccurs="1" />
+        <xs:element name="powers" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="power" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+		<xs:element name="qualities" minOccurs="0" maxOccurs="1">
+		  <xs:complexType>
+		    <xs:sequence>
+			  <xs:element name="positive" minOccurs="0" maxOccurs="1">
+			    <xs:complexType>
+				  <xs:sequence>
+				    <xs:element ref="quality" minOccurs="0" maxOccurs="unbounded" />
+				  </xs:sequence>
+				</xs:complexType>
+			  </xs:element>
+			  <xs:element name="negative" minOccurs="0" maxOccurs="1">
+			    <xs:complexType>
+				  <xs:sequence>
+				    <xs:element ref="quality" minOccurs="0" maxOccurs="unbounded" />
+				  </xs:sequence>
+				</xs:complexType>
+			  </xs:element>
+			</xs:sequence>
+		  </xs:complexType>
+		</xs:element>
+		<xs:element ref="bonus" minOccurs="0" maxOccurs="1" />
+		<xs:element name="source" type="xs:string" minOccurs="1" maxOccurs="1" />
+		<xs:element name="page" type="xs:string" minOccurs="1" maxOccurs="1" />
+	  </xs:sequence>
+	</xs:complexType>
   </xs:element>
   
   <xs:element name="quality" nillable="true">
@@ -494,6 +541,13 @@
 					</xs:element>
                     <xs:element name="source" type="xs:string" minOccurs="0" />
                     <xs:element name="page" type="xs:string" minOccurs="0" />
+					<xs:element name="metavariants" minOccurs="0" maxOccurs="1">
+						<xs:complexType>
+						  <xs:sequence>
+						    <xs:element ref="metavariant" minOccurs="0" maxOccurs="unbounded" />
+						  </xs:sequence>
+						</xs:complexType>
+					</xs:element>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>

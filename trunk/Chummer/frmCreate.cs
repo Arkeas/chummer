@@ -374,6 +374,7 @@ namespace Chummer
 					// Attach an EventHandler for the RatingChanged and SpecializationChanged Events.
 					objSkillControl.RatingChanged += objActiveSkill_RatingChanged;
 					objSkillControl.SpecializationChanged += objSkill_SpecializationChanged;
+					objSkillControl.BreakGroupClicked += objSkill_BreakGroupClicked;
 
 					objSkillControl.SkillName = objSkill.Name;
 					objSkillControl.SkillCategory = objSkill.SkillCategory;
@@ -391,6 +392,7 @@ namespace Chummer
 						else
 							objSkillControl.AddSpec(objXmlSpecialization.InnerText);
 					}
+
 					// Set the control's vertical position and add it to the Skills Panel.
 					objSkillControl.Top = i * objSkillControl.Height;
 					objSkillControl.Width = 510;
@@ -411,6 +413,7 @@ namespace Chummer
 					// Attach an EventHandler for the RatingChanged and SpecializationChanged Events.
 					objSkillControl.RatingChanged += objActiveSkill_RatingChanged;
 					objSkillControl.SpecializationChanged += objSkill_SpecializationChanged;
+					objSkillControl.BreakGroupClicked += objSkill_BreakGroupClicked;
 
 					objSkillControl.SkillName = objSkill.Name;
 					objSkillControl.SkillCategory = objSkill.SkillCategory;
@@ -428,6 +431,18 @@ namespace Chummer
 						else
 							objSkillControl.AddSpec(objXmlSpecialization.InnerText);
 					}
+
+					// Look through the Weapons file and grab the names of items that are part of the appropriate Exotic Category or use the matching Exoctic Skill.
+					XmlDocument objXmlWeaponDocument = XmlManager.Instance.Load("weapons.xml");
+					XmlNodeList objXmlWeaponList = objXmlWeaponDocument.SelectNodes("/chummer/weapons/weapon[category = \"" + objSkill.Name + "s\" or useskill = \"" + objSkill.Name + "s\"]");
+					foreach (XmlNode objXmlWeapon in objXmlWeaponList)
+					{
+						if (objXmlWeapon["translate"] != null)
+							objSkillControl.AddSpec(objXmlWeapon["translate"].InnerText);
+						else
+							objSkillControl.AddSpec(objXmlWeapon["name"].InnerText);
+					}
+
 					// Set the control's vertical position and add it to the Skills Panel.
 					objSkillControl.Top = i * objSkillControl.Height;
 					objSkillControl.Width = 510;
@@ -502,6 +517,7 @@ namespace Chummer
 					objSkillControl.RatingChanged += objKnowledgeSkill_RatingChanged;
 					objSkillControl.SpecializationChanged += objSkill_SpecializationChanged;
 					objSkillControl.DeleteSkill += objKnowledgeSkill_DeleteSkill;
+					objSkillControl.BreakGroupClicked += objSkill_BreakGroupClicked;
 
 					objSkillControl.KnowledgeSkill = true;
 					objSkillControl.SkillCategory = objSkill.SkillCategory;
@@ -1249,6 +1265,7 @@ namespace Chummer
 				{
 					objSkillControl.RatingChanged -= objActiveSkill_RatingChanged;
 					objSkillControl.SpecializationChanged -= objSkill_SpecializationChanged;
+					objSkillControl.BreakGroupClicked -= objSkill_BreakGroupClicked;
 				}
 
 				foreach (SkillGroupControl objGroupControl in panSkillGroups.Controls.OfType<SkillGroupControl>())
@@ -1261,6 +1278,7 @@ namespace Chummer
 					objSkillControl.RatingChanged -= objKnowledgeSkill_RatingChanged;
 					objSkillControl.SpecializationChanged -= objSkill_SpecializationChanged;
 					objSkillControl.DeleteSkill -= objKnowledgeSkill_DeleteSkill;
+					objSkillControl.BreakGroupClicked -= objSkill_BreakGroupClicked;
 				}
 
 				foreach (ContactControl objContactControl in panContacts.Controls.OfType<ContactControl>())
@@ -2065,6 +2083,9 @@ namespace Chummer
 			}
 
 			mnuSpecialCyberzombie.Visible = false;
+
+			_blnIsDirty = true;
+			UpdateWindowTitle();
 
 			UpdateCharacterInfo();
 		}
@@ -3713,16 +3734,36 @@ namespace Chummer
 				}
 				else
 				{
-					if (CalculatePrimaryAttributeBP() + CalculateSpecialAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
+					if (!_objOptions.SpecialAttributeKarmaLimit)
 					{
-						try
+						// Include Special Attributes in the max 50% of Karma spent on Attributes limit.
+						if (CalculatePrimaryAttributeBP() + CalculateSpecialAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
 						{
-							nudBOD.Value -= 1;
-							ShowAttributeBPRule();
+							try
+							{
+								nudBOD.Value -= 1;
+								ShowAttributeBPRule();
+							}
+							catch
+							{
+								nudBOD.Value = nudBOD.Minimum;
+							}
 						}
-						catch
+					}
+					else
+					{
+						// Don't include Special Attributes in the max 50% of Karma spent on Attributes limit.
+						if (CalculatePrimaryAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
 						{
-							nudBOD.Value = nudBOD.Minimum;
+							try
+							{
+								nudBOD.Value -= 1;
+								ShowAttributeBPRule();
+							}
+							catch
+							{
+								nudBOD.Value = nudBOD.Minimum;
+							}
 						}
 					}
 				}
@@ -3774,16 +3815,36 @@ namespace Chummer
 				}
 				else
 				{
-					if (CalculatePrimaryAttributeBP() + CalculateSpecialAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
+					if (!_objOptions.SpecialAttributeKarmaLimit)
 					{
-						try
+						// Include Special Attributes in the max 50% of Karma spent on Attributes limit.
+						if (CalculatePrimaryAttributeBP() + CalculateSpecialAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
 						{
-							nudAGI.Value -= 1;
-							ShowAttributeBPRule();
+							try
+							{
+								nudAGI.Value -= 1;
+								ShowAttributeBPRule();
+							}
+							catch
+							{
+								nudAGI.Value = nudAGI.Minimum;
+							}
 						}
-						catch
+					}
+					else
+					{
+						// Don't include Special Attributes in the max 50% of Karma spent on Attributes limit.
+						if (CalculatePrimaryAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
 						{
-							nudAGI.Value = nudAGI.Minimum;
+							try
+							{
+								nudAGI.Value -= 1;
+								ShowAttributeBPRule();
+							}
+							catch
+							{
+								nudAGI.Value = nudAGI.Minimum;
+							}
 						}
 					}
 				}
@@ -3835,16 +3896,36 @@ namespace Chummer
 				}
 				else
 				{
-					if (CalculatePrimaryAttributeBP() + CalculateSpecialAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
+					if (!_objOptions.SpecialAttributeKarmaLimit)
 					{
-						try
+						// Include Special Attributes in the max 50% of Karma spent on Attributes limit.
+						if (CalculatePrimaryAttributeBP() + CalculateSpecialAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
 						{
-							nudREA.Value -= 1;
-							ShowAttributeBPRule();
+							try
+							{
+								nudREA.Value -= 1;
+								ShowAttributeBPRule();
+							}
+							catch
+							{
+								nudREA.Value = nudREA.Minimum;
+							}
 						}
-						catch
+					}
+					else
+					{
+						// Don't include Special Attributes in the max 50% of Karma spent on Attributes limit.
+						if (CalculatePrimaryAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
 						{
-							nudREA.Value = nudREA.Minimum;
+							try
+							{
+								nudREA.Value -= 1;
+								ShowAttributeBPRule();
+							}
+							catch
+							{
+								nudREA.Value = nudREA.Minimum;
+							}
 						}
 					}
 				}
@@ -3896,16 +3977,36 @@ namespace Chummer
 				}
 				else
 				{
-					if (CalculatePrimaryAttributeBP() + CalculateSpecialAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
+					if (!_objOptions.SpecialAttributeKarmaLimit)
 					{
-						try
+						// Include Special Attributes in the max 50% of Karma spent on Attributes limit.
+						if (CalculatePrimaryAttributeBP() + CalculateSpecialAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
 						{
-							nudSTR.Value -= 1;
-							ShowAttributeBPRule();
+							try
+							{
+								nudSTR.Value -= 1;
+								ShowAttributeBPRule();
+							}
+							catch
+							{
+								nudSTR.Value = nudSTR.Minimum;
+							}
 						}
-						catch
+					}
+					else
+					{
+						// Don't include Special Attributes in the max 50% of Karma spent on Attributes limit.
+						if (CalculatePrimaryAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
 						{
-							nudSTR.Value = nudSTR.Minimum;
+							try
+							{
+								nudSTR.Value -= 1;
+								ShowAttributeBPRule();
+							}
+							catch
+							{
+								nudSTR.Value = nudSTR.Minimum;
+							}
 						}
 					}
 				}
@@ -3957,16 +4058,36 @@ namespace Chummer
 				}
 				else
 				{
-					if (CalculatePrimaryAttributeBP() + CalculateSpecialAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
+					if (!_objOptions.SpecialAttributeKarmaLimit)
 					{
-						try
+						// Include Special Attributes in the max 50% of Karma spent on Attributes limit.
+						if (CalculatePrimaryAttributeBP() + CalculateSpecialAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
 						{
-							nudCHA.Value -= 1;
-							ShowAttributeBPRule();
+							try
+							{
+								nudCHA.Value -= 1;
+								ShowAttributeBPRule();
+							}
+							catch
+							{
+								nudCHA.Value = nudCHA.Minimum;
+							}
 						}
-						catch
+					}
+					else
+					{
+						// Don't include Special Attributes in the max 50% of Karma spent on Attributes limit.
+						if (CalculatePrimaryAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
 						{
-							nudCHA.Value = nudCHA.Minimum;
+							try
+							{
+								nudCHA.Value -= 1;
+								ShowAttributeBPRule();
+							}
+							catch
+							{
+								nudCHA.Value = nudCHA.Minimum;
+							}
 						}
 					}
 				}
@@ -4018,16 +4139,36 @@ namespace Chummer
 				}
 				else
 				{
-					if (CalculatePrimaryAttributeBP() + CalculateSpecialAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
+					if (!_objOptions.SpecialAttributeKarmaLimit)
 					{
-						try
+						// Include Special Attributes in the max 50% of Karma spent on Attributes limit.
+						if (CalculatePrimaryAttributeBP() + CalculateSpecialAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
 						{
-							nudINT.Value -= 1;
-							ShowAttributeBPRule();
+							try
+							{
+								nudINT.Value -= 1;
+								ShowAttributeBPRule();
+							}
+							catch
+							{
+								nudINT.Value = nudINT.Minimum;
+							}
 						}
-						catch
+					}
+					else
+					{
+						// Don't include Special Attributes in the max 50% of Karma spent on Attributes limit.
+						if (CalculatePrimaryAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
 						{
-							nudINT.Value = nudINT.Minimum;
+							try
+							{
+								nudINT.Value -= 1;
+								ShowAttributeBPRule();
+							}
+							catch
+							{
+								nudINT.Value = nudINT.Minimum;
+							}
 						}
 					}
 				}
@@ -4079,16 +4220,36 @@ namespace Chummer
 				}
 				else
 				{
-					if (CalculatePrimaryAttributeBP() + CalculateSpecialAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
+					if (!_objOptions.SpecialAttributeKarmaLimit)
 					{
-						try
+						// Include Special Attributes in the max 50% of Karma spent on Attributes limit.
+						if (CalculatePrimaryAttributeBP() + CalculateSpecialAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
 						{
-							nudLOG.Value -= 1;
-							ShowAttributeBPRule();
+							try
+							{
+								nudLOG.Value -= 1;
+								ShowAttributeBPRule();
+							}
+							catch
+							{
+								nudLOG.Value = nudLOG.Minimum;
+							}
 						}
-						catch
+					}
+					else
+					{
+						// Don't include Special Attributes in the max 50% of Karma spent on Attributes limit.
+						if (CalculatePrimaryAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
 						{
-							nudLOG.Value = nudLOG.Minimum;
+							try
+							{
+								nudLOG.Value -= 1;
+								ShowAttributeBPRule();
+							}
+							catch
+							{
+								nudLOG.Value = nudLOG.Minimum;
+							}
 						}
 					}
 				}
@@ -4140,16 +4301,36 @@ namespace Chummer
 				}
 				else
 				{
-					if (CalculatePrimaryAttributeBP() + CalculateSpecialAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
+					if (!_objOptions.SpecialAttributeKarmaLimit)
 					{
-						try
+						// Include Special Attributes in the max 50% of Karma spent on Attributes limit.
+						if (CalculatePrimaryAttributeBP() + CalculateSpecialAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
 						{
-							nudWIL.Value -= 1;
-							ShowAttributeBPRule();
+							try
+							{
+								nudWIL.Value -= 1;
+								ShowAttributeBPRule();
+							}
+							catch
+							{
+								nudWIL.Value = nudWIL.Minimum;
+							}
 						}
-						catch
+					}
+					else
+					{
+						// Don't include Special Attributes in the max 50% of Karma spent on Attributes limit.
+						if (CalculatePrimaryAttributeBP() > ((_objCharacter.BuildKarma / 2) + (_objCharacter.MetatypeBP * 2)))
 						{
-							nudWIL.Value = nudWIL.Minimum;
+							try
+							{
+								nudWIL.Value -= 1;
+								ShowAttributeBPRule();
+							}
+							catch
+							{
+								nudWIL.Value = nudWIL.Minimum;
+							}
 						}
 					}
 				}
@@ -4349,7 +4530,7 @@ namespace Chummer
 			}
 
 			// If Comiling's Rating has changed, make sure the number of Services Owed by Sprites is brought in line.
-			if (objSkillControl.SkillName == "Copmpiling")
+			if (objSkillControl.SkillName == "Compiling")
 			{
 				foreach (SpiritControl objSpriteControl in panSprites.Controls)
 				{
@@ -4417,6 +4598,52 @@ namespace Chummer
 
 			_blnIsDirty = true;
 			UpdateWindowTitle();
+		}
+
+		private void objSkill_BreakGroupClicked(Object sender)
+		{
+			SkillControl objSkillControl = (SkillControl)sender;
+
+			SkillGroup objSkillGroup = new SkillGroup();
+			foreach (SkillGroupControl objSkillGroupControl in panSkillGroups.Controls)
+			{
+				if (objSkillGroupControl.GroupName == objSkillControl.SkillGroup)
+				{
+					objSkillGroup = objSkillGroupControl.SkillGroupObject;
+					break;
+				}
+			}
+
+			// Verify that the user wants to break the Skill Group.
+			if (MessageBox.Show(LanguageManager.Instance.GetString("Message_BreakSkillGroup").Replace("{0}", objSkillGroup.DisplayName), LanguageManager.Instance.GetString("MessageTitle_BreakSkillGroup"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+				return;
+			else
+			{
+				string strSkillGroup = objSkillControl.SkillGroup;
+				int intRating = 0;
+
+				// Break the Skill Group itself.
+				foreach (SkillGroupControl objSkillGroupControl in panSkillGroups.Controls)
+				{
+					if (objSkillGroupControl.GroupName == strSkillGroup)
+					{
+						intRating = objSkillGroupControl.GroupRating;
+						objSkillGroupControl.Broken = true;
+						break;
+					}
+				}
+
+				// Remove all of the Active Skills from the Skill Group being broken.
+				string strGroup = objSkillControl.SkillGroup;
+				foreach (SkillControl objActiveSkilll in panActiveSkills.Controls)
+				{
+					if (objActiveSkilll.IsGrouped && objActiveSkilll.SkillGroup == strGroup)
+					{
+						objActiveSkilll.IsGrouped = false;
+						objActiveSkilll.SkillRating = intRating;
+					}
+				}
+			}
 		}
 
 		private void objGroup_RatingChanged(Object sender)
@@ -7256,6 +7483,18 @@ namespace Chummer
 				else
 					objSkillControl.AddSpec(objXmlSpecialization.InnerText);
 			}
+
+			// Look through the Weapons file and grab the names of items that are part of the appropriate Exotic Category or use the matching Exoctic Skill.
+			XmlDocument objXmlWeaponDocument = XmlManager.Instance.Load("weapons.xml");
+			XmlNodeList objXmlWeaponList = objXmlWeaponDocument.SelectNodes("/chummer/weapons/weapon[category = \"" + frmPickExoticSkill.SelectedExoticSkill + "s\" or useskill = \"" + frmPickExoticSkill.SelectedExoticSkill + "s\"]");
+			foreach (XmlNode objXmlWeapon in objXmlWeaponList)
+			{
+				if (objXmlWeapon["translate"] != null)
+					objSkillControl.AddSpec(objXmlWeapon["translate"].InnerText);
+				else
+					objSkillControl.AddSpec(objXmlWeapon["name"].InnerText);
+			}
+
 			objSkillControl.SkillRatingMaximum = 6;
 			// Set the SkillControl's Location since scrolling the Panel causes it to actually change the child Controls' Locations.
 			objSkillControl.Location = new Point(0, objSkillControl.Height * i + panActiveSkills.AutoScrollPosition.Y);
@@ -8335,7 +8574,10 @@ namespace Chummer
 			
 			bool blnAddAgain = PickCyberware();
 			if (blnAddAgain)
+			{
+				treCyberware.SelectedNode = treCyberware.SelectedNode.Parent;
 				tsCyberwareAddAsPlugin_Click(sender, e);
+			}
 		}
 
 		private void tsWeaponAddAccessory_Click(object sender, EventArgs e)
@@ -17283,7 +17525,8 @@ namespace Chummer
 					chkActiveCommlink.Checked = objCommlink.IsActive;
 					_blnSkipRefresh = false;
 
-					chkActiveCommlink.Visible = true;
+					if (objCommlink.Category != "Commlink Upgrade")
+						chkActiveCommlink.Visible = true;
 				}
 				else if (objGear.GetType() == typeof(OperatingSystem))
 				{
@@ -20020,14 +20263,19 @@ namespace Chummer
 		/// <param name="intRating">Rating of the Cyberware.</param>
 		/// <param name="blnAddToCharacter">Whether or not the Cyberware should be added directly to the character.</param>
 		/// <param name="objParent">Parent Cyberware if the item is not being added directly to the character.</param>
-		private TreeNode CreateSuiteCyberware(XmlNode objXmlNode, Grade objGrade, int intRating, bool blnAddToCharacter, Improvement.ImprovementSource objSource, Cyberware objParent = null)
+		private TreeNode CreateSuiteCyberware(XmlNode objXmlItem, XmlNode objXmlNode, Grade objGrade, int intRating, bool blnAddToCharacter, Improvement.ImprovementSource objSource, string strType, Cyberware objParent = null)
 		{
 			// Create the Cyberware object.
 			List<Weapon> objWeapons = new List<Weapon>();
 			List<TreeNode> objWeaponNodes = new List<TreeNode>();
 			TreeNode objNode = new TreeNode();
 			Cyberware objCyberware = new Cyberware(_objCharacter);
-			objCyberware.Create(objXmlNode, _objCharacter, objGrade, objSource, intRating, objNode, objWeapons, objWeaponNodes);
+			string strForced = "";
+
+			if (objXmlItem["name"].Attributes["select"] != null)
+				strForced = objXmlItem["name"].Attributes["select"].InnerText;
+
+			objCyberware.Create(objXmlNode, _objCharacter, objGrade, objSource, intRating, objNode, objWeapons, objWeaponNodes, true, true, strForced);
 			objCyberware.Suite = true;
 
 			foreach (Weapon objWeapon in objWeapons)
@@ -20043,6 +20291,21 @@ namespace Chummer
 				_objCharacter.Cyberware.Add(objCyberware);
 			else
 				objParent.Children.Add(objCyberware);
+
+			foreach (XmlNode objXmlChild in objXmlItem.SelectNodes(strType + "s/" + strType))
+			{
+				XmlDocument objXmlDocument = XmlManager.Instance.Load(strType + ".xml");
+				XmlNode objXmlChildCyberware = objXmlDocument.SelectSingleNode("/chummer/" + strType + "s/" + strType + "[name = \"" + objXmlChild["name"].InnerText + "\"]");
+				TreeNode objChildNode = new TreeNode();
+				int intChildRating = 0;
+
+				if (objXmlChild["rating"] != null)
+					intChildRating = Convert.ToInt32(objXmlChild["rating"].InnerText);
+
+				objChildNode = CreateSuiteCyberware(objXmlChild, objXmlChildCyberware, objGrade, intChildRating, false, objSource, strType, objCyberware);
+				objNode.Nodes.Add(objChildNode);
+				objNode.Expand();
+			}
 
 			return objNode;
 		}
@@ -23292,7 +23555,7 @@ namespace Chummer
 
 		private void AddCyberwareSuite(Improvement.ImprovementSource objSource)
 		{
-			frmSelectCyberwareSuite frmPickCyberwareSuite = new frmSelectCyberwareSuite(objSource);
+			frmSelectCyberwareSuite frmPickCyberwareSuite = new frmSelectCyberwareSuite(objSource, _objCharacter);
 			frmPickCyberwareSuite.ShowDialog(this);
 
 			if (frmPickCyberwareSuite.DialogResult == DialogResult.Cancel)
@@ -23327,28 +23590,15 @@ namespace Chummer
 				if (objXmlItem["rating"] != null)
 					intRating = Convert.ToInt32(objXmlItem["rating"].InnerText);
 
-				objNode = CreateSuiteCyberware(objXmlCyberware, objGrade, intRating, true, objSource);
-
-				// Find the Cyberware that was just added and attach its plugins if applicable.
-				Cyberware objCyberware = _objFunctions.FindCyberware(objNode.Tag.ToString(), _objCharacter.Cyberware);
-				foreach (XmlNode objXmlChild in objXmlItem.SelectNodes(strType + "s/" + strType))
-				{
-					XmlNode objXmlChildCyberware = objXmlDocument.SelectSingleNode("/chummer/" + strType + "s/" + strType + "[name = \"" + objXmlChild["name"].InnerText + "\"]");
-					TreeNode objChildNode = new TreeNode();
-					int intChildRating = 0;
-
-					if (objXmlChild["rating"] != null)
-						intChildRating = Convert.ToInt32(objXmlChild["rating"].InnerText);
-
-					objChildNode = CreateSuiteCyberware(objXmlChildCyberware, objGrade, intChildRating, false, objSource, objCyberware);
-					objNode.Nodes.Add(objChildNode);
-				}
+				objNode = CreateSuiteCyberware(objXmlItem, objXmlCyberware, objGrade, intRating, true, objSource, strType, null);
 
 				objNode.Expand();
 				treCyberware.Nodes[intParentNode].Nodes.Add(objNode);
 				treCyberware.Nodes[intParentNode].Expand();
 			}
 
+			_blnIsDirty = true;
+			UpdateWindowTitle();
 			UpdateCharacterInfo();
 		}
 

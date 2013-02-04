@@ -172,6 +172,75 @@ namespace Chummer
 			}
 			if (cboLanguage.SelectedIndex == -1)
 				cboLanguage.SelectedValue = "en-us";
+
+			List<ListItem> lstFiles = new List<ListItem>();
+			// Populate the XSLT list with all of the XSL files found in the sheets directory.
+			foreach (string strFile in Directory.GetFiles(Application.StartupPath + Path.DirectorySeparatorChar + "sheets"))
+			{
+				// Only show files that end in .xsl. Do not include files that end in .xslt since they are used as "hidden" reference sheets (hidden because they are partial templates that cannot be used on their own).
+				if (!strFile.EndsWith(".xslt") && strFile.EndsWith(".xsl"))
+				{
+					string strFileName = strFile.Replace(Application.StartupPath + Path.DirectorySeparatorChar + "sheets" + Path.DirectorySeparatorChar, string.Empty).Replace(".xsl", string.Empty);
+					ListItem objItem = new ListItem();
+					objItem.Value = strFileName;
+					objItem.Name = strFileName;
+					lstFiles.Add(objItem);
+
+					//cboXSLT.Items.Add(strFileName);
+				}
+			}
+
+			try
+			{
+				// Populate the XSL list with all of the XSL files found in the sheets\[language] directory.
+				if (GlobalOptions.Instance.Language != "en-us")
+				{
+					XmlDocument objLanguageDocument = LanguageManager.Instance.XmlDoc;
+					string strLanguage = objLanguageDocument.SelectSingleNode("/chummer/name").InnerText;
+
+					foreach (string strFile in Directory.GetFiles(Application.StartupPath + Path.DirectorySeparatorChar + "sheets" + Path.DirectorySeparatorChar + GlobalOptions.Instance.Language))
+					{
+						// Only show files that end in .xsl. Do not include files that end in .xslt since they are used as "hidden" reference sheets (hidden because they are partial templates that cannot be used on their own).
+						if (!strFile.EndsWith(".xslt") && strFile.EndsWith(".xsl"))
+						{
+							string strFileName = strFile.Replace(Application.StartupPath + Path.DirectorySeparatorChar + "sheets" + Path.DirectorySeparatorChar + GlobalOptions.Instance.Language + Path.DirectorySeparatorChar, string.Empty).Replace(".xsl", string.Empty);
+							ListItem objItem = new ListItem();
+							objItem.Value = GlobalOptions.Instance.Language + Path.DirectorySeparatorChar + strFileName;
+							objItem.Name = strLanguage + ": " + strFileName;
+							lstFiles.Add(objItem);
+						}
+					}
+				}
+			}
+			catch
+			{
+			}
+
+			try
+			{
+				// Populate the XSLT list with all of the XSL files found in the sheets\omae directory.
+				foreach (string strFile in Directory.GetFiles(Application.StartupPath + Path.DirectorySeparatorChar + "sheets" + Path.DirectorySeparatorChar + "omae"))
+				{
+					// Only show files that end in .xsl. Do not include files that end in .xslt since they are used as "hidden" reference sheets (hidden because they are partial templates that cannot be used on their own).
+					if (!strFile.EndsWith(".xslt") && strFile.EndsWith(".xsl"))
+					{
+						string strFileName = strFile.Replace(Application.StartupPath + Path.DirectorySeparatorChar + "sheets" + Path.DirectorySeparatorChar + "omae" + Path.DirectorySeparatorChar, string.Empty).Replace(".xsl", string.Empty);
+						ListItem objItem = new ListItem();
+						objItem.Value = "omae" + Path.DirectorySeparatorChar + strFileName;
+						objItem.Name = LanguageManager.Instance.GetString("Menu_Main_Omae") + ": " + strFileName;
+						lstFiles.Add(objItem);
+					}
+				}
+			}
+			catch
+			{
+			}
+
+			cboXSLT.ValueMember = "Value";
+			cboXSLT.DisplayMember = "Name";
+			cboXSLT.DataSource = lstFiles;
+
+			cboXSLT.SelectedValue = GlobalOptions.Instance.DefaultCharacterSheet;
 		}
 		#endregion
 
@@ -191,6 +260,7 @@ namespace Chummer
 			GlobalOptions.Instance.Language = cboLanguage.SelectedValue.ToString();
 			GlobalOptions.Instance.StartupFullscreen = chkStartupFullscreen.Checked;
 			GlobalOptions.Instance.SingleDiceRoller = chkSingleDiceRoller.Checked;
+			GlobalOptions.Instance.DefaultCharacterSheet = cboXSLT.SelectedValue.ToString();
 			RegistryKey objRegistry = Registry.CurrentUser.CreateSubKey("Software\\Chummer");
 			objRegistry.SetValue("autoupdate", chkAutomaticUpdate.Checked.ToString());
 			objRegistry.SetValue("language", cboLanguage.SelectedValue.ToString());
@@ -417,6 +487,79 @@ namespace Chummer
 			if (!chkExceedNegativeQualitiesLimit.Enabled)
 				chkExceedNegativeQualitiesLimit.Checked = false;
 		}
+
+		private void cmdRestoreDefaultsBP_Click(object sender, EventArgs e)
+		{
+			// Verify that the user wants to reset these values.
+			if (MessageBox.Show(LanguageManager.Instance.GetString("Message_Options_RestoreDefaults"), LanguageManager.Instance.GetString("MessageTitle_Options_RestoreDefaults"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+				return;
+
+			// Restore the default BP values.
+			nudBPAttribute.Value = 10;
+			nudBPAttributeMax.Value = 15;
+			nudBPContact.Value = 1;
+			nudBPMartialArt.Value = 5;
+			nudBPMartialArtManeuver.Value = 2;
+			nudBPSkillGroup.Value = 10;
+			nudBPActiveSkill.Value = 4;
+			nudBPSkillSpecialization.Value = 2;
+			nudBPKnowledgeSkill.Value = 2;
+			nudBPSpell.Value = 3;
+			nudBPFocus.Value = 1;
+			nudBPSpirit.Value = 1;
+			nudBPComplexForm.Value = 1;
+			nudBPComplexFormOption.Value = 1;
+		}
+
+		private void cmdRestoreDefaultsKarma_Click(object sender, EventArgs e)
+		{
+			// Verify that the user wants to reset these values.
+			if (MessageBox.Show(LanguageManager.Instance.GetString("Message_Options_RestoreDefaults"), LanguageManager.Instance.GetString("MessageTitle_Options_RestoreDefaults"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+				return;
+
+			// Restore the default Karma values.
+			nudKarmaAttribute.Value = 5;
+			nudKarmaQuality.Value = 2;
+			nudKarmaSpecialization.Value = 2;
+			nudKarmaNewKnowledgeSkill.Value = 2;
+			nudKarmaNewActiveSkill.Value = 4;
+			nudKarmaNewSkillGroup.Value = 10;
+			nudKarmaImproveKnowledgeSkill.Value = 1;
+			nudKarmaImproveActiveSkill.Value = 2;
+			nudKarmaImproveSkillGroup.Value = 5;
+			nudKarmaSpell.Value = 5;
+			nudKarmaNewComplexForm.Value = 2;
+			nudKarmaImproveComplexForm.Value = 1;
+			nudKarmaComplexFormOption.Value = 2;
+			nudKarmaComplexFormSkillsoft.Value = 1;
+			nudKarmaNuyenPer.Value = 2500;
+			nudKarmaContact.Value = 2;
+			nudKarmaCarryover.Value = 5;
+			nudKarmaSpirit.Value = 2;
+			nudKarmaManeuver.Value = 4;
+			nudKarmaInitiation.Value = 3;
+			nudKarmaMetamagic.Value = 15;
+			nudKarmaJoinGroup.Value = 5;
+			nudKarmaLeaveGroup.Value = 1;
+
+			// Restore the default Karma Foci values.
+			nudKarmaAnchoringFocus.Value = 6;
+			nudKarmaBanishingFocus.Value = 3;
+			nudKarmaBindingFocus.Value = 3;
+			nudKarmaCenteringFocus.Value = 6;
+			nudKarmaCounterspellingFocus.Value = 3;
+			nudKarmaDiviningFocus.Value = 6;
+			nudKarmaDowsingFocus.Value = 6;
+			nudKarmaInfusionFocus.Value = 3;
+			nudKarmaMaskingFocus.Value = 6;
+			nudKarmaPowerFocus.Value = 6;
+			nudKarmaShieldingFocus.Value = 6;
+			nudKarmaSpellcastingFocus.Value = 4;
+			nudKarmaSummoningFocus.Value = 4;
+			nudKarmaSustainingFocus.Value = 2;
+			nudKarmaSymbolicLinkFocus.Value = 1;
+			nudKarmaWeaponFocus.Value = 3;
+		}
 		#endregion
 
 		#region Methods
@@ -435,8 +578,14 @@ namespace Chummer
 			nudForbiddenCostMultiplier.Left = chkMultiplyForbiddenCost.Left + chkMultiplyForbiddenCost.Width;
 			cboEssenceDecimals.Left = lblEssenceDecimals.Left + lblEssenceDecimals.Width + 6;
 
+			int intWidth = Math.Max(lblLanguage.Width, lblXSLT.Width);
+			cboLanguage.Left = lblLanguage.Left + intWidth + 6;
+			cmdVerify.Left = cboLanguage.Left + cboLanguage.Width + 6;
+			cmdVerifyData.Left = cmdVerify.Left + cmdVerify.Width + 6;
+			cboXSLT.Left = lblXSLT.Left + intWidth + 6;
+
 			// BP fields.
-			int intWidth = Math.Max(lblBPAttribute.Width, lblBPAttributeMax.Width);
+			intWidth = Math.Max(lblBPAttribute.Width, lblBPAttributeMax.Width);
 			intWidth = Math.Max(intWidth, lblBPContact.Width);
 			intWidth = Math.Max(intWidth, lblBPMartialArt.Width);
 			intWidth = Math.Max(intWidth, lblBPMartialArtManeuver.Width);
@@ -569,7 +718,7 @@ namespace Chummer
 
 			// Change the window size.
 			this.Width = intWidth + 29;
-			this.Height = tabControl1.Top + tabControl1.Height + cmdOK.Height + 45;
+			this.Height = tabControl1.Top + tabControl1.Height + cmdOK.Height + 55;
 			// Centre the OK button.
 			cmdOK.Left = (this.Width / 2) - (cmdOK.Width / 2);
 		}

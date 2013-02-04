@@ -43,7 +43,7 @@ namespace Chummer
 			{
 				TreeNode objNode = new TreeNode();
 				objNode.Tag = strFile;
-				objNode.Text = strFile.Replace(strFilePath + "\\", string.Empty);
+				objNode.Text = strFile.Replace(strFilePath + Path.DirectorySeparatorChar, string.Empty);
 				treFiles.Nodes.Add(objNode);
 			}
 
@@ -51,7 +51,7 @@ namespace Chummer
 			{
 				TreeNode objNode = new TreeNode();
 				objNode.Tag = strFile;
-				objNode.Text = strFile.Replace(strFilePath + "\\", string.Empty);
+				objNode.Text = strFile.Replace(strFilePath + Path.DirectorySeparatorChar, string.Empty);
 				treFiles.Nodes.Add(objNode);
 			}
 		}

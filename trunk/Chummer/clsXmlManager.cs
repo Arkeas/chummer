@@ -400,7 +400,7 @@ namespace Chummer
 			string strPath = Path.Combine(Application.StartupPath, "data");
 			foreach (string strFile in Directory.GetFiles(strPath, "*.xml"))
 			{
-				string strPathReplace = strPath + "\\";
+				string strPathReplace = strPath + Path.DirectorySeparatorChar;
 				string strFileName = strFile.Replace(strPathReplace, string.Empty);
 
 				// Do not bother to check custom files.

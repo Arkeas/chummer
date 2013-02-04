@@ -80,7 +80,15 @@
 		<xs:element name="genetechcostmultiplier" minOccurs="0" maxOccurs="1" />
 		<xs:element name="infirm" type="xs:string" minOccurs="0" maxOccurs="1" />
 		<xs:element name="initiation" type="xs:string" minOccurs="0" maxOccurs="1" />
-		<xs:element name="initiative" type="xs:string" minOccurs="0" maxOccurs="1" />
+		<xs:element name="initiative" minOccurs="0" maxOccurs="1">
+		  <xs:complexType>
+		    <xs:simpleContent>
+			  <xs:extension base="xs:string">
+			    <xs:attribute name="precedence" type="xs:integer" use="optional" />
+			  </xs:extension>
+		    </xs:simpleContent>
+		  </xs:complexType>
+		</xs:element>
         <xs:element name="initiativepass" type="xs:string" minOccurs="0" maxOccurs="1" />
 		<xs:element name="initiativepassadd" type="xs:string" minOccurs="0" maxOccurs="1" />
 		<xs:element name="judgeintentions" type="xs:string" minOccurs="0" maxOccurs="1" />
@@ -318,7 +326,7 @@
 					<xs:element name="allowgear" minOccurs="0" maxOccurs="1">
 						<xs:complexType>
 							<xs:sequence>
-								<xs:element name="gearcategory" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+								<xs:element name="gearcategory" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
 							</xs:sequence>
 						</xs:complexType>
 					</xs:element>
@@ -354,34 +362,7 @@
 				  <xs:sequence>
                     <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" />
                     <xs:element name="grade" type="xs:string" minOccurs="1" maxOccurs="1" />
-					<xs:element name="cyberwares" minOccurs="1" maxOccurs="1">
-					  <xs:complexType>
-					    <xs:sequence>
-						  <xs:element name="cyberware" minOccurs="1" maxOccurs="unbounded">
-						    <xs:complexType>
-							  <xs:sequence>
-							    <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" />
-								<xs:element name="rating" type="xs:integer" minOccurs="0" maxOccurs="1" />
-								<xs:element name="cyberwares" minOccurs="0" maxOccurs="1">
-								  <xs:complexType>
-								    <xs:sequence>
-									  <xs:element name="cyberware" minOccurs="1" maxOccurs="unbounded">
-									    <xs:complexType>
-										  <xs:sequence>
-										    <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" />
-											<xs:element name="rating" type="xs:integer" minOccurs="0" maxOccurs="1" />
-										  </xs:sequence>
-										</xs:complexType>
-									  </xs:element>
-									</xs:sequence>
-								  </xs:complexType>
-								</xs:element>
-							  </xs:sequence>
-							</xs:complexType>
-						  </xs:element>
-						</xs:sequence>
-					  </xs:complexType>
-					</xs:element>
+					<xs:element ref="cyberwares" minOccurs="1" maxOccurs="1" />
 				  </xs:sequence>
 				</xs:complexType>
 			  </xs:element>
@@ -391,6 +372,31 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  
+<xs:element name="cyberwares">
+  <xs:complexType>
+	<xs:sequence>
+	  <xs:element name="cyberware" minOccurs="1" maxOccurs="unbounded">
+		<xs:complexType>
+		  <xs:sequence>
+			<xs:element name="name" minOccurs="1" maxOccurs="1">
+			  <xs:complexType>
+				<xs:simpleContent>
+				  <xs:extension base="xs:string">
+					<xs:attribute name="select" type="xs:string" use="optional" />
+				  </xs:extension>
+				</xs:simpleContent>
+			  </xs:complexType>
+			</xs:element>
+			<xs:element name="rating" type="xs:integer" minOccurs="0" maxOccurs="1" />
+			<xs:element ref="cyberwares" minOccurs="0" maxOccurs="1" />
+		  </xs:sequence>
+		</xs:complexType>
+	  </xs:element>
+	</xs:sequence>
+  </xs:complexType>
+</xs:element>
+  
   <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">

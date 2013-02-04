@@ -385,6 +385,7 @@ namespace Chummer
 						else
 							objSkillControl.AddSpec(objXmlSpecialization.InnerText);
 					}
+
 					// Set the control's vertical position and add it to the Skills Panel.
 					objSkillControl.Width = 510;
 					objSkillControl.AutoScroll = false;
@@ -496,6 +497,18 @@ namespace Chummer
 						else
 							objSkillControl.AddSpec(objXmlSpecialization.InnerText);
 					}
+
+					// Look through the Weapons file and grab the names of items that are part of the appropriate Exotic Category or use the matching Exoctic Skill.
+					XmlDocument objXmlWeaponDocument = XmlManager.Instance.Load("weapons.xml");
+					XmlNodeList objXmlWeaponList = objXmlWeaponDocument.SelectNodes("/chummer/weapons/weapon[category = \"" + objSkill.Name + "s\" or useskill = \"" + objSkill.Name + "s\"]");
+					foreach (XmlNode objXmlWeapon in objXmlWeaponList)
+					{
+						if (objXmlWeapon["translate"] != null)
+							objSkillControl.AddSpec(objXmlWeapon["translate"].InnerText);
+						else
+							objSkillControl.AddSpec(objXmlWeapon["name"].InnerText);
+					}
+
 					// Set the control's vertical position and add it to the Skills Panel.
 					objSkillControl.Top = i * objSkillControl.Height;
 					objSkillControl.Width = 510;
@@ -2076,6 +2089,9 @@ namespace Chummer
 
 			mnuSpecialCyberzombie.Visible = false;
 
+			_blnIsDirty = true;
+			UpdateWindowTitle();
+
 			UpdateCharacterInfo();
 		}
 
@@ -2099,6 +2115,10 @@ namespace Chummer
 				_objImprovementManager.CreateImprovement(frmPickAttribute.SelectedAttribute, Improvement.ImprovementSource.AttributeLoss, "Attribute Loss", Improvement.ImprovementType.Attribute, "", 0, 1, 0, -1);
 			// Permanently reduce the Attribute's value.
 			_objCharacter.GetAttribute(frmPickAttribute.SelectedAttribute).Value -= 1;
+
+			_blnIsDirty = true;
+			UpdateWindowTitle();
+
 			UpdateCharacterInfo();
 		}
 
@@ -4089,10 +4109,20 @@ namespace Chummer
 			if (!ConfirmKarmaExpense(LanguageManager.Instance.GetString("Message_ConfirmKarmaExpense").Replace("{0}", objSkillControl.SkillObject.DisplayName).Replace("{1}", (objSkillControl.SkillRating + 1).ToString()).Replace("{2}", intKarmaCost.ToString())))
 				return;
 
+			SkillGroup objSkillGroup = new SkillGroup();
+			foreach (SkillGroupControl objSkillGroupControl in panSkillGroups.Controls)
+			{
+				if (objSkillGroupControl.GroupName == objSkillControl.SkillGroup)
+				{
+					objSkillGroup = objSkillGroupControl.SkillGroupObject;
+					break;
+				}
+			}
+
 			// If the Skill is Grouped, verify that the user wants to break the Group.
 			if (objSkillControl.IsGrouped)
 			{
-				if (MessageBox.Show(LanguageManager.Instance.GetString("Message_BreakSkillGroup").Replace("{0}", objSkillControl.SkillObject.DisplayName), LanguageManager.Instance.GetString("MessageTitle_BreakSkillGroup"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+				if (MessageBox.Show(LanguageManager.Instance.GetString("Message_BreakSkillGroup").Replace("{0}", objSkillGroup.DisplayName), LanguageManager.Instance.GetString("MessageTitle_BreakSkillGroup"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
 					return;
 				else
 				{
@@ -7360,6 +7390,18 @@ namespace Chummer
 				else
 					objSkillControl.AddSpec(objXmlSpecialization.InnerText);
 			}
+
+			// Look through the Weapons file and grab the names of items that are part of the appropriate Exotic Category or use the matching Exoctic Skill.
+			XmlDocument objXmlWeaponDocument = XmlManager.Instance.Load("weapons.xml");
+			XmlNodeList objXmlWeaponList = objXmlWeaponDocument.SelectNodes("/chummer/weapons/weapon[category = \"" + frmPickExoticSkill.SelectedExoticSkill + "s\" or useskill = \"" + frmPickExoticSkill.SelectedExoticSkill + "s\"]");
+			foreach (XmlNode objXmlWeapon in objXmlWeaponList)
+			{
+				if (objXmlWeapon["translate"] != null)
+					objSkillControl.AddSpec(objXmlWeapon["translate"].InnerText);
+				else
+					objSkillControl.AddSpec(objXmlWeapon["name"].InnerText);
+			}
+
 			objSkillControl.SkillRatingMaximum = 6;
 			// Set the SkillControl's Location since scrolling the Panel causes it to actually change the child Controls' Locations.
 			objSkillControl.Location = new Point(0, objSkillControl.Height * i + panActiveSkills.AutoScrollPosition.Y);
@@ -8732,6 +8774,14 @@ namespace Chummer
 					treWeapons.Nodes[0].Expand();
 				}
 
+				// If the new Quality is linked to a Latent source, see if the Quality that is being swapped out is the same as the one the new Quality is linked to.
+				// If so, set the character's OverrideSpecialAttributeEssenceLoss to true so that they always start with a Special Attribute value of 1.
+				if (objXmlQuality["latentsource"] != null)
+				{
+					if (objXmlQuality["latentsource"].InnerText == objQuality.Name)
+						_objCharacter.OverrideSpecialAttributeEssenceLoss = true;
+				}
+
 				// Add any additional Qualities that are forced on the character.
 				if (objXmlQuality.SelectNodes("addqualities/addquality").Count > 0)
 				{
@@ -9585,7 +9635,10 @@ namespace Chummer
 			
 			bool blnAddAgain = PickCyberware();
 			if (blnAddAgain)
+			{
+				treCyberware.SelectedNode = treCyberware.SelectedNode.Parent;
 				tsCyberwareAddAsPlugin_Click(sender, e);
+			}
 		}
 
 		private void tsWeaponAddAccessory_Click(object sender, EventArgs e)
@@ -13800,7 +13853,7 @@ namespace Chummer
 							intNewPenalty = _objCharacter.EssencePenalty;
 
 							// Restore the character's MAG/RES if they have it.
-							if (!_objOptions.ESSLossReducesMaximumOnly)
+							if (!_objCharacter.OverrideSpecialAttributeEssenceLoss && !_objCharacter.OverrideSpecialAttributeEssenceLoss)
 							{
 								if (intOldPenalty != intNewPenalty)
 								{
@@ -21511,7 +21564,7 @@ namespace Chummer
 
 				// Disable the Magic or Resonance Karma buttons if they have reached their current limits.
 				int intEssenceLoss = 0;
-				if (!_objOptions.ESSLossReducesMaximumOnly)
+				if (!_objOptions.ESSLossReducesMaximumOnly && !_objCharacter.OverrideSpecialAttributeEssenceLoss)
 					intEssenceLoss = _objCharacter.EssencePenalty;
 
 				if (_objCharacter.MAGEnabled)
@@ -22922,7 +22975,8 @@ namespace Chummer
 					chkActiveCommlink.Checked = objCommlink.IsActive;
 					_blnSkipRefresh = false;
 
-					chkActiveCommlink.Visible = true;
+					if (objCommlink.Category != "Commlink Upgrade")
+						chkActiveCommlink.Visible = true;
 				}
 				else if (objGear.GetType() == typeof(OperatingSystem))
 				{
@@ -23333,7 +23387,7 @@ namespace Chummer
 			decimal decEndingESS = Math.Floor(_objCharacter.Essence);
 			decimal decDifferent = decStartingESS - decEndingESS;
 
-			if (decDifferent > 0.0m && !_objOptions.ESSLossReducesMaximumOnly)
+			if (decDifferent > 0.0m && (!_objOptions.ESSLossReducesMaximumOnly && !_objCharacter.OverrideSpecialAttributeEssenceLoss))
 			{
 				// Permanently reduce the character's MAG/RES Attributes.
 				_objCharacter.MAG.Value -= Convert.ToInt32(decDifferent);

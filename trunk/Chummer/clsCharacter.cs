@@ -135,6 +135,7 @@ namespace Chummer
 		private int _intResponse = 1;
 		private int _intSignal = 1;
 		private int _intMaxSkillRating = 0;
+		private bool _blnOverrideSpecialAttributeESSLoss = false;
 
 		// Pseudo-Attributes use for Mystic Adepts.
 		private int _intMAGMagician = 0;
@@ -294,6 +295,8 @@ namespace Chummer
 				objWriter.WriteElementString("iscritter", _blnIsCritter.ToString());
 			if (_blnPossessed)
 				objWriter.WriteElementString("possessed", _blnPossessed.ToString());
+			if (_blnOverrideSpecialAttributeESSLoss)
+				objWriter.WriteElementString("overridespecialattributeessloss", _blnOverrideSpecialAttributeESSLoss.ToString());
 
 			// <karma />
 			objWriter.WriteElementString("karma", _intKarma.ToString());
@@ -874,6 +877,14 @@ namespace Chummer
 			try
 			{
 				_blnPossessed = Convert.ToBoolean(objXmlCharacter["possessed"].InnerText);
+			}
+			catch
+			{
+			}
+
+			try
+			{
+				_blnOverrideSpecialAttributeESSLoss = Convert.ToBoolean(objXmlCharacter["overridespecialattributeessloss"].InnerText);
 			}
 			catch
 			{
@@ -1511,14 +1522,14 @@ namespace Chummer
 			string strMugshotPath = "";
 			if (_strMugshot != "")
 			{
-				if (!Directory.Exists(Application.StartupPath + "\\mugshots"))
-					Directory.CreateDirectory(Application.StartupPath + "\\mugshots");
+				if (!Directory.Exists(Application.StartupPath + Path.DirectorySeparatorChar + "mugshots"))
+					Directory.CreateDirectory(Application.StartupPath + Path.DirectorySeparatorChar + "mugshots");
 				byte[] bytImage = Convert.FromBase64String(_strMugshot);
 				MemoryStream objImageStream = new MemoryStream(bytImage, 0, bytImage.Length);
 				objImageStream.Write(bytImage, 0, bytImage.Length);
 				Image imgMugshot = Image.FromStream(objImageStream, true);
-				imgMugshot.Save(Application.StartupPath + "\\mugshots\\" + guiImage.ToString() + ".img");
-				strMugshotPath = "file://" + (Application.StartupPath + "\\mugshots\\" + guiImage.ToString() + ".img").Replace("\\", "/");
+				imgMugshot.Save(Application.StartupPath + Path.DirectorySeparatorChar + "mugshots" + Path.DirectorySeparatorChar + guiImage.ToString() + ".img");
+				strMugshotPath = "file://" + (Application.StartupPath + Path.DirectorySeparatorChar + "mugshots" + Path.DirectorySeparatorChar + guiImage.ToString() + ".img").Replace(Path.DirectorySeparatorChar, '/');
 			}
 			// <mugshot />
 			objWriter.WriteElementString("mugshot", strMugshotPath);
@@ -3062,6 +3073,22 @@ namespace Chummer
 			set
 			{
 				_blnPossessed = value;
+			}
+		}
+
+		/// <summary>
+		/// Whether or not we should override the option of how Special Attribute Essence Loss is handled. When enabled, ESS loss always affects the character's maximum MAG/RES instead.
+		/// This should only be enabled as a result of swapping out a Latent Quality for its fully-realised version.
+		/// </summary>
+		public bool OverrideSpecialAttributeEssenceLoss
+		{
+			get
+			{
+				return _blnOverrideSpecialAttributeESSLoss;
+			}
+			set
+			{
+				_blnOverrideSpecialAttributeESSLoss = value;
 			}
 		}
 

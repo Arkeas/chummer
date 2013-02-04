@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-905</version>
+	<version>-904</version>
 	<powers>
 		<power>
 			<name>Analytics</name>
@@ -95,6 +95,7 @@
 			<limit>1</limit>
 			<required>
 				<quality>The Speaker's Way</quality>
+				<quality>The Totem's Way</quality>
 			</required>
 			<source>WA</source>
 			<page>14</page>
@@ -129,6 +130,7 @@
 			</bonus>
 			<required>
 				<quality>The Artist's Way</quality>
+				<quality>The Totem's Way</quality>
 			</required>
 			<source>WA</source>
 			<page>15</page>
@@ -447,6 +449,7 @@
 			</bonus>
 			<required>
 				<quality>The Artisan's Way</quality>
+				<quality>The Totem's Way</quality>
 			</required>
 			<source>WA</source>
 			<page>15</page>
@@ -785,6 +788,7 @@
 			</bonus>
 			<required>
 				<quality>The Athlete's Way</quality>
+				<quality>The Totem's Way</quality>
 			</required>
 			<source>WA</source>
 			<page>15</page>
@@ -842,6 +846,7 @@
 			</bonus>
 			<required>
 				<quality>The Magician's Way</quality>
+				<quality>The Totem's Way</quality>
 			</required>
 			<source>WA</source>
 			<page>15</page>
@@ -895,6 +900,7 @@
 			<limit>1</limit>
 			<required>
 				<quality>The Warrior's Way</quality>
+				<quality>The Totem's Way</quality>
 			</required>
 			<source>WA</source>
 			<page>15</page>
@@ -936,6 +942,7 @@
 			</bonus>
 			<required>
 				<quality>The Invisible Way</quality>
+				<quality>The Totem's Way</quality>
 			</required>
 			<source>WA</source>
 			<page>15</page>

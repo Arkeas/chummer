@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-877</version>
+	<version>-875</version>
 	<categories>
 		<category>Personal Mobility Vehicles</category>
 		<category>Bikes</category>
@@ -10593,6 +10593,68 @@
 			<source>2050</source>
 			<page>195</page>
 		</vehicle>
+		<vehicle>
+			<name>Black Arrow (Large)</name>
+			<category>Drones: Large</category>
+			<handling>4</handling>
+			<accel>50/250</accel>
+			<speed>1200</speed>
+			<pilot>5</pilot>
+			<body>9</body>
+			<armor>14</armor>
+			<sensor>4</sensor>
+			<devicerating>3</devicerating>
+			<avail>0</avail>
+			<cost>0</cost>
+			<mods>
+				<name>Additional Fuel Tank</name>
+				<name>Drone Rack, Small Landing</name>
+				<name>Drone Rack, Small Landing</name>
+				<name>Drone Rack, Small Landing</name>
+				<name>Drone Rack, Small Landing</name>
+				<name>Drone Rack, Small Landing</name>
+				<name>Drone Rack, Small Landing</name>
+				<name>Satellite Communication</name>
+				<name rating="5">Signature Masking</name>
+				<name>Weapon Mount (Reinforced, External, Turret, Remote)</name>
+				<name>Weapon Mount (Reinforced, External, Turret, Remote)</name>
+				<name>Weapon Mount (Reinforced, External, Turret, Remote)</name>
+				<name>Weapon Mount (Reinforced, External, Turret, Remote)</name>
+				<name>Weapon Mount (Reinforced, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Reinforced, Internal, Fixed, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Large Drone Sensor</gear>
+			</gears>
+			<source>COD</source>
+			<page>144</page>
+		</vehicle>
+		<vehicle>
+			<name>Aztechnology Lockheed Skynight</name>
+			<category>Winged Planes</category>
+			<handling>1</handling>
+			<accel>50/200</accel>
+			<speed>1000</speed>
+			<pilot>3</pilot>
+			<body>20</body>
+			<armor>17</armor>
+			<sensor>2</sensor>
+			<devicerating>3</devicerating>
+			<avail>0</avail>
+			<cost>0</cost>
+			<mods>
+				<name>Improved Takeoff and Landing Level 1</name>
+				<name rating="3">ECM</name>
+				<name rating="4">Personal Armor</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+			</mods>
+			<gears>
+				<gear rating="3">ECCM</gear>
+			</gears>
+			<source>COD</source>
+			<page>144</page>
+		</vehicle>
 	</vehicles>
 	<mods>
 		<mod>
@@ -11203,14 +11265,14 @@
 			<slots>1</slots>
 			<avail>6</avail>
 			<cost>Body * 400</cost>
+			<required>
+				<bodymax>16</bodymax>
+			</required>
 			<bonus>
 				<accel>-.5</accel>
 				<handling>-2</handling>
 				<speed>-.5</speed>
 			</bonus>
-			<required>
-				<bodymax>16</bodymax>
-			</required>
 			<source>AR</source>
 			<page>139</page>
 		</mod>

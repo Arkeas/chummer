@@ -6,6 +6,7 @@ using System.Xml;
 
 // RatingChanged Event Handler.
 public delegate void RatingChangedHandler(Object sender);
+public delegate void BreakGroupHandler(Object sender);
 // SpecializationChanged Event Handler.
 public delegate void SpecializationChangedHandler(Object sender);
 public delegate void SpecializationLeaveHandler(Object sender);
@@ -27,6 +28,7 @@ namespace Chummer
         public event DeleteSkillHandler DeleteSkill;
 		public event SkillKaramClickHandler SkillKarmaClicked;
 		public event DiceRollerHandler DiceRollerClicked;
+		public event BreakGroupHandler BreakGroupClicked;
 
 		private string _strOldSpec = "";
 		private bool _blnSkipRefresh = false;
@@ -456,6 +458,12 @@ namespace Chummer
 					cboSpec.Enabled = !value;
 				else
 					cboSpec.Enabled = true;
+
+				// If we're in Create Mode, show the Break Group button if the Skill is Grouped.
+				if (!_objSkill.CharacterObject.Created && _objSkill.IsGrouped)
+					cmdBreakGroup.Visible = false;
+				else
+					cmdBreakGroup.Visible = false;
 			}
 		}
 
@@ -725,5 +733,10 @@ namespace Chummer
 			}
 		}
 		#endregion
+
+		private void cmdBreakGroup_Click(object sender, EventArgs e)
+		{
+			BreakGroupClicked(this);
+		}
     }
 }

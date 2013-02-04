@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-910</version>
+	<version>-908</version>
 	<books>
 		<book>
 			<name>Arsenal</name>
@@ -153,6 +153,14 @@
 		<book>
 			<name>The Way of the Adept</name>
 			<code>WA</code>
+		</book>
+		<book>
+			<name>The Way of the Samurai</name>
+			<code>WS</code>
+		</book>
+		<book>
+			<name>The Clutch of Dragons</name>
+			<code>COD</code>
 		</book>
 	</books>
 </chummer>

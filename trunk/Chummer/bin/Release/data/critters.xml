@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-906</version>
+	<version>-905</version>
 	<categories>
 		<category>A.I.s</category>
 		<category>Dracoforms</category>
@@ -26331,6 +26331,10 @@
 				<metavariant>
 					<name>Ant</name>
 					<bp>0</bp>
+					<powers>
+						<power select="Acid">Elemental Attack</power>
+						<power>Hive Mind</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26344,16 +26348,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power select="Acid">Elemental Attack</power>
-						<power>Hive Mind</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Locust</name>
 					<bp>0</bp>
+					<powers>
+						<power>Devouring</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26367,15 +26370,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Devouring</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Termite</name>
 					<bp>0</bp>
+					<powers>
+						<power>Reinforcement</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26389,15 +26392,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Reinforcement</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Wasp</name>
 					<bp>0</bp>
+					<powers>
+						<power>Venom</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26411,15 +26414,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Venom</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Beetle</name>
 					<bp>0</bp>
+					<powers>
+						<power>Reinforcement</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26433,15 +26436,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Reinforcement</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Cicada</name>
 					<bp>0</bp>
+					<powers>
+						<power>Sonic Projection</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26455,15 +26458,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Sonic Projection</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Firefly</name>
 					<bp>0</bp>
+					<powers>
+						<power>Confusion</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26477,15 +26480,16 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Confusion</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Fly</name>
 					<bp>0</bp>
+					<powers>
+						<power>Pestilence</power>
+						<power select="Disease">Immunity</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26499,16 +26503,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Pestilence</power>
-						<power select="Disease">Immunity</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Mantid</name>
 					<bp>0</bp>
+					<powers>
+						<power>Energy Drain</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26522,9 +26525,6 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Energy Drain</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
@@ -26636,6 +26636,10 @@
 				<metavariant>
 					<name>Ant</name>
 					<bp>0</bp>
+					<powers>
+						<power select="Acid">Elemental Attack</power>
+						<power>Hive Mind</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26649,16 +26653,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power select="Acid">Elemental Attack</power>
-						<power>Hive Mind</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Locust</name>
 					<bp>0</bp>
+					<powers>
+						<power>Devouring</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26672,15 +26675,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Devouring</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Termite</name>
 					<bp>0</bp>
+					<powers>
+						<power>Reinforcement</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26694,15 +26697,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Reinforcement</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Wasp</name>
 					<bp>0</bp>
+					<powers>
+						<power>Venom</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26716,15 +26719,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Venom</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Beetle</name>
 					<bp>0</bp>
+					<powers>
+						<power>Reinforcement</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26738,15 +26741,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Reinforcement</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Cicada</name>
 					<bp>0</bp>
+					<powers>
+						<power>Sonic Projection</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26760,15 +26763,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Sonic Projection</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Firefly</name>
 					<bp>0</bp>
+					<powers>
+						<power>Confusion</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26782,15 +26785,16 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Confusion</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Fly</name>
 					<bp>0</bp>
+					<powers>
+						<power>Pestilence</power>
+						<power select="Disease">Immunity</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26804,16 +26808,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Pestilence</power>
-						<power select="Disease">Immunity</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Mantid</name>
 					<bp>0</bp>
+					<powers>
+						<power>Energy Drain</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26827,9 +26830,6 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Energy Drain</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
@@ -26947,6 +26947,10 @@
 				<metavariant>
 					<name>Ant</name>
 					<bp>0</bp>
+					<powers>
+						<power select="Acid">Elemental Attack</power>
+						<power>Hive Mind</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26960,16 +26964,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power select="Acid">Elemental Attack</power>
-						<power>Hive Mind</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Locust</name>
 					<bp>0</bp>
+					<powers>
+						<power>Devouring</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -26983,15 +26986,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Devouring</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Termite</name>
 					<bp>0</bp>
+					<powers>
+						<power>Reinforcement</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27005,15 +27008,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Reinforcement</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Wasp</name>
 					<bp>0</bp>
+					<powers>
+						<power>Venom</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27027,15 +27030,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Venom</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Beetle</name>
 					<bp>0</bp>
+					<powers>
+						<power>Reinforcement</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27049,15 +27052,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Reinforcement</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Cicada</name>
 					<bp>0</bp>
+					<powers>
+						<power>Sonic Projection</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27071,15 +27074,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Sonic Projection</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Firefly</name>
 					<bp>0</bp>
+					<powers>
+						<power>Confusion</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27093,15 +27096,16 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Confusion</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Fly</name>
 					<bp>0</bp>
+					<powers>
+						<power>Pestilence</power>
+						<power select="Disease">Immunity</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27115,16 +27119,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Pestilence</power>
-						<power select="Disease">Immunity</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Mantid</name>
 					<bp>0</bp>
+					<powers>
+						<power>Energy Drain</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27138,9 +27141,6 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Energy Drain</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
@@ -27257,6 +27257,10 @@
 				<metavariant>
 					<name>Ant</name>
 					<bp>0</bp>
+					<powers>
+						<power select="Acid">Elemental Attack</power>
+						<power>Hive Mind</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27270,16 +27274,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power select="Acid">Elemental Attack</power>
-						<power>Hive Mind</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Locust</name>
 					<bp>0</bp>
+					<powers>
+						<power>Devouring</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27293,15 +27296,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Devouring</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Termite</name>
 					<bp>0</bp>
+					<powers>
+						<power>Reinforcement</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27315,15 +27318,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Reinforcement</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Wasp</name>
 					<bp>0</bp>
+					<powers>
+						<power>Venom</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27337,15 +27340,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Venom</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Beetle</name>
 					<bp>0</bp>
+					<powers>
+						<power>Reinforcement</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27359,15 +27362,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Reinforcement</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Cicada</name>
 					<bp>0</bp>
+					<powers>
+						<power>Sonic Projection</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27381,15 +27384,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Sonic Projection</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Firefly</name>
 					<bp>0</bp>
+					<powers>
+						<power>Confusion</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27403,15 +27406,16 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Confusion</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Fly</name>
 					<bp>0</bp>
+					<powers>
+						<power>Pestilence</power>
+						<power select="Disease">Immunity</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27425,16 +27429,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Pestilence</power>
-						<power select="Disease">Immunity</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Mantid</name>
 					<bp>0</bp>
+					<powers>
+						<power>Energy Drain</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27448,9 +27451,6 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Energy Drain</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
@@ -27566,6 +27566,10 @@
 				<metavariant>
 					<name>Ant</name>
 					<bp>0</bp>
+					<powers>
+						<power select="Acid">Elemental Attack</power>
+						<power>Hive Mind</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27579,16 +27583,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power select="Acid">Elemental Attack</power>
-						<power>Hive Mind</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Locust</name>
 					<bp>0</bp>
+					<powers>
+						<power>Devouring</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27602,15 +27605,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Devouring</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Termite</name>
 					<bp>0</bp>
+					<powers>
+						<power>Reinforcement</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27624,15 +27627,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Reinforcement</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Wasp</name>
 					<bp>0</bp>
+					<powers>
+						<power>Venom</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27646,15 +27649,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Venom</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Beetle</name>
 					<bp>0</bp>
+					<powers>
+						<power>Reinforcement</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27668,15 +27671,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Reinforcement</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Cicada</name>
 					<bp>0</bp>
+					<powers>
+						<power>Sonic Projection</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27690,15 +27693,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Sonic Projection</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Firefly</name>
 					<bp>0</bp>
+					<powers>
+						<power>Confusion</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27712,15 +27715,16 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Confusion</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Fly</name>
 					<bp>0</bp>
+					<powers>
+						<power>Pestilence</power>
+						<power select="Disease">Immunity</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27734,16 +27738,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Pestilence</power>
-						<power select="Disease">Immunity</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Mantid</name>
 					<bp>0</bp>
+					<powers>
+						<power>Energy Drain</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27757,9 +27760,6 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Energy Drain</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
@@ -27882,6 +27882,10 @@
 				<metavariant>
 					<name>Ant</name>
 					<bp>0</bp>
+					<powers>
+						<power select="Acid">Elemental Attack</power>
+						<power>Hive Mind</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27895,16 +27899,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power select="Acid">Elemental Attack</power>
-						<power>Hive Mind</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Locust</name>
 					<bp>0</bp>
+					<powers>
+						<power>Devouring</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27918,15 +27921,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Devouring</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Termite</name>
 					<bp>0</bp>
+					<powers>
+						<power>Reinforcement</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27940,15 +27943,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Reinforcement</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Wasp</name>
 					<bp>0</bp>
+					<powers>
+						<power>Venom</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27962,15 +27965,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Venom</power>
-					</powers>
 					<source>SM</source>
 					<page>150</page>
 				</metavariant>
 				<metavariant>
 					<name>Beetle</name>
 					<bp>0</bp>
+					<powers>
+						<power>Reinforcement</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -27984,15 +27987,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Reinforcement</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Cicada</name>
 					<bp>0</bp>
+					<powers>
+						<power>Sonic Projection</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -28006,15 +28009,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Sonic Projection</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Firefly</name>
 					<bp>0</bp>
+					<powers>
+						<power>Confusion</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -28028,15 +28031,16 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Confusion</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Fly</name>
 					<bp>0</bp>
+					<powers>
+						<power>Pestilence</power>
+						<power select="Disease">Immunity</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -28050,16 +28054,15 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Pestilence</power>
-						<power select="Disease">Immunity</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>
 				<metavariant>
 					<name>Mantid</name>
 					<bp>0</bp>
+					<powers>
+						<power>Energy Drain</power>
+					</powers>
 					<bonus>
 						<addattribute>
 							<name>MAG</name>
@@ -28073,9 +28076,6 @@
 						</enabletab>
 						<initiativepass>1</initiativepass>
 					</bonus>
-					<powers>
-						<power>Energy Drain</power>
-					</powers>
 					<source>SM</source>
 					<page>151</page>
 				</metavariant>

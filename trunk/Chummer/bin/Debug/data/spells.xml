@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-918</version>
+	<version>-917</version>
 	<categories>
 		<category>Combat</category>
 		<category>Detection</category>
@@ -3084,7 +3084,7 @@
 			<damage>0</damage>
 			<duration>S</duration>
 			<dv>(F/2)+4</dv>
-			<source>LoP</source>
+			<source>LOP</source>
 			<page>23</page>
 		</spell>
 		<spell>

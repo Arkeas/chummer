@@ -3,7 +3,7 @@
 	<file>
 		<name>chummer.exe</name>
 		<type>Application</type>
-		<version>0.0.0.439</version>
+		<version>0.0.0.445</version>
 		<description>Chummer</description>
 		<notes>- Chummer Application</notes>
 	</file>
@@ -157,7 +157,7 @@
 	<file>
 		<name>data/armor.xml</name>
 		<type>Data Files</type>
-		<version>-884</version>
+		<version>-883</version>
 		<description>Armor</description>
 		<notes>- Armor data file</notes>
 	</file>
@@ -171,7 +171,7 @@
 	<file>
 		<name>data/books.xml</name>
 		<type>Data Files</type>
-		<version>-910</version>
+		<version>-908</version>
 		<description>Books</description>
 		<notes>- Books data file</notes>
 	</file>
@@ -185,14 +185,14 @@
 	<file>
 		<name>data/critters.xml</name>
 		<type>Data Files</type>
-		<version>-906</version>
+		<version>-905</version>
 		<description>Critters</description>
 		<notes>- Critters data file</notes>
 	</file>
 	<file>
 		<name>data/cyberware.xml</name>
 		<type>Data Files</type>
-		<version>-893</version>
+		<version>-891</version>
 		<description>Cyberware</description>
 		<notes>- Cyberware data file</notes>
 	</file>
@@ -206,7 +206,7 @@
 	<file>
 		<name>data/gear.xml</name>
 		<type>Data Files</type>
-		<version>-829</version>
+		<version>-827</version>
 		<description>Gear</description>
 		<notes>- Gear data file</notes>
 	</file>
@@ -255,7 +255,7 @@
 	<file>
 		<name>data/packs.xml</name>
 		<type>Data Files</type>
-		<version>-920</version>
+		<version>-919</version>
 		<description>PACKS</description>
 		<notes>- PACKS data file</notes>
 	</file>
@@ -269,7 +269,7 @@
 	<file>
 		<name>data/powers.xml</name>
 		<type>Data Files</type>
-		<version>-905</version>
+		<version>-904</version>
 		<description>Powers</description>
 		<notes>- Powers data file</notes>
 	</file>
@@ -283,7 +283,7 @@
 	<file>
 		<name>data/qualities.xml</name>
 		<type>Data Files</type>
-		<version>-880</version>
+		<version>-878</version>
 		<description>Qualities</description>
 		<notes>- Qualities data file</notes>
 	</file>
@@ -304,7 +304,7 @@
 	<file>
 		<name>data/spells.xml</name>
 		<type>Data Files</type>
-		<version>-918</version>
+		<version>-917</version>
 		<description>Spells</description>
 		<notes>- Spells data file</notes>
 	</file>
@@ -325,7 +325,7 @@
 	<file>
 		<name>data/vehicles.xml</name>
 		<type>Data Files</type>
-		<version>-877</version>
+		<version>-875</version>
 		<description>Vehicles</description>
 		<notes>- Vehicles data file</notes>
 	</file>
@@ -339,7 +339,7 @@
 	<file>
 		<name>data/weapons.xml</name>
 		<type>Data Files</type>
-		<version>-859</version>
+		<version>-856</version>
 		<description>Weapons</description>
 		<notes>- Weapons data file</notes>
 	</file>
