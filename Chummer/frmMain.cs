@@ -137,6 +137,11 @@ namespace Chummer
 			System.Diagnostics.Process.Start("http://www.chummergen.com/chummer/wiki/");
 		}
 
+		private void mnuHelpDumpshock_Click(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start("http://forums.dumpshock.com/index.php?showtopic=36737");
+		}
+
 		private void mnuFilePrintMultiple_Click(object sender, EventArgs e)
 		{
 			frmPrintMultiple frmPrintMultipleCharacters = new frmPrintMultiple();

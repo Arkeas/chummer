@@ -29,6 +29,12 @@ namespace Chummer
 
 		private void frmUpdate_Load(object sender, EventArgs e)
 		{
+			if (Application.StartupPath.Contains("\\Debug"))
+			{
+				MessageBox.Show("Cannot run Update from a debug path.");
+				this.Close();
+			}
+
 			FetchXML();
 		}
 
@@ -256,7 +262,7 @@ namespace Chummer
 				{
 					try
 					{
-						objXmlFileDocument.Load(Application.StartupPath + "\\" + objXmlNode["name"].InnerText.Replace("/", "\\"));
+						objXmlFileDocument.Load(Application.StartupPath + Path.DirectorySeparatorChar + objXmlNode["name"].InnerText.Replace('/', Path.DirectorySeparatorChar));
 						objXmlFileNode = objXmlFileDocument.SelectSingleNode("/chummer/version");
 						if (Convert.ToInt32(objXmlNode["version"].InnerText) > Convert.ToInt32(objXmlFileNode.InnerText))
 							blnCreateNode = true;
@@ -274,7 +280,7 @@ namespace Chummer
 				{
 					try
 					{
-						StreamReader objFile = new StreamReader(Application.StartupPath + "\\" + objXmlNode["name"].InnerText.Replace("/", "\\"));
+						StreamReader objFile = new StreamReader(Application.StartupPath + Path.DirectorySeparatorChar + objXmlNode["name"].InnerText.Replace('/', Path.DirectorySeparatorChar));
 						string strLine = "";
 						while ((strLine = objFile.ReadLine()) != null)
 						{
@@ -415,10 +421,10 @@ namespace Chummer
 						if (nodNode.Tag.ToString().Contains(".xml") || nodNode.Tag.ToString().Contains(".xsl"))
 						{
 							// Make sure the target directory exists. If it doesn't, create it.
-							string[] strCheckDirectory = (strFilePath + nodNode.Tag.ToString().Replace("/", "\\")).Split('\\');
+							string[] strCheckDirectory = (strFilePath + nodNode.Tag.ToString().Replace('/', Path.DirectorySeparatorChar)).Split(Path.DirectorySeparatorChar);
 							StringBuilder strDirectory = new StringBuilder();
 							for (int i = 0; i < strCheckDirectory.Length - 1; i++)
-								strDirectory.Append(strCheckDirectory[i]).Append("\\");
+								strDirectory.Append(strCheckDirectory[i]).Append(Path.DirectorySeparatorChar);
 							if (!Directory.Exists(strDirectory.ToString()))
 								Directory.CreateDirectory(strDirectory.ToString());
 
@@ -426,9 +432,9 @@ namespace Chummer
 							wc.Encoding = Encoding.UTF8;
 							wc.DownloadFileCompleted += wc_DownloadFileCompleted;
 							if (nodNode.Tag.ToString().Contains("lang/"))
-								wc.DownloadFileAsync(new Uri("http://www.chummergen.com/dev/chummer/" + nodNode.Tag.ToString()), strFilePath + nodNode.Tag.ToString().Replace("/", "\\"));
+								wc.DownloadFileAsync(new Uri("http://www.chummergen.com/dev/chummer/" + nodNode.Tag.ToString()), strFilePath + nodNode.Tag.ToString().Replace('/', Path.DirectorySeparatorChar));
 							else
-								wc.DownloadFileAsync(new Uri("http://www.chummergen.com/dev/chummer/" + nodNode.Tag.ToString().Replace(".xml", ".zip")), strFilePath + nodNode.Tag.ToString().Replace("/", "\\").Replace(".xml", ".zip"));
+								wc.DownloadFileAsync(new Uri("http://www.chummergen.com/dev/chummer/" + nodNode.Tag.ToString().Replace(".xml", ".zip")), strFilePath + nodNode.Tag.ToString().Replace('/', Path.DirectorySeparatorChar).Replace(".xml", ".zip"));
 						}
 						else
 						{
@@ -472,7 +478,7 @@ namespace Chummer
 		private bool ValidateFiles()
 		{
 			bool blnReturn = true;
-			string strFilePath = Application.StartupPath + "\\";
+			string strFilePath = Application.StartupPath + Path.DirectorySeparatorChar;
 			
 			// Loop through all of the root-level nodes in the update tree.
 			foreach (TreeNode nodRoot in treeUpdate.Nodes)
@@ -482,7 +488,7 @@ namespace Chummer
 				{
 					if (nodNode.Checked)
 					{
-						FileInfo objInfo = new FileInfo(strFilePath + nodNode.Tag.ToString().Replace("/", "\\"));
+						FileInfo objInfo = new FileInfo(strFilePath + nodNode.Tag.ToString().Replace('/', Path.DirectorySeparatorChar));
 						if (objInfo.Length == 0)
 							blnReturn = false;
 					}

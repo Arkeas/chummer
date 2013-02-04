@@ -80,7 +80,15 @@
 		<xs:element name="genetechcostmultiplier" minOccurs="0" maxOccurs="1" />
 		<xs:element name="infirm" type="xs:string" minOccurs="0" maxOccurs="1" />
 		<xs:element name="initiation" type="xs:string" minOccurs="0" maxOccurs="1" />
-		<xs:element name="initiative" type="xs:string" minOccurs="0" maxOccurs="1" />
+		<xs:element name="initiative" minOccurs="0" maxOccurs="1">
+		  <xs:complexType>
+		    <xs:simpleContent>
+			  <xs:extension base="xs:string">
+			    <xs:attribute name="precedence" type="xs:integer" use="optional" />
+			  </xs:extension>
+		    </xs:simpleContent>
+		  </xs:complexType>
+		</xs:element>
         <xs:element name="initiativepass" type="xs:string" minOccurs="0" maxOccurs="1" />
 		<xs:element name="initiativepassadd" type="xs:string" minOccurs="0" maxOccurs="1" />
 		<xs:element name="judgeintentions" type="xs:string" minOccurs="0" maxOccurs="1" />

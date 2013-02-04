@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-880</version>
+	<version>-878</version>
 	<categories>
 		<category>Positive</category>
 		<category>Negative</category>
@@ -62,6 +62,7 @@
 					<quality>Technomancer</quality>
 				</oneof>
 			</forbidden>
+			<latentsource>Latent Awakening</latentsource>
 			<source>SR4</source>
 			<page>90</page>
 		</quality>
@@ -349,6 +350,7 @@
 					<quality>Technomancer</quality>
 				</oneof>
 			</forbidden>
+			<latentsource>Latent Awakening</latentsource>
 			<source>SM</source>
 			<page>24</page>
 		</quality>
@@ -1525,6 +1527,7 @@
 					<metatypecategory>Shapeshifter</metatypecategory>
 				</oneof>
 			</forbidden>
+			<latentsource>Latent Dracomorphosis</latentsource>
 			<addqualities>
 				<addquality>Distinctive Style</addquality>
 			</addqualities>
@@ -4346,6 +4349,7 @@
 					<quality>Technomancer</quality>
 				</oneof>
 			</forbidden>
+			<latentsource>Latent Awakening</latentsource>
 			<source>SR4</source>
 			<page>91</page>
 		</quality>
@@ -4742,6 +4746,7 @@
 					<quality>Technomancer</quality>
 				</oneof>
 			</forbidden>
+			<latentsource>Latent Awakening</latentsource>
 			<source>SR4</source>
 			<page>92</page>
 		</quality>
@@ -5656,6 +5661,7 @@
 					<quality>Technomancer</quality>
 				</oneof>
 			</forbidden>
+			<latentsource>Latent Awakening</latentsource>
 			<source>SM</source>
 			<page>26</page>
 		</quality>
@@ -5697,6 +5703,7 @@
 					<quality>Technomancer</quality>
 				</oneof>
 			</forbidden>
+			<latentsource>Latent Awakening</latentsource>
 			<source>SM</source>
 			<page>26</page>
 		</quality>
@@ -5848,6 +5855,7 @@
 					<metatypecategory>Shapeshifter</metatypecategory>
 				</oneof>
 			</forbidden>
+			<latentsource>Latent Technomancer</latentsource>
 			<source>SR4</source>
 			<page>93</page>
 		</quality>
@@ -5979,7 +5987,7 @@
 		</quality>
 		<quality>
 			<name>The Totem's Way</name>
-			<bp>10</bp>
+			<bp>15</bp>
 			<category>Positive</category>
 			<bonus />
 			<required>
@@ -10275,6 +10283,622 @@
 			</required>
 			<source>RW</source>
 			<page>197</page>
+		</quality>
+		<quality>
+			<name>Bodyguard</name>
+			<bp>10</bp>
+			<category>Positive</category>
+			<bonus>
+				<specificskill>
+					<name>Perception</name>
+					<bonus>2</bonus>
+				</specificskill>
+			</bonus>
+			<required>
+				<allof>
+					<attributetotal>
+						<attributes>CHA+INT</attributes>
+						<val>7</val>
+					</attributetotal>
+					<ess>-3.0</ess>
+					<skill>
+						<name>Perception</name>
+						<val>3</val>
+					</skill>
+					<skill>
+						<name>Pistols</name>
+						<val>3</val>
+					</skill>
+				</allof>
+			</required>
+			<source>WS</source>
+			<page>10</page>
+		</quality>
+		<quality>
+			<name>Merc</name>
+			<bp>10</bp>
+			<category>Positive</category>
+			<bonus />
+			<required>
+				<allof>
+					<ess>-3.0</ess>
+					<skillgrouptotal>
+						<skillgroups>Athletics+Close Combat+Firearms+Outdoors</skillgroups>
+						<val>4</val>
+					</skillgrouptotal>
+				</allof>
+			</required>
+			<source>WS</source>
+			<page>10</page>
+		</quality>
+		<quality>
+			<name>Panzer</name>
+			<bp>10</bp>
+			<category>Positive</category>
+			<bonus />
+			<required>
+				<allof>
+					<attribute>
+						<name>BOD</name>
+						<total>5</total>
+					</attribute>
+					<cyberwares>
+						<cyberware>Dermal Sheath</cyberware>
+						<cyberwarecontains>Dermal Plating</cyberwarecontains>
+						<cyberwarecontains>Bone Lacing</cyberwarecontains>
+						<cyberwareplugin>Armor</cyberwareplugin>
+						<bioware>Bone Density Augmentation</bioware>
+						<biowarecontains>Orthoskin</biowarecontains>
+						<count>2</count>
+					</cyberwares>
+					<ess>-3.0</ess>
+				</allof>
+			</required>
+			<source>WS</source>
+			<page>10</page>
+		</quality>
+		<quality>
+			<name>Razerboy</name>
+			<bp>10</bp>
+			<category>Positive</category>
+			<bonus>
+				<skillcategory>
+					<name>Street</name>
+					<bonus>1</bonus>
+					<applytorating>yes</applytorating>
+				</skillcategory>
+			</bonus>
+			<required>
+				<allof>
+					<cyberwares>
+						<cyberwarecategory>Cyberweapon</cyberwarecategory>
+						<cyberwarecontains>Cybereyes</cyberwarecontains>
+						<cyberwarecontains>Obvious</cyberwarecontains>
+						<count>2</count>
+					</cyberwares>
+					<ess>-3.0</ess>
+				</allof>
+			</required>
+			<source>WS</source>
+			<page>11</page>
+		</quality>
+		<quality>
+			<name>Ronin (Bioware)</name>
+			<bp>10</bp>
+			<category>Positive</category>
+			<bonus>
+				<basicbiowareessmultiplier>90</basicbiowareessmultiplier>
+			</bonus>
+			<required>
+				<allof>
+					<attributetotal>
+						<attributes>WIL+INT</attributes>
+						<val>7</val>
+					</attributetotal>
+					<ess>-3.0</ess>
+					<streetcredvsnotoriety />
+				</allof>
+			</required>
+			<source>WS</source>
+			<page>11</page>
+		</quality>
+		<quality>
+			<name>Ronin (Cyberware)</name>
+			<bp>10</bp>
+			<category>Positive</category>
+			<bonus>
+				<cyberwareessmultiplier>90</cyberwareessmultiplier>
+			</bonus>
+			<required>
+				<allof>
+					<attributetotal>
+						<attributes>WIL+INT</attributes>
+						<val>7</val>
+					</attributetotal>
+					<ess>-3.0</ess>
+					<streetcredvsnotoriety />
+				</allof>
+			</required>
+			<source>WS</source>
+			<page>11</page>
+		</quality>
+		<quality>
+			<name>Sharpshooter</name>
+			<bp>10</bp>
+			<category>Positive</category>
+			<bonus>
+				<specificskill>
+					<name>Infiltration</name>
+					<bonus>1</bonus>
+				</specificskill>
+			</bonus>
+			<required>
+				<allof>
+					<cyberwares>
+						<cyberware>Attention Coprocessor</cyberware>
+						<cyberware>Eye Laser Range Finder</cyberware>
+						<cyberwarecontains>Smartlink</cyberwarecontains>
+						<cyberwarecontains>Vision Magnification</cyberwarecontains>
+						<cyberwarecontains>Vision Magnification</cyberwarecontains>
+						<biowarecontains select="Longarms">Reflex Recorder (Skill)</biowarecontains>
+						<biowarecontains select="Infiltration">Reflex Recorder (Skill)</biowarecontains>
+						<count>2</count>
+					</cyberwares>
+					<ess>-3.0</ess>
+				</allof>
+			</required>
+			<source>WS</source>
+			<page>11</page>
+		</quality>
+		<quality>
+			<name>Street Ninja</name>
+			<bp>10</bp>
+			<category>Positive</category>
+			<bonus />
+			<required>
+				<allof>
+					<cyberwares>
+						<cyberwarecategory>Eyeware</cyberwarecategory>
+						<cyberwarecategory>Cyberweapon</cyberwarecategory>
+						<biowarecontains>Enhanced Articulation</biowarecontains>
+						<biowarecontains>Synthacardium</biowarecontains>
+						<count>2</count>
+					</cyberwares>
+					<ess>-3.0</ess>
+					<skill>
+						<name>Infiltration</name>
+						<val>4</val>
+					</skill>
+				</allof>
+			</required>
+			<source>WS</source>
+			<page>11</page>
+		</quality>
+		<quality>
+			<name>True Drake</name>
+			<contributetolimit>no</contributetolimit>
+			<bp>125</bp>
+			<category>Positive</category>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+				<flyspeed>-2</flyspeed>
+				<specificattribute>
+					<name>EDG</name>
+					<max>8-natural</max>
+				</specificattribute>
+				<specificattribute>
+					<name>ESS</name>
+					<max>2</max>
+					<val>2</val>
+				</specificattribute>
+			</bonus>
+			<forbidden>
+				<oneof>
+					<quality>Biocompatability (Bioware)</quality>
+					<quality>Biocompatability (Cyberware)</quality>
+					<quality>Changeling (Class I SURGE)</quality>
+					<quality>Changeling (Class II SURGE)</quality>
+					<quality>Changeling (Class III SURGE)</quality>
+					<quality>Genecrafted</quality>
+					<quality>Genetic Heritage</quality>
+					<quality>Infected: Bandersnatch</quality>
+					<quality>Infected: Banshee</quality>
+					<quality>Infected: Dzoo-Noo-Qua</quality>
+					<quality>Infected: Fomóraig</quality>
+					<quality>Infected: Ghoul</quality>
+					<quality>Infected: Goblin</quality>
+					<quality>Infected: Loup-Garou</quality>
+					<quality>Infected: Nosferatu</quality>
+					<quality>Infected: Vampire</quality>
+					<quality>Infected: Abat</quality>
+					<quality>Infected: Amalanhig</quality>
+					<quality>Infected: Busaw</quality>
+					<quality>Infected: Gaki</quality>
+					<quality>Infected: Penanggalan</quality>
+					<quality>Infected: Sasobonsam</quality>
+					<quality>Infected: Sukuyan</quality>
+					<quality>Latent Awakening</quality>
+					<quality>Latent Dracomorphosis</quality>
+					<quality>Latent Technomancer</quality>
+					<quality>Lucky</quality>
+					<quality>Technomancer</quality>
+					<metagenetic />
+					<metatype>Free Spirit</metatype>
+					<metatypecategory>Shapeshifter</metatypecategory>
+				</oneof>
+			</forbidden>
+			<addqualities>
+				<addquality>Distinctive Style</addquality>
+			</addqualities>
+			<powers>
+				<power>Shift (Drake)</power>
+			</powers>
+			<source>COD</source>
+			<page>137</page>
+		</quality>
+		<quality>
+			<name>True Drake (+1 Power)</name>
+			<contributetolimit>no</contributetolimit>
+			<bp>130</bp>
+			<category>Positive</category>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+				<flyspeed>-2</flyspeed>
+				<specificattribute>
+					<name>EDG</name>
+					<max>8-natural</max>
+				</specificattribute>
+				<specificattribute>
+					<name>ESS</name>
+					<max>2</max>
+					<val>2</val>
+				</specificattribute>
+			</bonus>
+			<forbidden>
+				<oneof>
+					<quality>Biocompatability (Bioware)</quality>
+					<quality>Biocompatability (Cyberware)</quality>
+					<quality>Changeling (Class I SURGE)</quality>
+					<quality>Changeling (Class II SURGE)</quality>
+					<quality>Changeling (Class III SURGE)</quality>
+					<quality>Genecrafted</quality>
+					<quality>Genetic Heritage</quality>
+					<quality>Infected: Bandersnatch</quality>
+					<quality>Infected: Banshee</quality>
+					<quality>Infected: Dzoo-Noo-Qua</quality>
+					<quality>Infected: Fomóraig</quality>
+					<quality>Infected: Ghoul</quality>
+					<quality>Infected: Goblin</quality>
+					<quality>Infected: Loup-Garou</quality>
+					<quality>Infected: Nosferatu</quality>
+					<quality>Infected: Vampire</quality>
+					<quality>Infected: Abat</quality>
+					<quality>Infected: Amalanhig</quality>
+					<quality>Infected: Busaw</quality>
+					<quality>Infected: Gaki</quality>
+					<quality>Infected: Penanggalan</quality>
+					<quality>Infected: Sasobonsam</quality>
+					<quality>Infected: Sukuyan</quality>
+					<quality>Latent Awakening</quality>
+					<quality>Latent Dracomorphosis</quality>
+					<quality>Latent Technomancer</quality>
+					<quality>Lucky</quality>
+					<quality>Technomancer</quality>
+					<metagenetic />
+					<metatype>Free Spirit</metatype>
+					<metatypecategory>Shapeshifter</metatypecategory>
+				</oneof>
+			</forbidden>
+			<addqualities>
+				<addquality>Distinctive Style</addquality>
+			</addqualities>
+			<powers>
+				<power>Shift (Drake)</power>
+			</powers>
+			<source>COD</source>
+			<page>137</page>
+		</quality>
+		<quality>
+			<name>True Drake (+2 Powers)</name>
+			<contributetolimit>no</contributetolimit>
+			<bp>135</bp>
+			<category>Positive</category>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+				<flyspeed>-2</flyspeed>
+				<specificattribute>
+					<name>EDG</name>
+					<max>8-natural</max>
+				</specificattribute>
+				<specificattribute>
+					<name>ESS</name>
+					<max>2</max>
+					<val>2</val>
+				</specificattribute>
+			</bonus>
+			<forbidden>
+				<oneof>
+					<quality>Biocompatability (Bioware)</quality>
+					<quality>Biocompatability (Cyberware)</quality>
+					<quality>Changeling (Class I SURGE)</quality>
+					<quality>Changeling (Class II SURGE)</quality>
+					<quality>Changeling (Class III SURGE)</quality>
+					<quality>Genecrafted</quality>
+					<quality>Genetic Heritage</quality>
+					<quality>Infected: Bandersnatch</quality>
+					<quality>Infected: Banshee</quality>
+					<quality>Infected: Dzoo-Noo-Qua</quality>
+					<quality>Infected: Fomóraig</quality>
+					<quality>Infected: Ghoul</quality>
+					<quality>Infected: Goblin</quality>
+					<quality>Infected: Loup-Garou</quality>
+					<quality>Infected: Nosferatu</quality>
+					<quality>Infected: Vampire</quality>
+					<quality>Infected: Abat</quality>
+					<quality>Infected: Amalanhig</quality>
+					<quality>Infected: Busaw</quality>
+					<quality>Infected: Gaki</quality>
+					<quality>Infected: Penanggalan</quality>
+					<quality>Infected: Sasobonsam</quality>
+					<quality>Infected: Sukuyan</quality>
+					<quality>Latent Awakening</quality>
+					<quality>Latent Dracomorphosis</quality>
+					<quality>Latent Technomancer</quality>
+					<quality>Lucky</quality>
+					<quality>Technomancer</quality>
+					<metagenetic />
+					<metatype>Free Spirit</metatype>
+					<metatypecategory>Shapeshifter</metatypecategory>
+				</oneof>
+			</forbidden>
+			<addqualities>
+				<addquality>Distinctive Style</addquality>
+			</addqualities>
+			<powers>
+				<power>Shift (Drake)</power>
+			</powers>
+			<source>COD</source>
+			<page>137</page>
+		</quality>
+		<quality>
+			<name>True Drake (+3 Powers)</name>
+			<contributetolimit>no</contributetolimit>
+			<bp>140</bp>
+			<category>Positive</category>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+				<flyspeed>-2</flyspeed>
+				<specificattribute>
+					<name>EDG</name>
+					<max>8-natural</max>
+				</specificattribute>
+				<specificattribute>
+					<name>ESS</name>
+					<max>2</max>
+					<val>2</val>
+				</specificattribute>
+			</bonus>
+			<forbidden>
+				<oneof>
+					<quality>Biocompatability (Bioware)</quality>
+					<quality>Biocompatability (Cyberware)</quality>
+					<quality>Changeling (Class I SURGE)</quality>
+					<quality>Changeling (Class II SURGE)</quality>
+					<quality>Changeling (Class III SURGE)</quality>
+					<quality>Genecrafted</quality>
+					<quality>Genetic Heritage</quality>
+					<quality>Infected: Bandersnatch</quality>
+					<quality>Infected: Banshee</quality>
+					<quality>Infected: Dzoo-Noo-Qua</quality>
+					<quality>Infected: Fomóraig</quality>
+					<quality>Infected: Ghoul</quality>
+					<quality>Infected: Goblin</quality>
+					<quality>Infected: Loup-Garou</quality>
+					<quality>Infected: Nosferatu</quality>
+					<quality>Infected: Vampire</quality>
+					<quality>Infected: Abat</quality>
+					<quality>Infected: Amalanhig</quality>
+					<quality>Infected: Busaw</quality>
+					<quality>Infected: Gaki</quality>
+					<quality>Infected: Penanggalan</quality>
+					<quality>Infected: Sasobonsam</quality>
+					<quality>Infected: Sukuyan</quality>
+					<quality>Latent Awakening</quality>
+					<quality>Latent Dracomorphosis</quality>
+					<quality>Latent Technomancer</quality>
+					<quality>Lucky</quality>
+					<quality>Technomancer</quality>
+					<metagenetic />
+					<metatype>Free Spirit</metatype>
+					<metatypecategory>Shapeshifter</metatypecategory>
+				</oneof>
+			</forbidden>
+			<addqualities>
+				<addquality>Distinctive Style</addquality>
+			</addqualities>
+			<powers>
+				<power>Shift (Drake)</power>
+			</powers>
+			<source>COD</source>
+			<page>137</page>
+		</quality>
+		<quality>
+			<name>True Drake (+4 Powers)</name>
+			<contributetolimit>no</contributetolimit>
+			<bp>145</bp>
+			<category>Positive</category>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+				<flyspeed>-2</flyspeed>
+				<specificattribute>
+					<name>EDG</name>
+					<max>8-natural</max>
+				</specificattribute>
+				<specificattribute>
+					<name>ESS</name>
+					<max>2</max>
+					<val>2</val>
+				</specificattribute>
+			</bonus>
+			<forbidden>
+				<oneof>
+					<quality>Biocompatability (Bioware)</quality>
+					<quality>Biocompatability (Cyberware)</quality>
+					<quality>Changeling (Class I SURGE)</quality>
+					<quality>Changeling (Class II SURGE)</quality>
+					<quality>Changeling (Class III SURGE)</quality>
+					<quality>Genecrafted</quality>
+					<quality>Genetic Heritage</quality>
+					<quality>Infected: Bandersnatch</quality>
+					<quality>Infected: Banshee</quality>
+					<quality>Infected: Dzoo-Noo-Qua</quality>
+					<quality>Infected: Fomóraig</quality>
+					<quality>Infected: Ghoul</quality>
+					<quality>Infected: Goblin</quality>
+					<quality>Infected: Loup-Garou</quality>
+					<quality>Infected: Nosferatu</quality>
+					<quality>Infected: Vampire</quality>
+					<quality>Infected: Abat</quality>
+					<quality>Infected: Amalanhig</quality>
+					<quality>Infected: Busaw</quality>
+					<quality>Infected: Gaki</quality>
+					<quality>Infected: Penanggalan</quality>
+					<quality>Infected: Sasobonsam</quality>
+					<quality>Infected: Sukuyan</quality>
+					<quality>Latent Awakening</quality>
+					<quality>Latent Dracomorphosis</quality>
+					<quality>Latent Technomancer</quality>
+					<quality>Lucky</quality>
+					<quality>Technomancer</quality>
+					<metagenetic />
+					<metatype>Free Spirit</metatype>
+					<metatypecategory>Shapeshifter</metatypecategory>
+				</oneof>
+			</forbidden>
+			<addqualities>
+				<addquality>Distinctive Style</addquality>
+			</addqualities>
+			<powers>
+				<power>Shift (Drake)</power>
+			</powers>
+			<source>COD</source>
+			<page>137</page>
+		</quality>
+		<quality>
+			<name>True Drake (+5 Powers)</name>
+			<contributetolimit>no</contributetolimit>
+			<bp>150</bp>
+			<category>Positive</category>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+				<flyspeed>-2</flyspeed>
+				<specificattribute>
+					<name>EDG</name>
+					<max>8-natural</max>
+				</specificattribute>
+				<specificattribute>
+					<name>ESS</name>
+					<max>2</max>
+					<val>2</val>
+				</specificattribute>
+			</bonus>
+			<forbidden>
+				<oneof>
+					<quality>Biocompatability (Bioware)</quality>
+					<quality>Biocompatability (Cyberware)</quality>
+					<quality>Changeling (Class I SURGE)</quality>
+					<quality>Changeling (Class II SURGE)</quality>
+					<quality>Changeling (Class III SURGE)</quality>
+					<quality>Genecrafted</quality>
+					<quality>Genetic Heritage</quality>
+					<quality>Infected: Bandersnatch</quality>
+					<quality>Infected: Banshee</quality>
+					<quality>Infected: Dzoo-Noo-Qua</quality>
+					<quality>Infected: Fomóraig</quality>
+					<quality>Infected: Ghoul</quality>
+					<quality>Infected: Goblin</quality>
+					<quality>Infected: Loup-Garou</quality>
+					<quality>Infected: Nosferatu</quality>
+					<quality>Infected: Vampire</quality>
+					<quality>Infected: Abat</quality>
+					<quality>Infected: Amalanhig</quality>
+					<quality>Infected: Busaw</quality>
+					<quality>Infected: Gaki</quality>
+					<quality>Infected: Penanggalan</quality>
+					<quality>Infected: Sasobonsam</quality>
+					<quality>Infected: Sukuyan</quality>
+					<quality>Latent Awakening</quality>
+					<quality>Latent Dracomorphosis</quality>
+					<quality>Latent Technomancer</quality>
+					<quality>Lucky</quality>
+					<quality>Technomancer</quality>
+					<metagenetic />
+					<metatype>Free Spirit</metatype>
+					<metatypecategory>Shapeshifter</metatypecategory>
+				</oneof>
+			</forbidden>
+			<addqualities>
+				<addquality>Distinctive Style</addquality>
+			</addqualities>
+			<powers>
+				<power>Shift (Drake)</power>
+			</powers>
+			<source>COD</source>
+			<page>137</page>
 		</quality>
 	</qualities>
 </chummer>

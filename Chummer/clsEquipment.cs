@@ -2345,7 +2345,8 @@ namespace Chummer
 		/// <param name="objWeaponNodes">List of TreeNode to represent the Weapons added.</param>
 		/// <param name="blnCreateImprovements">Whether or not Improvements should be created.</param>
 		/// <param name="blnCreateChildren">Whether or not child items should be created.</param>
-		public void Create(XmlNode objXmlCyberware, Character objCharacter, Grade objGrade, Improvement.ImprovementSource objSource, int intRating, TreeNode objNode, List<Weapon> objWeapons, List<TreeNode> objWeaponNodes, bool blnCreateImprovements = true, bool blnCreateChildren = true)
+		/// <param name="strForced">Force a particular value to be selected by an Improvement prompts.</param>
+		public void Create(XmlNode objXmlCyberware, Character objCharacter, Grade objGrade, Improvement.ImprovementSource objSource, int intRating, TreeNode objNode, List<Weapon> objWeapons, List<TreeNode> objWeaponNodes, bool blnCreateImprovements = true, bool blnCreateChildren = true, string strForced = "")
 		{
 			_strName = objXmlCyberware["name"].InnerText;
 			_strCategory = objXmlCyberware["category"].InnerText;
@@ -2486,6 +2487,9 @@ namespace Chummer
 			if (objXmlCyberware["bonus"] != null && blnCreateImprovements)
 			{
 				ImprovementManager objImprovementManager = new ImprovementManager(objCharacter);
+				if (strForced != "")
+					objImprovementManager.ForcedValue = strForced;
+
 				if (!objImprovementManager.CreateImprovements(objSource, _guiID.ToString(), _nodBonus, false, _intRating, DisplayNameShort))
 				{
 					_guiID = Guid.Empty;
@@ -2546,6 +2550,8 @@ namespace Chummer
 							return;
 						}
 					}
+
+					objSubsystem.Parent = this;
 
 					_objChildren.Add(objSubsystem);
 
@@ -6864,6 +6870,9 @@ namespace Chummer
 				{
 					strSkill = _strUseSkill;
 					strSpec = "";
+
+					if (_strUseSkill.Contains("Exotic"))
+						strSpec = DisplayNameShort;
 				}
 
 				// Locate the Active Skill to be used.
@@ -8666,6 +8675,8 @@ namespace Chummer
 				{
 					if (_strDicePool == "Rating")
 						intReturn = _intRating;
+					if (_strDicePool == "-Rating")
+						intReturn = _intRating * -1;
 					else
 						intReturn = Convert.ToInt32(_strDicePool);
 				}
@@ -9394,15 +9405,15 @@ namespace Chummer
 			get
 			{
 				ImprovementManager objImprovementManager = new ImprovementManager(_objCharacter);
-				decimal decMultiplier = 1.0m;
-				decimal decModifier = Convert.ToDecimal(objImprovementManager.ValueOf(Improvement.ImprovementType.LifestyleCost), GlobalOptions.Instance.CultureInfo);
+				double dblMultiplier = 1.0;
+				double dblModifier = Convert.ToDouble(objImprovementManager.ValueOf(Improvement.ImprovementType.LifestyleCost), GlobalOptions.Instance.CultureInfo);
 				if (_objType == LifestyleType.Standard)
-					decModifier += Convert.ToDecimal(objImprovementManager.ValueOf(Improvement.ImprovementType.BasicLifestyleCost), GlobalOptions.Instance.CultureInfo);
-				decimal decRoommates = 1.0m + (0.1m * _intRoommates);
-				decMultiplier = 1.0m + Convert.ToDecimal(decModifier / 100, GlobalOptions.Instance.CultureInfo);
-				decimal decPercentage = Convert.ToDecimal(_intPercentage, GlobalOptions.Instance.CultureInfo) / 100.0m;
+					dblModifier += Convert.ToDouble(objImprovementManager.ValueOf(Improvement.ImprovementType.BasicLifestyleCost), GlobalOptions.Instance.CultureInfo);
+				double dblRoommates = 1.0 + (0.1 * _intRoommates);
+				dblMultiplier = 1.0 + Convert.ToDouble(dblModifier / 100, GlobalOptions.Instance.CultureInfo);
+				double dblPercentage = Convert.ToDouble(_intPercentage, GlobalOptions.Instance.CultureInfo) / 100.0;
 
-				return Convert.ToInt32((Convert.ToDecimal(_intCost, GlobalOptions.Instance.CultureInfo) * decMultiplier) * decRoommates * decPercentage);
+				return Convert.ToInt32((Convert.ToDouble(_intCost, GlobalOptions.Instance.CultureInfo) * dblMultiplier) * dblRoommates * dblPercentage);
 			}
 		}
 		#endregion
@@ -9889,6 +9900,10 @@ namespace Chummer
 					objChild.MaxRating = intChildRating;
 					objChild.Parent = this;
 					objParent.Children.Add(objChild);
+
+					// Change the Capacity of the child if necessary.
+					if (objXmlChild["capacity"] != null)
+						objChild.Capacity = "[" + objXmlChild["capacity"].InnerText + "]";
 
 					objNode.Nodes.Add(objChildNode);
 					objNode.Expand();
@@ -10844,7 +10859,17 @@ namespace Chummer
 		{
 			get
 			{
-				return _intSignal;
+				int intSignal = _intSignal;
+				foreach (Commlink objCommlink in _objChildren.OfType<Commlink>())
+				{
+					if (objCommlink.Category == "Commlink Upgrade")
+					{
+						if (objCommlink.Signal > intSignal)
+							intSignal = objCommlink.Signal;
+					}
+				}
+
+				return intSignal;
 			}
 			set
 			{
@@ -10859,7 +10884,17 @@ namespace Chummer
 		{
 			get
 			{
-				return _intResponse;
+				int intResponse = _intResponse;
+				foreach (Commlink objCommlink in _objChildren.OfType<Commlink>())
+				{
+					if (objCommlink.Category == "Commlink Upgrade")
+					{
+						if (objCommlink.Response > intResponse)
+							intResponse = objCommlink.Response;
+					}
+				}
+
+				return intResponse;
 			}
 			set
 			{
@@ -10874,7 +10909,17 @@ namespace Chummer
 		{
 			get
 			{
-				return _intSystem;
+				int intSystem = _intSystem;
+				foreach (OperatingSystem objOS in _objChildren.OfType<OperatingSystem>())
+				{
+					if (objOS.Category == "Commlink Operating System Upgrade")
+					{
+						if (objOS.System > intSystem)
+							intSystem = objOS.System;
+					}
+				}
+
+				return intSystem;
 			}
 			set
 			{
@@ -10889,7 +10934,17 @@ namespace Chummer
 		{
 			get
 			{
-				return _intFirewall;
+				int intFirewall = _intFirewall;
+				foreach (OperatingSystem objOS in _objChildren.OfType<OperatingSystem>())
+				{
+					if (objOS.Category == "Commlink Operating System Upgrade")
+					{
+						if (objOS.Firewall > intFirewall)
+							intFirewall = objOS.Firewall;
+					}
+				}
+
+				return intFirewall;
 			}
 			set
 			{

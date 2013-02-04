@@ -579,7 +579,7 @@ namespace Chummer
 
 				if (_objCharacter.EssencePenalty != 0 && (_strAbbrev == "MAG" || _strAbbrev == "RES"))
 				{
-					if (_objCharacter.Options.ESSLossReducesMaximumOnly)
+					if (_objCharacter.Options.ESSLossReducesMaximumOnly || _objCharacter.OverrideSpecialAttributeEssenceLoss)
 					{
 						// If the House Rule for Essence Loss Only Affects Maximum MAG/RES is turned on, the minimum should always be 1 unless the total ESS penalty is greater than or equal to
 						// the Attribute's total maximum, in which case the minimum becomes 0.
@@ -873,7 +873,7 @@ namespace Chummer
 			{
 				// Find the character's Essence Loss. This applies unless the house rule to have ESS Loss only affect the Maximum of the Attribute is turned on.
 				int intEssenceLoss = 0;
-				if (!_objCharacter.Options.ESSLossReducesMaximumOnly)
+				if (!_objCharacter.Options.ESSLossReducesMaximumOnly && !_objCharacter.OverrideSpecialAttributeEssenceLoss)
 					intEssenceLoss = _objCharacter.EssencePenalty;
 
 				// Don't apply the ESS loss penalty to EDG.

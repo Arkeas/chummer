@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-949</version>
+	<version>-948</version>
 	<name>Deutsch (DE)</name>
 	<strings>
 		<string>
@@ -6492,7 +6492,7 @@
 			<key>Tip_ActiveCommlink</key>
 			<text>Dieses ausgewählte Kommlink als das gerade aktive makieren. Die Matrix Initiative wird mit diesem Kommlink berechnet.</text>
 		</string>
-		<!-- Version ??? -->
+		<!-- Version 429 -->
 		<string>
 			<key>Menu_SpecialBPAvailLimit</key>
 			<text>Maximale BP ändern</text>
@@ -6500,6 +6500,36 @@
 		<string>
 			<key>Menu_SpecialConvertToFreeSprite</key>
 			<text>In freien Geist konvertieren</text>
+		</string>
+		<!-- Version 430 -->
+		<string>
+			<key>String_SpellRangeLineOfInfluence</key>
+			<text>LoI</text>
+		</string>
+		<string>
+			<key>Node_SelectedGeomancyRituals</key>
+			<text>Ausgewählte Geomantie Rituale</text>
+		</string>
+		<!-- Version 439 -->
+		<string>
+			<key>Label_EssenceConsumption</key>
+			<text>Verbrauchte Essenz</text>
+		</string>
+		<string>
+			<key>Label_Cyberware</key>
+			<text>Cyberware:</text>
+		</string>
+		<string>
+			<key>Label_Bioware</key>
+			<text>Bioware:</text>
+		</string>
+		<string>
+			<key>Label_EssenceHole</key>
+			<text>Verlorene Essenz:</text>
+		</string>
+		<string>
+			<key>Label_Options_EssenceDecimals</key>
+			<text>Nach wievielen Stellen hinter dem Komma soll für die Essenz-Berechnung gerundet werden?</text>
 		</string>
 	</strings>
 </chummer>

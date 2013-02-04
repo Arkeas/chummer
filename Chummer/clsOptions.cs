@@ -42,6 +42,7 @@ namespace Chummer
 		private static bool _blnStartupFullscreen = false;
 		private static bool _blnSingleDiceRoller = true;
 		private static string _strLanguage = "en-us";
+		private static string _strDefaultCharacterSheet = "Shadowrun 4";
 
 		// Omae Information.
 		private static string _strOmaeUserName = "";
@@ -298,6 +299,21 @@ namespace Chummer
 			set
 			{
 				_objClipboardContentType = value;
+			}
+		}
+
+		/// <summary>
+		/// Default character sheet to use when printing.
+		/// </summary>
+		public string DefaultCharacterSheet
+		{
+			get
+			{
+				return _strDefaultCharacterSheet;
+			}
+			set
+			{
+				_strDefaultCharacterSheet = value;
 			}
 		}
 		#endregion

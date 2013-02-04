@@ -51,7 +51,7 @@ namespace Chummer
 				XmlNodeList objXmlPACKSList = objXmlDocument.SelectNodes("/chummer/packs/pack[name = \"" + txtName.Text + "\" and category = \"Custom\"]");
 				if (objXmlPACKSList.Count > 0)
 				{
-					MessageBox.Show(LanguageManager.Instance.GetString("Message_CreatePACKSKit_DuplicateName").Replace("{0}", txtName.Text).Replace("{1}", strFile.Replace(strCustomPath + "\\", string.Empty)), LanguageManager.Instance.GetString("MessageTitle_CreatePACKSKit_DuplicateName"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+					MessageBox.Show(LanguageManager.Instance.GetString("Message_CreatePACKSKit_DuplicateName").Replace("{0}", txtName.Text).Replace("{1}", strFile.Replace(strCustomPath + Path.DirectorySeparatorChar, string.Empty)), LanguageManager.Instance.GetString("MessageTitle_CreatePACKSKit_DuplicateName"), MessageBoxButtons.OK, MessageBoxIcon.Information);
 					return;
 				}
 			}

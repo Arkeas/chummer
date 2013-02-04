@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-884</version>
+	<version>-883</version>
 	<categories>
 		<category>Armor</category>
 		<category>Clothing</category>
@@ -990,10 +990,10 @@
 			<armorcapacity>6</armorcapacity>
 			<avail>8</avail>
 			<cost>500</cost>
+			<addmodcategory>Chemical Seal</addmodcategory>
 			<mods>
 				<name>Biomonitor</name>
 			</mods>
-			<addmodcategory>Chemical Seal</addmodcategory>
 			<source>SR4</source>
 			<page>326</page>
 		</armor>

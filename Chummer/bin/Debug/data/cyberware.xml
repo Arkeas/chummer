@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-893</version>
+	<version>-891</version>
 	<grades>
 		<grade>
 			<name>Standard</name>
@@ -3590,6 +3590,32 @@
 			<source>2050</source>
 			<page>189</page>
 		</cyberware>
+		<cyberware>
+			<name>Boosted Reflexes</name>
+			<category>Bodyware</category>
+			<rating>3</rating>
+			<ess>Rating * 0.9</ess>
+			<capacity>0</capacity>
+			<avail>2R</avail>
+			<cost>FixedValues(15000,32000,47000)</cost>
+			<bonus>
+				<initiative precedence="1">Rating</initiative>
+				<initiativepass>Rating div 2</initiativepass>
+			</bonus>
+			<source>WS</source>
+			<page>14</page>
+		</cyberware>
+		<cyberware>
+			<name>Arm Blade</name>
+			<category>Cyberweapon</category>
+			<ess>0.5</ess>
+			<capacity>[4]</capacity>
+			<avail>14F</avail>
+			<addweapon>Arm Blade</addweapon>
+			<cost>3500</cost>
+			<source>WS</source>
+			<page>14</page>
+		</cyberware>
 	</cyberwares>
 	<suites>
 		<suite>
@@ -4334,6 +4360,1043 @@
 				<cyberware>
 					<name>Radar Sensor</name>
 					<rating>3</rating>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Cerebrotech Crystal Optics Clearseer</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>2</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Flare Compensation</name>
+						</cyberware>
+						<cyberware>
+							<name>Low-Light Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Vision Enhancement</name>
+							<rating>2</rating>
+						</cyberware>
+						<cyberware>
+							<name>Vision Magnification</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Ultrasound Sensor</name>
+				</cyberware>
+				<cyberware>
+					<name>Attention Coprocessor</name>
+					<rating>2</rating>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Cerebrotech Crystal Optics Clearseer Firewatch</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>2</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Flare Compensation</name>
+						</cyberware>
+						<cyberware>
+							<name>Low-Light Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Vision Enhancement</name>
+							<rating>2</rating>
+						</cyberware>
+						<cyberware>
+							<name>Vision Magnification</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Ultrasound Sensor</name>
+				</cyberware>
+				<cyberware>
+					<name>Attention Coprocessor</name>
+					<rating>2</rating>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Mitsuhama NeoBushido</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>1</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Flare Compensation</name>
+						</cyberware>
+						<cyberware>
+							<name>Smartlink</name>
+						</cyberware>
+						<cyberware>
+							<name>Protective Covers</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Muscle Replacement</name>
+					<rating>2</rating>
+				</cyberware>
+				<cyberware>
+					<name>Wired Reflexes</name>
+					<rating>1</rating>
+				</cyberware>
+				<cyberware>
+					<name>Hand Blade</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Mitsuhama NeoBushido Elite Samurai</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>1</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Flare Compensation</name>
+						</cyberware>
+						<cyberware>
+							<name>Smartlink</name>
+						</cyberware>
+						<cyberware>
+							<name>Protective Covers</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Muscle Replacement</name>
+					<rating>2</rating>
+				</cyberware>
+				<cyberware>
+					<name>Wired Reflexes</name>
+					<rating>1</rating>
+				</cyberware>
+				<cyberware>
+					<name>Hand Blade</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Spin-X Olympian</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Muscle Replacement</name>
+					<rating>3</rating>
+				</cyberware>
+				<cyberware>
+					<name>Reaction Enhancers</name>
+					<rating>2</rating>
+				</cyberware>
+				<cyberware>
+					<name>Internal Air Tank</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Mitsuhama Spidersuite</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Orientation System</name>
+				</cyberware>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>2</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Eye Laser System</name>
+							<cyberwares>
+								<cyberware>
+									<name>Eye Laser Range Finder</name>
+								</cyberware>
+								<cyberware>
+									<name>Eye Laser Microphone</name>
+									<rating>1</rating>
+								</cyberware>
+							</cyberwares>
+						</cyberware>
+						<cyberware>
+							<name>Flare Compensation</name>
+						</cyberware>
+						<cyberware>
+							<name>Low-Light Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Vision Magnification</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Grapple Gun</name>
+				</cyberware>
+				<cyberware>
+					<name>Grip Feet</name>
+				</cyberware>
+				<cyberware>
+					<name>Balance Augmenter</name>
+				</cyberware>
+				<cyberware>
+					<name>Retractable Climbing Claws</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Saeder-Krupp Höllensturm Artillery Suite</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name select="Left">Obvious Full Arm</name>
+					<cyberwares>
+						<cyberware>
+							<name>Customized Body</name>
+							<rating>6</rating>
+						</cyberware>
+						<cyberware>
+							<name>Customized Strength</name>
+							<rating>6</rating>
+						</cyberware>
+						<cyberware>
+							<name>Customized Agility</name>
+							<rating>4</rating>
+						</cyberware>
+						<cyberware>
+							<name>Armor</name>
+							<rating>2</rating>
+						</cyberware>
+						<cyberware>
+							<name>Cyberarm Gyromount</name>
+						</cyberware>
+						<cyberware>
+							<name>Enhanced Strength</name>
+							<rating>3</rating>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name select="Right">Obvious Full Arm</name>
+					<cyberwares>
+						<cyberware>
+							<name>Customized Body</name>
+							<rating>6</rating>
+						</cyberware>
+						<cyberware>
+							<name>Customized Strength</name>
+							<rating>6</rating>
+						</cyberware>
+						<cyberware>
+							<name>Customized Agility</name>
+							<rating>4</rating>
+						</cyberware>
+						<cyberware>
+							<name>Grenade Launcher</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Single Cybereye</name>
+					<rating>4</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Eye Laser System</name>
+							<cyberwares>
+								<cyberware>
+									<name>Eye Laser Designator</name>
+								</cyberware>
+							</cyberwares>
+						</cyberware>
+						<cyberware>
+							<name>Flare Compensation</name>
+						</cyberware>
+						<cyberware>
+							<name>Smartlink</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Bone Lacing (Titanium)</name>
+				</cyberware>
+				<cyberware>
+					<name select="Left">Obvious Foot</name>
+					<cyberwares>
+						<cyberware>
+							<name>Foot Anchor</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name select="Right">Obvious Foot</name>
+					<cyberwares>
+						<cyberware>
+							<name>Foot Anchor</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Saeder-Krupp Höllensturm Artillery Suite Overwatch</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name select="Left">Obvious Full Arm</name>
+					<cyberwares>
+						<cyberware>
+							<name>Customized Body</name>
+							<rating>6</rating>
+						</cyberware>
+						<cyberware>
+							<name>Customized Strength</name>
+							<rating>6</rating>
+						</cyberware>
+						<cyberware>
+							<name>Customized Agility</name>
+							<rating>4</rating>
+						</cyberware>
+						<cyberware>
+							<name>Armor</name>
+							<rating>2</rating>
+						</cyberware>
+						<cyberware>
+							<name>Cyberarm Gyromount</name>
+						</cyberware>
+						<cyberware>
+							<name>Enhanced Strength</name>
+							<rating>3</rating>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name select="Right">Obvious Full Arm</name>
+					<cyberwares>
+						<cyberware>
+							<name>Customized Body</name>
+							<rating>6</rating>
+						</cyberware>
+						<cyberware>
+							<name>Customized Strength</name>
+							<rating>6</rating>
+						</cyberware>
+						<cyberware>
+							<name>Customized Agility</name>
+							<rating>4</rating>
+						</cyberware>
+						<cyberware>
+							<name>Grenade Launcher</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Single Cybereye</name>
+					<rating>4</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Eye Laser System</name>
+							<cyberwares>
+								<cyberware>
+									<name>Eye Laser Designator</name>
+								</cyberware>
+							</cyberwares>
+						</cyberware>
+						<cyberware>
+							<name>Flare Compensation</name>
+						</cyberware>
+						<cyberware>
+							<name>Smartlink</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Bone Lacing (Titanium)</name>
+				</cyberware>
+				<cyberware>
+					<name select="Left">Obvious Foot</name>
+					<cyberwares>
+						<cyberware>
+							<name>Foot Anchor</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name select="Right">Obvious Foot</name>
+					<cyberwares>
+						<cyberware>
+							<name>Foot Anchor</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>NeoNET Streetwise Courier Suite</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Balance Augmenter</name>
+				</cyberware>
+				<cyberware>
+					<name>Bone Lacing (Plastic)</name>
+				</cyberware>
+				<cyberware>
+					<name>Smuggling Compartment</name>
+				</cyberware>
+				<cyberware>
+					<name>Reaction Enhancers</name>
+					<rating>2</rating>
+				</cyberware>
+				<cyberware>
+					<name>Orientation System</name>
+				</cyberware>
+				<cyberware>
+					<name select="Left">Obvious Foot</name>
+					<cyberwares>
+						<cyberware>
+							<name>Modular Cyberlimb</name>
+						</cyberware>
+						<cyberware>
+							<name>Enhanced Agility</name>
+							<rating>1</rating>
+						</cyberware>
+						<cyberware>
+							<name>Cyberskates</name>
+						</cyberware>
+						<cyberware>
+							<name>Skimmer Discs</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name select="Right">Obvious Foot</name>
+					<cyberwares>
+						<cyberware>
+							<name>Modular Cyberlimb</name>
+						</cyberware>
+						<cyberware>
+							<name>Enhanced Agility</name>
+							<rating>1</rating>
+						</cyberware>
+						<cyberware>
+							<name>Cyberskates</name>
+						</cyberware>
+						<cyberware>
+							<name>Skimmer Discs</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Shiawase Reccear Recon Suite</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Ultrasound Sensor</name>
+				</cyberware>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>2</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Ocular Drone</name>
+						</cyberware>
+						<cyberware>
+							<name>Vision Magnification</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Cyberears</name>
+					<rating>2</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Audio Enhancement</name>
+							<rating>3</rating>
+						</cyberware>
+						<cyberware>
+							<name>Select Sound Filter</name>
+							<rating>3</rating>
+						</cyberware>
+						<cyberware>
+							<name>Spatial Recognizer</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Attention Coprocessor</name>
+					<rating>1</rating>
+				</cyberware>
+				<cyberware>
+					<name>Radar Sensor</name>
+					<rating>3</rating>
+				</cyberware>
+				<cyberware>
+					<name>Synthetic Full Arm</name>
+					<cyberwares>
+						<cyberware>
+							<name>Modular Cyberlimb</name>
+						</cyberware>
+						<cyberware>
+							<name>Drone Hand</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Shiawase Reccear Elite Suite</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Ultrasound Sensor</name>
+				</cyberware>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>2</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Ocular Drone</name>
+						</cyberware>
+						<cyberware>
+							<name>Vision Magnification</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Cyberears</name>
+					<rating>2</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Audio Enhancement</name>
+							<rating>3</rating>
+						</cyberware>
+						<cyberware>
+							<name>Select Sound Filter</name>
+							<rating>3</rating>
+						</cyberware>
+						<cyberware>
+							<name>Spatial Recognizer</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Attention Coprocessor</name>
+					<rating>1</rating>
+				</cyberware>
+				<cyberware>
+					<name>Radar Sensor</name>
+					<rating>3</rating>
+				</cyberware>
+				<cyberware>
+					<name>Synthetic Full Arm</name>
+					<cyberwares>
+						<cyberware>
+							<name>Modular Cyberlimb</name>
+						</cyberware>
+						<cyberware>
+							<name>Drone Hand</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Universal Omnitech Infiltr8R</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Dermal Sheath</name>
+					<rating>3</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Dermal Sheath, Ruthenium Polymer Coating</name>
+						</cyberware>
+						<cyberware>
+							<name>Dermal Sheath, Chameleon Modification</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Retinal Duplication</name>
+					<rating>5</rating>
+				</cyberware>
+				<cyberware>
+					<name>Voice Modulator</name>
+				</cyberware>
+				<cyberware>
+					<name>Voice Modulator (Secondary Pattern)</name>
+					<rating>5</rating>
+				</cyberware>
+				<cyberware>
+					<name>Dynamic Handprints</name>
+					<rating>5</rating>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Universal Omnitech Glenn Space Survivorsuite</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Flare Compensation</name>
+				</cyberware>
+				<cyberware>
+					<name>Damper</name>
+				</cyberware>
+				<cyberware>
+					<name>Obvious Torso</name>
+					<cyberwares>
+						<cyberware>
+							<name>Armor</name>
+							<rating>1</rating>
+						</cyberware>
+						<cyberware>
+							<name>Grapple Gun</name>
+						</cyberware>
+						<cyberware>
+							<name>Internal Air Tank</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Auto-Injector (Reusable)</name>
+					<rating>1</rating>
+				</cyberware>
+				<cyberware>
+					<name>Blood Circuit Control System</name>
+				</cyberware>
+				<cyberware>
+					<name>Gastric Neurostimulator</name>
+				</cyberware>
+				<cyberware>
+					<name>Magnetic System</name>
+				</cyberware>
+				<cyberware>
+					<name>Magnetic System</name>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Urban Gunfighter</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>3</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Flare Compensation</name>
+						</cyberware>
+						<cyberware>
+							<name>Low-Light Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Smartlink</name>
+						</cyberware>
+						<cyberware>
+							<name>Thermographic Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Vision Enhancement</name>
+							<rating>2</rating>
+						</cyberware>
+						<cyberware>
+							<name>Vision Magnification</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Wired Reflexes</name>
+					<rating>1</rating>
+				</cyberware>
+				<cyberware>
+					<name>Heavy Pistol</name>
+				</cyberware>
+				<cyberware>
+					<name>Heavy Pistol</name>
+				</cyberware>
+				<cyberware>
+					<name select="Left">Obvious Full Leg</name>
+					<cyberwares>
+						<cyberware>
+							<name>Armor</name>
+							<rating>2</rating>
+						</cyberware>
+						<cyberware>
+							<name>Cyber Holster</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name select="Left">Obvious Full Leg</name>
+					<cyberwares>
+						<cyberware>
+							<name>Armor</name>
+							<rating>2</rating>
+						</cyberware>
+						<cyberware>
+							<name>Cyber Holster</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Urban Gunfighter Aleph</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>3</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Flare Compensation</name>
+						</cyberware>
+						<cyberware>
+							<name>Low-Light Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Smartlink</name>
+						</cyberware>
+						<cyberware>
+							<name>Thermographic Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Vision Enhancement</name>
+							<rating>2</rating>
+						</cyberware>
+						<cyberware>
+							<name>Vision Magnification</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Wired Reflexes</name>
+					<rating>1</rating>
+				</cyberware>
+				<cyberware>
+					<name>Heavy Pistol</name>
+				</cyberware>
+				<cyberware>
+					<name>Heavy Pistol</name>
+				</cyberware>
+				<cyberware>
+					<name select="Left">Obvious Full Leg</name>
+					<cyberwares>
+						<cyberware>
+							<name>Armor</name>
+							<rating>2</rating>
+						</cyberware>
+						<cyberware>
+							<name>Cyber Holster</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name select="Left">Obvious Full Leg</name>
+					<cyberwares>
+						<cyberware>
+							<name>Armor</name>
+							<rating>2</rating>
+						</cyberware>
+						<cyberware>
+							<name>Cyber Holster</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Spin-X Handyman</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Flare Compensation</name>
+				</cyberware>
+				<cyberware>
+					<name>Eye Light System</name>
+				</cyberware>
+				<cyberware>
+					<name>Cyberears</name>
+					<rating>1</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Damper</name>
+						</cyberware>
+						<cyberware>
+							<name>Spatial Recognizer</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Math SPU</name>
+				</cyberware>
+				<cyberware>
+					<name>Obvious Full Arm</name>
+					<cyberwares>
+						<cyberware>
+							<name>Customized Body</name>
+							<rating>5</rating>
+						</cyberware>
+						<cyberware>
+							<name>Customized Strength</name>
+							<rating>5</rating>
+						</cyberware>
+						<cyberware>
+							<name>Customized Agility</name>
+							<rating>4</rating>
+						</cyberware>
+						<cyberware>
+							<name>Modular Cyberlimb</name>
+						</cyberware>
+						<cyberware>
+							<name>Built-in Utility Kit</name>
+						</cyberware>
+						<cyberware>
+							<name>Built-in Medkit</name>
+							<rating>5</rating>
+						</cyberware>
+						<cyberware>
+							<name>Hydraulic Press</name>
+						</cyberware>
+						<cyberware>
+							<name>Jackhammer</name>
+						</cyberware>
+						<cyberware>
+							<name>Nail Pistol</name>
+						</cyberware>
+						<cyberware>
+							<name>Vacuum Pump</name>
+						</cyberware>
+						<cyberware>
+							<name>Welding Laser</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Ares Bodyguard</name>
+			<grade>Standard</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>3</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Flare Compensation</name>
+						</cyberware>
+						<cyberware>
+							<name>Low-Light Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Smartlink</name>
+						</cyberware>
+						<cyberware>
+							<name>Vision Enhancement</name>
+							<rating>3</rating>
+						</cyberware>
+						<cyberware>
+							<name>Vision Magnification</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Cyberears</name>
+					<rating>2</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Audio Enhancement</name>
+							<rating>3</rating>
+						</cyberware>
+						<cyberware>
+							<name>Damper</name>
+						</cyberware>
+						<cyberware>
+							<name>Spatial Recognizer</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Attention Coprocessor</name>
+					<rating>2</rating>
+				</cyberware>
+				<cyberware>
+					<name>Move-by-Wire System</name>
+					<rating>1</rating>
+				</cyberware>
+				<cyberware>
+					<name>Bone Lacing (Kevlar)</name>
+				</cyberware>
+				<cyberware>
+					<name>Synthetic Full Arm</name>
+					<cyberwares>
+						<cyberware>
+							<name>Customized Body</name>
+							<rating>6</rating>
+						</cyberware>
+						<cyberware>
+							<name>Customized Strength</name>
+							<rating>6</rating>
+						</cyberware>
+						<cyberware>
+							<name>Customized Agility</name>
+							<rating>6</rating>
+						</cyberware>
+						<cyberware>
+							<name>Armor</name>
+							<rating>1</rating>
+						</cyberware>
+						<cyberware>
+							<name>Scanner System</name>
+							<rating>4</rating>
+						</cyberware>
+						<cyberware>
+							<name>Shock Hand</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Ares Bodyguard Pro</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>3</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Flare Compensation</name>
+						</cyberware>
+						<cyberware>
+							<name>Low-Light Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Smartlink</name>
+						</cyberware>
+						<cyberware>
+							<name>Vision Enhancement</name>
+							<rating>3</rating>
+						</cyberware>
+						<cyberware>
+							<name>Vision Magnification</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Cyberears</name>
+					<rating>2</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Audio Enhancement</name>
+							<rating>3</rating>
+						</cyberware>
+						<cyberware>
+							<name>Damper</name>
+						</cyberware>
+						<cyberware>
+							<name>Spatial Recognizer</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Attention Coprocessor</name>
+					<rating>2</rating>
+				</cyberware>
+				<cyberware>
+					<name>Move-by-Wire System</name>
+					<rating>1</rating>
+				</cyberware>
+				<cyberware>
+					<name>Bone Lacing (Kevlar)</name>
+				</cyberware>
+				<cyberware>
+					<name>Synthetic Full Arm</name>
+					<cyberwares>
+						<cyberware>
+							<name>Customized Body</name>
+							<rating>6</rating>
+						</cyberware>
+						<cyberware>
+							<name>Customized Strength</name>
+							<rating>6</rating>
+						</cyberware>
+						<cyberware>
+							<name>Customized Agility</name>
+							<rating>6</rating>
+						</cyberware>
+						<cyberware>
+							<name>Armor</name>
+							<rating>1</rating>
+						</cyberware>
+						<cyberware>
+							<name>Scanner System</name>
+							<rating>4</rating>
+						</cyberware>
+						<cyberware>
+							<name>Shock Hand</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+			</cyberwares>
+		</suite>
+		<suite>
+			<name>Aztechnology Cipactli</name>
+			<grade>Alphaware</grade>
+			<cyberwares>
+				<cyberware>
+					<name>Commlink</name>
+				</cyberware>
+				<cyberware>
+					<name>Cybereyes Basic System</name>
+					<rating>3</rating>
+					<cyberwares>
+						<cyberware>
+							<name>Flare Compensation</name>
+						</cyberware>
+						<cyberware>
+							<name>Low-Light Vision</name>
+						</cyberware>
+						<cyberware>
+							<name>Smartlink</name>
+						</cyberware>
+						<cyberware>
+							<name>Vision Enhancement</name>
+							<rating>3</rating>
+						</cyberware>
+						<cyberware>
+							<name>Vision Magnification</name>
+						</cyberware>
+					</cyberwares>
+				</cyberware>
+				<cyberware>
+					<name>Bone Lacing (Ceramic)</name>
+				</cyberware>
+				<cyberware>
+					<name>Muscle Replacement</name>
+					<rating>2</rating>
+				</cyberware>
+				<cyberware>
+					<name>Move-by-Wire System</name>
+					<rating>2</rating>
+				</cyberware>
+				<cyberware>
+					<name>Projectile Spur</name>
 				</cyberware>
 			</cyberwares>
 		</suite>

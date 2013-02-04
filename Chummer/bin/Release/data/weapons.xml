@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-859</version>
+	<version>-856</version>
 	<categories>
 		<category>Blades</category>
 		<category>Clubs</category>
@@ -2346,8 +2346,8 @@
 		<weapon>
 			<name>Ares Light Fire 70</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -2368,8 +2368,8 @@
 		<weapon>
 			<name>AS-113o Assassin</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>3P</damage>
 			<ap>-</ap>
@@ -2390,8 +2390,8 @@
 		<weapon>
 			<name>Beretta 101T</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -2412,8 +2412,8 @@
 		<weapon>
 			<name>Beretta 200ST</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -2437,8 +2437,8 @@
 		<weapon>
 			<name>Ceska vz/120</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -2459,8 +2459,8 @@
 		<weapon>
 			<name>Colt America L36</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -2481,9 +2481,9 @@
 		<weapon>
 			<name>Colt Asp</name>
 			<category>Light Pistols</category>
+			<type>Ranged</type>
 			<spec>Semi-Automatics</spec>
 			<spec2>Revolvers</spec2>
-			<type>Ranged</type>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -2504,8 +2504,8 @@
 		<weapon>
 			<name>Fichetti Executive Action</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -2526,8 +2526,8 @@
 		<weapon>
 			<name>Fichetti Security 600</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -2554,8 +2554,8 @@
 		<weapon>
 			<name>Hammerli 620S</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -2580,8 +2580,8 @@
 		<weapon>
 			<name>SA Puzzler</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -2602,8 +2602,8 @@
 		<weapon>
 			<name>Seco LD-120</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -2627,9 +2627,9 @@
 		<weapon>
 			<name>Taurus Multi-6</name>
 			<category>Light Pistols</category>
+			<type>Ranged</type>
 			<spec>Semi-Automatics</spec>
 			<spec2>Revolvers</spec2>
-			<type>Ranged</type>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -2650,8 +2650,8 @@
 		<weapon>
 			<name>Walther PB-120</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -2672,8 +2672,8 @@
 		<weapon>
 			<name>Yamaha Sakura Fubuki</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -2697,8 +2697,8 @@
 		<weapon>
 			<name>Ares Predator IV</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -2722,8 +2722,8 @@
 		<weapon>
 			<name>Ares Viper Slivergun</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>8P(f)</damage>
 			<ap>+5</ap>
@@ -2747,8 +2747,8 @@
 		<weapon>
 			<name>Browning Ultra-Power</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -2772,9 +2772,9 @@
 		<weapon>
 			<name>Cavalier Deputy</name>
 			<category>Heavy Pistols</category>
+			<type>Ranged</type>
 			<spec>Semi-Automatics</spec>
 			<spec2>Revolvers</spec2>
-			<type>Ranged</type>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -2795,8 +2795,8 @@
 		<weapon>
 			<name>Collapsible Heavy Pistol</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -2817,8 +2817,8 @@
 		<weapon>
 			<name>Colt Government 2066</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -2839,8 +2839,8 @@
 		<weapon>
 			<name>Colt Manhunter</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -2886,8 +2886,8 @@
 		<weapon>
 			<name>Enfield Merlin</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -2912,8 +2912,8 @@
 		<weapon>
 			<name>HK Urban Fighter</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -2934,8 +2934,8 @@
 		<weapon>
 			<name>Morrissey Alta</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -2959,8 +2959,8 @@
 		<weapon>
 			<name>Morrissey Elite</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -2982,8 +2982,8 @@
 		<weapon>
 			<name>Nitama NeMax</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -3007,8 +3007,8 @@
 		<weapon>
 			<name>PSK-3 Collapsible Pistol</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -3025,8 +3025,8 @@
 		<weapon>
 			<name>Remington Roomsweeper</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -3047,8 +3047,8 @@
 		<weapon>
 			<name>Ruger Super Warhawk</name>
 			<category>Heavy Pistols</category>
-			<spec>Revolvers</spec>
 			<type>Ranged</type>
+			<spec>Revolvers</spec>
 			<reach>0</reach>
 			<damage>6P</damage>
 			<ap>-2</ap>
@@ -3117,8 +3117,8 @@
 		<weapon>
 			<name>Savalette Guardian</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -3142,8 +3142,8 @@
 		<weapon>
 			<name>Walther Secura</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -3164,8 +3164,8 @@
 		<weapon>
 			<name>Walther Secura w/ Smartlink</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -3189,8 +3189,8 @@
 		<weapon>
 			<name>Walther Secura Kompakt</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -3212,8 +3212,8 @@
 		<weapon>
 			<name>Walther Secura Kompakt w/ Smartlink</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -3238,8 +3238,8 @@
 		<weapon>
 			<name>WW Infiltrator</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -3260,8 +3260,8 @@
 		<weapon>
 			<name>Zastava CZ49</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -3282,8 +3282,8 @@
 		<weapon>
 			<name>Ares Crusader</name>
 			<category>Machine Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -3307,8 +3307,8 @@
 		<weapon>
 			<name>Ceska Black Scorpion</name>
 			<category>Machine Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -3332,8 +3332,8 @@
 		<weapon>
 			<name>FN 5-7C</name>
 			<category>Machine Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -3354,8 +3354,8 @@
 		<weapon>
 			<name>PPSK-4 Collapsible Machine Pistol</name>
 			<category>Machine Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -3378,8 +3378,8 @@
 		<weapon>
 			<name>Steyr TMP</name>
 			<category>Machine Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -9537,8 +9537,8 @@
 		<weapon>
 			<name>Walther P99</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -9563,8 +9563,8 @@
 		<weapon>
 			<name>Beretta 92SL</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -9589,8 +9589,8 @@
 		<weapon>
 			<name>Nitama Sporter</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -9641,8 +9641,8 @@
 		<weapon>
 			<name>Colt Coralsnake</name>
 			<category>Light Pistols</category>
-			<spec>Revolvers</spec>
 			<type>Ranged</type>
+			<spec>Revolvers</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -9668,8 +9668,8 @@
 		<weapon>
 			<name>Ruger T-983</name>
 			<category>Machine Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -9695,8 +9695,8 @@
 		<weapon>
 			<name>B&amp;P MP9</name>
 			<category>Machine Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -9747,8 +9747,8 @@
 		<weapon>
 			<name>Ares Predator I</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -9773,8 +9773,8 @@
 		<weapon>
 			<name>Ares Predator II</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -9800,8 +9800,8 @@
 		<weapon>
 			<name>HK MK31</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -9828,8 +9828,8 @@
 		<weapon>
 			<name>Beretta 97</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-</ap>
@@ -9851,8 +9851,8 @@
 		<weapon>
 			<name>Walther P109</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -9876,8 +9876,8 @@
 		<weapon>
 			<name>Ruger Bloodhawk</name>
 			<category>Heavy Pistols</category>
-			<spec>Revolvers</spec>
 			<type>Ranged</type>
+			<spec>Revolvers</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -9903,8 +9903,8 @@
 		<weapon>
 			<name>Colt M1991</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -11130,7 +11130,7 @@
 			<category>Quality</category>
 			<type>Melee</type>
 			<reach>-1</reach>
-			<damage>(STR/2)+1P</damage>
+			<damage>(STR/2)-1P</damage>
 			<ap>-</ap>
 			<mode>0</mode>
 			<rc>0</rc>
@@ -11182,8 +11182,8 @@
 		<weapon>
 			<name>Ares Predator CW</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -11481,8 +11481,8 @@
 		<weapon>
 			<name>Izom PHP-131</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -11533,8 +11533,8 @@
 		<weapon>
 			<name>Izom HP-49B</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -11796,8 +11796,8 @@
 		<weapon>
 			<name>Nemesis Arms Praetorian</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -11868,8 +11868,8 @@
 		<weapon>
 			<name>Shiawase Arms Copernicus</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -11950,8 +11950,8 @@
 		<weapon>
 			<name>Shiawase Arms Hearth Protector</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -11978,8 +11978,8 @@
 		<weapon>
 			<name>Shiawase Arms Light Tactical</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -12005,8 +12005,8 @@
 		<weapon>
 			<name>Shiawase Arms Heavy Tactical</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -12209,8 +12209,8 @@
 		<weapon>
 			<name>Onotari Arms Violator</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -12236,8 +12236,8 @@
 		<weapon>
 			<name>Onotari Arms Steadfast</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -12262,8 +12262,8 @@
 		<weapon>
 			<name>Onotari Arms Security Special</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -12533,8 +12533,8 @@
 		<weapon>
 			<name>Cavalier Arms Sheriff</name>
 			<category>Heavy Pistols</category>
-			<spec>Revolvers</spec>
 			<type>Ranged</type>
+			<spec>Revolvers</spec>
 			<reach>0</reach>
 			<damage>6P</damage>
 			<ap>-3</ap>
@@ -12562,8 +12562,8 @@
 		<weapon>
 			<name>Cavalier Arms Dragoon</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -12587,8 +12587,8 @@
 		<weapon>
 			<name>Browning Mega-Power</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -12691,8 +12691,8 @@
 		<weapon>
 			<name>CZ-64</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -12767,8 +12767,8 @@
 		<weapon>
 			<name>Barrens Special</name>
 			<category>Light Pistols</category>
-			<spec>Revolvers</spec>
 			<type>Ranged</type>
+			<spec>Revolvers</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -13451,8 +13451,8 @@
 		<weapon>
 			<name>Ares Light Fire 70 (2050)</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -13473,8 +13473,8 @@
 		<weapon>
 			<name>Beretta 200ST (2050)</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -13498,8 +13498,8 @@
 		<weapon>
 			<name>Beretta 101T (2050)</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -13520,8 +13520,8 @@
 		<weapon>
 			<name>Colt America L36 (2050)</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -13542,8 +13542,8 @@
 		<weapon>
 			<name>Fichetti Security 500 (2050)</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -13567,8 +13567,8 @@
 		<weapon>
 			<name>Fichetti Security 500a (2050)</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -13595,8 +13595,8 @@
 		<weapon>
 			<name>Ares Crusader MP 6 (2050)</name>
 			<category>Machine Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -13621,8 +13621,8 @@
 		<weapon>
 			<name>Ceska Black Scorpion (2050)</name>
 			<category>Machine Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>4P</damage>
 			<ap>-</ap>
@@ -13646,8 +13646,8 @@
 		<weapon>
 			<name>Ares Predator (2050)</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -13669,8 +13669,8 @@
 		<weapon>
 			<name>Ares Viper (2050)</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>8P(f)</damage>
 			<ap>+5</ap>
@@ -13694,8 +13694,8 @@
 		<weapon>
 			<name>Browning Max-Power (2050)</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>5P</damage>
 			<ap>-1</ap>
@@ -13716,8 +13716,8 @@
 		<weapon>
 			<name>Remington Roomsweeper (2050)</name>
 			<category>Heavy Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>7P(f)</damage>
 			<ap>+5</ap>
@@ -13739,8 +13739,8 @@
 		<weapon>
 			<name>Ruger Super Warhawk (2050)</name>
 			<category>Heavy Pistols</category>
-			<spec>Revolvers</spec>
 			<type>Ranged</type>
+			<spec>Revolvers</spec>
 			<reach>0</reach>
 			<damage>6P</damage>
 			<ap>-2</ap>
@@ -14610,8 +14610,8 @@
 		<weapon>
 			<name>Narcoject Pistol (2050)</name>
 			<category>Light Pistols</category>
-			<spec>Semi-Automatics</spec>
 			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
 			<reach>0</reach>
 			<damage>0</damage>
 			<ap>-</ap>
@@ -14705,6 +14705,45 @@
 			<range>Submachine Guns</range>
 			<source>2050</source>
 			<page>195</page>
+		</weapon>
+		<weapon>
+			<name>Arm Blade</name>
+			<category>Cyberware Blades</category>
+			<type>Melee</type>
+			<spec>Cyber-Implant Blades</spec>
+			<reach>1</reach>
+			<damage>(STR/2+3)P</damage>
+			<ap>-1</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>0</conceal>
+			<avail>0</avail>
+			<cost>3500</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>WS</source>
+			<page>14</page>
+		</weapon>
+		<weapon>
+			<name>Monofilament Chainsaw</name>
+			<category>Gear</category>
+			<type>Melee</type>
+			<reach>1</reach>
+			<damage>5P</damage>
+			<ap>-2</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>0</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod rating="2">DP Penalty</mod>
+			</mods>
+			<useskill>Exotic Melee Weapon</useskill>
+			<source>SR4</source>
+			<page>335</page>
 		</weapon>
 	</weapons>
 	<accessories>
@@ -15152,6 +15191,9 @@
 			<mount />
 			<avail>6R</avail>
 			<cost>Weapon Cost</cost>
+			<allowgear>
+				<gearcategory>Peripherals</gearcategory>
+			</allowgear>
 			<source>SR4</source>
 			<page>322</page>
 		</accessory>
@@ -15160,6 +15202,9 @@
 			<mount>Top/Under</mount>
 			<avail>4R</avail>
 			<cost>400</cost>
+			<allowgear>
+				<gearcategory>Peripherals</gearcategory>
+			</allowgear>
 			<source>SR4</source>
 			<page>322</page>
 		</accessory>
@@ -15263,9 +15308,9 @@
 		<accessory>
 			<name>Red Dot Sight</name>
 			<mount>Top</mount>
+			<dicepool>1</dicepool>
 			<avail>3</avail>
 			<cost>200</cost>
-			<dicepool>1</dicepool>
 			<source>GH</source>
 			<page>22</page>
 		</accessory>
@@ -15386,6 +15431,9 @@
 			<mount>Top/Under</mount>
 			<avail>4R</avail>
 			<cost>600</cost>
+			<allowgear>
+				<gearcategory>Peripherals</gearcategory>
+			</allowgear>
 			<source>2050</source>
 			<page>174</page>
 		</accessory>
@@ -16457,6 +16505,17 @@
 			<dicepool>Rating</dicepool>
 			<source>SR4</source>
 			<page>199</page>
+		</mod>
+		<mod>
+			<name>DP Penalty</name>
+			<category>Special Mod</category>
+			<rating>6</rating>
+			<slots>0</slots>
+			<avail>0</avail>
+			<cost>0</cost>
+			<dicepool>-Rating</dicepool>
+			<source>SR4</source>
+			<page>0</page>
 		</mod>
 	</mods>
 </chummer>

@@ -211,12 +211,12 @@ namespace Chummer
         {
             // Don't attempt to do anything if nothing is selected.
 			if (lstMetatypes.Text != "")
-            {
-                XmlDocument objXmlDocument = XmlManager.Instance.Load(_strXmlFile);
+			{
+				XmlDocument objXmlDocument = XmlManager.Instance.Load(_strXmlFile);
 
-                XmlNode objXmlMetatype = objXmlDocument.SelectSingleNode("/chummer/metatypes/metatype[name = \"" + lstMetatypes.SelectedValue + "\"]");
+				XmlNode objXmlMetatype = objXmlDocument.SelectSingleNode("/chummer/metatypes/metatype[name = \"" + lstMetatypes.SelectedValue + "\"]");
 
-                lblBP.Text = objXmlMetatype["bp"].InnerText;
+				lblBP.Text = objXmlMetatype["bp"].InnerText;
 				if (objXmlMetatype["forcecreature"] == null)
 				{
 					lblBOD.Text = string.Format("{0}/{1} ({2})", objXmlMetatype["bodmin"].InnerText, objXmlMetatype["bodmax"].InnerText, objXmlMetatype["bodaug"].InnerText);
@@ -292,7 +292,20 @@ namespace Chummer
 					lblForceLabel.Visible = false;
 					nudForce.Visible = false;
 				}
-            }
+			}
+			else
+			{
+				// Clear the Metavariant list if nothing is currently selected.
+				List<ListItem> lstMetavariants = new List<ListItem>();
+				ListItem objNone = new ListItem();
+				objNone.Value = "None";
+				objNone.Name = LanguageManager.Instance.GetString("String_None");
+				lstMetavariants.Add(objNone);
+
+				cboMetavariant.ValueMember = "Value";
+				cboMetavariant.DisplayMember = "Name";
+				cboMetavariant.DataSource = lstMetavariants;
+			}
         }
 
         private void lstMetatypes_DoubleClick(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-829</version>
+	<version>-827</version>
 	<categories>
 		<category show="false">Altskin Function</category>
 		<category>Ammunition</category>
@@ -1227,8 +1227,8 @@
 			<category>RFID Tags</category>
 			<addoncategory>Sensors</addoncategory>
 			<rating>0</rating>
-			<armorcapacity>[0]</armorcapacity>
 			<capacity>1</capacity>
+			<armorcapacity>[0]</armorcapacity>
 			<avail>4</avail>
 			<costfor>20</costfor>
 			<cost>500</cost>
@@ -2523,6 +2523,13 @@
 			<cost>Rating * 50</cost>
 			<source>SR4</source>
 			<page>332</page>
+			<gears>
+				<usegear>
+					<name>Vision Magnification</name>
+					<category>Vision Enhancements</category>
+					<capacity>0</capacity>
+				</usegear>
+			</gears>
 		</gear>
 		<gear>
 			<name>Binoculars, Optical</name>
@@ -2533,6 +2540,13 @@
 			<cost>50</cost>
 			<source>SR4</source>
 			<page>332</page>
+			<gears>
+				<usegear>
+					<name>Vision Magnification</name>
+					<category>Vision Enhancements</category>
+					<capacity>0</capacity>
+				</usegear>
+			</gears>
 		</gear>
 		<gear>
 			<name>Camera, Trideo</name>
@@ -3677,6 +3691,7 @@
 			<category>B&amp;E Gear</category>
 			<rating>0</rating>
 			<avail>4</avail>
+			<addweapon>Monofilament Chainsaw</addweapon>
 			<cost>300</cost>
 			<source>SR4</source>
 			<page>335</page>
@@ -5402,7 +5417,7 @@
 			<page>151</page>
 		</gear>
 		<gear>
-			<name>Universal Mirror Hodd</name>
+			<name>Universal Mirror Hood</name>
 			<category>Spy Toys</category>
 			<rating>1</rating>
 			<avail>6F</avail>
@@ -11151,7 +11166,7 @@
 			<category>Skillsoft Clusters</category>
 			<rating>0</rating>
 			<avail>6</avail>
-			<cost>14400</cost>
+			<cost>44800</cost>
 			<source>UN</source>
 			<page>128</page>
 			<gears>
@@ -11177,7 +11192,7 @@
 			<category>Skillsoft Clusters</category>
 			<rating>0</rating>
 			<avail>8</avail>
-			<cost>14400</cost>
+			<cost>48000</cost>
 			<source>UN</source>
 			<page>128</page>
 			<gears>
@@ -11198,7 +11213,7 @@
 			<category>Skillsoft Clusters</category>
 			<rating>0</rating>
 			<avail>8</avail>
-			<cost>10400</cost>
+			<cost>28800</cost>
 			<source>UN</source>
 			<page>128</page>
 			<gears>
@@ -11224,7 +11239,7 @@
 			<category>Skillsoft Clusters</category>
 			<rating>0</rating>
 			<avail>8</avail>
-			<cost>14400</cost>
+			<cost>44800</cost>
 			<source>UN</source>
 			<page>128</page>
 			<gears>
@@ -11250,7 +11265,7 @@
 			<category>Skillsoft Clusters</category>
 			<rating>0</rating>
 			<avail>8</avail>
-			<cost>15200</cost>
+			<cost>46400</cost>
 			<source>UN</source>
 			<page>128</page>
 			<gears>
@@ -14657,6 +14672,13 @@
 			<cost>100</cost>
 			<source>2050</source>
 			<page>178</page>
+			<gears>
+				<usegear>
+					<name>Vision Magnification</name>
+					<category>Vision Enhancements</category>
+					<capacity>0</capacity>
+				</usegear>
+			</gears>
 		</gear>
 		<gear>
 			<name>Magnification, Binoculars (2050)</name>

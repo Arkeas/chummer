@@ -41,6 +41,7 @@
 			this.lblSkillRating = new System.Windows.Forms.Label();
 			this.cmdChangeSpec = new System.Windows.Forms.Button();
 			this.cmdRoll = new System.Windows.Forms.Button();
+			this.cmdBreakGroup = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.nudSkill)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -193,10 +194,23 @@
 			this.cmdRoll.Visible = false;
 			this.cmdRoll.Click += new System.EventHandler(this.cmdRoll_Click);
 			// 
+			// cmdBreakGroup
+			// 
+			this.cmdBreakGroup.Location = new System.Drawing.Point(205, 0);
+			this.cmdBreakGroup.Name = "cmdBreakGroup";
+			this.cmdBreakGroup.Size = new System.Drawing.Size(44, 23);
+			this.cmdBreakGroup.TabIndex = 12;
+			this.cmdBreakGroup.Tag = "String_Break";
+			this.cmdBreakGroup.Text = "Break";
+			this.cmdBreakGroup.UseVisualStyleBackColor = true;
+			this.cmdBreakGroup.Visible = false;
+			this.cmdBreakGroup.Click += new System.EventHandler(this.cmdBreakGroup_Click);
+			// 
 			// SkillControl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.cmdBreakGroup);
 			this.Controls.Add(this.cmdRoll);
 			this.Controls.Add(this.cmdChangeSpec);
 			this.Controls.Add(this.lblSkillRating);
@@ -233,5 +247,6 @@
 		private System.Windows.Forms.Label lblSkillRating;
 		private System.Windows.Forms.Button cmdChangeSpec;
 		private System.Windows.Forms.Button cmdRoll;
+		private System.Windows.Forms.Button cmdBreakGroup;
     }
 }

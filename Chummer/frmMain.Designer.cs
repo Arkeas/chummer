@@ -87,6 +87,7 @@
 			this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
 			this.tabForms = new System.Windows.Forms.TabControl();
+			this.mnuHelpDumpshock = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip.SuspendLayout();
 			this.toolStrip.SuspendLayout();
 			this.SuspendLayout();
@@ -513,6 +514,7 @@
             this.contentsToolStripMenuItem,
             this.toolStripSeparator8,
             this.mnuHelpRevisionHistory,
+            this.mnuHelpDumpshock,
             this.aboutToolStripMenuItem});
 			this.helpMenu.Name = "helpMenu";
 			this.helpMenu.Size = new System.Drawing.Size(44, 20);
@@ -655,6 +657,14 @@
 			this.tabForms.Visible = false;
 			this.tabForms.SelectedIndexChanged += new System.EventHandler(this.tabForms_SelectedIndexChanged);
 			// 
+			// mnuHelpDumpshock
+			// 
+			this.mnuHelpDumpshock.Name = "mnuHelpDumpshock";
+			this.mnuHelpDumpshock.Size = new System.Drawing.Size(200, 22);
+			this.mnuHelpDumpshock.Tag = "Menu_Main_DumpshockThread";
+			this.mnuHelpDumpshock.Text = "&Dumpshock Thread";
+			this.mnuHelpDumpshock.Click += new System.EventHandler(this.mnuHelpDumpshock_Click);
+			// 
 			// frmMain
 			// 
 			this.AllowDrop = true;
@@ -743,6 +753,7 @@
 		private System.Windows.Forms.ToolStripMenuItem mnuToolsDiceRoller;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
 		private System.Windows.Forms.ToolStripMenuItem mnuToolsOmae;
+		private System.Windows.Forms.ToolStripMenuItem mnuHelpDumpshock;
 	}
 }
 

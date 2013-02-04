@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-914</version>
+	<version>-913</version>
 	<name>English (US)</name>
 	<strings>
 		<!-- Common Strings -->
@@ -63,6 +63,10 @@
 		<string>
 			<key>String_UnnamedCharacter</key>
 			<text>Unnamed Character</text>
+		</string>
+		<string>
+			<key>String_Break</key>
+			<text>Break</text>
 		</string>
 		<string>
 			<key>Checkbox_Free</key>
@@ -607,6 +611,10 @@
 		<string>
 			<key>Menu_Main_RevisionHistory</key>
 			<text>&amp;Revision History</text>
+		</string>
+		<string>
+			<key>Menu_Main_DumpshockThread</key>
+			<text>&amp;Dumpshock Thread</text>
 		</string>
 		<string>
 			<key>Menu_Main_About</key>
@@ -4855,6 +4863,10 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		<string>
 			<key>Label_Options_Language</key>
 			<text>Language:</text>
+		</string>
+		<string>
+			<key>Label_Options_DefaultCharacterSheet</key>
+			<text>Default Character Sheet:</text>
 		</string>
 		<string>
 			<key>Tab_Options_General</key>

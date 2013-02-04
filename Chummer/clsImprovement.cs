@@ -1573,7 +1573,14 @@ namespace Chummer
 							if (objXmlAttribute.InnerXml.Contains("val"))
 								intAug = ValueToInt(objXmlAttribute["val"].InnerXml, intRating);
 							if (objXmlAttribute.InnerXml.Contains("max"))
-								intMax = ValueToInt(objXmlAttribute["max"].InnerXml, intRating);
+							{
+								if (objXmlAttribute["max"].InnerText.Contains("-natural"))
+								{
+									intMax = Convert.ToInt32(objXmlAttribute["max"].InnerText.Replace("-natural", string.Empty)) - _objCharacter.GetAttribute(objXmlAttribute["name"].InnerText).MetatypeMaximum;
+								}
+								else
+									intMax = ValueToInt(objXmlAttribute["max"].InnerXml, intRating);
+							}
 							if (objXmlAttribute.InnerXml.Contains("aug"))
 								intAugMax = ValueToInt(objXmlAttribute["aug"].InnerXml, intRating);
 
@@ -2103,7 +2110,10 @@ namespace Chummer
 				{
 					frmSelectSide frmPickSide = new frmSelectSide();
 					frmPickSide.Description = LanguageManager.Instance.GetString("Label_SelectSide").Replace("{0}", strFriendlyName);
-					frmPickSide.ShowDialog();
+					if (_strForcedValue != "")
+						frmPickSide.ForceValue(_strForcedValue);
+					else
+						frmPickSide.ShowDialog();
 
 					// Make sure the dialogue window was not canceled.
 					if (frmPickSide.DialogResult == DialogResult.Cancel)

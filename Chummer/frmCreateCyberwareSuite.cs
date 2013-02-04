@@ -63,7 +63,7 @@ namespace Chummer
 				objXmlSuiteList = objXmlDocument.SelectNodes("/chummer/suites/suite[name = \"" + txtName.Text + "\"]");
 				if (objXmlSuiteList.Count > 0)
 				{
-					MessageBox.Show(LanguageManager.Instance.GetString("Message_CyberwareSuite_DuplicateName").Replace("{0}", txtName.Text).Replace("{1}", strFile.Replace(strCustomPath + "\\", string.Empty)), LanguageManager.Instance.GetString("MessageTitle_CyberwareSuite_DuplicateName"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+					MessageBox.Show(LanguageManager.Instance.GetString("Message_CyberwareSuite_DuplicateName").Replace("{0}", txtName.Text).Replace("{1}", strFile.Replace(strCustomPath + Path.DirectorySeparatorChar, string.Empty)), LanguageManager.Instance.GetString("MessageTitle_CyberwareSuite_DuplicateName"), MessageBoxButtons.OK, MessageBoxIcon.Information);
 					return;
 				}
 			}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-920</version>
+	<version>-919</version>
 	<categories>
 		<category>Attribute Kits</category>
 		<category>Skill Kits</category>
@@ -3552,8 +3552,8 @@
 				</gear>
 				<gear>
 					<name>Maglock Sequencer</name>
-					<rating>4</rating>
 					<qty>2</qty>
+					<rating>4</rating>
 				</gear>
 				<gear>
 					<name>Miniwelder</name>

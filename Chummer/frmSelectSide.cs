@@ -66,5 +66,18 @@ namespace Chummer
 			}
 		}
 		#endregion
+
+		#region Methods
+		/// <summary>
+		/// Force a particular value to be selected in the window.
+		/// </summary>
+		/// <param name="strSide">Value to force.</param>
+		public void ForceValue(string strSide)
+		{
+			cboSide.SelectedValue = strSide;
+			cboSide.Text = strSide;
+			cmdOK_Click(this, null);
+		}
+		#endregion
 	}
 }
