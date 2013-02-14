@@ -2065,7 +2065,7 @@ namespace Chummer
 		private string _strName = "Standard";
 		private string _strAltName = "";
 		private decimal _decEss = 1.0m;
-		private decimal _decCost = 1.0m;
+		private double _dblCost = 1.0;
 		private int _intAvail = 0;
 		private string _strSource = "SR4";
 
@@ -2084,7 +2084,7 @@ namespace Chummer
 			if (objNode["translate"] != null)
 				_strAltName = objNode["translate"].InnerText;
 			_decEss = Convert.ToDecimal(objNode["ess"].InnerText, GlobalOptions.Instance.CultureInfo);
-			_decCost = Convert.ToDecimal(objNode["cost"].InnerText, GlobalOptions.Instance.CultureInfo);
+			_dblCost = Convert.ToDouble(objNode["cost"].InnerText, GlobalOptions.Instance.CultureInfo);
 			_intAvail = Convert.ToInt32(objNode["avail"].InnerText, GlobalOptions.Instance.CultureInfo);
 			_strSource = objNode["source"].InnerText;
 		}
@@ -2130,11 +2130,11 @@ namespace Chummer
 		/// <summary>
 		/// The Grade's cost multiplier.
 		/// </summary>
-		public decimal Cost
+		public double Cost
 		{
 			get
 			{
-				return _decCost;
+				return _dblCost;
 			}
 		}
 
@@ -3770,7 +3770,7 @@ namespace Chummer
 				}
 
 				// Factor in the Cost multiplier of the selected CyberwareGrade.
-				intCost = Convert.ToInt32(Convert.ToDecimal(intCost, GlobalOptions.Instance.CultureInfo) * Grade.Cost);
+				intCost = Convert.ToInt32(Convert.ToDouble(intCost, GlobalOptions.Instance.CultureInfo) * Grade.Cost);
 
 				intReturn = intCost;
 
@@ -3788,7 +3788,7 @@ namespace Chummer
 							int intPluginCost = 0;
 							string strMultiplier = objChild.Cost;
 							strMultiplier = strMultiplier.Replace("*", string.Empty);
-							intPluginCost = Convert.ToInt32(intCost * (Convert.ToDecimal(strMultiplier, GlobalOptions.Instance.CultureInfo) - 1));
+							intPluginCost = Convert.ToInt32(intCost * (Convert.ToDouble(strMultiplier, GlobalOptions.Instance.CultureInfo) - 1));
 
 							if (objChild.DiscountCost)
 								intPluginCost = Convert.ToInt32(Convert.ToDouble(intPluginCost, GlobalOptions.Instance.CultureInfo) * 0.9);
@@ -3835,11 +3835,11 @@ namespace Chummer
 				if (dblMultiplier == 0)
 					dblMultiplier = 1;
 
-				decimal decSuiteMultiplier = 1.0m;
+				double dblSuiteMultiplier = 1.0;
 				if (_blnSuite)
-					decSuiteMultiplier = 0.9m;
+					dblSuiteMultiplier = 0.9;
 
-				return Convert.ToInt32(Math.Round((Convert.ToDecimal(intReturn, GlobalOptions.Instance.CultureInfo) * Convert.ToDecimal(dblMultiplier, GlobalOptions.Instance.CultureInfo) * decSuiteMultiplier), 2, MidpointRounding.AwayFromZero));
+				return Convert.ToInt32(Math.Round((Convert.ToDouble(intReturn, GlobalOptions.Instance.CultureInfo) * Convert.ToDouble(dblMultiplier, GlobalOptions.Instance.CultureInfo) * dblSuiteMultiplier), 2, MidpointRounding.AwayFromZero));
 			}
 		}
 
@@ -3888,7 +3888,7 @@ namespace Chummer
 				}
 
 				// Factor in the Cost multiplier of the selected CyberwareGrade.
-				intCost = Convert.ToInt32(Convert.ToDecimal(intCost, GlobalOptions.Instance.CultureInfo) * Grade.Cost);
+				intCost = Convert.ToInt32(Convert.ToDouble(intCost, GlobalOptions.Instance.CultureInfo) * Grade.Cost);
 
 				intReturn = intCost;
 
@@ -3896,9 +3896,9 @@ namespace Chummer
 					intReturn = Convert.ToInt32(Convert.ToDouble(intReturn, GlobalOptions.Instance.CultureInfo) * 0.9);
 
 				const double dblMultiplier = 1;
-				const decimal decSuiteMultiplier = 1.0m;
+				const double decSuiteMultiplier = 1.0;
 
-				return Convert.ToInt32(Math.Round((Convert.ToDecimal(intReturn, GlobalOptions.Instance.CultureInfo) * Convert.ToDecimal(dblMultiplier, GlobalOptions.Instance.CultureInfo) * decSuiteMultiplier), 2, MidpointRounding.AwayFromZero));
+				return Convert.ToInt32(Math.Round((Convert.ToDouble(intReturn, GlobalOptions.Instance.CultureInfo) * Convert.ToDouble(dblMultiplier, GlobalOptions.Instance.CultureInfo) * decSuiteMultiplier), 2, MidpointRounding.AwayFromZero));
 			}
 		}
 
@@ -3947,7 +3947,7 @@ namespace Chummer
 				}
 
 				// Factor in the Cost multiplier of the selected CyberwareGrade.
-				intCost = Convert.ToInt32(Convert.ToDecimal(intCost, GlobalOptions.Instance.CultureInfo) * Grade.Cost);
+				intCost = Convert.ToInt32(Convert.ToDouble(intCost, GlobalOptions.Instance.CultureInfo) * Grade.Cost);
 
 				intReturn = intCost;
 
@@ -3979,11 +3979,11 @@ namespace Chummer
 				if (dblMultiplier == 0)
 					dblMultiplier = 1;
 
-				decimal decSuiteMultiplier = 1.0m;
+				double dblSuiteMultiplier = 1.0;
 				if (_blnSuite)
-					decSuiteMultiplier = 0.9m;
+					dblSuiteMultiplier = 0.9;
 
-				return Convert.ToInt32(Math.Round((Convert.ToDecimal(intReturn, GlobalOptions.Instance.CultureInfo) * Convert.ToDecimal(dblMultiplier, GlobalOptions.Instance.CultureInfo) * decSuiteMultiplier), 2, MidpointRounding.AwayFromZero));
+				return Convert.ToInt32(Math.Round((Convert.ToDouble(intReturn, GlobalOptions.Instance.CultureInfo) * Convert.ToDouble(dblMultiplier, GlobalOptions.Instance.CultureInfo) * dblSuiteMultiplier), 2, MidpointRounding.AwayFromZero));
 			}
 		}
 
@@ -8675,7 +8675,7 @@ namespace Chummer
 				{
 					if (_strDicePool == "Rating")
 						intReturn = _intRating;
-					if (_strDicePool == "-Rating")
+					else if (_strDicePool == "-Rating")
 						intReturn = _intRating * -1;
 					else
 						intReturn = Convert.ToInt32(_strDicePool);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-856</version>
+	<version>-855</version>
 	<categories>
 		<category>Blades</category>
 		<category>Clubs</category>
@@ -491,6 +491,25 @@
 			<allowaccessory>false</allowaccessory>
 			<source>SR4</source>
 			<page>315</page>
+		</weapon>
+		<weapon>
+			<name>Gentleman's Cane Sword</name>
+			<category>Gear</category>
+			<type>Melee</type>
+			<spec>Swords</spec>
+			<reach>1</reach>
+			<damage>(STR/2+3)P</damage>
+			<ap>-</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>-6</conceal>
+			<avail>4R</avail>
+			<cost>350</cost>
+			<allowaccessory>false</allowaccessory>
+			<useskill>Blades</useskill>
+			<source>AT</source>
+			<page>154</page>
 		</weapon>
 		<weapon>
 			<name>Sword Cane</name>

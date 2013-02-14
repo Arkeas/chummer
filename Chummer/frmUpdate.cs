@@ -29,6 +29,29 @@ namespace Chummer
 
 		private void frmUpdate_Load(object sender, EventArgs e)
 		{
+			// Count the number of instances of Chummer that are currently running.
+			string strFileName = Process.GetCurrentProcess().MainModule.FileName;
+			int intCount = 0;
+			foreach (Process objProcess in Process.GetProcesses())
+			{
+				try
+				{
+					if (objProcess.MainModule.FileName == strFileName)
+						intCount++;
+				}
+				catch
+				{
+				}
+			}
+
+			// If there is more than 1 instance running, do not let the application be updated.
+			if (intCount > 1)
+			{
+				if (!_blnSilentMode)
+					MessageBox.Show(LanguageManager.Instance.GetString("Message_Update_MultipleInstances"), LanguageManager.Instance.GetString("Title_Update"), MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				this.Close();
+			}
+
 			if (Application.StartupPath.Contains("\\Debug"))
 			{
 				MessageBox.Show("Cannot run Update from a debug path.");

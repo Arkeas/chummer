@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-913</version>
+	<version>-912</version>
 	<name>English (US)</name>
 	<strings>
 		<!-- Common Strings -->
@@ -5201,6 +5201,10 @@ Only one attribute may be at its Maximum value during character creation.</text>
 			<text>Weapon Focus</text>
 		</string>
 		<string>
+			<key>Button_Options_RestoreDefaults</key>
+			<text>Restore Defaults</text>
+		</string>
+		<string>
 			<key>Checkbox_Options_MoreLethalGameplace</key>
 			<text>More Lethal Gameplay (SR4 75)</text>
 		</string>
@@ -5403,6 +5407,14 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		<string>
 			<key>Checkbox_Option_TechnomancerAllowAutosoft</key>
 			<text>Technomancers may select Autosofts as Complex Forms</text>
+		</string>
+		<string>
+			<key>Message_Options_RestoreDefaults</key>
+			<text>This will reset the totals on this tab back to their default value. Are you sure you want to do this?</text>
+		</string>
+		<string>
+			<key>MessageTitle_Options_RestoreDefaults</key>
+			<text>Restore Defaults</text>
 		</string>
 		<!-- Print Multiple Window -->
 		<string>
@@ -6150,6 +6162,10 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		<string>
 			<key>Message_Update_NoNewUpdates</key>
 			<text>No new updates are available at this time.</text>
+		</string>
+		<string>
+			<key>Message_Update_MultipleInstances</key>
+			<text>Chummer cannot be updated while there is more than 1 instance of the application running. Please close the other instances of Chummer then run the update again.</text>
 		</string>
 		<!-- Character Viewer Window -->
 		<string>

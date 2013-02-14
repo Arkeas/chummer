@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-904</version>
+	<version>-903</version>
 	<powers>
 		<power>
 			<name>Analytics</name>
@@ -94,8 +94,10 @@
 			<levels>no</levels>
 			<limit>1</limit>
 			<required>
-				<quality>The Speaker's Way</quality>
-				<quality>The Totem's Way</quality>
+				<oneof>
+					<quality>The Speaker's Way</quality>
+					<quality>The Totem's Way</quality>
+				</oneof>
 			</required>
 			<source>WA</source>
 			<page>14</page>
@@ -129,8 +131,10 @@
 				</specificattribute>
 			</bonus>
 			<required>
-				<quality>The Artist's Way</quality>
-				<quality>The Totem's Way</quality>
+				<oneof>
+					<quality>The Artist's Way</quality>
+					<quality>The Totem's Way</quality>
+				</oneof>
 			</required>
 			<source>WA</source>
 			<page>15</page>
@@ -448,8 +452,10 @@
 				</specificattribute>
 			</bonus>
 			<required>
-				<quality>The Artisan's Way</quality>
-				<quality>The Totem's Way</quality>
+				<oneof>
+					<quality>The Artisan's Way</quality>
+					<quality>The Totem's Way</quality>
+				</oneof>
 			</required>
 			<source>WA</source>
 			<page>15</page>
@@ -660,7 +666,9 @@
 				</specificskill>
 			</bonus>
 			<required>
-				<quality>The Totem's Way</quality>
+				<allof>
+					<quality>The Totem's Way</quality>
+				</allof>
 			</required>
 			<source>WA</source>
 			<page>15</page>
@@ -685,7 +693,9 @@
 				</specificskill>
 			</bonus>
 			<required>
-				<quality>The Totem's Way</quality>
+				<allof>
+					<quality>The Totem's Way</quality>
+				</allof>
 			</required>
 			<source>WA</source>
 			<page>15</page>
@@ -787,8 +797,10 @@
 				</skillgroup>
 			</bonus>
 			<required>
-				<quality>The Athlete's Way</quality>
-				<quality>The Totem's Way</quality>
+				<oneof>
+					<quality>The Athlete's Way</quality>
+					<quality>The Totem's Way</quality>
+				</oneof>
 			</required>
 			<source>WA</source>
 			<page>15</page>
@@ -845,8 +857,10 @@
 				</specificskill>
 			</bonus>
 			<required>
-				<quality>The Magician's Way</quality>
-				<quality>The Totem's Way</quality>
+				<oneof>
+					<quality>The Magician's Way</quality>
+					<quality>The Totem's Way</quality>
+				</oneof>
 			</required>
 			<source>WA</source>
 			<page>15</page>
@@ -899,8 +913,10 @@
 			<levels>yes</levels>
 			<limit>1</limit>
 			<required>
-				<quality>The Warrior's Way</quality>
-				<quality>The Totem's Way</quality>
+				<oneof>
+					<quality>The Warrior's Way</quality>
+					<quality>The Totem's Way</quality>
+				</oneof>
 			</required>
 			<source>WA</source>
 			<page>15</page>
@@ -941,8 +957,10 @@
 				</skillgroup>
 			</bonus>
 			<required>
-				<quality>The Invisible Way</quality>
-				<quality>The Totem's Way</quality>
+				<oneof>
+					<quality>The Invisible Way</quality>
+					<quality>The Totem's Way</quality>
+				</oneof>
 			</required>
 			<source>WA</source>
 			<page>15</page>

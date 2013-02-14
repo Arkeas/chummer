@@ -3,7 +3,7 @@
 	<file>
 		<name>chummer.exe</name>
 		<type>Application</type>
-		<version>0.0.0.445</version>
+		<version>0.0.0.449</version>
 		<description>Chummer</description>
 		<notes>- Chummer Application</notes>
 	</file>
@@ -38,7 +38,7 @@
 	<file>
 		<name>sheets/Shadowrun 4 Base.xslt</name>
 		<type>Character Sheets</type>
-		<version>-895</version>
+		<version>-894</version>
 		<description>Shadowrun 4 Character Sheet Base</description>
 		<notes>- Character sheet based on the Shadowrun 4 sheet</notes>
 	</file>
@@ -108,7 +108,7 @@
 	<file>
 		<name>sheets/de/Shadowrun 4 Base.xslt</name>
 		<type>German Character Sheets</type>
-		<version>-895</version>
+		<version>-894</version>
 		<description>Shadowrun 4 Character Sheet Base</description>
 		<notes>- Character sheet based on the Shadowrun 4 sheet</notes>
 	</file>
@@ -206,14 +206,14 @@
 	<file>
 		<name>data/gear.xml</name>
 		<type>Data Files</type>
-		<version>-827</version>
+		<version>-826</version>
 		<description>Gear</description>
 		<notes>- Gear data file</notes>
 	</file>
 	<file>
 		<name>data/improvements.xml</name>
 		<type>Data Files</type>
-		<version>-992</version>
+		<version>-991</version>
 		<description>Improvements</description>
 		<notes>- Improvements data file</notes>
 	</file>
@@ -269,7 +269,7 @@
 	<file>
 		<name>data/powers.xml</name>
 		<type>Data Files</type>
-		<version>-904</version>
+		<version>-903</version>
 		<description>Powers</description>
 		<notes>- Powers data file</notes>
 	</file>
@@ -297,7 +297,7 @@
 	<file>
 		<name>data/skills.xml</name>
 		<type>Data Files</type>
-		<version>-915</version>
+		<version>-914</version>
 		<description>Skills</description>
 		<notes>- Skills data file</notes>
 	</file>
@@ -339,7 +339,7 @@
 	<file>
 		<name>data/weapons.xml</name>
 		<type>Data Files</type>
-		<version>-856</version>
+		<version>-855</version>
 		<description>Weapons</description>
 		<notes>- Weapons data file</notes>
 	</file>

@@ -252,7 +252,7 @@ namespace Chummer
 				bool blnRequirementMet = true;
 
 				// Quality requirements.
-				foreach (XmlNode objXmlQuality in objXmlPower.SelectNodes("required/quality"))
+				foreach (XmlNode objXmlQuality in objXmlPower.SelectNodes("required/allof/quality"))
 				{
 					bool blnFound = false;
 					foreach (Quality objQuality in _objCharacter.Qualities)
@@ -269,6 +269,24 @@ namespace Chummer
 						blnRequirementMet = false;
 						strRequirement += "\n\t" + objXmlQuality.InnerText;
 					}
+				}
+
+				foreach (XmlNode objXmlQuality in objXmlPower.SelectNodes("required/oneof/quality"))
+				{
+					blnRequirementMet = false;
+					foreach (Quality objQuality in _objCharacter.Qualities)
+					{
+						if (objQuality.Name == objXmlQuality.InnerText)
+						{
+							blnRequirementMet = true;
+							break;
+						}
+					}
+
+					if (!blnRequirementMet)
+						strRequirement += "\n\t" + objXmlQuality.InnerText;
+					else
+						break;
 				}
 
 				if (!blnRequirementMet)

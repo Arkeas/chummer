@@ -89,14 +89,38 @@ namespace Chummer
 
 		private void tsContactOpen_Click(object sender, EventArgs e)
 		{
+			bool blnError = false;
+			bool blnUseRelative = false;
+
 			// Make sure the file still exists before attempting to load it.
 			if (!File.Exists(_objContact.FileName))
 			{
-				MessageBox.Show(LanguageManager.Instance.GetString("Message_FileNotFound").Replace("{0}", _objContact.FileName), LanguageManager.Instance.GetString("MessageTitle_FileNotFound"), MessageBoxButtons.OK, MessageBoxIcon.Error);
-				return;
+				// If the file doesn't exist, use the relative path if one is available.
+				if (_objContact.RelativeFileName == "")
+					blnError = true;
+				else
+				{
+					MessageBox.Show(Path.GetFullPath(_objContact.RelativeFileName));
+					if (!File.Exists(Path.GetFullPath(_objContact.RelativeFileName)))
+						blnError = true;
+					else
+						blnUseRelative = true;
+				}
+
+				if (blnError)
+				{
+					MessageBox.Show(LanguageManager.Instance.GetString("Message_FileNotFound").Replace("{0}", _objContact.FileName), LanguageManager.Instance.GetString("MessageTitle_FileNotFound"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
+				}
 			}
 
-			GlobalOptions.Instance.MainForm.LoadCharacter(_objContact.FileName, false);
+			if (!blnUseRelative)
+				GlobalOptions.Instance.MainForm.LoadCharacter(_objContact.FileName, false);
+			else
+			{
+				string strFile = Path.GetFullPath(_objContact.RelativeFileName);
+				GlobalOptions.Instance.MainForm.LoadCharacter(strFile, false);
+			}
 		}
 
 		private void tsAttachCharacter_Click(object sender, EventArgs e)
@@ -112,6 +136,13 @@ namespace Chummer
 					tipTooltip.SetToolTip(imgLink, LanguageManager.Instance.GetString("Tip_Enemy_OpenFile"));
 				else
 					tipTooltip.SetToolTip(imgLink, LanguageManager.Instance.GetString("Tip_Contact_OpenFile"));
+
+				// Set the relative path.
+				Uri uriApplication = new Uri(@Application.StartupPath);
+				Uri uriFile = new Uri(@_objContact.FileName);
+				Uri uriRelative = uriApplication.MakeRelativeUri(uriFile);
+				_objContact.RelativeFileName = "../" + uriRelative.ToString();
+
 				FileNameChanged(this);
 			}
 		}
@@ -122,6 +153,7 @@ namespace Chummer
 			if (MessageBox.Show(LanguageManager.Instance.GetString("Message_RemoveCharacterAssociation"), LanguageManager.Instance.GetString("MessageTitle_RemoveCharacterAssociation"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 			{
 				_objContact.FileName = "";
+				_objContact.RelativeFileName = "";
 				if (_objContact.EntityType == ContactType.Enemy)
 					tipTooltip.SetToolTip(imgLink, LanguageManager.Instance.GetString("Tip_Enemy_LinkFile"));
 				else

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-913</version>
+	<version>-912</version>
 	<name>English (US)</name>
 	<strings>
 		<!-- Common Strings -->
@@ -6162,6 +6162,10 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		<string>
 			<key>Message_Update_NoNewUpdates</key>
 			<text>No new updates are available at this time.</text>
+		</string>
+		<string>
+			<key>Message_Update_MultipleInstances</key>
+			<text>Chummer cannot be updated while there is more than 1 instance of the application running. Please close the other instances of Chummer then run the update again.</text>
 		</string>
 		<!-- Character Viewer Window -->
 		<string>

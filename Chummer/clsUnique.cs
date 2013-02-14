@@ -3217,6 +3217,7 @@ namespace Chummer
 		private bool _blnBound = true;
 		private int _intForce = 1;
 		private string _strFileName = "";
+		private string _strRelativeName = "";
 		private string _strNotes = "";
 		private readonly Character _objCharacter;
 
@@ -3258,6 +3259,7 @@ namespace Chummer
 			objWriter.WriteElementString("bound", _blnBound.ToString());
 			objWriter.WriteElementString("type", _objEntityType.ToString());
 			objWriter.WriteElementString("file", _strFileName);
+			objWriter.WriteElementString("relative", _strRelativeName);
 			objWriter.WriteElementString("notes", _strNotes);
 			objWriter.WriteEndElement();
 		}
@@ -3295,6 +3297,13 @@ namespace Chummer
 			try
 			{
 				_strFileName = objNode["file"].InnerText;
+			}
+			catch
+			{
+			}
+			try
+			{
+				_strRelativeName = objNode["relative"].InnerText;
 			}
 			catch
 			{
@@ -3454,6 +3463,21 @@ namespace Chummer
 			set
 			{
 				_strFileName = value;
+			}
+		}
+
+		/// <summary>
+		/// Relative path to the save file.
+		/// </summary>
+		public string RelativeFileName
+		{
+			get
+			{
+				return _strRelativeName;
+			}
+			set
+			{
+				_strRelativeName = value;
 			}
 		}
 
@@ -6919,6 +6943,7 @@ namespace Chummer
 		private string _strGroupName = "";
 		private ContactType _objContactType = ContactType.Contact;
 		private string _strFileName = "";
+		private string _strRelativeName = "";
 		private string _strNotes = "";
 		private Color _objColour;
 		private bool _blnFree = false;
@@ -6965,6 +6990,7 @@ namespace Chummer
 			objWriter.WriteElementString("matrixresources", _intMatrixResources.ToString());
 			objWriter.WriteElementString("type", _objContactType.ToString());
 			objWriter.WriteElementString("file", _strFileName);
+			objWriter.WriteElementString("relative", _strRelativeName);
 			objWriter.WriteElementString("notes", _strNotes);
 			objWriter.WriteElementString("groupname", _strGroupName);
 			objWriter.WriteElementString("colour", _objColour.ToArgb().ToString());
@@ -6995,6 +7021,13 @@ namespace Chummer
 			try
 			{
 				_strFileName = objNode["file"].InnerText;
+			}
+			catch
+			{
+			}
+			try
+			{
+				_strRelativeName = objNode["relative"].InnerText;
 			}
 			catch
 			{
@@ -7193,6 +7226,21 @@ namespace Chummer
 			set
 			{
 				_strFileName = value;
+			}
+		}
+
+		/// <summary>
+		/// Relative path to the save file.
+		/// </summary>
+		public string RelativeFileName
+		{
+			get
+			{
+				return _strRelativeName;
+			}
+			set
+			{
+				_strRelativeName = value;
 			}
 		}
 
