@@ -96,6 +96,8 @@ namespace Chummer
 			QuickeningMetamagic = 82,
 			BasicLifestyleCost = 83,
 			ThrowSTR = 84,
+			IgnoreCMPenaltyStun = 85,
+			IgnoreCMPenaltyPhysical = 86,
         }
 
         public enum ImprovementSource
@@ -326,6 +328,10 @@ namespace Chummer
 					return ImprovementType.BasicLifestyleCost;
 				case "ThrowSTR":
 					return ImprovementType.ThrowSTR;
+				case "IgnoreCMPenaltyStun":
+					return ImprovementType.IgnoreCMPenaltyStun;
+				case "IgnoreCMPenaltyPhysical":
+					return ImprovementType.IgnoreCMPenaltyPhysical;
 				default:
 					return ImprovementType.Skill;
 			}
@@ -2269,6 +2275,18 @@ namespace Chummer
 				if (NodeExists(nodBonus, "quickeningmetamagic"))
 				{
 					CreateImprovement("", objImprovementSource, strSourceName, Improvement.ImprovementType.QuickeningMetamagic, "");
+				}
+
+				// Check for ignore Stun CM Penalty.
+				if (NodeExists(nodBonus, "ignorecmpenaltystun"))
+				{
+					CreateImprovement("", objImprovementSource, strSourceName, Improvement.ImprovementType.IgnoreCMPenaltyStun, "");
+				}
+
+				// Check for ignore Physical CM Penalty.
+				if (NodeExists(nodBonus, "ignorecmpenaltyphysical"))
+				{
+					CreateImprovement("", objImprovementSource, strSourceName, Improvement.ImprovementType.IgnoreCMPenaltyPhysical, "");
 				}
 
 				// Check for Select Sprite.

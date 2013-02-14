@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-915</version>
+	<version>-914</version>
 	<skillgroups>
 		<name>Animal Husbandry</name>
 		<name>Athletics</name>
@@ -1668,7 +1668,7 @@
 				<spec>Quebec</spec>
 				<spec>Salish-Shidhe Council</spec>
 				<spec>Sioux</spec>
-				<spec>Tir Tairngaire</spec>
+				<spec>Tir Tairngire</spec>
 				<spec>Tsimshian Protectorate</spec>
 				<spec>Yukutan</spec>
 				<spec>N. America</spec>
@@ -1898,7 +1898,7 @@
 				<spec>Quebec</spec>
 				<spec>Salish-Shidhe Council</spec>
 				<spec>Sioux</spec>
-				<spec>Tir Tairngaire</spec>
+				<spec>Tir Tairngire</spec>
 				<spec>Tsimshian Protectorate</spec>
 				<spec>Yukutan</spec>
 				<spec>N. America</spec>
@@ -2021,7 +2021,7 @@
 				<spec>Quebec</spec>
 				<spec>Salish-Shidhe Council</spec>
 				<spec>Sioux</spec>
-				<spec>Tir Tairngaire</spec>
+				<spec>Tir Tairngire</spec>
 				<spec>Tsimshian Protectorate</spec>
 				<spec>Yukutan</spec>
 			</specs>
@@ -2081,7 +2081,7 @@
 				<spec>Quebec</spec>
 				<spec>Salish-Shidhe Council</spec>
 				<spec>Sioux</spec>
-				<spec>Tir Tairngaire</spec>
+				<spec>Tir Tairngire</spec>
 				<spec>Tsimshian Protectorate</spec>
 				<spec>Yukutan</spec>
 				<spec>N. America</spec>
@@ -2155,7 +2155,7 @@
 				<spec>Quebec</spec>
 				<spec>Salish-Shidhe Council</spec>
 				<spec>Sioux</spec>
-				<spec>Tir Tairngaire</spec>
+				<spec>Tir Tairngire</spec>
 				<spec>Tsimshian Protectorate</spec>
 				<spec>Yukutan</spec>
 				<spec>N. America</spec>
@@ -2230,7 +2230,7 @@
 				<spec>Quebec</spec>
 				<spec>Salish-Shidhe Council</spec>
 				<spec>Sioux</spec>
-				<spec>Tir Tairngaire</spec>
+				<spec>Tir Tairngire</spec>
 				<spec>Tsimshian Protectorate</spec>
 				<spec>Yukutan</spec>
 				<spec>N. America</spec>
@@ -2497,7 +2497,7 @@
 				<spec>Quebec</spec>
 				<spec>Salish-Shidhe Council</spec>
 				<spec>Sioux</spec>
-				<spec>Tir Tairngaire</spec>
+				<spec>Tir Tairngire</spec>
 				<spec>Tsimshian Protectorate</spec>
 				<spec>Yukutan</spec>
 			</specs>

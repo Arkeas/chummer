@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-827</version>
+	<version>-826</version>
 	<categories>
 		<category show="false">Altskin Function</category>
 		<category>Ammunition</category>
@@ -4870,7 +4870,8 @@
 			<category>Odds and Ends</category>
 			<rating>0</rating>
 			<avail>8</avail>
-			<cost>200</cost>
+			<addweapon>Gentleman's Cane Sword</addweapon>
+			<cost>450</cost>
 			<source>AT</source>
 			<page>154</page>
 		</gear>
@@ -4879,7 +4880,8 @@
 			<category>Odds and Ends</category>
 			<rating>0</rating>
 			<avail>10</avail>
-			<cost>300</cost>
+			<addweapon>Gentleman's Cane Sword</addweapon>
+			<cost>550</cost>
 			<source>AT</source>
 			<page>154</page>
 		</gear>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- Character sheet based on the Shadowrun 4th Edition Character Sheet -->
 <!-- Created by Keith Rudolph, krudolph@gmail.com -->
-<!-- Version -895 -->
+<!-- Version -894 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
 	<xsl:include href="ConditionMonitor.xslt"/>
 	<xsl:template match="/characters/character">
@@ -1989,6 +1989,18 @@
 										<xsl:value-of select="source" /><xsl:text> </xsl:text><xsl:value-of select="page" />
 									</td>
 								</tr>
+								<xsl:if test="notes != ''">
+								<tr>
+									<xsl:if test="position() mod 2 != 1">
+										<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
+									</xsl:if>
+									<td colspan="4" class="notesrow">
+										<xsl:call-template name="PreserveLineBreaks">
+											<xsl:with-param name="text" select="notes" />
+										</xsl:call-template>
+									</td>
+								</tr>
+								</xsl:if>
 				<xsl:if test="children/cyberware">
 								<tr>
 									<xsl:if test="position() mod 2 != 1">
@@ -1999,21 +2011,10 @@
 										<xsl:value-of select="name" />
 										<xsl:if test="rating != 0"><xsl:text> </xsl:text><xsl:value-of select="rating" /></xsl:if>
 										<xsl:if test="position() != last()">; </xsl:if>
+										<xsl:if test="notes != ''"> (<xsl:value-of select="notes" />)</xsl:if>
 					</xsl:for-each>
 									</td>
 								</tr>
-								<xsl:if test="notes != ''">
-									<tr>
-										<xsl:if test="position() mod 2 != 1">
-											<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
-										</xsl:if>
-										<td colspan="4" class="notesrow">
-											<xsl:call-template name="PreserveLineBreaks">
-												<xsl:with-param name="text" select="notes" />
-											</xsl:call-template>
-										</td>
-									</tr>
-								</xsl:if>
 				</xsl:if>
 		</xsl:for-each>
 	</xsl:template>

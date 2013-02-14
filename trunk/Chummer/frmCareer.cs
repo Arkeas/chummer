@@ -7221,6 +7221,7 @@ namespace Chummer
 			// Create the Expense Log Entry.
 			ExpenseLogEntry objEntry = new ExpenseLogEntry();
 			objEntry.Create(frmNewExpense.Amount, frmNewExpense.strReason, ExpenseType.Nuyen, frmNewExpense.SelectedDate);
+			objEntry.Refund = frmNewExpense.Refund;
 			_objCharacter.ExpenseEntries.Add(objEntry);
 
 			ExpenseUndo objUndo = new ExpenseUndo();
@@ -21673,6 +21674,13 @@ namespace Chummer
 						objStunCM.Text = "";
 					}
 				}
+
+				// Reduce the CM Penalties to 0 if the character has Improvements to ignore them.
+				if (_objCharacter.HasImprovement(Improvement.ImprovementType.IgnoreCMPenaltyStun, true))
+					intStunCMPenalty = 0;
+				if (_objCharacter.HasImprovement(Improvement.ImprovementType.IgnoreCMPenaltyPhysical, true))
+					intPhysicalCMPenalty = 0;
+
 				intCMPenalty = intPhysicalCMPenalty + intStunCMPenalty;
 				lblCMPenalty.Text = intCMPenalty.ToString();
 

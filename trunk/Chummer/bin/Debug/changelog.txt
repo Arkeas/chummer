@@ -1,11 +1,25 @@
-Build XXX
+Build 449
+- added support for <ignorecmpenaltystun /> and <ignorecmpenaltyphysical /> to the Improvement Manager which ignore the character's Stun and Physical Condition Monitor Penalties respectively
 - added Restore Defaults buttons to the BP Cost and Karma Cost tabs in the Options window to restore the default values
 - fixed an issue where the Special Attributes do not count towards 50% Karma limit during character creation house rule would not work correctly if a Special Attribute put the character over the 50% Karma threshold
+- added support for relative file paths to Contacts and Spirits (see below)
+- changed how the total values of Cyberware is calculated in an attempt to avoid crashes on non-Windows computers using Wine
+- fixed an issue where adding a Weapon Focus to a Weapon would throw an error
+- Adept Power requirements can now filter on <allof /> and <oneof />
+- Shadowrun 4 sheets now display any entered notes for Cyberware/Bioware
+- Update is now prevent from running if there is more than one instance of Chummer open at the time to prevent errors
+- corrected the costs for the Gentlemen's Cane Sword variations
+- Gentlemen's Cane with Sword options now creates a Gentlemen's Cane Sword Weapon
+- marking a Nuyen Expense as being a Refund now records the Refund correctly and no longer counts towards the character's Career Nuyen total
+
+Relative File Paths for Contacts and Spirits
+Contacts and Spirits now support relative file paths for improved portability between computers. Chummer first looks for the exact file name that was linked. If it cannot be found, it falls back to using the relative path that was stored when the save file was linked to it. This will only work with save files that are linked in this and later versions of the application. In order to get this behaviour with previous save files, you will need to remove the link and re-link the save file to the Contact or Spirit.
 
 New Strings
 - Button_Options_RestoreDefaults
 - Message_Options_RestoreDefaults
 - MessageTitle_Options_RestoreDefaults
+- Message_Update_MultipleInstances
 
 Build 445
 - Qualities that require Street Cred to be equal to or greater than Notoriety now meet the requirements when Street Cred and Notoriety are the same value (previously had to be greater which was wrong)

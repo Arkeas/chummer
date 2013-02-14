@@ -96,14 +96,38 @@ namespace Chummer
 
 		private void tsContactOpen_Click(object sender, EventArgs e)
 		{
+			bool blnError = false;
+			bool blnUseRelative = false;
+
 			// Make sure the file still exists before attempting to load it.
 			if (!File.Exists(_objSpirit.FileName))
 			{
-				MessageBox.Show(LanguageManager.Instance.GetString("Message_FileNotFound").Replace("{0}", _objSpirit.FileName), LanguageManager.Instance.GetString("MessageTitle_FileNotFound"), MessageBoxButtons.OK, MessageBoxIcon.Error);
-				return;
+				// If the file doesn't exist, use the relative path if one is available.
+				if (_objSpirit.RelativeFileName == "")
+					blnError = true;
+				else
+				{
+					MessageBox.Show(Path.GetFullPath(_objSpirit.RelativeFileName));
+					if (!File.Exists(Path.GetFullPath(_objSpirit.RelativeFileName)))
+						blnError = true;
+					else
+						blnUseRelative = true;
+				}
+
+				if (blnError)
+				{
+					MessageBox.Show(LanguageManager.Instance.GetString("Message_FileNotFound").Replace("{0}", _objSpirit.FileName), LanguageManager.Instance.GetString("MessageTitle_FileNotFound"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
+				}
 			}
 
-			GlobalOptions.Instance.MainForm.LoadCharacter(_objSpirit.FileName, false);
+			if (!blnUseRelative)
+				GlobalOptions.Instance.MainForm.LoadCharacter(_objSpirit.FileName, false);
+			else
+			{
+				string strFile = Path.GetFullPath(_objSpirit.RelativeFileName);
+				GlobalOptions.Instance.MainForm.LoadCharacter(strFile, false);
+			}
 		}
 
 		private void tsRemoveCharacter_Click(object sender, EventArgs e)
@@ -112,10 +136,18 @@ namespace Chummer
 			if (MessageBox.Show(LanguageManager.Instance.GetString("Message_RemoveCharacterAssociation"), LanguageManager.Instance.GetString("MessageTitle_RemoveCharacterAssociation"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 			{
 				_objSpirit.FileName = "";
+				_objSpirit.RelativeFileName = "";
 				if (_objSpirit.EntityType ==  SpiritType.Spirit)
 					tipTooltip.SetToolTip(imgLink, LanguageManager.Instance.GetString("Tip_Spirit_LinkSpirit"));
 				else
 					tipTooltip.SetToolTip(imgLink, LanguageManager.Instance.GetString("Tip_Sprite_LinkSprite"));
+
+				// Set the relative path.
+				Uri uriApplication = new Uri(@Application.StartupPath);
+				Uri uriFile = new Uri(@_objSpirit.FileName);
+				Uri uriRelative = uriApplication.MakeRelativeUri(uriFile);
+				_objSpirit.RelativeFileName = "../" + uriRelative.ToString();
+
 				FileNameChanged(this);
 			}
 		}

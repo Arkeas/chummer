@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-992</version>
+	<version>-991</version>
 	<improvements>
 		<improvement>
 			<name>Attribute</name>
@@ -567,6 +567,20 @@
 			</fields>
 			<xml><![CDATA[<name>{select}</name><bonus>{val}</bonus>{applytorating}]]></xml>
 			<page>Adjusts the value for one of the character's Knowledge Skills by the value entered. Positive numbers increase the Knowledge Skill. Negative numbers decrease the Knowledge Skill. Select a Knowledge Skill to affect by clicking the Select Value button. The modifier can be applied to the Knowledge Skill's Rating by selecting Apply to Rating, otherwise the modifier is applied as a dice pool modifier.</page>
+		</improvement>
+		<improvement>
+			<name>Ignore Condition Monitor Penalty, Stun</name>
+			<id>ignorecmpenaltystun</id>
+			<internal>ignorecmpenaltystun</internal>
+			<xml />
+			<page>Reduces the characters Stun Condition Monitor Penalty to 0 while the Improvement is active.</page>
+		</improvement>
+		<improvement>
+			<name>Ignore Condition Monitor Penalty, Physical</name>
+			<id>ignorecmpenaltyphysical</id>
+			<internal>ignorecmpenaltyphysical</internal>
+			<xml />
+			<page>Reduces the characters Physical Condition Monitor Penalty to 0 while the Improvement is active.</page>
 		</improvement>
 	</improvements>
 </chummer>
