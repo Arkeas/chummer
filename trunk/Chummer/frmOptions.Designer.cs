@@ -133,6 +133,7 @@
 			this.chkEnforceCapacity = new System.Windows.Forms.CheckBox();
 			this.treSourcebook = new System.Windows.Forms.TreeView();
 			this.tabBPCosts = new System.Windows.Forms.TabPage();
+			this.cmdRestoreDefaultsBP = new System.Windows.Forms.Button();
 			this.lblBPComplexFormOption = new System.Windows.Forms.Label();
 			this.nudBPComplexFormOption = new System.Windows.Forms.NumericUpDown();
 			this.lblBPComplexForm = new System.Windows.Forms.Label();
@@ -162,6 +163,7 @@
 			this.lblBPAttribute = new System.Windows.Forms.Label();
 			this.nudBPAttribute = new System.Windows.Forms.NumericUpDown();
 			this.tabKarmaCosts = new System.Windows.Forms.TabPage();
+			this.cmdRestoreDefaultsKarma = new System.Windows.Forms.Button();
 			this.lblKarmaWeaponFocusExtra = new System.Windows.Forms.Label();
 			this.nudKarmaWeaponFocus = new System.Windows.Forms.NumericUpDown();
 			this.lblKarmaWeaponFocus = new System.Windows.Forms.Label();
@@ -260,8 +262,9 @@
 			this.lblSetting = new System.Windows.Forms.Label();
 			this.lblSettingName = new System.Windows.Forms.Label();
 			this.txtSettingName = new System.Windows.Forms.TextBox();
-			this.cmdRestoreDefaultsKarma = new System.Windows.Forms.Button();
-			this.cmdRestoreDefaultsBP = new System.Windows.Forms.Button();
+			this.lblPDFAppPath = new System.Windows.Forms.Label();
+			this.txtPDFAppPath = new System.Windows.Forms.TextBox();
+			this.cmdPDFAppPath = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaComplexFormOption)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaMetamagic)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaInitiation)).BeginInit();
@@ -1044,6 +1047,9 @@
 			// tabGlobal
 			// 
 			this.tabGlobal.BackColor = System.Drawing.SystemColors.Control;
+			this.tabGlobal.Controls.Add(this.cmdPDFAppPath);
+			this.tabGlobal.Controls.Add(this.txtPDFAppPath);
+			this.tabGlobal.Controls.Add(this.lblPDFAppPath);
 			this.tabGlobal.Controls.Add(this.lblXSLT);
 			this.tabGlobal.Controls.Add(this.cboXSLT);
 			this.tabGlobal.Controls.Add(this.lblLanguage);
@@ -1460,6 +1466,19 @@
 			this.tabBPCosts.Tag = "Tab_Options_BPCosts";
 			this.tabBPCosts.Text = "BP Costs";
 			// 
+			// cmdRestoreDefaultsBP
+			// 
+			this.cmdRestoreDefaultsBP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.cmdRestoreDefaultsBP.AutoSize = true;
+			this.cmdRestoreDefaultsBP.Location = new System.Drawing.Point(703, 536);
+			this.cmdRestoreDefaultsBP.Name = "cmdRestoreDefaultsBP";
+			this.cmdRestoreDefaultsBP.Size = new System.Drawing.Size(96, 23);
+			this.cmdRestoreDefaultsBP.TabIndex = 28;
+			this.cmdRestoreDefaultsBP.Tag = "Button_Options_RestoreDefaults";
+			this.cmdRestoreDefaultsBP.Text = "Restore Defaults";
+			this.cmdRestoreDefaultsBP.UseVisualStyleBackColor = true;
+			this.cmdRestoreDefaultsBP.Click += new System.EventHandler(this.cmdRestoreDefaultsBP_Click);
+			// 
 			// lblBPComplexFormOption
 			// 
 			this.lblBPComplexFormOption.AutoSize = true;
@@ -1817,6 +1836,19 @@
 			this.tabKarmaCosts.TabIndex = 1;
 			this.tabKarmaCosts.Tag = "Tab_Options_KarmaCosts";
 			this.tabKarmaCosts.Text = "Karma Costs";
+			// 
+			// cmdRestoreDefaultsKarma
+			// 
+			this.cmdRestoreDefaultsKarma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.cmdRestoreDefaultsKarma.AutoSize = true;
+			this.cmdRestoreDefaultsKarma.Location = new System.Drawing.Point(703, 533);
+			this.cmdRestoreDefaultsKarma.Name = "cmdRestoreDefaultsKarma";
+			this.cmdRestoreDefaultsKarma.Size = new System.Drawing.Size(96, 23);
+			this.cmdRestoreDefaultsKarma.TabIndex = 108;
+			this.cmdRestoreDefaultsKarma.Tag = "Button_Options_RestoreDefaults";
+			this.cmdRestoreDefaultsKarma.Text = "Restore Defaults";
+			this.cmdRestoreDefaultsKarma.UseVisualStyleBackColor = true;
+			this.cmdRestoreDefaultsKarma.Click += new System.EventHandler(this.cmdRestoreDefaultsKarma_Click);
 			// 
 			// lblKarmaWeaponFocusExtra
 			// 
@@ -2854,31 +2886,33 @@
 			this.txtSettingName.Size = new System.Drawing.Size(190, 20);
 			this.txtSettingName.TabIndex = 3;
 			// 
-			// cmdRestoreDefaultsKarma
+			// lblPDFAppPath
 			// 
-			this.cmdRestoreDefaultsKarma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.cmdRestoreDefaultsKarma.AutoSize = true;
-			this.cmdRestoreDefaultsKarma.Location = new System.Drawing.Point(703, 533);
-			this.cmdRestoreDefaultsKarma.Name = "cmdRestoreDefaultsKarma";
-			this.cmdRestoreDefaultsKarma.Size = new System.Drawing.Size(96, 23);
-			this.cmdRestoreDefaultsKarma.TabIndex = 108;
-			this.cmdRestoreDefaultsKarma.Tag = "Button_Options_RestoreDefaults";
-			this.cmdRestoreDefaultsKarma.Text = "Restore Defaults";
-			this.cmdRestoreDefaultsKarma.UseVisualStyleBackColor = true;
-			this.cmdRestoreDefaultsKarma.Click += new System.EventHandler(this.cmdRestoreDefaultsKarma_Click);
+			this.lblPDFAppPath.AutoSize = true;
+			this.lblPDFAppPath.Location = new System.Drawing.Point(6, 232);
+			this.lblPDFAppPath.Name = "lblPDFAppPath";
+			this.lblPDFAppPath.Size = new System.Drawing.Size(141, 13);
+			this.lblPDFAppPath.TabIndex = 9;
+			this.lblPDFAppPath.Tag = "Label_Options_PDFApplicationPath";
+			this.lblPDFAppPath.Text = "Location of PDF application:";
 			// 
-			// cmdRestoreDefaultsBP
+			// txtPDFAppPath
 			// 
-			this.cmdRestoreDefaultsBP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.cmdRestoreDefaultsBP.AutoSize = true;
-			this.cmdRestoreDefaultsBP.Location = new System.Drawing.Point(703, 536);
-			this.cmdRestoreDefaultsBP.Name = "cmdRestoreDefaultsBP";
-			this.cmdRestoreDefaultsBP.Size = new System.Drawing.Size(96, 23);
-			this.cmdRestoreDefaultsBP.TabIndex = 28;
-			this.cmdRestoreDefaultsBP.Tag = "Button_Options_RestoreDefaults";
-			this.cmdRestoreDefaultsBP.Text = "Restore Defaults";
-			this.cmdRestoreDefaultsBP.UseVisualStyleBackColor = true;
-			this.cmdRestoreDefaultsBP.Click += new System.EventHandler(this.cmdRestoreDefaultsBP_Click);
+			this.txtPDFAppPath.Location = new System.Drawing.Point(154, 232);
+			this.txtPDFAppPath.Name = "txtPDFAppPath";
+			this.txtPDFAppPath.ReadOnly = true;
+			this.txtPDFAppPath.Size = new System.Drawing.Size(248, 20);
+			this.txtPDFAppPath.TabIndex = 10;
+			// 
+			// cmdPDFAppPath
+			// 
+			this.cmdPDFAppPath.Location = new System.Drawing.Point(409, 232);
+			this.cmdPDFAppPath.Name = "cmdPDFAppPath";
+			this.cmdPDFAppPath.Size = new System.Drawing.Size(27, 23);
+			this.cmdPDFAppPath.TabIndex = 11;
+			this.cmdPDFAppPath.Text = "...";
+			this.cmdPDFAppPath.UseVisualStyleBackColor = true;
+			this.cmdPDFAppPath.Click += new System.EventHandler(this.cmdPDFAppPath_Click);
 			// 
 			// frmOptions
 			// 
@@ -3221,5 +3255,8 @@
 		private System.Windows.Forms.ComboBox cboXSLT;
 		private System.Windows.Forms.Button cmdRestoreDefaultsKarma;
 		private System.Windows.Forms.Button cmdRestoreDefaultsBP;
+		private System.Windows.Forms.Button cmdPDFAppPath;
+		private System.Windows.Forms.TextBox txtPDFAppPath;
+		private System.Windows.Forms.Label lblPDFAppPath;
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Text;
@@ -1236,6 +1237,65 @@ namespace Chummer
 			objNode.ContextMenuStrip = cmsWeapon;
 			objWeaponsNode.Nodes.Add(objNode);
 			objWeaponsNode.Expand();
+		}
+		#endregion
+
+		#region PDF Functions
+		/// <summary>
+		/// Open a PDF file using the provided source information.
+		/// </summary>
+		/// <param name="strSource">Book coode and page number to open.</param>
+		public void OpenPDF(string strSource)
+		{
+			// The user must have specified the path of their PDF application in order to use this functionality.
+			if (GlobalOptions.Instance.PDFAppPath == string.Empty)
+				return;
+
+			string[] strTemp = strSource.Split(' ');
+			string strBook = "";
+			string strPage = "";
+			string strPath = "";
+			int intPage = 0;
+
+			try
+			{
+				strBook = strTemp[0];
+				strPage = strTemp[1];
+
+				// Make sure the page is actually a number that we can use as well as being 1 or higher.
+				if (Convert.ToInt32(strPage) < 1)
+					return;
+				intPage = Convert.ToInt32(strPage);
+			}
+			catch
+			{
+				return;
+			}
+
+			// Retrieve the sourcebook information including page offset and PDF application name.
+			bool blnFound = false;
+			foreach (SourcebookInfo objInfo in GlobalOptions.Instance.SourcebookInfo)
+			{
+				if (objInfo.Code == strBook)
+				{
+					if (objInfo.Path != string.Empty)
+					{
+						blnFound = true;
+						strPath = objInfo.Path;
+						intPage += objInfo.Offset;
+					}
+				}
+			}
+
+			// If the sourcebook was not found, we can't open anything.
+			if (!blnFound)
+				return;
+
+			// Open the PDF.
+			// acrord32 /A "page=123" "D:\foo\bar.pdf"
+			//string strFilePath = "C:\\Gaming\\Shadowrun\\Books\\Shadowrun 4th ed Anniverary.pdf";
+			string strParams = " /n /A \"page=" + intPage.ToString() +"\" \"" + strPath + "\"";
+			Process.Start("AcroRd32.exe", strParams);
 		}
 		#endregion
 	}
