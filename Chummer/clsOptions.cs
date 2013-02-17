@@ -26,6 +26,51 @@ namespace Chummer
 		Lifestyle = 9,
 	}
 
+	public class SourcebookInfo
+	{
+		string _strCode = "";
+		string _strPath = "";
+		int _intOffset = 0;
+
+		#region Properties
+		public string Code
+		{
+			get
+			{
+				return _strCode;
+			}
+			set
+			{
+				_strCode = value;
+			}
+		}
+
+		public string Path
+		{
+			get
+			{
+				return _strPath;
+			}
+			set
+			{
+				_strPath = value;
+			}
+		}
+
+		public int Offset
+		{
+			get
+			{
+				return _intOffset;
+			}
+			set
+			{
+				_intOffset = value;
+			}
+		}
+		#endregion
+	}
+
 	/// <summary>
 	/// Global Options. A single instance class since Options are common for all characters, reduces execution time and memory usage.
 	/// </summary>
@@ -54,6 +99,10 @@ namespace Chummer
 
 		public static GradeList CyberwareGrades = new GradeList();
 		public static GradeList BiowareGrades = new GradeList();
+
+		// PDF information.
+		public static string _strPDFAppPath = "";
+		public List<SourcebookInfo> _lstSourcebookInfo = new List<SourcebookInfo>();
 
 		#region Constructor and Instance
 		static GlobalOptions()
@@ -115,6 +164,15 @@ namespace Chummer
 			try
 			{
 				_blnSingleDiceRoller = Convert.ToBoolean(Registry.CurrentUser.CreateSubKey("Software\\Chummer").GetValue("singlediceroller").ToString());
+			}
+			catch
+			{
+			}
+
+			// PDF application path.
+			try
+			{
+				_strPDFAppPath = Registry.CurrentUser.CreateSubKey("Software\\Chummer").GetValue("pdfapppath").ToString();
 			}
 			catch
 			{
@@ -314,6 +372,36 @@ namespace Chummer
 			set
 			{
 				_strDefaultCharacterSheet = value;
+			}
+		}
+
+		/// <summary>
+		/// Path to the user's PDF application.
+		/// </summary>
+		public string PDFAppPath
+		{
+			get
+			{
+				return _strPDFAppPath;
+			}
+			set
+			{
+				_strPDFAppPath = value;
+			}
+		}
+
+		/// <summary>
+		/// List of SourcebookInfo.
+		/// </summary>
+		public List<SourcebookInfo> SourcebookInfo
+		{
+			get
+			{
+				return _lstSourcebookInfo;
+			}
+			set
+			{
+				_lstSourcebookInfo = value;
 			}
 		}
 		#endregion

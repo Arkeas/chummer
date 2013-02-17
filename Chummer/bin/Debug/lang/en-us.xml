@@ -5416,6 +5416,10 @@ Only one attribute may be at its Maximum value during character creation.</text>
 			<key>MessageTitle_Options_RestoreDefaults</key>
 			<text>Restore Defaults</text>
 		</string>
+		<string>
+			<key>Label_Options_PDFApplicationPath</key>
+			<text>Location of PDF application:</text>
+		</string>
 		<!-- Print Multiple Window -->
 		<string>
 			<key>Title_PrintMultiple</key>

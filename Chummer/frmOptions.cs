@@ -138,6 +138,8 @@ namespace Chummer
 			}
 			chkSingleDiceRoller.Checked = blnSingleDiceRoller;
 
+			txtPDFAppPath.Text = GlobalOptions.Instance.PDFAppPath;
+
 			// Populate the Language List.
 			string strPath = Path.Combine(Application.StartupPath, "lang");
 			List<ListItem> lstLanguages = new List<ListItem>();
@@ -261,11 +263,13 @@ namespace Chummer
 			GlobalOptions.Instance.StartupFullscreen = chkStartupFullscreen.Checked;
 			GlobalOptions.Instance.SingleDiceRoller = chkSingleDiceRoller.Checked;
 			GlobalOptions.Instance.DefaultCharacterSheet = cboXSLT.SelectedValue.ToString();
+			GlobalOptions.Instance.PDFAppPath = txtPDFAppPath.Text;
 			RegistryKey objRegistry = Registry.CurrentUser.CreateSubKey("Software\\Chummer");
 			objRegistry.SetValue("autoupdate", chkAutomaticUpdate.Checked.ToString());
 			objRegistry.SetValue("language", cboLanguage.SelectedValue.ToString());
 			objRegistry.SetValue("startupfullscreen", chkStartupFullscreen.Checked.ToString());
 			objRegistry.SetValue("singlediceroller", chkSingleDiceRoller.Checked.ToString());
+			objRegistry.SetValue("pdfapppath", txtPDFAppPath.Text);
 
 			// Set Settings file value.
 			// Build the list of Books (SR4 is always included as it's required for everything).
@@ -560,6 +564,16 @@ namespace Chummer
 			nudKarmaSymbolicLinkFocus.Value = 1;
 			nudKarmaWeaponFocus.Value = 3;
 		}
+
+		private void cmdPDFAppPath_Click(object sender, EventArgs e)
+		{
+			// Prompt the user to select a save file to associate with this Contact.
+			OpenFileDialog openFileDialog = new OpenFileDialog();
+			openFileDialog.Filter = "Executable Files (*.exe)|*.exe|All Files (*.*)|*.*";
+
+			if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+				txtPDFAppPath.Text = openFileDialog.FileName;
+		}
 		#endregion
 
 		#region Methods
@@ -577,6 +591,9 @@ namespace Chummer
 			nudRestrictedCostMultiplier.Left = chkMultiplyRestrictedCost.Left + chkMultiplyRestrictedCost.Width;
 			nudForbiddenCostMultiplier.Left = chkMultiplyForbiddenCost.Left + chkMultiplyForbiddenCost.Width;
 			cboEssenceDecimals.Left = lblEssenceDecimals.Left + lblEssenceDecimals.Width + 6;
+
+			txtPDFAppPath.Left = lblPDFAppPath.Left + lblPDFAppPath.Width + 6;
+			cmdPDFAppPath.Left = txtPDFAppPath.Left + txtPDFAppPath.Width + 6;
 
 			int intWidth = Math.Max(lblLanguage.Width, lblXSLT.Width);
 			cboLanguage.Left = lblLanguage.Left + intWidth + 6;

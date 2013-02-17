@@ -1,3 +1,8 @@
+Build XXX
+
+New Strings
+- Label_Options_PDFApplicationPath
+
 Build 449
 - added support for <ignorecmpenaltystun /> and <ignorecmpenaltyphysical /> to the Improvement Manager which ignore the character's Stun and Physical Condition Monitor Penalties respectively
 - added Restore Defaults buttons to the BP Cost and Karma Cost tabs in the Options window to restore the default values
