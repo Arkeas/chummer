@@ -102,7 +102,7 @@ namespace Chummer
 
 		// PDF information.
 		public static string _strPDFAppPath = "";
-		public List<SourcebookInfo> _lstSourcebookInfo = new List<SourcebookInfo>();
+		public static List<SourcebookInfo> _lstSourcebookInfo = new List<SourcebookInfo>();
 
 		#region Constructor and Instance
 		static GlobalOptions()
@@ -176,6 +176,27 @@ namespace Chummer
 			}
 			catch
 			{
+			}
+
+			// Retrieve the SourcebookInfo objects.
+			XmlDocument objXmlDocument = XmlManager.Instance.Load("books.xml");
+			XmlNodeList objXmlBookList = objXmlDocument.SelectNodes("/chummer/books/book");
+			foreach (XmlNode objXmlBook in objXmlBookList)
+			{
+				try
+				{
+					SourcebookInfo objSource = new SourcebookInfo();
+					string strTemp = Registry.CurrentUser.CreateSubKey("Software\\Chummer\\Sourcebook").GetValue(objXmlBook["code"].InnerText).ToString();
+					string[] strParts = strTemp.Split('|');
+					objSource.Code = objXmlBook["code"].InnerText;
+					objSource.Path = strParts[0];
+					objSource.Offset = Convert.ToInt32(strParts[1]);
+
+					_lstSourcebookInfo.Add(objSource);
+				}
+				catch
+				{
+				}
 			}
 
 			CyberwareGrades.LoadList(Improvement.ImprovementSource.Cyberware);
@@ -1875,6 +1896,22 @@ namespace Chummer
 			{
 			}
 			return strReturn;
+		}
+
+		/// <summary>
+		/// Determine the book's original code by using the alternate code.
+		/// </summary>
+		/// <param name="strCode">Alternate code to look for.</param>
+		public string BookFromAltCode(string strCode)
+		{
+			if (strCode == "")
+				return "";
+
+			XmlNode objXmlBook = _objBookDoc.SelectSingleNode("/chummer/books/book[altcode = \"" + strCode + "\"]");
+			if (objXmlBook == null)
+				return strCode;
+			else
+				return objXmlBook["code"].InnerText;
 		}
 
 		/// <summary>

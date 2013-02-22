@@ -1272,6 +1272,10 @@ namespace Chummer
 				return;
 			}
 
+			// Revert the sourcebook code to the one from the XML file if necessary.
+			if (_objCharacter != null)
+				strBook = _objCharacter.Options.BookFromAltCode(strBook);
+
 			// Retrieve the sourcebook information including page offset and PDF application name.
 			bool blnFound = false;
 			foreach (SourcebookInfo objInfo in GlobalOptions.Instance.SourcebookInfo)
@@ -1295,7 +1299,7 @@ namespace Chummer
 			// acrord32 /A "page=123" "D:\foo\bar.pdf"
 			//string strFilePath = "C:\\Gaming\\Shadowrun\\Books\\Shadowrun 4th ed Anniverary.pdf";
 			string strParams = " /n /A \"page=" + intPage.ToString() +"\" \"" + strPath + "\"";
-			Process.Start("AcroRd32.exe", strParams);
+			Process.Start(GlobalOptions.Instance.PDFAppPath, strParams);
 		}
 		#endregion
 	}

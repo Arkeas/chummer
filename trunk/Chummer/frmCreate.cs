@@ -23872,5 +23872,11 @@ namespace Chummer
 			}
 		}
 		#endregion
+
+		private void lblWeaponSource_Click(object sender, EventArgs e)
+		{
+			CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+			_objFunctions.OpenPDF(lblWeaponSource.Text);
+		}
 	}
 }

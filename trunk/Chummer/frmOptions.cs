@@ -10,6 +10,7 @@ namespace Chummer
 	public partial class frmOptions : Form
 	{
 		private readonly CharacterOptions _objOptions = new CharacterOptions();
+		private bool _blnSkipRefresh = false;
 
 		#region Form Events
 		public frmOptions()
@@ -257,30 +258,26 @@ namespace Chummer
 				return;
 			}
 
-			// Set Registry values.
-			GlobalOptions.Instance.AutomaticUpdate = chkAutomaticUpdate.Checked;
-			GlobalOptions.Instance.Language = cboLanguage.SelectedValue.ToString();
-			GlobalOptions.Instance.StartupFullscreen = chkStartupFullscreen.Checked;
-			GlobalOptions.Instance.SingleDiceRoller = chkSingleDiceRoller.Checked;
-			GlobalOptions.Instance.DefaultCharacterSheet = cboXSLT.SelectedValue.ToString();
-			GlobalOptions.Instance.PDFAppPath = txtPDFAppPath.Text;
-			RegistryKey objRegistry = Registry.CurrentUser.CreateSubKey("Software\\Chummer");
-			objRegistry.SetValue("autoupdate", chkAutomaticUpdate.Checked.ToString());
-			objRegistry.SetValue("language", cboLanguage.SelectedValue.ToString());
-			objRegistry.SetValue("startupfullscreen", chkStartupFullscreen.Checked.ToString());
-			objRegistry.SetValue("singlediceroller", chkSingleDiceRoller.Checked.ToString());
-			objRegistry.SetValue("pdfapppath", txtPDFAppPath.Text);
+			SaveRegistrySettings();
 
 			// Set Settings file value.
 			// Build the list of Books (SR4 is always included as it's required for everything).
 			_objOptions.Books.Clear();
-			_objOptions.Books.Add("SR4");
 
+			bool blnSR4Included = false;
 			foreach (TreeNode objNode in treSourcebook.Nodes)
 			{
 				if (objNode.Checked)
+				{
 					_objOptions.Books.Add(objNode.Tag.ToString());
+					if (objNode.Tag.ToString() == "SR4")
+						blnSR4Included = true;
+				}
 			}
+
+			// If the SR4 book was somehow missed, add it back.
+			if (!blnSR4Included)
+				_objOptions.Books.Add("SR4");
 
 			_objOptions.ConfirmDelete = chkConfirmDelete.Checked;
 			_objOptions.ConfirmKarmaExpense = chkConfirmKarmaExpense.Checked;
@@ -471,12 +468,22 @@ namespace Chummer
 			// Build a list of Sourcebooks that will be passed to the Verify method.
 			// This is done since not all of the books are available in every language or the user may only wish to verify the content of certain books.
 			List<string> lstBooks = new List<string>();
-			lstBooks.Add("SR4");
+			//lstBooks.Add("SR4");
+
+			bool blnSR4Included = false;
 			foreach (TreeNode objNode in treSourcebook.Nodes)
 			{
 				if (objNode.Checked)
+				{
 					lstBooks.Add(objNode.Tag.ToString());
+					if (objNode.Tag.ToString() == "SR4")
+						blnSR4Included = true;
+				}
 			}
+
+			// If the SR4 book was somehow missed, add it back.
+			if (!blnSR4Included)
+				_objOptions.Books.Add("SR4");
 
 			XmlManager.Instance.Verify(cboLanguage.SelectedValue.ToString(), lstBooks);
 
@@ -574,11 +581,111 @@ namespace Chummer
 			if (openFileDialog.ShowDialog(this) == DialogResult.OK)
 				txtPDFAppPath.Text = openFileDialog.FileName;
 		}
+
+		private void cmdPDFLocation_Click(object sender, EventArgs e)
+		{
+			// Prompt the user to select a save file to associate with this Contact.
+			OpenFileDialog openFileDialog = new OpenFileDialog();
+			openFileDialog.Filter = "PDF Files (*.pdf)|*.pdf|All Files (*.*)|*.*";
+
+			if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+			{
+				SourcebookInfo objFoundSource = new SourcebookInfo();
+				bool blnFound = false;
+
+				// Find the selected item in the Sourcebook List.
+				foreach (SourcebookInfo objSource in GlobalOptions.Instance.SourcebookInfo)
+				{
+					if (objSource.Code == treSourcebook.SelectedNode.Tag.ToString())
+					{
+						objFoundSource = objSource;
+						blnFound = true;
+						break;
+					}
+				}
+
+				txtPDFLocation.Text = openFileDialog.FileName;
+				objFoundSource.Path = openFileDialog.FileName;
+
+				// If the Sourcebook was not found in the options, add it.
+				if (!blnFound)
+				{
+					objFoundSource.Code = treSourcebook.SelectedNode.Tag.ToString();
+					GlobalOptions.Instance.SourcebookInfo.Add(objFoundSource);
+				}
+			}
+		}
+
+		private void treSourcebook_AfterSelect(object sender, TreeViewEventArgs e)
+		{
+			_blnSkipRefresh = true;
+			txtPDFLocation.Text = "";
+			nudPDFOffset.Value = 0;
+			_blnSkipRefresh = false;
+
+			// Find the selected item in the Sourcebook List.
+			foreach (SourcebookInfo objSource in GlobalOptions.Instance.SourcebookInfo)
+			{
+				if (objSource.Code == treSourcebook.SelectedNode.Tag.ToString())
+				{
+					txtPDFLocation.Text = objSource.Path;
+					nudPDFOffset.Value = objSource.Offset;
+				}
+			}
+		}
+
+		private void nudPDFOffset_ValueChanged(object sender, EventArgs e)
+		{
+			if (_blnSkipRefresh)
+				return;
+
+			SourcebookInfo objFoundSource = new SourcebookInfo();
+			bool blnFound = false;
+
+			// Find the selected item in the Sourcebook List.
+			foreach (SourcebookInfo objSource in GlobalOptions.Instance.SourcebookInfo)
+			{
+				if (objSource.Code == treSourcebook.SelectedNode.Tag.ToString())
+				{
+					objFoundSource = objSource;
+					blnFound = true;
+					break;
+				}
+			}
+
+			objFoundSource.Offset = Convert.ToInt32(nudPDFOffset.Value);
+
+			// If the Sourcebook was not found in the options, add it.
+			if (!blnFound)
+			{
+				objFoundSource.Code = treSourcebook.SelectedNode.Tag.ToString();
+				GlobalOptions.Instance.SourcebookInfo.Add(objFoundSource);
+			}
+		}
+
+		private void treSourcebook_BeforeCheck(object sender, TreeViewCancelEventArgs e)
+		{
+			if (e.Node.Tag.ToString() == "SR4")
+				e.Cancel = true;
+		}
+
+		private void cmdPDFTest_Click(object sender, EventArgs e)
+		{
+			if (txtPDFLocation.Text == string.Empty)
+				return;
+
+			SaveRegistrySettings();
+
+			CommonFunctions objCommon = new CommonFunctions(null);
+			objCommon.OpenPDF(treSourcebook.SelectedNode.Tag.ToString() + " 5");
+		}
 		#endregion
 
 		#region Methods
 		private void MoveControls()
 		{
+			int intWidth = 0; 
+
 			cboSetting.Left = lblSetting.Left + lblSetting.Width + 6;
 			lblSettingName.Left = cboSetting.Left + cboSetting.Width + 6;
 			txtSettingName.Left = lblSettingName.Left + lblSettingName.Width + 6;
@@ -594,8 +701,14 @@ namespace Chummer
 
 			txtPDFAppPath.Left = lblPDFAppPath.Left + lblPDFAppPath.Width + 6;
 			cmdPDFAppPath.Left = txtPDFAppPath.Left + txtPDFAppPath.Width + 6;
+			cmdPDFTest.Left = nudPDFOffset.Left + nudPDFOffset.Width + 6;
 
-			int intWidth = Math.Max(lblLanguage.Width, lblXSLT.Width);
+			intWidth = Math.Max(lblPDFLocation.Width, lblPDFOffset.Width);
+			txtPDFLocation.Left = lblPDFLocation.Left + intWidth + 6;
+			cmdPDFLocation.Left = txtPDFLocation.Left + txtPDFLocation.Width + 6;
+			nudPDFOffset.Left = lblPDFOffset.Left + intWidth + 6;
+
+			intWidth = Math.Max(lblLanguage.Width, lblXSLT.Width);
 			cboLanguage.Left = lblLanguage.Left + intWidth + 6;
 			cmdVerify.Left = cboLanguage.Left + cboLanguage.Width + 6;
 			cmdVerifyData.Left = cmdVerify.Left + cmdVerify.Width + 6;
@@ -751,7 +864,7 @@ namespace Chummer
 			XmlDocument objXmlDocument = XmlManager.Instance.Load("books.xml");
 
 			// Put the Sourcebooks into a List so they can first be sorted.
-			XmlNodeList objXmlBookList = objXmlDocument.SelectNodes("/chummer/books/book[code != \"SR4\"]");
+			XmlNodeList objXmlBookList = objXmlDocument.SelectNodes("/chummer/books/book");
 			treSourcebook.Nodes.Clear();
 			foreach (XmlNode objXmlBook in objXmlBookList)
 			{
@@ -1454,6 +1567,31 @@ namespace Chummer
 				txtSettingName.Enabled = false;
 			else
 				txtSettingName.Enabled = true;
+		}
+
+		/// <summary>
+		/// Save the global settings to the registry.
+		/// </summary>
+		private void SaveRegistrySettings()
+		{
+			// Set Registry values.
+			GlobalOptions.Instance.AutomaticUpdate = chkAutomaticUpdate.Checked;
+			GlobalOptions.Instance.Language = cboLanguage.SelectedValue.ToString();
+			GlobalOptions.Instance.StartupFullscreen = chkStartupFullscreen.Checked;
+			GlobalOptions.Instance.SingleDiceRoller = chkSingleDiceRoller.Checked;
+			GlobalOptions.Instance.DefaultCharacterSheet = cboXSLT.SelectedValue.ToString();
+			GlobalOptions.Instance.PDFAppPath = txtPDFAppPath.Text;
+			RegistryKey objRegistry = Registry.CurrentUser.CreateSubKey("Software\\Chummer");
+			objRegistry.SetValue("autoupdate", chkAutomaticUpdate.Checked.ToString());
+			objRegistry.SetValue("language", cboLanguage.SelectedValue.ToString());
+			objRegistry.SetValue("startupfullscreen", chkStartupFullscreen.Checked.ToString());
+			objRegistry.SetValue("singlediceroller", chkSingleDiceRoller.Checked.ToString());
+			objRegistry.SetValue("pdfapppath", txtPDFAppPath.Text);
+
+			// Save the SourcebookInfo.
+			RegistryKey objSourceRegistry = Registry.CurrentUser.CreateSubKey("Software\\Chummer\\Sourcebook");
+			foreach (SourcebookInfo objSource in GlobalOptions.Instance.SourcebookInfo)
+				objSourceRegistry.SetValue(objSource.Code, objSource.Path + "|" + objSource.Offset.ToString());
 		}
 		#endregion
 	}

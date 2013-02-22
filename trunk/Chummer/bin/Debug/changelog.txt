@@ -2,6 +2,9 @@ Build XXX
 
 New Strings
 - Label_Options_PDFApplicationPath
+- Label_Options_PDFLocation
+- Label_Options_PDFOffset
+- Button_Options_PDFTest
 
 Build 449
 - added support for <ignorecmpenaltystun /> and <ignorecmpenaltyphysical /> to the Improvement Manager which ignore the character's Stun and Physical Condition Monitor Penalties respectively

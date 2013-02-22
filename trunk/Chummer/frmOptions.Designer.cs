@@ -101,6 +101,14 @@
 			this.tabGeneral = new System.Windows.Forms.TabPage();
 			this.tabControl2 = new System.Windows.Forms.TabControl();
 			this.tabGlobal = new System.Windows.Forms.TabPage();
+			this.nudPDFOffset = new System.Windows.Forms.NumericUpDown();
+			this.lblPDFOffset = new System.Windows.Forms.Label();
+			this.cmdPDFLocation = new System.Windows.Forms.Button();
+			this.txtPDFLocation = new System.Windows.Forms.TextBox();
+			this.lblPDFLocation = new System.Windows.Forms.Label();
+			this.cmdPDFAppPath = new System.Windows.Forms.Button();
+			this.txtPDFAppPath = new System.Windows.Forms.TextBox();
+			this.lblPDFAppPath = new System.Windows.Forms.Label();
 			this.lblXSLT = new System.Windows.Forms.Label();
 			this.cboXSLT = new System.Windows.Forms.ComboBox();
 			this.lblLanguage = new System.Windows.Forms.Label();
@@ -262,9 +270,7 @@
 			this.lblSetting = new System.Windows.Forms.Label();
 			this.lblSettingName = new System.Windows.Forms.Label();
 			this.txtSettingName = new System.Windows.Forms.TextBox();
-			this.lblPDFAppPath = new System.Windows.Forms.Label();
-			this.txtPDFAppPath = new System.Windows.Forms.TextBox();
-			this.cmdPDFAppPath = new System.Windows.Forms.Button();
+			this.cmdPDFTest = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaComplexFormOption)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaMetamagic)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaInitiation)).BeginInit();
@@ -291,6 +297,7 @@
 			this.tabGeneral.SuspendLayout();
 			this.tabControl2.SuspendLayout();
 			this.tabGlobal.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nudPDFOffset)).BeginInit();
 			this.tabPage2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nudBP)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudMaxAvail)).BeginInit();
@@ -1047,6 +1054,12 @@
 			// tabGlobal
 			// 
 			this.tabGlobal.BackColor = System.Drawing.SystemColors.Control;
+			this.tabGlobal.Controls.Add(this.cmdPDFTest);
+			this.tabGlobal.Controls.Add(this.nudPDFOffset);
+			this.tabGlobal.Controls.Add(this.lblPDFOffset);
+			this.tabGlobal.Controls.Add(this.cmdPDFLocation);
+			this.tabGlobal.Controls.Add(this.txtPDFLocation);
+			this.tabGlobal.Controls.Add(this.lblPDFLocation);
 			this.tabGlobal.Controls.Add(this.cmdPDFAppPath);
 			this.tabGlobal.Controls.Add(this.txtPDFAppPath);
 			this.tabGlobal.Controls.Add(this.lblPDFAppPath);
@@ -1066,6 +1079,85 @@
 			this.tabGlobal.TabIndex = 0;
 			this.tabGlobal.Tag = "Tab_Options_Global";
 			this.tabGlobal.Text = "Global";
+			// 
+			// nudPDFOffset
+			// 
+			this.nudPDFOffset.Location = new System.Drawing.Point(87, 343);
+			this.nudPDFOffset.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+			this.nudPDFOffset.Name = "nudPDFOffset";
+			this.nudPDFOffset.Size = new System.Drawing.Size(44, 20);
+			this.nudPDFOffset.TabIndex = 16;
+			this.nudPDFOffset.ValueChanged += new System.EventHandler(this.nudPDFOffset_ValueChanged);
+			// 
+			// lblPDFOffset
+			// 
+			this.lblPDFOffset.AutoSize = true;
+			this.lblPDFOffset.Location = new System.Drawing.Point(6, 345);
+			this.lblPDFOffset.Name = "lblPDFOffset";
+			this.lblPDFOffset.Size = new System.Drawing.Size(66, 13);
+			this.lblPDFOffset.TabIndex = 15;
+			this.lblPDFOffset.Tag = "Label_Options_PDFOffset";
+			this.lblPDFOffset.Text = "Page Offset:";
+			// 
+			// cmdPDFLocation
+			// 
+			this.cmdPDFLocation.Location = new System.Drawing.Point(341, 308);
+			this.cmdPDFLocation.Name = "cmdPDFLocation";
+			this.cmdPDFLocation.Size = new System.Drawing.Size(27, 23);
+			this.cmdPDFLocation.TabIndex = 14;
+			this.cmdPDFLocation.Text = "...";
+			this.cmdPDFLocation.UseVisualStyleBackColor = true;
+			this.cmdPDFLocation.Click += new System.EventHandler(this.cmdPDFLocation_Click);
+			// 
+			// txtPDFLocation
+			// 
+			this.txtPDFLocation.Location = new System.Drawing.Point(87, 310);
+			this.txtPDFLocation.Name = "txtPDFLocation";
+			this.txtPDFLocation.ReadOnly = true;
+			this.txtPDFLocation.Size = new System.Drawing.Size(248, 20);
+			this.txtPDFLocation.TabIndex = 13;
+			// 
+			// lblPDFLocation
+			// 
+			this.lblPDFLocation.AutoSize = true;
+			this.lblPDFLocation.Location = new System.Drawing.Point(6, 313);
+			this.lblPDFLocation.Name = "lblPDFLocation";
+			this.lblPDFLocation.Size = new System.Drawing.Size(75, 13);
+			this.lblPDFLocation.TabIndex = 12;
+			this.lblPDFLocation.Tag = "Label_Options_PDFLocation";
+			this.lblPDFLocation.Text = "PDF Location:";
+			// 
+			// cmdPDFAppPath
+			// 
+			this.cmdPDFAppPath.Location = new System.Drawing.Point(407, 227);
+			this.cmdPDFAppPath.Name = "cmdPDFAppPath";
+			this.cmdPDFAppPath.Size = new System.Drawing.Size(27, 23);
+			this.cmdPDFAppPath.TabIndex = 11;
+			this.cmdPDFAppPath.Text = "...";
+			this.cmdPDFAppPath.UseVisualStyleBackColor = true;
+			this.cmdPDFAppPath.Click += new System.EventHandler(this.cmdPDFAppPath_Click);
+			// 
+			// txtPDFAppPath
+			// 
+			this.txtPDFAppPath.Location = new System.Drawing.Point(153, 229);
+			this.txtPDFAppPath.Name = "txtPDFAppPath";
+			this.txtPDFAppPath.ReadOnly = true;
+			this.txtPDFAppPath.Size = new System.Drawing.Size(248, 20);
+			this.txtPDFAppPath.TabIndex = 10;
+			// 
+			// lblPDFAppPath
+			// 
+			this.lblPDFAppPath.AutoSize = true;
+			this.lblPDFAppPath.Location = new System.Drawing.Point(6, 232);
+			this.lblPDFAppPath.Name = "lblPDFAppPath";
+			this.lblPDFAppPath.Size = new System.Drawing.Size(141, 13);
+			this.lblPDFAppPath.TabIndex = 9;
+			this.lblPDFAppPath.Tag = "Label_Options_PDFApplicationPath";
+			this.lblPDFAppPath.Text = "Location of PDF application:";
 			// 
 			// lblXSLT
 			// 
@@ -1426,6 +1518,8 @@
 			this.treSourcebook.ShowRootLines = false;
 			this.treSourcebook.Size = new System.Drawing.Size(226, 534);
 			this.treSourcebook.TabIndex = 1;
+			this.treSourcebook.BeforeCheck += new System.Windows.Forms.TreeViewCancelEventHandler(this.treSourcebook_BeforeCheck);
+			this.treSourcebook.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treSourcebook_AfterSelect);
 			// 
 			// tabBPCosts
 			// 
@@ -2886,33 +2980,17 @@
 			this.txtSettingName.Size = new System.Drawing.Size(190, 20);
 			this.txtSettingName.TabIndex = 3;
 			// 
-			// lblPDFAppPath
+			// cmdPDFTest
 			// 
-			this.lblPDFAppPath.AutoSize = true;
-			this.lblPDFAppPath.Location = new System.Drawing.Point(6, 232);
-			this.lblPDFAppPath.Name = "lblPDFAppPath";
-			this.lblPDFAppPath.Size = new System.Drawing.Size(141, 13);
-			this.lblPDFAppPath.TabIndex = 9;
-			this.lblPDFAppPath.Tag = "Label_Options_PDFApplicationPath";
-			this.lblPDFAppPath.Text = "Location of PDF application:";
-			// 
-			// txtPDFAppPath
-			// 
-			this.txtPDFAppPath.Location = new System.Drawing.Point(154, 232);
-			this.txtPDFAppPath.Name = "txtPDFAppPath";
-			this.txtPDFAppPath.ReadOnly = true;
-			this.txtPDFAppPath.Size = new System.Drawing.Size(248, 20);
-			this.txtPDFAppPath.TabIndex = 10;
-			// 
-			// cmdPDFAppPath
-			// 
-			this.cmdPDFAppPath.Location = new System.Drawing.Point(409, 232);
-			this.cmdPDFAppPath.Name = "cmdPDFAppPath";
-			this.cmdPDFAppPath.Size = new System.Drawing.Size(27, 23);
-			this.cmdPDFAppPath.TabIndex = 11;
-			this.cmdPDFAppPath.Text = "...";
-			this.cmdPDFAppPath.UseVisualStyleBackColor = true;
-			this.cmdPDFAppPath.Click += new System.EventHandler(this.cmdPDFAppPath_Click);
+			this.cmdPDFTest.AutoSize = true;
+			this.cmdPDFTest.Location = new System.Drawing.Point(138, 340);
+			this.cmdPDFTest.Name = "cmdPDFTest";
+			this.cmdPDFTest.Size = new System.Drawing.Size(122, 23);
+			this.cmdPDFTest.TabIndex = 17;
+			this.cmdPDFTest.Tag = "Button_Options_PDFTest";
+			this.cmdPDFTest.Text = "Test - Open to Page 5";
+			this.cmdPDFTest.UseVisualStyleBackColor = true;
+			this.cmdPDFTest.Click += new System.EventHandler(this.cmdPDFTest_Click);
 			// 
 			// frmOptions
 			// 
@@ -2963,6 +3041,7 @@
 			this.tabControl2.ResumeLayout(false);
 			this.tabGlobal.ResumeLayout(false);
 			this.tabGlobal.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nudPDFOffset)).EndInit();
 			this.tabPage2.ResumeLayout(false);
 			this.tabPage2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nudBP)).EndInit();
@@ -3258,5 +3337,11 @@
 		private System.Windows.Forms.Button cmdPDFAppPath;
 		private System.Windows.Forms.TextBox txtPDFAppPath;
 		private System.Windows.Forms.Label lblPDFAppPath;
+		private System.Windows.Forms.NumericUpDown nudPDFOffset;
+		private System.Windows.Forms.Label lblPDFOffset;
+		private System.Windows.Forms.Button cmdPDFLocation;
+		private System.Windows.Forms.TextBox txtPDFLocation;
+		private System.Windows.Forms.Label lblPDFLocation;
+		private System.Windows.Forms.Button cmdPDFTest;
 	}
 }
