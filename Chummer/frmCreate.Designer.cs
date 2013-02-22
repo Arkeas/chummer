@@ -6763,6 +6763,7 @@
 			this.lblWeaponSource.Size = new System.Drawing.Size(47, 13);
 			this.lblWeaponSource.TabIndex = 69;
 			this.lblWeaponSource.Text = "[Source]";
+			this.lblWeaponSource.Click += new System.EventHandler(this.lblWeaponSource_Click);
 			// 
 			// lblWeaponSourceLabel
 			// 

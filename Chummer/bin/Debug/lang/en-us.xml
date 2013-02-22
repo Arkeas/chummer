@@ -5420,6 +5420,18 @@ Only one attribute may be at its Maximum value during character creation.</text>
 			<key>Label_Options_PDFApplicationPath</key>
 			<text>Location of PDF application:</text>
 		</string>
+		<string>
+			<key>Label_Options_PDFLocation</key>
+			<text>PDF Location:</text>
+		</string>
+		<string>
+			<key>Label_Options_PDFOffset</key>
+			<text>Page Offset:</text>
+		</string>
+		<string>
+			<key>Button_Options_PDFTest</key>
+			<text>Test - Open to Page 5</text>
+		</string>
 		<!-- Print Multiple Window -->
 		<string>
 			<key>Title_PrintMultiple</key>
