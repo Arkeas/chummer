@@ -164,7 +164,7 @@
 	<file>
 		<name>data/bioware.xml</name>
 		<type>Data Files</type>
-		<version>-907</version>
+		<version>-906</version>
 		<description>Bioware</description>
 		<notes>- Bioware data file</notes>
 	</file>

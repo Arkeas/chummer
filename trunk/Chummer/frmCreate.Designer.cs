@@ -30,34 +30,34 @@
         {
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreate));
-			System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Selected Positive Qualities");
-			System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Selected Negative Qualities");
-			System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Selected Martial Arts");
-			System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Selected Maneuvers");
-			System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Selected Combat Spells");
-			System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Selected Detection Spells");
-			System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Selected Health Spells");
-			System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Selected Illusion Spells");
-			System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Selected Manipulation Spells");
-			System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Selected Geomancy Rituals");
-			System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Selected Advanced Complex Forms");
-			System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Selected ARE Complex Forms");
-			System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Selected Autosoft Complex Forms");
-			System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Selected Common Use Complex Forms");
-			System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Selected Hacking Complex Forms");
-			System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Selected Malware Complex Forms");
-			System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Selected Sensor Complex Forms");
-			System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Selected Skillsoft Complex Forms");
-			System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Selected Tactical AR Complex Forms");
-			System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Critter Powers");
-			System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Weaknesses");
-			System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Selected Cyberware");
-			System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Selected Bioware");
-			System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Selected Lifestyles");
-			System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Selected Armor");
-			System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Selected Weapons");
-			System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Selected Gear");
-			System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Selected Vehicles");
+			System.Windows.Forms.TreeNode treeNode310 = new System.Windows.Forms.TreeNode("Selected Positive Qualities");
+			System.Windows.Forms.TreeNode treeNode311 = new System.Windows.Forms.TreeNode("Selected Negative Qualities");
+			System.Windows.Forms.TreeNode treeNode312 = new System.Windows.Forms.TreeNode("Selected Martial Arts");
+			System.Windows.Forms.TreeNode treeNode313 = new System.Windows.Forms.TreeNode("Selected Maneuvers");
+			System.Windows.Forms.TreeNode treeNode314 = new System.Windows.Forms.TreeNode("Selected Combat Spells");
+			System.Windows.Forms.TreeNode treeNode315 = new System.Windows.Forms.TreeNode("Selected Detection Spells");
+			System.Windows.Forms.TreeNode treeNode316 = new System.Windows.Forms.TreeNode("Selected Health Spells");
+			System.Windows.Forms.TreeNode treeNode317 = new System.Windows.Forms.TreeNode("Selected Illusion Spells");
+			System.Windows.Forms.TreeNode treeNode318 = new System.Windows.Forms.TreeNode("Selected Manipulation Spells");
+			System.Windows.Forms.TreeNode treeNode319 = new System.Windows.Forms.TreeNode("Selected Geomancy Rituals");
+			System.Windows.Forms.TreeNode treeNode320 = new System.Windows.Forms.TreeNode("Selected Advanced Complex Forms");
+			System.Windows.Forms.TreeNode treeNode321 = new System.Windows.Forms.TreeNode("Selected ARE Complex Forms");
+			System.Windows.Forms.TreeNode treeNode322 = new System.Windows.Forms.TreeNode("Selected Autosoft Complex Forms");
+			System.Windows.Forms.TreeNode treeNode323 = new System.Windows.Forms.TreeNode("Selected Common Use Complex Forms");
+			System.Windows.Forms.TreeNode treeNode324 = new System.Windows.Forms.TreeNode("Selected Hacking Complex Forms");
+			System.Windows.Forms.TreeNode treeNode325 = new System.Windows.Forms.TreeNode("Selected Malware Complex Forms");
+			System.Windows.Forms.TreeNode treeNode326 = new System.Windows.Forms.TreeNode("Selected Sensor Complex Forms");
+			System.Windows.Forms.TreeNode treeNode327 = new System.Windows.Forms.TreeNode("Selected Skillsoft Complex Forms");
+			System.Windows.Forms.TreeNode treeNode328 = new System.Windows.Forms.TreeNode("Selected Tactical AR Complex Forms");
+			System.Windows.Forms.TreeNode treeNode329 = new System.Windows.Forms.TreeNode("Critter Powers");
+			System.Windows.Forms.TreeNode treeNode330 = new System.Windows.Forms.TreeNode("Weaknesses");
+			System.Windows.Forms.TreeNode treeNode331 = new System.Windows.Forms.TreeNode("Selected Cyberware");
+			System.Windows.Forms.TreeNode treeNode332 = new System.Windows.Forms.TreeNode("Selected Bioware");
+			System.Windows.Forms.TreeNode treeNode333 = new System.Windows.Forms.TreeNode("Selected Lifestyles");
+			System.Windows.Forms.TreeNode treeNode334 = new System.Windows.Forms.TreeNode("Selected Armor");
+			System.Windows.Forms.TreeNode treeNode335 = new System.Windows.Forms.TreeNode("Selected Weapons");
+			System.Windows.Forms.TreeNode treeNode336 = new System.Windows.Forms.TreeNode("Selected Gear");
+			System.Windows.Forms.TreeNode treeNode309 = new System.Windows.Forms.TreeNode("Selected Vehicles");
 			this.StatusStrip = new System.Windows.Forms.StatusStrip();
 			this.tssBPLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.tssBP = new System.Windows.Forms.ToolStripStatusLabel();
@@ -3131,6 +3131,7 @@
 			this.lblMetatypeSource.Size = new System.Drawing.Size(33, 13);
 			this.lblMetatypeSource.TabIndex = 89;
 			this.lblMetatypeSource.Text = "None";
+			this.lblMetatypeSource.Click += new System.EventHandler(this.lblMetatypeSource_Click);
 			// 
 			// lblMetatypeSourceLabel
 			// 
@@ -3252,6 +3253,7 @@
 			this.lblQualitySource.Size = new System.Drawing.Size(47, 13);
 			this.lblQualitySource.TabIndex = 65;
 			this.lblQualitySource.Text = "[Source]";
+			this.lblQualitySource.Click += new System.EventHandler(this.lblQualitySource_Click);
 			// 
 			// lblQualitySourceLabel
 			// 
@@ -3416,15 +3418,15 @@
 			this.treQualities.Indent = 15;
 			this.treQualities.Location = new System.Drawing.Point(6, 38);
 			this.treQualities.Name = "treQualities";
-			treeNode1.Name = "nodPositiveQualityRoot";
-			treeNode1.Tag = "Node_SelectedPositiveQualities";
-			treeNode1.Text = "Selected Positive Qualities";
-			treeNode2.Name = "nodNegativeQualityRoot";
-			treeNode2.Tag = "Node_SelectedNegativeQualities";
-			treeNode2.Text = "Selected Negative Qualities";
+			treeNode310.Name = "nodPositiveQualityRoot";
+			treeNode310.Tag = "Node_SelectedPositiveQualities";
+			treeNode310.Text = "Selected Positive Qualities";
+			treeNode311.Name = "nodNegativeQualityRoot";
+			treeNode311.Tag = "Node_SelectedNegativeQualities";
+			treeNode311.Text = "Selected Negative Qualities";
 			this.treQualities.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
+            treeNode310,
+            treeNode311});
 			this.treQualities.ShowNodeToolTips = true;
 			this.treQualities.ShowPlusMinus = false;
 			this.treQualities.ShowRootLines = false;
@@ -4142,6 +4144,7 @@
 			this.lblMartialArtSource.Size = new System.Drawing.Size(47, 13);
 			this.lblMartialArtSource.TabIndex = 25;
 			this.lblMartialArtSource.Text = "[Source]";
+			this.lblMartialArtSource.Click += new System.EventHandler(this.lblMartialArtSource_Click);
 			// 
 			// lblMartialArtSourceLabel
 			// 
@@ -4206,15 +4209,15 @@
 			this.treMartialArts.HideSelection = false;
 			this.treMartialArts.Location = new System.Drawing.Point(8, 35);
 			this.treMartialArts.Name = "treMartialArts";
-			treeNode3.Name = "treMartialArtsRoot";
-			treeNode3.Tag = "Node_SelectedMartialArts";
-			treeNode3.Text = "Selected Martial Arts";
-			treeNode4.Name = "nodMartialArtManeuvers";
-			treeNode4.Tag = "Node_SelectedManeuvers";
-			treeNode4.Text = "Selected Maneuvers";
+			treeNode312.Name = "treMartialArtsRoot";
+			treeNode312.Tag = "Node_SelectedMartialArts";
+			treeNode312.Text = "Selected Martial Arts";
+			treeNode313.Name = "nodMartialArtManeuvers";
+			treeNode313.Tag = "Node_SelectedManeuvers";
+			treeNode313.Text = "Selected Maneuvers";
 			this.treMartialArts.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4});
+            treeNode312,
+            treeNode313});
 			this.treMartialArts.ShowNodeToolTips = true;
 			this.treMartialArts.ShowPlusMinus = false;
 			this.treMartialArts.ShowRootLines = false;
@@ -4385,6 +4388,7 @@
 			this.lblSpellSource.Size = new System.Drawing.Size(47, 13);
 			this.lblSpellSource.TabIndex = 88;
 			this.lblSpellSource.Text = "[Source]";
+			this.lblSpellSource.Click += new System.EventHandler(this.lblSpellSource_Click);
 			// 
 			// lblSpellSourceLabel
 			// 
@@ -4534,31 +4538,31 @@
 			this.treSpells.HideSelection = false;
 			this.treSpells.Location = new System.Drawing.Point(8, 55);
 			this.treSpells.Name = "treSpells";
-			treeNode5.Name = "nodSpellCombatRoot";
-			treeNode5.Tag = "Node_SelectedCombatSpells";
-			treeNode5.Text = "Selected Combat Spells";
-			treeNode6.Name = "nodSpellDetectionRoot";
-			treeNode6.Tag = "Node_SelectedDetectionSpells";
-			treeNode6.Text = "Selected Detection Spells";
-			treeNode7.Name = "nodSpellHealthRoot";
-			treeNode7.Tag = "Node_SelectedHealthSpells";
-			treeNode7.Text = "Selected Health Spells";
-			treeNode8.Name = "nodSpellIllusionRoot";
-			treeNode8.Tag = "Node_SelectedIllusionSpells";
-			treeNode8.Text = "Selected Illusion Spells";
-			treeNode9.Name = "nodSpellManipulationRoot";
-			treeNode9.Tag = "Node_SelectedManipulationSpells";
-			treeNode9.Text = "Selected Manipulation Spells";
-			treeNode10.Name = "nodSpellGeomancyRoot";
-			treeNode10.Tag = "Node_SelectedGeomancyRituals";
-			treeNode10.Text = "Selected Geomancy Rituals";
+			treeNode314.Name = "nodSpellCombatRoot";
+			treeNode314.Tag = "Node_SelectedCombatSpells";
+			treeNode314.Text = "Selected Combat Spells";
+			treeNode315.Name = "nodSpellDetectionRoot";
+			treeNode315.Tag = "Node_SelectedDetectionSpells";
+			treeNode315.Text = "Selected Detection Spells";
+			treeNode316.Name = "nodSpellHealthRoot";
+			treeNode316.Tag = "Node_SelectedHealthSpells";
+			treeNode316.Text = "Selected Health Spells";
+			treeNode317.Name = "nodSpellIllusionRoot";
+			treeNode317.Tag = "Node_SelectedIllusionSpells";
+			treeNode317.Text = "Selected Illusion Spells";
+			treeNode318.Name = "nodSpellManipulationRoot";
+			treeNode318.Tag = "Node_SelectedManipulationSpells";
+			treeNode318.Text = "Selected Manipulation Spells";
+			treeNode319.Name = "nodSpellGeomancyRoot";
+			treeNode319.Tag = "Node_SelectedGeomancyRituals";
+			treeNode319.Text = "Selected Geomancy Rituals";
 			this.treSpells.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode6,
-            treeNode7,
-            treeNode8,
-            treeNode9,
-            treeNode10});
+            treeNode314,
+            treeNode315,
+            treeNode316,
+            treeNode317,
+            treeNode318,
+            treeNode319});
 			this.treSpells.ShowNodeToolTips = true;
 			this.treSpells.ShowRootLines = false;
 			this.treSpells.Size = new System.Drawing.Size(295, 333);
@@ -4944,6 +4948,7 @@
 			this.lblComplexFormSource.Size = new System.Drawing.Size(47, 13);
 			this.lblComplexFormSource.TabIndex = 90;
 			this.lblComplexFormSource.Text = "[Source]";
+			this.lblComplexFormSource.Click += new System.EventHandler(this.lblComplexFormSource_Click);
 			// 
 			// lblComplexFormSourceLabel
 			// 
@@ -4960,43 +4965,43 @@
 			this.treComplexForms.HideSelection = false;
 			this.treComplexForms.Location = new System.Drawing.Point(8, 54);
 			this.treComplexForms.Name = "treComplexForms";
-			treeNode11.Name = "nodProgramAdvancedRoot";
-			treeNode11.Tag = "Node_SelectedAdvancedComplexForms";
-			treeNode11.Text = "Selected Advanced Complex Forms";
-			treeNode12.Name = "nodProgramARERoot";
-			treeNode12.Tag = "Node_SelectedAREComplexForms";
-			treeNode12.Text = "Selected ARE Complex Forms";
-			treeNode13.Name = "nodProgramAutosoftRoot";
-			treeNode13.Tag = "Node_SelectedAutosoftComplexForms";
-			treeNode13.Text = "Selected Autosoft Complex Forms";
-			treeNode14.Name = "nodProgramCommonUseRoot";
-			treeNode14.Tag = "Node_SelectedCommonUseComplexForms";
-			treeNode14.Text = "Selected Common Use Complex Forms";
-			treeNode15.Name = "nodProgramHackingRoot";
-			treeNode15.Tag = "Node_SelectedHackingComplexForms";
-			treeNode15.Text = "Selected Hacking Complex Forms";
-			treeNode16.Name = "nodProgramMalwareRoot";
-			treeNode16.Tag = "Node_SelectedMalwareComplexForms";
-			treeNode16.Text = "Selected Malware Complex Forms";
-			treeNode17.Name = "nodProgramSensorRoot";
-			treeNode17.Tag = "Node_SelectedSensorComplexForms";
-			treeNode17.Text = "Selected Sensor Complex Forms";
-			treeNode18.Name = "nodProgramSkillsoftRoot";
-			treeNode18.Tag = "Node_SelectedSkillsoftsComplexForms";
-			treeNode18.Text = "Selected Skillsoft Complex Forms";
-			treeNode19.Name = "nodProgramTacticsARRoot";
-			treeNode19.Tag = "Node_SelectedTacticalARComplexForms";
-			treeNode19.Text = "Selected Tactical AR Complex Forms";
+			treeNode320.Name = "nodProgramAdvancedRoot";
+			treeNode320.Tag = "Node_SelectedAdvancedComplexForms";
+			treeNode320.Text = "Selected Advanced Complex Forms";
+			treeNode321.Name = "nodProgramARERoot";
+			treeNode321.Tag = "Node_SelectedAREComplexForms";
+			treeNode321.Text = "Selected ARE Complex Forms";
+			treeNode322.Name = "nodProgramAutosoftRoot";
+			treeNode322.Tag = "Node_SelectedAutosoftComplexForms";
+			treeNode322.Text = "Selected Autosoft Complex Forms";
+			treeNode323.Name = "nodProgramCommonUseRoot";
+			treeNode323.Tag = "Node_SelectedCommonUseComplexForms";
+			treeNode323.Text = "Selected Common Use Complex Forms";
+			treeNode324.Name = "nodProgramHackingRoot";
+			treeNode324.Tag = "Node_SelectedHackingComplexForms";
+			treeNode324.Text = "Selected Hacking Complex Forms";
+			treeNode325.Name = "nodProgramMalwareRoot";
+			treeNode325.Tag = "Node_SelectedMalwareComplexForms";
+			treeNode325.Text = "Selected Malware Complex Forms";
+			treeNode326.Name = "nodProgramSensorRoot";
+			treeNode326.Tag = "Node_SelectedSensorComplexForms";
+			treeNode326.Text = "Selected Sensor Complex Forms";
+			treeNode327.Name = "nodProgramSkillsoftRoot";
+			treeNode327.Tag = "Node_SelectedSkillsoftsComplexForms";
+			treeNode327.Text = "Selected Skillsoft Complex Forms";
+			treeNode328.Name = "nodProgramTacticsARRoot";
+			treeNode328.Tag = "Node_SelectedTacticalARComplexForms";
+			treeNode328.Text = "Selected Tactical AR Complex Forms";
 			this.treComplexForms.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode11,
-            treeNode12,
-            treeNode13,
-            treeNode14,
-            treeNode15,
-            treeNode16,
-            treeNode17,
-            treeNode18,
-            treeNode19});
+            treeNode320,
+            treeNode321,
+            treeNode322,
+            treeNode323,
+            treeNode324,
+            treeNode325,
+            treeNode326,
+            treeNode327,
+            treeNode328});
 			this.treComplexForms.ShowNodeToolTips = true;
 			this.treComplexForms.ShowRootLines = false;
 			this.treComplexForms.Size = new System.Drawing.Size(295, 333);
@@ -5170,6 +5175,7 @@
 			this.lblCritterPowerSource.Size = new System.Drawing.Size(47, 13);
 			this.lblCritterPowerSource.TabIndex = 14;
 			this.lblCritterPowerSource.Text = "[Source]";
+			this.lblCritterPowerSource.Click += new System.EventHandler(this.lblCritterPowerSource_Click);
 			// 
 			// lblCritterPowerSourceLabel
 			// 
@@ -5302,15 +5308,15 @@
 			this.treCritterPowers.HideSelection = false;
 			this.treCritterPowers.Location = new System.Drawing.Point(8, 32);
 			this.treCritterPowers.Name = "treCritterPowers";
-			treeNode20.Name = "nodCritterPowerRoot";
-			treeNode20.Tag = "Node_CritterPowers";
-			treeNode20.Text = "Critter Powers";
-			treeNode21.Name = "nodCritterWeaknessRoot";
-			treeNode21.Tag = "Node_CritterWeaknesses";
-			treeNode21.Text = "Weaknesses";
+			treeNode329.Name = "nodCritterPowerRoot";
+			treeNode329.Tag = "Node_CritterPowers";
+			treeNode329.Text = "Critter Powers";
+			treeNode330.Name = "nodCritterWeaknessRoot";
+			treeNode330.Tag = "Node_CritterWeaknesses";
+			treeNode330.Text = "Weaknesses";
 			this.treCritterPowers.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode20,
-            treeNode21});
+            treeNode329,
+            treeNode330});
 			this.treCritterPowers.ShowNodeToolTips = true;
 			this.treCritterPowers.ShowPlusMinus = false;
 			this.treCritterPowers.ShowRootLines = false;
@@ -5408,6 +5414,7 @@
 			this.lblMetamagicSource.Size = new System.Drawing.Size(47, 13);
 			this.lblMetamagicSource.TabIndex = 109;
 			this.lblMetamagicSource.Text = "[Source]";
+			this.lblMetamagicSource.Click += new System.EventHandler(this.lblMetamagicSource_Click);
 			// 
 			// lblMetamagicSourceLabel
 			// 
@@ -5649,6 +5656,7 @@
 			this.lblCyberwareSource.Size = new System.Drawing.Size(47, 13);
 			this.lblCyberwareSource.TabIndex = 48;
 			this.lblCyberwareSource.Text = "[Source]";
+			this.lblCyberwareSource.Click += new System.EventHandler(this.lblCyberwareSource_Click);
 			// 
 			// lblCyberwareSourceLabel
 			// 
@@ -5850,15 +5858,15 @@
 			this.treCyberware.HideSelection = false;
 			this.treCyberware.Location = new System.Drawing.Point(8, 36);
 			this.treCyberware.Name = "treCyberware";
-			treeNode22.Name = "nodCyberwareRoot";
-			treeNode22.Tag = "Node_SelectedCyberware";
-			treeNode22.Text = "Selected Cyberware";
-			treeNode23.Name = "nodBioware";
-			treeNode23.Tag = "Node_SelectedBioware";
-			treeNode23.Text = "Selected Bioware";
+			treeNode331.Name = "nodCyberwareRoot";
+			treeNode331.Tag = "Node_SelectedCyberware";
+			treeNode331.Text = "Selected Cyberware";
+			treeNode332.Name = "nodBioware";
+			treeNode332.Tag = "Node_SelectedBioware";
+			treeNode332.Text = "Selected Bioware";
 			this.treCyberware.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode22,
-            treeNode23});
+            treeNode331,
+            treeNode332});
 			this.treCyberware.ShowNodeToolTips = true;
 			this.treCyberware.ShowRootLines = false;
 			this.treCyberware.Size = new System.Drawing.Size(295, 572);
@@ -6098,6 +6106,7 @@
 			this.lblLifestyleSource.Size = new System.Drawing.Size(47, 13);
 			this.lblLifestyleSource.TabIndex = 88;
 			this.lblLifestyleSource.Text = "[Source]";
+			this.lblLifestyleSource.Click += new System.EventHandler(this.lblLifestyleSource_Click);
 			// 
 			// lblLifestyleSourceLabel
 			// 
@@ -6136,11 +6145,11 @@
 			this.treLifestyles.HideSelection = false;
 			this.treLifestyles.Location = new System.Drawing.Point(6, 36);
 			this.treLifestyles.Name = "treLifestyles";
-			treeNode24.Name = "nodLifestylesRoot";
-			treeNode24.Tag = "Node_SelectedLifestyles";
-			treeNode24.Text = "Selected Lifestyles";
+			treeNode333.Name = "nodLifestylesRoot";
+			treeNode333.Tag = "Node_SelectedLifestyles";
+			treeNode333.Text = "Selected Lifestyles";
 			this.treLifestyles.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode24});
+            treeNode333});
 			this.treLifestyles.ShowNodeToolTips = true;
 			this.treLifestyles.ShowRootLines = false;
 			this.treLifestyles.Size = new System.Drawing.Size(295, 537);
@@ -6382,6 +6391,7 @@
 			this.lblArmorSource.Size = new System.Drawing.Size(47, 13);
 			this.lblArmorSource.TabIndex = 80;
 			this.lblArmorSource.Text = "[Source]";
+			this.lblArmorSource.Click += new System.EventHandler(this.lblArmorSource_Click);
 			// 
 			// lblArmorSourceLabel
 			// 
@@ -6441,11 +6451,11 @@
 			this.treArmor.HideSelection = false;
 			this.treArmor.Location = new System.Drawing.Point(6, 36);
 			this.treArmor.Name = "treArmor";
-			treeNode25.Name = "nodArmorRoot";
-			treeNode25.Tag = "Node_SelectedArmor";
-			treeNode25.Text = "Selected Armor";
+			treeNode334.Name = "nodArmorRoot";
+			treeNode334.Tag = "Node_SelectedArmor";
+			treeNode334.Text = "Selected Armor";
 			this.treArmor.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode25});
+            treeNode334});
 			this.treArmor.ShowNodeToolTips = true;
 			this.treArmor.Size = new System.Drawing.Size(295, 537);
 			this.treArmor.TabIndex = 69;
@@ -6802,11 +6812,11 @@
 			this.treWeapons.HideSelection = false;
 			this.treWeapons.Location = new System.Drawing.Point(6, 36);
 			this.treWeapons.Name = "treWeapons";
-			treeNode26.Name = "nodWeaponsRoot";
-			treeNode26.Tag = "Node_SelectedWeapons";
-			treeNode26.Text = "Selected Weapons";
+			treeNode335.Name = "nodWeaponsRoot";
+			treeNode335.Tag = "Node_SelectedWeapons";
+			treeNode335.Text = "Selected Weapons";
 			this.treWeapons.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode26});
+            treeNode335});
 			this.treWeapons.ShowNodeToolTips = true;
 			this.treWeapons.Size = new System.Drawing.Size(295, 540);
 			this.treWeapons.TabIndex = 29;
@@ -7211,6 +7221,7 @@
 			this.lblGearSource.Size = new System.Drawing.Size(47, 13);
 			this.lblGearSource.TabIndex = 74;
 			this.lblGearSource.Text = "[Source]";
+			this.lblGearSource.Click += new System.EventHandler(this.lblGearSource_Click);
 			// 
 			// lblGearSourceLabel
 			// 
@@ -7459,11 +7470,11 @@
 			this.treGear.HideSelection = false;
 			this.treGear.Location = new System.Drawing.Point(6, 36);
 			this.treGear.Name = "treGear";
-			treeNode27.Name = "nodGearRoot";
-			treeNode27.Tag = "Node_SelectedGear";
-			treeNode27.Text = "Selected Gear";
+			treeNode336.Name = "nodGearRoot";
+			treeNode336.Tag = "Node_SelectedGear";
+			treeNode336.Text = "Selected Gear";
 			this.treGear.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode27});
+            treeNode336});
 			this.treGear.ShowNodeToolTips = true;
 			this.treGear.Size = new System.Drawing.Size(295, 540);
 			this.treGear.TabIndex = 49;
@@ -7995,6 +8006,7 @@
 			this.lblVehicleSource.Size = new System.Drawing.Size(47, 13);
 			this.lblVehicleSource.TabIndex = 60;
 			this.lblVehicleSource.Text = "[Source]";
+			this.lblVehicleSource.Click += new System.EventHandler(this.lblVehicleSource_Click);
 			// 
 			// lblVehicleSourceLabel
 			// 
@@ -8278,11 +8290,11 @@
 			this.treVehicles.HideSelection = false;
 			this.treVehicles.Location = new System.Drawing.Point(8, 36);
 			this.treVehicles.Name = "treVehicles";
-			treeNode28.Name = "nodVehiclesRoot";
-			treeNode28.Tag = "Node_SelectedVehicles";
-			treeNode28.Text = "Selected Vehicles";
+			treeNode309.Name = "nodVehiclesRoot";
+			treeNode309.Tag = "Node_SelectedVehicles";
+			treeNode309.Text = "Selected Vehicles";
 			this.treVehicles.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode28});
+            treeNode309});
 			this.treVehicles.ShowNodeToolTips = true;
 			this.treVehicles.ShowRootLines = false;
 			this.treVehicles.Size = new System.Drawing.Size(403, 572);

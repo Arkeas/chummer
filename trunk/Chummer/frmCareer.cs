@@ -21311,6 +21311,86 @@ namespace Chummer
 		}
 		#endregion
 
+		#region Sourcebook Label Events
+		private void lblMetatypeSource_Click(object sender, EventArgs e)
+		{
+			CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+			_objFunctions.OpenPDF(lblMetatypeSource.Text);
+		}
+
+		private void lblQualitySource_Click(object sender, EventArgs e)
+		{
+			CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+			_objFunctions.OpenPDF(lblQualitySource.Text);
+		}
+
+		private void lblMartialArtSource_Click(object sender, EventArgs e)
+		{
+			CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+			_objFunctions.OpenPDF(lblMartialArtSource.Text);
+		}
+
+		private void lblSpellSource_Click(object sender, EventArgs e)
+		{
+			CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+			_objFunctions.OpenPDF(lblSpellSource.Text);
+		}
+
+		private void lblComplexFormSource_Click(object sender, EventArgs e)
+		{
+			CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+			_objFunctions.OpenPDF(lblComplexFormSource.Text);
+		}
+
+		private void lblCritterPowerSource_Click(object sender, EventArgs e)
+		{
+			CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+			_objFunctions.OpenPDF(lblCritterPowerSource.Text);
+		}
+
+		private void lblMetamagicSource_Click(object sender, EventArgs e)
+		{
+			CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+			_objFunctions.OpenPDF(lblMetamagicSource.Text);
+		}
+
+		private void lblCyberwareSource_Click(object sender, EventArgs e)
+		{
+			CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+			_objFunctions.OpenPDF(lblCyberwareSource.Text);
+		}
+
+		private void lblLifestyleSource_Click(object sender, EventArgs e)
+		{
+			CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+			_objFunctions.OpenPDF(lblLifestyleSource.Text);
+		}
+
+		private void lblArmorSource_Click(object sender, EventArgs e)
+		{
+			CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+			_objFunctions.OpenPDF(lblArmorSource.Text);
+		}
+
+		private void lblWeaponSource_Click(object sender, EventArgs e)
+		{
+			CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+			_objFunctions.OpenPDF(lblWeaponSource.Text);
+		}
+
+		private void lblGearSource_Click(object sender, EventArgs e)
+		{
+			CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+			_objFunctions.OpenPDF(lblGearSource.Text);
+		}
+
+		private void lblVehicleSource_Click(object sender, EventArgs e)
+		{
+			CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+			_objFunctions.OpenPDF(lblVehicleSource.Text);
+		}
+		#endregion
+
 		#region Custom Methods
 		/// <summary>
 		/// Let the application know that a Metatype has been selected.

@@ -5736,7 +5736,7 @@ namespace Chummer
 								if (objGear.WeaponBonus["damagereplace"] != null)
 								{
 									blnDamageReplaced = true;
-									strReturn = objGear.WeaponBonus["damagereplace"].InnerText;
+									strDamage = objGear.WeaponBonus["damagereplace"].InnerText;
 								}
 							}
 						}
@@ -5760,7 +5760,7 @@ namespace Chummer
 									if (objChild.WeaponBonus["damagereplace"] != null)
 									{
 										blnDamageReplaced = true;
-										strReturn = objChild.WeaponBonus["damagereplace"].InnerText;
+										strDamage = objChild.WeaponBonus["damagereplace"].InnerText;
 									}
 								}
 								break;
@@ -5771,6 +5771,48 @@ namespace Chummer
 
 				if (!blnDamageReplaced)
 				{
+					xprDamage = nav.Compile(strDamage);
+					double dblDamage = 0;
+					dblDamage = Math.Ceiling(Convert.ToDouble(nav.Evaluate(xprDamage), GlobalOptions.Instance.CultureInfo) + intBonus);
+					if (_strName == "Unarmed Attack (Smashing Blow)")
+						dblDamage *= 2.0;
+					strReturn = dblDamage.ToString() + strDamageType + strDamageExtra;
+				}
+				else
+				{
+					// Place the Damage Type (P or S) into a string and remove it from the expression.
+					if (strDamage.Contains("P or S"))
+					{
+						strDamageType = "P or S";
+						strDamage = strDamage.Replace("P or S", string.Empty);
+					}
+					else
+					{
+						if (strDamage.Contains("P"))
+						{
+							strDamageType = "P";
+							strDamage = strDamage.Replace("P", string.Empty);
+						}
+						if (strDamage.Contains("S"))
+						{
+							strDamageType = "S";
+							strDamage = strDamage.Replace("S", string.Empty);
+						}
+					}
+					// Place any extra text like (e) and (f) in a string and remove it from the expression.
+					if (strDamage.Contains("(e)"))
+					{
+						strDamageExtra = "(e)";
+						strDamage = strDamage.Replace("(e)", string.Empty);
+					}
+					if (strDamage.Contains("(f)"))
+					{
+						strDamageExtra = "(f)";
+						strDamage = strDamage.Replace("(f)", string.Empty);
+					}
+					// Replace the division sign with "div" since we're using XPath.
+					strDamage = strDamage.Replace("/", " div ");
+
 					xprDamage = nav.Compile(strDamage);
 					double dblDamage = 0;
 					dblDamage = Math.Ceiling(Convert.ToDouble(nav.Evaluate(xprDamage), GlobalOptions.Instance.CultureInfo) + intBonus);
