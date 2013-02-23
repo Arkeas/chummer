@@ -618,6 +618,10 @@ namespace Chummer
 
 		private void treSourcebook_AfterSelect(object sender, TreeViewEventArgs e)
 		{
+			cmdPDFLocation.Enabled = true;
+			nudPDFOffset.Enabled = true;
+			cmdPDFTest.Enabled = true;
+
 			_blnSkipRefresh = true;
 			txtPDFLocation.Text = "";
 			nudPDFOffset.Value = 0;

@@ -101,6 +101,7 @@
 			this.tabGeneral = new System.Windows.Forms.TabPage();
 			this.tabControl2 = new System.Windows.Forms.TabControl();
 			this.tabGlobal = new System.Windows.Forms.TabPage();
+			this.cmdPDFTest = new System.Windows.Forms.Button();
 			this.nudPDFOffset = new System.Windows.Forms.NumericUpDown();
 			this.lblPDFOffset = new System.Windows.Forms.Label();
 			this.cmdPDFLocation = new System.Windows.Forms.Button();
@@ -270,7 +271,6 @@
 			this.lblSetting = new System.Windows.Forms.Label();
 			this.lblSettingName = new System.Windows.Forms.Label();
 			this.txtSettingName = new System.Windows.Forms.TextBox();
-			this.cmdPDFTest = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaComplexFormOption)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaMetamagic)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaInitiation)).BeginInit();
@@ -1080,8 +1080,22 @@
 			this.tabGlobal.Tag = "Tab_Options_Global";
 			this.tabGlobal.Text = "Global";
 			// 
+			// cmdPDFTest
+			// 
+			this.cmdPDFTest.AutoSize = true;
+			this.cmdPDFTest.Enabled = false;
+			this.cmdPDFTest.Location = new System.Drawing.Point(138, 340);
+			this.cmdPDFTest.Name = "cmdPDFTest";
+			this.cmdPDFTest.Size = new System.Drawing.Size(122, 23);
+			this.cmdPDFTest.TabIndex = 17;
+			this.cmdPDFTest.Tag = "Button_Options_PDFTest";
+			this.cmdPDFTest.Text = "Test - Open to Page 5";
+			this.cmdPDFTest.UseVisualStyleBackColor = true;
+			this.cmdPDFTest.Click += new System.EventHandler(this.cmdPDFTest_Click);
+			// 
 			// nudPDFOffset
 			// 
+			this.nudPDFOffset.Enabled = false;
 			this.nudPDFOffset.Location = new System.Drawing.Point(87, 343);
 			this.nudPDFOffset.Minimum = new decimal(new int[] {
             100,
@@ -1105,6 +1119,7 @@
 			// 
 			// cmdPDFLocation
 			// 
+			this.cmdPDFLocation.Enabled = false;
 			this.cmdPDFLocation.Location = new System.Drawing.Point(341, 308);
 			this.cmdPDFLocation.Name = "cmdPDFLocation";
 			this.cmdPDFLocation.Size = new System.Drawing.Size(27, 23);
@@ -2979,18 +2994,6 @@
 			this.txtSettingName.Name = "txtSettingName";
 			this.txtSettingName.Size = new System.Drawing.Size(190, 20);
 			this.txtSettingName.TabIndex = 3;
-			// 
-			// cmdPDFTest
-			// 
-			this.cmdPDFTest.AutoSize = true;
-			this.cmdPDFTest.Location = new System.Drawing.Point(138, 340);
-			this.cmdPDFTest.Name = "cmdPDFTest";
-			this.cmdPDFTest.Size = new System.Drawing.Size(122, 23);
-			this.cmdPDFTest.TabIndex = 17;
-			this.cmdPDFTest.Tag = "Button_Options_PDFTest";
-			this.cmdPDFTest.Text = "Test - Open to Page 5";
-			this.cmdPDFTest.UseVisualStyleBackColor = true;
-			this.cmdPDFTest.Click += new System.EventHandler(this.cmdPDFTest_Click);
 			// 
 			// frmOptions
 			// 
