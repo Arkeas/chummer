@@ -13971,167 +13971,28 @@ namespace Chummer
 					break;
 				case NuyenExpenseType.AddGear:
 					// Locate the Gear that was added.
-					foreach (Gear objGear in _objCharacter.Gear)
+					CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+					Gear objGear = objCommon.FindGear(objEntry.Undo.ObjectId, _objCharacter.Gear);
+					objGear.Quantity -= objEntry.Undo.Qty;
+
+					if (objGear.Quantity <= 0)
 					{
-						if (objGear.InternalId == objEntry.Undo.ObjectId)
-						{
-							// Deduct the Qty from the Gear.
-							objGear.Quantity -= objEntry.Undo.Qty;
-							foreach (TreeNode objNode in treGear.Nodes[0].Nodes)
-							{
-								if (objNode.Tag.ToString() == objEntry.Undo.ObjectId)
-								{
-									objNode.Text = objGear.DisplayName;
-									// Remove the Node if its Qty has been reduced to 0.
-									if (objGear.Quantity <= 0)
-										objNode.Remove();
-									break;
-								}
-							}
-
-							// Remove the Gear if its Qty has been reduced to 0.
-							if (objGear.Quantity <= 0)
-							{
-								// Remove any Improvements created by the Gear.
-								_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.Gear, objGear.InternalId);
-								_objCharacter.Gear.Remove(objGear);
-
-								// Remove any Weapons created by the Gear.
-								foreach (Weapon objWeapon in _objCharacter.Weapons)
-								{
-									if (objWeapon.InternalId == objGear.WeaponID)
-									{
-										_objCharacter.Weapons.Remove(objWeapon);
-										foreach (TreeNode objWeaponNode in treWeapons.Nodes[0].Nodes)
-										{
-											if (objWeaponNode.Tag.ToString() == objGear.WeaponID)
-											{
-												objWeaponNode.Remove();
-												break;
-											}
-										}
-										break;
-									}
-								}
-							}
-
-							break;
-						}
+						if (objGear.Parent != null)
+							objGear.Parent.Children.Remove(objGear);
 						else
-						{
-							// Look in child items.
-							foreach (Gear objChild in objGear.Children)
-							{
-								if (objChild.InternalId == objEntry.Undo.ObjectId)
-								{
-									// Deduct the Qty from the Gear.
-									objChild.Quantity -= objEntry.Undo.Qty;
-									foreach (TreeNode objNode in treGear.Nodes[0].Nodes)
-									{
-										foreach (TreeNode objChildNode in objNode.Nodes)
-										{
-											if (objChildNode.Tag.ToString() == objEntry.Undo.ObjectId)
-											{
-												objChildNode.Text = objChild.DisplayName;
-												// Remove the Node if its Qty has been reduced to 0.
-												if (objChild.Quantity <= 0)
-												{
-													objChildNode.Remove();
+							_objCharacter.Gear.Remove(objGear);
 
-													// Remove any Weapons created by the Gear.
-													foreach (Weapon objWeapon in _objCharacter.Weapons)
-													{
-														if (objWeapon.InternalId == objChild.WeaponID)
-														{
-															_objCharacter.Weapons.Remove(objWeapon);
-															foreach (TreeNode objWeaponNode in treWeapons.Nodes[0].Nodes)
-															{
-																if (objWeaponNode.Tag.ToString() == objChild.WeaponID)
-																{
-																	objWeaponNode.Remove();
-																	break;
-																}
-															}
-															break;
-														}
-													}
-												}
-												break;
-											}
-										}
-									}
-
-									// Remove the Gear if its Qty has been reduce to 0.
-									if (objChild.Quantity <= 0)
-									{
-										// Remove any Improvements created by the Gear.
-										_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.Gear, objChild.InternalId);
-										objGear.Children.Remove(objChild);
-									}
-
-									break;
-								}
-								else
-								{
-									foreach (Gear objSubChild in objChild.Children)
-									{
-										if (objSubChild.InternalId == objEntry.Undo.ObjectId)
-										{
-											// Deduct the Qty from the Gear.
-											objSubChild.Quantity -= objEntry.Undo.Qty;
-											foreach (TreeNode objNode in treGear.Nodes[0].Nodes)
-											{
-												foreach (TreeNode objChildNode in objNode.Nodes)
-												{
-													foreach (TreeNode objSubChildNode in objChildNode.Nodes)
-													{
-														if (objSubChildNode.Tag.ToString() == objEntry.Undo.ObjectId)
-														{
-															objSubChildNode.Text = objSubChild.DisplayName;
-															// Remove the Node if its Qty has been reduced to 0.
-															if (objSubChild.Quantity <= 0)
-															{
-																objSubChildNode.Remove();
-
-																// Remove any Weapons created by the Gear.
-																foreach (Weapon objWeapon in _objCharacter.Weapons)
-																{
-																	if (objWeapon.InternalId == objSubChild.WeaponID)
-																	{
-																		_objCharacter.Weapons.Remove(objWeapon);
-																		foreach (TreeNode objWeaponNode in treWeapons.Nodes[0].Nodes)
-																		{
-																			if (objWeaponNode.Tag.ToString() == objSubChild.WeaponID)
-																			{
-																				objWeaponNode.Remove();
-																				break;
-																			}
-																		}
-																		break;
-																	}
-																}
-															}
-															break;
-														}
-													}
-												}
-											}
-
-											// Remove the Gear if its Qty has been reduce to 0.
-											if (objSubChild.Quantity <= 0)
-											{
-												// Remove any Improvements created by the Gear.
-												_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.Gear, objSubChild.InternalId);
-												objChild.Children.Remove(objSubChild);
-											}
-
-											break;
-										}
-									}
-								}
-							}
-						}
+						objCommon.DeleteGear(objGear, treWeapons, _objImprovementManager);
+						TreeNode objNode = objCommon.FindNode(objGear.InternalId, treGear);
+						objNode.Remove();
 					}
+					else
+					{
+						TreeNode objNode = objCommon.FindNode(objGear.InternalId, treGear);
+						objNode.Text = objGear.DisplayName;
+					}
+
+					PopulateFocusList();
 					break;
 				case NuyenExpenseType.AddVehicle:
 					// Locate the Vehicle that was added.
@@ -14194,21 +14055,21 @@ namespace Chummer
 					// Locate the Gear that was added.
 					foreach (Vehicle objVehicle in _objCharacter.Vehicles)
 					{
-						foreach (Gear objGear in objVehicle.Gear)
+						foreach (Gear objVehicleGear in objVehicle.Gear)
 						{
-							if (objGear.InternalId == objEntry.Undo.ObjectId)
+							if (objVehicleGear.InternalId == objEntry.Undo.ObjectId)
 							{
 								// Deduct the Qty from the Gear.
-								objGear.Quantity -= objEntry.Undo.Qty;
+								objVehicleGear.Quantity -= objEntry.Undo.Qty;
 								foreach (TreeNode objVNode in treVehicles.Nodes[0].Nodes)
 								{
 									foreach (TreeNode objNode in objVNode.Nodes)
 									{
 										if (objNode.Tag.ToString() == objEntry.Undo.ObjectId)
 										{
-											objNode.Text = objGear.DisplayName;
+											objNode.Text = objVehicleGear.DisplayName;
 											// Remove the Node if its Qty has been reduced to 0.
-											if (objGear.Quantity <= 0)
+											if (objVehicleGear.Quantity <= 0)
 												objNode.Remove();
 											break;
 										}
@@ -14216,9 +14077,9 @@ namespace Chummer
 								}
 
 								// Remove the Gear if its Qty has been reduced to 0.
-								if (objGear.Quantity <= 0)
+								if (objVehicleGear.Quantity <= 0)
 								{
-									objVehicle.Gear.Remove(objGear);
+									objVehicle.Gear.Remove(objVehicleGear);
 								}
 
 								break;
@@ -14226,7 +14087,7 @@ namespace Chummer
 							else
 							{
 								// Look in child items.
-								foreach (Gear objChild in objGear.Children)
+								foreach (Gear objChild in objVehicleGear.Children)
 								{
 									if (objChild.InternalId == objEntry.Undo.ObjectId)
 									{
@@ -14255,7 +14116,7 @@ namespace Chummer
 										// Remove the Gear if its Qty has been reduce to 0.
 										if (objChild.Quantity <= 0)
 										{
-											objGear.Children.Remove(objChild);
+											objVehicleGear.Children.Remove(objChild);
 										}
 
 										break;
@@ -14704,21 +14565,21 @@ namespace Chummer
 					// Locate the Armor Gear that was added.
 					foreach (Armor objArmor in _objCharacter.Armor)
 					{
-						foreach (Gear objGear in objArmor.Gear)
+						foreach (Gear objArmorGear in objArmor.Gear)
 						{
-							if (objGear.InternalId == objEntry.Undo.ObjectId)
+							if (objArmorGear.InternalId == objEntry.Undo.ObjectId)
 							{
 								// Deduct the Qty from the Gear.
-								objGear.Quantity -= objEntry.Undo.Qty;
+								objArmorGear.Quantity -= objEntry.Undo.Qty;
 								foreach (TreeNode objArmorNode in treArmor.Nodes[0].Nodes)
 								{
 									foreach (TreeNode objNode in objArmorNode.Nodes)
 									{
 										if (objNode.Tag.ToString() == objEntry.Undo.ObjectId)
 										{
-											objNode.Text = objGear.DisplayName;
+											objNode.Text = objArmorGear.DisplayName;
 											// Remove the Node if its Qty has been reduced to 0.
-											if (objGear.Quantity <= 0)
+											if (objArmorGear.Quantity <= 0)
 												objNode.Remove();
 											break;
 										}
@@ -14726,21 +14587,21 @@ namespace Chummer
 								}
 
 								// Remove the Gear if its Qty has been reduced to 0.
-								if (objGear.Quantity <= 0)
+								if (objArmorGear.Quantity <= 0)
 								{
 									// Remove any Improvements created by the Gear.
-									_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.Gear, objGear.InternalId);
-									objArmor.Gear.Remove(objGear);
+									_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.Gear, objArmorGear.InternalId);
+									objArmor.Gear.Remove(objArmorGear);
 
 									// Remove any Weapons created by the Gear.
 									foreach (Weapon objWeapon in _objCharacter.Weapons)
 									{
-										if (objWeapon.InternalId == objGear.WeaponID)
+										if (objWeapon.InternalId == objArmorGear.WeaponID)
 										{
 											_objCharacter.Weapons.Remove(objWeapon);
 											foreach (TreeNode objWeaponNode in treWeapons.Nodes[0].Nodes)
 											{
-												if (objWeaponNode.Tag.ToString() == objGear.WeaponID)
+												if (objWeaponNode.Tag.ToString() == objArmorGear.WeaponID)
 												{
 													objWeaponNode.Remove();
 													break;
@@ -14756,7 +14617,7 @@ namespace Chummer
 							else
 							{
 								// Look in child items.
-								foreach (Gear objChild in objGear.Children)
+								foreach (Gear objChild in objArmorGear.Children)
 								{
 									if (objChild.InternalId == objEntry.Undo.ObjectId)
 									{
@@ -14805,7 +14666,7 @@ namespace Chummer
 										{
 											// Remove any Improvements created by the Gear.
 											_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.Gear, objChild.InternalId);
-											objGear.Children.Remove(objChild);
+											objArmorGear.Children.Remove(objChild);
 										}
 
 										break;
