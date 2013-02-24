@@ -1,6 +1,7 @@
 Build XXX
 - added support for linking to PDF files (see below)
 - fixed an issue where the More Lethal Gameplay optional rule was not applying its bonus to Weapons loaded with Ammo that replaces the Weapon's DV, such as Stick-N-Shock Ammo
+- fixed an issue where undoing a Karma Expense for a Focus would not remove the appropriate Focus from the list of Bondable Foci
 
 PDF Support
 PDF support has been tested with both Adobe Reader and Foxit Reader. Clicking on a sourcebook field (such as SR4 324) will open the linked PDF to the appropriate page. PDF links can be configured in the Options window. There are a few things to note with each application in terms of behaviour. With Adobe Reader, a new instance of the application is opened each time you click on a PDF link in Chummer. If you have the SR4 book open already then click on another SR4 link, a new copy of Adobe Reader is opened to the appropriate page, meaning you will have multiple copies of the SR4 book open at the same time. With Foxit Reader, if you already have the SR4 book open and click on an SR4 link, Foxit Reader will gain focus but will not jump to the appropriate page. Foxit Reader will only jump to the appropriate page if you do not already have a copy of that PDF open. Unfortunately these are not things I can control; they are how these reader applications have been setup to behave.
