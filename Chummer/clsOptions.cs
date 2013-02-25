@@ -88,6 +88,7 @@ namespace Chummer
 		private static bool _blnSingleDiceRoller = true;
 		private static string _strLanguage = "en-us";
 		private static string _strDefaultCharacterSheet = "Shadowrun 4";
+		private static bool _blnDatesIncludeTime = true;
 
 		// Omae Information.
 		private static string _strOmaeUserName = "";
@@ -114,6 +115,15 @@ namespace Chummer
 			try
 			{
 				_blnAutomaticUpdate = Convert.ToBoolean(Registry.CurrentUser.CreateSubKey("Software\\Chummer").GetValue("autoupdate").ToString());
+			}
+			catch
+			{
+			}
+			
+			// Whether or not dates should include the time.
+			try
+			{
+				_blnDatesIncludeTime = Convert.ToBoolean(Registry.CurrentUser.CreateSubKey("Software\\Chummer").GetValue("datesincludetime").ToString());
 			}
 			catch
 			{
@@ -232,6 +242,21 @@ namespace Chummer
 			set
 			{
 				_blnAutomaticUpdate = value;
+			}
+		}
+
+		/// <summary>
+		/// Whether or not dates should include the time.
+		/// </summary>
+		public bool DatesIncludeTime
+		{
+			get
+			{
+				return _blnDatesIncludeTime;
+			}
+			set
+			{
+				_blnDatesIncludeTime = value;
 			}
 		}
 

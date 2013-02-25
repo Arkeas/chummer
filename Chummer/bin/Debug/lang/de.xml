@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-948</version>
+	<version>-946</version>
 	<name>Deutsch (DE)</name>
 	<strings>
 		<string>
@@ -6530,6 +6530,36 @@
 		<string>
 			<key>Label_Options_EssenceDecimals</key>
 			<text>Nach wievielen Stellen hinter dem Komma soll für die Essenz-Berechnung gerundet werden?</text>
+		</string>
+		<!-- Version 445 -->
+		<string>
+			<key>String_Break</key>
+			<text>Gruppe auftrennen</text>
+		</string>
+		<string>
+			<key>Label_Options_DefaultCharacterSheet</key>
+			<text>Standart Charakaterbogen:</text>
+		</string>
+		<string>
+			<key>Menu_Main_DumpshockThread</key>
+			<text>&amp;Zum offiziellem Forum</text>
+		</string>
+		<!-- Version 449 -->
+		<string>
+			<key>Button_Options_RestoreDefaults</key>
+			<text>Auf Standard zurücksetzen</text>
+		</string>
+		<string>
+			<key>Message_Options_RestoreDefaults</key>
+			<text>Wollen Sie den Inhalt dieses Reiters wirklich auf die Standartwerte zurück setzen?</text>
+		</string>
+		<string>
+			<key>MessageTitle_Options_RestoreDefaults</key>
+			<text>Auf Standard zurücksetzen</text>
+		</string>
+		<string>
+			<key>Message_Update_MultipleInstances</key>
+			<text>Chummer kann ein vorhandenes Update nicht einspielen während mehrere Instanzen des Programmes laufen. Bitte schließen sie die anderen Instanzen und führen sie das Update noch einmal aus.</text>
 		</string>
 	</strings>
 </chummer>

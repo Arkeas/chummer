@@ -25465,7 +25465,7 @@ namespace Chummer
 			foreach (ExpenseLogEntry objExpense in _objCharacter.ExpenseEntries)
 			{
 				ListViewItem objItem = new ListViewItem();
-				objItem.Text = objExpense.Date.ToString();
+				objItem.Text = objExpense.Date.ToShortDateString() + " " + objExpense.Date.ToShortTimeString();
 				ListViewItem.ListViewSubItem objAmountItem = new ListViewItem.ListViewSubItem();
 				objAmountItem.Text = objExpense.Amount.ToString();
 				ListViewItem.ListViewSubItem objReasonItem = new ListViewItem.ListViewSubItem();
