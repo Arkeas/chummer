@@ -17,6 +17,8 @@ namespace Chummer
 			// Determine the DateTime format and use that to display the date field (removing seconds since they're not important).
 			DateTimeFormatInfo objDateTimeInfo = CultureInfo.CurrentCulture.DateTimeFormat;
 			string strDatePattern = objDateTimeInfo.FullDateTimePattern.Replace(":ss", string.Empty);
+			if (!GlobalOptions.Instance.DatesIncludeTime)
+				strDatePattern = objDateTimeInfo.LongDatePattern;
 			datDate.CustomFormat = strDatePattern;
 
 			datDate.Value = DateTime.Now;

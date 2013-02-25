@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-912</version>
+	<version>-911</version>
 	<name>English (US)</name>
 	<strings>
 		<!-- Common Strings -->
@@ -5329,6 +5329,10 @@ Only one attribute may be at its Maximum value during character creation.</text>
 			<text>Use a single instance of the Dice Roller window</text>
 		</string>
 		<string>
+			<key>Checkbox_Options_DatesIncludeTime</key>
+			<text>Expense dates should include time</text>
+		</string>
+		<string>
 			<key>Checkbox_Options_MultiplyRestrictedCost</key>
 			<text>Multiply the cost of Restricted items by</text>
 		</string>
@@ -5415,6 +5419,22 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		<string>
 			<key>MessageTitle_Options_RestoreDefaults</key>
 			<text>Restore Defaults</text>
+		</string>
+		<string>
+			<key>Label_Options_PDFApplicationPath</key>
+			<text>Location of PDF application:</text>
+		</string>
+		<string>
+			<key>Label_Options_PDFLocation</key>
+			<text>PDF Location:</text>
+		</string>
+		<string>
+			<key>Label_Options_PDFOffset</key>
+			<text>Page Offset:</text>
+		</string>
+		<string>
+			<key>Button_Options_PDFTest</key>
+			<text>Test - Open to Page 5</text>
 		</string>
 		<!-- Print Multiple Window -->
 		<string>

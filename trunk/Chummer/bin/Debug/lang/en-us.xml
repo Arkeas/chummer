@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-912</version>
+	<version>-911</version>
 	<name>English (US)</name>
 	<strings>
 		<!-- Common Strings -->
@@ -5327,6 +5327,10 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		<string>
 			<key>Checkbox_Options_SingleDiceRoller</key>
 			<text>Use a single instance of the Dice Roller window</text>
+		</string>
+		<string>
+			<key>Checkbox_Options_DatesIncludeTime</key>
+			<text>Expense dates should include time</text>
 		</string>
 		<string>
 			<key>Checkbox_Options_MultiplyRestrictedCost</key>

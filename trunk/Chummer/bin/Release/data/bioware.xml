@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-907</version>
+	<version>-906</version>
 	<grades>
 		<grade>
 			<name>Standard</name>
@@ -1587,6 +1587,10 @@
 			<avail>16F</avail>
 			<cost>1000</cost>
 			<bonus>
+				<skillcategory>
+					<name>Combat Active</name>
+					<bonus>1</bonus>
+				</skillcategory>
 				<specificskill>
 					<name>Perception</name>
 					<bonus>1</bonus>

@@ -271,6 +271,7 @@
 			this.lblSetting = new System.Windows.Forms.Label();
 			this.lblSettingName = new System.Windows.Forms.Label();
 			this.txtSettingName = new System.Windows.Forms.TextBox();
+			this.chkDatesIncludeTime = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaComplexFormOption)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaMetamagic)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaInitiation)).BeginInit();
@@ -1054,6 +1055,7 @@
 			// tabGlobal
 			// 
 			this.tabGlobal.BackColor = System.Drawing.SystemColors.Control;
+			this.tabGlobal.Controls.Add(this.chkDatesIncludeTime);
 			this.tabGlobal.Controls.Add(this.cmdPDFTest);
 			this.tabGlobal.Controls.Add(this.nudPDFOffset);
 			this.tabGlobal.Controls.Add(this.lblPDFOffset);
@@ -2995,6 +2997,17 @@
 			this.txtSettingName.Size = new System.Drawing.Size(190, 20);
 			this.txtSettingName.TabIndex = 3;
 			// 
+			// chkDatesIncludeTime
+			// 
+			this.chkDatesIncludeTime.AutoSize = true;
+			this.chkDatesIncludeTime.Location = new System.Drawing.Point(9, 176);
+			this.chkDatesIncludeTime.Name = "chkDatesIncludeTime";
+			this.chkDatesIncludeTime.Size = new System.Drawing.Size(189, 17);
+			this.chkDatesIncludeTime.TabIndex = 18;
+			this.chkDatesIncludeTime.Tag = "Checkbox_Options_DatesIncludeTime";
+			this.chkDatesIncludeTime.Text = "Expense dates should include time";
+			this.chkDatesIncludeTime.UseVisualStyleBackColor = true;
+			// 
 			// frmOptions
 			// 
 			this.AcceptButton = this.cmdOK;
@@ -3346,5 +3359,6 @@
 		private System.Windows.Forms.TextBox txtPDFLocation;
 		private System.Windows.Forms.Label lblPDFLocation;
 		private System.Windows.Forms.Button cmdPDFTest;
+		private System.Windows.Forms.CheckBox chkDatesIncludeTime;
 	}
 }

@@ -139,6 +139,16 @@ namespace Chummer
 			}
 			chkSingleDiceRoller.Checked = blnSingleDiceRoller;
 
+			bool blnDatesIncludeTime = true;
+			try
+			{
+				blnDatesIncludeTime = GlobalOptions.Instance.DatesIncludeTime;
+			}
+			catch
+			{
+			}
+			chkDatesIncludeTime.Checked = blnDatesIncludeTime;
+
 			txtPDFAppPath.Text = GlobalOptions.Instance.PDFAppPath;
 
 			// Populate the Language List.
@@ -1584,6 +1594,7 @@ namespace Chummer
 			GlobalOptions.Instance.StartupFullscreen = chkStartupFullscreen.Checked;
 			GlobalOptions.Instance.SingleDiceRoller = chkSingleDiceRoller.Checked;
 			GlobalOptions.Instance.DefaultCharacterSheet = cboXSLT.SelectedValue.ToString();
+			GlobalOptions.Instance.DatesIncludeTime = chkDatesIncludeTime.Checked;
 			GlobalOptions.Instance.PDFAppPath = txtPDFAppPath.Text;
 			RegistryKey objRegistry = Registry.CurrentUser.CreateSubKey("Software\\Chummer");
 			objRegistry.SetValue("autoupdate", chkAutomaticUpdate.Checked.ToString());

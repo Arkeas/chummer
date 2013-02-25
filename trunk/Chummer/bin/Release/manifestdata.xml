@@ -3,7 +3,7 @@
 	<file>
 		<name>chummer.exe</name>
 		<type>Application</type>
-		<version>0.0.0.449</version>
+		<version>0.0.0.453</version>
 		<description>Chummer</description>
 		<notes>- Chummer Application</notes>
 	</file>
@@ -164,7 +164,7 @@
 	<file>
 		<name>data/bioware.xml</name>
 		<type>Data Files</type>
-		<version>-907</version>
+		<version>-906</version>
 		<description>Bioware</description>
 		<notes>- Bioware data file</notes>
 	</file>
