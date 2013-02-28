@@ -3,7 +3,7 @@
 	<file>
 		<name>chummer.exe</name>
 		<type>Application</type>
-		<version>0.0.0.455</version>
+		<version>0.0.0.456</version>
 		<description>Chummer</description>
 		<notes>- Chummer Application</notes>
 	</file>
@@ -269,7 +269,7 @@
 	<file>
 		<name>data/powers.xml</name>
 		<type>Data Files</type>
-		<version>-902</version>
+		<version>-901</version>
 		<description>Powers</description>
 		<notes>- Powers data file</notes>
 	</file>
@@ -339,7 +339,7 @@
 	<file>
 		<name>data/weapons.xml</name>
 		<type>Data Files</type>
-		<version>-855</version>
+		<version>-854</version>
 		<description>Weapons</description>
 		<notes>- Weapons data file</notes>
 	</file>

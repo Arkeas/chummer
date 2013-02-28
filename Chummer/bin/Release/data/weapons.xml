@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-855</version>
+	<version>-854</version>
 	<categories>
 		<category>Blades</category>
 		<category>Clubs</category>
@@ -9956,6 +9956,7 @@
 			<mode>SA/BF</mode>
 			<rc>0</rc>
 			<ammo>30(c)</ammo>
+			<ammocategory>Assault Rifles</ammocategory>
 			<conceal>4</conceal>
 			<avail>5R</avail>
 			<cost>625</cost>
@@ -9983,6 +9984,7 @@
 			<mode>SA/BF</mode>
 			<rc>0</rc>
 			<ammo>30(c)</ammo>
+			<ammocategory>Assault Rifles</ammocategory>
 			<conceal>4</conceal>
 			<avail>5R</avail>
 			<cost>3850</cost>
