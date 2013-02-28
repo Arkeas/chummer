@@ -12,5 +12,14 @@
 			<source>10M</source>
 			<page>8</page>
 		</gear>
+		<gear>
+			<name>Task Force Magus Mobile Lodge</name>
+			<category>Magical Supplies</category>
+			<rating>0</rating>
+			<avail>0</avail>
+			<cost>50000</cost>
+			<source>10M</source>
+			<page>41</page>
+		</gear>
 	</gears>
 </chummer>

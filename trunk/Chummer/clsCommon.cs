@@ -706,12 +706,17 @@ namespace Chummer
 		/// <param name="treTree">TreeView to search.</param>
 		public TreeNode FindNode(string strGuid, TreeView treTree)
 		{
+			TreeNode objFound = new TreeNode();
 			foreach (TreeNode objNode in treTree.Nodes)
 			{
 				if (objNode.Tag.ToString() == strGuid)
 					return objNode;
 				else
-					return FindNode(strGuid, objNode);
+				{
+					objFound = FindNode(strGuid, objNode);
+					if (objFound != null)
+						return objFound;
+				}
 			}
 			return null;
 		}

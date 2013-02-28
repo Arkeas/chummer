@@ -15568,6 +15568,7 @@ namespace Chummer
 						if (_objOptions.BreakSkillGroupsInCreateMode)
 						{
 							int intMin = 999;
+							bool blnApplyModifier = false;
 
 							// Find the matching Skill Group.
 							foreach (SkillGroup objGroup in _objCharacter.SkillGroups)
@@ -15580,15 +15581,21 @@ namespace Chummer
 										if (objSkill.SkillGroup == objGroup.Name)
 										{
 											if (objSkill.Rating < intMin)
+											{
 												intMin = objSkill.Rating;
+												blnApplyModifier = true;
+											}
 										}
 									}
 									break;
 								}
 							}
 
-							intPointsRemain += intMin * _objOptions.BPActiveSkill;
-							intPointsUsed -= intMin * _objOptions.BPActiveSkill;
+							if (blnApplyModifier)
+							{
+								intPointsRemain += intMin * _objOptions.BPActiveSkill;
+								intPointsUsed -= intMin * _objOptions.BPActiveSkill;
+							}
 						}
 					}
 					else
@@ -15635,6 +15642,7 @@ namespace Chummer
 						if (_objOptions.BreakSkillGroupsInCreateMode)
 						{
 							int intMin = 999;
+							bool blnApplyModifier = false;
 
 							// Find the matching Skill Group.
 							foreach (SkillGroup objGroup in _objCharacter.SkillGroups)
@@ -15647,25 +15655,31 @@ namespace Chummer
 										if (objSkill.SkillGroup == objGroup.Name)
 										{
 											if (objSkill.Rating < intMin)
+											{
 												intMin = objSkill.Rating;
+												blnApplyModifier = true;
+											}
 										}
 									}
 									break;
 								}
 							}
 
-							// Refund the first X points of Karma cost for the Skill.
-							if (intMin >= 1)
+							if (blnApplyModifier)
 							{
-								intPointsRemain += _objOptions.KarmaNewActiveSkill;
-								intPointsUsed -= _objOptions.KarmaNewActiveSkill;
-							}
-							if (intMin > 1)
-							{
-								for (int i = 2; i <= intMin; i++)
+								// Refund the first X points of Karma cost for the Skill.
+								if (intMin >= 1)
 								{
-									intPointsRemain += i * _objOptions.KarmaImproveActiveSkill;
-									intPointsUsed -= i * _objOptions.KarmaImproveActiveSkill;
+									intPointsRemain += _objOptions.KarmaNewActiveSkill;
+									intPointsUsed -= _objOptions.KarmaNewActiveSkill;
+								}
+								if (intMin > 1)
+								{
+									for (int i = 2; i <= intMin; i++)
+									{
+										intPointsRemain += i * _objOptions.KarmaImproveActiveSkill;
+										intPointsUsed -= i * _objOptions.KarmaImproveActiveSkill;
+									}
 								}
 							}
 						}

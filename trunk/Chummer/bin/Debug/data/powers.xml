@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-902</version>
+	<version>-901</version>
 	<powers>
 		<power>
 			<name>Analytics</name>
@@ -96,7 +96,6 @@
 			<required>
 				<oneof>
 					<quality>The Speaker's Way</quality>
-					<quality>The Totem's Way</quality>
 				</oneof>
 			</required>
 			<source>WA</source>

@@ -31,5 +31,23 @@
 			<source>10M</source>
 			<page>22</page>
 		</weapon>
+		<weapon>
+			<name>Blacktooth Dagger</name>
+			<category>Blades</category>
+			<type>Melee</type>
+			<spec>Knives</spec>
+			<reach>0</reach>
+			<damage>(STR/2+4)P</damage>
+			<ap>1</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>2</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>10M</source>
+			<page>35</page>
+		</weapon>
 	</weapons>
 </chummer>

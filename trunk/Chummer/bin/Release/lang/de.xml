@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-946</version>
+	<version>-945</version>
 	<name>Deutsch (DE)</name>
 	<strings>
 		<string>
@@ -6560,6 +6560,37 @@
 		<string>
 			<key>Message_Update_MultipleInstances</key>
 			<text>Chummer kann ein vorhandenes Update nicht einspielen während mehrere Instanzen des Programmes laufen. Bitte schließen sie die anderen Instanzen und führen sie das Update noch einmal aus.</text>
+		</string>
+		<!-- Version 453 -->
+		<string>
+			<key>Label_Options_PDFApplicationPath</key>
+			<text>Pfad zur PDF-Betrachter:</text>
+		</string>
+		<string>
+			<key>Label_Options_PDFLocation</key>
+			<text>Pfad zur PDF-Datei:</text>
+		</string>
+		<string>
+			<key>Label_Options_PDFOffset</key>
+			<text>Seitenanzahl:</text>
+		</string>
+		<string>
+			<key>Button_Options_PDFTest</key>
+			<text>Test - Seite 5 öffnen</text>
+			<!--Denke wird nicht verwendet. Debug Button? -->
+		</string>
+		<string>
+			<key>Checkbox_Options_DatesIncludeTime</key>
+			<text>Unkosten mit Zeitangabe anzeigen.</text>
+		</string>
+		<!-- Version 455 -->
+		<string>
+			<key>Checkbox_Options_BreakSkillGroupsInCreateMode</key>
+			<text>Erlauben während der Charakter-Erstellung Skillgruppen aufzutrennen</text>
+		</string>
+		<string>
+			<key>String_ExpensePurchaseCyberwareSuite</key>
+			<text>Cyberware-Set erwerben</text>
 		</string>
 	</strings>
 </chummer>

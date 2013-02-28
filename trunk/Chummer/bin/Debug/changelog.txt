@@ -1,3 +1,7 @@
+Build 456
+- fixed an issue where adjusting individual Skill Ratings with the Allow Skill Groups to be broken during character creation rule turned on would calculate the BP cost incorrectly
+- fixed an issue where attempting to undo an Expense for a piece of Gear that has been moved to the non-default Location would throw an error
+
 Build 455
 - fixed an issue where the Select Weapon Accessory window would display items from all sourcebooks instead of only the ones selected in the Options window
 - added an optional rule to enable the breaking of Skill Groups while in Create Mode
