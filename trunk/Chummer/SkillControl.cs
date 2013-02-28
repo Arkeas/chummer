@@ -225,6 +225,11 @@ namespace Chummer
 		{
 			DiceRollerClicked(this);
 		}
+
+		private void cmdBreakGroup_Click(object sender, EventArgs e)
+		{
+			BreakGroupClicked(this);
+		}
 		#endregion
 
 		#region Properties
@@ -461,7 +466,7 @@ namespace Chummer
 
 				// If we're in Create Mode, show the Break Group button if the Skill is Grouped.
 				if (!_objSkill.CharacterObject.Created && _objSkill.IsGrouped)
-					cmdBreakGroup.Visible = false;
+					cmdBreakGroup.Visible = _objSkill.CharacterObject.Options.BreakSkillGroupsInCreateMode;
 				else
 					cmdBreakGroup.Visible = false;
 			}
@@ -733,10 +738,5 @@ namespace Chummer
 			}
 		}
 		#endregion
-
-		private void cmdBreakGroup_Click(object sender, EventArgs e)
-		{
-			BreakGroupClicked(this);
-		}
     }
 }

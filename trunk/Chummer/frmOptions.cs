@@ -327,6 +327,7 @@ namespace Chummer
 			_objOptions.AlternateMatrixAttribute = chkAlternateMatrixAttribute.Checked;
 			_objOptions.AlternateComplexFormCost = chkAlternateComplexFormCost.Checked;
 			_objOptions.AllowCustomTransgenics = chkAllowCustomTransgenics.Checked;
+			_objOptions.BreakSkillGroupsInCreateMode = chkBreakSkillGroupsInCreateMode.Checked;
 			_objOptions.RestrictRecoil = chkRestrictRecoil.Checked;
 			_objOptions.MultiplyRestrictedCost = chkMultiplyRestrictedCost.Checked;
 			_objOptions.MultiplyForbiddenCost = chkMultiplyForbiddenCost.Checked;
@@ -1272,6 +1273,16 @@ namespace Chummer
 			{
 			}
 			chkAllowCustomTransgenics.Checked = blnAllowCustomTransgenics;
+
+			bool blnBreakSkillGroupsInCreateMode = false;
+			try
+			{
+				blnBreakSkillGroupsInCreateMode = _objOptions.BreakSkillGroupsInCreateMode;
+			}
+			catch
+			{
+			}
+			chkBreakSkillGroupsInCreateMode.Checked = blnBreakSkillGroupsInCreateMode;
 
 			bool blnRestrictRecoil = true;
 			try

@@ -1,3 +1,15 @@
+Build 455
+- fixed an issue where the Select Weapon Accessory window would display items from all sourcebooks instead of only the ones selected in the Options window
+- added an optional rule to enable the breaking of Skill Groups while in Create Mode
+- added support for purchasing Cyberware Suites in Career Mode (see below)
+
+Cyberware Suites in Career Mode
+Cyberware Suites can now be purchased for a character while in Career Mode. However, please note that it is not possible to undo the Nuyen Expense for the Cyberware Suite as it is a collection of multiple pieces of Cyberware. If you're uncertain about a Cyberware Suite, please save your character before adding one to them in Career Mode.
+
+New Strings
+- Checkbox_Options_BreakSkillGroupsInCreateMode
+- String_ExpensePurchaseCyberwareSuite
+
 Build 453
 - added support for linking to PDF files (see below)
 - fixed an issue where the More Lethal Gameplay optional rule was not applying its bonus to Weapons loaded with Ammo that replaces the Weapon's DV, such as Stick-N-Shock Ammo

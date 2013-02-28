@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-878</version>
+	<version>-877</version>
 	<categories>
 		<category>Positive</category>
 		<category>Negative</category>
@@ -10454,6 +10454,7 @@
 			<name>Street Ninja</name>
 			<bp>10</bp>
 			<category>Positive</category>
+			<limit>no</limit>
 			<bonus />
 			<required>
 				<allof>

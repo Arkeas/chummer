@@ -3,7 +3,7 @@
 	<file>
 		<name>chummer.exe</name>
 		<type>Application</type>
-		<version>0.0.0.453</version>
+		<version>0.0.0.455</version>
 		<description>Chummer</description>
 		<notes>- Chummer Application</notes>
 	</file>
@@ -269,7 +269,7 @@
 	<file>
 		<name>data/powers.xml</name>
 		<type>Data Files</type>
-		<version>-903</version>
+		<version>-902</version>
 		<description>Powers</description>
 		<notes>- Powers data file</notes>
 	</file>
@@ -283,7 +283,7 @@
 	<file>
 		<name>data/qualities.xml</name>
 		<type>Data Files</type>
-		<version>-878</version>
+		<version>-877</version>
 		<description>Qualities</description>
 		<notes>- Qualities data file</notes>
 	</file>

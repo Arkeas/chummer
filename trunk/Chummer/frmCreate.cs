@@ -4637,7 +4637,7 @@ namespace Chummer
 				string strGroup = objSkillControl.SkillGroup;
 				foreach (SkillControl objActiveSkilll in panActiveSkills.Controls)
 				{
-					if (objActiveSkilll.IsGrouped && objActiveSkilll.SkillGroup == strGroup)
+					if (objActiveSkilll.SkillGroup == strGroup)
 					{
 						objActiveSkilll.IsGrouped = false;
 						objActiveSkilll.SkillRating = intRating;
@@ -15496,6 +15496,36 @@ namespace Chummer
 						}
 					}
 				}
+
+				// If the Skill Group has been broken, get the Rating value for the lowest Skill in the Group.
+				if (objGroupControl.Broken && _objOptions.BreakSkillGroupsInCreateMode)
+				{
+					int intMin = 999;
+					foreach (Skill objSkill in _objCharacter.Skills)
+					{
+						if (objSkill.SkillGroup == objGroupControl.GroupName)
+						{
+							if (objSkill.Rating < intMin)
+								intMin = objSkill.Rating;
+						}
+					}
+
+					if (_objCharacter.BuildMethod == CharacterBuildMethod.BP)
+					{
+						intPointsRemain -= intMin * _objOptions.BPSkillGroup;
+						intPointsUsed += intMin * _objOptions.BPSkillGroup;
+					}
+					else
+					{
+						intPointsRemain -= _objOptions.KarmaNewSkillGroup;
+						intPointsUsed += _objOptions.KarmaNewSkillGroup;
+						for (int i = 2; i <= intMin; i++)
+						{
+							intPointsRemain -= i * _objOptions.KarmaImproveSkillGroup;
+							intPointsUsed += i * _objOptions.KarmaImproveSkillGroup;
+						}
+					}
+				}
 			}
 			lblSkillGroupsBP.Text = String.Format("{0} " + strPoints, intPointsUsed.ToString());
 			intFreestyleBP += intPointsUsed;
@@ -15508,6 +15538,8 @@ namespace Chummer
 				{
 					if (_objCharacter.BuildMethod == CharacterBuildMethod.BP)
 					{
+						int intSkillRating = objSkillControl.SkillRating;
+
 						// Each Skill Rating costs 4 BP (only look at Skills that are not part of a Skill Group). (doubled if Uneducated and Technical Active, Uncouth and Social Active, or Inform and Physical Active)
 						if ((_objCharacter.Uneducated && objSkillControl.SkillCategory == "Technical Active") || (_objCharacter.Uncouth && objSkillControl.SkillCategory == "Social Active") || (_objCharacter.Infirm && objSkillControl.SkillCategory == "Physical Active"))
 						{
@@ -15530,6 +15562,33 @@ namespace Chummer
 								intPointsRemain -= (objSkillControl.SkillRating - 6) * _objOptions.BPActiveSkill;
 								intPointsUsed += (objSkillControl.SkillRating - 6) * _objOptions.BPActiveSkill;
 							}
+						}
+
+						// If the ability to break Skill Groups is enabled, refund the cost of the first X points of the Skill, where X is the minimum Rating for all Skill that used to a part of the Group.
+						if (_objOptions.BreakSkillGroupsInCreateMode)
+						{
+							int intMin = 999;
+
+							// Find the matching Skill Group.
+							foreach (SkillGroup objGroup in _objCharacter.SkillGroups)
+							{
+								if (objGroup.Broken && objGroup.Name == objSkillControl.SkillGroup)
+								{
+									// Determine the lowest Rating amongst the Skills in the Groups.
+									foreach (Skill objSkill in _objCharacter.Skills)
+									{
+										if (objSkill.SkillGroup == objGroup.Name)
+										{
+											if (objSkill.Rating < intMin)
+												intMin = objSkill.Rating;
+										}
+									}
+									break;
+								}
+							}
+
+							intPointsRemain += intMin * _objOptions.BPActiveSkill;
+							intPointsUsed -= intMin * _objOptions.BPActiveSkill;
 						}
 					}
 					else
@@ -15568,6 +15627,45 @@ namespace Chummer
 								{
 									intPointsRemain -= i * _objOptions.KarmaImproveActiveSkill;
 									intPointsUsed += i * _objOptions.KarmaImproveActiveSkill;
+								}
+							}
+						}
+
+						// If the ability to break Skill Groups is enabled, refund the cost of the first X points of the Skill, where X is the minimum Rating for all Skill that used to a part of the Group.
+						if (_objOptions.BreakSkillGroupsInCreateMode)
+						{
+							int intMin = 999;
+
+							// Find the matching Skill Group.
+							foreach (SkillGroup objGroup in _objCharacter.SkillGroups)
+							{
+								if (objGroup.Broken && objGroup.Name == objSkillControl.SkillGroup)
+								{
+									// Determine the lowest Rating amongst the Skills in the Groups.
+									foreach (Skill objSkill in _objCharacter.Skills)
+									{
+										if (objSkill.SkillGroup == objGroup.Name)
+										{
+											if (objSkill.Rating < intMin)
+												intMin = objSkill.Rating;
+										}
+									}
+									break;
+								}
+							}
+
+							// Refund the first X points of Karma cost for the Skill.
+							if (intMin >= 1)
+							{
+								intPointsRemain += _objOptions.KarmaNewActiveSkill;
+								intPointsUsed -= _objOptions.KarmaNewActiveSkill;
+							}
+							if (intMin > 1)
+							{
+								for (int i = 2; i <= intMin; i++)
+								{
+									intPointsRemain += i * _objOptions.KarmaImproveActiveSkill;
+									intPointsUsed -= i * _objOptions.KarmaImproveActiveSkill;
 								}
 							}
 						}

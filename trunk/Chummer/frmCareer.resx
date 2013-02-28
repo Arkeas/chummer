@@ -141,15 +141,6 @@
   <data name="lblCMBallisticArmorLabel.ToolTip" xml:space="preserve">
     <value>Only the highest single Ballistic value is used to determine your Armor Rating. If the total Ballistic value for all pieces worn exceeds BOD x 2, you receive a -1 penalty to AGI for every 2 points you are over.</value>
   </data>
-  <metadata name="cmsVehicle.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1237, 17</value>
-  </metadata>
-  <metadata name="cmdVehicleAmmoExpense.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="cmsDeleteVehicle.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>906, 56</value>
-  </metadata>
   <metadata name="cmsMartialArts.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1455, 56</value>
   </metadata>
@@ -188,6 +179,15 @@
   </metadata>
   <metadata name="cmsDeleteGear.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>772, 56</value>
+  </metadata>
+  <metadata name="cmsVehicle.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1237, 17</value>
+  </metadata>
+  <metadata name="cmdVehicleAmmoExpense.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmsDeleteVehicle.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>906, 56</value>
   </metadata>
   <metadata name="mnuCreateMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>539, 17</value>

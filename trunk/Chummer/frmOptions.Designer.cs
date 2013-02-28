@@ -101,6 +101,7 @@
 			this.tabGeneral = new System.Windows.Forms.TabPage();
 			this.tabControl2 = new System.Windows.Forms.TabControl();
 			this.tabGlobal = new System.Windows.Forms.TabPage();
+			this.chkDatesIncludeTime = new System.Windows.Forms.CheckBox();
 			this.cmdPDFTest = new System.Windows.Forms.Button();
 			this.nudPDFOffset = new System.Windows.Forms.NumericUpDown();
 			this.lblPDFOffset = new System.Windows.Forms.Label();
@@ -271,7 +272,7 @@
 			this.lblSetting = new System.Windows.Forms.Label();
 			this.lblSettingName = new System.Windows.Forms.Label();
 			this.txtSettingName = new System.Windows.Forms.TextBox();
-			this.chkDatesIncludeTime = new System.Windows.Forms.CheckBox();
+			this.chkBreakSkillGroupsInCreateMode = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaComplexFormOption)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaMetamagic)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaInitiation)).BeginInit();
@@ -1081,6 +1082,17 @@
 			this.tabGlobal.TabIndex = 0;
 			this.tabGlobal.Tag = "Tab_Options_Global";
 			this.tabGlobal.Text = "Global";
+			// 
+			// chkDatesIncludeTime
+			// 
+			this.chkDatesIncludeTime.AutoSize = true;
+			this.chkDatesIncludeTime.Location = new System.Drawing.Point(9, 176);
+			this.chkDatesIncludeTime.Name = "chkDatesIncludeTime";
+			this.chkDatesIncludeTime.Size = new System.Drawing.Size(189, 17);
+			this.chkDatesIncludeTime.TabIndex = 18;
+			this.chkDatesIncludeTime.Tag = "Checkbox_Options_DatesIncludeTime";
+			this.chkDatesIncludeTime.Text = "Expense dates should include time";
+			this.chkDatesIncludeTime.UseVisualStyleBackColor = true;
 			// 
 			// cmdPDFTest
 			// 
@@ -2457,6 +2469,7 @@
 			// tabOptionalRules
 			// 
 			this.tabOptionalRules.BackColor = System.Drawing.SystemColors.Control;
+			this.tabOptionalRules.Controls.Add(this.chkBreakSkillGroupsInCreateMode);
 			this.tabOptionalRules.Controls.Add(this.chkAlternateMatrixAttribute);
 			this.tabOptionalRules.Controls.Add(this.chkAllowCustomTransgenics);
 			this.tabOptionalRules.Controls.Add(this.chkAlternateComplexFormCost);
@@ -2997,16 +3010,16 @@
 			this.txtSettingName.Size = new System.Drawing.Size(190, 20);
 			this.txtSettingName.TabIndex = 3;
 			// 
-			// chkDatesIncludeTime
+			// chkBreakSkillGroupsInCreateMode
 			// 
-			this.chkDatesIncludeTime.AutoSize = true;
-			this.chkDatesIncludeTime.Location = new System.Drawing.Point(9, 176);
-			this.chkDatesIncludeTime.Name = "chkDatesIncludeTime";
-			this.chkDatesIncludeTime.Size = new System.Drawing.Size(189, 17);
-			this.chkDatesIncludeTime.TabIndex = 18;
-			this.chkDatesIncludeTime.Tag = "Checkbox_Options_DatesIncludeTime";
-			this.chkDatesIncludeTime.Text = "Expense dates should include time";
-			this.chkDatesIncludeTime.UseVisualStyleBackColor = true;
+			this.chkBreakSkillGroupsInCreateMode.AutoSize = true;
+			this.chkBreakSkillGroupsInCreateMode.Location = new System.Drawing.Point(8, 305);
+			this.chkBreakSkillGroupsInCreateMode.Name = "chkBreakSkillGroupsInCreateMode";
+			this.chkBreakSkillGroupsInCreateMode.Size = new System.Drawing.Size(339, 17);
+			this.chkBreakSkillGroupsInCreateMode.TabIndex = 29;
+			this.chkBreakSkillGroupsInCreateMode.Tag = "Checkbox_Options_BreakSkillGroupsInCreateMode";
+			this.chkBreakSkillGroupsInCreateMode.Text = "Allow Skill Groups to be broken during character creation (SR4 68)";
+			this.chkBreakSkillGroupsInCreateMode.UseVisualStyleBackColor = true;
 			// 
 			// frmOptions
 			// 
@@ -3360,5 +3373,6 @@
 		private System.Windows.Forms.Label lblPDFLocation;
 		private System.Windows.Forms.Button cmdPDFTest;
 		private System.Windows.Forms.CheckBox chkDatesIncludeTime;
+		private System.Windows.Forms.CheckBox chkBreakSkillGroupsInCreateMode;
 	}
 }

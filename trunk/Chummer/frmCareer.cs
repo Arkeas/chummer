@@ -121,6 +121,8 @@ namespace Chummer
 			if (!_objCharacter.CritterEnabled)
 				tabCharacterTabs.TabPages.Remove(tabCritter);
 
+			mnuSpecialAddBiowareSuite.Visible = _objCharacter.Options.AllowBiowareSuites;
+
 			// Remove the Improvements Tab.
 			//tabCharacterTabs.TabPages.Remove(tabImprovements);
 
@@ -3618,6 +3620,16 @@ namespace Chummer
 
 			_blnIsDirty = true;
 			UpdateWindowTitle();
+		}
+
+		private void mnuSpecialAddCyberwareSuite_Click(object sender, EventArgs e)
+		{
+			AddCyberwareSuite(Improvement.ImprovementSource.Cyberware);
+		}
+
+		private void mnuSpecialAddBiowareSuite_Click(object sender, EventArgs e)
+		{
+			AddCyberwareSuite(Improvement.ImprovementSource.Bioware);
 		}
 		#endregion
 
@@ -27678,6 +27690,125 @@ namespace Chummer
 				if (objCommlink.InternalId != objActiveCommlink.InternalId)
 					objCommlink.IsActive = false;
 			}
+		}
+
+		/// <summary>
+		/// Create Cyberware from a Cyberware Suite.
+		/// </summary>
+		/// <param name="objXmlNode">XmlNode for the Cyberware to add.</param>
+		/// <param name="objGrade">CyberwareGrade to add the item as.</param>
+		/// <param name="intRating">Rating of the Cyberware.</param>
+		/// <param name="blnAddToCharacter">Whether or not the Cyberware should be added directly to the character.</param>
+		/// <param name="objParent">Parent Cyberware if the item is not being added directly to the character.</param>
+		private TreeNode CreateSuiteCyberware(XmlNode objXmlItem, XmlNode objXmlNode, Grade objGrade, int intRating, bool blnAddToCharacter, Improvement.ImprovementSource objSource, string strType, Cyberware objParent = null)
+		{
+			// Create the Cyberware object.
+			List<Weapon> objWeapons = new List<Weapon>();
+			List<TreeNode> objWeaponNodes = new List<TreeNode>();
+			TreeNode objNode = new TreeNode();
+			Cyberware objCyberware = new Cyberware(_objCharacter);
+			string strForced = "";
+
+			if (objXmlItem["name"].Attributes["select"] != null)
+				strForced = objXmlItem["name"].Attributes["select"].InnerText;
+
+			objCyberware.Create(objXmlNode, _objCharacter, objGrade, objSource, intRating, objNode, objWeapons, objWeaponNodes, true, true, strForced);
+			objCyberware.Suite = true;
+
+			foreach (Weapon objWeapon in objWeapons)
+				_objCharacter.Weapons.Add(objWeapon);
+
+			foreach (TreeNode objWeaponNode in objWeaponNodes)
+			{
+				treWeapons.Nodes[0].Nodes.Add(objWeaponNode);
+				treWeapons.Nodes[0].Expand();
+			}
+
+			if (blnAddToCharacter)
+				_objCharacter.Cyberware.Add(objCyberware);
+			else
+				objParent.Children.Add(objCyberware);
+
+			foreach (XmlNode objXmlChild in objXmlItem.SelectNodes(strType + "s/" + strType))
+			{
+				XmlDocument objXmlDocument = XmlManager.Instance.Load(strType + ".xml");
+				XmlNode objXmlChildCyberware = objXmlDocument.SelectSingleNode("/chummer/" + strType + "s/" + strType + "[name = \"" + objXmlChild["name"].InnerText + "\"]");
+				TreeNode objChildNode = new TreeNode();
+				int intChildRating = 0;
+
+				if (objXmlChild["rating"] != null)
+					intChildRating = Convert.ToInt32(objXmlChild["rating"].InnerText);
+
+				objChildNode = CreateSuiteCyberware(objXmlChild, objXmlChildCyberware, objGrade, intChildRating, false, objSource, strType, objCyberware);
+				objNode.Nodes.Add(objChildNode);
+				objNode.Expand();
+			}
+
+			return objNode;
+		}
+
+		private void AddCyberwareSuite(Improvement.ImprovementSource objSource)
+		{
+			frmSelectCyberwareSuite frmPickCyberwareSuite = new frmSelectCyberwareSuite(objSource, _objCharacter);
+			frmPickCyberwareSuite.ShowDialog(this);
+
+			if (frmPickCyberwareSuite.DialogResult == DialogResult.Cancel)
+				return;
+
+			int intCost = frmPickCyberwareSuite.TotalCost;
+			if (intCost > _objCharacter.Nuyen)
+			{
+				MessageBox.Show(LanguageManager.Instance.GetString("Message_NotEnoughNuyen"), LanguageManager.Instance.GetString("MessageTitle_NotEnoughNuyen"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return;
+			}
+			else
+			{
+				// Create the Expense Log Entry.
+				ExpenseLogEntry objExpense = new ExpenseLogEntry();
+				objExpense.Create(intCost * -1, LanguageManager.Instance.GetString("String_ExpensePurchaseCyberwareSuite") + " " + frmPickCyberwareSuite.SelectedSuite, ExpenseType.Nuyen, DateTime.Now);
+				_objCharacter.ExpenseEntries.Add(objExpense);
+				_objCharacter.Nuyen -= intCost;
+			}
+
+			string strType = "";
+			int intParentNode = 0;
+			if (objSource == Improvement.ImprovementSource.Cyberware)
+			{
+				strType = "cyberware";
+				intParentNode = 0;
+			}
+			else
+			{
+				strType = "bioware";
+				intParentNode = 1;
+			}
+			XmlDocument objXmlDocument = XmlManager.Instance.Load(strType + ".xml");
+
+			XmlNode objXmlSuite = objXmlDocument.SelectSingleNode("/chummer/suites/suite[name = \"" + frmPickCyberwareSuite.SelectedSuite + "\"]");
+			Cyberware objTemp = new Cyberware(_objCharacter);
+			Grade objGrade = new Grade();
+			objGrade = objTemp.ConvertToCyberwareGrade(objXmlSuite["grade"].InnerText, objSource);
+
+			// Run through each of the items in the Suite and add them to the character.
+			foreach (XmlNode objXmlItem in objXmlSuite.SelectNodes(strType + "s/" + strType))
+			{
+				XmlNode objXmlCyberware = objXmlDocument.SelectSingleNode("/chummer/" + strType + "s/" + strType + "[name = \"" + objXmlItem["name"].InnerText + "\"]");
+				TreeNode objNode = new TreeNode();
+				int intRating = 0;
+
+				if (objXmlItem["rating"] != null)
+					intRating = Convert.ToInt32(objXmlItem["rating"].InnerText);
+
+				objNode = CreateSuiteCyberware(objXmlItem, objXmlCyberware, objGrade, intRating, true, objSource, strType, null);
+
+				objNode.Expand();
+				treCyberware.Nodes[intParentNode].Nodes.Add(objNode);
+				treCyberware.Nodes[intParentNode].Expand();
+			}
+
+			_blnIsDirty = true;
+			UpdateWindowTitle();
+			UpdateCharacterInfo();
 		}
 		#endregion
 	}
