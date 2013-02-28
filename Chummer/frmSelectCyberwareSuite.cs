@@ -14,6 +14,7 @@ namespace Chummer
 		private Improvement.ImprovementSource _objSource = Improvement.ImprovementSource.Cyberware;
 		private string _strType = "cyberware";
 		private Character _objCharacter;
+		private int _intCost = 0;
 
 		List<Cyberware> _lstCyberware = new List<Cyberware>();
 
@@ -103,6 +104,7 @@ namespace Chummer
 
 			lblEssence.Text = Math.Round(decTotalESS, _objCharacter.Options.EssenceDecimals).ToString();
 			lblCost.Text = String.Format("{0:###,###,##0¥}", intTotalCost);
+			_intCost = intTotalCost;
 		}
 		#endregion
 
@@ -126,6 +128,17 @@ namespace Chummer
 			get
 			{
 				return _strSelectedSuite;
+			}
+		}
+
+		/// <summary>
+		/// Total cost of the Cyberware Suite. This is done to make it easier to obtain the actual cost in Career Mode.
+		/// </summary>
+		public int TotalCost
+		{
+			get
+			{
+				return _intCost;
 			}
 		}
 		#endregion

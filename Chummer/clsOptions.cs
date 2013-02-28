@@ -686,6 +686,7 @@ namespace Chummer
 		private bool _blnAlternateMatrixAttribute = false;
 		private bool _blnAllowEditPartOfBaseWeapon = false;
 		private bool _blnAllowCustomTransgenics = false;
+		private bool _blnBreakSkillGroupsInCreateMode = false;
 		private bool _blnAllowSkillDiceRolling = false;
 		private bool _blnAlternateMetatypeAttributeKarma = false;
 		private bool _blnCreateBackupOnCareer = false;
@@ -923,6 +924,8 @@ namespace Chummer
 			objWriter.WriteElementString("alloweditpartofbaseweapon", _blnAllowEditPartOfBaseWeapon.ToString());
 			// <allowcustomtransgenics />
 			objWriter.WriteElementString("allowcustomtransgenics", _blnAllowCustomTransgenics.ToString());
+			// <breakskillgroupsincreatemode />
+			objWriter.WriteElementString("breakskillgroupsincreatemode", _blnBreakSkillGroupsInCreateMode.ToString());
 			// <allowskilldicerolling />
 			objWriter.WriteElementString("allowskilldicerolling", _blnAllowSkillDiceRolling.ToString());
 			// <alternatemetatypeattributekarma />
@@ -1422,6 +1425,14 @@ namespace Chummer
 			try
 			{
 				_blnAllowCustomTransgenics = Convert.ToBoolean(objXmlDocument.SelectSingleNode("/settings/allowcustomtransgenics").InnerText);
+			}
+			catch
+			{
+			}
+			// Whether or not the user can break Skill Groups while in Create Mode.
+			try
+			{
+				_blnBreakSkillGroupsInCreateMode = Convert.ToBoolean(objXmlDocument.SelectSingleNode("/settings/breakskillgroupsincreatemode").InnerText);
 			}
 			catch
 			{
@@ -2792,6 +2803,21 @@ namespace Chummer
 			set
 			{
 				_blnAllowCustomTransgenics = value;
+			}
+		}
+
+		/// <summary>
+		/// Whether or not the user is allowed to break Skill Groups while in Create Mode.
+		/// </summary>
+		public bool BreakSkillGroupsInCreateMode
+		{
+			get
+			{
+				return _blnBreakSkillGroupsInCreateMode;
+			}
+			set
+			{
+				_blnBreakSkillGroupsInCreateMode = value;
 			}
 		}
 

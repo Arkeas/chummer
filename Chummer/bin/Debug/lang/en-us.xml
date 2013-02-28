@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-911</version>
+	<version>-910</version>
 	<name>English (US)</name>
 	<strings>
 		<!-- Common Strings -->
@@ -2032,6 +2032,10 @@
 		<string>
 			<key>String_ExpenseSoldArmorGear</key>
 			<text>Sold Armor Gear</text>
+		</string>
+		<string>
+			<key>String_ExpensePurchaseCyberwareSuite</key>
+			<text>Purchased Cyberware Suite</text>
 		</string>
 		<string>
 			<key>String_ExpensePurchaseWeapon</key>
@@ -5291,6 +5295,10 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		<string>
 			<key>Checkbox_Options_AllowCustomTransgenics</key>
 			<text>Allow any Bioware to be converted to Transgenic (AU 93)</text>
+		</string>
+		<string>
+			<key>Checkbox_Options_BreakSkillGroupsInCreateMode</key>
+			<text>Allow Skill Groups to be broken during character creation (SR4 68)</text>
 		</string>
 		<string>
 			<key>Checkbox_Options_ErgonomicProgramLimit</key>

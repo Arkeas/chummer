@@ -55,7 +55,7 @@ namespace Chummer
 					strMount += "contains(mount, \"" + strAllowedMount + "\") or ";
 			}
 			strMount += "mount = \"\"";
-			XmlNodeList objXmlAccessoryList = _objXmlDocument.SelectNodes("/chummer/accessories/accessory[" + strMount + " and (" + _objCharacter.Options.BookXPath() + ")]");
+			XmlNodeList objXmlAccessoryList = _objXmlDocument.SelectNodes("/chummer/accessories/accessory[(" + strMount + ") and (" + _objCharacter.Options.BookXPath() + ")]");
 			foreach (XmlNode objXmlAccessory in objXmlAccessoryList)
 			{
 				ListItem objItem = new ListItem();

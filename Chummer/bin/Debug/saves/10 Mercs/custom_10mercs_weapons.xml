@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chummer>
+	<weapons>
+		<weapon>
+			<name>Colt Government 2066TC</name>
+			<category>Heavy Pistols</category>
+			<type>Ranged</type>
+			<spec>Semi-Automatics</spec>
+			<reach>0</reach>
+			<damage>5P</damage>
+			<ap>-1</ap>
+			<mode>SA</mode>
+			<rc>1</rc>
+			<ammo>14(c)</ammo>
+			<conceal>0</conceal>
+			<avail>36R</avail>
+			<cost>2700</cost>
+			<allowaccessory>true</allowaccessory>
+			<accessorymounts>
+				<mount>Barrel</mount>
+				<mount>Top</mount>
+			</accessorymounts>
+			<mods>
+				<mod>Advanced Safety, Basic System</mod>
+				<mod>Barrel Extension</mod>
+				<mod>Melee Hardening</mod>
+				<mod>Personalized Grip</mod>
+				<mod>Skinlink</mod>
+				<mod>Smartgun System</mod>
+			</mods>
+			<source>10M</source>
+			<page>22</page>
+		</weapon>
+	</weapons>
+</chummer>
