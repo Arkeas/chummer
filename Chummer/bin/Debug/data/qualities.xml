@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-877</version>
+	<version>-876</version>
 	<categories>
 		<category>Positive</category>
 		<category>Negative</category>
@@ -10900,6 +10900,90 @@
 			</powers>
 			<source>COD</source>
 			<page>137</page>
+		</quality>
+		<quality>
+			<name>Drug Tolerant</name>
+			<bp>5</bp>
+			<category>Positive</category>
+			<bonus />
+			<source>SDN</source>
+			<page>14</page>
+		</quality>
+		<quality>
+			<name>Blank Slate</name>
+			<bp>-10</bp>
+			<category>Negative</category>
+			<bonus />
+			<source>SDN</source>
+			<page>14</page>
+		</quality>
+		<quality>
+			<name>Dead Emotion</name>
+			<bp>-5</bp>
+			<category>Negative</category>
+			<bonus />
+			<source>SDN</source>
+			<page>14</page>
+		</quality>
+		<quality>
+			<name>Dry Addict (Mild)</name>
+			<bp>-5</bp>
+			<category>Negative</category>
+			<bonus>
+				<blackmarketdiscount />
+				<selecttext />
+			</bonus>
+			<source>SDN</source>
+			<page>14</page>
+		</quality>
+		<quality>
+			<name>Dry Addict (Moderate)</name>
+			<bp>-10</bp>
+			<category>Negative</category>
+			<bonus>
+				<blackmarketdiscount />
+				<selecttext />
+			</bonus>
+			<source>SDN</source>
+			<page>14</page>
+		</quality>
+		<quality>
+			<name>Dry Addict (Severe)</name>
+			<bp>-15</bp>
+			<category>Negative</category>
+			<bonus>
+				<blackmarketdiscount />
+				<selecttext />
+			</bonus>
+			<source>SDN</source>
+			<page>14</page>
+		</quality>
+		<quality>
+			<name>Dry Addict (Burnout)</name>
+			<bp>-20</bp>
+			<category>Negative</category>
+			<bonus>
+				<blackmarketdiscount />
+				<selecttext />
+			</bonus>
+			<source>SDN</source>
+			<page>14</page>
+		</quality>
+		<quality>
+			<name>Family Curse</name>
+			<bp>-5</bp>
+			<category>Negative</category>
+			<bonus />
+			<source>SDN</source>
+			<page>14</page>
+		</quality>
+		<quality>
+			<name>Lightweight</name>
+			<bp>-10</bp>
+			<category>Negative</category>
+			<bonus />
+			<source>SDN</source>
+			<page>14</page>
 		</quality>
 	</qualities>
 </chummer>

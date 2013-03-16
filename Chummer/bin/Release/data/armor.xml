@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-883</version>
+	<version>-882</version>
 	<categories>
 		<category>Armor</category>
 		<category>Clothing</category>
@@ -2677,7 +2677,7 @@
 		</mod>
 		<mod>
 			<name>AR Enhanced</name>
-			<category>Clothing</category>
+			<category>General</category>
 			<b>0</b>
 			<i>0</i>
 			<maxrating>1</maxrating>
@@ -2689,7 +2689,7 @@
 		</mod>
 		<mod>
 			<name>Color Changing</name>
-			<category>Clothing</category>
+			<category>General</category>
 			<b>0</b>
 			<i>0</i>
 			<maxrating>1</maxrating>
@@ -2701,7 +2701,7 @@
 		</mod>
 		<mod>
 			<name>Natural Fiber</name>
-			<category>Clothing</category>
+			<category>General</category>
 			<b>0</b>
 			<i>0</i>
 			<maxrating>1</maxrating>

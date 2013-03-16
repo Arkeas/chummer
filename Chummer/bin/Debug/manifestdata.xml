@@ -157,7 +157,7 @@
 	<file>
 		<name>data/armor.xml</name>
 		<type>Data Files</type>
-		<version>-883</version>
+		<version>-882</version>
 		<description>Armor</description>
 		<notes>- Armor data file</notes>
 	</file>
@@ -171,7 +171,7 @@
 	<file>
 		<name>data/books.xml</name>
 		<type>Data Files</type>
-		<version>-908</version>
+		<version>-907</version>
 		<description>Books</description>
 		<notes>- Books data file</notes>
 	</file>
@@ -206,7 +206,7 @@
 	<file>
 		<name>data/gear.xml</name>
 		<type>Data Files</type>
-		<version>-826</version>
+		<version>-825</version>
 		<description>Gear</description>
 		<notes>- Gear data file</notes>
 	</file>
@@ -283,7 +283,7 @@
 	<file>
 		<name>data/qualities.xml</name>
 		<type>Data Files</type>
-		<version>-877</version>
+		<version>-876</version>
 		<description>Qualities</description>
 		<notes>- Qualities data file</notes>
 	</file>
@@ -297,7 +297,7 @@
 	<file>
 		<name>data/skills.xml</name>
 		<type>Data Files</type>
-		<version>-914</version>
+		<version>-913</version>
 		<description>Skills</description>
 		<notes>- Skills data file</notes>
 	</file>
