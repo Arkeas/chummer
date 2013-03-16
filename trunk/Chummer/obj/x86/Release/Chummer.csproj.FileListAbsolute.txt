@@ -83,3 +83,6 @@ D:\source\ChummerCS\Chummer\obj\x86\Release\Chummer.csproj.GenerateResource.Cach
 D:\source\ChummerCS\Chummer\obj\x86\Release\Chummer.exe
 D:\source\ChummerCS\Chummer\obj\x86\Release\Chummer.pdb
 D:\source\ChummerCS\Chummer\obj\x86\Release\Chummer.csprojResolveAssemblyReference.cache
+C:\source\ChummerOS\Chummer\bin\Release\Chummer.exe.config
+C:\source\ChummerOS\Chummer\obj\x86\Release\Chummer.exe
+C:\source\ChummerOS\Chummer\obj\x86\Release\Chummer.pdb

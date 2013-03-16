@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-826</version>
+	<version>-825</version>
 	<categories>
 		<category show="false">Altskin Function</category>
 		<category>Ammunition</category>
@@ -91,6 +91,7 @@
 		<category>Sensor Software</category>
 		<category>Sensors</category>
 		<category>Simsense</category>
+		<category>Simsense Drugs</category>
 		<category>Skillsoft Clusters</category>
 		<category>Skillsofts</category>
 		<category>Slap Patches</category>
@@ -2157,7 +2158,7 @@
 			<avail>8</avail>
 			<cost>Rating * 10000</cost>
 			<bonus>
-				<selectskill />
+				<selectskill excludecategory="Magical Active,Resonance Active" />
 			</bonus>
 			<source>SR4</source>
 			<page>330</page>
@@ -15304,7 +15305,7 @@
 			<avail>6</avail>
 			<cost>Rating * 10000</cost>
 			<bonus>
-				<selectskill />
+				<selectskill excludecategory="Magical Active,Resonance Active" />
 			</bonus>
 			<source>2050</source>
 			<page>184</page>
@@ -15347,6 +15348,159 @@
 			</bonus>
 			<source>2050</source>
 			<page>185</page>
+		</gear>
+		<gear>
+			<name>Simsense Movie</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>0</avail>
+			<cost>Variable(10-60)</cost>
+			<source>SDN</source>
+			<page>17</page>
+		</gear>
+		<gear>
+			<name>Simsense PPoV Movie</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>0</avail>
+			<cost>Variable(25-100)</cost>
+			<source>SDN</source>
+			<page>17</page>
+		</gear>
+		<gear>
+			<name>Simsense Series</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>0</avail>
+			<cost>Variable(100-250)</cost>
+			<source>SDN</source>
+			<page>17</page>
+		</gear>
+		<gear>
+			<name>Simsense Pay-Per-Experience Broadcast</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>0</avail>
+			<cost>Variable(50-100)</cost>
+			<source>SDN</source>
+			<page>17</page>
+		</gear>
+		<gear>
+			<name>Simsense Sports Rebroadcast</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>0</avail>
+			<cost>Variable(25-50)</cost>
+			<source>SDN</source>
+			<page>17</page>
+		</gear>
+		<gear>
+			<name>Simsense Arcade Machine</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>0</avail>
+			<cost>1</cost>
+			<source>SDN</source>
+			<page>17</page>
+		</gear>
+		<gear>
+			<name>Simsense Video Game (Commlink)</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>0</avail>
+			<cost>Variable(20-100)</cost>
+			<source>SDN</source>
+			<page>17</page>
+		</gear>
+		<gear>
+			<name>Hot Simsense Movie</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>3F</avail>
+			<cost>Variable(10-100)</cost>
+			<source>SDN</source>
+			<page>17</page>
+		</gear>
+		<gear>
+			<name>Hottest Simsense Movie</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>4F</avail>
+			<cost>Variable(25-150)</cost>
+			<source>SDN</source>
+			<page>17</page>
+		</gear>
+		<gear>
+			<name>Cold Sim-Level Moodchip</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>1R</avail>
+			<cost>50</cost>
+			<source>SDN</source>
+			<page>17</page>
+		</gear>
+		<gear>
+			<name>BTL-Level Moodchip</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>2F</avail>
+			<cost>75</cost>
+			<source>SDN</source>
+			<page>17</page>
+		</gear>
+		<gear>
+			<name>Dreamchip</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>4F</avail>
+			<cost>Variable(10-250)</cost>
+			<source>SDN</source>
+			<page>17</page>
+		</gear>
+		<gear>
+			<name>Dreamchip with PPoV</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>4F</avail>
+			<cost>Variable(25-300)</cost>
+			<source>SDN</source>
+			<page>17</page>
+		</gear>
+		<gear>
+			<name>Tripchip</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>6F</avail>
+			<cost>Variable(50-500)</cost>
+			<source>SDN</source>
+			<page>17</page>
+		</gear>
+		<gear>
+			<name>Personasoft</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>8F</avail>
+			<cost>Variable(250-1000)</cost>
+			<source>SDN</source>
+			<page>17</page>
+		</gear>
+		<gear>
+			<name>Unlimited-Duration Personasoft</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>14F</avail>
+			<cost>Variable(1500-3000)</cost>
+			<source>SDN</source>
+			<page>17</page>
+		</gear>
+		<gear>
+			<name>DRM-Stripped Personafixes</name>
+			<category>Simsense Drugs</category>
+			<rating>0</rating>
+			<avail>20F</avail>
+			<cost>Variable(2500+)</cost>
+			<source>SDN</source>
+			<page>17</page>
 		</gear>
 	</gears>
 </chummer>

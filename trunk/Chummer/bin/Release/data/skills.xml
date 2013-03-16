@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-914</version>
+	<version>-913</version>
 	<skillgroups>
 		<name>Animal Husbandry</name>
 		<name>Athletics</name>
@@ -701,7 +701,7 @@
 			<specs>
 				<spec>Shotguns</spec>
 				<spec>Sniper Rifles</spec>
-				<spec>Sporting Rifles</spec>
+				<spec>Sports Rifles</spec>
 			</specs>
 			<source>SR4</source>
 			<page>122</page>

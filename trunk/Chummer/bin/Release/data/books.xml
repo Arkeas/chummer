@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-908</version>
+	<version>-907</version>
 	<books>
 		<book>
 			<name>Arsenal</name>
@@ -161,6 +161,10 @@
 		<book>
 			<name>The Clutch of Dragons</name>
 			<code>COD</code>
+		</book>
+		<book>
+			<name>Sim Dreams and Nightmares</name>
+			<code>SDN</code>
 		</book>
 	</books>
 </chummer>
