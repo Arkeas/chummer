@@ -279,6 +279,15 @@ namespace Chummer
 				strCategory = cboCategory.SelectedValue.ToString();
 			}
 
+			// If a Grenade is selected, show the Aerodynamic checkbox.
+			if (objXmlGear["name"].InnerText.StartsWith("Grenade:"))
+				chkAerodynamic.Visible = true;
+			else
+			{
+				chkAerodynamic.Visible = false;
+				chkAerodynamic.Checked = false;
+			}
+
 			// Quantity.
 			nudGearQty.Minimum = 1;
 			if (objXmlGear["costfor"] != null)
@@ -729,6 +738,17 @@ namespace Chummer
 			get
 			{
 				return chkInherentProgram.Checked;
+			}
+		}
+
+		/// <summary>
+		/// Whether or not a Grenade is Aerodynamic.
+		/// </summary>
+		public bool Aerodynamic
+		{
+			get
+			{
+				return chkAerodynamic.Checked;
 			}
 		}
 		#endregion

@@ -3,7 +3,7 @@
 	<file>
 		<name>chummer.exe</name>
 		<type>Application</type>
-		<version>0.0.0.456</version>
+		<version>0.0.0.458</version>
 		<description>Chummer</description>
 		<notes>- Chummer Application</notes>
 	</file>
@@ -38,7 +38,7 @@
 	<file>
 		<name>sheets/Shadowrun 4 Base.xslt</name>
 		<type>Character Sheets</type>
-		<version>-894</version>
+		<version>-893</version>
 		<description>Shadowrun 4 Character Sheet Base</description>
 		<notes>- Character sheet based on the Shadowrun 4 sheet</notes>
 	</file>
@@ -108,7 +108,7 @@
 	<file>
 		<name>sheets/de/Shadowrun 4 Base.xslt</name>
 		<type>German Character Sheets</type>
-		<version>-894</version>
+		<version>-893</version>
 		<description>Shadowrun 4 Character Sheet Base</description>
 		<notes>- Character sheet based on the Shadowrun 4 sheet</notes>
 	</file>
@@ -234,7 +234,7 @@
 	<file>
 		<name>data/mentors.xml</name>
 		<type>Data Files</type>
-		<version>-923</version>
+		<version>-922</version>
 		<description>Mentor Spirits</description>
 		<notes>- Mentor Spirits data file</notes>
 	</file>
@@ -248,7 +248,7 @@
 	<file>
 		<name>data/metatypes.xml</name>
 		<type>Data Files</type>
-		<version>-916</version>
+		<version>-915</version>
 		<description>Metatypes</description>
 		<notes>- Metatypes data file</notes>
 	</file>

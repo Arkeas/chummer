@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- Character sheet based on the Shadowrun 4th Edition Character Sheet -->
 <!-- Created by Keith Rudolph, krudolph@gmail.com -->
-<!-- Version -894 -->
+<!-- Version -893 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
 	<xsl:include href="ConditionMonitor.xslt"/>
 	<xsl:template match="/characters/character">
@@ -1112,18 +1112,22 @@
 						<td>
 							<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 								<tr>
-									<td width="50%">
+									<td width="40%">
 										<strong>BEZEICHNUNG</strong>
 									</td>
-									<td width="30%" style="text-align:center;">
+									<td width="20%" style="text-align:center;">
 										<strong>STUFE</strong>
+									</td>
+									</td>
+									<td width="20%" style="text-align:center;">
+										<strong>PUNKTE (GESAMT)</strong>
 									</td>
 									<td width="20%" style="text-align:center;">
 									</td>
 								</tr>
 								<xsl:call-template name="powers" />
 								<tr>
-									<td class="rowsummary" colspan="3">
+									<td class="rowsummary" colspan="4">
 										ADEPTENKRÄFTE
 										<span class="rowsummarybutton" onClick="showhide(this,'PowerBlock');" colspan="1">Zeigen: JA</span>
 										<span class="rowsummarybutton" onClick="zalomit(this,'PowerBlock');" colspan="1">Seitenumbruch: NEIN</span>
@@ -2572,14 +2576,17 @@
 									<xsl:if test="position() mod 2 != 1">
 										<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
 									</xsl:if>
-									<td width="50%">
+									<td width="40%">
 										<xsl:value-of select="name" />
 										<xsl:if test="extra != ''"> (<xsl:value-of select="extra" />)</xsl:if>
 									</td>
-									<td width="30%" style="text-align:center;">
+									<td width="20%" style="text-align:center;">
 										<xsl:if test="rating &gt; 0">
 											<xsl:value-of select="rating" />
 										</xsl:if>
+									</td>
+									<td width="20%" style="text-align:center;">
+										<xsl:value-of select="pointsperlevel" /> (<xsl:value-of select="totalpoints" />)
 									</td>
 									<td width="20%" style="text-align:center;">
 										<xsl:value-of select="source" /><xsl:text> </xsl:text><xsl:value-of select="page" />

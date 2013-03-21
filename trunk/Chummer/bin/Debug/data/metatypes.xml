@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-916</version>
+	<version>-915</version>
 	<categories>
 		<category>Metahuman</category>
 		<category>Sapient Critter</category>
@@ -2949,6 +2949,217 @@
 			</qualities>
 			<source>RC</source>
 			<page>88</page>
+		</metatype>
+		<metatype>
+			<name>Anaconda Shapeshifter</name>
+			<category>Shapeshifter</category>
+			<bp>60</bp>
+			<bodmin>4</bodmin>
+			<bodmax>9</bodmax>
+			<bodaug>12</bodaug>
+			<agimin>1</agimin>
+			<agimax>6</agimax>
+			<agiaug>9</agiaug>
+			<reamin>1</reamin>
+			<reamax>5</reamax>
+			<reaaug>7</reaaug>
+			<strmin>6</strmin>
+			<strmax>11</strmax>
+			<straug>16</straug>
+			<chamin>1</chamin>
+			<chamax>5</chamax>
+			<chaaug>7</chaaug>
+			<intmin>1</intmin>
+			<intmax>6</intmax>
+			<intaug>9</intaug>
+			<logmin>1</logmin>
+			<logmax>6</logmax>
+			<logaug>9</logaug>
+			<wilmin>1</wilmin>
+			<wilmax>6</wilmax>
+			<wilaug>9</wilaug>
+			<inimin>2</inimin>
+			<inimax>11</inimax>
+			<iniaug>16</iniaug>
+			<edgmin>1</edgmin>
+			<edgmax>6</edgmax>
+			<edgaug>6</edgaug>
+			<magmin>1</magmin>
+			<magmax>6</magmax>
+			<magaug>6</magaug>
+			<resmin>1</resmin>
+			<resmax>6</resmax>
+			<resaug>6</resaug>
+			<essmin>0</essmin>
+			<essmax>6</essmax>
+			<essaug>6</essaug>
+			<movement>5/10</movement>
+			<qualities>
+				<negative>
+					<quality>Distinctive Style</quality>
+				</negative>
+			</qualities>
+			<bonus>
+				<addattribute>
+					<name>MAG</name>
+					<min>1</min>
+					<max>6</max>
+					<aug>6</aug>
+					<val>1</val>
+				</addattribute>
+				<enabletab>
+					<name>critter</name>
+				</enabletab>
+				<reach>2</reach>
+			</bonus>
+			<powers>
+				<power>Dual Natured</power>
+				<power>Regeneration</power>
+				<power>Sapience</power>
+				<power select="Thermal">Enhanced Senses</power>
+				<power select="Silver, Severe">Allergy</power>
+				<power select="Silver">Vulnerability</power>
+				<power select="Bite: DV STR/2 + 2, AP 0">Natural Weapon</power>
+			</powers>
+			<source>CI</source>
+			<page>102</page>
+			<metavariants>
+				<metavariant>
+					<name>Human</name>
+					<bp>60</bp>
+					<powers>
+						<power>Shift (Human)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>2</reach>
+					</bonus>
+					<source>CI</source>
+					<page>102</page>
+				</metavariant>
+				<metavariant>
+					<name>Dwarf</name>
+					<bp>75</bp>
+					<powers>
+						<power>Shift (Dwarf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>2</reach>
+					</bonus>
+					<source>CI</source>
+					<page>102</page>
+				</metavariant>
+				<metavariant>
+					<name>Elf</name>
+					<bp>80</bp>
+					<powers>
+						<power>Shift (Elf)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>2</reach>
+					</bonus>
+					<source>CI</source>
+					<page>102</page>
+				</metavariant>
+				<metavariant>
+					<name>Ork</name>
+					<bp>70</bp>
+					<powers>
+						<power>Shift (Ork)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>-1</reach>
+					</bonus>
+					<source>CI</source>
+					<page>102</page>
+				</metavariant>
+				<metavariant>
+					<name>Troll</name>
+					<bp>90</bp>
+					<powers>
+						<power>Shift (Troll)</power>
+					</powers>
+					<qualities>
+						<negative>
+							<quality>Distinctive Style</quality>
+						</negative>
+					</qualities>
+					<bonus>
+						<addattribute>
+							<name>MAG</name>
+							<min>1</min>
+							<max>6</max>
+							<aug>6</aug>
+							<val>1</val>
+						</addattribute>
+						<enabletab>
+							<name>critter</name>
+						</enabletab>
+						<reach>2</reach>
+					</bonus>
+					<source>CI</source>
+					<page>102</page>
+				</metavariant>
+			</metavariants>
 		</metatype>
 	</metatypes>
 </chummer>

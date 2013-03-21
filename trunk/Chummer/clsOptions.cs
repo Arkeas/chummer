@@ -687,6 +687,7 @@ namespace Chummer
 		private bool _blnAllowEditPartOfBaseWeapon = false;
 		private bool _blnAllowCustomTransgenics = false;
 		private bool _blnBreakSkillGroupsInCreateMode = false;
+		private bool _blnExtendAnyDetectionSpell = false;
 		private bool _blnAllowSkillDiceRolling = false;
 		private bool _blnAlternateMetatypeAttributeKarma = false;
 		private bool _blnCreateBackupOnCareer = false;
@@ -926,6 +927,8 @@ namespace Chummer
 			objWriter.WriteElementString("allowcustomtransgenics", _blnAllowCustomTransgenics.ToString());
 			// <breakskillgroupsincreatemode />
 			objWriter.WriteElementString("breakskillgroupsincreatemode", _blnBreakSkillGroupsInCreateMode.ToString());
+			// <extendanydetectionspell />
+			objWriter.WriteElementString("extendanydetectionspell", _blnExtendAnyDetectionSpell.ToString());
 			// <allowskilldicerolling />
 			objWriter.WriteElementString("allowskilldicerolling", _blnAllowSkillDiceRolling.ToString());
 			// <alternatemetatypeattributekarma />
@@ -1433,6 +1436,14 @@ namespace Chummer
 			try
 			{
 				_blnBreakSkillGroupsInCreateMode = Convert.ToBoolean(objXmlDocument.SelectSingleNode("/settings/breakskillgroupsincreatemode").InnerText);
+			}
+			catch
+			{
+			}
+			// Whether or not any Detection Spell can be taken as Extended range version.
+			try
+			{
+				_blnExtendAnyDetectionSpell = Convert.ToBoolean(objXmlDocument.SelectSingleNode("/settings/extendanydetectionspell").InnerText);
 			}
 			catch
 			{
@@ -2818,6 +2829,21 @@ namespace Chummer
 			set
 			{
 				_blnBreakSkillGroupsInCreateMode = value;
+			}
+		}
+
+		/// <summary>
+		/// Whether or not any Detection Spell can be taken as Extended range version.
+		/// </summary>
+		public bool ExtendAnyDetectionSpell
+		{
+			get
+			{
+				return _blnExtendAnyDetectionSpell;
+			}
+			set
+			{
+				_blnExtendAnyDetectionSpell = value;
 			}
 		}
 

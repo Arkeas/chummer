@@ -230,6 +230,7 @@
 			this.nudKarmaJoinGroup = new System.Windows.Forms.NumericUpDown();
 			this.lblKarmaJoinGroup = new System.Windows.Forms.Label();
 			this.tabOptionalRules = new System.Windows.Forms.TabPage();
+			this.chkBreakSkillGroupsInCreateMode = new System.Windows.Forms.CheckBox();
 			this.chkAlternateMatrixAttribute = new System.Windows.Forms.CheckBox();
 			this.chkAllowCustomTransgenics = new System.Windows.Forms.CheckBox();
 			this.chkAlternateComplexFormCost = new System.Windows.Forms.CheckBox();
@@ -272,7 +273,7 @@
 			this.lblSetting = new System.Windows.Forms.Label();
 			this.lblSettingName = new System.Windows.Forms.Label();
 			this.txtSettingName = new System.Windows.Forms.TextBox();
-			this.chkBreakSkillGroupsInCreateMode = new System.Windows.Forms.CheckBox();
+			this.chkExtendAnyDetectionSpell = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaComplexFormOption)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaMetamagic)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaInitiation)).BeginInit();
@@ -2469,6 +2470,7 @@
 			// tabOptionalRules
 			// 
 			this.tabOptionalRules.BackColor = System.Drawing.SystemColors.Control;
+			this.tabOptionalRules.Controls.Add(this.chkExtendAnyDetectionSpell);
 			this.tabOptionalRules.Controls.Add(this.chkBreakSkillGroupsInCreateMode);
 			this.tabOptionalRules.Controls.Add(this.chkAlternateMatrixAttribute);
 			this.tabOptionalRules.Controls.Add(this.chkAllowCustomTransgenics);
@@ -2491,6 +2493,17 @@
 			this.tabOptionalRules.TabIndex = 2;
 			this.tabOptionalRules.Tag = "Tab_Options_OptionalRules";
 			this.tabOptionalRules.Text = "Optional Rules";
+			// 
+			// chkBreakSkillGroupsInCreateMode
+			// 
+			this.chkBreakSkillGroupsInCreateMode.AutoSize = true;
+			this.chkBreakSkillGroupsInCreateMode.Location = new System.Drawing.Point(8, 305);
+			this.chkBreakSkillGroupsInCreateMode.Name = "chkBreakSkillGroupsInCreateMode";
+			this.chkBreakSkillGroupsInCreateMode.Size = new System.Drawing.Size(339, 17);
+			this.chkBreakSkillGroupsInCreateMode.TabIndex = 29;
+			this.chkBreakSkillGroupsInCreateMode.Tag = "Checkbox_Options_BreakSkillGroupsInCreateMode";
+			this.chkBreakSkillGroupsInCreateMode.Text = "Allow Skill Groups to be broken during character creation (SR4 68)";
+			this.chkBreakSkillGroupsInCreateMode.UseVisualStyleBackColor = true;
 			// 
 			// chkAlternateMatrixAttribute
 			// 
@@ -3010,16 +3023,16 @@
 			this.txtSettingName.Size = new System.Drawing.Size(190, 20);
 			this.txtSettingName.TabIndex = 3;
 			// 
-			// chkBreakSkillGroupsInCreateMode
+			// chkExtendAnyDetectionSpell
 			// 
-			this.chkBreakSkillGroupsInCreateMode.AutoSize = true;
-			this.chkBreakSkillGroupsInCreateMode.Location = new System.Drawing.Point(8, 305);
-			this.chkBreakSkillGroupsInCreateMode.Name = "chkBreakSkillGroupsInCreateMode";
-			this.chkBreakSkillGroupsInCreateMode.Size = new System.Drawing.Size(339, 17);
-			this.chkBreakSkillGroupsInCreateMode.TabIndex = 29;
-			this.chkBreakSkillGroupsInCreateMode.Tag = "Checkbox_Options_BreakSkillGroupsInCreateMode";
-			this.chkBreakSkillGroupsInCreateMode.Text = "Allow Skill Groups to be broken during character creation (SR4 68)";
-			this.chkBreakSkillGroupsInCreateMode.UseVisualStyleBackColor = true;
+			this.chkExtendAnyDetectionSpell.AutoSize = true;
+			this.chkExtendAnyDetectionSpell.Location = new System.Drawing.Point(8, 328);
+			this.chkExtendAnyDetectionSpell.Name = "chkExtendAnyDetectionSpell";
+			this.chkExtendAnyDetectionSpell.Size = new System.Drawing.Size(378, 17);
+			this.chkExtendAnyDetectionSpell.TabIndex = 30;
+			this.chkExtendAnyDetectionSpell.Tag = "Checkbox_Options_ExtendAnyDetectionSpell";
+			this.chkExtendAnyDetectionSpell.Text = "Allow any Detection Spell to be taken as Extended range version (SM 165)";
+			this.chkExtendAnyDetectionSpell.UseVisualStyleBackColor = true;
 			// 
 			// frmOptions
 			// 
@@ -3374,5 +3387,6 @@
 		private System.Windows.Forms.Button cmdPDFTest;
 		private System.Windows.Forms.CheckBox chkDatesIncludeTime;
 		private System.Windows.Forms.CheckBox chkBreakSkillGroupsInCreateMode;
+		private System.Windows.Forms.CheckBox chkExtendAnyDetectionSpell;
 	}
 }

@@ -410,7 +410,7 @@ namespace Chummer
 			{
 				foreach (Improvement objImprovement in _objCharacter.Improvements)
 				{
-					if (objImprovement.ImproveType == Improvement.ImprovementType.Attribute && objImprovement.ImprovedName == _strAbbrev && objImprovement.Enabled && objImprovement.Augmented != 0)
+					if (objImprovement.ImproveType == Improvement.ImprovementType.Attribute && (objImprovement.ImprovedName == _strAbbrev || objImprovement.ImprovedName == _strAbbrev + "Base") && objImprovement.Enabled && objImprovement.Augmented != 0)
 						return true;
 				}
 
@@ -3516,6 +3516,7 @@ namespace Chummer
 		private string _strPage = "";
 		private string _strExtra = "";
 		private bool _blnLimited = false;
+		private bool _blnExtended = false;
 		private string _strNotes = "";
 		private readonly Character _objCharacter;
 		private string _strAltName = "";
@@ -3536,7 +3537,8 @@ namespace Chummer
 		/// <param name="objNode">TreeNode to populate a TreeView.</param>
 		/// <param name="strForcedValue">Value to forcefully select for any ImprovementManager prompts.</param>
 		/// <param name="blnLimited">Whether or not the Spell should be marked as Limited.</param>
-		public void Create(XmlNode objXmlSpellNode, Character objCharacter, TreeNode objNode, string strForcedValue = "", bool blnLimited = false)
+		/// <param name="blnExtended">Whether or not the Spell should be marked as Extended.</param>
+		public void Create(XmlNode objXmlSpellNode, Character objCharacter, TreeNode objNode, string strForcedValue = "", bool blnLimited = false, bool blnExtended = false)
 		{
 			_strName = objXmlSpellNode["name"].InnerText;
 			_strDescriptors = objXmlSpellNode["descriptor"].InnerText;
@@ -3547,6 +3549,7 @@ namespace Chummer
 			_strDuration = objXmlSpellNode["duration"].InnerText;
 			_strDV = objXmlSpellNode["dv"].InnerText;
 			_blnLimited = blnLimited;
+			_blnExtended = blnExtended;
 			_strSource = objXmlSpellNode["source"].InnerText;
 			_strPage = objXmlSpellNode["page"].InnerText;
 
@@ -3610,6 +3613,7 @@ namespace Chummer
 			objWriter.WriteElementString("duration", _strDuration);
 			objWriter.WriteElementString("dv", _strDV);
 			objWriter.WriteElementString("limited", _blnLimited.ToString());
+			objWriter.WriteElementString("extended", _blnExtended.ToString());
 			objWriter.WriteElementString("source", _strSource);
 			objWriter.WriteElementString("page", _strPage);
 			objWriter.WriteElementString("extra", _strExtra);
@@ -3635,6 +3639,13 @@ namespace Chummer
 			try
 			{
 				_blnLimited = Convert.ToBoolean(objNode["limited"].InnerText);
+			}
+			catch
+			{
+			}
+			try
+			{
+				_blnExtended = Convert.ToBoolean(objNode["extended"].InnerText);
 			}
 			catch
 			{
@@ -3761,6 +3772,7 @@ namespace Chummer
 			get
 			{
 				string strReturn = "";
+				bool blnExtendedFound = false;
 
 				string[] strDescriptorsIn = _strDescriptors.Split(',');
 				foreach (string strDescriptor in strDescriptorsIn)
@@ -3771,7 +3783,14 @@ namespace Chummer
 							strReturn += LanguageManager.Instance.GetString("String_DescActive") + ", ";
 							break;
 						case "Area":
-							strReturn += LanguageManager.Instance.GetString("String_DescArea") + ", ";
+							if (_blnExtended)
+							{
+								// Replace Area with Extended Area if the Extended flag is enabled.
+								strReturn += LanguageManager.Instance.GetString("String_DescExtendedArea") + ", ";
+								blnExtendedFound = true;
+							}
+							else
+								strReturn += LanguageManager.Instance.GetString("String_DescArea") + ", ";
 							break;
 						case "Direct":
 							strReturn += LanguageManager.Instance.GetString("String_DescDirect") + ", ";
@@ -3787,6 +3806,7 @@ namespace Chummer
 							break;
 						case "Extended Area":
 							strReturn += LanguageManager.Instance.GetString("String_DescExtendedArea") + ", ";
+							blnExtendedFound = true;
 							break;
 						case "Indirect":
 							strReturn += LanguageManager.Instance.GetString("String_DescIndirect") + ", ";
@@ -3826,6 +3846,11 @@ namespace Chummer
 							break;
 					}
 				}
+
+				// If Extended Area was not found and the Extended flag is enabled, add Extended Area to the list of Descriptors.
+				if (_blnExtended && !blnExtendedFound)
+					strReturn += LanguageManager.Instance.GetString("String_DescExtendedArea") + ", ";
+
 				// Remove the trailing comma.
 				if (strReturn != string.Empty)
 					strReturn = strReturn.Substring(0, strReturn.Length - 2);
@@ -3916,6 +3941,28 @@ namespace Chummer
 				strReturn = strReturn.Replace("Toxin DV", LanguageManager.Instance.GetString("String_SpellToxinDV"));
 				strReturn = strReturn.Replace("Disease DV", LanguageManager.Instance.GetString("String_SpellDiseaseDV"));
 				strReturn = strReturn.Replace("Radiation Power", LanguageManager.Instance.GetString("String_SpellRadiationPower"));
+
+				if (_blnExtended)
+				{
+					// Add +2 to the DV value if Extended is selected.
+					int intPos = strReturn.IndexOf(')') + 1;
+					string strAfter = strReturn.Substring(intPos, strReturn.Length - intPos);
+					strReturn = strReturn.Remove(intPos, strReturn.Length - intPos);
+					if (strAfter == string.Empty)
+						strAfter = "+2";
+					else
+					{
+						int intValue = Convert.ToInt32(strAfter) + 2;
+						if (intValue == 0)
+							strAfter = "";
+						else if (intValue > 0)
+							strAfter = "+" + intValue.ToString();
+						else
+							strAfter = intValue.ToString();
+					}
+					strReturn += strAfter;
+				}
+
 				return strReturn;
 			}
 		}
@@ -4116,6 +4163,21 @@ namespace Chummer
 		}
 
 		/// <summary>
+		/// Whether or not the Spell is Extended.
+		/// </summary>
+		public bool Extended
+		{
+			get
+			{
+				return _blnExtended;
+			}
+			set
+			{
+				_blnExtended = value;
+			}
+		}
+
+		/// <summary>
 		/// Notes.
 		/// </summary>
 		public string Notes
@@ -4140,6 +4202,9 @@ namespace Chummer
 				string strReturn = _strName;
 				if (_strAltName != string.Empty)
 					strReturn = _strAltName;
+
+				if (_blnExtended)
+					strReturn += ", " + LanguageManager.Instance.GetString("String_SpellExtended");
 
 				return strReturn;
 			}
@@ -4956,6 +5021,7 @@ namespace Chummer
 				objWriter.WriteElementString("rating", _intRating.ToString());
 			else
 				objWriter.WriteElementString("rating", "0");
+			objWriter.WriteElementString("totalpoints", PowerPoints.ToString());
 			objWriter.WriteElementString("source", _objCharacter.Options.LanguageBookShort(_strSource));
 			objWriter.WriteElementString("page", Page);
 			if (_objCharacter.Options.PrintNotes)
