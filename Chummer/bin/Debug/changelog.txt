@@ -1,3 +1,21 @@
+Build 458
+- added support for Anaconda Shifters from Corporate Intrigue
+- added an optional rule to allow any Detection Spell to be taken as an Extended version (see below)
+- fixed an issue where Adept Powers that affected the base Rating of an Attribute would not be properly reflected in the Attribute's Augmented value on the Common tab
+- fixed an issue where adding a Cyberware Commlink would not automatically create the Headerware: Commlink Location on the Gear tab
+- added support for Aerodynamic Grenades which appears as a checkbox in the Select Gear window when a throwable Grenade is selected
+- SR4 character sheet now shows the Power Point cost and total Power Point cost for each Adept Power
+
+Extended range Spells Optional Rule
+When the Allow any Detection Spell to be taken as Extended range version (SM 165) optional rule is enabled, the Extended versions of Spells are no longer shown in the Spell list. Instead, an Extended version of each Detection Spell can now be selected by checking the Extended Spell checkbox. If this optional rule is disabled, the Extended versions of the Spells still appear in the list as normal.
+
+New Strings
+- Checkbox_Aerodynamic
+- Checkbox_SelectSpell_ExtendedSpell
+- Checkbox_Options_ExtendAnyDetectionSpell
+- Tip_SelectSpell_ExtendedSpell
+- String_SpellExtended
+
 Build 456
 - fixed an issue where adjusting individual Skill Ratings with the Allow Skill Groups to be broken during character creation rule turned on would calculate the BP cost incorrectly
 - fixed an issue where attempting to undo an Expense for a piece of Gear that has been moved to the non-default Location would throw an error

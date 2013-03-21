@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-910</version>
+	<version>-909</version>
 	<name>English (US)</name>
 	<strings>
 		<!-- Common Strings -->
@@ -1912,6 +1912,10 @@
 		<string>
 			<key>String_SpellLimited</key>
 			<text>Limited</text>
+		</string>
+		<string>
+			<key>String_SpellExtended</key>
+			<text>Extended</text>
 		</string>
 		<string>
 			<key>String_AttributePilot</key>
@@ -5301,6 +5305,10 @@ Only one attribute may be at its Maximum value during character creation.</text>
 			<text>Allow Skill Groups to be broken during character creation (SR4 68)</text>
 		</string>
 		<string>
+			<key>Checkbox_Options_ExtendAnyDetectionSpell</key>
+			<text>Allow any Detection Spell to be taken as Extended range version (SM 165)</text>
+		</string>
+		<string>
 			<key>Checkbox_Options_ErgonomicProgramLimit</key>
 			<text>Ergonomic Programs do not affect a Commlink's effective Response (UN 114)</text>
 		</string>
@@ -5709,6 +5717,10 @@ Only one attribute may be at its Maximum value during character creation.</text>
 			<key>Label_SelectGear_Markup</key>
 			<text>Markup:</text>
 		</string>
+		<string>
+			<key>Checkbox_Aerodynamic</key>
+			<text>Aerodynamic</text>
+		</string>
 		<!-- Select Item Window -->
 		<string>
 			<key>Title_SelectItem</key>
@@ -6063,6 +6075,14 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		<string>
 			<key>Tip_SelectSpell_LimitedSpell</key>
 			<text>Limited Spells require a Fetish to cast but add +2 dice to the Drain Resistance Test after casting this Spell.</text>
+		</string>
+		<string>
+			<key>Checkbox_SelectSpell_ExtendedSpell</key>
+			<text>Extended Spell</text>
+		</string>
+		<string>
+			<key>Tip_SelectSpell_ExtendedSpell</key>
+			<text>Extended range Spells have a range of (Force x MAG x 10) meters but have their DV increased by +2.</text>
 		</string>
 		<!-- Select Text Window -->
 		<string>

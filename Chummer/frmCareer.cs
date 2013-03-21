@@ -5136,7 +5136,7 @@ namespace Chummer
 
 			Spell objSpell = new Spell(_objCharacter);
 			TreeNode objNode = new TreeNode();
-			objSpell.Create(objXmlSpell, _objCharacter, objNode, "", frmPickSpell.Limited);
+			objSpell.Create(objXmlSpell, _objCharacter, objNode, "", frmPickSpell.Limited, frmPickSpell.Extended);
 			objNode.ContextMenuStrip = cmsSpell;
 			if (objSpell.InternalId == Guid.Empty.ToString())
 				return;
@@ -10771,7 +10771,7 @@ namespace Chummer
 					break;
 				default:
 					Gear objNewGear = new Gear(_objCharacter);
-					objNewGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", frmPickGear.Hacked, frmPickGear.InherentProgram, false);
+					objNewGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", frmPickGear.Hacked, frmPickGear.InherentProgram, false, true, frmPickGear.Aerodynamic);
 					objNewGear.Quantity = frmPickGear.SelectedQty;
 
 					objGear = objNewGear;
@@ -10994,7 +10994,7 @@ namespace Chummer
 					break;
 				default:
 					Gear objNewGear = new Gear(_objCharacter);
-					objNewGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", frmPickGear.Hacked, frmPickGear.InherentProgram, false);
+					objNewGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", frmPickGear.Hacked, frmPickGear.InherentProgram, false, true, frmPickGear.Aerodynamic);
 					objNewGear.Quantity = frmPickGear.SelectedQty;
 					objNode.Text = objNewGear.DisplayName;
 
@@ -16275,7 +16275,7 @@ namespace Chummer
 					break;
 				default:
 					Gear objGear = new Gear(_objCharacter);
-					objGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", frmPickGear.Hacked, frmPickGear.InherentProgram);
+					objGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", frmPickGear.Hacked, frmPickGear.InherentProgram, true, true, frmPickGear.Aerodynamic);
 					objGear.Quantity = frmPickGear.SelectedQty;
 					objNode.Text = objGear.DisplayName;
 
@@ -16464,7 +16464,7 @@ namespace Chummer
 					break;
 				default:
 					Gear objNewGear = new Gear(_objCharacter);
-					objNewGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", frmPickGear.Hacked, frmPickGear.InherentProgram);
+					objNewGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", frmPickGear.Hacked, frmPickGear.InherentProgram, true, true, frmPickGear.Aerodynamic);
 					objNewGear.Quantity = frmPickGear.SelectedQty;
 					objNode.Text = objNewGear.DisplayName;
 
@@ -16608,7 +16608,7 @@ namespace Chummer
 					break;
 				default:
 					Gear objGear = new Gear(_objCharacter);
-					objGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", frmPickGear.Hacked, frmPickGear.InherentProgram);
+					objGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", frmPickGear.Hacked, frmPickGear.InherentProgram, true, true, frmPickGear.Aerodynamic);
 					objGear.Quantity = frmPickGear.SelectedQty;
 					objNode.Text = objGear.DisplayName;
 
@@ -16779,7 +16779,7 @@ namespace Chummer
 					break;
 				default:
 					Gear objNewGear = new Gear(_objCharacter);
-					objNewGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", frmPickGear.Hacked, frmPickGear.InherentProgram);
+					objNewGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", frmPickGear.Hacked, frmPickGear.InherentProgram, true, true, frmPickGear.Aerodynamic);
 					objNewGear.Quantity = frmPickGear.SelectedQty;
 					objNode.Text = objNewGear.DisplayName;
 
@@ -17059,7 +17059,7 @@ namespace Chummer
 					break;
 				default:
 					Gear objNewGear = new Gear(_objCharacter);
-					objNewGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", frmPickGear.Hacked, frmPickGear.InherentProgram, false);
+					objNewGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", frmPickGear.Hacked, frmPickGear.InherentProgram, false, true, frmPickGear.Aerodynamic);
 					objNewGear.Quantity = frmPickGear.SelectedQty;
 					objNode.Text = objNewGear.DisplayName;
 
@@ -17202,7 +17202,7 @@ namespace Chummer
 					break;
 				default:
 					Gear objGear = new Gear(_objCharacter);
-					objGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", frmPickGear.Hacked, frmPickGear.InherentProgram, false);
+					objGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", frmPickGear.Hacked, frmPickGear.InherentProgram, false, true, frmPickGear.Aerodynamic);
 					objGear.Quantity = frmPickGear.SelectedQty;
 					objNode.Text = objGear.DisplayName;
 
@@ -23464,6 +23464,7 @@ namespace Chummer
 			treCyberware.SelectedNode = objNode;
 			UpdateCharacterInfo();
 			RefreshSelectedCyberware();
+			PopulateGearList();
 
 			if (frmPickCyberware.DialogResult != DialogResult.Cancel)
 			{
@@ -23613,7 +23614,7 @@ namespace Chummer
 					if (strForceItemValue != "")
 						strForceValue = strForceItemValue;
 					Gear objGear = new Gear(_objCharacter);
-					objGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, strForceValue, frmPickGear.Hacked, frmPickGear.InherentProgram);
+					objGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, strForceValue, frmPickGear.Hacked, frmPickGear.InherentProgram, true, true, frmPickGear.Aerodynamic);
 					objGear.Quantity = frmPickGear.SelectedQty;
 					objNode.Text = objGear.DisplayName;
 
@@ -23952,7 +23953,7 @@ namespace Chummer
 					break;
 				default:
 					Gear objGear = new Gear(_objCharacter);
-					objGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes);
+					objGear.Create(objXmlGear, _objCharacter, objNode, frmPickGear.SelectedRating, objWeapons, objWeaponNodes, "", false, false, true, true, frmPickGear.Aerodynamic);
 					objGear.Quantity = frmPickGear.SelectedQty;
 
 					objNewGear = objGear;

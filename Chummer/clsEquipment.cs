@@ -6556,6 +6556,15 @@ namespace Chummer
 		}
 
 		/// <summary>
+		/// Permanently alters the Weapon's Range category.
+		/// </summary>
+		/// <param name="strRange">name of the new Range category to use.</param>
+		public void SetRange(string strRange)
+		{
+			_strRange = strRange;
+		}
+
+		/// <summary>
 		/// Evalulate and return the requested Range for the Weapon.
 		/// </summary>
 		/// <param name="strFindRange">Range node to use.</param>
@@ -9539,9 +9548,11 @@ namespace Chummer
 		/// <param name="objWeaponNodes">List of TreeNodes to represent the added Weapons</param>
 		/// <param name="strForceValue">Value to forcefully select for any ImprovementManager prompts.</param>
 		/// <param name="blnHacked">Whether or not a Matrix Program has been hacked (removing the Copy Protection and Registration plugins).</param>
+		/// <param name="blnInherent">Whether or not a Program is Inherent to an A.I.</param>
 		/// <param name="blnAddImprovements">Whether or not Improvements should be added to the character.</param>
 		/// <param name="blnCreateChildren">Whether or not child Gear should be created.</param>
-		public void Create(XmlNode objXmlGear, Character objCharacter, TreeNode objNode, int intRating, List<Weapon> objWeapons, List<TreeNode> objWeaponNodes, string strForceValue = "", bool blnHacked = false, bool blnInherent = false, bool blnAddImprovements = true, bool blnCreateChildren = true)
+		/// <param name="blnAerodynamic">Whether or not Weapons should be created as Aerodynamic.</param>
+		public void Create(XmlNode objXmlGear, Character objCharacter, TreeNode objNode, int intRating, List<Weapon> objWeapons, List<TreeNode> objWeaponNodes, string strForceValue = "", bool blnHacked = false, bool blnInherent = false, bool blnAddImprovements = true, bool blnCreateChildren = true, bool blnAerodynamic = false)
 		{
 			_strName = objXmlGear["name"].InnerText;
 			_strCategory = objXmlGear["category"].InnerText;
@@ -9763,6 +9774,15 @@ namespace Chummer
 					Weapon objGearWeapon = new Weapon(objCharacter);
 					objGearWeapon.Create(objXmlWeapon, objCharacter, objGearWeaponNode, null, null, null);
 					objGearWeaponNode.ForeColor = SystemColors.GrayText;
+					if (blnAerodynamic)
+					{
+						objGearWeapon.Name += " (" + LanguageManager.Instance.GetString("Checkbox_Aerodynamic") + ")";
+						objGearWeapon.SetRange("Aerodynamic Grenades");
+						objGearWeaponNode.Text = objGearWeapon.DisplayName;
+						_strName += " (" + LanguageManager.Instance.GetString("Checkbox_Aerodynamic") + ")";
+						objNode.Text = DisplayName;
+					}
+						
 					objWeaponNodes.Add(objGearWeaponNode);
 					objWeapons.Add(objGearWeapon);
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-923</version>
+	<version>-922</version>
 	<categories>
 		<category>Animal</category>
 		<category>Other</category>
@@ -506,19 +506,13 @@
 				<choice>
 					<name>+2 dice for spirits of man</name>
 					<bonus>
-						<specificskill>
-							<name>Counterspelling</name>
-							<bonus>2</bonus>
-						</specificskill>
+						<selecttext />
 					</bonus>
 				</choice>
 				<choice>
 					<name>+2 dice for guidance spirits</name>
 					<bonus>
-						<specificskill>
-							<name>Banishing</name>
-							<bonus>2</bonus>
-						</specificskill>
+						<selecttext />
 					</bonus>
 				</choice>
 			</choices>

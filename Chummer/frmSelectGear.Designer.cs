@@ -69,6 +69,7 @@
 			this.lblTestLabel = new System.Windows.Forms.Label();
 			this.chkInherentProgram = new System.Windows.Forms.CheckBox();
 			this.tipTooltip = new System.Windows.Forms.ToolTip(this.components);
+			this.chkAerodynamic = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.nudRating)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudGearQty)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudMarkup)).BeginInit();
@@ -494,6 +495,18 @@
 			this.tipTooltip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
 			this.tipTooltip.ToolTipTitle = "Chummer Help";
 			// 
+			// chkAerodynamic
+			// 
+			this.chkAerodynamic.AutoSize = true;
+			this.chkAerodynamic.Location = new System.Drawing.Point(464, 97);
+			this.chkAerodynamic.Name = "chkAerodynamic";
+			this.chkAerodynamic.Size = new System.Drawing.Size(87, 17);
+			this.chkAerodynamic.TabIndex = 39;
+			this.chkAerodynamic.Tag = "Checkbox_Aerodynamic";
+			this.chkAerodynamic.Text = "Aerodynamic";
+			this.chkAerodynamic.UseVisualStyleBackColor = true;
+			this.chkAerodynamic.Visible = false;
+			// 
 			// frmSelectGear
 			// 
 			this.AcceptButton = this.cmdOK;
@@ -501,6 +514,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.CancelButton = this.cmdCancel;
 			this.ClientSize = new System.Drawing.Size(646, 414);
+			this.Controls.Add(this.chkAerodynamic);
 			this.Controls.Add(this.chkInherentProgram);
 			this.Controls.Add(this.lblTest);
 			this.Controls.Add(this.lblTestLabel);
@@ -599,5 +613,6 @@
 		private System.Windows.Forms.Label lblTestLabel;
 		private System.Windows.Forms.CheckBox chkInherentProgram;
 		private System.Windows.Forms.ToolTip tipTooltip;
+		private System.Windows.Forms.CheckBox chkAerodynamic;
 	}
 }
