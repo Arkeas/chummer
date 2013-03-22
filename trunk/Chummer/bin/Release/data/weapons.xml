@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-854</version>
+	<version>-852</version>
 	<categories>
 		<category>Blades</category>
 		<category>Clubs</category>
@@ -2447,8 +2447,10 @@
 				<mount>Barrel</mount>
 				<mount>Top</mount>
 			</accessorymounts>
+
 			<accessories>
 				<accessory>Stock</accessory>
+
 			</accessories>
 			<source>AR</source>
 			<page>21</page>
@@ -2566,6 +2568,7 @@
 			</accessories>
 			<mods>
 				<mod>Laser Sight</mod>
+
 			</mods>
 			<source>SR4</source>
 			<page>317</page>
@@ -2707,8 +2710,10 @@
 				<mount>Barrel</mount>
 				<mount>Top</mount>
 			</accessorymounts>
+
 			<accessories>
 				<accessory>Stock</accessory>
+
 			</accessories>
 			<source>SR4</source>
 			<page>317</page>
@@ -3342,8 +3347,10 @@
 				<mount>Barrel</mount>
 				<mount>Top</mount>
 			</accessorymounts>
+
 			<accessories>
 				<accessory>Stock</accessory>
+
 			</accessories>
 			<source>SR4</source>
 			<page>317</page>
@@ -3389,6 +3396,7 @@
 				<accessory>Stock</accessory>
 			</accessories>
 			<mods>
+
 				<mod>Laser Sight</mod>
 			</mods>
 			<source>AR</source>
@@ -3436,8 +3444,10 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
+
 			<accessories>
 				<accessory>Stock</accessory>
+
 			</accessories>
 			<source>SR4</source>
 			<page>318</page>
@@ -3462,8 +3472,10 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
+
 			<accessories>
 				<accessory>Stock</accessory>
+
 			</accessories>
 			<source>WAR</source>
 			<page>154</page>
@@ -3570,6 +3582,7 @@
 				<accessory>Stock</accessory>
 			</accessories>
 			<mods>
+
 				<mod>Gas Vent 2</mod>
 			</mods>
 			<source>AR</source>
@@ -3598,6 +3611,7 @@
 				<accessory>Stock</accessory>
 			</accessories>
 			<mods>
+
 				<mod>Laser Sight</mod>
 			</mods>
 			<source>AR</source>
@@ -3626,6 +3640,7 @@
 				<accessory>Stock</accessory>
 			</accessories>
 			<mods>
+
 				<mod>Smartgun System</mod>
 			</mods>
 			<source>AR</source>
@@ -3734,6 +3749,7 @@
 				<accessory>Stock</accessory>
 			</accessories>
 			<mods>
+
 				<mod>Smartgun System</mod>
 				<mod>Sound Suppressor</mod>
 			</mods>
@@ -3763,6 +3779,8 @@
 				<accessory>Stock</accessory>
 			</accessories>
 			<mods>
+
+
 				<mod>Smartgun System</mod>
 				<mod>High-Power Chambering</mod>
 			</mods>
@@ -3792,6 +3810,7 @@
 				<accessory>Stock</accessory>
 			</accessories>
 			<mods>
+
 				<mod>Gas Vent 2</mod>
 				<mod>Laser Sight</mod>
 			</mods>
@@ -3843,6 +3862,7 @@
 				<accessory>Stock</accessory>
 			</accessories>
 			<mods>
+
 				<mod>Gas Vent 2</mod>
 				<mod>Smartgun System</mod>
 				<mod>Sound Suppressor</mod>
@@ -3867,8 +3887,10 @@
 			<accessorymounts>
 				<mount>Top</mount>
 			</accessorymounts>
+
 			<accessories>
 				<accessory>Stock</accessory>
+
 			</accessories>
 			<fullburst>12</fullburst>
 			<source>AR</source>
@@ -3891,8 +3913,10 @@
 			<accessorymounts>
 				<mount>Top</mount>
 			</accessorymounts>
+
 			<accessories>
 				<accessory>Stock</accessory>
+
 			</accessories>
 			<fullburst>12</fullburst>
 			<source>AR</source>
@@ -3943,6 +3967,7 @@
 				<accessory>Stock</accessory>
 			</accessories>
 			<mods>
+
 				<mod>Laser Sight</mod>
 			</mods>
 			<source>AR</source>
@@ -3971,6 +3996,7 @@
 				<accessory>Stock</accessory>
 			</accessories>
 			<mods>
+
 				<mod>Smartgun System</mod>
 			</mods>
 			<source>AR</source>
@@ -3999,6 +4025,7 @@
 				<accessory>Stock</accessory>
 			</accessories>
 			<mods>
+
 				<mod>Laser Sight</mod>
 			</mods>
 			<source>SR4</source>
@@ -4662,6 +4689,8 @@
 				<accessory>Stock</accessory>
 			</accessories>
 			<mods>
+
+
 				<mod>Laser Sight</mod>
 				<mod>Gas Vent 2</mod>
 			</mods>
@@ -5372,6 +5401,7 @@
 				<accessory>Shock Pad</accessory>
 			</accessories>
 			<mods>
+
 				<mod>Smartgun System</mod>
 			</mods>
 			<source>AR</source>
