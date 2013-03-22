@@ -5,6 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms.DataVisualization.Charting;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.XPath;
@@ -20638,7 +20639,8 @@ namespace Chummer
 		private void splitKarmaNuyen_Panel1_Resize(object sender, EventArgs e)
 		{
 			lstKarma.Width = splitKarmaNuyen.Panel1.Width;
-			lstKarma.Height = splitKarmaNuyen.Panel1.Height - lstKarma.Top;
+			// ***** TEMPORARILY DISABLED *****
+			//lstKarma.Height = splitKarmaNuyen.Panel1.Height - lstKarma.Top;
 			try
 			{
 				if (lstKarma.Width > 409)
@@ -25510,6 +25512,30 @@ namespace Chummer
 			}
 			lstKarma.Sort();
 			lstNuyen.Sort();
+
+			// Charting test for Expenses.
+			chtKarma.Series.Clear();
+			Series objSeries = new Series
+			{
+				Name = "Series1",
+				Color = System.Drawing.Color.Green,
+				IsVisibleInLegend = false,
+				IsXValueIndexed = true,
+				ChartType = SeriesChartType.Area
+			};
+			chtKarma.Series.Add(objSeries);
+			int intX = 0;
+			int intValue = 0;
+			foreach (ExpenseLogEntry objExpense in _objCharacter.ExpenseEntries)
+			{
+				if (objExpense.Type == ExpenseType.Karma)
+				{
+					intX++;
+					intValue += objExpense.Amount;
+					objSeries.Points.AddXY(intX, intValue);
+				}
+			}
+			chtKarma.Invalidate();
 		}
 
 		/// <summary>

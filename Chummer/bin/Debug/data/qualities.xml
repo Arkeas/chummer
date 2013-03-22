@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-876</version>
+	<version>-875</version>
 	<categories>
 		<category>Positive</category>
 		<category>Negative</category>
@@ -10442,6 +10442,7 @@
 						<cyberwarecontains>Vision Magnification</cyberwarecontains>
 						<biowarecontains select="Longarms">Reflex Recorder (Skill)</biowarecontains>
 						<biowarecontains select="Infiltration">Reflex Recorder (Skill)</biowarecontains>
+						<biowarecontains select="Firearms">Reflex Recorder (Skill Group)</biowarecontains>
 						<count>2</count>
 					</cyberwares>
 					<ess>-3.0</ess>

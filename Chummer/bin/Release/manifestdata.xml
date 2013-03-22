@@ -283,7 +283,7 @@
 	<file>
 		<name>data/qualities.xml</name>
 		<type>Data Files</type>
-		<version>-876</version>
+		<version>-875</version>
 		<description>Qualities</description>
 		<notes>- Qualities data file</notes>
 	</file>
@@ -339,7 +339,7 @@
 	<file>
 		<name>data/weapons.xml</name>
 		<type>Data Files</type>
-		<version>-854</version>
+		<version>-852</version>
 		<description>Weapons</description>
 		<notes>- Weapons data file</notes>
 	</file>
