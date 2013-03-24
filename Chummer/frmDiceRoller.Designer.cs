@@ -42,8 +42,11 @@
 			this.chkCinematicGameplay = new System.Windows.Forms.CheckBox();
 			this.cmdReroll = new System.Windows.Forms.Button();
 			this.chkRushJob = new System.Windows.Forms.CheckBox();
+			this.nudThreshold = new System.Windows.Forms.NumericUpDown();
+			this.lblThreshold = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.nudDice)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudGremlins)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudThreshold)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblRoll
@@ -80,7 +83,7 @@
 			// cmdRollDice
 			// 
 			this.cmdRollDice.AutoSize = true;
-			this.cmdRollDice.Location = new System.Drawing.Point(247, 4);
+			this.cmdRollDice.Location = new System.Drawing.Point(250, 4);
 			this.cmdRollDice.Name = "cmdRollDice";
 			this.cmdRollDice.Size = new System.Drawing.Size(86, 23);
 			this.cmdRollDice.TabIndex = 10;
@@ -111,7 +114,7 @@
 			// lblResults
 			// 
 			this.lblResults.AutoSize = true;
-			this.lblResults.Location = new System.Drawing.Point(138, 111);
+			this.lblResults.Location = new System.Drawing.Point(138, 138);
 			this.lblResults.Name = "lblResults";
 			this.lblResults.Size = new System.Drawing.Size(45, 13);
 			this.lblResults.TabIndex = 8;
@@ -121,7 +124,7 @@
 			// lblGremlins
 			// 
 			this.lblGremlins.AutoSize = true;
-			this.lblGremlins.Location = new System.Drawing.Point(138, 81);
+			this.lblGremlins.Location = new System.Drawing.Point(138, 108);
 			this.lblGremlins.Name = "lblGremlins";
 			this.lblGremlins.Size = new System.Drawing.Size(50, 13);
 			this.lblGremlins.TabIndex = 6;
@@ -130,14 +133,14 @@
 			// 
 			// nudGremlins
 			// 
-			this.nudGremlins.Location = new System.Drawing.Point(194, 79);
+			this.nudGremlins.Location = new System.Drawing.Point(201, 106);
 			this.nudGremlins.Maximum = new decimal(new int[] {
             4,
             0,
             0,
             0});
 			this.nudGremlins.Name = "nudGremlins";
-			this.nudGremlins.Size = new System.Drawing.Size(30, 20);
+			this.nudGremlins.Size = new System.Drawing.Size(45, 20);
 			this.nudGremlins.TabIndex = 7;
 			// 
 			// cboMethod
@@ -146,7 +149,7 @@
 			this.cboMethod.FormattingEnabled = true;
 			this.cboMethod.Location = new System.Drawing.Point(118, 6);
 			this.cboMethod.Name = "cboMethod";
-			this.cboMethod.Size = new System.Drawing.Size(121, 21);
+			this.cboMethod.Size = new System.Drawing.Size(128, 21);
 			this.cboMethod.TabIndex = 3;
 			this.cboMethod.SelectedIndexChanged += new System.EventHandler(this.cboMethod_SelectedIndexChanged);
 			// 
@@ -164,7 +167,7 @@
 			// cmdReroll
 			// 
 			this.cmdReroll.AutoSize = true;
-			this.cmdReroll.Location = new System.Drawing.Point(246, 33);
+			this.cmdReroll.Location = new System.Drawing.Point(249, 33);
 			this.cmdReroll.Name = "cmdReroll";
 			this.cmdReroll.Size = new System.Drawing.Size(87, 23);
 			this.cmdReroll.TabIndex = 11;
@@ -184,12 +187,31 @@
 			this.chkRushJob.Text = "Rushed Job (Glitch on 1 or 2)";
 			this.chkRushJob.UseVisualStyleBackColor = true;
 			// 
+			// nudThreshold
+			// 
+			this.nudThreshold.Location = new System.Drawing.Point(201, 80);
+			this.nudThreshold.Name = "nudThreshold";
+			this.nudThreshold.Size = new System.Drawing.Size(45, 20);
+			this.nudThreshold.TabIndex = 14;
+			// 
+			// lblThreshold
+			// 
+			this.lblThreshold.AutoSize = true;
+			this.lblThreshold.Location = new System.Drawing.Point(138, 82);
+			this.lblThreshold.Name = "lblThreshold";
+			this.lblThreshold.Size = new System.Drawing.Size(57, 13);
+			this.lblThreshold.TabIndex = 13;
+			this.lblThreshold.Tag = "Label_DiceRoller_Threshold";
+			this.lblThreshold.Text = "Threshold:";
+			// 
 			// frmDiceRoller
 			// 
 			this.AcceptButton = this.cmdRollDice;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(337, 268);
+			this.ClientSize = new System.Drawing.Size(348, 268);
+			this.Controls.Add(this.nudThreshold);
+			this.Controls.Add(this.lblThreshold);
 			this.Controls.Add(this.chkRushJob);
 			this.Controls.Add(this.cmdReroll);
 			this.Controls.Add(this.chkCinematicGameplay);
@@ -214,6 +236,7 @@
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDiceRoller_FormClosing);
 			((System.ComponentModel.ISupportInitialize)(this.nudDice)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudGremlins)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudThreshold)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -234,5 +257,7 @@
 		private System.Windows.Forms.CheckBox chkCinematicGameplay;
 		private System.Windows.Forms.Button cmdReroll;
 		private System.Windows.Forms.CheckBox chkRushJob;
+		private System.Windows.Forms.NumericUpDown nudThreshold;
+		private System.Windows.Forms.Label lblThreshold;
 	}
 }
