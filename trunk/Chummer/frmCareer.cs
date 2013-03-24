@@ -20639,8 +20639,10 @@ namespace Chummer
 		private void splitKarmaNuyen_Panel1_Resize(object sender, EventArgs e)
 		{
 			lstKarma.Width = splitKarmaNuyen.Panel1.Width;
+			chtKarma.Width = splitKarmaNuyen.Panel1.Width;
 			// ***** TEMPORARILY DISABLED *****
 			//lstKarma.Height = splitKarmaNuyen.Panel1.Height - lstKarma.Top;
+			//lstKarma.Height = chtKarma.Top - lstKarma.Top - 6;
 			try
 			{
 				if (lstKarma.Width > 409)
@@ -20656,7 +20658,9 @@ namespace Chummer
 		private void splitKarmaNuyen_Panel2_Resize(object sender, EventArgs e)
 		{
 			lstNuyen.Width = splitKarmaNuyen.Panel2.Width;
-			lstNuyen.Height = splitKarmaNuyen.Panel1.Height - lstKarma.Top;
+			chtNuyen.Width = splitKarmaNuyen.Panel2.Width;
+			//lstNuyen.Height = splitKarmaNuyen.Panel1.Height - lstKarma.Top;
+			//lstNuyen.Height = chtNuyen.Top - lstNuyen.Top - 6;
 			try
 			{
 				if (lstNuyen.Width > 409)
@@ -25515,7 +25519,18 @@ namespace Chummer
 
 			// Charting test for Expenses.
 			chtKarma.Series.Clear();
-			Series objSeries = new Series
+			chtNuyen.Series.Clear();
+
+			// Setup the series used for charts.
+			Series objKarmaSeries = new Series
+			{
+				Name = "Series1",
+				Color = System.Drawing.Color.Blue,
+				IsVisibleInLegend = false,
+				IsXValueIndexed = true,
+				ChartType = SeriesChartType.Area
+			};
+			Series objNuyenSeries = new Series
 			{
 				Name = "Series1",
 				Color = System.Drawing.Color.Green,
@@ -25523,19 +25538,43 @@ namespace Chummer
 				IsXValueIndexed = true,
 				ChartType = SeriesChartType.Area
 			};
-			chtKarma.Series.Add(objSeries);
-			int intX = 0;
-			int intValue = 0;
+
+			// Configure the Karma chart.
+			chtKarma.Series.Add(objKarmaSeries);
+			chtKarma.ChartAreas[0].AxisX.LabelStyle.Enabled = false;
+			chtKarma.ChartAreas[0].AxisY.Title = "Karma Remaining";
+			chtKarma.ChartAreas[0].AxisX.Minimum = 1;
+
+			// Configure the Nuyen chart.
+			chtNuyen.Series.Add(objNuyenSeries);
+			chtNuyen.ChartAreas[0].AxisX.LabelStyle.Enabled = false;
+			chtNuyen.ChartAreas[0].AxisY.Title = "Nuyen Remaining";
+			chtNuyen.ChartAreas[0].AxisX.Minimum = 1;
+
+			int intKarmaX = 0;
+			int intNuyenX = 0;
+			int intKarmaValue = 0;
+			int intNuyenValue = 0;
 			foreach (ExpenseLogEntry objExpense in _objCharacter.ExpenseEntries)
 			{
 				if (objExpense.Type == ExpenseType.Karma)
 				{
-					intX++;
-					intValue += objExpense.Amount;
-					objSeries.Points.AddXY(intX, intValue);
+					intKarmaX++;
+					intKarmaValue += objExpense.Amount;
+					objKarmaSeries.Points.AddXY(intKarmaX, intKarmaValue);
+				}
+				else
+				{
+					intNuyenX++;
+					intNuyenValue += objExpense.Amount;
+					objNuyenSeries.Points.AddXY(intNuyenX, intNuyenValue);
 				}
 			}
+			chtKarma.ChartAreas[0].AxisX.Maximum = intKarmaX;
+			chtNuyen.ChartAreas[0].AxisX.Maximum = intNuyenX;
+			//chtKarma.ChartAreas[0].AxisX.MaximumAutoSize = 100;
 			chtKarma.Invalidate();
+			chtNuyen.Invalidate();
 		}
 
 		/// <summary>
