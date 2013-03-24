@@ -1,3 +1,11 @@
+Build XXX
+- added a Threshold field to the Dice Roller window which will tell you if the rolls was a success or failure
+
+New Strings
+- Label_DiceRoller_Threshold
+- String_DiceRoller_Success
+- String_DiceRoller_Failure
+
 Build 458
 - added support for Anaconda Shifters from Corporate Intrigue
 - added an optional rule to allow any Detection Spell to be taken as an Extended version (see below)

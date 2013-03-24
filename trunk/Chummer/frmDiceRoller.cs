@@ -124,12 +124,32 @@ namespace Chummer
 			if (intGlitchCount >= intGlitchThreshold)
 			{
 				if (intHitCount > 0)
-					lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Glitch").Replace("{0}", intHitCount.ToString());
+				{
+					if (nudThreshold.Value > 0)
+					{
+						if (intHitCount >= nudThreshold.Value)
+							lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Success") + " (" + LanguageManager.Instance.GetString("String_DiceRoller_Glitch").Replace("{0}", intHitCount.ToString()) + ")";
+						else
+							lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Failure") + " (" + LanguageManager.Instance.GetString("String_DiceRoller_Glitch").Replace("{0}", intHitCount.ToString()) + ")";
+					}
+					else
+						lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Glitch").Replace("{0}", intHitCount.ToString());
+				}
 				else
 					lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_CriticalGlitch");
 			}
 			else
-				lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Hits").Replace("{0}", intHitCount.ToString());
+			{
+				if (nudThreshold.Value > 0)
+				{
+					if (intHitCount >= nudThreshold.Value)
+						lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Success") + " (" + LanguageManager.Instance.GetString("String_DiceRoller_Hits").Replace("{0}", intHitCount.ToString()) + ")";
+					else
+						lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Failure") + " (" + LanguageManager.Instance.GetString("String_DiceRoller_Glitch").Replace("{0}", intHitCount.ToString()) + ")";
+				}
+				else
+					lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Hits").Replace("{0}", intHitCount.ToString());
+			}
 		}
 
 		private void cboMethod_SelectedIndexChanged(object sender, EventArgs e)
@@ -235,12 +255,32 @@ namespace Chummer
 			if (intGlitchCount >= intGlitchThreshold)
 			{
 				if (intHitCount > 0)
-					lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Glitch").Replace("{0}", intHitCount.ToString());
+				{
+					if (nudThreshold.Value > 0)
+					{
+						if (intHitCount >= nudThreshold.Value)
+							lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Success") + " (" + LanguageManager.Instance.GetString("String_DiceRoller_Glitch").Replace("{0}", intHitCount.ToString()) + ")";
+						else
+							lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Failure") + " (" + LanguageManager.Instance.GetString("String_DiceRoller_Glitch").Replace("{0}", intHitCount.ToString()) + ")";
+					}
+					else
+						lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Glitch").Replace("{0}", intHitCount.ToString());
+				}
 				else
 					lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_CriticalGlitch");
 			}
 			else
-				lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Hits").Replace("{0}", intHitCount.ToString());
+			{
+				if (nudThreshold.Value > 0)
+				{
+					if (intHitCount >= nudThreshold.Value)
+						lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Success") + " (" + LanguageManager.Instance.GetString("String_DiceRoller_Hits").Replace("{0}", intHitCount.ToString()) + ")";
+					else
+						lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Failure") + " (" + LanguageManager.Instance.GetString("String_DiceRoller_Glitch").Replace("{0}", intHitCount.ToString()) + ")";
+				}
+				else
+					lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Hits").Replace("{0}", intHitCount.ToString());
+			}
 		}
 		#endregion
 
@@ -287,7 +327,10 @@ namespace Chummer
 			cboMethod.Left = lblD6.Left + lblD6.Width + 6;
 			cmdRollDice.Left = cboMethod.Left + cboMethod.Width + 6;
 			cmdReroll.Left = cmdRollDice.Left;
-			nudGremlins.Left = lblGremlins.Left + lblGremlins.Width + 6;
+
+			int intMax = Math.Max(lblThreshold.Width, lblGremlins.Width);
+			nudThreshold.Left = lblThreshold.Left + intMax + 6;
+			nudGremlins.Left = lblGremlins.Left + intMax + 6;
 			this.Width = cmdReroll.Left + cmdReroll.Width + 16;
 		}
 		#endregion
