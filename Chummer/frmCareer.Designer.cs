@@ -58,8 +58,9 @@
 			System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Selected Weapons");
 			System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Selected Gear");
 			System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Selected Vehicles");
-			System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Selected Improvements");
 			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Selected Improvements");
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
 			this.StatusStrip = new System.Windows.Forms.StatusStrip();
 			this.tssKarmaLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.tssKarma = new System.Windows.Forms.ToolStripStatusLabel();
@@ -280,10 +281,10 @@
 			this.cmdDeleteSpell = new System.Windows.Forms.Button();
 			this.cmdAddSpirit = new System.Windows.Forms.Button();
 			this.panSpirits = new System.Windows.Forms.Panel();
-			this.cmsSpellButton = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.tsCreateSpell = new System.Windows.Forms.ToolStripMenuItem();
 			this.cmdRollDrain = new System.Windows.Forms.Button();
 			this.cmdRollSpell = new System.Windows.Forms.Button();
+			this.cmsSpellButton = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.tsCreateSpell = new System.Windows.Forms.ToolStripMenuItem();
 			this.tabAdept = new System.Windows.Forms.TabPage();
 			this.panPowers = new System.Windows.Forms.Panel();
 			this.lblPowerPoints = new System.Windows.Forms.Label();
@@ -325,10 +326,10 @@
 			this.cmdDeleteComplexForm = new System.Windows.Forms.Button();
 			this.cmdAddSprite = new System.Windows.Forms.Button();
 			this.panSprites = new System.Windows.Forms.Panel();
+			this.nudComplexFormRating = new System.Windows.Forms.NumericUpDown();
 			this.cmsComplexForm = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.tsAddComplexFormOption = new System.Windows.Forms.ToolStripMenuItem();
 			this.tsComplexFormNotes = new System.Windows.Forms.ToolStripMenuItem();
-			this.nudComplexFormRating = new System.Windows.Forms.NumericUpDown();
 			this.tabCritter = new System.Windows.Forms.TabPage();
 			this.chkCritterPowerCount = new System.Windows.Forms.CheckBox();
 			this.lblCritterPowerPointCost = new System.Windows.Forms.Label();
@@ -377,12 +378,6 @@
 			this.lblCyberwareESS = new System.Windows.Forms.Label();
 			this.lblBiowareESSLabel = new System.Windows.Forms.Label();
 			this.lblCyberwareESSLabel = new System.Windows.Forms.Label();
-			this.cmsCyberware = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.tsCyberwareAddAsPlugin = new System.Windows.Forms.ToolStripMenuItem();
-			this.tsCyberwareAddGear = new System.Windows.Forms.ToolStripMenuItem();
-			this.tsCyberwareNotes = new System.Windows.Forms.ToolStripMenuItem();
-			this.cmsDeleteCyberware = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.tsCyberwareSell = new System.Windows.Forms.ToolStripMenuItem();
 			this.lblCyberwareRating = new System.Windows.Forms.Label();
 			this.lblCyberwareGrade = new System.Windows.Forms.Label();
 			this.lblCyberwareSource = new System.Windows.Forms.Label();
@@ -403,6 +398,12 @@
 			this.lblCyberwareName = new System.Windows.Forms.Label();
 			this.lblCyberwareNameLabel = new System.Windows.Forms.Label();
 			this.treCyberware = new System.Windows.Forms.TreeView();
+			this.cmsCyberware = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.tsCyberwareAddAsPlugin = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsCyberwareAddGear = new System.Windows.Forms.ToolStripMenuItem();
+			this.tsCyberwareNotes = new System.Windows.Forms.ToolStripMenuItem();
+			this.cmsDeleteCyberware = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.tsCyberwareSell = new System.Windows.Forms.ToolStripMenuItem();
 			this.tabStreetGear = new System.Windows.Forms.TabPage();
 			this.tabStreetGearTabs = new System.Windows.Forms.TabControl();
 			this.tabLifestyle = new System.Windows.Forms.TabPage();
@@ -742,6 +743,7 @@
 			this.picMugshot = new System.Windows.Forms.PictureBox();
 			this.tabKarma = new System.Windows.Forms.TabPage();
 			this.splitKarmaNuyen = new System.Windows.Forms.SplitContainer();
+			this.chtKarma = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.cmdKarmaEdit = new System.Windows.Forms.Button();
 			this.cmdKarmaGained = new System.Windows.Forms.Button();
 			this.lstKarma = new System.Windows.Forms.ListView();
@@ -956,7 +958,7 @@
 			this.tsVehicleWeaponModNotes = new System.Windows.Forms.ToolStripMenuItem();
 			this.cmsWeaponLocation = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.tsWeaponRenameLocation = new System.Windows.Forms.ToolStripMenuItem();
-			this.chtKarma = new System.Windows.Forms.DataVisualization.Charting.Chart();
+			this.chtNuyen = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.cmdAddMartialArt = new SplitButton();
 			this.cmdAddSpell = new SplitButton();
 			this.cmdAddComplexForm = new SplitButton();
@@ -995,8 +997,8 @@
 			this.cmsSpellButton.SuspendLayout();
 			this.tabAdept.SuspendLayout();
 			this.tabTechnomancer.SuspendLayout();
-			this.cmsComplexForm.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nudComplexFormRating)).BeginInit();
+			this.cmsComplexForm.SuspendLayout();
 			this.tabCritter.SuspendLayout();
 			this.tabInitiation.SuspendLayout();
 			this.tabCyberware.SuspendLayout();
@@ -1032,6 +1034,7 @@
 			this.splitKarmaNuyen.Panel1.SuspendLayout();
 			this.splitKarmaNuyen.Panel2.SuspendLayout();
 			this.splitKarmaNuyen.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.chtKarma)).BeginInit();
 			this.tabCalendar.SuspendLayout();
 			this.tabNotes.SuspendLayout();
 			this.tabImprovements.SuspendLayout();
@@ -1076,7 +1079,7 @@
 			this.cmsVehicleWeaponAccessoryGear.SuspendLayout();
 			this.cmsVehicleWeaponMod.SuspendLayout();
 			this.cmsWeaponLocation.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.chtKarma)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.chtNuyen)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// StatusStrip
@@ -3691,22 +3694,6 @@
 			this.panSpirits.Size = new System.Drawing.Size(824, 156);
 			this.panSpirits.TabIndex = 4;
 			// 
-			// cmsSpellButton
-			// 
-			this.cmsSpellButton.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsCreateSpell});
-			this.cmsSpellButton.Name = "cmsSpellButton";
-			this.cmsSpellButton.Size = new System.Drawing.Size(137, 26);
-			this.cmsSpellButton.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenu_Opening);
-			// 
-			// tsCreateSpell
-			// 
-			this.tsCreateSpell.Name = "tsCreateSpell";
-			this.tsCreateSpell.Size = new System.Drawing.Size(136, 22);
-			this.tsCreateSpell.Tag = "Menu_CreateSpell";
-			this.tsCreateSpell.Text = "&Create Spell";
-			this.tsCreateSpell.Click += new System.EventHandler(this.tsCreateSpell_Click);
-			// 
 			// cmdRollDrain
 			// 
 			this.cmdRollDrain.FlatAppearance.BorderSize = 0;
@@ -3734,6 +3721,22 @@
 			this.cmdRollSpell.UseVisualStyleBackColor = true;
 			this.cmdRollSpell.Visible = false;
 			this.cmdRollSpell.Click += new System.EventHandler(this.cmdRollSpell_Click);
+			// 
+			// cmsSpellButton
+			// 
+			this.cmsSpellButton.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsCreateSpell});
+			this.cmsSpellButton.Name = "cmsSpellButton";
+			this.cmsSpellButton.Size = new System.Drawing.Size(137, 26);
+			this.cmsSpellButton.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenu_Opening);
+			// 
+			// tsCreateSpell
+			// 
+			this.tsCreateSpell.Name = "tsCreateSpell";
+			this.tsCreateSpell.Size = new System.Drawing.Size(136, 22);
+			this.tsCreateSpell.Tag = "Menu_CreateSpell";
+			this.tsCreateSpell.Text = "&Create Spell";
+			this.tsCreateSpell.Click += new System.EventHandler(this.tsCreateSpell_Click);
 			// 
 			// tabAdept
 			// 
@@ -4230,6 +4233,25 @@
 			this.panSprites.Size = new System.Drawing.Size(827, 163);
 			this.panSprites.TabIndex = 25;
 			// 
+			// nudComplexFormRating
+			// 
+			this.nudComplexFormRating.Location = new System.Drawing.Point(391, 51);
+			this.nudComplexFormRating.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.nudComplexFormRating.Name = "nudComplexFormRating";
+			this.nudComplexFormRating.Size = new System.Drawing.Size(34, 20);
+			this.nudComplexFormRating.TabIndex = 133;
+			this.nudComplexFormRating.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.nudComplexFormRating.Visible = false;
+			this.nudComplexFormRating.ValueChanged += new System.EventHandler(this.nudComplexFormRating_ValueChanged);
+			// 
 			// cmsComplexForm
 			// 
 			this.cmsComplexForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -4256,25 +4278,6 @@
 			this.tsComplexFormNotes.Tag = "Menu_Notes";
 			this.tsComplexFormNotes.Text = "&Notes";
 			this.tsComplexFormNotes.Click += new System.EventHandler(this.tsComplexFormNotes_Click);
-			// 
-			// nudComplexFormRating
-			// 
-			this.nudComplexFormRating.Location = new System.Drawing.Point(391, 51);
-			this.nudComplexFormRating.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.nudComplexFormRating.Name = "nudComplexFormRating";
-			this.nudComplexFormRating.Size = new System.Drawing.Size(34, 20);
-			this.nudComplexFormRating.TabIndex = 133;
-			this.nudComplexFormRating.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.nudComplexFormRating.Visible = false;
-			this.nudComplexFormRating.ValueChanged += new System.EventHandler(this.nudComplexFormRating_ValueChanged);
 			// 
 			// tabCritter
 			// 
@@ -4852,60 +4855,6 @@
 			this.lblCyberwareESSLabel.Tag = "Label_Cyberware";
 			this.lblCyberwareESSLabel.Text = "Cyberware:";
 			// 
-			// cmsCyberware
-			// 
-			this.cmsCyberware.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsCyberwareAddAsPlugin,
-            this.tsCyberwareAddGear,
-            this.tsCyberwareNotes});
-			this.cmsCyberware.Name = "cmsCyberware";
-			this.cmsCyberware.Size = new System.Drawing.Size(148, 70);
-			this.cmsCyberware.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenu_Opening);
-			// 
-			// tsCyberwareAddAsPlugin
-			// 
-			this.tsCyberwareAddAsPlugin.Image = global::Chummer.Properties.Resources.brick_add;
-			this.tsCyberwareAddAsPlugin.Name = "tsCyberwareAddAsPlugin";
-			this.tsCyberwareAddAsPlugin.Size = new System.Drawing.Size(147, 22);
-			this.tsCyberwareAddAsPlugin.Tag = "Menu_AddAsPlugin";
-			this.tsCyberwareAddAsPlugin.Text = "&Add as Plugin";
-			this.tsCyberwareAddAsPlugin.Click += new System.EventHandler(this.tsCyberwareAddAsPlugin_Click);
-			// 
-			// tsCyberwareAddGear
-			// 
-			this.tsCyberwareAddGear.Image = global::Chummer.Properties.Resources.camera_add;
-			this.tsCyberwareAddGear.Name = "tsCyberwareAddGear";
-			this.tsCyberwareAddGear.Size = new System.Drawing.Size(147, 22);
-			this.tsCyberwareAddGear.Tag = "Menu_AddGear";
-			this.tsCyberwareAddGear.Text = "Add &Gear";
-			this.tsCyberwareAddGear.Click += new System.EventHandler(this.tsCyberwareAddGear_Click);
-			// 
-			// tsCyberwareNotes
-			// 
-			this.tsCyberwareNotes.Image = global::Chummer.Properties.Resources.note_edit;
-			this.tsCyberwareNotes.Name = "tsCyberwareNotes";
-			this.tsCyberwareNotes.Size = new System.Drawing.Size(147, 22);
-			this.tsCyberwareNotes.Tag = "Menu_Notes";
-			this.tsCyberwareNotes.Text = "&Notes";
-			this.tsCyberwareNotes.Click += new System.EventHandler(this.tsCyberwareNotes_Click);
-			// 
-			// cmsDeleteCyberware
-			// 
-			this.cmsDeleteCyberware.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsCyberwareSell});
-			this.cmsDeleteCyberware.Name = "cmsCyberware";
-			this.cmsDeleteCyberware.Size = new System.Drawing.Size(120, 26);
-			this.cmsDeleteCyberware.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenu_Opening);
-			// 
-			// tsCyberwareSell
-			// 
-			this.tsCyberwareSell.Image = global::Chummer.Properties.Resources.brick_delete;
-			this.tsCyberwareSell.Name = "tsCyberwareSell";
-			this.tsCyberwareSell.Size = new System.Drawing.Size(119, 22);
-			this.tsCyberwareSell.Tag = "Menu_SellItem";
-			this.tsCyberwareSell.Text = "&Sell Item";
-			this.tsCyberwareSell.Click += new System.EventHandler(this.tsCyberwareSell_Click);
-			// 
 			// lblCyberwareRating
 			// 
 			this.lblCyberwareRating.AutoSize = true;
@@ -5113,6 +5062,60 @@
 			this.treCyberware.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treCyberware_AfterSelect);
 			this.treCyberware.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treCyberware_KeyDown);
 			this.treCyberware.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TreeView_MouseDown);
+			// 
+			// cmsCyberware
+			// 
+			this.cmsCyberware.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsCyberwareAddAsPlugin,
+            this.tsCyberwareAddGear,
+            this.tsCyberwareNotes});
+			this.cmsCyberware.Name = "cmsCyberware";
+			this.cmsCyberware.Size = new System.Drawing.Size(148, 70);
+			this.cmsCyberware.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenu_Opening);
+			// 
+			// tsCyberwareAddAsPlugin
+			// 
+			this.tsCyberwareAddAsPlugin.Image = global::Chummer.Properties.Resources.brick_add;
+			this.tsCyberwareAddAsPlugin.Name = "tsCyberwareAddAsPlugin";
+			this.tsCyberwareAddAsPlugin.Size = new System.Drawing.Size(147, 22);
+			this.tsCyberwareAddAsPlugin.Tag = "Menu_AddAsPlugin";
+			this.tsCyberwareAddAsPlugin.Text = "&Add as Plugin";
+			this.tsCyberwareAddAsPlugin.Click += new System.EventHandler(this.tsCyberwareAddAsPlugin_Click);
+			// 
+			// tsCyberwareAddGear
+			// 
+			this.tsCyberwareAddGear.Image = global::Chummer.Properties.Resources.camera_add;
+			this.tsCyberwareAddGear.Name = "tsCyberwareAddGear";
+			this.tsCyberwareAddGear.Size = new System.Drawing.Size(147, 22);
+			this.tsCyberwareAddGear.Tag = "Menu_AddGear";
+			this.tsCyberwareAddGear.Text = "Add &Gear";
+			this.tsCyberwareAddGear.Click += new System.EventHandler(this.tsCyberwareAddGear_Click);
+			// 
+			// tsCyberwareNotes
+			// 
+			this.tsCyberwareNotes.Image = global::Chummer.Properties.Resources.note_edit;
+			this.tsCyberwareNotes.Name = "tsCyberwareNotes";
+			this.tsCyberwareNotes.Size = new System.Drawing.Size(147, 22);
+			this.tsCyberwareNotes.Tag = "Menu_Notes";
+			this.tsCyberwareNotes.Text = "&Notes";
+			this.tsCyberwareNotes.Click += new System.EventHandler(this.tsCyberwareNotes_Click);
+			// 
+			// cmsDeleteCyberware
+			// 
+			this.cmsDeleteCyberware.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsCyberwareSell});
+			this.cmsDeleteCyberware.Name = "cmsCyberware";
+			this.cmsDeleteCyberware.Size = new System.Drawing.Size(120, 26);
+			this.cmsDeleteCyberware.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenu_Opening);
+			// 
+			// tsCyberwareSell
+			// 
+			this.tsCyberwareSell.Image = global::Chummer.Properties.Resources.brick_delete;
+			this.tsCyberwareSell.Name = "tsCyberwareSell";
+			this.tsCyberwareSell.Size = new System.Drawing.Size(119, 22);
+			this.tsCyberwareSell.Tag = "Menu_SellItem";
+			this.tsCyberwareSell.Text = "&Sell Item";
+			this.tsCyberwareSell.Click += new System.EventHandler(this.tsCyberwareSell_Click);
 			// 
 			// tabStreetGear
 			// 
@@ -8893,6 +8896,7 @@
 			// splitKarmaNuyen.Panel2
 			// 
 			this.splitKarmaNuyen.Panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
+			this.splitKarmaNuyen.Panel2.Controls.Add(this.chtNuyen);
 			this.splitKarmaNuyen.Panel2.Controls.Add(this.cmdNuyenEdit);
 			this.splitKarmaNuyen.Panel2.Controls.Add(this.lstNuyen);
 			this.splitKarmaNuyen.Panel2.Controls.Add(this.cmdNuyenSpent);
@@ -8901,6 +8905,17 @@
 			this.splitKarmaNuyen.Size = new System.Drawing.Size(832, 602);
 			this.splitKarmaNuyen.SplitterDistance = 412;
 			this.splitKarmaNuyen.TabIndex = 6;
+			// 
+			// chtKarma
+			// 
+			this.chtKarma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			chartArea1.Name = "ChartArea1";
+			this.chtKarma.ChartAreas.Add(chartArea1);
+			this.chtKarma.Location = new System.Drawing.Point(0, 391);
+			this.chtKarma.Name = "chtKarma";
+			this.chtKarma.Size = new System.Drawing.Size(409, 208);
+			this.chtKarma.TabIndex = 4;
+			this.chtKarma.Text = "chart1";
 			// 
 			// cmdKarmaEdit
 			// 
@@ -8928,6 +8943,8 @@
 			// 
 			// lstKarma
 			// 
+			this.lstKarma.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
 			this.lstKarma.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colKarmaDate,
             this.colKarmaAmount,
@@ -8938,7 +8955,7 @@
 			this.lstKarma.Location = new System.Drawing.Point(0, 32);
 			this.lstKarma.MultiSelect = false;
 			this.lstKarma.Name = "lstKarma";
-			this.lstKarma.Size = new System.Drawing.Size(409, 293);
+			this.lstKarma.Size = new System.Drawing.Size(409, 353);
 			this.lstKarma.Sorting = System.Windows.Forms.SortOrder.Descending;
 			this.lstKarma.TabIndex = 0;
 			this.lstKarma.UseCompatibleStateImageBehavior = false;
@@ -8990,6 +9007,8 @@
 			// 
 			// lstNuyen
 			// 
+			this.lstNuyen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
 			this.lstNuyen.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colNuyenDate,
             this.colNuyenAmount,
@@ -9000,7 +9019,7 @@
 			this.lstNuyen.Location = new System.Drawing.Point(0, 32);
 			this.lstNuyen.MultiSelect = false;
 			this.lstNuyen.Name = "lstNuyen";
-			this.lstNuyen.Size = new System.Drawing.Size(410, 567);
+			this.lstNuyen.Size = new System.Drawing.Size(410, 353);
 			this.lstNuyen.Sorting = System.Windows.Forms.SortOrder.Descending;
 			this.lstNuyen.TabIndex = 3;
 			this.lstNuyen.UseCompatibleStateImageBehavior = false;
@@ -11196,15 +11215,16 @@
 			this.tsWeaponRenameLocation.Text = "&Rename Location";
 			this.tsWeaponRenameLocation.Click += new System.EventHandler(this.tsWeaponRenameLocation_Click);
 			// 
-			// chtKarma
+			// chtNuyen
 			// 
-			chartArea1.Name = "ChartArea1";
-			this.chtKarma.ChartAreas.Add(chartArea1);
-			this.chtKarma.Location = new System.Drawing.Point(0, 327);
-			this.chtKarma.Name = "chtKarma";
-			this.chtKarma.Size = new System.Drawing.Size(409, 272);
-			this.chtKarma.TabIndex = 4;
-			this.chtKarma.Text = "chart1";
+			this.chtNuyen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			chartArea2.Name = "ChartArea1";
+			this.chtNuyen.ChartAreas.Add(chartArea2);
+			this.chtNuyen.Location = new System.Drawing.Point(0, 391);
+			this.chtNuyen.Name = "chtNuyen";
+			this.chtNuyen.Size = new System.Drawing.Size(410, 208);
+			this.chtNuyen.TabIndex = 7;
+			this.chtNuyen.Text = "chart1";
 			// 
 			// cmdAddMartialArt
 			// 
@@ -11484,8 +11504,8 @@
 			this.tabAdept.PerformLayout();
 			this.tabTechnomancer.ResumeLayout(false);
 			this.tabTechnomancer.PerformLayout();
-			this.cmsComplexForm.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.nudComplexFormRating)).EndInit();
+			this.cmsComplexForm.ResumeLayout(false);
 			this.tabCritter.ResumeLayout(false);
 			this.tabCritter.PerformLayout();
 			this.tabInitiation.ResumeLayout(false);
@@ -11534,6 +11554,7 @@
 			this.splitKarmaNuyen.Panel2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitKarmaNuyen)).EndInit();
 			this.splitKarmaNuyen.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.chtKarma)).EndInit();
 			this.tabCalendar.ResumeLayout(false);
 			this.tabCalendar.PerformLayout();
 			this.tabNotes.ResumeLayout(false);
@@ -11587,7 +11608,7 @@
 			this.cmsVehicleWeaponAccessoryGear.ResumeLayout(false);
 			this.cmsVehicleWeaponMod.ResumeLayout(false);
 			this.cmsWeaponLocation.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.chtKarma)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.chtNuyen)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -12508,6 +12529,7 @@
 		private System.Windows.Forms.ToolStripMenuItem mnuSpecialAddBiowareSuite;
 		private System.Windows.Forms.ToolStripMenuItem mnuSpecialAddCyberwareSuite;
 		private System.Windows.Forms.DataVisualization.Charting.Chart chtKarma;
+		private System.Windows.Forms.DataVisualization.Charting.Chart chtNuyen;
     }
 }
 
