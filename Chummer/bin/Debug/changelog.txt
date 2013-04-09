@@ -1,5 +1,6 @@
 Build XXX
 - added a Threshold field to the Dice Roller window which will tell you if the rolls was a success or failure
+- Karma and Nuyen tab now display charts to show the character's total Karma and Nuyen over time
 
 New Strings
 - Label_DiceRoller_Threshold

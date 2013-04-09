@@ -20640,9 +20640,9 @@ namespace Chummer
 		{
 			lstKarma.Width = splitKarmaNuyen.Panel1.Width;
 			chtKarma.Width = splitKarmaNuyen.Panel1.Width;
-			// ***** TEMPORARILY DISABLED *****
-			//lstKarma.Height = splitKarmaNuyen.Panel1.Height - lstKarma.Top;
-			//lstKarma.Height = chtKarma.Top - lstKarma.Top - 6;
+			chtKarma.Height = 210;
+			chtKarma.Top = splitKarmaNuyen.Panel1.Height - 6 - chtKarma.Height;
+			lstKarma.Height = chtKarma.Top - 6 - lstKarma.Top;
 			try
 			{
 				if (lstKarma.Width > 409)
@@ -20659,8 +20659,9 @@ namespace Chummer
 		{
 			lstNuyen.Width = splitKarmaNuyen.Panel2.Width;
 			chtNuyen.Width = splitKarmaNuyen.Panel2.Width;
-			//lstNuyen.Height = splitKarmaNuyen.Panel1.Height - lstKarma.Top;
-			//lstNuyen.Height = chtNuyen.Top - lstNuyen.Top - 6;
+			chtNuyen.Height = 210;
+			chtNuyen.Top = splitKarmaNuyen.Panel2.Height - 6 - chtNuyen.Height;
+			lstNuyen.Height = chtNuyen.Top - 6 - lstNuyen.Top;
 			try
 			{
 				if (lstNuyen.Width > 409)
