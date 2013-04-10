@@ -10,6 +10,10 @@ Build XXX
 - increased maximum Rating for Wireless Negating Paint and Wallpaper from 6 to 10 to correspond to the Ratings of Jammers
 - changed Target Autosoft on Dragonfly Minidrone to Exotic Melee Weapon as per Arsenal Errata
 - corrected the Avail for Firewall and System Vehicle Mods (0)
+- fixed an issue where undoing an Nuyen Expense for an Armor Mod would not properly remove it from the list until reloading
+- remvove the Concealable Holster from the Mortimer of London: Berwick Suit Jacket Ensemble
+- corrected the Capacity for Clothing Ensembles
+- purchasing plugins for Gear with a quantity higher than 1 now costs the correct amount of Nuyen (plugin's cost x parent's quantity)
 
 New Strings
 - Label_DiceRoller_Threshold

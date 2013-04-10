@@ -13815,6 +13815,8 @@ namespace Chummer
 				return;
 			}
 
+			CommonFunctions objCommon = new CommonFunctions(_objCharacter);
+
 			ExpenseLogEntry objEntry = new ExpenseLogEntry();
 			objItem = lstNuyen.SelectedItems[0];
 
@@ -13984,7 +13986,6 @@ namespace Chummer
 					break;
 				case NuyenExpenseType.AddGear:
 					// Locate the Gear that was added.
-					CommonFunctions objCommon = new CommonFunctions(_objCharacter);
 					Gear objGear = objCommon.FindGear(objEntry.Undo.ObjectId, _objCharacter.Gear);
 					objGear.Quantity -= objEntry.Undo.Qty;
 
@@ -14404,38 +14405,31 @@ namespace Chummer
 					break;
 				case NuyenExpenseType.AddArmor:
 					// Locate the Armor that was added.
-					foreach (Armor objArmor in _objCharacter.Armor)
+					Armor objArmor = objCommon.FindArmor(objEntry.Undo.ObjectId, _objCharacter.Armor);
+
+					if (objArmor != null)
 					{
-						if (objArmor.InternalId == objEntry.Undo.ObjectId)
-						{
-							// Remove the Improvements for any child items.
-							foreach (ArmorMod objMod in objArmor.ArmorMods)
-								_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.ArmorMod, objMod.InternalId);
+						// Remove the Improvements for any child items.
+						foreach (ArmorMod objMod in objArmor.ArmorMods)
+							_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.ArmorMod, objMod.InternalId);
 
-							// Remove the Improvements for the Armor.
-							_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.Armor, objArmor.InternalId);
+						// Remove the Improvements for the Armor.
+						_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.Armor, objArmor.InternalId);
 
-							// Remove the Armor from the character.
-							_objCharacter.Armor.Remove(objArmor);
+						// Remove the Armor from the character.
+						_objCharacter.Armor.Remove(objArmor);
 
-							// Remove the Armor from the Tree.
-							foreach (TreeNode objNode in treArmor.Nodes[0].Nodes)
-							{
-								if (objNode.Tag.ToString() == objEntry.Undo.ObjectId)
-								{
-									objNode.Remove();
-									break;
-								}
-							}
-							break;
-						}
+						// Remove the Armor from the Tree.
+						TreeNode objArmorNode = objCommon.FindNode(objEntry.Undo.ObjectId, treArmor);
+						objArmorNode.Remove();
 					}
+
 					break;
 				case NuyenExpenseType.AddArmorMod:
 					// Locate the Armor Mod that was added.
-					foreach (Armor objArmor in _objCharacter.Armor)
+					foreach (Armor objFoundArmor in _objCharacter.Armor)
 					{
-						foreach (ArmorMod objMod in objArmor.ArmorMods)
+						foreach (ArmorMod objMod in objFoundArmor.ArmorMods)
 						{
 							if (objMod.InternalId == objEntry.Undo.ObjectId)
 							{
@@ -14443,7 +14437,7 @@ namespace Chummer
 								_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.ArmorMod, objMod.InternalId);
 
 								// Remove the Armor Mod from the Armor.
-								objArmor.ArmorMods.Remove(objMod);
+								objFoundArmor.ArmorMods.Remove(objMod);
 
 								// Remove the Cyberweapon created by the Mod if applicable.
 								if (objMod.WeaponID != Guid.Empty.ToString())
@@ -14468,17 +14462,8 @@ namespace Chummer
 								}
 
 								// Remove the Armor Mod from the Tree.
-								foreach (TreeNode objNode in treArmor.Nodes[0].Nodes)
-								{
-									foreach (TreeNode objChild in objNode.Nodes)
-									{
-										if (objChild.Tag.ToString() == objEntry.Undo.ObjectId)
-										{
-											objChild.Remove();
-											break;
-										}
-									}
-								}
+								TreeNode objNode = objCommon.FindNode(objMod.InternalId, treArmor.Nodes[0]);
+								objNode.Remove();
 								break;
 							}
 						}
@@ -14576,9 +14561,9 @@ namespace Chummer
 					break;
 				case NuyenExpenseType.AddArmorGear:
 					// Locate the Armor Gear that was added.
-					foreach (Armor objArmor in _objCharacter.Armor)
+					foreach (Armor objFoundArmor in _objCharacter.Armor)
 					{
-						foreach (Gear objArmorGear in objArmor.Gear)
+						foreach (Gear objArmorGear in objFoundArmor.Gear)
 						{
 							if (objArmorGear.InternalId == objEntry.Undo.ObjectId)
 							{
@@ -14604,7 +14589,7 @@ namespace Chummer
 								{
 									// Remove any Improvements created by the Gear.
 									_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.Gear, objArmorGear.InternalId);
-									objArmor.Gear.Remove(objArmorGear);
+									objFoundArmor.Gear.Remove(objArmorGear);
 
 									// Remove any Weapons created by the Gear.
 									foreach (Weapon objWeapon in _objCharacter.Weapons)
@@ -23707,6 +23692,8 @@ namespace Chummer
 				foreach (Gear objPlugin in objStackWith.Children)
 					intCost += (objPlugin.TotalCost * frmPickGear.SelectedQty);
 			}
+			if (!blnNullParent)
+				intCost *= objSelectedGear.Quantity;
 
 			// Apply a markup if applicable.
 			if (frmPickGear.Markup != 0)

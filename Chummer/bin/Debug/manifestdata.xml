@@ -157,7 +157,7 @@
 	<file>
 		<name>data/armor.xml</name>
 		<type>Data Files</type>
-		<version>-882</version>
+		<version>-881</version>
 		<description>Armor</description>
 		<notes>- Armor data file</notes>
 	</file>

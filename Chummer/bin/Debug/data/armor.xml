@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-882</version>
+	<version>-881</version>
 	<categories>
 		<category>Armor</category>
 		<category>Clothing</category>
@@ -2045,12 +2045,9 @@
 			<category>Clothing</category>
 			<b>+5</b>
 			<i>+3</i>
-			<armorcapacity>6</armorcapacity>
+			<armorcapacity>18</armorcapacity>
 			<avail>12</avail>
 			<cost>2850</cost>
-			<gears>
-				<usegear>Concealable Holster</usegear>
-			</gears>
 			<source>AR</source>
 			<page>45</page>
 		</armor>
@@ -2059,7 +2056,7 @@
 			<category>Clothing</category>
 			<b>+4</b>
 			<i>+3</i>
-			<armorcapacity>6</armorcapacity>
+			<armorcapacity>18</armorcapacity>
 			<avail>12</avail>
 			<cost>3100</cost>
 			<source>AR</source>
@@ -2070,7 +2067,7 @@
 			<category>Clothing</category>
 			<b>+7</b>
 			<i>+7</i>
-			<armorcapacity>7</armorcapacity>
+			<armorcapacity>24</armorcapacity>
 			<avail>7</avail>
 			<cost>2250</cost>
 			<source>AR</source>
@@ -2081,7 +2078,7 @@
 			<category>Clothing</category>
 			<b>+6</b>
 			<i>+5</i>
-			<armorcapacity>6</armorcapacity>
+			<armorcapacity>24</armorcapacity>
 			<avail>7</avail>
 			<cost>2400</cost>
 			<source>AR</source>
@@ -2092,7 +2089,7 @@
 			<category>Clothing</category>
 			<b>+5</b>
 			<i>+3</i>
-			<armorcapacity>6</armorcapacity>
+			<armorcapacity>18</armorcapacity>
 			<avail>8</avail>
 			<cost>1500</cost>
 			<gears>
@@ -2106,7 +2103,7 @@
 			<category>Clothing</category>
 			<b>+4</b>
 			<i>+3</i>
-			<armorcapacity>6</armorcapacity>
+			<armorcapacity>18</armorcapacity>
 			<avail>8</avail>
 			<cost>1200</cost>
 			<source>AR</source>
@@ -2117,7 +2114,7 @@
 			<category>Clothing</category>
 			<b>+6</b>
 			<i>+3</i>
-			<armorcapacity>6</armorcapacity>
+			<armorcapacity>18</armorcapacity>
 			<avail>8</avail>
 			<cost>2000</cost>
 			<gears>
@@ -2131,7 +2128,7 @@
 			<category>Clothing</category>
 			<b>+6</b>
 			<i>+2</i>
-			<armorcapacity>6</armorcapacity>
+			<armorcapacity>18</armorcapacity>
 			<avail>9</avail>
 			<cost>1950</cost>
 			<source>AR</source>
@@ -2142,7 +2139,7 @@
 			<category>Clothing</category>
 			<b>+5</b>
 			<i>+2</i>
-			<armorcapacity>6</armorcapacity>
+			<armorcapacity>18</armorcapacity>
 			<avail>9</avail>
 			<cost>1700</cost>
 			<source>AR</source>
@@ -2153,7 +2150,7 @@
 			<category>Clothing</category>
 			<b>+5</b>
 			<i>+4</i>
-			<armorcapacity>6</armorcapacity>
+			<armorcapacity>24</armorcapacity>
 			<avail>10</avail>
 			<cost>4600</cost>
 			<source>ARG</source>
@@ -2164,7 +2161,7 @@
 			<category>Clothing</category>
 			<b>5</b>
 			<i>3</i>
-			<armorcapacity>6</armorcapacity>
+			<armorcapacity>18</armorcapacity>
 			<avail>7</avail>
 			<cost>1000</cost>
 			<source>ARG</source>
@@ -2175,7 +2172,7 @@
 			<category>Clothing</category>
 			<b>5</b>
 			<i>2</i>
-			<armorcapacity>6</armorcapacity>
+			<armorcapacity>18</armorcapacity>
 			<avail>7</avail>
 			<cost>900</cost>
 			<source>ARG</source>
@@ -2186,7 +2183,7 @@
 			<category>Clothing</category>
 			<b>5</b>
 			<i>3</i>
-			<armorcapacity>6</armorcapacity>
+			<armorcapacity>18</armorcapacity>
 			<avail>7</avail>
 			<cost>1050</cost>
 			<source>ARG</source>
@@ -2197,7 +2194,7 @@
 			<category>Clothing</category>
 			<b>4</b>
 			<i>3</i>
-			<armorcapacity>6</armorcapacity>
+			<armorcapacity>18</armorcapacity>
 			<avail>10</avail>
 			<cost>3350</cost>
 			<source>ARG</source>
@@ -2208,7 +2205,7 @@
 			<category>Clothing</category>
 			<b>2</b>
 			<i>2</i>
-			<armorcapacity>0</armorcapacity>
+			<armorcapacity>18</armorcapacity>
 			<avail>10</avail>
 			<cost>2600</cost>
 			<source>ARG</source>
