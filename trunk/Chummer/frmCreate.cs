@@ -17438,10 +17438,12 @@ namespace Chummer
 				foreach (Armor objArmor in _objCharacter.Armor)
 				{
 					if (objArmor.Equipped && (objArmor.Location == treArmor.SelectedNode.Text || objArmor.Location == string.Empty && treArmor.SelectedNode == treArmor.Nodes[0]))
-						lblArmorEquipped.Text += objArmor.DisplayName + "\n";
+						lblArmorEquipped.Text += objArmor.DisplayName + " (" + objArmor.TotalBallistic.ToString() + "/" + objArmor.TotalImpact.ToString() + ")\n";
 				}
 				if (lblArmorEquipped.Text == string.Empty)
 					lblArmorEquipped.Text = LanguageManager.Instance.GetString("String_None");
+
+				lblArmorEquipped.Visible = true;
 
 				_blnSkipRefresh = true;
 				chkIncludedInArmor.Enabled = false;
@@ -17450,6 +17452,8 @@ namespace Chummer
 				chkIncludedInArmor.Checked = false;
 				_blnSkipRefresh = false;
 			}
+			else
+				lblArmorEquipped.Visible = false;
 
 			if (treArmor.SelectedNode.Level == 1)
 			{
@@ -22499,6 +22503,16 @@ namespace Chummer
 						strAdvantage = objXmlMentor["altadvantage"].InnerText;
 					else
 						strAdvantage = objXmlMentor["advantage"].InnerText;
+
+					foreach (Improvement objImprovement in _objCharacter.Improvements)
+					{
+						if (objImprovement.SourceName == objMentorQuality.InternalId)
+						{
+							if (objImprovement.Notes != string.Empty)
+								strAdvantage += " " + LanguageManager.Instance.TranslateExtra(objImprovement.Notes) + ".";
+						}
+					}
+
 					if (objXmlMentor["altdisadvantage"] != null)
 						strDisadvantage = objXmlMentor["altdisadvantage"].InnerText;
 					else

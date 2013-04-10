@@ -815,6 +815,13 @@ namespace Chummer
 							if (_objCharacter.StreetCred >= _objCharacter.Notoriety)
 								blnOneOfMet = true;
 						}
+						else if (objXmlRequired.Name == "damageresistance")
+						{
+							// Damage Resistance must be a particular value.
+							ImprovementManager _objImprovementManager = new ImprovementManager(_objCharacter);
+							if (_objCharacter.BOD.TotalValue + _objImprovementManager.ValueOf(Improvement.ImprovementType.DamageResistance) >= Convert.ToInt32(objXmlRequired.InnerText))
+								blnOneOfMet = true;
+						}
 					}
 
 					// Update the flag for requirements met.
@@ -1111,6 +1118,13 @@ namespace Chummer
 						{
 							// Street Cred must be higher than Notoriety.
 							if (_objCharacter.StreetCred >= _objCharacter.Notoriety)
+								blnFound = true;
+						}
+						else if (objXmlRequired.Name == "damageresistance")
+						{
+							// Damage Resistance must be a particular value.
+							ImprovementManager _objImprovementManager = new ImprovementManager(_objCharacter);
+							if (_objCharacter.BOD.TotalValue + _objImprovementManager.ValueOf(Improvement.ImprovementType.DamageResistance) >= Convert.ToInt32(objXmlRequired.InnerText))
 								blnFound = true;
 						}
 

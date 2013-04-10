@@ -1,6 +1,15 @@
 Build XXX
 - added a Threshold field to the Dice Roller window which will tell you if the rolls was a success or failure
 - Karma and Nuyen tab now display charts to show the character's total Karma and Nuyen over time
+- fixed an issue where the Karma cost for increasing Initiation/Submersion Grade would not round correctly in the tooltip with Group and/or Ordeal checked
+- when selected, Armor Bundles now show the Ballistic and Impact Ratings of their equipped pieces
+- added support for <damageresistance /> to Quality requirements which requires a character's total Damage Resistance Pool to meet or exceed the specified size
+- Panzer Quality now requires Damage Resistance Pool of 5 instead of BOD 5
+- Paragons that offer a choice of bonuses now display their selected bonus on the Complex Forms and Sprites tab
+- Paragons that offer a choice of bonuses no longer prompt for a value to be entered in a textbox
+- increased maximum Rating for Wireless Negating Paint and Wallpaper from 6 to 10 to correspond to the Ratings of Jammers
+- changed Target Autosoft on Dragonfly Minidrone to Exotic Melee Weapon as per Arsenal Errata
+- corrected the Avail for Firewall and System Vehicle Mods (0)
 
 New Strings
 - Label_DiceRoller_Threshold

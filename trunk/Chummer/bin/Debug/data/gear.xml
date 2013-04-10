@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-825</version>
+	<version>-824</version>
 	<categories>
 		<category show="false">Altskin Function</category>
 		<category>Ammunition</category>
@@ -11051,7 +11051,7 @@
 			<avail>+2</avail>
 			<cost>3000</cost>
 			<source>UN</source>
-			<page>117</page>
+			<page>118</page>
 		</gear>
 		<gear>
 			<name>Pluscode</name>
@@ -11061,7 +11061,7 @@
 			<avail>+2</avail>
 			<cost>Rating * 1000</cost>
 			<source>UN</source>
-			<page>117</page>
+			<page>118</page>
 		</gear>
 		<gear>
 			<name>Homewrecker</name>
@@ -11302,7 +11302,7 @@
 		<gear>
 			<name>Wireless Negation Paint</name>
 			<category>Wireless Negation</category>
-			<rating>6</rating>
+			<rating>10</rating>
 			<avail>Rating</avail>
 			<cost>Rating * 20</cost>
 			<source>UN</source>
@@ -11311,7 +11311,7 @@
 		<gear>
 			<name>Wireless Negation Wallpaper</name>
 			<category>Wireless Negation</category>
-			<rating>6</rating>
+			<rating>10</rating>
 			<avail>Rating</avail>
 			<cost>Rating * 5</cost>
 			<source>UN</source>
