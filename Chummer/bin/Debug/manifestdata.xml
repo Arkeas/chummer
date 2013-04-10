@@ -206,7 +206,7 @@
 	<file>
 		<name>data/gear.xml</name>
 		<type>Data Files</type>
-		<version>-825</version>
+		<version>-824</version>
 		<description>Gear</description>
 		<notes>- Gear data file</notes>
 	</file>
@@ -276,14 +276,14 @@
 	<file>
 		<name>data/programs.xml</name>
 		<type>Data Files</type>
-		<version>-919</version>
+		<version>-918</version>
 		<description>Programs</description>
 		<notes>- Programs data file</notes>
 	</file>
 	<file>
 		<name>data/qualities.xml</name>
 		<type>Data Files</type>
-		<version>-875</version>
+		<version>-874</version>
 		<description>Qualities</description>
 		<notes>- Qualities data file</notes>
 	</file>
@@ -325,7 +325,7 @@
 	<file>
 		<name>data/vehicles.xml</name>
 		<type>Data Files</type>
-		<version>-875</version>
+		<version>-874</version>
 		<description>Vehicles</description>
 		<notes>- Vehicles data file</notes>
 	</file>

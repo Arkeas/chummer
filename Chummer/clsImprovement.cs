@@ -2026,6 +2026,8 @@ namespace Chummer
 
 					if (frmPickMentorSpirit.Choice1BonusNode != null)
 					{
+						string strForce = _strForcedValue;
+						_strForcedValue = frmPickMentorSpirit.Choice1;
 						blnSuccess = CreateImprovements(objImprovementSource, strSourceName, frmPickMentorSpirit.Choice1BonusNode, blnConcatSelectedValue, intRating, strFriendlyName);
 						if (!blnSuccess)
 						{
@@ -2034,10 +2036,14 @@ namespace Chummer
 							_strLimitSelection = "";
 							return blnSuccess;
 						}
+						_strForcedValue = strForce;
+						_objCharacter.Improvements.Last().Notes = frmPickMentorSpirit.Choice1;
 					}
 
 					if (frmPickMentorSpirit.Choice2BonusNode != null)
 					{
+						string strForce = _strForcedValue;
+						_strForcedValue = frmPickMentorSpirit.Choice2;
 						blnSuccess = CreateImprovements(objImprovementSource, strSourceName, frmPickMentorSpirit.Choice2BonusNode, blnConcatSelectedValue, intRating, strFriendlyName);
 						if (!blnSuccess)
 						{
@@ -2046,6 +2052,8 @@ namespace Chummer
 							_strLimitSelection = "";
 							return blnSuccess;
 						}
+						_strForcedValue = strForce;
+						_objCharacter.Improvements.Last().Notes = frmPickMentorSpirit.Choice2;
 					}
 
 					_strSelectedValue = strHoldValue;

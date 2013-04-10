@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-875</version>
+	<version>-874</version>
 	<categories>
 		<category>Positive</category>
 		<category>Negative</category>
@@ -10338,10 +10338,6 @@
 			<bonus />
 			<required>
 				<allof>
-					<attribute>
-						<name>BOD</name>
-						<total>5</total>
-					</attribute>
 					<cyberwares>
 						<cyberware>Dermal Sheath</cyberware>
 						<cyberwarecontains>Dermal Plating</cyberwarecontains>
@@ -10351,6 +10347,7 @@
 						<biowarecontains>Orthoskin</biowarecontains>
 						<count>2</count>
 					</cyberwares>
+					<damageresistance>5</damageresistance>
 					<ess>-3.0</ess>
 				</allof>
 			</required>
