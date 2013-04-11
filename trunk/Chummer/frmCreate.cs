@@ -18430,6 +18430,7 @@ namespace Chummer
 		/// <param name="blnShowArmorCapacityOnly">Whether or not only items that consume capacity should be shown.</param>
 		private bool PickArmorGear(bool blnShowArmorCapacityOnly = false)
 		{
+			bool blnNullParent = true;
 			Gear objSelectedGear = new Gear(_objCharacter);
 			Armor objSelectedArmor = new Armor(_objCharacter);
 
@@ -18440,7 +18441,11 @@ namespace Chummer
 			}
 
 			if (treArmor.SelectedNode.Level > 1)
+			{
 				objSelectedGear = _objFunctions.FindArmorGear(treArmor.SelectedNode.Tag.ToString(), _objCharacter.Armor, out objSelectedArmor);
+				if (objSelectedGear != null)
+					blnNullParent = false;
+			}
 
 			// Open the Gear XML file and locate the selected Gear.
 			XmlDocument objXmlDocument = XmlManager.Instance.Load("gear.xml");
@@ -18573,6 +18578,9 @@ namespace Chummer
 
 			if (objNewGear.InternalId == Guid.Empty.ToString())
 				return false;
+
+			if (!blnNullParent)
+				objNewGear.Parent = objSelectedGear;
 
 			// Reduce the cost for Do It Yourself components.
 			if (frmPickGear.DoItYourself)
