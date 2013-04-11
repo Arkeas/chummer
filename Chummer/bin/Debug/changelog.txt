@@ -14,6 +14,7 @@ Build XXX
 - remvove the Concealable Holster from the Mortimer of London: Berwick Suit Jacket Ensemble
 - corrected the Capacity for Clothing Ensembles
 - purchasing plugins for Gear with a quantity higher than 1 now costs the correct amount of Nuyen (plugin's cost x parent's quantity)
+- fixed an issue where Gear that is added as a plugin to another piece of Gear plugged into a piece of Armor could not be deleted until reloading the save file
 
 New Strings
 - Label_DiceRoller_Threshold
