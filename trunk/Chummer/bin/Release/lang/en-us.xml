@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-909</version>
+	<version>-908</version>
 	<name>English (US)</name>
 	<strings>
 		<!-- Common Strings -->
@@ -4316,6 +4316,10 @@ Only one attribute may be at its Maximum value during character creation.</text>
 			<text>Gremlins:</text>
 		</string>
 		<string>
+			<key>Label_DiceRoller_Threshold</key>
+			<text>Threshold:</text>
+		</string>
+		<string>
 			<key>String_DiceRoller_Glitch</key>
 			<text>Glitch with {0} Hits</text>
 		</string>
@@ -4338,6 +4342,14 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		<string>
 			<key>String_DiceRoller_ReallyLarge</key>
 			<text>Really Large Pool</text>
+		</string>
+		<string>
+			<key>String_DiceRoller_Success</key>
+			<text>Success</text>
+		</string>
+		<string>
+			<key>String_DiceRoller_Failure</key>
+			<text>Failure</text>
 		</string>
 		<!-- Expense Window -->
 		<string>

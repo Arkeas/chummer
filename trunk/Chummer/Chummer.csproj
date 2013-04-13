@@ -87,6 +87,7 @@
     <Compile Include="ContactControl.Designer.cs">
       <DependentUpon>ContactControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="controllers\clsMainController.cs" />
     <Compile Include="frmCareer.cs">
       <SubType>Form</SubType>
     </Compile>

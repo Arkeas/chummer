@@ -19,6 +19,7 @@ namespace Chummer
 	{
 		// Set the default culture to en-US so we work with decimals correctly.
 		private Character _objCharacter;
+		private MainController _objController;
 
 		private CharacterOptions _objOptions;
 		private CommonFunctions _objFunctions;
@@ -48,6 +49,7 @@ namespace Chummer
 			_objOptions = _objCharacter.Options;
 			_objFunctions = new CommonFunctions(_objCharacter);
 			_objImprovementManager = new ImprovementManager(_objCharacter);
+			_objController = new MainController(_objCharacter);
 			InitializeComponent();
 
 			// Add EventHandlers for the MAG and RES enabled events and tab enabled events.
@@ -948,7 +950,7 @@ namespace Chummer
 			PopulateGearList();
 
 			// Populate Foci.
-			PopulateFocusList();
+			_objController.PopulateFocusList(treFoci);
 
 			// Populate Vehicles.
 			foreach (Vehicle objVehicle in _objCharacter.Vehicles)
@@ -1277,12 +1279,12 @@ namespace Chummer
 			cmdArmorIDecrease.Visible = _objOptions.ArmorDegradation;
 			cmdArmorIIncrease.Visible = _objOptions.ArmorDegradation;
 
-			SortTree(treCyberware);
-			SortTree(treSpells);
-			SortTree(treComplexForms);
-			SortTree(treQualities);
-			SortTree(treCritterPowers);
-			SortTree(treMartialArts);
+			_objFunctions.SortTree(treCyberware);
+			_objFunctions.SortTree(treSpells);
+			_objFunctions.SortTree(treComplexForms);
+			_objFunctions.SortTree(treQualities);
+			_objFunctions.SortTree(treCritterPowers);
+			_objFunctions.SortTree(treMartialArts);
 			UpdateMentorSpirits();
 			UpdateInitiationGradeList();
 			PopulateCalendar();
@@ -3616,7 +3618,7 @@ namespace Chummer
 			_objCharacter.MetatypeCategory = "Free Sprite";
 			mnuSpecialConvertToFreeSprite.Visible = false;
 
-			SortTree(treCritterPowers);
+			_objFunctions.SortTree(treCritterPowers);
 			UpdateCharacterInfo();
 
 			_blnIsDirty = true;
@@ -4419,7 +4421,7 @@ namespace Chummer
 
 		private void objKnowledgeSkill_DeleteSkill(Object sender)
 		{
-			if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteKnowledgeSkill")))
+			if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteKnowledgeSkill")))
 				return;
 
 			// Handle the DeleteSkill event for the SkillControl object.
@@ -4569,7 +4571,7 @@ namespace Chummer
 
 		private void objContact_DeleteContact(Object sender)
 		{
-			if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteContact")))
+			if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteContact")))
 				return;
 
 			// Handle the DeleteContact Event for the ContactControl object.
@@ -4633,7 +4635,7 @@ namespace Chummer
 
 		private void objEnemy_DeleteContact(Object sender)
 		{
-			if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteEnemy")))
+			if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteEnemy")))
 				return;
 
 			// Determine the Karam cost to remove the Enemy.
@@ -4694,7 +4696,7 @@ namespace Chummer
 		#region PetControl Events
 		private void objPet_DeleteContact(Object sender)
 		{
-			if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteContact")))
+			if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteContact")))
 				return;
 
 			// Handle the DeleteContact Event for the ContactControl object.
@@ -4751,7 +4753,7 @@ namespace Chummer
 
 		private void objSpirit_DeleteSpirit(Object sender)
 		{
-			if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteSpirit")))
+			if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteSpirit")))
 				return;
 
 			// Handle the DeleteSpirit Event for the SpiritControl object.
@@ -4811,7 +4813,7 @@ namespace Chummer
 
 		private void objSprite_DeleteSpirit(Object sender)
 		{
-			if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteSprite")))
+			if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteSprite")))
 				return;
 
 			// Handle the DeleteSpirit Event for the SpiritControl object.
@@ -4880,7 +4882,7 @@ namespace Chummer
 
 		private void objPower_DeletePower(Object sender)
 		{
-			if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeletePower")))
+			if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeletePower")))
 				return;
 
 			// Handle the DeletePower Event for the PowerControl.
@@ -5187,7 +5189,7 @@ namespace Chummer
 			objUndo.CreateKarma(KarmaExpenseType.AddSpell, objSpell.InternalId);
 			objEntry.Undo = objUndo;
 
-			SortTree(treSpells);
+			_objFunctions.SortTree(treSpells);
 			UpdateCharacterInfo();
 
 			_blnIsDirty = true;
@@ -5204,7 +5206,7 @@ namespace Chummer
 			{
 				if (treSpells.SelectedNode.Level > 0)
 				{
-					if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteSpell")))
+					if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteSpell")))
 						return;
 
 					// Locate the Spell that is selected in the tree.
@@ -5397,12 +5399,12 @@ namespace Chummer
 
 						if (objCyberware.SourceType == Improvement.ImprovementSource.Cyberware)
 						{
-							if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteCyberware")))
+							if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteCyberware")))
 								return;
 						}
 						if (objCyberware.SourceType == Improvement.ImprovementSource.Bioware)
 						{
-							if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteBioware")))
+							if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteBioware")))
 								return;
 						}
 
@@ -5600,7 +5602,7 @@ namespace Chummer
 			objUndo.CreateKarma(KarmaExpenseType.AddComplexForm, objProgram.InternalId);
 			objExpense.Undo = objUndo;
 
-			SortTree(treComplexForms);
+			_objFunctions.SortTree(treComplexForms);
 			UpdateCharacterInfo();
 
 			_blnIsDirty = true;
@@ -5698,7 +5700,7 @@ namespace Chummer
 					if (treArmor.SelectedNode.Text == LanguageManager.Instance.GetString("Node_SelectedArmor"))
 						return;
 
-					if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteArmorLocation")))
+					if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteArmorLocation")))
 						return;
 
 					// Move all of the child nodes in the current parent to the Selected Armor parent node.
@@ -5745,7 +5747,7 @@ namespace Chummer
 					return;
 				}
 
-				if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteArmor")))
+				if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteArmor")))
 					return;
 
 				if (treArmor.SelectedNode.Level == 1)
@@ -5947,7 +5949,7 @@ namespace Chummer
 					if (treWeapons.SelectedNode.Text == LanguageManager.Instance.GetString("Node_SelectedWeapons"))
 						return;
 
-					if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteWeaponLocation")))
+					if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteWeaponLocation")))
 						return;
 
 					// Move all of the child nodes in the current parent to the Selected Weapons parent node.
@@ -5977,7 +5979,7 @@ namespace Chummer
 
 				if (treWeapons.SelectedNode.Level > 0)
 				{
-					if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteWeapon")))
+					if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteWeapon")))
 						return;
 
 					if (treWeapons.SelectedNode.Level == 1)
@@ -6150,7 +6152,7 @@ namespace Chummer
 			{
 				if (treLifestyles.SelectedNode.Level > 0)
 				{
-					if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteLifestyle")))
+					if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteLifestyle")))
 						return;
 
 					Lifestyle objLifestyle = _objFunctions.FindLifestyle(treLifestyles.SelectedNode.Tag.ToString(), _objCharacter.Lifestyles);
@@ -6177,7 +6179,7 @@ namespace Chummer
 			bool blnAddAgain = PickGear();
 			if (blnAddAgain)
 				cmdAddGear_Click(sender, e);
-			PopulateFocusList();
+			_objController.PopulateFocusList(treFoci);
 		}
 
 		private void cmdDeleteGear_Click(object sender, EventArgs e)
@@ -6190,7 +6192,7 @@ namespace Chummer
 					if (treGear.SelectedNode.Text == LanguageManager.Instance.GetString("Node_SelectedGear"))
 						return;
 
-					if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteGearLocation")))
+					if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteGearLocation")))
 						return;
 
 					// Move all of the child nodes in the current parent to the Selected Gear parent node.
@@ -6219,7 +6221,7 @@ namespace Chummer
 				}
 				if (treGear.SelectedNode.Level > 0)
 				{
-					if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteGear")))
+					if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteGear")))
 						return;
 
 					Gear objGear = new Gear(_objCharacter);
@@ -6236,7 +6238,7 @@ namespace Chummer
 					if (objParent != null)
 						objParent.Children.Remove(objGear);
 				}
-				PopulateFocusList();
+				_objController.PopulateFocusList(treFoci);
 				UpdateCharacterInfo();
 				RefreshSelectedGear();
 
@@ -6344,7 +6346,7 @@ namespace Chummer
 
 			if (treVehicles.SelectedNode.Level != 2)
 			{
-				if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteVehicle")))
+				if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteVehicle")))
 					return;
 			}
 
@@ -6370,7 +6372,7 @@ namespace Chummer
 				{
 					blnFound = true;
 
-					if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteVehicle")))
+					if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteVehicle")))
 						return;
 
 					// Check for Improved Sensor bonus.
@@ -6438,7 +6440,7 @@ namespace Chummer
 						{
 							if (objGear.InternalId == treVehicles.SelectedNode.Tag.ToString())
 							{
-								if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteVehicle")))
+								if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteVehicle")))
 									return;
 
 								// Remove the Gear Weapon created by the Gear if applicable.
@@ -6496,7 +6498,7 @@ namespace Chummer
 					TreeNode objVehicleNode = treVehicles.SelectedNode.Parent;
 					Vehicle objVehicle = _objFunctions.FindVehicle(objVehicleNode.Tag.ToString(), _objCharacter.Vehicles);
 
-					if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteVehicleLocation")))
+					if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteVehicleLocation")))
 						return;
 
 					// Change the Location of the Gear.
@@ -6787,7 +6789,7 @@ namespace Chummer
 
 			treMartialArts.SelectedNode = objNode;
 
-			SortTree(treMartialArts);
+			_objFunctions.SortTree(treMartialArts);
 			UpdateCharacterInfo();
 
 			_blnIsDirty = true;
@@ -6801,7 +6803,7 @@ namespace Chummer
 				if (treMartialArts.SelectedNode.Level == 0)
 					return;
 
-				if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteMartialArt")))
+				if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteMartialArt")))
 					return;
 
 				if (treMartialArts.SelectedNode.Level == 1)
@@ -6922,7 +6924,7 @@ namespace Chummer
 			objUndo.CreateKarma(KarmaExpenseType.AddMartialArtManeuver, objManeuver.InternalId);
 			objExpense.Undo = objUndo;
 
-			SortTree(treMartialArts);
+			_objFunctions.SortTree(treMartialArts);
 			UpdateCharacterInfo();
 
 			_blnIsDirty = true;
@@ -7133,7 +7135,7 @@ namespace Chummer
 						strMessage = LanguageManager.Instance.GetString("Message_DeleteMetamagic");
 					else if (_objCharacter.RESEnabled)
 						strMessage = LanguageManager.Instance.GetString("Message_DeleteEcho");
-					if (!ConfirmDelete(strMessage))
+					if (!_objFunctions.ConfirmDelete(strMessage))
 						return;
 
 					// Locate the selected Metamagic.
@@ -7478,7 +7480,7 @@ namespace Chummer
 			}
 			mnuSpecialPossess.Visible = blnAllowPossession;
 
-			SortTree(treCritterPowers);
+			_objFunctions.SortTree(treCritterPowers);
 			UpdateCharacterInfo();
 
 			_blnIsDirty = true;
@@ -7500,7 +7502,7 @@ namespace Chummer
 				return;
 			}
 
-			if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteCritterPower")))
+			if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteCritterPower")))
 				return;
 
 			// Locate the selected Critter Power.
@@ -7535,7 +7537,7 @@ namespace Chummer
 			{
 				if (treComplexForms.SelectedNode.Level == 1)
 				{
-					if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteComplexForm")))
+					if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteComplexForm")))
 						return;
 
 					// Locate the Program that is selected in the tree.
@@ -7548,7 +7550,7 @@ namespace Chummer
 				}
 				if (treComplexForms.SelectedNode.Level == 2)
 				{
-					if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteComplexFormOption")))
+					if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteComplexFormOption")))
 						return;
 
 					// Locate the Program Option that is selected in the tree.
@@ -7685,7 +7687,7 @@ namespace Chummer
 			Gear objGear = _objFunctions.FindGear(treGear.SelectedNode.Tag.ToString(), _objCharacter.Gear);
 			Gear objParent = _objFunctions.FindGear(treGear.SelectedNode.Parent.Tag.ToString(), _objCharacter.Gear);
 
-			if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_ReduceQty")))
+			if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_ReduceQty")))
 				return;
 				
 			objGear.Quantity -= 1;
@@ -8253,7 +8255,7 @@ namespace Chummer
 			bool blnAddAgain = PickGear(true, objGear);
 			if (blnAddAgain)
 				cmdGearIncreaseQty_Click(sender, e);
-			PopulateFocusList();
+			_objController.PopulateFocusList(treFoci);
 		}
 
 		private void cmdVehicleGearReduceQty_Click(object sender, EventArgs e)
@@ -8265,7 +8267,7 @@ namespace Chummer
 			objGear = _objFunctions.FindVehicleGear(treVehicles.SelectedNode.Tag.ToString(), _objCharacter.Vehicles, out objVehicle);
 			objParent = objGear.Parent;
 
-			if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_ReduceQty")))
+			if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_ReduceQty")))
 				return;
 
 			objGear.Quantity -= 1;
@@ -8490,7 +8492,7 @@ namespace Chummer
 				_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.Quality, objQuality.InternalId);
 			}
 
-			SortTree(treQualities);
+			_objFunctions.SortTree(treQualities);
 			UpdateMentorSpirits();
 			UpdateCharacterInfo();
 
@@ -8534,7 +8536,7 @@ namespace Chummer
 				int intShowBP = intBP * _objOptions.KarmaQuality;
 				string strBP = intShowBP.ToString() + " " + LanguageManager.Instance.GetString("String_Karma");
 
-				if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteMetatypeQuality").Replace("{0}", strBP)))
+				if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteMetatypeQuality").Replace("{0}", strBP)))
 					return;
 
 				blnMetatypeQuality = true;
@@ -8544,7 +8546,7 @@ namespace Chummer
 			{
 				if (!blnMetatypeQuality)
 				{
-					if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeletePositiveQualityCareer")))
+					if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeletePositiveQualityCareer")))
 						return;
 				}
 
@@ -9197,7 +9199,7 @@ namespace Chummer
 			objStack.GearId = objStackItem.InternalId;
 
 			_blnIsDirty = true;
-			PopulateFocusList();
+			_objController.PopulateFocusList(treFoci);
 			UpdateCharacterInfo();
 			UpdateWindowTitle();
 		}
@@ -9228,7 +9230,7 @@ namespace Chummer
 					if (treImprovements.SelectedNode.Text == LanguageManager.Instance.GetString("Node_SelectedImprovements"))
 						return;
 
-					if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteImprovementGroup")))
+					if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteImprovementGroup")))
 						return;
 
 					// Move all of the child nodes in the current parent to the Selected Improvements parent node.
@@ -9272,7 +9274,7 @@ namespace Chummer
 						}
 					}
 
-					if (!ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteImprovement")))
+					if (!_objFunctions.ConfirmDelete(LanguageManager.Instance.GetString("Message_DeleteImprovement")))
 						return;
 
 					// Remove the Improvement from the character.
@@ -12222,7 +12224,7 @@ namespace Chummer
 					// If the Parent is populated, remove the item from its Parent.
 					objParent.Children.Remove(objGear);
 				}
-				PopulateFocusList();
+				_objController.PopulateFocusList(treFoci);
 				UpdateCharacterInfo();
 				RefreshSelectedGear();
 
@@ -14006,7 +14008,7 @@ namespace Chummer
 						objNode.Text = objGear.DisplayName;
 					}
 
-					PopulateFocusList();
+					_objController.PopulateFocusList(treFoci);
 					break;
 				case NuyenExpenseType.AddVehicle:
 					// Locate the Vehicle that was added.
@@ -16048,7 +16050,7 @@ namespace Chummer
 			objEntry.Undo = objUndo;
 
 
-			SortTree(treSpells);
+			_objFunctions.SortTree(treSpells);
 			UpdateCharacterInfo();
 
 			_blnIsDirty = true;
@@ -17358,12 +17360,15 @@ namespace Chummer
 			}
 
 			if (treWeapons.SelectedNode.Level == 1)
-				MoveWeaponNode(intNewIndex, nodDestination);
+				_objController.MoveWeaponNode(intNewIndex, nodDestination, treWeapons);
 			else
-				MoveWeaponRoot(intNewIndex, nodDestination);
+				_objController.MoveWeaponRoot(intNewIndex, nodDestination, treWeapons);
 
 			// Clear the background color for all Nodes.
 			_objFunctions.ClearNodeBackground(treWeapons, null);
+
+			_blnIsDirty = true;
+			UpdateWindowTitle();
 		}
 
 		private void treWeapons_DragOver(object sender, DragEventArgs e)
@@ -17450,10 +17455,13 @@ namespace Chummer
 				nodDestination = treArmor.Nodes[treArmor.Nodes.Count - 1];
 			}
 
-			MoveArmorNode(intNewIndex, nodDestination);
+			_objController.MoveArmorNode(intNewIndex, nodDestination, treArmor);
 
 			// Clear the background color for all Nodes.
 			_objFunctions.ClearNodeBackground(treArmor, null);
+
+			_blnIsDirty = true;
+			UpdateWindowTitle();
 		}
 
 		private void treArmor_DragOver(object sender, DragEventArgs e)
@@ -17584,10 +17592,13 @@ namespace Chummer
 				nodDestination = treLifestyles.Nodes[treLifestyles.Nodes.Count - 1];
 			}
 
-			MoveLifestyleNode(intNewIndex, nodDestination);
+			_objController.MoveLifestyleNode(intNewIndex, nodDestination, treLifestyles);
 
 			// Clear the background color for all Nodes.
 			_objFunctions.ClearNodeBackground(treLifestyles, null);
+
+			_blnIsDirty = true;
+			UpdateWindowTitle();
 		}
 
 		private void treLifestyles_DragOver(object sender, DragEventArgs e)
@@ -18190,17 +18201,20 @@ namespace Chummer
 			if (_objDragButton == MouseButtons.Left)
 			{
 				if (treGear.SelectedNode.Level == 1)
-					MoveGearNode(intNewIndex, nodDestination);
+					_objController.MoveGearNode(intNewIndex, nodDestination, treGear);
 				else
-					MoveGearRoot(intNewIndex, nodDestination);
+					_objController.MoveGearRoot(intNewIndex, nodDestination, treGear);
 			}
 			if (_objDragButton == MouseButtons.Right)
-				MoveGearParent(intNewIndex, nodDestination);
+				_objController.MoveGearParent(intNewIndex, nodDestination, treGear, cmsGear);
 
 			// Clear the background color for all Nodes.
 			_objFunctions.ClearNodeBackground(treGear, null);
 
 			_objDragButton = MouseButtons.None;
+
+			_blnIsDirty = true;
+			UpdateWindowTitle();
 		}
 
 		private void treGear_DragOver(object sender, DragEventArgs e)
@@ -18604,15 +18618,22 @@ namespace Chummer
 			}
 
 			if (!_blnDraggingGear)
-				MoveVehicleNode(intNewIndex, nodDestination);
+				_objController.MoveVehicleNode(intNewIndex, nodDestination, treVehicles);
 			else
 			{
+				if (_objDragButton == MouseButtons.Left)
+					return;
+				else
+					_objController.MoveVehicleGearParent(intNewIndex, nodDestination, treVehicles, cmsVehicleGear);
 			}
 
 			// Clear the background color for all Nodes.
 			_objFunctions.ClearNodeBackground(treVehicles, null);
 
 			_blnDraggingGear = false;
+
+			_blnIsDirty = true;
+			UpdateWindowTitle();
 		}
 
 		private void treVehicles_DragOver(object sender, DragEventArgs e)
@@ -20320,12 +20341,15 @@ namespace Chummer
 			}
 
 			if (treImprovements.SelectedNode.Level == 1)
-				MoveImprovementNode(intNewIndex, nodDestination);
+				_objController.MoveImprovementNode(intNewIndex, nodDestination, treImprovements);
 			else
-				MoveImprovementRoot(intNewIndex, nodDestination);
+				_objController.MoveImprovementRoot(intNewIndex, nodDestination, treImprovements);
 
 			// Clear the background color for all Nodes.
 			_objFunctions.ClearNodeBackground(treImprovements, null);
+
+			_blnIsDirty = true;
+			UpdateWindowTitle();
 		}
 
 		private void treImprovements_DragOver(object sender, DragEventArgs e)
@@ -20898,24 +20922,12 @@ namespace Chummer
 		/// </summary>
 		private void ClearSpellTab()
 		{
-			// Run through all of the Spells and remove their Improvements.
-			foreach (Spell objSpell in _objCharacter.Spells)
-				_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.Spell, objSpell.InternalId);
-
-			// Clear the list of Spells.
-			treSpells.Nodes[0].Nodes.Clear();
-			treSpells.Nodes[1].Nodes.Clear();
-			treSpells.Nodes[2].Nodes.Clear();
-			treSpells.Nodes[3].Nodes.Clear();
-			treSpells.Nodes[4].Nodes.Clear();
-			treSpells.Nodes[5].Nodes.Clear();
+			_objController.ClearSpellTab(treSpells);
 
 			// Remove the Spirits.
 			panSpirits.Controls.Clear();
 
-			_objCharacter.Spells.Clear();
-			_objCharacter.Spirits.Clear();
-
+			_blnIsDirty = true;
 			UpdateCharacterInfo();
 		}
 
@@ -20924,15 +20936,12 @@ namespace Chummer
 		/// </summary>
 		private void ClearAdeptTab()
 		{
-			// Run through all of the Powers and remove their Improvements.
-			foreach (Power objPower in _objCharacter.Powers)
-				_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.Power, objPower.InternalId);
+			_objController.ClearAdeptTab();
 
 			// Remove all of the Adept Powers from the panel.
 			panPowers.Controls.Clear();
 
-			_objCharacter.Powers.Clear();
-
+			_blnIsDirty = true;
 			UpdateCharacterInfo();
 		}
 
@@ -20941,27 +20950,12 @@ namespace Chummer
 		/// </summary>
 		private void ClearTechnomancerTab()
 		{
-			// Run through all of the Complex Forms and remove their Improvements.
-			foreach (TechProgram objProgram in _objCharacter.TechPrograms)
-				_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.ComplexForm, objProgram.InternalId);
+			_objController.ClearTechnomancerTab(treComplexForms);
 
 			// Remove the Sprites.
 			panSprites.Controls.Clear();
 
-			// Remove the Complex Forms.
-			treComplexForms.Nodes[0].Nodes.Clear();
-			treComplexForms.Nodes[1].Nodes.Clear();
-			treComplexForms.Nodes[2].Nodes.Clear();
-			treComplexForms.Nodes[3].Nodes.Clear();
-			treComplexForms.Nodes[4].Nodes.Clear();
-			treComplexForms.Nodes[5].Nodes.Clear();
-			treComplexForms.Nodes[6].Nodes.Clear();
-			treComplexForms.Nodes[7].Nodes.Clear();
-			treComplexForms.Nodes[8].Nodes.Clear();
-
-			_objCharacter.Spirits.Clear();
-			_objCharacter.TechPrograms.Clear();
-
+			_blnIsDirty = true;
 			UpdateCharacterInfo();
 		}
 
@@ -20970,16 +20964,9 @@ namespace Chummer
 		/// </summary>
 		private void ClearCritterTab()
 		{
-			// Run through all of the Critter Powers and remove their Improvements.
-			foreach (CritterPower objPower in _objCharacter.CritterPowers)
-				_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.CritterPower, objPower.InternalId);
+			_objController.ClearCritterTab(treCritterPowers);
 
-			// Clear the list of Critter Powers.
-			treCritterPowers.Nodes[0].Nodes.Clear();
-			treCritterPowers.Nodes[1].Nodes.Clear();
-
-			_objCharacter.CritterPowers.Clear();
-
+			_blnIsDirty = true;
 			UpdateCharacterInfo();
 		}
 
@@ -20988,19 +20975,9 @@ namespace Chummer
 		/// </summary>
 		private void ClearInitiationTab()
 		{
-			// Remove any Metamagic/Echo Improvements.
-			foreach (Metamagic objMetamagic in _objCharacter.Metamagics)
-			{
-				_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.Echo, objMetamagic.InternalId);
-				_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.Metamagic, objMetamagic.InternalId);
-			}
+			_objController.ClearInitiationTab(treMetamagic);
 
-			_objCharacter.InitiateGrade = 0;
-			_objCharacter.SubmersionGrade = 0;
-			_objCharacter.Metamagics.Clear();
-
-			treMetamagic.Nodes.Clear();
-
+			_blnIsDirty = true;
 			UpdateCharacterInfo();
 		}
 		#endregion
@@ -23458,7 +23435,7 @@ namespace Chummer
 				}
 			}
 
-			SortTree(treCyberware);
+			_objFunctions.SortTree(treCyberware);
 			treCyberware.SelectedNode = objNode;
 			UpdateCharacterInfo();
 			RefreshSelectedCyberware();
@@ -25394,87 +25371,6 @@ namespace Chummer
 		}
 
 		/// <summary>
-		/// Populate the list of Bonded Foci.
-		/// </summary>
-		private void PopulateFocusList()
-		{
-			treFoci.Nodes.Clear();
-			int intFociTotal = 0;
-			bool blnWarned = false;
-
-			foreach (Gear objGear in _objCharacter.Gear)
-			{
-				if (objGear.Category == "Foci" || objGear.Category == "Metamagic Foci")
-				{
-					TreeNode objNode = new TreeNode();
-					objNode.Text = objGear.DisplayName.Replace(LanguageManager.Instance.GetString("String_Rating"), LanguageManager.Instance.GetString("String_Force"));
-					objNode.Tag = objGear.InternalId;
-					foreach (Focus objFocus in _objCharacter.Foci)
-					{
-						if (objFocus.GearId == objGear.InternalId)
-						{
-							objNode.Checked = true;
-							objFocus.Rating = objGear.Rating;
-							intFociTotal += objFocus.Rating;
-							// Do not let the number of BP spend on bonded Foci exceed MAG * 5.
-							if (intFociTotal > _objCharacter.MAG.TotalValue * 5 && !_objCharacter.IgnoreRules)
-							{
-								// Mark the Gear a Bonded.
-								foreach (Gear objCharacterGear in _objCharacter.Gear)
-								{
-									if (objCharacterGear.InternalId == objFocus.GearId)
-										objCharacterGear.Bonded = false;
-								}
-
-								_objCharacter.Foci.Remove(objFocus);
-								if (!blnWarned)
-								{
-									objNode.Checked = false;
-									MessageBox.Show(LanguageManager.Instance.GetString("Message_FocusMaximumForce"), LanguageManager.Instance.GetString("MessageTitle_FocusMaximum"), MessageBoxButtons.OK, MessageBoxIcon.Information);
-									blnWarned = true;
-									break;
-								}
-							}
-						}
-					}
-					treFoci.Nodes.Add(objNode);
-				}
-			}
-
-			// Add Stacked Foci.
-			foreach (Gear objGear in _objCharacter.Gear)
-			{
-				if (objGear.Category == "Stacked Focus")
-				{
-					foreach (StackedFocus objStack in _objCharacter.StackedFoci)
-					{
-						if (objStack.GearId == objGear.InternalId)
-						{
-							TreeNode objNode = new TreeNode();
-							objNode.Text = LanguageManager.Instance.GetString("String_StackedFocus") + ": " + objStack.Name;
-							objNode.Tag = objStack.InternalId;
-
-							_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.StackedFocus, objStack.InternalId);
-
-							if (objStack.Bonded)
-							{
-								foreach (Gear objFociGear in objStack.Gear)
-								{
-									if (objFociGear.Extra != string.Empty)
-										_objImprovementManager.ForcedValue = objFociGear.Extra;
-									_objImprovementManager.CreateImprovements(Improvement.ImprovementSource.StackedFocus, objStack.InternalId, objFociGear.Bonus, false, objFociGear.Rating, objFociGear.DisplayNameShort);
-								}
-								objNode.Checked = true;
-							}
-
-							treFoci.Nodes.Add(objNode);
-						}
-					}
-				}
-			}
-		}
-
-		/// <summary>
 		/// Populate the Expense Log Lists.
 		/// </summary>
 		public void PopulateExpenseList()
@@ -25626,523 +25522,6 @@ namespace Chummer
 		}
 
 		/// <summary>
-		/// Verify that the user wants to delete an item.
-		/// </summary>
-		public bool ConfirmDelete(string strMessage)
-		{
-			if (!_objOptions.ConfirmDelete)
-				return true;
-			else
-			{
-				if (MessageBox.Show(strMessage, LanguageManager.Instance.GetString("MessageTitle_Delete"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-					return false;
-				else
-					return true;
-			}
-		}
-
-		/// <summary>
-		/// Move a Gear TreeNode after Drag and Drop, changing its parent.
-		/// </summary>
-		/// <param name="intNewIndex">Node's new idnex.</param>
-		/// <param name="objDestination">Destination Node.</param>
-		private void MoveGearParent(int intNewIndex, TreeNode objDestination)
-		{
-			// The item cannot be dropped onto itself.
-			if (objDestination == treGear.SelectedNode)
-				return;
-			// The item cannot be dropped onto one of its children.
-			foreach (TreeNode objNode in treGear.SelectedNode.Nodes)
-			{
-				if (objNode == objDestination)
-					return;
-			}
-
-			// Locate the currently selected piece of Gear.
-			Gear objGear = new Gear(_objCharacter);
-			objGear = _objFunctions.FindGear(treGear.SelectedNode.Tag.ToString(), _objCharacter.Gear);
-
-			// Gear cannot be moved to one if its children.
-			bool blnAllowMove = true;
-			TreeNode objFindNode = objDestination;
-			if (objDestination.Level > 0)
-			{
-				do
-				{
-					objFindNode = objFindNode.Parent;
-					if (objFindNode.Tag.ToString() == objGear.InternalId)
-					{
-						blnAllowMove = false;
-						break;
-					}
-				} while (objFindNode.Level > 0);
-			}
-
-			if (!blnAllowMove)
-				return;
-
-			// Remove the Gear from the character.
-			if (objGear.Parent == null)
-				_objCharacter.Gear.Remove(objGear);
-			else
-				objGear.Parent.Children.Remove(objGear);
-
-			if (objDestination.Level == 0)
-			{
-				// The Gear was moved to a location, so add it to the character instead.
-				_objCharacter.Gear.Add(objGear);
-				objGear.Location = objDestination.Text;
-				objGear.Parent = null;
-			}
-			else
-			{
-				Gear objParent = new Gear(_objCharacter);
-				// Locate the Gear that the item was dropped on.
-				objParent = _objFunctions.FindGear(objDestination.Tag.ToString(), _objCharacter.Gear);
-
-				// Add the Gear as a child of the destination Node and clear its location.
-				objParent.Children.Add(objGear);
-				objGear.Location = "";
-				objGear.Parent = objParent;
-			}
-
-			TreeNode objClone = treGear.SelectedNode;
-			objClone.ContextMenuStrip = cmsGear;
-
-			// Remove the current Node.
-			treGear.SelectedNode.Remove();
-
-			// Add the new Node to the new parent.
-			objDestination.Nodes.Add(objClone);
-			objDestination.Expand();
-		}
-
-		/// <summary>
-		/// Move a Gear TreeNode after Drag and Drop.
-		/// </summary>
-		/// <param name="intNewIndex">Node's new index.</param>
-		/// <param name="objDestination">Destination Node.</param>
-		private void MoveGearNode(int intNewIndex, TreeNode objDestination)
-		{
-			Gear objGear = new Gear(_objCharacter);
-			// Locate the currently selected piece of Gear.
-			foreach (Gear objCharacterGear in _objCharacter.Gear)
-			{
-				if (objCharacterGear.InternalId == treGear.SelectedNode.Tag.ToString())
-				{
-					objGear = objCharacterGear;
-					break;
-				}
-			}
-			_objCharacter.Gear.Remove(objGear);
-			if (intNewIndex > _objCharacter.Gear.Count)
-				_objCharacter.Gear.Add(objGear);
-			else
-				_objCharacter.Gear.Insert(intNewIndex, objGear);
-
-			TreeNode objNewParent = objDestination;
-			while (objNewParent.Level > 0)
-				objNewParent = objNewParent.Parent;
-
-			TreeNode objOldParent = treGear.SelectedNode;
-			while (objOldParent.Level > 0)
-				objOldParent = objOldParent.Parent;
-
-			// Change the Location on the Gear item.
-			if (objNewParent.Text == LanguageManager.Instance.GetString("Node_SelectedGear"))
-				objGear.Location = "";
-			else
-				objGear.Location = objNewParent.Text;
-
-			TreeNode objClone = treGear.SelectedNode;
-
-			objOldParent.Nodes.Remove(treGear.SelectedNode);
-			objNewParent.Nodes.Insert(intNewIndex, objClone);
-			objNewParent.Expand();
-
-			_blnIsDirty = true;
-			UpdateWindowTitle();
-		}
-
-		/// <summary>
-		/// Move a Gear Location TreeNode after Drag and Drop.
-		/// </summary>
-		/// <param name="intNewIndex">Node's new index.</param>
-		/// <param name="objDestination">Destination Node.</param>
-		private void MoveGearRoot(int intNewIndex, TreeNode objDestination)
-		{
-			if (objDestination != null)
-			{
-				TreeNode objNewParent = objDestination;
-				while (objNewParent.Level > 0)
-					objNewParent = objNewParent.Parent;
-				intNewIndex = objNewParent.Index;
-			}
-
-			if (intNewIndex == 0)
-				return;
-
-			string strLocation = "";
-			// Locate the currently selected Location.
-			foreach (string strCharacterLocation in _objCharacter.Locations)
-			{
-				if (strCharacterLocation == treGear.SelectedNode.Tag.ToString())
-				{
-					strLocation = strCharacterLocation;
-					break;
-				}
-			}
-			_objCharacter.Locations.Remove(strLocation);
-
-			if (intNewIndex - 1 > _objCharacter.Locations.Count)
-				_objCharacter.Locations.Add(strLocation);
-			else
-				_objCharacter.Locations.Insert(intNewIndex - 1, strLocation);
-
-			TreeNode nodOldNode = treGear.SelectedNode;
-			treGear.Nodes.Remove(nodOldNode);
-			treGear.Nodes.Insert(intNewIndex, nodOldNode);
-
-			_blnIsDirty = true;
-			UpdateWindowTitle();
-		}
-
-		/// <summary>
-		/// Move a Lifestyle TreeNode after Drag and Drop.
-		/// </summary>
-		/// <param name="intNewIndex">Node's new index.</param>
-		/// <param name="objDestination">Destination Node.</param>
-		private void MoveLifestyleNode(int intNewIndex, TreeNode objDestination)
-		{
-			Lifestyle objLifestyle = new Lifestyle(_objCharacter);
-			// Locate the currently selected Lifestyle.
-			foreach (Lifestyle objCharacterLifestyle in _objCharacter.Lifestyles)
-			{
-				if (objCharacterLifestyle.Name == treLifestyles.SelectedNode.Tag.ToString())
-				{
-					objLifestyle = objCharacterLifestyle;
-					break;
-				}
-			}
-			_objCharacter.Lifestyles.Remove(objLifestyle);
-			if (intNewIndex > _objCharacter.Lifestyles.Count)
-				_objCharacter.Lifestyles.Add(objLifestyle);
-			else
-				_objCharacter.Lifestyles.Insert(intNewIndex, objLifestyle);
-
-			TreeNode objNewParent = objDestination;
-			while (objNewParent.Level > 0)
-				objNewParent = objNewParent.Parent;
-
-			TreeNode objOldParent = treLifestyles.SelectedNode;
-			while (objOldParent.Level > 0)
-				objOldParent = objOldParent.Parent;
-
-			TreeNode objClone = treLifestyles.SelectedNode;
-
-			objOldParent.Nodes.Remove(treLifestyles.SelectedNode);
-			objNewParent.Nodes.Insert(intNewIndex, objClone);
-			objNewParent.Expand();
-
-			_blnIsDirty = true;
-			UpdateWindowTitle();
-		}
-
-		/// <summary>
-		/// Move an Armor TreeNode after Drag and Drop.
-		/// </summary>
-		/// <param name="intNewIndex">Node's new index.</param>
-		/// <param name="objDestination">Destination Node.</param>
-		private void MoveArmorNode(int intNewIndex, TreeNode objDestination)
-		{
-			// Locate the currently selected Armor.
-			Armor objArmor = _objFunctions.FindArmor(treArmor.SelectedNode.Tag.ToString(), _objCharacter.Armor);
-
-			_objCharacter.Armor.Remove(objArmor);
-			if (intNewIndex > _objCharacter.Armor.Count)
-				_objCharacter.Armor.Add(objArmor);
-			else
-				_objCharacter.Armor.Insert(intNewIndex, objArmor);
-
-			TreeNode objNewParent = objDestination;
-			while (objNewParent.Level > 0)
-				objNewParent = objNewParent.Parent;
-
-			TreeNode objOldParent = treArmor.SelectedNode;
-			while (objOldParent.Level > 0)
-				objOldParent = objOldParent.Parent;
-
-			// Change the Location on the Armor item.
-			if (objNewParent.Text == LanguageManager.Instance.GetString("Node_SelectedArmor"))
-				objArmor.Location = "";
-			else
-				objArmor.Location = objNewParent.Text;
-
-			TreeNode objClone = treArmor.SelectedNode;
-
-			objOldParent.Nodes.Remove(treArmor.SelectedNode);
-			objNewParent.Nodes.Insert(intNewIndex, objClone);
-			objNewParent.Expand();
-
-			_blnIsDirty = true;
-			UpdateWindowTitle();
-		}
-
-		/// <summary>
-		/// Move an Armor Location TreeNode after Drag and Drop.
-		/// </summary>
-		/// <param name="intNewIndex">Node's new index.</param>
-		/// <param name="objDestination">Destination Node.</param>
-		private void MoveArmorRoot(int intNewIndex, TreeNode objDestination)
-		{
-			if (objDestination != null)
-			{
-				TreeNode objNewParent = objDestination;
-				while (objNewParent.Level > 0)
-					objNewParent = objNewParent.Parent;
-				intNewIndex = objNewParent.Index;
-			}
-
-			if (intNewIndex == 0)
-				return;
-
-			string strLocation = "";
-			// Locate the currently selected Location.
-			foreach (string strCharacterLocation in _objCharacter.ArmorBundles)
-			{
-				if (strCharacterLocation == treArmor.SelectedNode.Tag.ToString())
-				{
-					strLocation = strCharacterLocation;
-					break;
-				}
-			}
-			_objCharacter.ArmorBundles.Remove(strLocation);
-
-			if (intNewIndex - 1 > _objCharacter.ArmorBundles.Count)
-				_objCharacter.ArmorBundles.Add(strLocation);
-			else
-				_objCharacter.ArmorBundles.Insert(intNewIndex - 1, strLocation);
-
-			TreeNode nodOldNode = treArmor.SelectedNode;
-			treArmor.Nodes.Remove(nodOldNode);
-			treArmor.Nodes.Insert(intNewIndex, nodOldNode);
-
-			_blnIsDirty = true;
-			UpdateWindowTitle();
-		}
-
-		/// <summary>
-		/// Move a Weapon TreeNode after Drag and Drop.
-		/// </summary>
-		/// <param name="intNewIndex">Node's new index.</param>
-		/// <param name="objDestination">Destination Node.</param>
-		private void MoveWeaponNode(int intNewIndex, TreeNode objDestination)
-		{
-			Weapon objWeapon = new Weapon(_objCharacter);
-			// Locate the currently selected Weapon.
-			foreach (Weapon objCharacterWeapon in _objCharacter.Weapons)
-			{
-				if (objCharacterWeapon.InternalId == treWeapons.SelectedNode.Tag.ToString())
-				{
-					objWeapon = objCharacterWeapon;
-					break;
-				}
-			}
-			_objCharacter.Weapons.Remove(objWeapon);
-			if (intNewIndex > _objCharacter.Weapons.Count)
-				_objCharacter.Weapons.Add(objWeapon);
-			else
-				_objCharacter.Weapons.Insert(intNewIndex, objWeapon);
-
-			TreeNode objNewParent = objDestination;
-			while (objNewParent.Level > 0)
-				objNewParent = objNewParent.Parent;
-
-			TreeNode objOldParent = treWeapons.SelectedNode;
-			while (objOldParent.Level > 0)
-				objOldParent = objOldParent.Parent;
-
-			// Change the Location of the Weapon.
-			if (objNewParent.Text == LanguageManager.Instance.GetString("Node_SelectedWeapons"))
-				objWeapon.Location = "";
-			else
-				objWeapon.Location = objNewParent.Text;
-
-			TreeNode objClone = treWeapons.SelectedNode;
-
-			objOldParent.Nodes.Remove(treWeapons.SelectedNode);
-			objNewParent.Nodes.Insert(intNewIndex, objClone);
-			objNewParent.Expand();
-
-			_blnIsDirty = true;
-			UpdateWindowTitle();
-		}
-
-		/// <summary>
-		/// Move a Weapon Location TreeNode after Drag and Drop.
-		/// </summary>
-		/// <param name="intNewIndex">Node's new index.</param>
-		/// <param name="objDestination">Destination Node.</param>
-		private void MoveWeaponRoot(int intNewIndex, TreeNode objDestination)
-		{
-			if (objDestination != null)
-			{
-				TreeNode objNewParent = objDestination;
-				while (objNewParent.Level > 0)
-					objNewParent = objNewParent.Parent;
-				intNewIndex = objNewParent.Index;
-			}
-
-			if (intNewIndex == 0)
-				return;
-
-			string strLocation = "";
-			// Locate the currently selected Location.
-			foreach (string strCharacterLocation in _objCharacter.WeaponLocations)
-			{
-				if (strCharacterLocation == treWeapons.SelectedNode.Tag.ToString())
-				{
-					strLocation = strCharacterLocation;
-					break;
-				}
-			}
-			_objCharacter.Locations.Remove(strLocation);
-
-			if (intNewIndex - 1 > _objCharacter.WeaponLocations.Count)
-				_objCharacter.WeaponLocations.Add(strLocation);
-			else
-				_objCharacter.WeaponLocations.Insert(intNewIndex - 1, strLocation);
-
-			TreeNode nodOldNode = treWeapons.SelectedNode;
-			treWeapons.Nodes.Remove(nodOldNode);
-			treWeapons.Nodes.Insert(intNewIndex, nodOldNode);
-
-			_blnIsDirty = true;
-			UpdateWindowTitle();
-		}
-
-		/// <summary>
-		/// Move a Vehicle TreeNode after Drag and Drop.
-		/// </summary>
-		/// <param name="intNewIndex">Node's new index.</param>
-		/// <param name="objDestination">Destination Node.</param>
-		private void MoveVehicleNode(int intNewIndex, TreeNode objDestination)
-		{
-			Vehicle objVehicle = new Vehicle(_objCharacter);
-			// Locate the currently selected Vehicle.
-			foreach (Vehicle objCharacterVehicle in _objCharacter.Vehicles)
-			{
-				if (objCharacterVehicle.InternalId == treVehicles.SelectedNode.Tag.ToString())
-				{
-					objVehicle = objCharacterVehicle;
-					break;
-				}
-			}
-			_objCharacter.Vehicles.Remove(objVehicle);
-			if (intNewIndex > _objCharacter.Weapons.Count)
-				_objCharacter.Vehicles.Add(objVehicle);
-			else
-				_objCharacter.Vehicles.Insert(intNewIndex, objVehicle);
-
-			TreeNode objNewParent = objDestination;
-			while (objNewParent.Level > 0)
-				objNewParent = objNewParent.Parent;
-
-			TreeNode objOldParent = treVehicles.SelectedNode;
-			while (objOldParent.Level > 0)
-				objOldParent = objOldParent.Parent;
-
-			TreeNode objClone = treVehicles.SelectedNode;
-
-			objOldParent.Nodes.Remove(treVehicles.SelectedNode);
-			objNewParent.Nodes.Insert(intNewIndex, objClone);
-			objNewParent.Expand();
-
-			_blnIsDirty = true;
-			UpdateWindowTitle();
-		}
-
-		/// <summary>
-		/// Move an Improvement TreeNode after Drag and Drop.
-		/// </summary>
-		/// <param name="intNewIndex">Node's new index.</param>
-		/// <param name="objDestination">Destination Node.</param>
-		private void MoveImprovementNode(int intNewIndex, TreeNode objDestination)
-		{
-			Improvement objImprovement = new Improvement();
-			// Locate the currently selected Lifestyle.
-			foreach (Improvement objCharacterImprovement in _objCharacter.Improvements)
-			{
-				if (objCharacterImprovement.SourceName == treImprovements.SelectedNode.Tag.ToString())
-				{
-					objImprovement = objCharacterImprovement;
-					break;
-				}
-			}
-
-			TreeNode objNewParent = objDestination;
-			while (objNewParent.Level > 0)
-				objNewParent = objNewParent.Parent;
-
-			TreeNode objOldParent = treImprovements.SelectedNode;
-			while (objOldParent.Level > 0)
-				objOldParent = objOldParent.Parent;
-
-			// Change the Group on the Custom Improvement.
-			objImprovement.CustomGroup = objNewParent.Text;
-
-			TreeNode objClone = treImprovements.SelectedNode;
-
-			objOldParent.Nodes.Remove(treImprovements.SelectedNode);
-			objNewParent.Nodes.Insert(intNewIndex, objClone);
-			objNewParent.Expand();
-
-			// Change the sort order for all of the Improvements in the TreeView.
-			foreach (TreeNode objNode in treImprovements.Nodes[0].Nodes)
-			{
-				foreach (Improvement objCharacterImprovement in _objCharacter.Improvements)
-				{
-					if (objCharacterImprovement.SourceName == objNode.Tag.ToString())
-					{
-						objCharacterImprovement.SortOrder = objNode.Index;
-						break;
-					}
-				}
-			}
-
-			_blnIsDirty = true;
-			UpdateWindowTitle();
-		}
-
-		/// <summary>
-		/// Sort the contents of a TreeView alphabetically within each group Node.
-		/// </summary>
-		/// <param name="treTree">TreeView to sort.</param>
-		private void SortTree(TreeView treTree)
-		{
-			for (int i = 0; i <= treTree.Nodes.Count - 1; i++)
-			{
-				List<TreeNode> lstNodes = new List<TreeNode>();
-				foreach (TreeNode objNode in treTree.Nodes[i].Nodes)
-					lstNodes.Add(objNode);
-				treTree.Nodes[i].Nodes.Clear();
-				try
-				{
-					SortByName objSort = new SortByName();
-					lstNodes.Sort(objSort.Compare);
-				}
-				catch
-				{
-				}
-
-				foreach (TreeNode objNode in lstNodes)
-					treTree.Nodes[i].Nodes.Add(objNode);
-
-				treTree.Nodes[i].Expand();
-			}
-		}
-
-		/// <summary>
 		/// Update the contents of the Initiation Grade list.
 		/// </summary>
 		public void UpdateInitiationGradeList()
@@ -26157,104 +25536,37 @@ namespace Chummer
 		/// </summary>
 		private void UpdateMentorSpirits()
 		{
-			string strMentorSpirit = "";
-			string strParagon = "";
+			MentorSpirit objMentor = _objController.MentorInformation(MainController.MentorType.Mentor);
+			MentorSpirit objParagon = _objController.MentorInformation(MainController.MentorType.Paragon);
 
-			Quality objMentorQuality = new Quality(_objCharacter);
-
-			foreach (Quality objQuality in _objCharacter.Qualities)
-			{
-				if (objQuality.Name == "Mentor Spirit")
-				{
-					strMentorSpirit = objQuality.Extra;
-					objMentorQuality = objQuality;
-					break;
-				}
-				if (objQuality.Name == "Paragon")
-				{
-					strParagon = objQuality.Extra;
-					objMentorQuality = objQuality;
-					break;
-				}
-			}
-
-			if (strMentorSpirit == "")
+			if (objMentor == null)
 			{
 				lblMentorSpiritLabel.Visible = false;
 				lblMentorSpirit.Visible = false;
 				lblMentorSpiritInformation.Visible = false;
 			}
-			if (strParagon == "")
+			else
+			{
+				lblMentorSpiritLabel.Visible = true;
+				lblMentorSpirit.Visible = true;
+				lblMentorSpiritInformation.Visible = true;
+				lblMentorSpirit.Text = objMentor.Name;
+				lblMentorSpiritInformation.Text = objMentor.Advantages;
+			}
+
+			if (objParagon == null)
 			{
 				lblParagonLabel.Visible = false;
 				lblParagon.Visible = false;
 				lblParagonInformation.Visible = false;
 			}
-
-			if (strMentorSpirit != "" || strParagon != "")
+			else
 			{
-				string strAdvantage = "";
-				string strDisadvantage = "";
-
-				XmlDocument objXmlDocument = new XmlDocument();
-				XmlNode objXmlMentor;
-				if (strMentorSpirit != "")
-				{
-					objXmlDocument = XmlManager.Instance.Load("mentors.xml");
-					objXmlMentor = objXmlDocument.SelectSingleNode("/chummer/mentors/mentor[name = \"" + strMentorSpirit + "\"]");
-					lblMentorSpiritLabel.Visible = true;
-					lblMentorSpirit.Visible = true;
-					lblMentorSpiritInformation.Visible = true;
-					lblMentorSpirit.Text = strMentorSpirit;
-					if (objXmlMentor["altadvantage"] != null)
-						strAdvantage = objXmlMentor["altadvantage"].InnerText;
-					else
-						strAdvantage = objXmlMentor["advantage"].InnerText;
-
-					foreach (Improvement objImprovement in _objCharacter.Improvements)
-					{
-						if (objImprovement.SourceName == objMentorQuality.InternalId)
-						{
-							if (objImprovement.Notes != string.Empty)
-								strAdvantage += " " + LanguageManager.Instance.TranslateExtra(objImprovement.Notes) + ".";
-						}
-					}
-
-					if (objXmlMentor["altdisadvantage"] != null)
-						strDisadvantage = objXmlMentor["altdisadvantage"].InnerText;
-					else
-						strDisadvantage = objXmlMentor["disadvantage"].InnerText;
-					lblMentorSpiritInformation.Text = LanguageManager.Instance.GetString("Label_SelectMentorSpirit_Advantage") + " " + strAdvantage + "\n\n" + LanguageManager.Instance.GetString("Label_SelectMetamagic_Disadvantage") + " " + strDisadvantage;
-				}
-
-				if (strParagon != "")
-				{
-					objXmlDocument = XmlManager.Instance.Load("paragons.xml");
-					objXmlMentor = objXmlDocument.SelectSingleNode("/chummer/mentors/mentor[name = \"" + strParagon + "\"]");
-					lblParagonLabel.Visible = true;
-					lblParagon.Visible = true;
-					lblParagonInformation.Visible = true;
-					lblParagon.Text = strParagon;
-					if (objXmlMentor["altadvantage"] != null)
-						strAdvantage = objXmlMentor["altadvantage"].InnerText;
-					else
-						strAdvantage = objXmlMentor["advantage"].InnerText;
-
-					foreach (Improvement objImprovement in _objCharacter.Improvements)
-					{
-						if (objImprovement.SourceName == objMentorQuality.InternalId)
-						{
-							if (objImprovement.Notes != string.Empty)
-								strAdvantage += " " + LanguageManager.Instance.TranslateExtra(objImprovement.Notes) + ".";
-						}
-					}
-
-					if (objXmlMentor["altdisadvantage"] != null)
-						strDisadvantage = objXmlMentor["altdisadvantage"].InnerText;
-					else
-						strDisadvantage = objXmlMentor["disadvantage"].InnerText;
-					lblParagonInformation.Text = LanguageManager.Instance.GetString("Label_SelectMentorSpirit_Advantage") + " " + strAdvantage + "\n\n" + LanguageManager.Instance.GetString("Label_SelectMetamagic_Disadvantage") + " " + strDisadvantage;
-				}
+				lblParagonLabel.Visible = true;
+				lblParagon.Visible = true;
+				lblParagonInformation.Visible = true;
+				lblParagon.Text = objParagon.Name;
+				lblParagonInformation.Text = objParagon.Advantages;
 			}
 		}
 
@@ -26496,7 +25808,7 @@ namespace Chummer
 			}
 
 			// Sort the list of Custom Improvements in alphabetical order based on their Custom Name within each Group.
-			SortTree(treImprovements);
+			_objFunctions.SortTree(treImprovements);
 		}
 
 		private void MoveControls()
@@ -27298,48 +26610,6 @@ namespace Chummer
 		}
 
 		/// <summary>
-		/// Move an Improvement Group TreeNode after Drag and Drop.
-		/// </summary>
-		/// <param name="intNewIndex">Node's new index.</param>
-		/// <param name="objDestination">Destination Node.</param>
-		private void MoveImprovementRoot(int intNewIndex, TreeNode objDestination)
-		{
-			if (objDestination != null)
-			{
-				TreeNode objNewParent = objDestination;
-				while (objNewParent.Level > 0)
-					objNewParent = objNewParent.Parent;
-				intNewIndex = objNewParent.Index;
-			}
-
-			if (intNewIndex == 0)
-				return;
-
-			string strLocation = "";
-			// Locate the currently selected Group.
-			foreach (string strCharacterGroup in _objCharacter.ImprovementGroups)
-			{
-				if (strCharacterGroup == treImprovements.SelectedNode.Tag.ToString())
-				{
-					strLocation = strCharacterGroup;
-				}
-			}
-			_objCharacter.ImprovementGroups.Remove(strLocation);
-
-			if (intNewIndex - 1 > _objCharacter.ImprovementGroups.Count)
-				_objCharacter.ImprovementGroups.Add(strLocation);
-			else
-				_objCharacter.ImprovementGroups.Insert(intNewIndex - 1, strLocation);
-
-			TreeNode nodOldNode = treImprovements.SelectedNode;
-			treImprovements.Nodes.Remove(nodOldNode);
-			treImprovements.Nodes.Insert(intNewIndex, nodOldNode);
-
-			_blnIsDirty = true;
-			UpdateWindowTitle();
-		}
-
-		/// <summary>
 		/// Recursive method to add a Gear's Improvements to a character when moving them from a Vehicle.
 		/// </summary>
 		/// <param name="objGear">Gear to create Improvements for.
@@ -27356,119 +26626,6 @@ namespace Chummer
 			}
 			foreach (Gear objChild in objGear.Children)
 				AddGearImprovements(objChild);
-		}
-
-		/// <summary>
-		/// Move a Vehicle Gear TreeNode after Drag and Drop.
-		/// </summary>
-		/// <param name="intNewIndex">Node's new index.</param>
-		/// <param name="objDestination">Destination Node.</param>
-		private void MoveVehicleGearParent(int intNewIndex, TreeNode objDestination)
-		{
-			// The item cannot be dropped onto itself.
-			if (objDestination == treVehicles.SelectedNode)
-				return;
-			// The item cannot be dropped onton one of its children.
-			foreach (TreeNode objNode in treVehicles.SelectedNode.Nodes)
-			{
-				if (objNode == objDestination)
-					return;
-			}
-
-			// Determine if this is a Location.
-			TreeNode objVehicleNode = objDestination;
-			do
-			{
-				objVehicleNode = objVehicleNode.Parent;
-			} while (objVehicleNode.Level > 1);
-
-			// Get a reference to the destination Vehicle.
-			Vehicle objDestinationVehicle = new Vehicle(_objCharacter);
-			foreach (Vehicle objCharacterVehicle in _objCharacter.Vehicles)
-			{
-				if (objCharacterVehicle.InternalId == objVehicleNode.Tag.ToString())
-				{
-					objDestinationVehicle = objCharacterVehicle;
-					break;
-				}
-			}
-
-			// Make sure the destination is another piece of Gear or a Location.
-			bool blnDestinationGear = true;
-			bool blnDestinationLocation = false;
-			Vehicle objTempVehicle = new Vehicle(_objCharacter);
-			Gear objDestinationGear = _objFunctions.FindVehicleGear(objDestination.Tag.ToString(), _objCharacter.Vehicles, out objTempVehicle);
-			if (objDestinationGear == null)
-				blnDestinationGear = false;
-
-			// Determine if this is a Location in the destination Vehicle.
-			string strDestinationLocation = "";
-			foreach (string strLocation in objDestinationVehicle.Locations)
-			{
-				if (strLocation == objDestination.Tag.ToString())
-				{
-					strDestinationLocation = strLocation;
-					blnDestinationLocation = true;
-					break;
-				}
-			}
-
-			if (!blnDestinationLocation && !blnDestinationGear)
-				return;
-
-			// Locate the currently selected piece of Gear.
-			Vehicle objVehicle = new Vehicle(_objCharacter);
-			Gear objGear = _objFunctions.FindVehicleGear(treVehicles.SelectedNode.Tag.ToString(), _objCharacter.Vehicles, out objVehicle);
-
-			// Gear cannot be moved to one of its children.
-			bool blnAllowMove = true;
-			TreeNode objFindNode = objDestination;
-			if (objDestination.Level > 0)
-			{
-				do
-				{
-					objFindNode = objFindNode.Parent;
-					if (objFindNode.Tag.ToString() == objGear.InternalId)
-					{
-						blnAllowMove = false;
-						break;
-					}
-				} while (objFindNode.Level > 0);
-			}
-
-			if (!blnAllowMove)
-				return;
-
-			// Remove the Gear from the Vehicle.
-			if (objGear.Parent == null)
-				objVehicle.Gear.Remove(objGear);
-			else
-				objGear.Parent.Children.Remove(objGear);
-
-			if (blnDestinationLocation)
-			{
-				// Add the Gear to the Vehicle and set its Location.
-				objDestinationVehicle.Gear.Add(objGear);
-				objGear.Location = strDestinationLocation;
-				objGear.Parent = null;
-			}
-			else
-			{
-				// Add the Gear to its new parent.
-				objDestinationGear.Children.Add(objGear);
-				objGear.Location = "";
-				objGear.Parent = objDestinationGear;
-			}
-
-			TreeNode objClone = treVehicles.SelectedNode;
-			objClone.ContextMenuStrip = cmsVehicleGear;
-
-			// Remove the current Node.
-			treVehicles.SelectedNode.Remove();
-
-			// Add the new Node to its parent.
-			objDestination.Nodes.Add(objClone);
-			objDestination.Expand();
 		}
 
 		/// <summary>

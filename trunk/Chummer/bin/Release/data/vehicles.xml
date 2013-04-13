@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-875</version>
+	<version>-874</version>
 	<categories>
 		<category>Personal Mobility Vehicles</category>
 		<category>Bikes</category>
@@ -1415,7 +1415,7 @@
 			<body>16</body>
 			<armor>16</armor>
 			<sensor>3</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>22R</avail>
 			<cost>88700</cost>
 			<mods>
@@ -1473,7 +1473,7 @@
 			<body>16</body>
 			<armor>18</armor>
 			<sensor>3</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>24F</avail>
 			<cost>72500</cost>
 			<mods>
@@ -1665,7 +1665,7 @@
 			<body>20</body>
 			<armor>12</armor>
 			<sensor>3</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>26F</avail>
 			<cost>10000000</cost>
 			<mods>
@@ -3603,7 +3603,7 @@
 			</mods>
 			<gears>
 				<gear>Minidrone Sensor</gear>
-				<gear rating="4" select="Close Combat">Targeting</gear>
+				<gear rating="4" select="Exotic Melee Weapon">Targeting</gear>
 			</gears>
 			<source>AR</source>
 			<page>117</page>
@@ -7243,7 +7243,7 @@
 			<body>17</body>
 			<armor>18</armor>
 			<sensor>5</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>46F</avail>
 			<cost>200000000</cost>
 			<mods>
@@ -7294,7 +7294,7 @@
 			<body>16</body>
 			<armor>22</armor>
 			<sensor>6</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>28F</avail>
 			<cost>100000000</cost>
 			<mods>
@@ -7348,7 +7348,7 @@
 			<body>16</body>
 			<armor>20</armor>
 			<sensor>6</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>21F</avail>
 			<cost>110000000</cost>
 			<mods>
@@ -7386,7 +7386,7 @@
 			<body>15</body>
 			<armor>17</armor>
 			<sensor>6</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>32F</avail>
 			<cost>100500000</cost>
 			<mods>
@@ -7442,7 +7442,7 @@
 			<body>16</body>
 			<armor>18</armor>
 			<sensor>6</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>24FF</avail>
 			<cost>75000000</cost>
 			<mods>
@@ -7476,7 +7476,7 @@
 			<body>14</body>
 			<armor>10</armor>
 			<sensor>6</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>14</avail>
 			<cost>5500000</cost>
 			<mods>
@@ -7502,7 +7502,7 @@
 			<body>15</body>
 			<armor>12</armor>
 			<sensor>6</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>18</avail>
 			<cost>8500000</cost>
 			<mods>
@@ -7528,7 +7528,7 @@
 			<body>15</body>
 			<armor>16</armor>
 			<sensor>6</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>27F</avail>
 			<cost>82500000</cost>
 			<mods>
@@ -7564,7 +7564,7 @@
 			<body>18</body>
 			<armor>20</armor>
 			<sensor>6</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>54F</avail>
 			<cost>800000000</cost>
 			<mods>
@@ -7747,7 +7747,7 @@
 			<body>16</body>
 			<armor>10</armor>
 			<sensor>2</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>12F</avail>
 			<cost>84000</cost>
 			<mods>
@@ -7771,7 +7771,7 @@
 			<body>22</body>
 			<armor>18</armor>
 			<sensor>2</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>24F</avail>
 			<cost>2550000</cost>
 			<mods>
@@ -7796,7 +7796,7 @@
 			<body>22</body>
 			<armor>10</armor>
 			<sensor>4</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>24F</avail>
 			<cost>162500</cost>
 			<mods>
@@ -7824,7 +7824,7 @@
 			<body>22</body>
 			<armor>16</armor>
 			<sensor>2</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>22F</avail>
 			<cost>124000</cost>
 			<mods>
@@ -9609,7 +9609,7 @@
 			<body>22</body>
 			<armor>18</armor>
 			<sensor>3</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>24F</avail>
 			<cost>2900000</cost>
 			<mods>
@@ -9638,7 +9638,7 @@
 			<body>19</body>
 			<armor>15</armor>
 			<sensor>3</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>15R</avail>
 			<cost>65000</cost>
 			<mods>
@@ -9667,7 +9667,7 @@
 			<body>30</body>
 			<armor>24</armor>
 			<sensor>3</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>24F</avail>
 			<cost>6500000</cost>
 			<mods>
@@ -9701,7 +9701,7 @@
 			<body>16</body>
 			<armor>14</armor>
 			<sensor>5</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>28F</avail>
 			<cost>1600000</cost>
 			<mods>
@@ -9729,7 +9729,7 @@
 			<body>20</body>
 			<armor>15</armor>
 			<sensor>2</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>24F</avail>
 			<cost>125000</cost>
 			<mods>
@@ -9758,7 +9758,7 @@
 			<body>30</body>
 			<armor>10</armor>
 			<sensor>3</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>24R</avail>
 			<cost>1550000</cost>
 			<mods>
@@ -9786,7 +9786,7 @@
 			<body>28</body>
 			<armor>14</armor>
 			<sensor>5</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>36F</avail>
 			<cost>21000000</cost>
 			<mods>
@@ -9823,7 +9823,7 @@
 			<body>20</body>
 			<armor>10</armor>
 			<sensor>3</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>28F</avail>
 			<cost>18000000</cost>
 			<mods>
@@ -9853,7 +9853,7 @@
 			<body>18</body>
 			<armor>12</armor>
 			<sensor>6</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>38F</avail>
 			<cost>3800000</cost>
 			<mods>
@@ -9890,7 +9890,7 @@
 			<body>30</body>
 			<armor>15</armor>
 			<sensor>5</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>30F</avail>
 			<cost>5200000</cost>
 			<mods>
@@ -9924,7 +9924,7 @@
 			<body>22</body>
 			<armor>20</armor>
 			<sensor>3</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>36F</avail>
 			<cost>160000000</cost>
 			<mods>
@@ -9967,7 +9967,7 @@
 			<body>20</body>
 			<armor>15</armor>
 			<sensor>6</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>30F</avail>
 			<cost>125000000</cost>
 			<mods>
@@ -10500,7 +10500,7 @@
 			<body>20</body>
 			<armor>12</armor>
 			<sensor>3</sensor>
-			<devicerating>4</devicerating>
+			<devicerating>5</devicerating>
 			<avail>26F</avail>
 			<cost>10000000</cost>
 			<gears>
@@ -13699,7 +13699,7 @@
 			<rating>0</rating>
 			<firewall>1</firewall>
 			<slots>0</slots>
-			<avail>4</avail>
+			<avail>0</avail>
 			<cost>200</cost>
 			<source>SR4</source>
 			<page>232</page>
@@ -13710,7 +13710,7 @@
 			<rating>0</rating>
 			<firewall>2</firewall>
 			<slots>0</slots>
-			<avail>4</avail>
+			<avail>0</avail>
 			<cost>400</cost>
 			<source>SR4</source>
 			<page>232</page>
@@ -13721,7 +13721,7 @@
 			<rating>0</rating>
 			<firewall>3</firewall>
 			<slots>0</slots>
-			<avail>8</avail>
+			<avail>0</avail>
 			<cost>600</cost>
 			<source>SR4</source>
 			<page>232</page>
@@ -13732,7 +13732,7 @@
 			<rating>0</rating>
 			<firewall>4</firewall>
 			<slots>0</slots>
-			<avail>8</avail>
+			<avail>0</avail>
 			<cost>2000</cost>
 			<source>SR4</source>
 			<page>232</page>
@@ -13743,7 +13743,7 @@
 			<rating>0</rating>
 			<firewall>5</firewall>
 			<slots>0</slots>
-			<avail>12</avail>
+			<avail>0</avail>
 			<cost>2500</cost>
 			<source>SR4</source>
 			<page>232</page>
@@ -13754,7 +13754,7 @@
 			<rating>0</rating>
 			<firewall>6</firewall>
 			<slots>0</slots>
-			<avail>16</avail>
+			<avail>0</avail>
 			<cost>3000</cost>
 			<source>SR4</source>
 			<page>232</page>
@@ -13809,7 +13809,7 @@
 			<rating>0</rating>
 			<system>1</system>
 			<slots>0</slots>
-			<avail>4</avail>
+			<avail>0</avail>
 			<cost>200</cost>
 			<source>SR4</source>
 			<page>232</page>
@@ -13820,7 +13820,7 @@
 			<rating>0</rating>
 			<system>2</system>
 			<slots>0</slots>
-			<avail>4</avail>
+			<avail>0</avail>
 			<cost>400</cost>
 			<source>SR4</source>
 			<page>232</page>
@@ -13831,7 +13831,7 @@
 			<rating>0</rating>
 			<system>3</system>
 			<slots>0</slots>
-			<avail>8</avail>
+			<avail>0</avail>
 			<cost>600</cost>
 			<source>SR4</source>
 			<page>232</page>
@@ -13842,7 +13842,7 @@
 			<rating>0</rating>
 			<system>4</system>
 			<slots>0</slots>
-			<avail>8</avail>
+			<avail>0</avail>
 			<cost>2000</cost>
 			<source>SR4</source>
 			<page>232</page>
@@ -13853,7 +13853,7 @@
 			<rating>0</rating>
 			<system>5</system>
 			<slots>0</slots>
-			<avail>12</avail>
+			<avail>0</avail>
 			<cost>2500</cost>
 			<source>SR4</source>
 			<page>232</page>
@@ -13864,7 +13864,7 @@
 			<rating>0</rating>
 			<system>6</system>
 			<slots>0</slots>
-			<avail>16</avail>
+			<avail>0</avail>
 			<cost>3000</cost>
 			<source>SR4</source>
 			<page>232</page>
