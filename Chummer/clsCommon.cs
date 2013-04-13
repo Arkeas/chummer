@@ -976,6 +976,34 @@ namespace Chummer
 				}
 
 		}
+
+		/// <summary>
+		/// Sort the contents of a TreeView alphabetically within each group Node.
+		/// </summary>
+		/// <param name="treTree">TreeView to sort.</param>
+		public void SortTree(TreeView treTree)
+		{
+			for (int i = 0; i <= treTree.Nodes.Count - 1; i++)
+			{
+				List<TreeNode> lstNodes = new List<TreeNode>();
+				foreach (TreeNode objNode in treTree.Nodes[i].Nodes)
+					lstNodes.Add(objNode);
+				treTree.Nodes[i].Nodes.Clear();
+				try
+				{
+					SortByName objSort = new SortByName();
+					lstNodes.Sort(objSort.Compare);
+				}
+				catch
+				{
+				}
+
+				foreach (TreeNode objNode in lstNodes)
+					treTree.Nodes[i].Nodes.Add(objNode);
+
+				treTree.Nodes[i].Expand();
+			}
+		}
 		#endregion
 
 		#region TreeNode Creation Methods
@@ -1307,5 +1335,21 @@ namespace Chummer
 			Process.Start(GlobalOptions.Instance.PDFAppPath, strParams);
 		}
 		#endregion
+
+		/// <summary>
+		/// Verify that the user wants to delete an item.
+		/// </summary>
+		public bool ConfirmDelete(string strMessage)
+		{
+			if (!_objCharacter.Options.ConfirmDelete)
+				return true;
+			else
+			{
+				if (MessageBox.Show(strMessage, LanguageManager.Instance.GetString("MessageTitle_Delete"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+					return false;
+				else
+					return true;
+			}
+		}
 	}
 }

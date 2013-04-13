@@ -1,5 +1,5 @@
-Build XXX
-- added a Threshold field to the Dice Roller window which will tell you if the rolls was a success or failure
+Build 467
+- added a Threshold field to the Dice Roller window which will tell you if the roll was a success or failure
 - Karma and Nuyen tab now display charts to show the character's total Karma and Nuyen over time
 - fixed an issue where the Karma cost for increasing Initiation/Submersion Grade would not round correctly in the tooltip with Group and/or Ordeal checked
 - when selected, Armor Bundles now show the Ballistic and Impact Ratings of their equipped pieces
@@ -7,14 +7,15 @@ Build XXX
 - Panzer Quality now requires Damage Resistance Pool of 5 instead of BOD 5
 - Paragons that offer a choice of bonuses now display their selected bonus on the Complex Forms and Sprites tab
 - Paragons that offer a choice of bonuses no longer prompt for a value to be entered in a textbox
-- increased maximum Rating for Wireless Negating Paint and Wallpaper from 6 to 10 to correspond to the Ratings of Jammers
-- changed Target Autosoft on Dragonfly Minidrone to Exotic Melee Weapon as per Arsenal Errata
-- corrected the Avail for Firewall and System Vehicle Mods (0)
 - fixed an issue where undoing an Nuyen Expense for an Armor Mod would not properly remove it from the list until reloading
-- remvove the Concealable Holster from the Mortimer of London: Berwick Suit Jacket Ensemble
-- corrected the Capacity for Clothing Ensembles
+- removed the Concealable Holster from the Mortimer of London: Berwick Suit Jacket Ensemble
 - purchasing plugins for Gear with a quantity higher than 1 now costs the correct amount of Nuyen (plugin's cost x parent's quantity)
 - fixed an issue where Gear that is added as a plugin to another piece of Gear plugged into a piece of Armor could not be deleted until reloading the save file
+- increased maximum Rating for Wireless Negating Paint and Wallpaper from 6 to 10 to correspond to the Ratings of Jammers
+- changed Target Autosoft on Dragonfly Minidrone to Exotic Melee Weapon as per Arsenal Errata
+- corrected the Capacity for Clothing Ensembles
+- corrected the Avail for Firewall and System Vehicle Mods (0)
+- corrected the cost of Pelagos, Mediterranean
 
 New Strings
 - Label_DiceRoller_Threshold

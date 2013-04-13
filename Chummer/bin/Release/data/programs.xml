@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-919</version>
+	<version>-918</version>
 	<categories>
 		<category>Advanced</category>
 		<category>ARE Programs</category>
@@ -1124,7 +1124,7 @@
 			</programtypes>
 			<complexform>yes</complexform>
 			<source>UN</source>
-			<page>117</page>
+			<page>118</page>
 		</option>
 		<option>
 			<name>Pluscode</name>
@@ -1136,7 +1136,7 @@
 			</programtypes>
 			<complexform>yes</complexform>
 			<source>UN</source>
-			<page>117</page>
+			<page>118</page>
 		</option>
 	</options>
 </chummer>
