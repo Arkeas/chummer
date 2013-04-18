@@ -18106,7 +18106,7 @@ namespace Chummer
 							objSelectedGear = _objFunctions.FindWeaponGear(treWeapons.SelectedNode.Tag.ToString(), _objCharacter.Weapons, out objAccessory);
 							objSelectedGear.Equipped = chkWeaponAccessoryInstalled.Checked;
 
-							ChangeGearEquippedStatus(objSelectedGear, chkWeaponAccessoryInstalled.Checked);
+							_objController.ChangeGearEquippedStatus(objSelectedGear, chkWeaponAccessoryInstalled.Checked);
 
 							UpdateCharacterInfo();
 						}
@@ -18251,7 +18251,7 @@ namespace Chummer
 				objSelectedGear = _objFunctions.FindGear(treGear.SelectedNode.Tag.ToString(), _objCharacter.Gear);
 				objSelectedGear.Equipped = chkGearEquipped.Checked;
 
-				ChangeGearEquippedStatus(objSelectedGear, chkGearEquipped.Checked);
+				_objController.ChangeGearEquippedStatus(objSelectedGear, chkGearEquipped.Checked);
 
 				RefreshSelectedGear();
 				UpdateCharacterInfo();
@@ -21298,87 +21298,6 @@ namespace Chummer
 		}
 
 		/// <summary>
-		/// Calculate the number of Free Spirit Power Points used.
-		/// </summary>
-		private void CalculateFreeSpiritPowerPoints()
-		{
-			if (_objCharacter.Metatype == "Free Spirit" && !_objCharacter.IsCritter)
-			{
-				// PC Free Spirit.
-				double dblPowerPoints = 0;
-
-				foreach (CritterPower objPower in _objCharacter.CritterPowers)
-				{
-					if (objPower.CountTowardsLimit)
-						dblPowerPoints += objPower.PowerPoints;
-				}
-
-				int intPowerPoints = _objCharacter.EDG.TotalValue + _objImprovementManager.ValueOf(Improvement.ImprovementType.FreeSpiritPowerPoints);
-
-				// If the house rule to base Power Points on the character's MAG value instead, use the character's MAG.
-				if (_objCharacter.Options.FreeSpiritPowerPointsMAG)
-					intPowerPoints = _objCharacter.MAG.TotalValue + _objImprovementManager.ValueOf(Improvement.ImprovementType.FreeSpiritPowerPoints);
-
-				lblCritterPowerPointsLabel.Visible = true;
-				lblCritterPowerPoints.Visible = true;
-				lblCritterPowerPoints.Text = String.Format("{1} ({0} " + LanguageManager.Instance.GetString("String_Remaining") + ")", intPowerPoints - dblPowerPoints, intPowerPoints);
-			}
-			else
-			{
-				int intPowerPoints = 0;
-
-				if (_objCharacter.Metatype == "Free Spirit")
-				{
-					// Critter Free Spirits have a number of Power Points equal to their EDG plus any Free Spirit Power Points Improvements.
-					intPowerPoints = _objCharacter.EDG.Value + _objImprovementManager.ValueOf(Improvement.ImprovementType.FreeSpiritPowerPoints); ;
-				}
-				else if (_objCharacter.Metatype == "Ally Spirit")
-				{
-					// Ally Spirits get a number of Power Points equal to their MAG.
-					intPowerPoints = _objCharacter.MAG.TotalValue;
-				}
-				else
-				{
-					// Spirits get 1 Power Point for every 3 full points of Force (MAG) they possess.
-					double dblMAG = Convert.ToDouble(_objCharacter.MAG.TotalValue, GlobalOptions.Instance.CultureInfo);
-					intPowerPoints = Convert.ToInt32(Math.Floor(dblMAG / 3.0));
-				}
-
-				int intUsed = 0;// _objCharacter.CritterPowers.Count - intExisting;
-				foreach (CritterPower objPower in _objCharacter.CritterPowers)
-				{
-					if (objPower.Category != "Weakness" && objPower.CountTowardsLimit)
-						intUsed++;
-				}
-
-				lblCritterPowerPointsLabel.Visible = true;
-				lblCritterPowerPoints.Visible = true;
-				lblCritterPowerPoints.Text = String.Format("{1} ({0} " + LanguageManager.Instance.GetString("String_Remaining") + ")", intPowerPoints - intUsed, intPowerPoints);
-			}
-		}
-
-		/// <summary>
-		/// Calculate the number of Free Sprite Power Points used.
-		/// </summary>
-		private void CalculateFreeSpritePowerPoints()
-		{
-			// Free Sprite Power Points.
-			double dblPowerPoints = 0;
-
-			foreach (CritterPower objPower in _objCharacter.CritterPowers)
-			{
-				if (objPower.CountTowardsLimit)
-					dblPowerPoints += 1;
-			}
-
-			int intPowerPoints = _objCharacter.EDG.TotalValue + _objImprovementManager.ValueOf(Improvement.ImprovementType.FreeSpiritPowerPoints);
-
-			lblCritterPowerPointsLabel.Visible = true;
-			lblCritterPowerPoints.Visible = true;
-			lblCritterPowerPoints.Text = String.Format("{1} ({0} " + LanguageManager.Instance.GetString("String_Remaining") + ")", intPowerPoints - dblPowerPoints, intPowerPoints);
-		}
-
-		/// <summary>
 		/// Update the Character information.
 		/// </summary>
 		public void UpdateCharacterInfo()
@@ -22069,9 +21988,17 @@ namespace Chummer
 				if (_objCharacter.AdeptEnabled)
 					CalculatePowerPoints();
 				if ((_objCharacter.Metatype == "Free Spirit" && !_objCharacter.IsCritter) || _objCharacter.MetatypeCategory.EndsWith("Spirits"))
-					CalculateFreeSpiritPowerPoints();
+				{
+					lblCritterPowerPointsLabel.Visible = true;
+					lblCritterPowerPoints.Visible = true;
+					lblCritterPowerPoints.Text = _objController.CalculateFreeSpiritPowerPoints();
+				}
 				if (_objCharacter.IsFreeSprite)
-					CalculateFreeSpritePowerPoints();
+				{
+					lblCritterPowerPointsLabel.Visible = true;
+					lblCritterPowerPoints.Visible = true;
+					lblCritterPowerPoints.Text = _objController.CalculateFreeSpritePowerPoints();
+				}
 
 				// Update the Nuyen and Karma for the character.
 				tssNuyen.Text = String.Format("{0:###,###,##0¥}", _objCharacter.Nuyen);
@@ -26450,92 +26377,6 @@ namespace Chummer
 			tipTooltip.SetToolTip(lblStreetCredTotal, _objCharacter.StreetCredTooltip);
 			tipTooltip.SetToolTip(lblNotorietyTotal, _objCharacter.NotorietyTooltip);
 			tipTooltip.SetToolTip(lblPublicAwareTotal, _objCharacter.PublicAwarenessTooltip);
-		}
-
-		/// <summary>
-		/// Change the Equipped status of a piece of Gear and all of its children.
-		/// </summary>
-		/// <param name="objGear">Gear object to change.</param>
-		/// <param name="blnEquipped">Whether or not the Gear should be marked as Equipped.</param>
-		private void ChangeGearEquippedStatus(Gear objGear, bool blnEquipped)
-		{
-			if (blnEquipped)
-			{
-				// Add any Improvements from the Gear.
-				if (objGear.Bonus != null)
-				{
-					bool blnAddImprovement = true;
-					// If this is a Focus which is not bonded, don't do anything.
-					if (objGear.Category != "Stacked Focus")
-					{
-						if (objGear.Category.EndsWith("Foci"))
-							blnAddImprovement = objGear.Bonded;
-
-						if (blnAddImprovement)
-						{
-							if (objGear.Extra != string.Empty)
-								_objImprovementManager.ForcedValue = objGear.Extra;
-							_objImprovementManager.CreateImprovements(Improvement.ImprovementSource.Gear, objGear.InternalId, objGear.Bonus, false, objGear.Rating, objGear.DisplayNameShort);
-						}
-					}
-					else
-					{
-						// Stacked Foci need to be handled a little differently.
-						foreach (StackedFocus objStack in _objCharacter.StackedFoci)
-						{
-							if (objStack.GearId == objGear.InternalId)
-							{
-								if (objStack.Bonded)
-								{
-									foreach (Gear objFociGear in objStack.Gear)
-									{
-										if (objFociGear.Extra != string.Empty)
-											_objImprovementManager.ForcedValue = objFociGear.Extra;
-										_objImprovementManager.CreateImprovements(Improvement.ImprovementSource.StackedFocus, objStack.InternalId, objFociGear.Bonus, false, objFociGear.Rating, objFociGear.DisplayNameShort);
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-			else
-			{
-				// Remove any Improvements from the Gear.
-				if (objGear.Bonus != null)
-				{
-					if (objGear.Category != "Stacked Focus")
-						_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.Gear, objGear.InternalId);
-					else
-					{
-						// Stacked Foci need to be handled a little differetnly.
-						foreach (StackedFocus objStack in _objCharacter.StackedFoci)
-						{
-							if (objStack.GearId == objGear.InternalId)
-							{
-								foreach (Gear objFociGear in objStack.Gear)
-									_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.StackedFocus, objStack.InternalId);
-							}
-						}
-					}
-				}
-			}
-
-			if (objGear.Children.Count > 0)
-				ChangeGearEquippedStatus(objGear.Children, blnEquipped);
-		}
-
-		/// <summary>
-		/// Change the Equipped status of all Gear plugins. This should only be called from the other ChangeGearEquippedStatus and never used directly.
-		/// </summary>
-		/// <param name="lstGear">List of child Gear to change.</param>
-		/// <param name="blnEquipped">Whether or not the children should be marked as Equipped.</param>
-		private void ChangeGearEquippedStatus(List<Gear> lstGear, bool blnEquipped)
-		{
-			foreach (Gear objGear in lstGear)
-			{
-				ChangeGearEquippedStatus(objGear, blnEquipped);
-			}
 		}
 
 		/// <summary>

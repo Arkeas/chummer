@@ -1,3 +1,12 @@
+Build XXX
+- save files now include <gameedition /> to indicate which edition of Shadowrun they are for
+- <gameedition /> is now checked when loading a save file to ensure the edition of Chummer and the save file match
+
+New Strings
+- Message_IncorrectGameVersion_SR4
+- Message_IncorrectGameVersion_SR5
+- MessageTitle_IncorrectGameVersion
+
 Build 467
 - added a Threshold field to the Dice Roller window which will tell you if the roll was a success or failure
 - Karma and Nuyen tab now display charts to show the character's total Karma and Nuyen over time
