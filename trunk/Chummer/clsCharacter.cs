@@ -237,6 +237,8 @@ namespace Chummer
 
 			// <appversion />
 			objWriter.WriteElementString("appversion", Application.ProductVersion.ToString().Replace("0.0.0.", string.Empty));
+			// <gameedition />
+			objWriter.WriteElementString("gameedition", "SR4");
 
 			// <settings />
 			objWriter.WriteElementString("settings", _strSettingsFileName);
@@ -718,6 +720,19 @@ namespace Chummer
 			}
 
 			ResetCharacter();
+
+			// Get the game edition of the file if possible and make sure it's intended to be used with this version of the application.
+			try
+			{
+				if (objXmlCharacter["gameedition"].InnerText != string.Empty && objXmlCharacter["gameedition"].InnerText != "SR4")
+				{
+					MessageBox.Show(LanguageManager.Instance.GetString("Message_IncorrectGameVersion_SR5"), LanguageManager.Instance.GetString("MessageTitle_IncorrectGameVersion"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return false;
+				}
+			}
+			catch
+			{
+			}
 
 			// Get the name of the settings file in use if possible.
 			try
