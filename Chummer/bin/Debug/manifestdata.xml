@@ -178,7 +178,7 @@
 	<file>
 		<name>data/critterpowers.xml</name>
 		<type>Data Files</type>
-		<version>-917</version>
+		<version>-916</version>
 		<description>Critter Powers</description>
 		<notes>- Critter Powers data file</notes>
 	</file>
@@ -206,7 +206,7 @@
 	<file>
 		<name>data/gear.xml</name>
 		<type>Data Files</type>
-		<version>-824</version>
+		<version>-823</version>
 		<description>Gear</description>
 		<notes>- Gear data file</notes>
 	</file>
@@ -248,7 +248,7 @@
 	<file>
 		<name>data/metatypes.xml</name>
 		<type>Data Files</type>
-		<version>-915</version>
+		<version>-914</version>
 		<description>Metatypes</description>
 		<notes>- Metatypes data file</notes>
 	</file>
@@ -339,7 +339,7 @@
 	<file>
 		<name>data/weapons.xml</name>
 		<type>Data Files</type>
-		<version>-852</version>
+		<version>-851</version>
 		<description>Weapons</description>
 		<notes>- Weapons data file</notes>
 	</file>

@@ -145,7 +145,7 @@ namespace Chummer
 					if (intHitCount >= nudThreshold.Value)
 						lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Success") + " (" + LanguageManager.Instance.GetString("String_DiceRoller_Hits").Replace("{0}", intHitCount.ToString()) + ")";
 					else
-						lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Failure") + " (" + LanguageManager.Instance.GetString("String_DiceRoller_Glitch").Replace("{0}", intHitCount.ToString()) + ")";
+						lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Failure") + " (" + LanguageManager.Instance.GetString("String_DiceRoller_Hits").Replace("{0}", intHitCount.ToString()) + ")";
 				}
 				else
 					lblResults.Text += LanguageManager.Instance.GetString("String_DiceRoller_Hits").Replace("{0}", intHitCount.ToString());

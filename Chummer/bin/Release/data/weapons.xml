@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-852</version>
+	<version>-851</version>
 	<categories>
 		<category>Blades</category>
 		<category>Clubs</category>
@@ -5519,6 +5519,7 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
+			<useskill>Exotic Ranged Weapons</useskill>
 			<range>Light Pistols</range>
 			<source>SR4</source>
 			<page>319</page>
@@ -5542,6 +5543,7 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
+			<useskill>Exotic Ranged Weapons</useskill>
 			<source>SR4</source>
 			<page>319</page>
 		</weapon>
@@ -5564,6 +5566,7 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
+			<useskill>Exotic Ranged Weapons</useskill>
 			<range>Heavy Pistols</range>
 			<source>SR4</source>
 			<page>320</page>
@@ -5587,6 +5590,7 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
+			<useskill>Exotic Ranged Weapons</useskill>
 			<range>Sports Rifles</range>
 			<source>SR4</source>
 			<page>320</page>
@@ -9251,6 +9255,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>SR4</source>
 			<page>324</page>
@@ -9269,6 +9274,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>SR4</source>
 			<page>324</page>
@@ -9287,6 +9293,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>SR4</source>
 			<page>324</page>
@@ -9323,6 +9330,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>SR4</source>
 			<page>324</page>
@@ -9341,6 +9349,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>SR4</source>
 			<page>324</page>
@@ -9359,6 +9368,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>SR4</source>
 			<page>325</page>
@@ -9377,6 +9387,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>WAR</source>
 			<page>157</page>
@@ -9395,6 +9406,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>SG</source>
 			<page>160</page>
@@ -9413,6 +9425,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>SG</source>
 			<page>160</page>
@@ -9431,6 +9444,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>AR</source>
 			<page>36</page>
@@ -9449,6 +9463,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>AR</source>
 			<page>36</page>
@@ -9467,6 +9482,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>AR</source>
 			<page>37</page>
@@ -9485,6 +9501,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>AR</source>
 			<page>37</page>
@@ -9503,6 +9520,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>AR</source>
 			<page>37</page>
@@ -9521,6 +9539,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>AR</source>
 			<page>37</page>
@@ -9539,6 +9558,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>AR</source>
 			<page>64</page>
@@ -13298,6 +13318,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>2050</source>
 			<page>176</page>
@@ -13316,6 +13337,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>2050</source>
 			<page>176</page>
@@ -13334,6 +13356,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>2050</source>
 			<page>176</page>
@@ -13352,6 +13375,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Heavy Weapons</useskill>
 			<range>Grenade Launchers</range>
 			<source>2050</source>
 			<page>176</page>
