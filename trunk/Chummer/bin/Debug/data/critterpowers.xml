@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-917</version>
+	<version>-916</version>
 	<categories>
 		<category>Allowed Optional Powers</category>
 		<category>Echoes</category>
@@ -1573,6 +1573,16 @@
 			</bonus>
 			<source>RC</source>
 			<page>83</page>
+		</power>
+		<power>
+			<name>Vanish</name>
+			<category>Weakness</category>
+			<type />
+			<action />
+			<range />
+			<duration />
+			<source>RC</source>
+			<page>85</page>
 		</power>
 		<power>
 			<name>Attribute Enhancement</name>

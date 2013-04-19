@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-915</version>
+	<version>-914</version>
 	<categories>
 		<category>Metahuman</category>
 		<category>Sapient Critter</category>
@@ -783,7 +783,7 @@
 				<power>Concealment</power>
 				<power select="Astral Perception">Enhanced Senses</power>
 				<power>Sapience</power>
-				<power>Vanishing</power>
+				<power>Vanish</power>
 			</powers>
 			<source>RC</source>
 			<page>84</page>

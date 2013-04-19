@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-824</version>
+	<version>-823</version>
 	<categories>
 		<category show="false">Altskin Function</category>
 		<category>Ammunition</category>
@@ -10806,7 +10806,7 @@
 			</gears>
 		</gear>
 		<gear>
-			<name>Software Programm Suite</name>
+			<name>Software Programming Suite</name>
 			<category>Software Coding</category>
 			<rating>5</rating>
 			<avail>6</avail>
