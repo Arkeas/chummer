@@ -339,7 +339,7 @@
 	<file>
 		<name>data/weapons.xml</name>
 		<type>Data Files</type>
-		<version>-851</version>
+		<version>-848</version>
 		<description>Weapons</description>
 		<notes>- Weapons data file</notes>
 	</file>
