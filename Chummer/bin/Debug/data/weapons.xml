@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-851</version>
+	<version>-848</version>
 	<categories>
 		<category>Blades</category>
 		<category>Clubs</category>
@@ -1037,6 +1037,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Clubs</useskill>
 			<source>WAR</source>
 			<page>153</page>
 		</weapon>
@@ -1054,6 +1055,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Clubs</useskill>
 			<source>WAR</source>
 			<page>153</page>
 		</weapon>
@@ -1071,6 +1073,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Clubs</useskill>
 			<source>WAR</source>
 			<page>153</page>
 		</weapon>
@@ -1088,6 +1091,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Exotic Melee Weapon</useskill>
 			<source>WAR</source>
 			<page>153</page>
 		</weapon>
@@ -1106,6 +1110,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Blades</useskill>
 			<source>WAR</source>
 			<page>153</page>
 		</weapon>
@@ -1123,6 +1128,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Blades</useskill>
 			<source>WAR</source>
 			<page>153</page>
 		</weapon>
@@ -1141,6 +1147,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Clubs</useskill>
 			<source>WAR</source>
 			<page>153</page>
 		</weapon>
@@ -1159,6 +1166,7 @@
 			<avail>0</avail>
 			<cost>0</cost>
 			<allowaccessory>false</allowaccessory>
+			<useskill>Blades</useskill>
 			<source>WAR</source>
 			<page>153</page>
 		</weapon>
@@ -2014,7 +2022,7 @@
 			<avail>8F</avail>
 			<cost>100</cost>
 			<allowaccessory>false</allowaccessory>
-			<useskill>Exotic Ranged Weapons</useskill>
+			<useskill>Exotic Ranged Weapon</useskill>
 			<range>Holdouts</range>
 			<source>SG</source>
 			<page>155</page>
@@ -3472,11 +3480,9 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
-
-			<accessories>
-				<accessory>Stock</accessory>
-
-			</accessories>
+			<mods>
+				<mod>Folding Stock</mod>
+			</mods>
 			<source>WAR</source>
 			<page>154</page>
 		</weapon>
@@ -3578,11 +3584,8 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
-			<accessories>
-				<accessory>Stock</accessory>
-			</accessories>
 			<mods>
-
+				<mod>Folding Stock</mod>
 				<mod>Gas Vent 2</mod>
 			</mods>
 			<source>AR</source>
@@ -3607,11 +3610,8 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
-			<accessories>
-				<accessory>Stock</accessory>
-			</accessories>
 			<mods>
-
+				<mod>Folding Stock</mod>
 				<mod>Laser Sight</mod>
 			</mods>
 			<source>AR</source>
@@ -3636,11 +3636,8 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
-			<accessories>
-				<accessory>Stock</accessory>
-			</accessories>
 			<mods>
-
+				<mod>Folding Stock</mod>
 				<mod>Smartgun System</mod>
 			</mods>
 			<source>AR</source>
@@ -3745,11 +3742,8 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
-			<accessories>
-				<accessory>Stock</accessory>
-			</accessories>
 			<mods>
-
+				<mod>Folding Stock</mod>
 				<mod>Smartgun System</mod>
 				<mod>Sound Suppressor</mod>
 			</mods>
@@ -3775,14 +3769,10 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
-			<accessories>
-				<accessory>Stock</accessory>
-			</accessories>
 			<mods>
-
-
-				<mod>Smartgun System</mod>
+				<mod>Folding Stock</mod>
 				<mod>High-Power Chambering</mod>
+				<mod>Smartgun System</mod>
 			</mods>
 			<source>WAR</source>
 			<page>154</page>
@@ -3806,11 +3796,8 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
-			<accessories>
-				<accessory>Stock</accessory>
-			</accessories>
 			<mods>
-
+				<mod>Folding Stock</mod>
 				<mod>Gas Vent 2</mod>
 				<mod>Laser Sight</mod>
 			</mods>
@@ -3858,11 +3845,8 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
-			<accessories>
-				<accessory>Stock</accessory>
-			</accessories>
 			<mods>
-
+				<mod>Folding Stock</mod>
 				<mod>Gas Vent 2</mod>
 				<mod>Smartgun System</mod>
 				<mod>Sound Suppressor</mod>
@@ -3887,11 +3871,9 @@
 			<accessorymounts>
 				<mount>Top</mount>
 			</accessorymounts>
-
-			<accessories>
-				<accessory>Stock</accessory>
-
-			</accessories>
+			<mods>
+				<mod>Folding Stock</mod>
+			</mods>
 			<fullburst>12</fullburst>
 			<source>AR</source>
 			<page>25</page>
@@ -3913,11 +3895,9 @@
 			<accessorymounts>
 				<mount>Top</mount>
 			</accessorymounts>
-
-			<accessories>
-				<accessory>Stock</accessory>
-
-			</accessories>
+			<mods>
+				<mod>Folding Stock</mod>
+			</mods>
 			<fullburst>12</fullburst>
 			<source>AR</source>
 			<page>25</page>
@@ -3963,11 +3943,8 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
-			<accessories>
-				<accessory>Stock</accessory>
-			</accessories>
 			<mods>
-
+				<mod>Folding Stock</mod>
 				<mod>Laser Sight</mod>
 			</mods>
 			<source>AR</source>
@@ -3992,11 +3969,8 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
-			<accessories>
-				<accessory>Stock</accessory>
-			</accessories>
 			<mods>
-
+				<mod>Folding Stock</mod>
 				<mod>Smartgun System</mod>
 			</mods>
 			<source>AR</source>
@@ -4021,11 +3995,8 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
-			<accessories>
-				<accessory>Stock</accessory>
-			</accessories>
 			<mods>
-
+				<mod>Folding Stock</mod>
 				<mod>Laser Sight</mod>
 			</mods>
 			<source>SR4</source>
@@ -4686,13 +4657,11 @@
 			</accessorymounts>
 			<accessories>
 				<accessory>Imaging Scope</accessory>
-				<accessory>Stock</accessory>
 			</accessories>
 			<mods>
-
-
-				<mod>Laser Sight</mod>
+				<mod>Folding Stock</mod>
 				<mod>Gas Vent 2</mod>
+				<mod>Laser Sight</mod>
 			</mods>
 			<source>AR</source>
 			<page>27</page>
@@ -5397,11 +5366,10 @@
 				<mount>Under</mount>
 			</accessorymounts>
 			<accessories>
-				<accessory>Stock</accessory>
 				<accessory>Shock Pad</accessory>
 			</accessories>
 			<mods>
-
+				<mod>Folding Stock</mod>
 				<mod>Smartgun System</mod>
 			</mods>
 			<source>AR</source>
@@ -5519,7 +5487,7 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
-			<useskill>Exotic Ranged Weapons</useskill>
+			<useskill>Exotic Ranged Weapon</useskill>
 			<range>Light Pistols</range>
 			<source>SR4</source>
 			<page>319</page>
@@ -5543,7 +5511,7 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
-			<useskill>Exotic Ranged Weapons</useskill>
+			<useskill>Exotic Ranged Weapon</useskill>
 			<source>SR4</source>
 			<page>319</page>
 		</weapon>
@@ -5566,7 +5534,7 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
-			<useskill>Exotic Ranged Weapons</useskill>
+			<useskill>Exotic Ranged Weapon</useskill>
 			<range>Heavy Pistols</range>
 			<source>SR4</source>
 			<page>320</page>
@@ -5590,7 +5558,7 @@
 				<mount>Top</mount>
 				<mount>Under</mount>
 			</accessorymounts>
-			<useskill>Exotic Ranged Weapons</useskill>
+			<useskill>Exotic Ranged Weapon</useskill>
 			<range>Sports Rifles</range>
 			<source>SR4</source>
 			<page>320</page>

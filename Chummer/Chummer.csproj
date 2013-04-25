@@ -512,6 +512,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="SkillGroupControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
