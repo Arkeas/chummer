@@ -20976,6 +20976,7 @@ namespace Chummer
 		private void ClearInitiationTab()
 		{
 			_objController.ClearInitiationTab(treMetamagic);
+			UpdateInitiationGradeList();
 
 			_blnIsDirty = true;
 			UpdateCharacterInfo();

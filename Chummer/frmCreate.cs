@@ -14743,6 +14743,7 @@ namespace Chummer
 		private void ClearInitiationTab()
 		{
 			_objController.ClearInitiationTab(treMetamagic);
+			UpdateInitiationGradeList();
 
 			lblInitiateGrade.Text = "0";
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- Character sheet based on the Shadowrun 4th Edition Character Sheet -->
 <!-- Created by Keith Rudolph, krudolph@gmail.com -->
-<!-- Version -893 -->
+<!-- Version -892 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
 	<xsl:include href="ConditionMonitor.xslt"/>
 	<xsl:template match="/characters/character">
@@ -1716,7 +1716,7 @@
 									<xsl:if test="position() mod 2 != 1">
 										<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
 									</xsl:if>
-									<td colspan="7" class="indent">
+									<td colspan="8" class="indent">
 					<xsl:for-each select="accessories/accessory">
 						<xsl:sort select="name" />
 										<xsl:value-of select="name" />
@@ -1744,7 +1744,7 @@
 									<td style="text-align:center;" valign="top">M: <xsl:value-of select="ranges/medium" /></td>
 									<td style="text-align:center;" valign="top">W: <xsl:value-of select="ranges/long" /></td>
 									<td style="text-align:center;" valign="top">E: <xsl:value-of select="ranges/extreme" /></td>
-									<td colspan="2"></td>
+									<td colspan="3"></td>
 								</tr>
 				</xsl:if>
 
@@ -1760,22 +1760,25 @@
 														("<xsl:value-of select="weaponname" />")
 													</xsl:if>
 												</td>
+												<td width="10%" style="text-align:center;" valign="top">
+													<xsl:value-of select="dicepool" />
+												</td>
 												<td width="15%" style="text-align:center;" valign="top">
 													<xsl:value-of select="damage" />
 												</td>
-												<td width="12%" style="text-align:center;" valign="top">
+												<td width="10%" style="text-align:center;" valign="top">
 													<xsl:value-of select="ap" />
 												</td>
-												<td width="13%" style="text-align:center;" valign="top">
+												<td width="10%" style="text-align:center;" valign="top">
 													<xsl:value-of select="mode" />
 												</td>
-												<td width="12%" style="text-align:center;" valign="top">
+												<td width="10%" style="text-align:center;" valign="top">
 													<xsl:value-of select="rc" />
 												</td>
-												<td width="15%" style="text-align:center;" valign="top">
+												<td width="13%" style="text-align:center;" valign="top">
 													<xsl:value-of select="ammo" />
 												</td>
-												<td width="13%" style="text-align:center;" valign="top">
+												<td width="11%" style="text-align:center;" valign="top">
 													<xsl:value-of select="source" /><xsl:text> </xsl:text><xsl:value-of select="page" />
 												</td>
 											</tr>
@@ -1784,7 +1787,7 @@
 									<xsl:if test="position() mod 2 != 1">
 										<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
 									</xsl:if>
-									<td colspan="7" class="indent">
+									<td colspan="8" class="indent">
 					<xsl:for-each select="accessories/accessory">
 						<xsl:sort select="name" />
 										<xsl:value-of select="name" />
@@ -1812,7 +1815,7 @@
 									<td style="text-align:center;" valign="top">M: <xsl:value-of select="ranges/medium" /></td>
 									<td style="text-align:center;" valign="top">W: <xsl:value-of select="ranges/long" /></td>
 									<td style="text-align:center;" valign="top">E: <xsl:value-of select="ranges/extreme" /></td>
-									<td colspan="2"></td>
+									<td colspan="3"></td>
 								</tr>
 				</xsl:if>
 					</xsl:for-each>
@@ -1823,7 +1826,7 @@
 						<xsl:if test="position() mod 2 != 1">
 							<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
 						</xsl:if>
-						<td colspan="7" class="notesrow">
+						<td colspan="8" class="notesrow">
 							<xsl:call-template name="PreserveLineBreaks">
 								<xsl:with-param name="text" select="notes" />
 							</xsl:call-template>
