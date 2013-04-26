@@ -38,7 +38,7 @@
 	<file>
 		<name>sheets/Shadowrun 4 Base.xslt</name>
 		<type>Character Sheets</type>
-		<version>-893</version>
+		<version>-892</version>
 		<description>Shadowrun 4 Character Sheet Base</description>
 		<notes>- Character sheet based on the Shadowrun 4 sheet</notes>
 	</file>
@@ -108,7 +108,7 @@
 	<file>
 		<name>sheets/de/Shadowrun 4 Base.xslt</name>
 		<type>German Character Sheets</type>
-		<version>-893</version>
+		<version>-892</version>
 		<description>Shadowrun 4 Character Sheet Base</description>
 		<notes>- Character sheet based on the Shadowrun 4 sheet</notes>
 	</file>

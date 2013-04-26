@@ -708,6 +708,7 @@ namespace Chummer
 			_objCharacter.InitiateGrade = 0;
 			_objCharacter.SubmersionGrade = 0;
 			_objCharacter.Metamagics.Clear();
+			_objCharacter.InitiationGrades.Clear();
 
 			treMetamagic.Nodes.Clear();
 		}
