@@ -1,5 +1,18 @@
+Build 472
+- save files now include <gameedition /> to indicate which edition of Shadowrun they are for
+- <gameedition /> is now checked when loading a save file to ensure the edition of Chummer and the save file match
+- fixed an issue where a failed roll with 0 Hits and not enough 1s to cause a Glitch would incorrectly show a Glitch
+- fixed an issue where increasing the quantity of Ammo using the Qty + button or the Buy Additional Ammo button would incorrectly multiply the total cost of the purchase
+- fixed an issue where removing an item that gave the character access to the Initiation/Submersion tab in Create Mode would not properly refund the cost of any Initiation/Submersion Grades that were purchased
+- Underbarrel Weapons now show their Dice Pools on the SR4 character sheet
+
+New Strings
+- Message_IncorrectGameVersion_SR4
+- Message_IncorrectGameVersion_SR5
+- MessageTitle_IncorrectGameVersion
+
 Build 467
-- added a Threshold field to the Dice Roller window which will tell you if the rolls was a success or failure
+- added a Threshold field to the Dice Roller window which will tell you if the roll was a success or failure
 - Karma and Nuyen tab now display charts to show the character's total Karma and Nuyen over time
 - fixed an issue where the Karma cost for increasing Initiation/Submersion Grade would not round correctly in the tooltip with Group and/or Ordeal checked
 - when selected, Armor Bundles now show the Ballistic and Impact Ratings of their equipped pieces

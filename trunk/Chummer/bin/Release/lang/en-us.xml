@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-908</version>
+	<version>-907</version>
 	<name>English (US)</name>
 	<strings>
 		<!-- Common Strings -->
@@ -421,6 +421,18 @@
 		<string>
 			<key>MessageTitle_RemoveCharacterAssociation</key>
 			<text>Remove Character Association</text>
+		</string>
+		<string>
+			<key>Message_IncorrectGameVersion_SR4</key>
+			<text>This save file is intended to be used with Shadowrun 4th Edition while this version of Chummer is for Shadowrun 5th Edition. Please use the Shadowrun 4th Edition version of Chummer to open this file.</text>
+		</string>
+		<string>
+			<key>Message_IncorrectGameVersion_SR5</key>
+			<text>This save file is intended to be used with Shadowrun 5th Edition while this version of Chummer is for Shadowrun 4th Edition. Please use the Shadowrun 5th Edition version of Chummer to open this file.</text>
+		</string>
+		<string>
+			<key>MessageTitle_IncorrectGameVersion</key>
+			<text>Incorrect Game Version</text>
 		</string>
 		<!-- Attributes -->
 		<string>
