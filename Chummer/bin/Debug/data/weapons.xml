@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-848</version>
+	<version>-847</version>
 	<categories>
 		<category>Blades</category>
 		<category>Clubs</category>
@@ -4414,7 +4414,7 @@
 			<damage>6P</damage>
 			<ap>-1</ap>
 			<mode>SA/BF/FA</mode>
-			<rc>-1</rc>
+			<rc>0</rc>
 			<ammo>30(c)</ammo>
 			<conceal>6</conceal>
 			<avail>15F</avail>
@@ -4472,7 +4472,7 @@
 			<damage>7P</damage>
 			<ap>+1</ap>
 			<mode>SA</mode>
-			<rc>-1</rc>
+			<rc>0</rc>
 			<ammo>10(c)</ammo>
 			<conceal>6</conceal>
 			<avail>0</avail>
@@ -4503,7 +4503,7 @@
 			<damage>5P</damage>
 			<ap>-</ap>
 			<mode>SA/BF/FA</mode>
-			<rc>-1</rc>
+			<rc>0</rc>
 			<ammo>30(c)</ammo>
 			<conceal>6</conceal>
 			<avail>0</avail>
@@ -4532,7 +4532,7 @@
 			<damage>7P</damage>
 			<ap>-2</ap>
 			<mode>SA</mode>
-			<rc>-1</rc>
+			<rc>0</rc>
 			<ammo>10(c)</ammo>
 			<conceal>6</conceal>
 			<avail>0</avail>
@@ -5068,7 +5068,7 @@
 			<damage>8P</damage>
 			<ap>-3</ap>
 			<mode>SA</mode>
-			<rc>-1</rc>
+			<rc>0</rc>
 			<ammo>14(c)</ammo>
 			<conceal>6</conceal>
 			<avail>10F</avail>
@@ -6392,6 +6392,9 @@
 			<avail>0</avail>
 			<cost>800</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<range>Holdouts</range>
 			<source>SR4</source>
 			<page>345</page>
@@ -6410,6 +6413,9 @@
 			<avail>0</avail>
 			<cost>1500</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<range>Light Pistols</range>
 			<source>SR4</source>
 			<page>345</page>
@@ -6428,6 +6434,9 @@
 			<avail>0</avail>
 			<cost>2000</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<range>Machine Pistols</range>
 			<source>SR4</source>
 			<page>345</page>
@@ -6446,6 +6455,9 @@
 			<avail>0</avail>
 			<cost>3200</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<range>Heavy Pistols</range>
 			<source>SR4</source>
 			<page>345</page>
@@ -6464,6 +6476,9 @@
 			<avail>0</avail>
 			<cost>2500</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<range>Submachine Guns</range>
 			<source>SR4</source>
 			<page>345</page>
@@ -6482,6 +6497,9 @@
 			<avail>0</avail>
 			<cost>2100</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<range>Shotguns</range>
 			<source>SR4</source>
 			<page>345</page>
@@ -6500,6 +6518,9 @@
 			<avail>0</avail>
 			<cost>4000</cost>
 			<allowaccessory>true</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<range>Grenade Launchers</range>
 			<source>SR4</source>
 			<page>345</page>
@@ -6552,6 +6573,9 @@
 			<avail>0</avail>
 			<cost>2000</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<source>AU</source>
 			<page>39</page>
 		</weapon>
@@ -6569,6 +6593,9 @@
 			<avail>0</avail>
 			<cost>1400</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<range>Light Pistols</range>
 			<source>AU</source>
 			<page>42</page>
@@ -6587,6 +6614,9 @@
 			<avail>0</avail>
 			<cost>1500</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<range>Tasers</range>
 			<source>AU</source>
 			<page>42</page>
@@ -6605,6 +6635,9 @@
 			<avail>0</avail>
 			<cost>1500</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<range>Tasers</range>
 			<source>AU</source>
 			<page>43</page>
@@ -6623,6 +6656,9 @@
 			<avail>0</avail>
 			<cost>2750</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<range>Tasers</range>
 			<source>AU</source>
 			<page>42</page>
@@ -6641,6 +6677,9 @@
 			<avail>0</avail>
 			<cost>1600</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<range>Holdouts</range>
 			<source>AU</source>
 			<page>43</page>
@@ -6693,6 +6732,9 @@
 			<avail>0</avail>
 			<cost>1250</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<range>Light Pistols</range>
 			<source>AU</source>
 			<page>43</page>
@@ -6711,6 +6753,9 @@
 			<avail>0</avail>
 			<cost>1000</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<range>Tasers</range>
 			<source>AU</source>
 			<page>43</page>
@@ -6729,6 +6774,9 @@
 			<avail>0</avail>
 			<cost>3000</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<source>AU</source>
 			<page>46</page>
 		</weapon>
@@ -6814,6 +6862,9 @@
 			<avail>0</avail>
 			<cost>900</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<range>Tasers</range>
 			<source>AU</source>
 			<page>47</page>
@@ -6832,6 +6883,9 @@
 			<avail>0</avail>
 			<cost>3000</cost>
 			<allowaccessory>false</allowaccessory>
+			<mods>
+				<mod>Smartgun System</mod>
+			</mods>
 			<range>Tasers</range>
 			<source>AU</source>
 			<page>48</page>
@@ -15236,6 +15290,7 @@
 			<cost>Weapon Cost</cost>
 			<allowgear>
 				<gearcategory>Peripherals</gearcategory>
+				<gearcategory>Vision Enhancements</gearcategory>
 			</allowgear>
 			<source>SR4</source>
 			<page>322</page>
@@ -15247,6 +15302,7 @@
 			<cost>400</cost>
 			<allowgear>
 				<gearcategory>Peripherals</gearcategory>
+				<gearcategory>Vision Enhancements</gearcategory>
 			</allowgear>
 			<source>SR4</source>
 			<page>322</page>

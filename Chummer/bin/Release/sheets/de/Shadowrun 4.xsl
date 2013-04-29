@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- Character sheet based on the Shadowrun 4th Edition Character Sheet -->
 <!-- Created by Keith Rudolph, krudolph@gmail.com -->
-<!-- Version -911 -->
+<!-- Version -910 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
 	<xsl:include href="Shadowrun 4 Base.xslt"/>
 	<xsl:template name="skills1">
@@ -22,7 +22,7 @@
 													<xsl:if test="spec != '' and exotic = 'False'"> (<xsl:value-of select="total + 2" />)</xsl:if>
 												</td>
 												<td width="10%" style="text-align:center;" valign="top">
-													<xsl:value-of select="rating" />
+													<strong><xsl:value-of select="rating" /></strong>
 												</td>
 												<td width="10%" style="text-align:center;" valign="top">
 													<xsl:value-of select="attributemod" />
@@ -55,7 +55,7 @@
 													<xsl:if test="spec != '' and exotic = 'False'"> (<xsl:value-of select="total + 2" />)</xsl:if>
 												</td>
 												<td width="10%" style="text-align:center;" valign="top">
-													<xsl:value-of select="rating" />
+													<strong><xsl:value-of select="rating" /></strong>
 												</td>
 												<td width="10%" style="text-align:center;" valign="top">
 													<xsl:value-of select="attributemod" />
@@ -96,10 +96,10 @@
 												<td width="10%" style="text-align:center;" valign="top">
 													<xsl:choose>
 														<xsl:when test="islanguage = 'True' and rating = 0">
-															M
+															<strong>M</strong>
 														</xsl:when>
 														<xsl:otherwise>
-															<xsl:value-of select="rating" />
+															<strong><xsl:value-of select="rating" /></strong>
 														</xsl:otherwise>
 													</xsl:choose>
 												</td>
@@ -160,10 +160,10 @@
 												<td width="10%" style="text-align:center;" valign="top">
 													<xsl:choose>
 														<xsl:when test="islanguage = 'True' and rating = 0">
-															M
+															<strong>M</strong>
 														</xsl:when>
 														<xsl:otherwise>
-															<xsl:value-of select="rating" />
+															<strong><xsl:value-of select="rating" /></strong>
 														</xsl:otherwise>
 													</xsl:choose>
 												</td>

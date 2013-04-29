@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Character sheet based on the Shadowrun 4th Edition Character Sheet -->
 <!-- Created by Keith Rudolph, krudolph@gmail.com -->
-<!-- Version -892 -->
+<!-- Version -891 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
 	<xsl:include href="ConditionMonitor.xslt"/>
 	<xsl:template match="/characters/character">
@@ -139,11 +139,11 @@
 						{
 							var elem = document.getElementById(idx); 
 							if (elem.style.pageBreakAfter == 'always') {
-								txt = "NEIN";
+								txt = "Nein";
 								elem.style.pageBreakAfter = 'auto';
 							}
 							else {
-								txt = "JA";
+								txt = "Ja";
 								elem.style.pageBreakAfter = 'always';
 							}
 							what.innerHTML = "Seitenumbruch: " + txt;
@@ -152,11 +152,11 @@
 						{
 							var elem = document.getElementById(idx); 
 							if (elem.className != 'sectionhide') {
-								txt = "NEIN";
+								txt = "Nein";
 								elem.className = 'sectionhide';
 							}
 							else {
-								txt = "JA";
+								txt = "Ja";
 								elem.className = 'block';
 							}
 							what.innerHTML = "Zeigen: " + txt;
@@ -172,108 +172,108 @@
 							<table width="100%" cellspacing="0" cellpadding="2" border="0">
 								<tr>
 									<td colspan="4">
-										<strong>NAME/ALIAS:</strong><xsl:text> </xsl:text><xsl:value-of select="name" />
+										<strong>Name/Alias:</strong><xsl:text> </xsl:text><xsl:value-of select="name" />
 										<xsl:if test="alias != ''"> (<xsl:value-of select="alias" />)</xsl:if>
 									</td>
 									<td colspan="4">
-										<strong>SPIELER:</strong><xsl:text> </xsl:text><xsl:value-of select="playername" />
+										<strong>Spieler:</strong><xsl:text> </xsl:text><xsl:value-of select="playername" />
 									</td>
 									<td colspan="2">
-										BEWEGUNG: <xsl:value-of select="movement" />
+										Bewegung: <xsl:value-of select="movement" />
 									</td>
 								</tr>
 								<tr>
 									<td colspan="4">
-										METATYP:
+										Metatyp:
 										<xsl:value-of select="metatype" />
 										<xsl:if test="metavariant != ''">
 											(<xsl:value-of select="metavariant" />)
 										</xsl:if>
 									</td>
-									<td width="10%">ALTER:</td>
+									<td width="10%">Alter:</td>
 									<td width="10%">
 										<xsl:value-of select="age" />
 									</td>
-									<td width="10%">GESCHLECHT:</td>
+									<td width="10%">Geschlecht:</td>
 									<td width="10%">
 										<xsl:value-of select="sex" />
 									</td>
-									<td width="10%">NUYEN:</td>
+									<td width="10%">Nuyen:</td>
 									<td width="10%">
 										<xsl:value-of select="nuyen" />
 									</td>
 								</tr>
 								<tr>
-									<td width="10%">GRÖSSE:</td>
+									<td width="10%">Größe:</td>
 									<td width="10%">
 										<xsl:value-of select="height" />
 									</td>
-									<td width="10%">GEWICHT:</td>
+									<td width="10%">Gewicht:</td>
 									<td width="10%">
 										<xsl:value-of select="weight" />
 									</td>
-									<td width="10%">HAARFARBE:</td>
+									<td width="10%">Haarfarbe:</td>
 									<td width="10%">
 										<xsl:value-of select="hair" />
 									</td>
-									<td width="10%">AUGENFARBE:</td>
+									<td width="10%">Augenfarbe:</td>
 									<td width="10%">
 										<xsl:value-of select="eyes" />
 									</td>
-									<td width="10%">HAUTFARBE:</td>
+									<td width="10%">Hautfarbe:</td>
 									<td width="10%">
 										<xsl:value-of select="skin" />
 									</td>
 								</tr>
 								<tr>
-									<td width="10%">KARMA AKT.:</td>
+									<td width="10%">Karma:</td>
 									<td width="10%">
 										<xsl:value-of select="karma" />
 									</td>
-									<td width="10%">KARMA GES.:</td>
+									<td width="10%">Ges. Karma:</td>
 									<td width="10%">
 										<xsl:value-of select="totalkarma" />
 									</td>
-									<td width="10%">STRASSENRUF:</td>
+									<td width="10%">Straßenruf:</td>
 									<td width="10%">
 										<xsl:value-of select="totalstreetcred" />
 									</td>
-									<td width="10%">SCHLECHTER RUF:</td>
+									<td width="10%">Schlechter Ruf:</td>
 									<td width="10%">
 										<xsl:value-of select="totalnotoriety" />
 									</td>
-									<td width="10%">PROMINENZ:</td>
+									<td width="10%">Prominenz:</td>
 									<td width="10%">
 										<xsl:value-of select="totalpublicawareness" />
 									</td>
 								</tr>
 								<tr>
-									<td width="10%">SELBSTBEHERRSCHUG:</td>
+									<td width="10%">Selbstbeherrsch.:</td>
 									<td width="10%">
 										<xsl:value-of select="composure" />
 									</td>
-									<td width="10%">MENSCHENKENNTNIS:</td>
+									<td width="10%">Menschenkentnis:</td>
 									<td width="10%">
 										<xsl:value-of select="judgeintentions" />
 									</td>
-									<td width="10%">HEBEN/TRAGEN:</td>
+									<td width="10%">Heben/Tragen:</td>
 									<td width="10%">
 										<xsl:value-of select="liftandcarry" />
 									</td>
-									<td width="10%">HEBEN/TREGEN GEWICHT:</td>
+									<td width="10%">Heben/Tragen Gewicht:</td>
 									<td width="10%">
-										<xsl:value-of select="liftweight" /> kg/<xsl:value-of select="carryweight" /> kg
+										<xsl:value-of select="liftweight" /> kg / <xsl:value-of select="carryweight" /> kg
 									</td>
-									<td width="10%">ERINNERUNGSVERMÖGEN:</td>
+									<td width="10%">Erinnern:</td>
 									<td width="10%">
 										<xsl:value-of select="memory" />
 									</td>
 								</tr>
 								<tr>
 									<td class="rowsummary" colspan="10">
-										CHARAKTERDATEN
-										<span class="rowsummarybutton" onClick="showhide(this,'PersonalDataBlock');" colspan="2">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'PersonalDataBlock');" colspan="2">Seitenumbruch: NEIN</span>
+										Charakterdaten
+										<span class="rowsummarybutton" onClick="showhide(this,'PersonalDataBlock');" colspan="2">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'PersonalDataBlock');" colspan="2">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -292,22 +292,22 @@
 							<table width="100%" cellspacing="0" cellpadding="0" border="0">
 								<tr>
 									<td width="25%" style="text-align:center;" class="attributecell">
-										<strong>KÖRPERLICHE ATTRIBUTE</strong>
+										<strong>Körperliche Attribute</strong>
 									</td>
 									<td width="25%" style="text-align:center;" class="attributecell">
-										<strong>GEISTIGE ATTRIBUTE</strong>
+										<strong>Geistige Attribute</strong>
 									</td>
 									<td width="25%" style="text-align:center;" class="attributecell">
-										<strong>BESONDERE ATTRIBUTE</strong>
+										<strong>Besondere Attribute</strong>
 									</td>
 									<td width="25%" style="text-align:center;" class="attributecell">
-										<strong>BESONDERE ATTRIBUTE</strong>
+										<strong>Besondere Attribute</strong>
 									</td>
 								</tr>
 								<tr>
 									<td width="25%" class="attributecell">
 										<p>
-											KONSTITUTION: <xsl:value-of select="attributes/attribute[name = 'BOD']/base" />
+											Konstitution: <xsl:value-of select="attributes/attribute[name = 'BOD']/base" />
 											<xsl:if test="attributes/attribute[name = 'BOD']/total != attributes/attribute[name = 'BOD']/base">
 												(<xsl:value-of select="attributes/attribute[name = 'BOD']/total" />)
 											</xsl:if>
@@ -315,7 +315,7 @@
 									</td>
 									<td width="25%" class="attributecell">
 										<p>
-											CHARISMA: <xsl:value-of select="attributes/attribute[name = 'CHA']/base" />
+											Charisma: <xsl:value-of select="attributes/attribute[name = 'CHA']/base" />
 											<xsl:if test="attributes/attribute[name = 'CHA']/total != attributes/attribute[name = 'CHA']/base">
 												(<xsl:value-of select="attributes/attribute[name = 'CHA']/total" />)
 											</xsl:if>
@@ -323,20 +323,20 @@
 									</td>
 									<td width="25%" class="attributecell">
 										<p>
-											EDGE: <xsl:value-of select="attributes/attribute[name = 'EDG']/base" />
+											Edge: <xsl:value-of select="attributes/attribute[name = 'EDG']/base" />
 											<xsl:if test="attributes/attribute[name = 'EDG']/total != attributes/attribute[name = 'EDG']/base">
 												(<xsl:value-of select="attributes/attribute[name = 'EDG']/total" />)
 											</xsl:if>
 										</p>
 									</td>
 									<td width="25%" class="attributecell">
-										<p>AKTUELLES EDGE:</p>
+										<p>Aktuelles Edge:</p>
 									</td>
 								</tr>
 								<tr>
 									<td width="25%" class="attributecell">
 										<p>
-											GESCHICKLICHKEIT: <xsl:value-of select="attributes/attribute[name = 'AGI']/base" />
+											Geschicklichkeit: <xsl:value-of select="attributes/attribute[name = 'AGI']/base" />
 											<xsl:if test="attributes/attribute[name = 'AGI']/total != attributes/attribute[name = 'AGI']/base">
 												(<xsl:value-of select="attributes/attribute[name = 'AGI']/total" />)
 											</xsl:if>
@@ -344,7 +344,7 @@
 									</td>
 									<td width="25%" class="attributecell">
 										<p>
-											INTUITION: <xsl:value-of select="attributes/attribute[name = 'INT']/base" />
+											Intuition: <xsl:value-of select="attributes/attribute[name = 'INT']/base" />
 											<xsl:if test="attributes/attribute[name = 'INT']/total != attributes/attribute[name = 'INT']/base">
 												(<xsl:value-of select="attributes/attribute[name = 'INT']/total" />)
 											</xsl:if>
@@ -352,14 +352,14 @@
 									</td>
 									<td width="25%" class="attributecell">
 										<p>
-											ESSENZ: <xsl:value-of select="attributes/attribute[name = 'ESS']/base" />
+											Essenz: <xsl:value-of select="attributes/attribute[name = 'ESS']/base" />
 										</p>
 									</td>
 									<td width="25%" class="attributecell">
 										<p>
 											<xsl:choose>
 												<xsl:when test="magenabled = 'True'">
-											ASTRALE INI: <xsl:value-of select="astralinit/base" />
+											Astrale Ini: <xsl:value-of select="astralinit/base" />
 												</xsl:when>
 												<xsl:otherwise>
 											&#160;
@@ -371,7 +371,7 @@
 								<tr>
 									<td width="25%" class="attributecell">
 										<p>
-											REAKTION: <xsl:value-of select="attributes/attribute[name = 'REA']/base" />
+											Reaktion: <xsl:value-of select="attributes/attribute[name = 'REA']/base" />
 											<xsl:if test="attributes/attribute[name = 'REA']/total != attributes/attribute[name = 'REA']/base">
 												(<xsl:value-of select="attributes/attribute[name = 'REA']/total" />)
 											</xsl:if>
@@ -379,7 +379,7 @@
 									</td>
 									<td width="25%" class="attributecell">
 										<p>
-											LOGIK: <xsl:value-of select="attributes/attribute[name = 'LOG']/base" />
+											Logik: <xsl:value-of select="attributes/attribute[name = 'LOG']/base" />
 											<xsl:if test="attributes/attribute[name = 'LOG']/total != attributes/attribute[name = 'LOG']/base">
 												(<xsl:value-of select="attributes/attribute[name = 'LOG']/total" />)
 											</xsl:if>
@@ -387,7 +387,7 @@
 									</td>
 									<td width="25%" class="attributecell">
 										<p>
-											INITIATIVE: <xsl:value-of select="init/base" />
+											Initiative: <xsl:value-of select="init/base" />
 											<xsl:if test="init/total != init/base">
 												(<xsl:value-of select="init/total" />)
 											</xsl:if>
@@ -395,14 +395,14 @@
 									</td>
 									<td width="25%" class="attributecell">
 										<p>
-											MATRIX INI: <xsl:value-of select="matrixinit/base" />
+											Matrix Ini: <xsl:value-of select="matrixinit/base" />
 										</p>
 									</td>
 								</tr>
 								<tr>
 									<td width="25%" class="attributecell">
 										<p>
-											STÄRKE: <xsl:value-of select="attributes/attribute[name = 'STR']/base" />
+											Stärke: <xsl:value-of select="attributes/attribute[name = 'STR']/base" />
 											<xsl:if test="attributes/attribute[name = 'STR']/total != attributes/attribute[name = 'STR']/base">
 												(<xsl:value-of select="attributes/attribute[name = 'STR']/total" />)
 											</xsl:if>
@@ -410,7 +410,7 @@
 									</td>
 									<td width="25%" class="attributecell">
 										<p>
-											WILLENSKRAFT: <xsl:value-of select="attributes/attribute[name = 'WIL']/base" />
+											Willenskraft: <xsl:value-of select="attributes/attribute[name = 'WIL']/base" />
 											<xsl:if test="attributes/attribute[name = 'WIL']/total != attributes/attribute[name = 'WIL']/base">
 												(<xsl:value-of select="attributes/attribute[name = 'WIL']/total" />)
 											</xsl:if>
@@ -419,13 +419,13 @@
 									<td width="25%" class="attributecell">
 										<p>
 											<xsl:if test="magenabled = 'True'">
-												MAGIE: <xsl:value-of select="attributes/attribute[name = 'MAG']/base" />
+												Magie: <xsl:value-of select="attributes/attribute[name = 'MAG']/base" />
 												<xsl:if test="attributes/attribute[name = 'MAG']/total != attributes/attribute[name = 'MAG']/base">
 													(<xsl:value-of select="attributes/attribute[name = 'MAG']/total" />)
 												</xsl:if>
 											</xsl:if>
 											<xsl:if test="resenabled = 'True'">
-												RESONANZ: <xsl:value-of select="attributes/attribute[name = 'RES']/base" />
+												Resonanz: <xsl:value-of select="attributes/attribute[name = 'RES']/base" />
 												<xsl:if test="attributes/attribute[name = 'RES']/total != attributes/attribute[name = 'RES']/base">
 													(<xsl:value-of select="attributes/attribute[name = 'RES']/total" />)
 												</xsl:if>
@@ -435,22 +435,22 @@
 									</td>
 									<td width="25%" class="attributecell">
 										<p>
-											INI-DURCHGÄNGE: <xsl:value-of select="ip/base" />
+											Ini-Durchgänge: <xsl:value-of select="ip/base" />
 											<xsl:if test="ip/total != ip/base">
 												(<xsl:value-of select="ip/total" />)
 											</xsl:if>
-												&#160;&#160;&#160;MATRIX: <xsl:value-of select="matrixip/base" />
+												&#160;&#160;&#160;Matrix: <xsl:value-of select="matrixip/base" />
 											<xsl:if test="magenabled = 'True'">
-												&#160;&#160;&#160;ASTRAL: <xsl:value-of select="astralip/base" />
+												&#160;&#160;&#160;Astral: <xsl:value-of select="astralip/base" />
 											</xsl:if>
 										</p>
 									</td>
 								</tr>
 								<tr>
 									<td class="rowsummary" colspan="4">
-										ATTRIBUTE
-										<span class="rowsummarybutton" onClick="showhide(this,'AttributesBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'AttributesBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										Attribute
+										<span class="rowsummarybutton" onClick="showhide(this,'AttributesBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'AttributesBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -469,78 +469,78 @@
 							<table width="100%" cellspacing="0" cellpadding="0" border="0">
 								<tr>
 									<td width="33%" style="text-align:center;" valign="top">
-										<strong>AKTIONSFERTIGKEITEN</strong>
+										<strong>Aktionsfertigkeiten</strong>
 										<table width="100%" cellspacing="0" cellpadding="0" border="0">
 											<tr>
 												<td width="50%">
-													<strong>FERTIGKEIT</strong>
+													<strong>Fertigkeit</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>POOL</strong>
+													<strong>Pool</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>WERT</strong>
+													<strong>W.</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>ATT.</strong>
+													<strong>Att.</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>W. MOD.</strong>
+													<strong>W. Mod.</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>P. MOD.</strong>
+													<strong>P. Mod.</strong>
 												</td>
 											</tr>
 											<xsl:call-template name="skills1" />
 										</table>
 									</td>
 									<td width="33%" style="border-left: solid 1px #1c4a2d; border-right: solid 1px #1c4a2d; text-align:center;" valign="top">
-										<strong>AKTIONSFERTIGKEITEN</strong>
+										<strong>Aktionsfertigkeiten</strong>
 										<table width="100%" cellspacing="0" cellpadding="0" border="0">
 											<tr>
 												<td width="50%">
-													<strong>FERTIGKEIT</strong>
+													<strong>Fertigkeit</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>POOL</strong>
+													<strong>Pool</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>WERT</strong>
+													<strong>W.</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>ATT.</strong>
+													<strong>Att.</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>W. MOD.</strong>
+													<strong>W. Mod.</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>P. MOD.</strong>
+													<strong>P. Mod.</strong>
 												</td>
 											</tr>
 											<xsl:call-template name="skills2" />
 										</table>
 									</td>
 									<td width="33%" style="text-align:center;" valign="top">
-										<strong>WISSENSFERTIGKEITEN</strong>
+										<strong>Wissensfertigkeiten</strong>
 										<table width="100%" cellspacing="0" cellpadding="0" border="0">
 											<tr>
 												<td width="50%">
-													<strong>FERTIGKEIT</strong>
+													<strong>Fertigkeit</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>POOL</strong>
+													<strong>Pool </strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>WERT</strong>
+													<strong>W.</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>ATT.</strong>
+													<strong>Att.</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>W. MOD.</strong>
+													<strong>W. Mod.</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>P. MOD.</strong>
+													<strong>P. Mod.</strong>
 												</td>
 											</tr>
 											<xsl:call-template name="skills3" />
@@ -549,9 +549,9 @@
 								</tr>
 								<tr>
 									<td class="rowsummary" colspan="3">
-										FERTIGKEITEN
-										<span class="rowsummarybutton" onClick="showhide(this,'SkillsBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'SkillsBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										Fertigkeiten
+										<span class="rowsummarybutton" onClick="showhide(this,'SkillsBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'SkillsBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -576,22 +576,22 @@
 													<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 														<tr>
 															<td width="60%">
-																<strong>NAME</strong>
+																<strong>Kontaktname</strong>
 															</td>
 															<td width="10%" style="text-align:center;">
-																<strong>TYP</strong>
+																<strong>Typ</strong>
 															</td>
 															<td width="15%" style="text-align:center;">
-																<strong>CONNECTION</strong>
+																<strong>Connection</strong>
 															</td>
 															<td width="15%" style="text-align:center;">
-																<strong>LOYALITÄT/HÄUFIGKEIT</strong>
+																<strong>Loyal./Häufig.</strong>
 															</td>
 														</tr>
 														<xsl:call-template name="contacts" />
 														<tr>
 															<td class="rowsummary" colspan="4">
-																CONNECTIONS &amp; FEINDE
+																Connections &amp; Feinde
 															</td>
 														</tr>
 													</table>
@@ -605,7 +605,7 @@
 													<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 														<tr>
 															<td width="80%">
-																<strong>BEZEICHNUNG</strong>
+																<strong>Gaben/Handicaps</strong>
 															</td>
 															<td width="20%">
 															</td>
@@ -613,7 +613,7 @@
 														<xsl:call-template name="qualities" />
 														<tr>
 															<td class="rowsummary" colspan="2">
-																GABEN/HANDICAPS
+																Gaben/Handicaps
 															</td>
 														</tr>
 													</table>
@@ -627,17 +627,17 @@
 													<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 														<tr>
 															<td width="50%">
-																<strong>PANZERUNG</strong>
+																<strong>Panzerung</strong>
 															</td>
 															<td width="30%" style="text-align:center;">
-																<strong>BALLISTISCH/STOSS</strong>
+																<strong>Ballistisch/Stoß</strong>
 															</td>
 															<td width="20%" style="text-align:center;">
 															</td>
 														</tr>
 														<tr>
 															<td width="50%">
-																<strong>GESAMT</strong>
+																<strong>Gesamt</strong>
 															</td>
 															<td width="30%" style="text-align:center;">
 																<xsl:value-of select="armorb" />/<xsl:value-of select="armori" />
@@ -648,9 +648,9 @@
 														<xsl:call-template name="armor" />
 														<tr>
 															<td class="rowsummary" colspan="3">
-																PANZERUNG
-																<span class="rowsummarybutton" onClick="showhide(this,'ContactConditionBlock');" colspan="1">Zeigen: JA</span>
-																<span class="rowsummarybutton" onClick="zalomit(this,'ContactConditionBlock');" colspan="1">Seitenumbruch: NEIN</span>
+																Panzerung
+																<span class="rowsummarybutton" onClick="showhide(this,'ContactConditionBlock');" colspan="1">Zeigen: Ja</span>
+																<span class="rowsummarybutton" onClick="zalomit(this,'ContactConditionBlock');" colspan="1">Seitenumbruch: Nein</span>
 															</td>
 														</tr>
 													</table>
@@ -663,10 +663,10 @@
 										<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 											<tr>
 												<td width="50%" style="text-align:center;">
-													<strong>KÖRPERLICHE SCHADENSLEISTE</strong>
+													<strong>Körperliche Schadensleiste</strong>
 												</td>
 												<td width="50%" style="text-align:center;">
-													<strong>GEISTIGE SCHADENSLEISTE</strong>
+													<strong>Geistige Schadensleiste</strong>
 												</td>
 											</tr>
 											<tr>
@@ -693,7 +693,7 @@
 											</tr>
 											<tr>
 												<td class="rowsummary" colspan="2">
-													ZUSTANDSMONITOR
+													Zustandsmonitor
 												</td>
 											</tr>
 										</table>
@@ -718,25 +718,25 @@
 										<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 											<tr>
 												<td width="20%">
-													<strong>WAFFE</strong>
+													<strong>Waffe</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>POOL</strong>
+													<strong>Pool</strong>
 												</td>
 												<td width="15%" style="text-align:center;">
-													<strong>SCHADEN</strong>
+													<strong>Schaden</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
 													<strong>PB</strong>
 												</td>
 												<td width="11%" style="text-align:center;">
-													<strong>MODUS</strong>
+													<strong>Modus</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
 													<strong>RK</strong>
 												</td>
 												<td width="13%" style="text-align:center;">
-													<strong>MUNI</strong>
+													<strong>Muni</strong>
 												</td>
 												<td width="11%" style="text-align:center;">
 												</td>
@@ -749,9 +749,9 @@
 											</xsl:for-each>
 											<tr>
 												<td class="rowsummary" colspan="8">
-													FERNKAMPFWAFFEN
-													<span class="rowsummarybutton" onClick="showhide(this,'WeaponBlock');" colspan="2">Zeigen: JA</span>
-													<span class="rowsummarybutton" onClick="zalomit(this,'WeaponBlock');" colspan="2">Seitenumbruch: NEIN</span>
+													Fernkampfwaffen
+													<span class="rowsummarybutton" onClick="showhide(this,'WeaponBlock');" colspan="2">Zeigen: Ja</span>
+													<span class="rowsummarybutton" onClick="zalomit(this,'WeaponBlock');" colspan="2">Seitenumbruch: Nein</span>
 												</td>
 											</tr>
 										</table>
@@ -761,19 +761,19 @@
 										<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 											<tr>
 												<td width="40%">
-													<strong>WAFFE</strong>
+													<strong>Waffe</strong>
 												</td>
 												<td width="10%" style="text-align:center;">
-													<strong>POOL</strong>
+													<strong>Pool</strong>
 												</td>
 												<td width="13%" style="text-align:center;">
-													<strong>SCHADEN</strong>
+													<strong>Schaden</strong>
 												</td>
 												<td width="13%" style="text-align:center;">
 													<strong>PB</strong>
 												</td>
 												<td width="8%" style="text-align:center;">
-													<strong>REICHWEITE</strong>
+													<strong>Reichweite</strong>
 												</td>
 												<td width="16%" style="text-align:center;">
 												</td>
@@ -785,8 +785,8 @@
 												</xsl:call-template>
 											</xsl:for-each>
 											<tr>
-												<td class="rowsummary" colspan="5">
-													NAHKAMPFWAFFEN
+												<td class="rowsummary" colspan="6">
+													Nahkampfwaffen
 												</td>
 											</tr>
 										</table>
@@ -809,13 +809,13 @@
 							<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 								<tr>
 									<td width="50%">
-										<strong>IMPLANTAT</strong>
+										<strong>Implantat</strong>
 									</td>
 									<td width="20%" style="text-align:center;">
-										<strong>ESSENZ</strong>
+										<strong>Essenz</strong>
 									</td>
 									<td width="20%" style="text-align:center;">
-										<strong>STUFE</strong>
+										<strong>Stufe</strong>
 									</td>
 									<td width="10%" style="text-align:center;">
 									</td>
@@ -823,9 +823,9 @@
 								<xsl:call-template name="cyberware" />
 								<tr>
 									<td class="rowsummary" colspan="4">
-										CYBERWARE/BIOWARE
-										<span class="rowsummarybutton" onClick="showhide(this,'CyberwareBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'CyberwareBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										Cyberware/Bioware
+										<span class="rowsummarybutton" onClick="showhide(this,'CyberwareBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'CyberwareBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -842,7 +842,7 @@
 						<xsl:sort select="name" />
 						<xsl:call-template name="vehicles">
 							<xsl:with-param name="vehicle" />
-							<xsl:with-param name="VehicleNumber">VehicleBlock<xsl:value-of select="position()"/></xsl:with-param>
+							<xsl:with-param name="VehicleNumber">Fahrzeugblock<xsl:value-of select="position()"/></xsl:with-param>
 						</xsl:call-template>
 					</xsl:for-each>
 					
@@ -854,22 +854,22 @@
 							<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 								<tr>
 									<td width="25%">
-										<strong>ZAUBERSPRUCH</strong>
+										<strong>Zauber</strong>
 									</td>
 									<td width="13%" style="text-align:center;">
-										<strong>ART</strong>
+										<strong>Typ</strong>
 									</td>
 									<td width="13%" style="text-align:center;">
-										<strong>REICHWEITE</strong>
+										<strong>Reichweite</strong>
 									</td>
 									<td width="13%" style="text-align:center;">
-										<strong>SCHADEN</strong>
+										<strong>Schaden</strong>
 									</td>
 									<td width="13%" style="text-align:center;">
-										<strong>DAUER</strong>
+										<strong>Dauer</strong>
 									</td>
 									<td width="13%" style="text-align:center;">
-										<strong>ENTZUG</strong>
+										<strong>Entzug</strong>
 									</td>
 									<td width="10%" style="text-align:center;">
 									</td>
@@ -877,9 +877,9 @@
 								<xsl:call-template name="spells" />
 								<tr>
 									<td class="rowsummary" colspan="7">
-										ZAUBERSPRÜCHE
-										<span class="rowsummarybutton" onClick="showhide(this,'SpellBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'SpellBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										Zaubersprüche
+										<span class="rowsummarybutton" onClick="showhide(this,'SpellBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'SpellBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -902,10 +902,10 @@
 									<td>
 										<xsl:choose>
 											<xsl:when test="submersiongrade > 0">
-												<strong>WANDLUNGSGRAD: </strong><xsl:value-of select="submersiongrade" />
+												<strong>Wandlungsgrad: </strong><xsl:value-of select="submersiongrade" />
 											</xsl:when>
 											<xsl:otherwise>
-												<strong>INITIATIONSGRAD: </strong><xsl:value-of select="initiategrade" />
+												<strong>Initiationsgrad: </strong><xsl:value-of select="initiategrade" />
 											</xsl:otherwise>
 										</xsl:choose>
 									</td>
@@ -914,10 +914,10 @@
 									<td>
 										<xsl:choose>
 											<xsl:when test="submersiongrade > 0">
-												<strong>ECHOS</strong>
+												<strong>Echos</strong>
 											</xsl:when>
 											<xsl:otherwise>
-												<strong>METAMAGIE</strong>
+												<strong>Metamagie</strong>
 											</xsl:otherwise>
 										</xsl:choose>
 									</td>
@@ -937,14 +937,14 @@
 									<td class="rowsummary">
 										<xsl:choose>
 											<xsl:when test="submersiongrade > 0">
-												WANDLUNG
+												Wandlung
 											</xsl:when>
 											<xsl:otherwise>
-												INITIATION
+												Initiation
 											</xsl:otherwise>
 										</xsl:choose>
-										<span class="rowsummarybutton" onClick="showhide(this,'InitiationBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'InitiationBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										<span class="rowsummarybutton" onClick="showhide(this,'InitiationBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'InitiationBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -964,19 +964,19 @@
 							<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 								<tr>
 									<td width="18%">
-										<strong>KOMMLINK</strong>
+										<strong>Kommlink</strong>
 									</td>
 									<td width="18%" style="text-align:center;">
-										<strong>PROZESSOR</strong>
+										<strong>Prozessor</strong>
 									</td>
 									<td width="18%" style="text-align:center;">
-										<strong>SYSTEM</strong>
+										<strong>System</strong>
 									</td>
 									<td width="18%" style="text-align:center;">
-										<strong>FIREWALL</strong>
+										<strong>Firewall</strong>
 									</td>
 									<td width="18%" style="text-align:center;">
-										<strong>SIGNAL</strong>
+										<strong>Signal</strong>
 									</td>
 									<td width="10%" style="text-align:center;">
 									</td>
@@ -984,9 +984,9 @@
 								<xsl:call-template name="commlink" />
 								<tr>
 									<td class="rowsummary" colspan="6">
-										KOMMLINK/PROGRAMME
-										<span class="rowsummarybutton" onClick="showhide(this,'ComlinkBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'ComlinkBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										Kommlink/Programme
+										<span class="rowsummarybutton" onClick="showhide(this,'ComlinkBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'ComlinkBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -1008,33 +1008,33 @@
 									<td width="25%">
 										<xsl:choose>
 											<xsl:when test="magenabled = 'True'">
-												<strong>GEISTER</strong>
+												<strong>Geist</strong>
 											</xsl:when>
 											<xsl:otherwise>
-												<strong>SPRITES</strong>
+												<strong>Sprite</strong>
 											</xsl:otherwise>
 										</xsl:choose>
 									</td>
 									<td width="25%" style="text-align:center;">
 										<xsl:choose>
 											<xsl:when test="magenabled = 'True'">
-												<strong>KRAFT</strong>
+												<strong>Kraft</strong>
 											</xsl:when>
 											<xsl:otherwise>
-												<strong>STUFE</strong>
+												<strong>Stufe</strong>
 											</xsl:otherwise>
 										</xsl:choose>
 									</td>
 									<td width="25%" style="text-align:center;">
-										<strong>SERVICES</strong>
+										<strong>Dienste</strong>
 									</td>
 									<td width="25%" style="text-align:center;">
 										<xsl:choose>
 											<xsl:when test="magenabled = 'True'">
-												<strong>GEBUNDEN/UNGEBUNDEN</strong>
+												<strong>Gebunden/Ungebunden</strong>
 											</xsl:when>
 											<xsl:otherwise>
-												<strong>REGISTRIERT/UNREGISTRIERT</strong>
+												<strong>Registriert/Unregistriert</strong>
 											</xsl:otherwise>
 										</xsl:choose>
 									</td>
@@ -1085,14 +1085,14 @@
 									<td class="rowsummary" colspan="4">
 										<xsl:choose>
 											<xsl:when test="magenabled = 'True'">
-												<strong>GEISTER</strong>
+												<strong>Geister</strong>
 											</xsl:when>
 											<xsl:otherwise>
-												<strong>SPRITES</strong>
+												<strong>Sprites</strong>
 											</xsl:otherwise>
 										</xsl:choose>
-										<span class="rowsummarybutton" onClick="showhide(this,'SpiritBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'SpiritBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										<span class="rowsummarybutton" onClick="showhide(this,'SpiritBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'SpiritBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -1113,14 +1113,13 @@
 							<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 								<tr>
 									<td width="40%">
-										<strong>BEZEICHNUNG</strong>
+										<strong>Beziechnung</strong>
 									</td>
 									<td width="20%" style="text-align:center;">
-										<strong>STUFE</strong>
-									</td>
+										<strong>Stufe</strong>
 									</td>
 									<td width="20%" style="text-align:center;">
-										<strong>PUNKTE (GESAMT)</strong>
+										<strong>Punkte (Summe)</strong>
 									</td>
 									<td width="20%" style="text-align:center;">
 									</td>
@@ -1128,9 +1127,9 @@
 								<xsl:call-template name="powers" />
 								<tr>
 									<td class="rowsummary" colspan="4">
-										ADEPTENKRÄFTE
-										<span class="rowsummarybutton" onClick="showhide(this,'PowerBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'PowerBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										Adeptenkräfte
+										<span class="rowsummarybutton" onClick="showhide(this,'PowerBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'PowerBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -1151,10 +1150,10 @@
 							<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 								<tr>
 									<td width="50%">
-										<strong>BEZEICHNUNG</strong>
+										<strong>Bezeichnung</strong>
 									</td>
 									<td width="30%" style="text-align:center;">
-										<strong>STUFE</strong>
+										<strong>Stufe</strong>
 									</td>
 									<td width="20%" style="text-align:center;">
 									</td>
@@ -1162,9 +1161,9 @@
 								<xsl:call-template name="critterpowers" />
 								<tr>
 									<td class="rowsummary" colspan="3">
-										CRITTERKRÄFTE
-										<span class="rowsummarybutton" onClick="showhide(this,'CritterBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'CritterBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										Critterkräfte
+										<span class="rowsummarybutton" onClick="showhide(this,'CritterBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'CritterBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -1185,13 +1184,13 @@
 							<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 								<tr>
 									<td width="40%">
-										<strong>BEZEICHNUNG</strong>
+										<strong>Bezeichnung</strong>
 									</td>
 									<td width="20%">
-										<strong>FERTIGKEIT</strong>
+										<strong>Fertigkeit</strong>
 									</td>
 									<td width="20%" style="text-align:center;">
-										<strong>STUFE</strong>
+										<strong>Stufe</strong>
 									</td>
 									<td width="20%" style="text-align:center;">
 									</td>
@@ -1199,9 +1198,9 @@
 								<xsl:call-template name="complexforms" />
 								<tr>
 									<td class="rowsummary" colspan="4">
-										KOMPLEXE FORMEN
-										<span class="rowsummarybutton" onClick="showhide(this,'ProgramBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'ProgramBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										Komplexe Formen
+										<span class="rowsummarybutton" onClick="showhide(this,'ProgramBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'ProgramBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -1222,10 +1221,10 @@
 							<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 								<tr>
 									<td width="50%">
-										<strong>BEZEICHNUNG</strong>
+										<strong>Bezeichnung</strong>
 									</td>
 									<td width="30%" style="text-align:center;">
-										<strong>STUFE</strong>
+										<strong>Stufe</strong>
 									</td>
 									<td width="20%" style="text-align:center;">
 									</td>
@@ -1233,9 +1232,9 @@
 								<xsl:call-template name="martialarts" />
 								<tr>
 									<td class="rowsummary" colspan="3">
-										KAMPFKÜNSTE
-										<span class="rowsummarybutton" onClick="showhide(this,'MartialArtsBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'MartialArtsBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										Kampfkünste
+										<span class="rowsummarybutton" onClick="showhide(this,'MartialArtsBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'MartialArtsBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -1256,10 +1255,10 @@
 							<table width="100%" cellspacing="0" cellpadding="0" border="0">
 								<tr>
 									<td width="50%">
-										<strong>LEBENSSTIL</strong>
+										<strong>Lebensstil</strong>
 									</td>
 									<td width="30%" style="text-align:center;">
-										<strong>MONATE</strong>
+										<strong>Monate</strong>
 									</td>
 									<td width="20%"></td>
 								</tr>
@@ -1286,7 +1285,7 @@
 										Wohngegend: <xsl:value-of select="neighborhood" />,
 										Sicherheit: <xsl:value-of select="security" />
 										<xsl:if test="qualities/quality">
-											<br />Gaben/Handicaps: 
+											<br />Lebensstilgaben/-handicaps: 
 											<xsl:for-each select="qualities/quality">
 												<xsl:value-of select="." />
 												<xsl:if test="position() != last()">; </xsl:if>
@@ -1310,9 +1309,9 @@
 								</xsl:for-each>
 								<tr>
 									<td class="rowsummary" colspan="3">
-										LEBENSSTILE
-										<span class="rowsummarybutton" onClick="showhide(this,'LifestylesBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'LifestylesBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										Lebensstil
+										<span class="rowsummarybutton" onClick="showhide(this,'LifestylesBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'LifestylesBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -1335,13 +1334,13 @@
 										<table width="100%" cellspacing="0" cellpadding="0" border="0">
 											<tr>
 												<td width="55%">
-													<strong>BEZEICHUNG</strong>
+													<strong>Bezeichnung</strong>
 												</td>
 												<td width="15%" style="text-align:center;">
-													<strong>STUFE</strong>
+													<strong>Stufe</strong>
 												</td>
 												<td width="15%" style="text-align:center;">
-													<strong>ANZAHL</strong>
+													<strong>Anz.</strong>
 												</td>
 												<td width="15%" style="text-align:center;">
 												</td>
@@ -1353,13 +1352,13 @@
 										<table width="100%" cellspacing="0" cellpadding="0" border="0">
 											<tr>
 												<td width="55%">
-													<strong>BEZEICHNUNG</strong>
+													<strong>Bezeichnung</strong>
 												</td>
 												<td width="15%" style="text-align:center;">
-													<strong>STUFE</strong>
+													<strong>Stufe</strong>
 												</td>
 												<td width="15%" style="text-align:center;">
-													<strong>ANZAHL</strong>
+													<strong>Anz.</strong>
 												</td>
 												<td width="15%" style="text-align:center;">
 												</td>
@@ -1371,13 +1370,13 @@
 										<table width="100%" cellspacing="0" cellpadding="0" border="0">
 											<tr>
 												<td width="55%">
-													<strong>BEZEICHNUNG</strong>
+													<strong>Bezeichnung</strong>
 												</td>
 												<td width="15%" style="text-align:center;">
-													<strong>STUFE</strong>
+													<strong>Stufe</strong>
 												</td>
 												<td width="15%" style="text-align:center;">
-													<strong>ANZAHL</strong>
+													<strong>Anz.</strong>
 												</td>
 												<td width="15%" style="text-align:center;">
 												</td>
@@ -1388,9 +1387,9 @@
 								</tr>
 								<tr>
 									<td class="rowsummary" colspan="3">
-										AUSRÜSTUNG
-										<span class="rowsummarybutton" onClick="showhide(this,'GearBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'GearBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										Ausrüstung
+										<span class="rowsummarybutton" onClick="showhide(this,'GearBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'GearBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -1417,9 +1416,9 @@
 								</tr>
 								<tr>
 									<td class="rowsummary">
-										BESCHREIBUNG
-										<span class="rowsummarybutton" onClick="showhide(this,'DescriptionBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'DescriptionBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										Beschreibung
+										<span class="rowsummarybutton" onClick="showhide(this,'DescriptionBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'DescriptionBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -1447,9 +1446,9 @@
 								</tr>
 								<tr>
 									<td class="rowsummary">
-										HINTERGRUND
-										<span class="rowsummarybutton" onClick="showhide(this,'BackgroundBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'BackgroundBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										Hintergrund
+										<span class="rowsummarybutton" onClick="showhide(this,'BackgroundBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'BackgroundBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -1477,9 +1476,9 @@
 								</tr>
 								<tr>
 									<td class="rowsummary">
-										KONZEPT
-										<span class="rowsummarybutton" onClick="showhide(this,'ConceptBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'ConceptBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										Charakterkonzept
+										<span class="rowsummarybutton" onClick="showhide(this,'ConceptBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'ConceptBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -1507,9 +1506,9 @@
 								</tr>
 								<tr>
 									<td class="rowsummary">
-										NOTIZEN
-										<span class="rowsummarybutton" onClick="showhide(this,'NotesBlock');" colspan="1">Zeigen: JA</span>
-										<span class="rowsummarybutton" onClick="zalomit(this,'NotesBlock');" colspan="1">Seitenumbruch: NEIN</span>
+										Notizen
+										<span class="rowsummarybutton" onClick="showhide(this,'NotesBlock');" colspan="1">Zeigen: Ja</span>
+										<span class="rowsummarybutton" onClick="zalomit(this,'NotesBlock');" colspan="1">Seitenumbruch: Nein</span>
 									</td>
 								</tr>
 							</table>
@@ -1533,13 +1532,13 @@
 										<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 											<tr>
 												<td width="30%">
-													<strong>DATUM</strong>
+													<strong>Datum</strong>
 												</td>
 												<td width="20%" style="text-align:center;">
-													<strong>MENGE</strong>
+													<strong>Menge</strong>
 												</td>
 												<td width="50%" style="text-align:center;">
-													<strong>GRUND</strong>
+													<strong>Grund</strong>
 												</td>
 											</tr>
 											<xsl:for-each select="expenses/expense[type = 'Karma']">
@@ -1557,9 +1556,9 @@
 											</xsl:for-each>
 											<tr>
 												<td class="rowsummary" colspan="3">
-													AUSGEGEBENES KARMA
-													<span class="rowsummarybutton" onClick="showhide(this,'ExpensesBlock');" colspan="1">Zeigen: JA</span>
-													<span class="rowsummarybutton" onClick="zalomit(this,'ExpensesBlock');" colspan="1">Seitenumbruch: NEIN</span>
+													Karma Ausgaben
+													<span class="rowsummarybutton" onClick="showhide(this,'ExpensesBlock');" colspan="1">Zeigen: Ja</span>
+													<span class="rowsummarybutton" onClick="zalomit(this,'ExpensesBlock');" colspan="1">Seitenumbruch: Nein</span>
 												</td>
 											</tr>
 										</table>
@@ -1569,13 +1568,13 @@
 										<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 											<tr>
 												<td width="30%">
-													<strong>DATUM</strong>
+													<strong>Datum</strong>
 												</td>
 												<td width="20%" style="text-align:center;">
-													<strong>MENGE</strong>
+													<strong>Menge</strong>
 												</td>
 												<td width="50%" style="text-align:center;">
-													<strong>GRUND</strong>
+													<strong>Grund</strong>
 												</td>
 											</tr>
 											<xsl:for-each select="expenses/expense[type = 'Nuyen']">
@@ -1593,7 +1592,7 @@
 											</xsl:for-each>
 											<tr>
 												<td class="rowsummary" colspan="3">
-													AUSGEGEBENES GELD
+													Nuyen Ausgaben
 												</td>
 											</tr>
 										</table>
@@ -1716,78 +1715,7 @@
 									<xsl:if test="position() mod 2 != 1">
 										<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
 									</xsl:if>
-									<td colspan="8" class="indent">
-					<xsl:for-each select="accessories/accessory">
-						<xsl:sort select="name" />
-										<xsl:value-of select="name" />
-										<xsl:if test="position() != last()">; </xsl:if>
-					</xsl:for-each>
-					<xsl:if test="accessories/accessory and mods/weaponmod">; </xsl:if>
-					<xsl:for-each select="mods/weaponmod">
-						<xsl:sort select="name" />
-										<xsl:value-of select="name" />
-										<xsl:if test="rating > 0">
-										Rating <xsl:value-of select="rating" />
-										</xsl:if>
-										<xsl:if test="position() != last()">; </xsl:if>
-					</xsl:for-each>
-									</td>
-								</tr>
-				</xsl:if>
-				<xsl:if test="ranges/short != ''">
-								<tr>
-									<xsl:if test="position() mod 2 != 1">
-										<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
-									</xsl:if>
-									<td></td>
-									<td style="text-align:center;" valign="top">N: <xsl:value-of select="ranges/short" /></td>
-									<td style="text-align:center;" valign="top">M: <xsl:value-of select="ranges/medium" /></td>
-									<td style="text-align:center;" valign="top">W: <xsl:value-of select="ranges/long" /></td>
-									<td style="text-align:center;" valign="top">E: <xsl:value-of select="ranges/extreme" /></td>
-									<td colspan="3"></td>
-								</tr>
-				</xsl:if>
-
-				<xsl:if test="underbarrel/weapon">
-					<xsl:for-each select="underbarrel/weapon">
-											<tr>
-												<xsl:if test="position() mod 2 != 1">
-													<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
-												</xsl:if>
-												<td width="20%" valign="top">
-													Und. <xsl:value-of select="name" />
-													<xsl:if test="weaponname != ''">
-														("<xsl:value-of select="weaponname" />")
-													</xsl:if>
-												</td>
-												<td width="10%" style="text-align:center;" valign="top">
-													<xsl:value-of select="dicepool" />
-												</td>
-												<td width="15%" style="text-align:center;" valign="top">
-													<xsl:value-of select="damage" />
-												</td>
-												<td width="10%" style="text-align:center;" valign="top">
-													<xsl:value-of select="ap" />
-												</td>
-												<td width="10%" style="text-align:center;" valign="top">
-													<xsl:value-of select="mode" />
-												</td>
-												<td width="10%" style="text-align:center;" valign="top">
-													<xsl:value-of select="rc" />
-												</td>
-												<td width="13%" style="text-align:center;" valign="top">
-													<xsl:value-of select="ammo" />
-												</td>
-												<td width="11%" style="text-align:center;" valign="top">
-													<xsl:value-of select="source" /><xsl:text> </xsl:text><xsl:value-of select="page" />
-												</td>
-											</tr>
-				<xsl:if test="accessories/accessory">
-								<tr>
-									<xsl:if test="position() mod 2 != 1">
-										<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
-									</xsl:if>
-									<td colspan="8" class="indent">
+									<td colspan="7" class="indent">
 					<xsl:for-each select="accessories/accessory">
 						<xsl:sort select="name" />
 										<xsl:value-of select="name" />
@@ -1811,11 +1739,79 @@
 										<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
 									</xsl:if>
 									<td></td>
-									<td style="text-align:center;" valign="top">N: <xsl:value-of select="ranges/short" /></td>
+									<td style="text-align:center;" valign="top">S: <xsl:value-of select="ranges/short" /></td>
 									<td style="text-align:center;" valign="top">M: <xsl:value-of select="ranges/medium" /></td>
-									<td style="text-align:center;" valign="top">W: <xsl:value-of select="ranges/long" /></td>
+									<td style="text-align:center;" valign="top">L: <xsl:value-of select="ranges/long" /></td>
 									<td style="text-align:center;" valign="top">E: <xsl:value-of select="ranges/extreme" /></td>
-									<td colspan="3"></td>
+									<td colspan="2"></td>
+								</tr>
+				</xsl:if>
+
+				<xsl:if test="underbarrel/weapon">
+					<xsl:for-each select="underbarrel/weapon">
+											<tr>
+												<xsl:if test="position() mod 2 != 1">
+													<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
+												</xsl:if>
+												<td width="20%" valign="top">
+													Unterlauf <xsl:value-of select="name" />
+													<xsl:if test="weaponname != ''">
+														("<xsl:value-of select="weaponname" />")
+													</xsl:if>
+												</td>
+												<td width="15%" style="text-align:center;" valign="top">
+													<xsl:value-of select="damage" />
+												</td>
+												<td width="12%" style="text-align:center;" valign="top">
+													<xsl:value-of select="ap" />
+												</td>
+												<td width="13%" style="text-align:center;" valign="top">
+													<xsl:value-of select="mode" />
+												</td>
+												<td width="12%" style="text-align:center;" valign="top">
+													<xsl:value-of select="rc" />
+												</td>
+												<td width="15%" style="text-align:center;" valign="top">
+													<xsl:value-of select="ammo" />
+												</td>
+												<td width="13%" style="text-align:center;" valign="top">
+													<xsl:value-of select="source" /><xsl:text> </xsl:text><xsl:value-of select="page" />
+												</td>
+											</tr>
+				<xsl:if test="accessories/accessory">
+								<tr>
+									<xsl:if test="position() mod 2 != 1">
+										<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
+									</xsl:if>
+									<td colspan="7" class="indent">
+					<xsl:for-each select="accessories/accessory">
+						<xsl:sort select="name" />
+										<xsl:value-of select="name" />
+										<xsl:if test="position() != last()">; </xsl:if>
+					</xsl:for-each>
+					<xsl:if test="accessories/accessory and mods/weaponmod">; </xsl:if>
+					<xsl:for-each select="mods/weaponmod">
+						<xsl:sort select="name" />
+										<xsl:value-of select="name" />
+										<xsl:if test="rating > 0">
+										Stufe <xsl:value-of select="rating" />
+										</xsl:if>
+										<xsl:if test="position() != last()">; </xsl:if>
+					</xsl:for-each>
+									</td>
+								</tr>
+				</xsl:if>
+				<xsl:if test="ranges/short != ''">
+								<tr>
+									<xsl:if test="position() mod 2 != 1">
+										<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
+									</xsl:if>
+									<td></td>
+									<td style="text-align:center;" valign="top">S: <xsl:value-of select="ranges/short" /></td>
+									<td style="text-align:center;" valign="top">M: <xsl:value-of select="ranges/medium" /></td>
+									<td style="text-align:center;" valign="top">L: <xsl:value-of select="ranges/long" /></td>
+									<td style="text-align:center;" valign="top">E: <xsl:value-of select="ranges/extreme" /></td>
+									<td colspan="2"></td>
 								</tr>
 				</xsl:if>
 					</xsl:for-each>
@@ -1826,7 +1822,7 @@
 						<xsl:if test="position() mod 2 != 1">
 							<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
 						</xsl:if>
-						<td colspan="8" class="notesrow">
+						<td colspan="7" class="notesrow">
 							<xsl:call-template name="PreserveLineBreaks">
 								<xsl:with-param name="text" select="notes" />
 							</xsl:call-template>
@@ -1947,7 +1943,7 @@
 						<xsl:sort select="name" />
 						<xsl:value-of select="name" />
 						<xsl:if test="extra != ''"> (<xsl:value-of select="extra" />)</xsl:if>
-						<xsl:if test="rating != 0"> Stufe <xsl:value-of select="rating" /></xsl:if>
+						<xsl:if test="rating != 0"> Rating <xsl:value-of select="rating" /></xsl:if>
 						<xsl:if test="qty &gt; 1"> x<xsl:value-of select="qty" /></xsl:if>
 						<xsl:if test="children/gear">
 							[<xsl:call-template name="gearplugin">
@@ -2018,21 +2014,10 @@
 										<xsl:value-of select="name" />
 										<xsl:if test="rating != 0"><xsl:text> </xsl:text><xsl:value-of select="rating" /></xsl:if>
 										<xsl:if test="position() != last()">; </xsl:if>
+										<xsl:if test="notes != ''"> (<xsl:value-of select="notes" />)</xsl:if>
 					</xsl:for-each>
 									</td>
 								</tr>
-								<xsl:if test="notes != ''">
-									<tr>
-										<xsl:if test="position() mod 2 != 1">
-											<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
-										</xsl:if>
-										<td colspan="4" class="notesrow">
-											<xsl:call-template name="PreserveLineBreaks">
-												<xsl:with-param name="text" select="notes" />
-											</xsl:call-template>
-										</td>
-									</tr>
-								</xsl:if>
 				</xsl:if>
 		</xsl:for-each>
 	</xsl:template>
@@ -2068,7 +2053,7 @@
 										<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
 									</xsl:if>
 									<td colspan="6" class="indent">
-										<strong>ZUBEHÖR</strong>
+										<strong>Zubehör</strong>
 									</td>
 								</tr>
 								<tr>
@@ -2137,7 +2122,7 @@
 										<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
 									</xsl:if>
 									<td colspan="6" class="indent">
-										<strong>ZUBEHÖR</strong>
+										<strong>Zubehör</strong>
 									</td>
 								</tr>
 								<tr>
@@ -2206,7 +2191,7 @@
 										<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
 									</xsl:if>
 									<td colspan="6" class="indent">
-										<strong>ZUBEHÖR</strong>
+										<strong>Zubehör</strong>
 									</td>
 								</tr>
 								<tr>
@@ -2275,7 +2260,7 @@
 										<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
 									</xsl:if>
 									<td colspan="6" class="indent">
-										<strong>ZUBEHÖR</strong>
+										<strong>Zubehör</strong>
 									</td>
 								</tr>
 								<tr>
@@ -2344,7 +2329,7 @@
 										<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
 									</xsl:if>
 									<td colspan="6" class="indent">
-										<strong>ZUBEHÖR</strong>
+										<strong>Zubehör</strong>
 									</td>
 								</tr>
 								<tr>
@@ -2386,7 +2371,7 @@
 		<xsl:if test="gears/gear[isprogram = 'True']">
 								<tr>
 									<td colspan="6">
-									<strong>PROGRAMME</strong><br />
+									<strong>Programme</strong><br />
 			<xsl:for-each select="gears/gear[isprogram = 'True']">
 				<xsl:sort select="name" />
 										<xsl:value-of select="name" />
@@ -2409,7 +2394,7 @@
 		<xsl:if test="armors/armor/gears/gear[isprogram = 'True']">
 								<tr>
 									<td colspan="6">
-									<strong>PROGRAMME</strong><br />
+									<strong>Programme</strong><br />
 			<xsl:for-each select="armors/armor/gears/gear[isprogram = 'True']">
 				<xsl:sort select="name" />
 										<xsl:value-of select="name" />
@@ -2432,7 +2417,7 @@
 		<xsl:if test="cyberwares/cyberware/gears/gear[isprogram = 'True']">
 								<tr>
 									<td colspan="6">
-									<strong>PROGRAMME</strong><br />
+									<strong>Programme</strong><br />
 			<xsl:for-each select="cyberwares/cyberware/gears/gear[isprogram = 'True']">
 				<xsl:sort select="name" />
 										<xsl:value-of select="name" />
@@ -2455,7 +2440,7 @@
 		<xsl:if test="cyberwares/cyberware/children/cyberwear/gears/gear[isprogram = 'True']">
 								<tr>
 									<td colspan="6">
-									<strong>PROGRAMME</strong><br />
+									<strong>Programme</strong><br />
 			<xsl:for-each select="cyberwares/cyberware/children/cyberware/gears/gear[isprogram = 'True']">
 				<xsl:sort select="name" />
 										<xsl:value-of select="name" />
@@ -2478,7 +2463,7 @@
 		<xsl:if test="weapons/weapon/accessories/accessory/gears/gear[isprogram = 'True']">
 								<tr>
 									<td colspan="6">
-									<strong>PROGRAMME</strong><br />
+									<strong>Programme</strong><br />
 			<xsl:for-each select="weapons/weapon/accessories/accessory/gears/gear[isprogram = 'True']">
 				<xsl:sort select="name" />
 										<xsl:value-of select="name" />
@@ -2504,7 +2489,7 @@
 								<tr>
 									<td colspan="7" valign="top">
 										Tradition: <xsl:value-of select="tradition" />&#160;&#160;&#160;
-										Entzugswiderstand gegen <xsl:value-of select="drain" />
+										Entzugswiderstand mit <xsl:value-of select="drain" />
 									</td>
 								</tr>
     <xsl:variable name="sortedlist">
@@ -2517,12 +2502,12 @@
 		<xsl:for-each select="msxsl:node-set($sortedlist)/spell">
                 <xsl:choose>
 									<xsl:when test="position() = 1">
-										<tr><td colspan="7" style="border-bottom:solid black 1px;"><strong><xsl:value-of select="category" /> Zaubersprüche</strong></td></tr>
+										<tr><td colspan="7" style="border-bottom:solid black 1px;"><strong><xsl:value-of select="category" /> Zauber</strong></td></tr>
 									</xsl:when>
                   <xsl:otherwise>
                     <xsl:choose>
                       <xsl:when test="category != preceding-sibling::spell[1]/category">
-                        <tr><td colspan="7" style="border-bottom:solid black 1px;"><strong><xsl:value-of select="category" /> Sprüche</strong></td></tr>
+                        <tr><td colspan="7" style="border-bottom:solid black 1px;"><strong><xsl:value-of select="category" /> Zauber</strong></td></tr>
                       </xsl:when>
                     </xsl:choose>
                   </xsl:otherwise>
@@ -2600,7 +2585,7 @@
 										<xsl:if test="position() mod 2 != 1">
 											<xsl:attribute name="bgcolor">#e4e4e4</xsl:attribute>
 										</xsl:if>
-										<td colspan="3" class="notesrow">
+										<td colspan="4" class="notesrow">
 											<xsl:call-template name="PreserveLineBreaks">
 												<xsl:with-param name="text" select="notes" />
 											</xsl:call-template>
@@ -2646,8 +2631,8 @@
 	<xsl:template name="complexforms">
 								<tr>
 									<td colspan="5" valign="top">
-										Stömung: <xsl:value-of select="stream" />&#160;&#160;&#160;
-										Schwundwiderstand gegen <xsl:value-of select="drain" />
+										Resonanzraum: <xsl:value-of select="stream" />&#160;&#160;&#160;
+										Schwundwiderstand mit <xsl:value-of select="drain" />
 									</td>
 								</tr>
 		<xsl:for-each select="techprograms/techprogram">
@@ -2738,7 +2723,7 @@
 		</xsl:for-each>
 								<tr>
 									<td colspan="3">
-										<strong>MANÖVER</strong>
+										<strong>Manöver</strong>
 									</td>
 								</tr>
 								<tr>
@@ -2763,46 +2748,46 @@
 							<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 								<tr>
 									<td width="23%">
-										<strong>FAHRZEUG</strong>
+										<strong>Fahrzeug</strong>
 									</td>
 									<td width="8%" style="text-align:center;">
-										<strong>HANDLING</strong>
+										<strong>Handl.</strong>
 									</td>
 									<td width="8%" style="text-align:center;">
-										<strong>BESCHL</strong>
+										<strong>Beschl.</strong>
 									</td>
 									<td width="5%" style="text-align:center;">
-										<strong>GESCHW</strong>
+										<strong>Geschw.</strong>
 									</td>
 									<td width="5%" style="text-align:center;">
-										<strong>PILOT</strong>
+										<strong>Pilot</strong>
 									</td>
 									<td width="5%" style="text-align:center;">
-										<strong>RUMPF</strong>
+										<strong>Rumpf</strong>
 									</td>
 									<td width="5%" style="text-align:center;">
-										<strong>PANZERUNG</strong>
+										<strong>Panz.</strong>
 									</td>
 									<td width="5%" style="text-align:center;">
-										<strong>SENSOR</strong>
+										<strong>Sensor</strong>
 									</td>
 									<td width="5%" style="text-align:center;">
-										<strong>CM</strong>
+										<strong>SM</strong>
 									</td>
 									<td width="5%" style="text-align:center;">
-										<strong>PROZ</strong>
+										<strong>Proz.</strong>
 									</td>
 									<td width="5%" style="text-align:center;">
-										<strong>SYS</strong>
+										<strong>Sys.</strong>
 									</td>
 									<td width="5%" style="text-align:center;">
-										<strong>SIG</strong>
+										<strong>Sig.</strong>
 									</td>
 									<td width="5%" style="text-align:center;">
-										<strong>FIRE</strong>
+										<strong>Firew.</strong>
 									</td>
 									<td width="5%" style="text-align:center;">
-										<strong>GERÄT</strong>
+										<strong>G-Stuf.</strong>
 									</td>
 									<td width="8%" style="text-align:center;">
 									</td>
@@ -2895,7 +2880,7 @@
 												<xsl:value-of select="name" />
 												<xsl:if test="extra != ''"> (<xsl:value-of select="extra" />)</xsl:if>
 												<xsl:if test="rating > 0">
-												Stufe <xsl:value-of select="rating" />
+												Rating <xsl:value-of select="rating" />
 												</xsl:if>
 												<xsl:if test="children/gear">
 													[<xsl:for-each select="children/gear">
@@ -2922,22 +2907,22 @@
 										<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 											<tr>
 												<td width="20%">
-													<strong>WAFFE</strong>
+													<strong>Waffe</strong>
 												</td>
 												<td width="15%" style="text-align:center;">
-													<strong>SCHADEN</strong>
+													<strong>Schaden</strong>
 												</td>
 												<td width="12%" style="text-align:center;">
 													<strong>PB</strong>
 												</td>
 												<td width="13%" style="text-align:center;">
-													<strong>MODUS</strong>
+													<strong>Modus</strong>
 												</td>
 												<td width="12%" style="text-align:center;">
 													<strong>RK</strong>
 												</td>
 												<td width="15%" style="text-align:center;">
-													<strong>MUNI</strong>
+													<strong>Muni</strong>
 												</td>
 												<td width="13%" style="text-align:center;">
 												</td>
@@ -2956,7 +2941,7 @@
 						</xsl:for-each>
 											<tr>
 												<td class="rowsummary" colspan="7">
-													FERNKAMPFWAFFEN
+													Fernkampfwaffen
 												</td>
 											</tr>
 										</table>
@@ -2976,21 +2961,21 @@
 										</td>
 									</tr>
 								</xsl:if>
-				
+														
 								<tr>
 									<td class="rowsummary" colspan="15">
                     <table width="100%" cellspacing="0" cellpadding="0" border="0">
                       <tr>
                         <td class="rowsummary">
-                          FAHRZEUGE /DROHNEN
+                          Fahrzeug/Drohne
                         </td>
                         <td class="rowsummarybutton" colspan="1">
                            <xsl:attribute name="onClick">showhide(this,'<xsl:value-of select="$VehicleNumber" />');</xsl:attribute>
-                           Zeigen: JA
+                           Zeigen: Ja
                         </td>
                         <td class="rowsummarybutton" width="50%" colspan="1">
                            <xsl:attribute name="onClick">zalomit(this,'<xsl:value-of select="$VehicleNumber" />');</xsl:attribute>
-                           Page-break: NEIN
+                           Seitenumbruch: Nein
                         </td>
                       </tr>
                     </table>
@@ -3079,7 +3064,6 @@
 									</td>
 								</tr>
 				</xsl:if>
-				
 											<xsl:if test="notes != ''">
 												<tr>
 													<xsl:if test="position() mod 2 != 1">

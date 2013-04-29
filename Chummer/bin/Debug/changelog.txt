@@ -1,4 +1,4 @@
-Build XXX
+Build 472
 - save files now include <gameedition /> to indicate which edition of Shadowrun they are for
 - <gameedition /> is now checked when loading a save file to ensure the edition of Chummer and the save file match
 - fixed an issue where a failed roll with 0 Hits and not enough 1s to cause a Glitch would incorrectly show a Glitch

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Traduction francaise par deurk, basée sur un travail de Jazz. Pour toute correction ou question: shadowrun@deurk.net -->
 <chummer>
-	<version>-951</version>
+	<version>-950</version>
 	<name>Français</name>
 	<strings>
 		<!-- Common Strings -->
@@ -76,6 +75,14 @@
 		<string>
 			<key>Checkbox_HomeNode</key>
 			<text>Noeud de résidence</text>
+		</string>
+		<string>
+			<key>Checkbox_Commlinks</key>
+			<text>Afficher uniquement les Commlinks</text>
+		</string>
+		<string>
+			<key>Checkbox_ActiveCommlink</key>
+			<text>Commlink Actif</text>
 		</string>
 		<string>
 			<key>Label_BP</key>
@@ -684,11 +691,15 @@
 		</string>
 		<string>
 			<key>Menu_SpecialPossessLiving</key>
-			<text>Posseder/Habiter un réceptacle vivant</text>
+			<text>Posséder/Habiter un réceptacle vivant</text>
 		</string>
 		<string>
 			<key>Menu_SpecialPossessInanimate</key>
-			<text>Posseder/Habiter un réceptacle inanimé</text>
+			<text>Posséder/Habiter un réceptacle inanimé</text>
+		</string>
+		<string>
+			<key>Menu_SpecialBPAvailLimit</key>
+			<text>Modifier la limite de BP/Disponibilité</text>
 		</string>
 		<string>
 			<key>Menu_AddAsPlugin</key>
@@ -3032,6 +3043,22 @@ Un saul attribut peut atteindre sa valeur maximum durant la création de personn
 			<key>Node_SelectedBioware</key>
 			<text>Pièces de bioware du personnage</text>
 		</string>
+		<string>
+			<key>Label_EssenceConsumption</key>
+			<text>Consommation d'essence</text>
+		</string>
+		<string>
+			<key>Label_Cyberware</key>
+			<text>Cyberware:</text>
+		</string>
+		<string>
+			<key>Label_Bioware</key>
+			<text>Bioware:</text>
+		</string>
+		<string>
+			<key>Label_EssenceHole</key>
+			<text>Faille d'essence:</text>
+		</string>
 		<!-- Street Gear/Lifestyle Tab -->
 		<string>
 			<key>Label_LifestyleMonths</key>
@@ -3193,7 +3220,7 @@ Un saul attribut peut atteindre sa valeur maximum durant la création de personn
 		</string>
 		<string>
 			<key>String_SlotNumber</key>
-			<text>Emplacement {0}</text>
+			<text>Emplacement {0}:</text>
 		</string>
 		<string>
 			<key>String_Empty</key>
@@ -3251,6 +3278,10 @@ Un saul attribut peut atteindre sa valeur maximum durant la création de personn
 		<string>
 			<key>Tip_TransferToVehicle</key>
 			<text>Transférer vers un véhicule.</text>
+		</string>
+		<string>
+			<key>Tip_ActiveCommlink</key>
+			<text>Sélectionner ce Commlink comme étant celui utilisé actuellement par le personnage. Ceci ajustera son Initiative matricielle en conséquence.</text>
 		</string>
 		<string>
 			<key>String_AddLocation</key>
@@ -4822,6 +4853,10 @@ Un saul attribut peut atteindre sa valeur maximum durant la création de personn
 			<text>Langue :</text>
 		</string>
 		<string>
+			<key>Label_Options_DefaultCharacterSheet</key>
+			<text>Feuille de personnage par défaut:</text>
+		</string>
+		<string>
 			<key>Tab_Options_General</key>
 			<text>Général</text>
 		</string>
@@ -5154,6 +5189,10 @@ Un saul attribut peut atteindre sa valeur maximum durant la création de personn
 			<text>Arme focus</text>
 		</string>
 		<string>
+			<key>Button_Options_RestoreDefaults</key>
+			<text>Restaurer les paramètres par défaut</text>
+		</string>
+		<string>
 			<key>Checkbox_Options_MoreLethalGameplace</key>
 			<text>Pour un jeu plus mortel (SR4A, 75)</text>
 		</string>
@@ -5274,6 +5313,10 @@ Un saul attribut peut atteindre sa valeur maximum durant la création de personn
 			<text>Utiliser une instance unique de la piste de dés</text>
 		</string>
 		<string>
+			<key>Checkbox_Options_DatesIncludeTime</key>
+			<text>La date des dépenses devrait inclure l'heure</text>
+		</string>
+		<string>
 			<key>Checkbox_Options_MultiplyRestrictedCost</key>
 			<text>Multiplier le coût des objets restreints par</text>
 		</string>
@@ -5344,6 +5387,34 @@ Un saul attribut peut atteindre sa valeur maximum durant la création de personn
 		<string>
 			<key>Checkbox_Option_SpecialAttributeKarmaLimit</key>
 			<text>Les attributs spéciaux ne comptent pas dans la limite de 50% de Karma durant la création de personnage</text>
+		</string>
+		<string>
+			<key>Checkbox_Option_TechnomancerAllowAutosoft</key>
+			<text>Les Technomancien peuvent sélectionner les Autosofts en tant que Formes complexes</text>
+		</string>
+		<string>
+			<key>Message_Options_RestoreDefaults</key>
+			<text>Ceci va réinitialiser les totaux de cet onglet à leur valeur par défaut. Êtes-vous sûr de vouloir faire ça?</text>
+		</string>
+		<string>
+			<key>MessageTitle_Options_RestoreDefaults</key>
+			<text>Restaurer les paramètres par défaut</text>
+		</string>
+		<string>
+			<key>Label_Options_PDFApplicationPath</key>
+			<text>Emplacement de l'application PDF:</text>
+		</string>
+		<string>
+			<key>Label_Options_PDFLocation</key>
+			<text>Emplacement du fichier PDF:</text>
+		</string>
+		<string>
+			<key>Label_Options_PDFOffset</key>
+			<text>Décalage de page:</text>
+		</string>
+		<string>
+			<key>Button_Options_PDFTest</key>
+			<text>Test - Ouvrir à la page 5</text>
 		</string>
 		<!-- Print Multiple Window -->
 		<string>
@@ -5609,6 +5680,10 @@ Un saul attribut peut atteindre sa valeur maximum durant la création de personn
 		<string>
 			<key>Label_SelectGear_Markup</key>
 			<text>Marge :</text>
+		</string>
+		<string>
+			<key>Checkbox_Aerodynamic</key>
+			<text>Aérodynamique</text>
 		</string>
 		<!-- Select Item Window -->
 		<string>
@@ -6091,6 +6166,10 @@ Un saul attribut peut atteindre sa valeur maximum durant la création de personn
 		<string>
 			<key>Message_Update_NoNewUpdates</key>
 			<text>Pas de nouvelles mises à jour disponibles pour le moment.</text>
+		</string>
+		<string>
+			<key>Message_Update_MultipleInstances</key>
+			<text>Chummer ne peut pas être mis à jour lorqu'il y a plus d'une instance de l'application en cours d'exécution. Veuillez fermer les autres instances de Chummer et exécutez la mise à jour de nouveau.</text>
 		</string>
 		<!-- Character Viewer Window -->
 		<string>
