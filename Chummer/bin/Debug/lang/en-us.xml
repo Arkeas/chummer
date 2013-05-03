@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-907</version>
+	<version>-906</version>
 	<name>English (US)</name>
 	<strings>
 		<!-- Common Strings -->
@@ -5435,6 +5435,10 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		<string>
 			<key>Checkbox_Option_PrintNotes</key>
 			<text>Print Notes</text>
+		</string>
+		<string>
+			<key>Checkbox_Option_PrintToFileFirst</key>
+			<text>Apply Linux printing fix</text>
 		</string>
 		<string>
 			<key>Label_Options_EssenceDecimals</key>

@@ -3,7 +3,7 @@
 	<file>
 		<name>chummer.exe</name>
 		<type>Application</type>
-		<version>0.0.0.472</version>
+		<version>0.0.0.473</version>
 		<description>Chummer</description>
 		<notes>- Chummer Application</notes>
 	</file>
@@ -108,7 +108,7 @@
 	<file>
 		<name>sheets/de/Shadowrun 4 Base.xslt</name>
 		<type>German Character Sheets</type>
-		<version>-891</version>
+		<version>-890</version>
 		<description>Shadowrun 4 Character Sheet Base</description>
 		<notes>- Character sheet based on the Shadowrun 4 sheet</notes>
 	</file>

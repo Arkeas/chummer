@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Character sheet based on the Shadowrun 4th Edition Character Sheet -->
 <!-- Created by Keith Rudolph, krudolph@gmail.com -->
-<!-- Version -891 -->
+<!-- Version -890 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
 	<xsl:include href="ConditionMonitor.xslt"/>
 	<xsl:template match="/characters/character">
@@ -1113,7 +1113,7 @@
 							<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tableborder">
 								<tr>
 									<td width="40%">
-										<strong>Beziechnung</strong>
+										<strong>Bezeichnung</strong>
 									</td>
 									<td width="20%" style="text-align:center;">
 										<strong>Stufe</strong>
