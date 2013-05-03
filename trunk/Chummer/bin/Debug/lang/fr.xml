@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-950</version>
+	<version>-949</version>
 	<name>Français</name>
 	<strings>
 		<!-- Common Strings -->
@@ -418,6 +418,18 @@
 			<key>MessageTitle_RemoveCharacterAssociation</key>
 			<text>Supprimer l'association du personnage</text>
 		</string>
+		<string>
+			<key>Message_IncorrectGameVersion_SR4</key>
+			<text>Ce fichier de sauvegarde doit être utilisé pour la 4e Édition de Shadowrun, cependant cette version de Chummer est conçue pour la 5e Édition. Veuillez utiliser la version de Chummer conçue pour la 4e Édition pour ouvrir ce fichier.</text>
+		</string>
+		<string>
+			<key>Message_IncorrectGameVersion_SR5</key>
+			<text>Ce fichier de sauvegarde doit être utilisé pour la 5e Édition de Shadowrun, cependant cette version de Chummer est conçue pour la 4e Édition. Veuillez utiliser la version de Chummer conçue pour la 5e Édition pour ouvrir ce fichier.</text>
+		</string>
+		<string>
+			<key>MessageTitle_IncorrectGameVersion</key>
+			<text>Version incompatible du jeu</text>
+		</string>
 		<!-- Attributes -->
 		<string>
 			<key>String_AttributeBODLong</key>
@@ -610,7 +622,7 @@
 		</string>
 		<string>
 			<key>Menu_Main_About</key>
-			<text>&amp;A propos de...</text>
+			<text>&amp;À propos de...</text>
 		</string>
 		<!-- Create/Career Window -->
 		<string>
@@ -623,7 +635,7 @@
 		</string>
 		<string>
 			<key>Menu_FileSaveAs</key>
-			<text>S&amp;auvegarder sous...</text>
+			<text>&amp;Sauvegarder sous...</text>
 		</string>
 		<string>
 			<key>Menu_FileExport</key>
@@ -2028,6 +2040,10 @@
 		<string>
 			<key>String_ExpenseSoldArmorGear</key>
 			<text>Vente d'un Equipement d'armure</text>
+		</string>
+		<string>
+			<key>String_ExpensePurchaseCyberwareSuite</key>
+			<text>Achat d'une Suite Cyberware</text>
 		</string>
 		<string>
 			<key>String_ExpensePurchaseWeapon</key>
@@ -4296,6 +4312,10 @@ Un saul attribut peut atteindre sa valeur maximum durant la création de personn
 			<text>Gremlins :</text>
 		</string>
 		<string>
+			<key>Label_DiceRoller_Threshold</key>
+			<text>Seuil:</text>
+		</string>
+		<string>
 			<key>String_DiceRoller_Glitch</key>
 			<text>Complication avec {0} Succès</text>
 		</string>
@@ -4318,6 +4338,14 @@ Un saul attribut peut atteindre sa valeur maximum durant la création de personn
 		<string>
 			<key>String_DiceRoller_ReallyLarge</key>
 			<text>Réserve très importante</text>
+		</string>
+		<string>
+			<key>String_DiceRoller_Success</key>
+			<text>Succès</text>
+		</string>
+		<string>
+			<key>String_DiceRoller_Failure</key>
+			<text>Échec</text>
 		</string>
 		<!-- Expense Window -->
 		<string>
@@ -5379,6 +5407,10 @@ Un saul attribut peut atteindre sa valeur maximum durant la création de personn
 		<string>
 			<key>Checkbox_Option_PrintNotes</key>
 			<text>Imprimer les notes</text>
+		</string>
+		<string>
+			<key>Label_Options_EssenceDecimals</key>
+			<text>Arrondir l'Essence au nombre de décimales suivant:</text>
 		</string>
 		<string>
 			<key>Checkbox_Option_FreeSpiritPowerPointsMAG</key>

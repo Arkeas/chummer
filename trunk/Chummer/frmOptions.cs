@@ -149,6 +149,16 @@ namespace Chummer
 			}
 			chkDatesIncludeTime.Checked = blnDatesIncludeTime;
 
+			bool blnPrintToFileFirst = false;
+			try
+			{
+				blnPrintToFileFirst = GlobalOptions.Instance.PrintToFileFirst;
+			}
+			catch
+			{
+			}
+			chkPrintToFileFirst.Checked = blnPrintToFileFirst;
+
 			txtPDFAppPath.Text = GlobalOptions.Instance.PDFAppPath;
 
 			// Populate the Language List.
@@ -1617,12 +1627,17 @@ namespace Chummer
 			GlobalOptions.Instance.SingleDiceRoller = chkSingleDiceRoller.Checked;
 			GlobalOptions.Instance.DefaultCharacterSheet = cboXSLT.SelectedValue.ToString();
 			GlobalOptions.Instance.DatesIncludeTime = chkDatesIncludeTime.Checked;
+			GlobalOptions.Instance.PrintToFileFirst = chkPrintToFileFirst.Checked;
 			GlobalOptions.Instance.PDFAppPath = txtPDFAppPath.Text;
 			RegistryKey objRegistry = Registry.CurrentUser.CreateSubKey("Software\\Chummer");
 			objRegistry.SetValue("autoupdate", chkAutomaticUpdate.Checked.ToString());
 			objRegistry.SetValue("language", cboLanguage.SelectedValue.ToString());
 			objRegistry.SetValue("startupfullscreen", chkStartupFullscreen.Checked.ToString());
 			objRegistry.SetValue("singlediceroller", chkSingleDiceRoller.Checked.ToString());
+			objRegistry.SetValue("defaultsheet", cboXSLT.SelectedValue.ToString());
+			objRegistry.SetValue("datesincludetime", chkDatesIncludeTime.Checked.ToString());
+			objRegistry.SetValue("printtofilefirst", chkPrintToFileFirst.Checked.ToString());
+
 			objRegistry.SetValue("pdfapppath", txtPDFAppPath.Text);
 
 			// Save the SourcebookInfo.

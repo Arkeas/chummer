@@ -89,6 +89,7 @@ namespace Chummer
 		private static string _strLanguage = "en-us";
 		private static string _strDefaultCharacterSheet = "Shadowrun 4";
 		private static bool _blnDatesIncludeTime = true;
+		private static bool _blnPrintToFileFirst = false;
 
 		// Omae Information.
 		private static string _strOmaeUserName = "";
@@ -124,6 +125,24 @@ namespace Chummer
 			try
 			{
 				_blnDatesIncludeTime = Convert.ToBoolean(Registry.CurrentUser.CreateSubKey("Software\\Chummer").GetValue("datesincludetime").ToString());
+			}
+			catch
+			{
+			}
+
+			// Whether or not printouts should be sent to a file before loading them in the browser. This is a fix for getting printing to work properly on Linux using Wine.
+			try
+			{
+				_blnPrintToFileFirst = Convert.ToBoolean(Registry.CurrentUser.CreateSubKey("Software\\Chummer").GetValue("printtofilefirst").ToString());
+			}
+			catch
+			{
+			}
+
+			// Default character sheet.
+			try
+			{
+				_strDefaultCharacterSheet = Registry.CurrentUser.CreateSubKey("Software\\Chummer").GetValue("defaultsheet").ToString();
 			}
 			catch
 			{
@@ -257,6 +276,21 @@ namespace Chummer
 			set
 			{
 				_blnDatesIncludeTime = value;
+			}
+		}
+
+		/// <summary>
+		/// Whether or not printouts should be sent to a file before loading them in the browser. This is a fix for getting printing to work properly on Linux using Wine.
+		/// </summary>
+		public bool PrintToFileFirst
+		{
+			get
+			{
+				return _blnPrintToFileFirst;
+			}
+			set
+			{
+				_blnPrintToFileFirst = value;
 			}
 		}
 

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-978</version>
+	<version>-977</version>
 	<chummer file="armor.xml">
 		<categories>
 			<category translate="Armures">Armor</category>
@@ -4770,12 +4770,12 @@
 			</gear>
 			<gear>
 				<name>Monowire (1m)</name>
-				<translate>Monofilament</translate>
+				<translate>Monofilament (1m)</translate>
 				<page>63</page>
 			</gear>
 			<gear>
 				<name>Pressure Mesh/Pads (10m)</name>
-				<translate>Dalle à pression</translate>
+				<translate>Dalle à pression (10m)</translate>
 				<page>63</page>
 			</gear>
 			<gear>
@@ -20661,6 +20661,11 @@
 				<translate>Kit de camouflage Mercedes Commando</translate>
 				<page>119</page>
 			</mod>
+			<mod>
+				<name>Generic Mod</name>
+				<translate>Modification générique</translate>
+				<page>0</page>
+			</mod>
 		</mods>
 	</chummer>
 	<chummer file="vessels.xml">
@@ -22644,6 +22649,11 @@
 				<translate>Cornes perforantes</translate>
 				<page>111</page>
 			</weapon>
+			<weapon>
+				<name>Monofilament Chainsaw</name>
+				<translate>Tronçonneuse monofilament</translate>
+				<page>335</page>
+			</weapon>
 		</weapons>
 		<accessories>
 			<accessory>
@@ -23432,6 +23442,11 @@
 				<name>Weapon Focus</name>
 				<translate>Arme focus</translate>
 				<page>199</page>
+			</mod>
+			<mod>
+				<name>DP Penalty</name>
+				<translate>Pénalité RD</translate>
+				<page>0</page>
 			</mod>
 		</mods>
 	</chummer>

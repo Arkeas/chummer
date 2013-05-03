@@ -2,7 +2,7 @@
 <!-- この言語ファイルは AhonokoP が作成しました。連絡を取りたいときは"Dumpshock Forum"でAhonokoPにメッセージを送ってください -->
 <!-- Translated by AhonokoP. Contact me at "Dumpshock Forum" -->
 <chummer>
-	<version>-998</version>
+	<version>-997</version>
 	<name>日本語 (JP)</name>
 	<strings>
 		<!-- Common Strings -->
@@ -423,6 +423,18 @@
 		<string>
 			<key>MessageTitle_RemoveCharacterAssociation</key>
 			<text>キャラクターの連携を削除</text>
+		</string>
+		<string>
+			<key>Message_IncorrectGameVersion_SR4</key>
+			<text>使用中の Chummer はシャドウラン 5th Edition 用ですが, このファイルはシャドウラン 4th Edition のものです. このファイルを開くには シャドウラン 4th Edition 用の Chummer を使用してください.</text>
+		</string>
+		<string>
+			<key>Message_IncorrectGameVersion_SR5</key>
+			<text>使用中の Chummer はシャドウラン 4th Edition 用ですが, このファイルはシャドウラン 5th Edition のものです. このファイルを開くには シャドウラン 5th Edition 用の Chummer を使用してください.</text>
+		</string>
+		<string>
+			<key>MessageTitle_IncorrectGameVersion</key>
+			<text>ルールのバージョンが不一致</text>
 		</string>
 		<!-- Attributes -->
 		<string>
@@ -4317,6 +4329,10 @@
 			<text>グレムリン:</text>
 		</string>
 		<string>
+			<key>Label_DiceRoller_Threshold</key>
+			<text>目標値:</text>
+		</string>
+		<string>
 			<key>String_DiceRoller_Glitch</key>
 			<text>{0} ヒットとグリッジ</text>
 		</string>
@@ -4339,6 +4355,14 @@
 		<string>
 			<key>String_DiceRoller_ReallyLarge</key>
 			<text>非常に大きなプール</text>
+		</string>
+		<string>
+			<key>String_DiceRoller_Success</key>
+			<text>成功</text>
+		</string>
+		<string>
+			<key>String_DiceRoller_Failure</key>
+			<text>失敗</text>
 		</string>
 		<!-- Expense Window -->
 		<string>

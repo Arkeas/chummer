@@ -230,6 +230,7 @@
 			this.nudKarmaJoinGroup = new System.Windows.Forms.NumericUpDown();
 			this.lblKarmaJoinGroup = new System.Windows.Forms.Label();
 			this.tabOptionalRules = new System.Windows.Forms.TabPage();
+			this.chkExtendAnyDetectionSpell = new System.Windows.Forms.CheckBox();
 			this.chkBreakSkillGroupsInCreateMode = new System.Windows.Forms.CheckBox();
 			this.chkAlternateMatrixAttribute = new System.Windows.Forms.CheckBox();
 			this.chkAllowCustomTransgenics = new System.Windows.Forms.CheckBox();
@@ -273,7 +274,7 @@
 			this.lblSetting = new System.Windows.Forms.Label();
 			this.lblSettingName = new System.Windows.Forms.Label();
 			this.txtSettingName = new System.Windows.Forms.TextBox();
-			this.chkExtendAnyDetectionSpell = new System.Windows.Forms.CheckBox();
+			this.chkPrintToFileFirst = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaComplexFormOption)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaMetamagic)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaInitiation)).BeginInit();
@@ -1275,6 +1276,7 @@
 			// tabPage2
 			// 
 			this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+			this.tabPage2.Controls.Add(this.chkPrintToFileFirst);
 			this.tabPage2.Controls.Add(this.cboEssenceDecimals);
 			this.tabPage2.Controls.Add(this.lblEssenceDecimals);
 			this.tabPage2.Controls.Add(this.chkPrintNotes);
@@ -1304,7 +1306,7 @@
 			// 
 			this.cboEssenceDecimals.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboEssenceDecimals.FormattingEnabled = true;
-			this.cboEssenceDecimals.Location = new System.Drawing.Point(242, 301);
+			this.cboEssenceDecimals.Location = new System.Drawing.Point(242, 333);
 			this.cboEssenceDecimals.Name = "cboEssenceDecimals";
 			this.cboEssenceDecimals.Size = new System.Drawing.Size(61, 21);
 			this.cboEssenceDecimals.TabIndex = 17;
@@ -1312,7 +1314,7 @@
 			// lblEssenceDecimals
 			// 
 			this.lblEssenceDecimals.AutoSize = true;
-			this.lblEssenceDecimals.Location = new System.Drawing.Point(6, 304);
+			this.lblEssenceDecimals.Location = new System.Drawing.Point(6, 336);
 			this.lblEssenceDecimals.Name = "lblEssenceDecimals";
 			this.lblEssenceDecimals.Size = new System.Drawing.Size(230, 13);
 			this.lblEssenceDecimals.TabIndex = 16;
@@ -2494,6 +2496,17 @@
 			this.tabOptionalRules.Tag = "Tab_Options_OptionalRules";
 			this.tabOptionalRules.Text = "Optional Rules";
 			// 
+			// chkExtendAnyDetectionSpell
+			// 
+			this.chkExtendAnyDetectionSpell.AutoSize = true;
+			this.chkExtendAnyDetectionSpell.Location = new System.Drawing.Point(8, 328);
+			this.chkExtendAnyDetectionSpell.Name = "chkExtendAnyDetectionSpell";
+			this.chkExtendAnyDetectionSpell.Size = new System.Drawing.Size(378, 17);
+			this.chkExtendAnyDetectionSpell.TabIndex = 30;
+			this.chkExtendAnyDetectionSpell.Tag = "Checkbox_Options_ExtendAnyDetectionSpell";
+			this.chkExtendAnyDetectionSpell.Text = "Allow any Detection Spell to be taken as Extended range version (SM 165)";
+			this.chkExtendAnyDetectionSpell.UseVisualStyleBackColor = true;
+			// 
 			// chkBreakSkillGroupsInCreateMode
 			// 
 			this.chkBreakSkillGroupsInCreateMode.AutoSize = true;
@@ -3023,16 +3036,16 @@
 			this.txtSettingName.Size = new System.Drawing.Size(190, 20);
 			this.txtSettingName.TabIndex = 3;
 			// 
-			// chkExtendAnyDetectionSpell
+			// chkPrintToFileFirst
 			// 
-			this.chkExtendAnyDetectionSpell.AutoSize = true;
-			this.chkExtendAnyDetectionSpell.Location = new System.Drawing.Point(8, 328);
-			this.chkExtendAnyDetectionSpell.Name = "chkExtendAnyDetectionSpell";
-			this.chkExtendAnyDetectionSpell.Size = new System.Drawing.Size(378, 17);
-			this.chkExtendAnyDetectionSpell.TabIndex = 30;
-			this.chkExtendAnyDetectionSpell.Tag = "Checkbox_Options_ExtendAnyDetectionSpell";
-			this.chkExtendAnyDetectionSpell.Text = "Allow any Detection Spell to be taken as Extended range version (SM 165)";
-			this.chkExtendAnyDetectionSpell.UseVisualStyleBackColor = true;
+			this.chkPrintToFileFirst.AutoSize = true;
+			this.chkPrintToFileFirst.Location = new System.Drawing.Point(8, 297);
+			this.chkPrintToFileFirst.Name = "chkPrintToFileFirst";
+			this.chkPrintToFileFirst.Size = new System.Drawing.Size(130, 17);
+			this.chkPrintToFileFirst.TabIndex = 18;
+			this.chkPrintToFileFirst.Tag = "Checkbox_Option_PrintToFileFirst";
+			this.chkPrintToFileFirst.Text = "Apply Linux printing fix";
+			this.chkPrintToFileFirst.UseVisualStyleBackColor = true;
 			// 
 			// frmOptions
 			// 
@@ -3388,5 +3401,6 @@
 		private System.Windows.Forms.CheckBox chkDatesIncludeTime;
 		private System.Windows.Forms.CheckBox chkBreakSkillGroupsInCreateMode;
 		private System.Windows.Forms.CheckBox chkExtendAnyDetectionSpell;
+		private System.Windows.Forms.CheckBox chkPrintToFileFirst;
 	}
 }

@@ -190,9 +190,23 @@ namespace Chummer
 			//objXSLTransform.Transform("D:\\temp\\print.xml", "D:\\temp\\output.htm");
 			//webBrowser1.Navigate("D:\\temp\\output.htm");
 
-			// Read in the resulting code and pass it to the browser.
-			StreamReader objReader = new StreamReader(objStream);
-			webBrowser1.DocumentText = objReader.ReadToEnd();
+			if (!GlobalOptions.Instance.PrintToFileFirst)
+			{
+				// Populate the browser using the DocumentStream.
+				webBrowser1.DocumentStream = objStream;
+			}
+			else
+			{
+				// The DocumentStream method fails when using Wine, so we'll instead dump everything out a temporary HTML file, have the WebBrowser load that, then delete the temporary file.
+				// Read in the resulting code and pass it to the browser.
+				string strName = Guid.NewGuid().ToString() + ".htm";
+				StreamReader objReader = new StreamReader(objStream);
+				string strOutput = objReader.ReadToEnd();
+				File.WriteAllText(strName, strOutput);
+				string curDir = Directory.GetCurrentDirectory();
+				webBrowser1.Url = new Uri(String.Format("file:///{0}/" + strName, curDir));
+				File.Delete(strName);
+			}
 		}
 
 		/// <summary>

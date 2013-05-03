@@ -1,3 +1,14 @@
+Build 473
+- Default Character Sheet option is now saved correctly
+- added a Apply Linux printing fix option to the Character and Printing tab in the Options window (see below)
+- fixed an issue with printing character sheets when running Chummer through Wine (see below)
+
+Printing with Linux/Wine
+This update introduces a fix to allow machines using Wine to load Chummer on a non-Windows OS to print character sheets if they were previously crashing. To fix the printing issue, go to Tools > Options > General Tab > Character and Printing sub-tab. Turn on the Apply Linux printing fix checkbox, then click OK. You should now be able to print without crashing.
+
+New Strings
+- Checkbox_Option_PrintToFileFirst
+
 Build 472
 - save files now include <gameedition /> to indicate which edition of Shadowrun they are for
 - <gameedition /> is now checked when loading a save file to ensure the edition of Chummer and the save file match
