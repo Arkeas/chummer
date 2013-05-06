@@ -4965,6 +4965,10 @@ Only one attribute may be at its Maximum value during character creation.</text>
 			<text>Automatic Updates</text>
 		</string>
 		<string>
+			<key>Checkbox_Options_LocalisedUpdatesOnly</key>
+			<text>Only download updates in my selected language</text>
+		</string>
+		<string>
 			<key>Checkbox_Options_ConfirmDelete</key>
 			<text>Ask for confirmation when deleting items</text>
 		</string>

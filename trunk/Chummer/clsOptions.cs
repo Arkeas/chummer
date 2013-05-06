@@ -84,6 +84,7 @@ namespace Chummer
 		private frmMain _frmMainForm;
 
 		private static bool _blnAutomaticUpdate = false;
+		private static bool _blnLocalisedUpdatesOnly = false;
 		private static bool _blnStartupFullscreen = false;
 		private static bool _blnSingleDiceRoller = true;
 		private static string _strLanguage = "en-us";
@@ -116,6 +117,15 @@ namespace Chummer
 			try
 			{
 				_blnAutomaticUpdate = Convert.ToBoolean(Registry.CurrentUser.CreateSubKey("Software\\Chummer").GetValue("autoupdate").ToString());
+			}
+			catch
+			{
+			}
+
+			// Whether or not the app should only download localised files in the user's selected language.
+			try
+			{
+				_blnLocalisedUpdatesOnly = Convert.ToBoolean(Registry.CurrentUser.CreateSubKey("Software\\Chummer").GetValue("localisedupdatesonly").ToString());
 			}
 			catch
 			{
@@ -261,6 +271,21 @@ namespace Chummer
 			set
 			{
 				_blnAutomaticUpdate = value;
+			}
+		}
+
+		/// <summary>
+		/// Whether or not the app should only download localised files in the user's selected language.
+		/// </summary>
+		public bool LocalisedUpdatesOnly
+		{
+			get
+			{
+				return _blnLocalisedUpdatesOnly;
+			}
+			set
+			{
+				_blnLocalisedUpdatesOnly = value;
 			}
 		}
 
@@ -2057,6 +2082,11 @@ namespace Chummer
 			_strBookXPath = strPath;
 			
 			return strPath;
+		}
+
+		public List<string> BookLinq()
+		{
+			return _lstBooks;
 		}
 
 		/// <summary>

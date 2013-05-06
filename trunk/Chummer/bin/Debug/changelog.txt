@@ -1,3 +1,9 @@
+Build XXX
+- added an option to only download language updates for your chosen language instead of all languages
+
+New Strings
+- Checkbox_Options_LocalisedUpdatesOnly
+
 Build 473
 - Default Character Sheet option is now saved correctly
 - added a Apply Linux printing fix option to the Character and Printing tab in the Options window (see below)
