@@ -120,6 +120,7 @@
 			this.chkSingleDiceRoller = new System.Windows.Forms.CheckBox();
 			this.chkStartupFullscreen = new System.Windows.Forms.CheckBox();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.chkPrintToFileFirst = new System.Windows.Forms.CheckBox();
 			this.cboEssenceDecimals = new System.Windows.Forms.ComboBox();
 			this.lblEssenceDecimals = new System.Windows.Forms.Label();
 			this.chkPrintNotes = new System.Windows.Forms.CheckBox();
@@ -274,7 +275,7 @@
 			this.lblSetting = new System.Windows.Forms.Label();
 			this.lblSettingName = new System.Windows.Forms.Label();
 			this.txtSettingName = new System.Windows.Forms.TextBox();
-			this.chkPrintToFileFirst = new System.Windows.Forms.CheckBox();
+			this.chkLocalisedUpdatesOnly = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaComplexFormOption)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaMetamagic)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaInitiation)).BeginInit();
@@ -1058,6 +1059,7 @@
 			// tabGlobal
 			// 
 			this.tabGlobal.BackColor = System.Drawing.SystemColors.Control;
+			this.tabGlobal.Controls.Add(this.chkLocalisedUpdatesOnly);
 			this.tabGlobal.Controls.Add(this.chkDatesIncludeTime);
 			this.tabGlobal.Controls.Add(this.cmdPDFTest);
 			this.tabGlobal.Controls.Add(this.nudPDFOffset);
@@ -1088,7 +1090,7 @@
 			// chkDatesIncludeTime
 			// 
 			this.chkDatesIncludeTime.AutoSize = true;
-			this.chkDatesIncludeTime.Location = new System.Drawing.Point(9, 176);
+			this.chkDatesIncludeTime.Location = new System.Drawing.Point(9, 199);
 			this.chkDatesIncludeTime.Name = "chkDatesIncludeTime";
 			this.chkDatesIncludeTime.Size = new System.Drawing.Size(189, 17);
 			this.chkDatesIncludeTime.TabIndex = 18;
@@ -1100,7 +1102,7 @@
 			// 
 			this.cmdPDFTest.AutoSize = true;
 			this.cmdPDFTest.Enabled = false;
-			this.cmdPDFTest.Location = new System.Drawing.Point(138, 340);
+			this.cmdPDFTest.Location = new System.Drawing.Point(138, 363);
 			this.cmdPDFTest.Name = "cmdPDFTest";
 			this.cmdPDFTest.Size = new System.Drawing.Size(122, 23);
 			this.cmdPDFTest.TabIndex = 17;
@@ -1112,7 +1114,7 @@
 			// nudPDFOffset
 			// 
 			this.nudPDFOffset.Enabled = false;
-			this.nudPDFOffset.Location = new System.Drawing.Point(87, 343);
+			this.nudPDFOffset.Location = new System.Drawing.Point(87, 366);
 			this.nudPDFOffset.Minimum = new decimal(new int[] {
             100,
             0,
@@ -1126,7 +1128,7 @@
 			// lblPDFOffset
 			// 
 			this.lblPDFOffset.AutoSize = true;
-			this.lblPDFOffset.Location = new System.Drawing.Point(6, 345);
+			this.lblPDFOffset.Location = new System.Drawing.Point(6, 368);
 			this.lblPDFOffset.Name = "lblPDFOffset";
 			this.lblPDFOffset.Size = new System.Drawing.Size(66, 13);
 			this.lblPDFOffset.TabIndex = 15;
@@ -1136,7 +1138,7 @@
 			// cmdPDFLocation
 			// 
 			this.cmdPDFLocation.Enabled = false;
-			this.cmdPDFLocation.Location = new System.Drawing.Point(341, 308);
+			this.cmdPDFLocation.Location = new System.Drawing.Point(341, 331);
 			this.cmdPDFLocation.Name = "cmdPDFLocation";
 			this.cmdPDFLocation.Size = new System.Drawing.Size(27, 23);
 			this.cmdPDFLocation.TabIndex = 14;
@@ -1146,7 +1148,7 @@
 			// 
 			// txtPDFLocation
 			// 
-			this.txtPDFLocation.Location = new System.Drawing.Point(87, 310);
+			this.txtPDFLocation.Location = new System.Drawing.Point(87, 333);
 			this.txtPDFLocation.Name = "txtPDFLocation";
 			this.txtPDFLocation.ReadOnly = true;
 			this.txtPDFLocation.Size = new System.Drawing.Size(248, 20);
@@ -1155,7 +1157,7 @@
 			// lblPDFLocation
 			// 
 			this.lblPDFLocation.AutoSize = true;
-			this.lblPDFLocation.Location = new System.Drawing.Point(6, 313);
+			this.lblPDFLocation.Location = new System.Drawing.Point(6, 336);
 			this.lblPDFLocation.Name = "lblPDFLocation";
 			this.lblPDFLocation.Size = new System.Drawing.Size(75, 13);
 			this.lblPDFLocation.TabIndex = 12;
@@ -1164,7 +1166,7 @@
 			// 
 			// cmdPDFAppPath
 			// 
-			this.cmdPDFAppPath.Location = new System.Drawing.Point(407, 227);
+			this.cmdPDFAppPath.Location = new System.Drawing.Point(407, 250);
 			this.cmdPDFAppPath.Name = "cmdPDFAppPath";
 			this.cmdPDFAppPath.Size = new System.Drawing.Size(27, 23);
 			this.cmdPDFAppPath.TabIndex = 11;
@@ -1174,7 +1176,7 @@
 			// 
 			// txtPDFAppPath
 			// 
-			this.txtPDFAppPath.Location = new System.Drawing.Point(153, 229);
+			this.txtPDFAppPath.Location = new System.Drawing.Point(153, 252);
 			this.txtPDFAppPath.Name = "txtPDFAppPath";
 			this.txtPDFAppPath.ReadOnly = true;
 			this.txtPDFAppPath.Size = new System.Drawing.Size(248, 20);
@@ -1183,7 +1185,7 @@
 			// lblPDFAppPath
 			// 
 			this.lblPDFAppPath.AutoSize = true;
-			this.lblPDFAppPath.Location = new System.Drawing.Point(6, 232);
+			this.lblPDFAppPath.Location = new System.Drawing.Point(6, 255);
 			this.lblPDFAppPath.Name = "lblPDFAppPath";
 			this.lblPDFAppPath.Size = new System.Drawing.Size(141, 13);
 			this.lblPDFAppPath.TabIndex = 9;
@@ -1254,7 +1256,7 @@
 			// chkSingleDiceRoller
 			// 
 			this.chkSingleDiceRoller.AutoSize = true;
-			this.chkSingleDiceRoller.Location = new System.Drawing.Point(9, 153);
+			this.chkSingleDiceRoller.Location = new System.Drawing.Point(9, 176);
 			this.chkSingleDiceRoller.Name = "chkSingleDiceRoller";
 			this.chkSingleDiceRoller.Size = new System.Drawing.Size(251, 17);
 			this.chkSingleDiceRoller.TabIndex = 6;
@@ -1265,7 +1267,7 @@
 			// chkStartupFullscreen
 			// 
 			this.chkStartupFullscreen.AutoSize = true;
-			this.chkStartupFullscreen.Location = new System.Drawing.Point(9, 130);
+			this.chkStartupFullscreen.Location = new System.Drawing.Point(9, 153);
 			this.chkStartupFullscreen.Name = "chkStartupFullscreen";
 			this.chkStartupFullscreen.Size = new System.Drawing.Size(154, 17);
 			this.chkStartupFullscreen.TabIndex = 5;
@@ -1301,6 +1303,17 @@
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Tag = "Tab_Options_Character";
 			this.tabPage2.Text = "Character and Printing";
+			// 
+			// chkPrintToFileFirst
+			// 
+			this.chkPrintToFileFirst.AutoSize = true;
+			this.chkPrintToFileFirst.Location = new System.Drawing.Point(8, 297);
+			this.chkPrintToFileFirst.Name = "chkPrintToFileFirst";
+			this.chkPrintToFileFirst.Size = new System.Drawing.Size(130, 17);
+			this.chkPrintToFileFirst.TabIndex = 18;
+			this.chkPrintToFileFirst.Tag = "Checkbox_Option_PrintToFileFirst";
+			this.chkPrintToFileFirst.Text = "Apply Linux printing fix";
+			this.chkPrintToFileFirst.UseVisualStyleBackColor = true;
 			// 
 			// cboEssenceDecimals
 			// 
@@ -3036,16 +3049,16 @@
 			this.txtSettingName.Size = new System.Drawing.Size(190, 20);
 			this.txtSettingName.TabIndex = 3;
 			// 
-			// chkPrintToFileFirst
+			// chkLocalisedUpdatesOnly
 			// 
-			this.chkPrintToFileFirst.AutoSize = true;
-			this.chkPrintToFileFirst.Location = new System.Drawing.Point(8, 297);
-			this.chkPrintToFileFirst.Name = "chkPrintToFileFirst";
-			this.chkPrintToFileFirst.Size = new System.Drawing.Size(130, 17);
-			this.chkPrintToFileFirst.TabIndex = 18;
-			this.chkPrintToFileFirst.Tag = "Checkbox_Option_PrintToFileFirst";
-			this.chkPrintToFileFirst.Text = "Apply Linux printing fix";
-			this.chkPrintToFileFirst.UseVisualStyleBackColor = true;
+			this.chkLocalisedUpdatesOnly.AutoSize = true;
+			this.chkLocalisedUpdatesOnly.Location = new System.Drawing.Point(9, 130);
+			this.chkLocalisedUpdatesOnly.Name = "chkLocalisedUpdatesOnly";
+			this.chkLocalisedUpdatesOnly.Size = new System.Drawing.Size(254, 17);
+			this.chkLocalisedUpdatesOnly.TabIndex = 19;
+			this.chkLocalisedUpdatesOnly.Tag = "Checkbox_Options_LocalisedUpdatesOnly";
+			this.chkLocalisedUpdatesOnly.Text = "Only download updates in my selected language";
+			this.chkLocalisedUpdatesOnly.UseVisualStyleBackColor = true;
 			// 
 			// frmOptions
 			// 
@@ -3402,5 +3415,6 @@
 		private System.Windows.Forms.CheckBox chkBreakSkillGroupsInCreateMode;
 		private System.Windows.Forms.CheckBox chkExtendAnyDetectionSpell;
 		private System.Windows.Forms.CheckBox chkPrintToFileFirst;
+		private System.Windows.Forms.CheckBox chkLocalisedUpdatesOnly;
 	}
 }

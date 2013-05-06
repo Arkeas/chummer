@@ -52,11 +52,11 @@ namespace Chummer
 				this.Close();
 			}
 
-			if (Application.StartupPath.Contains("\\Debug"))
-			{
-				MessageBox.Show("Cannot run Update from a debug path.");
-				this.Close();
-			}
+			//if (Application.StartupPath.Contains("\\Debug"))
+			//{
+			//    MessageBox.Show("Cannot run Update from a debug path.");
+			//    this.Close();
+			//}
 
 			FetchXML();
 		}
@@ -296,6 +296,17 @@ namespace Chummer
 					{
 						blnCreateNode = true;
 					}
+
+					// Check for localisation limitations.
+					if (GlobalOptions.Instance.LocalisedUpdatesOnly)
+					{
+						// Only check if we're looking at a non-en-us language file.
+						if (objXmlNode["name"].InnerText.StartsWith("lang") && !objXmlNode["name"].InnerText.Contains("en-us"))
+						{
+							if (!objXmlNode["name"].InnerText.EndsWith(GlobalOptions.Instance.Language.Substring(0, 2) + ".xml") && !objXmlNode["name"].InnerText.EndsWith(GlobalOptions.Instance.Language.Substring(0, 2) + "_data.xml"))
+								blnCreateNode = false;
+						}
+					}
 				}
 
 				// If we're on an XSL file, check for the existing file and compare version numbers.
@@ -322,6 +333,18 @@ namespace Chummer
 					catch(Exception)
 					{
 						blnCreateNode = true;
+					}
+
+					// Check for localisation limitations.
+					if (GlobalOptions.Instance.LocalisedUpdatesOnly)
+					{
+						// Only check if we're looking at a non-en-us sheet file.
+						string[] strSplit = objXmlNode["name"].InnerText.Split('/');
+						if (strSplit.Length > 2)
+						{
+							if (!objXmlNode["name"].InnerText.Contains("/" + GlobalOptions.Instance.Language.Substring(0, 2) + "/"))
+								blnCreateNode = false;
+						}
 					}
 				}
 
