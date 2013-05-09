@@ -1751,6 +1751,10 @@ namespace Chummer
 					// Run through each of the Skill Attributes since there may be more than one affected.
 					foreach (XmlNode objXmlSkill in objXmlSkillList)
 					{
+						string strUseUnique = strUnique;
+						if (objXmlSkill["name"].Attributes["precedence"] != null)
+							strUseUnique = "precedence" + objXmlSkill["name"].Attributes["precedence"].InnerText;
+
 						bool blnAddToRating = false;
 						if (objXmlSkill["applytorating"] != null)
 						{
@@ -1758,9 +1762,9 @@ namespace Chummer
 								blnAddToRating = true;
 						}
 						if (objXmlSkill.InnerXml.Contains("exclude"))
-							CreateImprovement(objXmlSkill["name"].InnerText, objImprovementSource, strSourceName, Improvement.ImprovementType.SkillAttribute, strUnique, ValueToInt(objXmlSkill["bonus"].InnerXml, intRating), 1, 0, 0, 0, 0, objXmlSkill["exclude"].InnerText, blnAddToRating);
+							CreateImprovement(objXmlSkill["name"].InnerText, objImprovementSource, strSourceName, Improvement.ImprovementType.SkillAttribute, strUseUnique, ValueToInt(objXmlSkill["bonus"].InnerXml, intRating), 1, 0, 0, 0, 0, objXmlSkill["exclude"].InnerText, blnAddToRating);
 						else
-							CreateImprovement(objXmlSkill["name"].InnerText, objImprovementSource, strSourceName, Improvement.ImprovementType.SkillAttribute, strUnique, ValueToInt(objXmlSkill["bonus"].InnerXml, intRating), 1, 0, 0, 0, 0, "", blnAddToRating);
+							CreateImprovement(objXmlSkill["name"].InnerText, objImprovementSource, strSourceName, Improvement.ImprovementType.SkillAttribute, strUseUnique, ValueToInt(objXmlSkill["bonus"].InnerXml, intRating), 1, 0, 0, 0, 0, "", blnAddToRating);
 					}
 				}
 
@@ -2256,9 +2260,16 @@ namespace Chummer
 				if (NodeExists(nodBonus, "spellcategory"))
 				{
 					XmlNodeList objXmlCategoryList = nodBonus.SelectNodes("spellcategory");
+
 					// Run through each of the Spell Categories since there may be more than one affected.
 					foreach (XmlNode nodSpellCategory in objXmlCategoryList)
-						CreateImprovement(nodSpellCategory["name"].InnerText, objImprovementSource, strSourceName, Improvement.ImprovementType.SpellCategory, strUnique, ValueToInt(nodSpellCategory["val"].InnerText, intRating));
+					{
+						string strUseUnique = strUnique;
+						if (nodSpellCategory["name"].Attributes["precedence"] != null)
+							strUseUnique = "precedence" + nodSpellCategory["name"].Attributes["precedence"].InnerText;
+
+						CreateImprovement(nodSpellCategory["name"].InnerText, objImprovementSource, strSourceName, Improvement.ImprovementType.SpellCategory, strUseUnique, ValueToInt(nodSpellCategory["val"].InnerText, intRating));
+					}
 				}
 
 				// Check for Throwing Range bonuses.

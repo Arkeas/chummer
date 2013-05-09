@@ -862,7 +862,7 @@ namespace Chummer
 
 					string strCostExpr = _strCost.Replace("Armor Cost", _objParent.Cost.ToString());
 					XPathExpression xprCost = nav.Compile(strCostExpr);
-					intReturn = Convert.ToInt32(nav.Evaluate(xprCost).ToString());
+					intReturn = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(nav.Evaluate(xprCost).ToString(), GlobalOptions.Instance.CultureInfo)));
 				}
 				else if (_strCost.Contains("Rating"))
 				{
@@ -871,7 +871,7 @@ namespace Chummer
 
 					string strCostExpr = _strCost.Replace("Rating", _intRating.ToString());
 					XPathExpression xprCost = nav.Compile(strCostExpr);
-					intReturn = Convert.ToInt32(nav.Evaluate(xprCost).ToString());
+					intReturn = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(nav.Evaluate(xprCost).ToString(), GlobalOptions.Instance.CultureInfo)));
 				}
 				else
 					intReturn = Convert.ToInt32(_strCost);
