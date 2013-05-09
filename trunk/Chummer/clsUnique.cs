@@ -2556,7 +2556,29 @@ namespace Chummer
 						if (objImprovement.ImproveType == Improvement.ImprovementType.SkillAttribute && objImprovement.ImprovedName == _strAttribute)
 						{
 							if (!objImprovement.Exclude.Contains(_strName))
-								intModifier += objImprovement.Value;
+							{
+								if (objImprovement.UniqueName != "")
+								{
+									// If this has a UniqueName, run through the current list of UniqueNames seen. If it is not already in the list, add it.
+									bool blnFound = false;
+									foreach (string strName in lstUniqueName)
+									{
+										if (strName == objImprovement.UniqueName)
+										{
+											blnFound = true;
+											break;
+										}
+									}
+									if (!blnFound)
+										lstUniqueName.Add(objImprovement.UniqueName);
+
+									// Add the values to the UniquePair List so we can check them later.
+									string[,] strValues = new string[,] { { objImprovement.UniqueName, objImprovement.Value.ToString() } };
+									lstUniquePair.Add(strValues);
+								}
+								else
+									intModifier += objImprovement.Value;
+							}
 						}
 
 						// Improvement for Enhanced Articulation
@@ -4238,6 +4260,65 @@ namespace Chummer
 						strReturn += " (" + LanguageManager.Instance.TranslateExtra(_strExtra) + ")";
 					}
 				}
+				return strReturn;
+			}
+		}
+		#endregion
+
+		#region ComplexProperties
+		/// <summary>
+		/// The Dice Pool size for the Active Skill required to cast the Spell.
+		/// </summary>
+		public int DicePool
+		{
+			get
+			{
+				int intReturn = 0;
+				string strPoolTip = "";
+				foreach (Skill objSkill in _objCharacter.Skills)
+				{
+					if (objSkill.Name == "Spellcasting")
+					{
+						intReturn = objSkill.TotalRating;
+						// Add any Specialization bonus if applicable.
+						if (objSkill.Specialization == _strCategory)
+							intReturn += 2;
+					}
+				}
+
+				// Include any Improvements to the Spell Category.
+				ImprovementManager objImprovementManager = new ImprovementManager(_objCharacter);
+				intReturn += objImprovementManager.ValueOf(Improvement.ImprovementType.SpellCategory, false, _strCategory);
+
+				return intReturn;
+			}
+		}
+
+		/// <summary>
+		/// Tooltip information for the Dice Pool.
+		/// </summary>
+		public string DicePoolTooltip
+		{
+			get
+			{
+				string strReturn = "";
+
+				foreach (Skill objSkill in _objCharacter.Skills)
+				{
+					if (objSkill.Name == "Spellcasting")
+					{
+						strReturn = objSkill.DisplayName + " (" + objSkill.TotalRating.ToString() + ")";
+						// Add any Specialization bonus if applicable.
+						if (objSkill.Specialization == _strCategory)
+							strReturn += " + " + LanguageManager.Instance.GetString("String_ExpenseSpecialization") + ": " + DisplayCategory + " (2)";
+					}
+				}
+
+				// Include any Improvements to the Spell Category.
+				ImprovementManager objImprovementManager = new ImprovementManager(_objCharacter);
+				if (objImprovementManager.ValueOf(Improvement.ImprovementType.SpellCategory, false, _strCategory) != 0)
+					strReturn += " + " + DisplayCategory + " (" + objImprovementManager.ValueOf(Improvement.ImprovementType.SpellCategory, false, _strCategory).ToString() + ")";
+
 				return strReturn;
 			}
 		}

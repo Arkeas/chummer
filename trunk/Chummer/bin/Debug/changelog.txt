@@ -1,5 +1,8 @@
 Build XXX
 - added an option to only download language updates for your chosen language instead of all languages
+- fixed an issue where Armor Mods that cost a percentage of the base Armor's cost may cause an error to be thrown when their final cost resulted in a decimal
+- Power Foci and Spellcasting Foci now have a precedence set so that only the highest active value of each is used (must select Special > Re-apply Improvements to fix existing Foci)
+- Skills now properly handled Skill Attribute precedence
 
 New Strings
 - Checkbox_Options_LocalisedUpdatesOnly

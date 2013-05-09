@@ -19028,28 +19028,8 @@ namespace Chummer
 				tipTooltip.SetToolTip(lblSpellSource, _objOptions.LanguageBookLong(objSpell.Source) + " " + LanguageManager.Instance.GetString("String_Page") + " " + objSpell.Page);
 
 				// Determine the size of the Spellcasting Dice Pool.
-				string strPoolTip = "";
-				int intDicePool = 0;
-				foreach (Skill objSkill in _objCharacter.Skills)
-				{
-					if (objSkill.Name == "Spellcasting")
-					{
-						intDicePool = objSkill.TotalRating;
-						strPoolTip = objSkill.DisplayName + " (" + objSkill.TotalRating.ToString() + ")";
-						// Add any Specialization bonus if applicable.
-						if (objSkill.Specialization == objSpell.Category)
-						{
-							intDicePool += 2;
-							strPoolTip += " + " + objSpell.Category + " (2)";
-						}
-					}
-				}
-				// Include any Improvements to the Spell Category.
-				if (_objImprovementManager.ValueOf(Improvement.ImprovementType.SpellCategory, false, objSpell.Category) != 0)
-					strPoolTip += " + " + objSpell.DisplayCategory + " (" + _objImprovementManager.ValueOf(Improvement.ImprovementType.SpellCategory, false, objSpell.Category).ToString() + ")";
-				intDicePool += _objImprovementManager.ValueOf(Improvement.ImprovementType.SpellCategory, false, objSpell.Category);
-				lblSpellDicePool.Text = intDicePool.ToString();
-				tipTooltip.SetToolTip(lblSpellDicePool, strPoolTip);
+				lblSpellDicePool.Text = objSpell.DicePool.ToString();
+				tipTooltip.SetToolTip(lblSpellDicePool, objSpell.DicePoolTooltip);
 
 				// Build the DV tooltip.
 				string strTip = "Base Drain for";

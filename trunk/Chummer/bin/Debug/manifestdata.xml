@@ -206,7 +206,7 @@
 	<file>
 		<name>data/gear.xml</name>
 		<type>Data Files</type>
-		<version>-823</version>
+		<version>-822</version>
 		<description>Gear</description>
 		<notes>- Gear data file</notes>
 	</file>

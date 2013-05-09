@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-823</version>
+	<version>-822</version>
 	<categories>
 		<category show="false">Altskin Function</category>
 		<category>Ammunition</category>
@@ -6700,7 +6700,7 @@
 			<cost>Rating * 25000</cost>
 			<bonus>
 				<skillattribute>
-					<name>MAG</name>
+					<name precedence="0">MAG</name>
 					<bonus>Rating</bonus>
 					<exclude>Counterspelling</exclude>
 				</skillattribute>
@@ -6716,7 +6716,7 @@
 			<cost>Rating * 15000</cost>
 			<bonus>
 				<spellcategory>
-					<name>Combat</name>
+					<name precedence="0">Combat</name>
 					<val>Rating</val>
 				</spellcategory>
 			</bonus>
@@ -6731,7 +6731,7 @@
 			<cost>Rating * 15000</cost>
 			<bonus>
 				<spellcategory>
-					<name>Detection</name>
+					<name precedence="0">Detection</name>
 					<val>Rating</val>
 				</spellcategory>
 			</bonus>
@@ -6746,7 +6746,7 @@
 			<cost>Rating * 15000</cost>
 			<bonus>
 				<spellcategory>
-					<name>Health</name>
+					<name precedence="0">Health</name>
 					<val>Rating</val>
 				</spellcategory>
 			</bonus>
@@ -6761,7 +6761,7 @@
 			<cost>Rating * 15000</cost>
 			<bonus>
 				<spellcategory>
-					<name>Illusion</name>
+					<name precedence="0">Illusion</name>
 					<val>Rating</val>
 				</spellcategory>
 			</bonus>
@@ -6776,7 +6776,7 @@
 			<cost>Rating * 15000</cost>
 			<bonus>
 				<spellcategory>
-					<name>Manipulation</name>
+					<name precedence="0">Manipulation</name>
 					<val>Rating</val>
 				</spellcategory>
 			</bonus>
