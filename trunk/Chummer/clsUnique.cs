@@ -3990,6 +3990,52 @@ namespace Chummer
 		}
 
 		/// <summary>
+		/// Drain Tooltip.
+		/// </summary>
+		public string DVTooltip
+		{
+			get
+			{
+				string strTip = LanguageManager.Instance.GetString("Tip_SpellDrainBase");
+				int intMAG = _objCharacter.MAG.TotalValue;
+
+				if (_objCharacter.AdeptEnabled && _objCharacter.MagicianEnabled)
+				{
+					if (_objCharacter.Options.SpiritForceBasedOnTotalMAG)
+						intMAG = _objCharacter.MAG.TotalValue;
+					else
+						intMAG = _objCharacter.MAGMagician;
+				}
+
+				XmlDocument objXmlDocument = new XmlDocument();
+				XPathNavigator nav = objXmlDocument.CreateNavigator();
+				XPathExpression xprDV;
+
+				try
+				{
+					for (int i = 1; i <= intMAG * 2; i++)
+					{
+						// Calculate the Spell's Drain for the current Force.
+						xprDV = nav.Compile(_strDV.Replace("F", i.ToString()).Replace("/", " div "));
+						decimal decDV = Convert.ToDecimal(nav.Evaluate(xprDV).ToString());
+						decDV = Math.Floor(decDV);
+						int intDV = Convert.ToInt32(decDV);
+						// Drain cannot be lower than 1.
+						if (intDV < 1)
+							intDV = 1;
+						strTip += "\n   " + LanguageManager.Instance.GetString("String_Force") + " " + i.ToString() + ": " + intDV.ToString();
+					}
+				}
+				catch
+				{
+					strTip = LanguageManager.Instance.GetString("Tip_SpellDrainSeeDescription");
+				}
+
+				return strTip;
+			}
+		}
+
+		/// <summary>
 		/// Spell's range.
 		/// </summary>
 		public string Range

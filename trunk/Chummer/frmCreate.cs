@@ -13663,48 +13663,17 @@ namespace Chummer
 				tipTooltip.SetToolTip(lblSpellDicePool, objSpell.DicePoolTooltip);
 
 				// Build the DV tooltip.
-				string strTip = LanguageManager.Instance.GetString("Tip_SpellDrainBase");
-				int intMAG = _objCharacter.MAG.TotalValue;
-
-				if (_objCharacter.AdeptEnabled && _objCharacter.MagicianEnabled)
-				{
-					if (_objOptions.SpiritForceBasedOnTotalMAG)
-						intMAG = _objCharacter.MAG.TotalValue;
-					else
-						intMAG = _objCharacter.MAGMagician;
-				}
-
-				XmlDocument objXmlDocument = new XmlDocument();
-				XPathNavigator nav = objXmlDocument.CreateNavigator();
-				XPathExpression xprDV;
-
-				try
-				{
-					for (int i = 1; i <= intMAG * 2; i++)
-					{
-						// Calculate the Spell's Drain for the current Force.
-						xprDV = nav.Compile(objSpell.DV.Replace("F", i.ToString()).Replace("/", " div "));
-						decimal decDV = Convert.ToDecimal(nav.Evaluate(xprDV).ToString());
-						decDV = Math.Floor(decDV);
-						int intDV = Convert.ToInt32(decDV);
-						// Drain cannot be lower than 1.
-						if (intDV < 1)
-							intDV = 1;
-						strTip += "\n   " + LanguageManager.Instance.GetString("String_Force") + " " + i.ToString() + ": " + intDV.ToString();
-					}
-				}
-				catch
-				{
-					strTip = LanguageManager.Instance.GetString("Tip_SpellDrainSeeDescription");
-				}
-				tipTooltip.SetToolTip(lblSpellDV, strTip);
+				tipTooltip.SetToolTip(lblSpellDV, objSpell.DVTooltip);
 
 				// Update the Drain Attribute Value.
 				if (_objCharacter.MAGEnabled && lblDrainAttributes.Text != "")
 				{
 					try
 					{
-						strTip = "";
+						string strTip = "";
+						XmlDocument objXmlDocument = new XmlDocument();
+						XPathNavigator nav = objXmlDocument.CreateNavigator();
+
 						objXmlDocument = new XmlDocument();
 						nav = objXmlDocument.CreateNavigator();
 						string strDrain = lblDrainAttributes.Text.Replace(LanguageManager.Instance.GetString("String_AttributeBODShort"), _objCharacter.BOD.TotalValue.ToString());

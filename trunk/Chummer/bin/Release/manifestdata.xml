@@ -3,7 +3,7 @@
 	<file>
 		<name>chummer.exe</name>
 		<type>Application</type>
-		<version>0.0.0.473</version>
+		<version>0.0.0.476</version>
 		<description>Chummer</description>
 		<notes>- Chummer Application</notes>
 	</file>
@@ -206,7 +206,7 @@
 	<file>
 		<name>data/gear.xml</name>
 		<type>Data Files</type>
-		<version>-823</version>
+		<version>-821</version>
 		<description>Gear</description>
 		<notes>- Gear data file</notes>
 	</file>
