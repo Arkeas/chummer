@@ -2530,6 +2530,19 @@ namespace Chummer
 						}
 					}
 					break;
+				case Improvement.ImprovementSource.MartialArtAdvantage:
+					foreach (MartialArt objMartialArt in _lstMartialArts)
+					{
+						foreach (MartialArtAdvantage objAdvantage in objMartialArt.Advantages)
+						{
+							if (objAdvantage.InternalId == objImprovement.SourceName)
+							{
+								strReturn = objAdvantage.DisplayNameShort;
+								break;
+							}
+						}
+					}
+					break;
 				default:
 					if (objImprovement.SourceName == "Ballistic Encumbrance")
 						strReturn = LanguageManager.Instance.GetString("String_BallisticEncumbrance");

@@ -7975,7 +7975,7 @@ namespace Chummer
 			Gear objFoundGear = new Gear(_objCharacter);
 			foreach (Gear objVehicleGear in objVehicle.Gear)
 			{
-				if (objVehicleGear.Name == objSelectedGear.Name && objVehicleGear.Category == objSelectedGear.Category && objVehicleGear.Rating == objSelectedGear.Rating && objVehicleGear.Extra == objSelectedGear.Extra)
+				if (objVehicleGear.Name == objSelectedGear.Name && objVehicleGear.Category == objSelectedGear.Category && objVehicleGear.Rating == objSelectedGear.Rating && objVehicleGear.Extra == objSelectedGear.Extra && objVehicleGear.GearName == objSelectedGear.GearName && objVehicleGear.Notes == objSelectedGear.Notes)
 				{
 					blnMatch = true;
 					objFoundGear = objVehicleGear;
@@ -8155,7 +8155,7 @@ namespace Chummer
 				Gear objFoundGear = new Gear(_objCharacter);
 				foreach (Gear objCharacterGear in _objCharacter.Gear)
 				{
-					if (objCharacterGear.Name == objSelectedGear.Name && objCharacterGear.Category == objSelectedGear.Category && objCharacterGear.Rating == objSelectedGear.Rating && objCharacterGear.Extra == objSelectedGear.Extra)
+					if (objCharacterGear.Name == objSelectedGear.Name && objCharacterGear.Category == objSelectedGear.Category && objCharacterGear.Rating == objSelectedGear.Rating && objCharacterGear.Extra == objSelectedGear.Extra && objCharacterGear.GearName == objSelectedGear.GearName && objCharacterGear.Notes == objSelectedGear.Notes)
 					{
 						blnMatch = true;
 						objFoundGear = objCharacterGear;
@@ -13871,16 +13871,16 @@ namespace Chummer
 							intNewPenalty = _objCharacter.EssencePenalty;
 
 							// Restore the character's MAG/RES if they have it.
-							if (!_objCharacter.OverrideSpecialAttributeEssenceLoss && !_objCharacter.OverrideSpecialAttributeEssenceLoss)
-							{
-								if (intOldPenalty != intNewPenalty)
-								{
-									if (_objCharacter.MAGEnabled)
-										_objCharacter.MAG.Value += (intOldPenalty - intNewPenalty);
-									if (_objCharacter.RESEnabled)
-										_objCharacter.RES.Value += (intOldPenalty - intNewPenalty);
-								}
-							}
+							//if (!_objCharacter.OverrideSpecialAttributeEssenceLoss && !_objCharacter.OverrideSpecialAttributeEssenceLoss)
+							//{
+							//    if (intOldPenalty != intNewPenalty)
+							//    {
+							//        if (_objCharacter.MAGEnabled)
+							//            _objCharacter.MAG.Value += (intOldPenalty - intNewPenalty);
+							//        if (_objCharacter.RESEnabled)
+							//            _objCharacter.RES.Value += (intOldPenalty - intNewPenalty);
+							//    }
+							//}
 
 							// Remove the item from the Tree.
 							foreach (TreeNode objNode in treCyberware.Nodes[0].Nodes)
@@ -21196,6 +21196,23 @@ namespace Chummer
 			// Also update the Maximum and Augmented Maximum values displayed.
 			_blnSkipUpdate = true;
 
+			int intEssenceLoss = 0;
+			if (!_objOptions.ESSLossReducesMaximumOnly && !_objCharacter.OverrideSpecialAttributeEssenceLoss)
+				intEssenceLoss = _objCharacter.EssencePenalty;
+			else
+			{
+				if (_objCharacter.MAGEnabled)
+				{
+					if (_objCharacter.MAG.Value > _objCharacter.MAG.TotalMaximum)
+						intEssenceLoss = _objCharacter.MAG.Value - _objCharacter.MAG.TotalMaximum;
+				}
+				else if (_objCharacter.RESEnabled)
+				{
+					if (_objCharacter.RES.Value > _objCharacter.RES.TotalMaximum)
+						intEssenceLoss = _objCharacter.RES.Value - _objCharacter.RES.TotalMaximum;
+				}
+			}
+
 			lblBOD.Text = _objCharacter.BOD.Value.ToString();
 			lblAGI.Text = _objCharacter.AGI.Value.ToString();
 			lblREA.Text = _objCharacter.REA.Value.ToString();
@@ -21205,8 +21222,8 @@ namespace Chummer
 			lblLOG.Text = _objCharacter.LOG.Value.ToString();
 			lblWIL.Text = _objCharacter.WIL.Value.ToString();
 			lblEDG.Text = _objCharacter.EDG.Value.ToString();
-			lblMAG.Text = _objCharacter.MAG.Value.ToString();
-			lblRES.Text = _objCharacter.RES.Value.ToString();
+			lblMAG.Text = (_objCharacter.MAG.Value - intEssenceLoss).ToString();
+			lblRES.Text = (_objCharacter.RES.Value - intEssenceLoss).ToString();
 
 			_blnSkipUpdate = false;
 
@@ -21261,6 +21278,49 @@ namespace Chummer
 				string strTip = "";
 				_blnSkipUpdate = true;
 
+				string strFormat;
+				if (_objCharacter.Options.EssenceDecimals == 4)
+					strFormat = "{0:0.0000}";
+				else
+					strFormat = "{0:0.00}";
+				decimal decESS = _objCharacter.Essence;
+				lblESSMax.Text = decESS.ToString();
+				tssEssence.Text = string.Format(strFormat, decESS);
+
+				lblCyberwareESS.Text = string.Format(strFormat, _objCharacter.CyberwareEssence);
+				lblBiowareESS.Text = string.Format(strFormat, _objCharacter.BiowareEssence);
+				lblEssenceHoleESS.Text = string.Format(strFormat, _objCharacter.EssenceHole);
+
+				// Reduce a character's MAG and RES from Essence Loss.
+				int intReduction = _objCharacter.ESS.MetatypeMaximum - Convert.ToInt32(Math.Floor(decESS));
+
+				// Remove any Improvements from MAG and RES from Essence Loss.
+				_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.EssenceLoss, "Essence Loss");
+
+				// Create the Essence Loss Improvements.
+				if (intReduction > 0)
+				{
+					_objImprovementManager.CreateImprovement("MAG", Improvement.ImprovementSource.EssenceLoss, "Essence Loss", Improvement.ImprovementType.Attribute, "", 0, 1, 0, intReduction * -1);
+					_objImprovementManager.CreateImprovement("RES", Improvement.ImprovementSource.EssenceLoss, "Essence Loss", Improvement.ImprovementType.Attribute, "", 0, 1, 0, intReduction * -1);
+				}
+
+				int intEssenceLoss = 0;
+				if (!_objOptions.ESSLossReducesMaximumOnly && !_objCharacter.OverrideSpecialAttributeEssenceLoss)
+					intEssenceLoss = _objCharacter.EssencePenalty;
+				else
+				{
+					if (_objCharacter.MAGEnabled)
+					{
+						if (_objCharacter.MAG.Value > _objCharacter.MAG.TotalMaximum)
+							intEssenceLoss = _objCharacter.MAG.Value - _objCharacter.MAG.TotalMaximum;
+					}
+					else if (_objCharacter.RESEnabled)
+					{
+						if (_objCharacter.RES.Value > _objCharacter.RES.TotalMaximum)
+							intEssenceLoss = _objCharacter.RES.Value - _objCharacter.RES.TotalMaximum;
+					}
+				}
+
 				// Update the Attribute information.
 				lblBOD.Text = _objCharacter.BOD.Value.ToString();
 				lblAGI.Text = _objCharacter.AGI.Value.ToString();
@@ -21271,8 +21331,8 @@ namespace Chummer
 				lblLOG.Text = _objCharacter.LOG.Value.ToString();
 				lblWIL.Text = _objCharacter.WIL.Value.ToString();
 				lblEDG.Text = _objCharacter.EDG.Value.ToString();
-				lblMAG.Text = _objCharacter.MAG.Value.ToString();
-				lblRES.Text = _objCharacter.RES.Value.ToString();
+				lblMAG.Text = (_objCharacter.MAG.Value - intEssenceLoss).ToString();
+				lblRES.Text = (_objCharacter.RES.Value - intEssenceLoss).ToString();
 
 				// If the character is an A.I., set the Edge MetatypeMaximum to their Rating.
 				if (_objCharacter.Metatype.EndsWith("A.I.") || _objCharacter.MetatypeCategory == "Technocritters" || _objCharacter.MetatypeCategory == "Protosapients")
@@ -21358,17 +21418,13 @@ namespace Chummer
 				cmdImproveEDG.Enabled = !(_objCharacter.EDG.Value == _objCharacter.EDG.TotalMaximum);
 
 				// Disable the Magic or Resonance Karma buttons if they have reached their current limits.
-				int intEssenceLoss = 0;
-				if (!_objOptions.ESSLossReducesMaximumOnly && !_objCharacter.OverrideSpecialAttributeEssenceLoss)
-					intEssenceLoss = _objCharacter.EssencePenalty;
-
 				if (_objCharacter.MAGEnabled)
-					cmdImproveMAG.Enabled = !(_objCharacter.MAG.Value - intEssenceLoss == _objCharacter.MAG.MetatypeMaximum + _objCharacter.InitiateGrade - _objCharacter.EssencePenalty);
+					cmdImproveMAG.Enabled = !(_objCharacter.MAG.Value - intEssenceLoss >= _objCharacter.MAG.MetatypeMaximum + _objCharacter.InitiateGrade - _objCharacter.EssencePenalty);
 				else
 					cmdImproveMAG.Enabled = false;
 
 				if (_objCharacter.RESEnabled)
-					cmdImproveRES.Enabled = !(_objCharacter.RES.Value - intEssenceLoss == _objCharacter.RES.MetatypeMaximum + _objCharacter.SubmersionGrade - _objCharacter.EssencePenalty);
+					cmdImproveRES.Enabled = !(_objCharacter.RES.Value - intEssenceLoss >= _objCharacter.RES.MetatypeMaximum + _objCharacter.SubmersionGrade - _objCharacter.EssencePenalty);
 				else
 					cmdImproveRES.Enabled = false;
 
@@ -21527,32 +21583,6 @@ namespace Chummer
 				{
 					_objImprovementManager.CreateImprovement("AGI", Improvement.ImprovementSource.ArmorEncumbrance, "Impact Encumbrance", Improvement.ImprovementType.Attribute, "", 0, 1, 0, 0, _objCharacter.ImpactArmorEncumbrance);
 					_objImprovementManager.CreateImprovement("REA", Improvement.ImprovementSource.ArmorEncumbrance, "Impact Encumbrance", Improvement.ImprovementType.Attribute, "", 0, 1, 0, 0, _objCharacter.ImpactArmorEncumbrance);
-				}
-
-				string strFormat;
-				if (_objCharacter.Options.EssenceDecimals == 4)
-					strFormat = "{0:0.0000}";
-				else
-					strFormat = "{0:0.00}";
-				decimal decESS = _objCharacter.Essence;
-				lblESSMax.Text = decESS.ToString();
-				tssEssence.Text = string.Format(strFormat, decESS);
-
-				lblCyberwareESS.Text = string.Format(strFormat, _objCharacter.CyberwareEssence);
-				lblBiowareESS.Text = string.Format(strFormat, _objCharacter.BiowareEssence);
-				lblEssenceHoleESS.Text = string.Format(strFormat, _objCharacter.EssenceHole);
-
-				// Reduce a character's MAG and RES from Essence Loss.
-				int intReduction = _objCharacter.ESS.MetatypeMaximum - Convert.ToInt32(Math.Floor(decESS));
-
-				// Remove any Improvements from MAG and RES from Essence Loss.
-				_objImprovementManager.RemoveImprovements(Improvement.ImprovementSource.EssenceLoss, "Essence Loss");
-
-				// Create the Essence Loss Improvements.
-				if (intReduction > 0)
-				{
-					_objImprovementManager.CreateImprovement("MAG", Improvement.ImprovementSource.EssenceLoss, "Essence Loss", Improvement.ImprovementType.Attribute, "", 0, 1, 0, intReduction * -1);
-					_objImprovementManager.CreateImprovement("RES", Improvement.ImprovementSource.EssenceLoss, "Essence Loss", Improvement.ImprovementType.Attribute, "", 0, 1, 0, intReduction * -1);
 				}
 
 				// Update the Attribute information.

@@ -1,3 +1,11 @@
+Build 478
+- Gear now retains its given name when moved between a character's Gear and Vehicle
+- when moving Gear between the character's Gear and Vehicles, items must also have matching custom/assigned names and notes in order to be considered a match and stack
+- fixed an issue where Martial Art Advantages would show their ID instead of their Name in tooltips
+- fixed an issue where purchasing a Spell Formula would cause the Select Spell window to throw an error
+- changed how Essence Loss is calculated when the Essence Loss Only Reduces MAG/RES Maximum house rule is turned on in Career Mode
+- changed when Essence Loss is calculated when updating displayed Attribute values in Career Mode
+
 Build 476
 - added an option to only download language updates for your chosen language instead of all languages
 - fixed an issue where Armor Mods that cost a percentage of the base Armor's cost may cause an error to be thrown when their final cost resulted in a decimal
