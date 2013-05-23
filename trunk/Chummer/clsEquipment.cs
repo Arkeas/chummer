@@ -10031,6 +10031,7 @@ namespace Chummer
 			_strLocation = objGear.Location;
 			_intChildAvailModifier = objGear.ChildAvailModifier;
 			_intChildCostMultiplier = objGear.ChildCostMultiplier;
+			_strGearName = objGear.GearName;
 
 			objNode.Text = DisplayName;
 			objNode.Tag = _guiID.ToString();

@@ -73,7 +73,7 @@ namespace Chummer
 
             // Populate the Spell list.
 			if (_strLimitCategory != "")
-				objXmlNodeList = _objXmlDocument.SelectNodes("/chummer/spells/spell[category = \"" + _strLimitCategory + "\"" + strAdditionalFilter + " and (" + _objCharacter.Options.BookXPath() + ")]");
+				objXmlNodeList = _objXmlDocument.SelectNodes("/chummer/spells/spell[category = \"" + _strLimitCategory + "\" and " + strAdditionalFilter + " and (" + _objCharacter.Options.BookXPath() + ")]");
 			else
 			{
 				if (strAdditionalFilter == string.Empty)
