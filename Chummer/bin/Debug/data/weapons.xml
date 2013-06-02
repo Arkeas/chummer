@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-847</version>
+	<version>-846</version>
 	<categories>
 		<category>Blades</category>
 		<category>Clubs</category>
@@ -14841,6 +14841,885 @@
 			<useskill>Exotic Melee Weapon</useskill>
 			<source>SR4</source>
 			<page>335</page>
+		</weapon>
+		<weapon>
+			<name>Missile: AIM-120 AMRAAM (Air-to-Air Missile System)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>16P (-4/m)</damage>
+			<ap>-2/-5</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>31</page>
+		</weapon>
+		<weapon>
+			<name>Missile: BGM-71 TOW</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>12P (-4/m)</damage>
+			<ap>-6</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>31</page>
+		</weapon>
+		<weapon>
+			<name>AGS-35</name>
+			<category>Grenade Launchers</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>Grenade</damage>
+			<ap>-</ap>
+			<mode>SA/BF</mode>
+			<rc>0</rc>
+			<ammo>30(c) or belt</ammo>
+			<conceal>6</conceal>
+			<avail>10F</avail>
+			<cost>9000</cost>
+			<allowaccessory>true</allowaccessory>
+			<accessorymounts>
+				<mount>Barrel</mount>
+				<mount>Top</mount>
+				<mount>Under</mount>
+			</accessorymounts>
+			<accessories>
+				<accessory>Tripod</accessory>
+			</accessories>
+			<mods>
+				<mod>Vintage</mod>
+			</mods>
+			<source>EWA</source>
+			<page>44</page>
+		</weapon>
+		<weapon>
+			<name>AN-94</name>
+			<category>Assault Rifles</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>6P</damage>
+			<ap>-1</ap>
+			<mode>SA</mode>
+			<rc>0</rc>
+			<ammo>30(c)</ammo>
+			<conceal>6</conceal>
+			<avail>6R</avail>
+			<cost>850</cost>
+			<allowaccessory>true</allowaccessory>
+			<accessorymounts>
+				<mount>Barrel</mount>
+				<mount>Top</mount>
+				<mount>Under</mount>
+			</accessorymounts>
+			<mods>
+				<mod>Bayonet Mount</mod>
+				<mod>Extreme Environment Mod Rating 1</mod>
+				<mod>Incompatible</mod>
+			</mods>
+			<source>EWA</source>
+			<page>45</page>
+		</weapon>
+		<weapon>
+			<name>Missile: R-73 (AA-11 Archer)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>15P (-3/m)</damage>
+			<ap>-2/-7</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>46</page>
+		</weapon>
+		<weapon>
+			<name>Missile: R-77 (AA-12 Adder)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>16P (-4/m)</damage>
+			<ap>-2/-6</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>46</page>
+		</weapon>
+		<weapon>
+			<name>Missile: Kornet (AT-14 Spriggan)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>14P (-4/m)</damage>
+			<ap>-6</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>47</page>
+		</weapon>
+		<weapon>
+			<name>Missile: Khrizantema (AT-15 Springer)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>16P (-4/m)</damage>
+			<ap>-7</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>47</page>
+		</weapon>
+		<weapon>
+			<name>Missile: Vikhr (AT-16 Scallion)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>20P (-4/m)</damage>
+			<ap>-7</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>48</page>
+		</weapon>
+		<weapon>
+			<name>Missile: Vikhr (AT-16 Scallion), Thermobaric</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>18P (-3/m)</damage>
+			<ap>-6/-2</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>48</page>
+		</weapon>
+		<weapon>
+			<name>Missile: Vikhr (AT-16 Scallion), Fragmentation</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>16P (-2/m)</damage>
+			<ap>-2</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>48</page>
+		</weapon>
+		<weapon>
+			<name>Missile: Reflexes (AT-16 Sniper)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>20P (-5/m)</damage>
+			<ap>-6</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>48</page>
+		</weapon>
+		<weapon>
+			<name>HK416</name>
+			<category>Assault Rifles</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>6P</damage>
+			<ap>-1</ap>
+			<mode>SA/BF/FA</mode>
+			<rc>2</rc>
+			<ammo>30(c)</ammo>
+			<conceal>6</conceal>
+			<avail>5R</avail>
+			<cost>850</cost>
+			<allowaccessory>true</allowaccessory>
+			<accessorymounts>
+				<mount>Barrel</mount>
+				<mount>Top</mount>
+				<mount>Under</mount>
+			</accessorymounts>
+			<mods>
+				<mod>Vintage</mod>
+			</mods>
+			<range>Submachine Guns</range>
+			<source>EWA</source>
+			<page>58</page>
+		</weapon>
+		<weapon>
+			<name>Missile: IRIS-T (Air-to-Air Missile)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>16P (-4/m)</damage>
+			<ap>-2/-6</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>59</page>
+		</weapon>
+		<weapon>
+			<name>Missile: Meteor (Air-to-Air Missile)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>17P (-5/m)</damage>
+			<ap>-2/-6</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>59</page>
+		</weapon>
+		<weapon>
+			<name>Cruise Missile: Taurus KEPD 400 (Cruise Missile)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>20P (-5/m)</damage>
+			<ap>-4</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>60</page>
+		</weapon>
+		<weapon>
+			<name>Missile: AGM-65 Maverick (Air-to-Air Missile)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>18P (-3/m)</damage>
+			<ap>-7</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>60</page>
+		</weapon>
+		<weapon>
+			<name>AK-74</name>
+			<category>Assault Rifles</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>6P</damage>
+			<ap>-1</ap>
+			<mode>SA/BF/FA</mode>
+			<rc>0</rc>
+			<ammo>30(c)</ammo>
+			<conceal>6</conceal>
+			<avail>5R</avail>
+			<cost>650</cost>
+			<allowaccessory>true</allowaccessory>
+			<accessorymounts>
+				<mount>Barrel</mount>
+				<mount>Top</mount>
+				<mount>Under</mount>
+			</accessorymounts>
+			<mods>
+				<mod>Bayonet Mount</mod>
+				<mod>Vintage</mod>
+			</mods>
+			<source>EWA</source>
+			<page>68</page>
+		</weapon>
+		<weapon>
+			<name>RPK-74</name>
+			<category>Assault Rifles</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>6P</damage>
+			<ap>-1</ap>
+			<mode>SA/BF/FA</mode>
+			<rc>0</rc>
+			<ammo>30(c) or 45(c)</ammo>
+			<conceal>6</conceal>
+			<avail>7F</avail>
+			<cost>850</cost>
+			<allowaccessory>true</allowaccessory>
+			<accessorymounts>
+				<mount>Barrel</mount>
+				<mount>Top</mount>
+				<mount>Under</mount>
+			</accessorymounts>
+			<accessories>
+				<accessory>Bipod</accessory>
+			</accessories>
+			<mods>
+				<mod>Vintage</mod>
+			</mods>
+			<source>EWA</source>
+			<page>69</page>
+		</weapon>
+		<weapon>
+			<name>G-3</name>
+			<category>Battle Rifles</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>7P</damage>
+			<ap>-1</ap>
+			<mode>SA/BF</mode>
+			<rc>1</rc>
+			<ammo>20(c)</ammo>
+			<conceal>6</conceal>
+			<avail>7R</avail>
+			<cost>900</cost>
+			<allowaccessory>true</allowaccessory>
+			<accessorymounts>
+				<mount>Barrel</mount>
+				<mount>Top</mount>
+				<mount>Under</mount>
+			</accessorymounts>
+			<mods>
+				<mod>Vintage</mod>
+			</mods>
+			<source>EWA</source>
+			<page>70</page>
+		</weapon>
+		<weapon>
+			<name>Missile: R-60 (AA-8 Aphid)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>13P (-4/m)</damage>
+			<ap>-2/-6</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>71</page>
+		</weapon>
+		<weapon>
+			<name>Missile: Hellfire (Anti-Tank Missile)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>14P (-2/m)</damage>
+			<ap>-7</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>71</page>
+		</weapon>
+		<weapon>
+			<name>Missile: GBU-39 (Glide Bomb)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>20P (-4/m)</damage>
+			<ap>-6</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>72</page>
+		</weapon>
+		<weapon>
+			<name>Missile: AGM-154 JSOW (Glide Bomb)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>25P (-2/m)</damage>
+			<ap>-4</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>72</page>
+		</weapon>
+		<weapon>
+			<name>FAMAS</name>
+			<category>Assault Rifles</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>6P</damage>
+			<ap>-1</ap>
+			<mode>SA/BF/FA</mode>
+			<rc>0</rc>
+			<ammo>30(c)</ammo>
+			<conceal>6</conceal>
+			<avail>6R</avail>
+			<cost>800</cost>
+			<allowaccessory>true</allowaccessory>
+			<accessorymounts>
+				<mount>Barrel</mount>
+				<mount>Top</mount>
+				<mount>Under</mount>
+			</accessorymounts>
+			<mods>
+				<mod>Bayonet Mount</mod>
+				<mod>Vintage</mod>
+			</mods>
+			<source>EWA</source>
+			<page>88</page>
+		</weapon>
+		<weapon>
+			<name>Missile: ASRAAM (Air-to-Air Missile)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>15P (-5/m)</damage>
+			<ap>-2/-6</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>89</page>
+		</weapon>
+		<weapon>
+			<name>Missile: Scorpion (Surface-to-Air Missile)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>10P (-5/m)</damage>
+			<ap>-2</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>89</page>
+		</weapon>
+		<weapon>
+			<name>Missile: Brimstone (Air-to-Surface Missile)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>18P (-4/m)</damage>
+			<ap>-7</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>90</page>
+		</weapon>
+		<weapon>
+			<name>Missile: Magic IV (Air-to-Air Missile)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>14P (-4/m)</damage>
+			<ap>-2/-6</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>90</page>
+		</weapon>
+		<weapon>
+			<name>Missile: Aster 18 (Surface-to-Air Missile)</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>16P (-4/m)</damage>
+			<ap>-4</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>91</page>
+		</weapon>
+		<weapon>
+			<name>Cruise Missile: Storm Shadow</name>
+			<category>Gear</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>20P (-2/m)</damage>
+			<ap>-5</ap>
+			<mode>0</mode>
+			<rc>0</rc>
+			<ammo>0</ammo>
+			<conceal>10</conceal>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowaccessory>false</allowaccessory>
+			<source>EWA</source>
+			<page>91</page>
+		</weapon>
+		<weapon>
+			<name>120mm</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>16P</damage>
+			<ap>-6</ap>
+			<mode>SS</mode>
+			<rc>0</rc>
+			<ammo>1(m)</ammo>
+			<requireammo>false</requireammo>
+			<conceal>10</conceal>
+			<avail>22F</avail>
+			<cost>33500</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Assault Cannons</range>
+			<source>EWA</source>
+			<page>92</page>
+		</weapon>
+		<weapon>
+			<name>125mm</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>16P</damage>
+			<ap>-5</ap>
+			<mode>SS</mode>
+			<rc>0</rc>
+			<ammo>1(m)</ammo>
+			<requireammo>false</requireammo>
+			<conceal>10</conceal>
+			<avail>22F</avail>
+			<cost>31500</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Assault Cannons</range>
+			<source>EWA</source>
+			<page>92</page>
+		</weapon>
+		<weapon>
+			<name>105mm</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>14P</damage>
+			<ap>-5</ap>
+			<mode>SS</mode>
+			<rc>0</rc>
+			<ammo>1(m)</ammo>
+			<requireammo>false</requireammo>
+			<conceal>10</conceal>
+			<avail>21F</avail>
+			<cost>27000</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Assault Cannons</range>
+			<source>EWA</source>
+			<page>92</page>
+		</weapon>
+		<weapon>
+			<name>100mm</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>11P</damage>
+			<ap>-3</ap>
+			<mode>SS</mode>
+			<rc>0</rc>
+			<ammo>1(m)</ammo>
+			<requireammo>false</requireammo>
+			<conceal>10</conceal>
+			<avail>20F</avail>
+			<cost>20000</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Assault Cannons</range>
+			<source>EWA</source>
+			<page>92</page>
+		</weapon>
+		<weapon>
+			<name>35mm Auto Cannon</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>9P</damage>
+			<ap>-2</ap>
+			<mode>FA</mode>
+			<rc>0</rc>
+			<ammo>belt</ammo>
+			<requireammo>false</requireammo>
+			<conceal>10</conceal>
+			<avail>17F</avail>
+			<cost>28000</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Assault Cannons</range>
+			<source>EWA</source>
+			<page>92</page>
+		</weapon>
+		<weapon>
+			<name>30mm Auto Cannon</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>8P</damage>
+			<ap>-4</ap>
+			<mode>FA</mode>
+			<rc>0</rc>
+			<ammo>belt</ammo>
+			<requireammo>false</requireammo>
+			<conceal>10</conceal>
+			<avail>15F</avail>
+			<cost>5600</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Assault Cannons</range>
+			<source>EWA</source>
+			<page>92</page>
+		</weapon>
+		<weapon>
+			<name>25mm Rotary Cannon</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>9P</damage>
+			<ap>-4</ap>
+			<mode>FA</mode>
+			<rc>0</rc>
+			<ammo>belt</ammo>
+			<requireammo>false</requireammo>
+			<conceal>10</conceal>
+			<avail>16F</avail>
+			<cost>11250</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Assault Cannons</range>
+			<source>EWA</source>
+			<page>92</page>
+		</weapon>
+		<weapon>
+			<name>20mm Gatling Cannon</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>8P</damage>
+			<ap>-3</ap>
+			<mode>FA</mode>
+			<rc>0</rc>
+			<ammo>belt</ammo>
+			<requireammo>false</requireammo>
+			<conceal>10</conceal>
+			<avail>16F</avail>
+			<cost>7800</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Assault Cannons</range>
+			<source>EWA</source>
+			<page>92</page>
+		</weapon>
+		<weapon>
+			<name>M-2HB</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>7P</damage>
+			<ap>-3</ap>
+			<mode>FA</mode>
+			<rc>0</rc>
+			<ammo>belt</ammo>
+			<requireammo>false</requireammo>
+			<conceal>10</conceal>
+			<avail>15F</avail>
+			<cost>7500</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Heavy Machine Guns</range>
+			<source>EWA</source>
+			<page>92</page>
+		</weapon>
+		<weapon>
+			<name>Kort</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>7P</damage>
+			<ap>-3</ap>
+			<mode>FA</mode>
+			<rc>0</rc>
+			<ammo>belt</ammo>
+			<requireammo>false</requireammo>
+			<conceal>10</conceal>
+			<avail>15F</avail>
+			<cost>7150</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Heavy Machine Guns</range>
+			<source>EWA</source>
+			<page>92</page>
+		</weapon>
+		<weapon>
+			<name>M-240</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>6P</damage>
+			<ap>-2</ap>
+			<mode>FA</mode>
+			<rc>0</rc>
+			<ammo>belt</ammo>
+			<requireammo>false</requireammo>
+			<conceal>10</conceal>
+			<avail>14F</avail>
+			<cost>5500</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Medium Machine Guns</range>
+			<source>EWA</source>
+			<page>92</page>
+		</weapon>
+		<weapon>
+			<name>PKT</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>6P</damage>
+			<ap>-2</ap>
+			<mode>FA</mode>
+			<rc>0</rc>
+			<ammo>belt</ammo>
+			<requireammo>false</requireammo>
+			<conceal>10</conceal>
+			<avail>13F</avail>
+			<cost>5100</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Medium Machine Guns</range>
+			<source>EWA</source>
+			<page>92</page>
+		</weapon>
+		<weapon>
+			<name>MG3A1</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>6P</damage>
+			<ap>-2</ap>
+			<mode>FA</mode>
+			<rc>0</rc>
+			<ammo>belt</ammo>
+			<requireammo>false</requireammo>
+			<conceal>10</conceal>
+			<avail>14F</avail>
+			<cost>7150</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Medium Machine Guns</range>
+			<source>EWA</source>
+			<page>92</page>
+		</weapon>
+		<weapon>
+			<name>MG4</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>6P</damage>
+			<ap>-1</ap>
+			<mode>FA</mode>
+			<rc>0</rc>
+			<ammo>belt</ammo>
+			<requireammo>false</requireammo>
+			<conceal>10</conceal>
+			<avail>12F</avail>
+			<cost>4500</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Medium Machine Guns</range>
+			<source>EWA</source>
+			<page>92</page>
+		</weapon>
+		<weapon>
+			<name>M-73</name>
+			<category>Vehicle Weapons</category>
+			<type>Ranged</type>
+			<reach>0</reach>
+			<damage>6P</damage>
+			<ap>-2</ap>
+			<mode>FA</mode>
+			<rc>0</rc>
+			<ammo>belt</ammo>
+			<requireammo>false</requireammo>
+			<conceal>10</conceal>
+			<avail>14F</avail>
+			<cost>6250</cost>
+			<allowaccessory>true</allowaccessory>
+			<range>Medium Machine Guns</range>
+			<source>EWA</source>
+			<page>92</page>
 		</weapon>
 	</weapons>
 	<accessories>

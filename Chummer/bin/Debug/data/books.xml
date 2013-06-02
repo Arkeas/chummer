@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-907</version>
+	<version>-906</version>
 	<books>
 		<book>
 			<name>Arsenal</name>
@@ -41,6 +41,10 @@
 		<book>
 			<name>Digital Grimoire</name>
 			<code>DG</code>
+		</book>
+		<book>
+			<name>Euro War Antiques</name>
+			<code>EWA</code>
 		</book>
 		<book>
 			<name>Ghost Cartels</name>

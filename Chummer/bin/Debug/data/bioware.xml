@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-906</version>
+	<version>-905</version>
 	<grades>
 		<grade>
 			<name>Standard</name>
@@ -217,7 +217,7 @@
 			<page>62</page>
 		</bioware>
 		<bioware>
-			<name>Chloroplash Skin</name>
+			<name>Chloroplast Skin</name>
 			<category>Cosmetic</category>
 			<ess>0.1</ess>
 			<capacity>0</capacity>
