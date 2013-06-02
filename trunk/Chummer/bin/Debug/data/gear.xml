@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-819</version>
+	<version>-817</version>
 	<categories>
 		<category show="false">Altskin Function</category>
 		<category>Ammunition</category>
@@ -74,6 +74,7 @@
 		<category>Nanofax Products</category>
 		<category>Odds and Ends</category>
 		<category>PAB Units</category>
+		<category>Paints</category>
 		<category>Parachutes</category>
 		<category>Peripherals</category>
 		<category>Pharmaceuticals</category>
@@ -84,6 +85,7 @@
 		<category>Pre-Packaged Nexi</category>
 		<category show="false">Program Options</category>
 		<category>Program Packages</category>
+		<category>Reagents</category>
 		<category>Reality Amplifiers</category>
 		<category>RFID Tags</category>
 		<category>Security Devices</category>
@@ -3079,7 +3081,7 @@
 		</gear>
 		<gear>
 			<name>Bloodhound Drone Olfactory</name>
-			<category>Sensors</category>
+			<category>Sensor Functions</category>
 			<rating>6</rating>
 			<capacity>[3]</capacity>
 			<avail>5</avail>
@@ -3089,7 +3091,7 @@
 		</gear>
 		<gear>
 			<name>MSOS Mk I</name>
-			<category>Sensors</category>
+			<category>Sensor Functions</category>
 			<rating>0</rating>
 			<capacity>[0]</capacity>
 			<avail>8</avail>
@@ -15518,6 +15520,1206 @@
 			<cost>Variable(2500+)</cost>
 			<source>SDN</source>
 			<page>17</page>
+		</gear>
+		<gear>
+			<name>Angel's Vitae (Healing Potion)</name>
+			<category>Magical Compounds</category>
+			<rating>0</rating>
+			<avail>12</avail>
+			<cost>5000</cost>
+			<source>PB</source>
+			<page>48</page>
+		</gear>
+		<gear>
+			<name>Bad Dog No Biscuit (BNDB) Solution</name>
+			<category>Magical Compounds</category>
+			<rating>0</rating>
+			<avail>14R</avail>
+			<cost>3000</cost>
+			<source>PB</source>
+			<page>48</page>
+		</gear>
+		<gear>
+			<name>Broken Fang (Potion)</name>
+			<category>Magical Compounds</category>
+			<rating>0</rating>
+			<avail>12</avail>
+			<cost>4000</cost>
+			<source>PB</source>
+			<page>49</page>
+		</gear>
+		<gear>
+			<name>Kuman-nhepa</name>
+			<category>Magical Compounds</category>
+			<rating>0</rating>
+			<avail>16R</avail>
+			<cost>12500</cost>
+			<source>PB</source>
+			<page>49</page>
+		</gear>
+		<gear>
+			<name>Lot's Curse</name>
+			<category>Magical Compounds</category>
+			<rating>0</rating>
+			<avail>14F</avail>
+			<cost>15000</cost>
+			<source>PB</source>
+			<page>49</page>
+		</gear>
+		<gear>
+			<name>Panacean Dressing</name>
+			<category>Magical Compounds</category>
+			<rating>0</rating>
+			<avail>12</avail>
+			<cost>4000</cost>
+			<source>PB</source>
+			<page>49</page>
+		</gear>
+		<gear>
+			<name>Doppelgänger Juice</name>
+			<category>Magical Compounds</category>
+			<rating>0</rating>
+			<avail>12R</avail>
+			<cost>16500</cost>
+			<source>PB</source>
+			<page>49</page>
+		</gear>
+		<gear>
+			<name>War</name>
+			<category>Magical Compounds</category>
+			<rating>0</rating>
+			<avail>10R</avail>
+			<cost>8000</cost>
+			<source>PB</source>
+			<page>49</page>
+		</gear>
+		<gear>
+			<name>Water Breathing</name>
+			<category>Magical Compounds</category>
+			<rating>0</rating>
+			<avail>12</avail>
+			<cost>7000</cost>
+			<source>PB</source>
+			<page>49</page>
+		</gear>
+		<gear>
+			<name>Cat's Haste</name>
+			<category>Paints</category>
+			<rating>0</rating>
+			<avail>12R</avail>
+			<cost>20000</cost>
+			<source>PB</source>
+			<page>50</page>
+		</gear>
+		<gear>
+			<name>Hawk Eye</name>
+			<category>Paints</category>
+			<rating>0</rating>
+			<avail>12</avail>
+			<cost>15000</cost>
+			<source>PB</source>
+			<page>50</page>
+		</gear>
+		<gear>
+			<name>Mana Grounding</name>
+			<category>Paints</category>
+			<rating>0</rating>
+			<avail>14</avail>
+			<cost>24000</cost>
+			<source>PB</source>
+			<page>50</page>
+		</gear>
+		<gear>
+			<name>Soul Strike</name>
+			<category>Paints</category>
+			<rating>0</rating>
+			<avail>16R</avail>
+			<cost>30000</cost>
+			<source>PB</source>
+			<page>50</page>
+		</gear>
+		<gear>
+			<name>Shrouding Shadow</name>
+			<category>Paints</category>
+			<rating>0</rating>
+			<avail>14R</avail>
+			<cost>25000</cost>
+			<source>PB</source>
+			<page>50</page>
+		</gear>
+		<gear>
+			<name>Steel Spine</name>
+			<category>Paints</category>
+			<rating>0</rating>
+			<avail>12R</avail>
+			<cost>18000</cost>
+			<source>PB</source>
+			<page>50</page>
+		</gear>
+		<gear>
+			<name>Wingman</name>
+			<category>Paints</category>
+			<rating>0</rating>
+			<avail>14F</avail>
+			<cost>27000</cost>
+			<source>PB</source>
+			<page>50</page>
+		</gear>
+		<gear>
+			<name>Molu Root</name>
+			<category>Awakened Drugs</category>
+			<rating>0</rating>
+			<avail>12R</avail>
+			<cost>22000</cost>
+			<source>PB</source>
+			<page>50</page>
+		</gear>
+		<gear>
+			<name>Mana Inhibiting Oil</name>
+			<category>Awakened Drugs</category>
+			<rating>0</rating>
+			<avail>16F</avail>
+			<cost>50000</cost>
+			<source>PB</source>
+			<page>50</page>
+		</gear>
+		<gear>
+			<name>Missile: AIM-120 AMRAAM (Air-to-Air Missile System)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>24F</avail>
+			<addweapon>Missile: AIM-120 AMRAAM (Air-to-Air Missile System)</addweapon>
+			<costfor>1</costfor>
+			<cost>11000</cost>
+			<source>EWA</source>
+			<page>31</page>
+		</gear>
+		<gear>
+			<name>Missile: BGM-71 TOW</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>18F</avail>
+			<addweapon>Missile: BGM-71 TOW</addweapon>
+			<costfor>1</costfor>
+			<cost>6000</cost>
+			<source>EWA</source>
+			<page>31</page>
+		</gear>
+		<gear>
+			<name>Missile: R-73 (AA-11 Archer)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>23F</avail>
+			<addweapon>Missile: R-73 (AA-11 Archer)</addweapon>
+			<costfor>1</costfor>
+			<cost>9000</cost>
+			<source>EWA</source>
+			<page>46</page>
+		</gear>
+		<gear>
+			<name>Missile: R-77 (AA-12 Adder)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>24F</avail>
+			<addweapon>Missile: R-77 (AA-12 Adder)</addweapon>
+			<costfor>1</costfor>
+			<cost>9700</cost>
+			<source>EWA</source>
+			<page>46</page>
+		</gear>
+		<gear>
+			<name>Missile: Kornet (AT-14 Spriggan)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>19F</avail>
+			<addweapon>Missile: Kornet (AT-14 Spriggan)</addweapon>
+			<costfor>1</costfor>
+			<cost>6500</cost>
+			<source>EWA</source>
+			<page>47</page>
+		</gear>
+		<gear>
+			<name>Missile: Khrizantema (AT-15 Springer)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>20F</avail>
+			<addweapon>Missile: Khrizantema (AT-15 Springer)</addweapon>
+			<costfor>1</costfor>
+			<cost>8000</cost>
+			<source>EWA</source>
+			<page>47</page>
+		</gear>
+		<gear>
+			<name>Missile: Vikhr (AT-16 Scallion)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>20F</avail>
+			<addweapon>Missile: Vikhr (AT-16 Scallion)</addweapon>
+			<costfor>1</costfor>
+			<cost>8400</cost>
+			<source>EWA</source>
+			<page>48</page>
+		</gear>
+		<gear>
+			<name>Missile: Vikhr (AT-16 Scallion), Thermobaric</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>22F</avail>
+			<addweapon>Missile: Vikhr (AT-16 Scallion), Thermobaric</addweapon>
+			<costfor>1</costfor>
+			<cost>8900</cost>
+			<source>EWA</source>
+			<page>48</page>
+		</gear>
+		<gear>
+			<name>Missile: Vikhr (AT-16 Scallion), Fragmentation</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>19F</avail>
+			<addweapon>Missile: Vikhr (AT-16 Scallion), Fragmentation</addweapon>
+			<costfor>1</costfor>
+			<cost>8000</cost>
+			<source>EWA</source>
+			<page>48</page>
+		</gear>
+		<gear>
+			<name>Missile: Reflexes (AT-16 Sniper)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>19F</avail>
+			<addweapon>Missile: Reflexes (AT-16 Sniper)</addweapon>
+			<costfor>1</costfor>
+			<cost>2400</cost>
+			<source>EWA</source>
+			<page>48</page>
+		</gear>
+		<gear>
+			<name>Missile: IRIS-T (Air-to-Air Missile)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>23F</avail>
+			<addweapon>Missile: IRIS-T (Air-to-Air Missile)</addweapon>
+			<costfor>1</costfor>
+			<cost>6000</cost>
+			<source>EWA</source>
+			<page>59</page>
+		</gear>
+		<gear>
+			<name>Missile: Meteor (Air-to-Air Missile)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>24F</avail>
+			<addweapon>Missile: Meteor (Air-to-Air Missile)</addweapon>
+			<costfor>1</costfor>
+			<cost>8000</cost>
+			<source>EWA</source>
+			<page>59</page>
+		</gear>
+		<gear>
+			<name>Cruise Missile: Taurus KEPD 400 (Cruise Missile)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>36F</avail>
+			<addweapon>Cruise Missile: Taurus KEPD 400 (Cruise Missile)</addweapon>
+			<costfor>1</costfor>
+			<cost>430000</cost>
+			<source>EWA</source>
+			<page>60</page>
+		</gear>
+		<gear>
+			<name>Missile: AGM-65 Maverick (Air-to-Air Missile)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>25F</avail>
+			<addweapon>Missile: AGM-65 Maverick (Air-to-Air Missile)</addweapon>
+			<costfor>1</costfor>
+			<cost>9000</cost>
+			<source>EWA</source>
+			<page>60</page>
+		</gear>
+		<gear>
+			<name>Missile: R-60 (AA-8 Aphid)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>15F</avail>
+			<addweapon>Missile: R-60 (AA-8 Aphid)</addweapon>
+			<costfor>1</costfor>
+			<cost>11000</cost>
+			<source>EWA</source>
+			<page>71</page>
+		</gear>
+		<gear>
+			<name>Missile: Hellfire (Anti-Tank Missile)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>17F</avail>
+			<addweapon>Missile: Hellfire (Anti-Tank Missile)</addweapon>
+			<costfor>1</costfor>
+			<cost>6500</cost>
+			<source>EWA</source>
+			<page>71</page>
+		</gear>
+		<gear>
+			<name>Missile: GBU-39 (Glide Bomb)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>16F</avail>
+			<addweapon>Missile: GBU-39 (Glide Bomb)</addweapon>
+			<costfor>1</costfor>
+			<cost>2500</cost>
+			<source>EWA</source>
+			<page>72</page>
+		</gear>
+		<gear>
+			<name>Missile: AGM-154 JSOW (Glide Bomb)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>26F</avail>
+			<addweapon>Missile: AGM-154 JSOW (Glide Bomb)</addweapon>
+			<costfor>1</costfor>
+			<cost>181000</cost>
+			<source>EWA</source>
+			<page>72</page>
+		</gear>
+		<gear>
+			<name>Missile: ASRAAM (Air-to-Air Missile)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>22F</avail>
+			<addweapon>Missile: ASRAAM (Air-to-Air Missile)</addweapon>
+			<costfor>1</costfor>
+			<cost>8000</cost>
+			<source>EWA</source>
+			<page>89</page>
+		</gear>
+		<gear>
+			<name>Missile: Scorpion (Surface-to-Air Missile)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>22F</avail>
+			<addweapon>Missile: Scorpion (Surface-to-Air Missile)</addweapon>
+			<costfor>1</costfor>
+			<cost>2100</cost>
+			<source>EWA</source>
+			<page>89</page>
+		</gear>
+		<gear>
+			<name>Missile: Brimstone (Air-to-Surface Missile)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>27F</avail>
+			<addweapon>Missile: Brimstone (Air-to-Surface Missile)</addweapon>
+			<costfor>1</costfor>
+			<cost>11500</cost>
+			<source>EWA</source>
+			<page>90</page>
+		</gear>
+		<gear>
+			<name>Missile: Magic IV (Air-to-Air Missile)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>15F</avail>
+			<addweapon>Missile: Magic IV (Air-to-Air Missile)</addweapon>
+			<costfor>1</costfor>
+			<cost>17500</cost>
+			<source>EWA</source>
+			<page>90</page>
+		</gear>
+		<gear>
+			<name>Missile: Aster 18 (Surface-to-Air Missile)</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>32F</avail>
+			<addweapon>Missile: Aster 18 (Surface-to-Air Missile)</addweapon>
+			<costfor>1</costfor>
+			<cost>14200</cost>
+			<source>EWA</source>
+			<page>91</page>
+		</gear>
+		<gear>
+			<name>Cruise Missile: Storm Shadow</name>
+			<category>Ammunition</category>
+			<addoncategory>Missile &amp; Rocket Heads</addoncategory>
+			<rating>0</rating>
+			<avail>34F</avail>
+			<addweapon>Cruise Missile: Storm Shadow</addweapon>
+			<costfor>1</costfor>
+			<cost>400000</cost>
+			<source>EWA</source>
+			<page>91</page>
+		</gear>
+		<gear>
+			<name>Animal Blood, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>50</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Blood, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>100</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Blood, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Fur, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>50</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Fur, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>100</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Fur, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Scales, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>50</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Scales, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>100</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Scales, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Skin, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>50</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Skin, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>100</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Skin, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Silk, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>75</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Silk, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>150</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Silk, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>300</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Intact Pelt, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>100</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Intact Pelt, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Intact Pelt, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>400</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Ivory, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>300</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Ivory, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>600</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Ivory, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>1200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Venom, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>600</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Venom, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>1200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Animal Venom, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>2400</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Sap, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>50</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Sap, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>100</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Sap, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Petals, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>50</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Petals, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>100</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Petals, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Leaves, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>50</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Leaves, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>100</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Leavs, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Bark, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>50</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Bark, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>100</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Bark, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Cotton, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>75</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Cotton, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>150</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Cotton, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>300</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Fruit, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>100</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Fruit, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Fruit, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>400</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Rare Hardwood, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>600</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Rare Hardwood, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>1200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Herbal Rare Hardwood, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>2400</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Metal Iron, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>50</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Metal Iron, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>100</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Metal Iron, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Metal Copper, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>100</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Metal Copper, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Metal Copper, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>400</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Metal Silver, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>300</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Metal Silver, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>600</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Metal Silver, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>1200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Metal Mercury, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>600</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Metal Mercury, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>1200</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Metal Mercury, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>2400</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Metal Gold, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>10000</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Metal Gold, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>20000</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Metal Gold, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>40000</cost>
+			<source>SM</source>
+			<page>185</page>
+		</gear>
+		<gear>
+			<name>Mineral Crystal, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>50</cost>
+			<source>SM</source>
+			<page>186</page>
+		</gear>
+		<gear>
+			<name>Mineral Crystal, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>100</cost>
+			<source>SM</source>
+			<page>186</page>
+		</gear>
+		<gear>
+			<name>Mineral Crystal, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>200</cost>
+			<source>SM</source>
+			<page>186</page>
+		</gear>
+		<gear>
+			<name>Mineral Fossil, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>75</cost>
+			<source>SM</source>
+			<page>186</page>
+		</gear>
+		<gear>
+			<name>Mineral Fossil, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>150</cost>
+			<source>SM</source>
+			<page>186</page>
+		</gear>
+		<gear>
+			<name>Mineral Fossil, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>300</cost>
+			<source>SM</source>
+			<page>186</page>
+		</gear>
+		<gear>
+			<name>Mineral Obsidian, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>100</cost>
+			<source>SM</source>
+			<page>186</page>
+		</gear>
+		<gear>
+			<name>Mineral Obsidian, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>200</cost>
+			<source>SM</source>
+			<page>186</page>
+		</gear>
+		<gear>
+			<name>Mineral Obsidian, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>400</cost>
+			<source>SM</source>
+			<page>186</page>
+		</gear>
+		<gear>
+			<name>Mineral Semi-Precious Gem, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>200</cost>
+			<source>SM</source>
+			<page>186</page>
+		</gear>
+		<gear>
+			<name>Mineral Semi-Precious Gem, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>400</cost>
+			<source>SM</source>
+			<page>186</page>
+		</gear>
+		<gear>
+			<name>Mineral Semi-Precious Gem, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>800</cost>
+			<source>SM</source>
+			<page>186</page>
+		</gear>
+		<gear>
+			<name>Mineral Precious Gem, Raw</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>4</avail>
+			<costfor>1</costfor>
+			<cost>500</cost>
+			<source>SM</source>
+			<page>186</page>
+		</gear>
+		<gear>
+			<name>Mineral Precious Gem, Refined</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>6</avail>
+			<costfor>1</costfor>
+			<cost>1000</cost>
+			<source>SM</source>
+			<page>186</page>
+		</gear>
+		<gear>
+			<name>Mineral Precious Gem, Radical</name>
+			<category>Reagents</category>
+			<rating>0</rating>
+			<avail>8</avail>
+			<costfor>1</costfor>
+			<cost>2000</cost>
+			<source>SM</source>
+			<page>186</page>
 		</gear>
 	</gears>
 </chummer>

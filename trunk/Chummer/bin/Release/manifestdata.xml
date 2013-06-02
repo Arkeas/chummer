@@ -164,14 +164,14 @@
 	<file>
 		<name>data/bioware.xml</name>
 		<type>Data Files</type>
-		<version>-906</version>
+		<version>-905</version>
 		<description>Bioware</description>
 		<notes>- Bioware data file</notes>
 	</file>
 	<file>
 		<name>data/books.xml</name>
 		<type>Data Files</type>
-		<version>-907</version>
+		<version>-906</version>
 		<description>Books</description>
 		<notes>- Books data file</notes>
 	</file>
@@ -206,7 +206,7 @@
 	<file>
 		<name>data/gear.xml</name>
 		<type>Data Files</type>
-		<version>-819</version>
+		<version>-817</version>
 		<description>Gear</description>
 		<notes>- Gear data file</notes>
 	</file>
@@ -325,7 +325,7 @@
 	<file>
 		<name>data/vehicles.xml</name>
 		<type>Data Files</type>
-		<version>-874</version>
+		<version>-873</version>
 		<description>Vehicles</description>
 		<notes>- Vehicles data file</notes>
 	</file>
@@ -339,7 +339,7 @@
 	<file>
 		<name>data/weapons.xml</name>
 		<type>Data Files</type>
-		<version>-847</version>
+		<version>-846</version>
 		<description>Weapons</description>
 		<notes>- Weapons data file</notes>
 	</file>

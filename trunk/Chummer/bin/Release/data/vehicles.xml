@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-874</version>
+	<version>-873</version>
 	<categories>
 		<category>Personal Mobility Vehicles</category>
 		<category>Bikes</category>
@@ -10655,6 +10655,1460 @@
 			<source>COD</source>
 			<page>144</page>
 		</vehicle>
+		<vehicle>
+			<name>M-1A4 Abrams (Main Battle Tank)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-3</handling>
+			<accel>10/15</accel>
+			<speed>70</speed>
+			<pilot>0</pilot>
+			<body>22</body>
+			<armor>15</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>24F</avail>
+			<cost>5750000</cost>
+			<mods>
+				<name>Life Support Level 1</name>
+				<name>Obsolete</name>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Reinforced, External, Turret, Manual)</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Normal, Internal, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Normal, External, Turret, Manual)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>120mm</name>
+				</weapon>
+				<weapon>
+					<name>M-240</name>
+				</weapon>
+				<weapon>
+					<name>M-2HB</name>
+				</weapon>
+				<weapon>
+					<name>M-240</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>26</page>
+		</vehicle>
+		<vehicle>
+			<name>M-2A4 Bradley (Infantry Fighting Vehicle)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-2</handling>
+			<accel>5/15</accel>
+			<speed>70</speed>
+			<pilot>0</pilot>
+			<body>18</body>
+			<armor>10</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>24F</avail>
+			<cost>3250000</cost>
+			<mods>
+				<name>Life Support Level 1</name>
+				<name>Obsolete</name>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Reinforced, External, Turret, Remote)</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Normal, Internal, Turret, Armored)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>30mm Auto Cannon</name>
+				</weapon>
+				<weapon>
+					<name>M-240</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>27</page>
+		</vehicle>
+		<vehicle>
+			<name>M-1126A2 Stryker (APC)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-1</handling>
+			<accel>10/30</accel>
+			<speed>80</speed>
+			<pilot>1</pilot>
+			<body>16</body>
+			<armor>8</armor>
+			<sensor>1</sensor>
+			<devicerating>4</devicerating>
+			<avail>22R</avail>
+			<cost>1250000</cost>
+			<mods>
+				<name>Life Support Level 1</name>
+				<name>Obsolete</name>
+				<name>Off-Road Suspension</name>
+				<name rating="8">Run Flat Tires</name>
+				<name>Weapon Mount (Normal, External, Turret, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>28</page>
+		</vehicle>
+		<vehicle>
+			<name>HMMWV (Utility Vehicle)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>0</handling>
+			<accel>10/30</accel>
+			<speed>90</speed>
+			<pilot>0</pilot>
+			<body>12</body>
+			<armor>2</armor>
+			<sensor>0</sensor>
+			<devicerating>4</devicerating>
+			<avail>6</avail>
+			<cost>14500</cost>
+			<mods>
+				<name>Multifuel Engine</name>
+				<name>Off-Road Suspension</name>
+				<name rating="4">Run Flat Tires</name>
+				<name>Weapon Mount (Normal, External, Turret, Manual)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>29</page>
+		</vehicle>
+		<vehicle>
+			<name>SLAMRAAM (Anti-Aircraft Missile System)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>0</handling>
+			<accel>10/30</accel>
+			<speed>60</speed>
+			<pilot>0</pilot>
+			<body>12</body>
+			<armor>2</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>25F</avail>
+			<cost>120000</cost>
+			<mods>
+				<name>Multifuel Engine</name>
+				<name>Off-Road Suspension</name>
+				<name>Weapon Mount (Reinforced, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Reinforced, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Reinforced, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Reinforced, External, Fixed, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>30</page>
+		</vehicle>
+		<vehicle>
+			<name>T-90UM (Main Battle Tank)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-4</handling>
+			<accel>5/10</accel>
+			<speed>65</speed>
+			<pilot>0</pilot>
+			<body>20</body>
+			<armor>14</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>26F</avail>
+			<cost>3675000</cost>
+			<mods>
+				<name>Obsolete</name>
+				<name rating="1">Armor, Smart</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Normal, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Reinforced, External, Turret, Manual)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>125mm</name>
+				</weapon>
+				<weapon>
+					<name>PKT</name>
+				</weapon>
+				<weapon>
+					<name>Kort</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>33</page>
+		</vehicle>
+		<vehicle>
+			<name>T-18 (Main Battle Tank)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-3</handling>
+			<accel>10/20</accel>
+			<speed>250</speed>
+			<pilot>1</pilot>
+			<body>25</body>
+			<armor>20</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>30F</avail>
+			<cost>5600000</cost>
+			<mods>
+				<name>Obsolete</name>
+				<name rating="1">Signature Masking</name>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Normal, External, Turret, Armored)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>34</page>
+		</vehicle>
+		<vehicle>
+			<name>BMP-5 IFV (Battle Tank)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-3</handling>
+			<accel>5/15</accel>
+			<speed>70</speed>
+			<pilot>1</pilot>
+			<body>19</body>
+			<armor>12</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>24F</avail>
+			<cost>2900000</cost>
+			<mods>
+				<name>Amphibious Operation Level 1</name>
+				<name>Obsolete</name>
+				<name rating="1">Armor, Smart</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Normal, External, Turret, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>30mm Auto Cannon</name>
+				</weapon>
+				<weapon>
+					<name>Missile: Khrizantema (AT-15 Springer)</name>
+				</weapon>
+				<weapon>
+					<name>Missile: Khrizantema (AT-15 Springer)</name>
+				</weapon>
+				<weapon>
+					<name>Missile: Khrizantema (AT-15 Springer)</name>
+				</weapon>
+				<weapon>
+					<name>Missile: Khrizantema (AT-15 Springer)</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>35</page>
+		</vehicle>
+		<vehicle>
+			<name>BTR-20 (APC)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>0</handling>
+			<accel>10/20</accel>
+			<speed>100</speed>
+			<pilot>0</pilot>
+			<body>15</body>
+			<armor>10</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>23F</avail>
+			<cost>1750050</cost>
+			<mods>
+				<name>Amphibious Operation Level 1</name>
+				<name>Life Support Level 1</name>
+				<name rating="8">Run Flat Tires</name>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Normal, External, Turret, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>36</page>
+		</vehicle>
+		<vehicle>
+			<name>ZSU-30-4 (Air Defense System)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-2</handling>
+			<accel>5/15</accel>
+			<speed>70</speed>
+			<pilot>0</pilot>
+			<body>15</body>
+			<armor>12</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>28F</avail>
+			<cost>4700000</cost>
+			<mods>
+				<name>Obsolete</name>
+				<name>Satellite Communication</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Reinforced, External, Turret, Remote)</name>
+				<name>Weapon Mount (Normal, External, Turret, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+				<gear rating="3">ECCM</gear>
+			</gears>
+			<source>EWA</source>
+			<page>37</page>
+		</vehicle>
+		<vehicle>
+			<name>MI-28 Havoc (Attack Helicopter)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>0</handling>
+			<accel>10/30</accel>
+			<speed>320</speed>
+			<pilot>1</pilot>
+			<body>15</body>
+			<armor>10</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>20F</avail>
+			<cost>5250000</cost>
+			<mods>
+				<name>Amenities, Squatter</name>
+				<name>Improved Takeoff and Landing Level 2</name>
+				<name>Obsolete</name>
+				<name>Life Support Level 1</name>
+				<name>Weapon Mount (Reinforced, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>30mm Auto Cannon</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>38</page>
+		</vehicle>
+		<vehicle>
+			<name>KA-50 Hokum (Attack Helicopter)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>2</handling>
+			<accel>15/30</accel>
+			<speed>315</speed>
+			<pilot>1</pilot>
+			<body>13</body>
+			<armor>8</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>21F</avail>
+			<cost>4100000</cost>
+			<mods>
+				<name>Ejection Seats</name>
+				<name>Improved Takeoff and Landing Level 2</name>
+				<name>Life Support Level 1</name>
+				<name>Lock-On Countermeasures</name>
+				<name>Obsolescent</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Reinforced, Internal, Flexible, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>39</page>
+		</vehicle>
+		<vehicle>
+			<name>KA-60 Hellion (Attack Helicopter)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>3</handling>
+			<accel>20/30</accel>
+			<speed>310</speed>
+			<pilot>1</pilot>
+			<body>15</body>
+			<armor>8</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>24F</avail>
+			<cost>3250000</cost>
+			<mods>
+				<name>Ammo Bins</name>
+				<name>Ejection Seats</name>
+				<name>Improved Takeoff and Landing Level 2</name>
+				<name>Lock-On Countermeasures</name>
+				<name>Obsolete</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Reinforced, Internal, Flexible, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>40</page>
+		</vehicle>
+		<vehicle>
+			<name>SU-27 Flanker (Tactical Aircraft)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>0</handling>
+			<accel>50/200</accel>
+			<speed>2500</speed>
+			<pilot>1</pilot>
+			<body>15</body>
+			<armor>2</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>22F</avail>
+			<cost>6000000</cost>
+			<mods>
+				<name>Ejection Seats</name>
+				<name>Life Support Level 1</name>
+				<name>Lock-On Countermeasures</name>
+				<name>Obsolete</name>
+				<name>Weapon Mount (Reinforced, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Reinforced, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Reinforced, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>41</page>
+		</vehicle>
+		<vehicle>
+			<name>SU-35 Flanker-E (Tactical Aircraft)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>1</handling>
+			<accel>60/240</accel>
+			<speed>2350</speed>
+			<pilot>2</pilot>
+			<body>16</body>
+			<armor>2</armor>
+			<sensor>4</sensor>
+			<devicerating>4</devicerating>
+			<avail>24F</avail>
+			<cost>6800000</cost>
+			<mods>
+				<name>Ejection Seats</name>
+				<name>Life Support Level 1</name>
+				<name>Lock-On Countermeasures</name>
+				<name>Obsolete</name>
+				<name>Weapon Mount (Reinforced, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Reinforced, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Reinforced, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+				<gear rating="1">ECCM</gear>
+			</gears>
+			<source>EWA</source>
+			<page>42</page>
+		</vehicle>
+		<vehicle>
+			<name>SU-45 Fantasy (Tactical Aircraft)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>2</handling>
+			<accel>80/320</accel>
+			<speed>2200</speed>
+			<pilot>2</pilot>
+			<body>18</body>
+			<armor>4</armor>
+			<sensor>4</sensor>
+			<devicerating>4</devicerating>
+			<avail>25F</avail>
+			<cost>9250150</cost>
+			<mods>
+				<name rating="2">ECM</name>
+				<name>Ejection Seats</name>
+				<name>Life Support Level 1</name>
+				<name>Lock-On Countermeasures</name>
+				<name>Obsolescent</name>
+				<name rating="3">Signature Masking</name>
+				<name>Unstable Structural Agility</name>
+				<name>Weapon Mount (Normal, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Reinforced, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+				<gear rating="1">ECCM</gear>
+			</gears>
+			<source>EWA</source>
+			<page>43</page>
+		</vehicle>
+		<vehicle>
+			<name>KMA7-C Leopard (Heavy Tank)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-3</handling>
+			<accel>5/15</accel>
+			<speed>90</speed>
+			<pilot>2</pilot>
+			<body>30</body>
+			<armor>20</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>26F</avail>
+			<cost>6750000</cost>
+			<mods>
+				<name>Obsolescent</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Normal, External, Turret, Remote)</name>
+				<name>Life Support Level 1</name>
+				<name>Smoke Projector</name>
+				<name>Drone Rack, Small</name>
+				<name>Rigger Adaptation</name>
+				<name rating="2">Signature Masking</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+				<gear rating="1">ECCM</gear>
+			</gears>
+			<source>EWA</source>
+			<page>50</page>
+		</vehicle>
+		<vehicle>
+			<name>Leopard 2A8 (Main Battle Tank)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-3</handling>
+			<accel>5/20</accel>
+			<speed>70</speed>
+			<pilot>0</pilot>
+			<body>20</body>
+			<armor>13</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>28F</avail>
+			<cost>3850000</cost>
+			<mods>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Normal, Internal, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Normal, External, Turret, Manual)</name>
+				<name>Smoke Projector</name>
+				<name>Life Support Level 1</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>120mm</name>
+				</weapon>
+				<weapon>
+					<name>MG3A1</name>
+				</weapon>
+				<weapon>
+					<name>MG3A1</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>51</page>
+		</vehicle>
+		<vehicle>
+			<name>Leopard 3A1 (Main Battle Tank)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-4</handling>
+			<accel>5/15</accel>
+			<speed>80</speed>
+			<pilot>1</pilot>
+			<body>25</body>
+			<armor>18</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>30F</avail>
+			<cost>5000000</cost>
+			<mods>
+				<name>Life Support Level 1</name>
+				<name>Obsolete</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Remote)</name>
+				<name>Weapon Mount (Normal, Internal, Heavy Turret, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>120mm</name>
+				</weapon>
+				<weapon>
+					<name>MG3A1</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>52</page>
+		</vehicle>
+		<vehicle>
+			<name>Puma (Infantry Fighting Vehicle)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-1</handling>
+			<accel>10/30</accel>
+			<speed>120</speed>
+			<pilot>1</pilot>
+			<body>14</body>
+			<armor>11</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>22F</avail>
+			<cost>850000</cost>
+			<mods>
+				<name>Lock-On Countermeasures</name>
+				<name>Obsolete</name>
+				<name>Smoke Projector</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Turret, Armored)</name>
+				<name>Weapon Mount (Normal, Internal, Turret, Armored)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>30mm Auto Cannon</name>
+				</weapon>
+				<weapon>
+					<name>MG4</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>53</page>
+		</vehicle>
+		<vehicle>
+			<name>Marder IV (Infantry Fighting Vehicle)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-3</handling>
+			<accel>10/20</accel>
+			<speed>100</speed>
+			<pilot>0</pilot>
+			<body>18</body>
+			<armor>12</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>24F</avail>
+			<cost>1500000</cost>
+			<mods>
+				<name>Obsolete</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Turret, Remote)</name>
+				<name>Ammo Bins</name>
+				<name>Ammo Bins</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+				<gear rating="1">ECCM</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>35mm Auto Cannon</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>54</page>
+		</vehicle>
+		<vehicle>
+			<name>Mantiss II (Air Defense System)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-3</handling>
+			<accel>10/20</accel>
+			<speed>100</speed>
+			<pilot>0</pilot>
+			<body>18</body>
+			<armor>12</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>24F</avail>
+			<cost>1500000</cost>
+			<mods>
+				<name>Smoke Projector</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Turret, Remote)</name>
+				<name>Ammo Bins</name>
+				<name>Weapon Mount (Normal, External, Turret, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>30mm Auto Cannon</name>
+				</weapon>
+				<weapon>
+					<name>MG3A1</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>55</page>
+		</vehicle>
+		<vehicle>
+			<name>Eurofighter Tranche 2 (Tactical Aircraft)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>2</handling>
+			<accel>50/250</accel>
+			<speed>1800</speed>
+			<pilot>2</pilot>
+			<body>18</body>
+			<armor>2</armor>
+			<sensor>4</sensor>
+			<devicerating>4</devicerating>
+			<avail>25F</avail>
+			<cost>8950000</cost>
+			<mods>
+				<name rating="1">ECM</name>
+				<name>Obsolete</name>
+				<name>Weapon Mount (Reinforced, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Reinforced, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Reinforced, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Reinforced, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>56</page>
+		</vehicle>
+		<vehicle>
+			<name>NH90 (Utility Helicopter)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>1</handling>
+			<accel>10/30</accel>
+			<speed>200</speed>
+			<pilot>1</pilot>
+			<body>16</body>
+			<armor>6</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>14</avail>
+			<cost>355000</cost>
+			<mods>
+				<name>Amenities, Squatter</name>
+				<name>Lock-On Countermeasures</name>
+				<name>Obsolete</name>
+				<name>Weapon Mount (Normal, External, Flexible, Manual)</name>
+				<name>Weapon Mount (Normal, External, Flexible, Manual)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>57</page>
+		</vehicle>
+		<vehicle>
+			<name>Altay (Main Battle Tank)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-3</handling>
+			<accel>5/15</accel>
+			<speed>70</speed>
+			<pilot>1</pilot>
+			<body>23</body>
+			<armor>15</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>30F</avail>
+			<cost>4750000</cost>
+			<mods>
+				<name>Life Support Level 1</name>
+				<name>Smoke Projector</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Turret, Armored)</name>
+				<name>Weapon Mount (Normal, Internal, Turret, Armored)</name>
+				<name>Weapon Mount (Normal, External, Turret, Manual)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>120mm</name>
+				</weapon>
+				<weapon>
+					<name>M-240</name>
+				</weapon>
+				<weapon>
+					<name>M-240</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>62</page>
+		</vehicle>
+		<vehicle>
+			<name>M-48A5T3 (Main Battle Tank)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-4</handling>
+			<accel>5/10</accel>
+			<speed>50</speed>
+			<pilot>0</pilot>
+			<body>18</body>
+			<armor>12</armor>
+			<sensor>1</sensor>
+			<devicerating>4</devicerating>
+			<avail>22F</avail>
+			<cost>1925000</cost>
+			<mods>
+				<name>Smoke Projector</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Turret, Armored)</name>
+				<name>Weapon Mount (Normal, Internal, Turret, Armored)</name>
+				<name>Weapon Mount (Normal, External, Turret, Manual)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>105mm</name>
+				</weapon>
+				<weapon>
+					<name>M-2HB</name>
+				</weapon>
+				<weapon>
+					<name>M-73</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>63</page>
+		</vehicle>
+		<vehicle>
+			<name>BMP-3 (Infantry Fighting Vehicle)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-3</handling>
+			<accel>5/10</accel>
+			<speed>70</speed>
+			<pilot>0</pilot>
+			<body>17</body>
+			<armor>10</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>22F</avail>
+			<cost>2300000</cost>
+			<mods>
+				<name rating="1">ECM</name>
+				<name>Life Support Level 1</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Gun Port</name>
+				<name>Gun Port</name>
+				<name>Gun Port</name>
+				<name>Gun Port</name>
+				<name>Gun Port</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>100mm</name>
+				</weapon>
+				<weapon>
+					<name>30mm Auto Cannon</name>
+				</weapon>
+				<weapon>
+					<name>PKT</name>
+				</weapon>
+				<weapon>
+					<name>PKT</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>64</page>
+		</vehicle>
+		<vehicle>
+			<name>ZSU-30-2 (Anti-Aircraft System)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-3</handling>
+			<accel>5/10</accel>
+			<speed>60</speed>
+			<pilot>1</pilot>
+			<body>15</body>
+			<armor>6</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>25F</avail>
+			<cost>3100500</cost>
+			<mods>
+				<name>Obsolete</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Normal, External, Turret, Remote)</name>
+				<name>Weapon Mount (Normal, External, Turret, Remote)</name>
+				<name>Ammo Bins</name>
+				<name>Ammo Bins</name>
+				<name>Ammo Bins</name>
+				<name>Ammo Bins</name>
+				<name>Ammo Bins</name>
+				<name>Ammo Bins</name>
+				<name>Ammo Bins</name>
+				<name>Ammo Bins</name>
+				<name>Ammo Bins</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>30mm Auto Cannon</name>
+				</weapon>
+				<weapon>
+					<name>30mm Auto Cannon</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>65</page>
+		</vehicle>
+		<vehicle>
+			<name>T-129 Mongoose (Attack Helicopter)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>2</handling>
+			<accel>10/30</accel>
+			<speed>260</speed>
+			<pilot>1</pilot>
+			<body>14</body>
+			<armor>4</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>21F</avail>
+			<cost>4250000</cost>
+			<mods>
+				<name>Improved Takeoff and Landing Level 2</name>
+				<name>Lock-On Countermeasures</name>
+				<name>Obsolete</name>
+				<name>Weapon Mount (Reinforced, External, Flexible, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>20mm Gatling Cannon</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>66</page>
+		</vehicle>
+		<vehicle>
+			<name>MiG-29SMT Fulcrum (Tactical Aircraft)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>3</handling>
+			<accel>50/200</accel>
+			<speed>2400</speed>
+			<pilot>1</pilot>
+			<body>15</body>
+			<armor>3</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>22F</avail>
+			<cost>5300000</cost>
+			<mods>
+				<name>Ejection Seats</name>
+				<name>Lock-On Countermeasures</name>
+				<name>Weapon Mount (Reinforced, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Reinforced, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>67</page>
+		</vehicle>
+		<vehicle>
+			<name>Challenger III (Main Battle Tank)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-4</handling>
+			<accel>10/15</accel>
+			<speed>90</speed>
+			<pilot>1</pilot>
+			<body>32</body>
+			<armor>22</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>27F</avail>
+			<cost>6950000</cost>
+			<mods>
+				<name>Lock-On Countermeasures</name>
+				<name>Obsolete</name>
+				<name rating="3">Armor, Smart</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Normal, Internal, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Normal, External, Turret, Manual)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>120mm</name>
+				</weapon>
+				<weapon>
+					<name>M-240</name>
+				</weapon>
+				<weapon>
+					<name>M-240</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>74</page>
+		</vehicle>
+		<vehicle>
+			<name>Ariete C-4 (Main Battle Tank)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-4</handling>
+			<accel>10/15</accel>
+			<speed>80</speed>
+			<pilot>0</pilot>
+			<body>21</body>
+			<armor>18</armor>
+			<sensor>1</sensor>
+			<devicerating>4</devicerating>
+			<avail>26F</avail>
+			<cost>4675000</cost>
+			<mods>
+				<name>Improved Sensor Array</name>
+				<name>Gyro Link</name>
+				<name>Missile Defense System</name>
+				<name>Obsolescent</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Normal, Internal, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Normal, External, Turret, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Extra-Large Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>75</page>
+		</vehicle>
+		<vehicle>
+			<name>Sabre (Light Tank)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-2</handling>
+			<accel>5/15</accel>
+			<speed>60</speed>
+			<pilot>0</pilot>
+			<body>17</body>
+			<armor>10</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>23F</avail>
+			<cost>4200000</cost>
+			<mods>
+				<name>Obsolescent</name>
+				<name>Satellite Communication</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Normal, Internal, Heavy Turret, Armored)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>76</page>
+		</vehicle>
+		<vehicle>
+			<name>Warrior (Infantry Fighting Vehicle)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-2</handling>
+			<accel>5/15</accel>
+			<speed>70</speed>
+			<pilot>0</pilot>
+			<body>17</body>
+			<armor>10</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>24F</avail>
+			<cost>3150000</cost>
+			<mods>
+				<name>Amenities, Squatter</name>
+				<name>Obsolete</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Heavy Turret, Armored)</name>
+				<name>Weapon Mount (Normal, Internal, Heavy Turret, Armored)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>30mm Auto Cannon</name>
+				</weapon>
+				<weapon>
+					<name>M-240</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>77</page>
+		</vehicle>
+		<vehicle>
+			<name>Boxer (Armored Personnel Carrier)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-2</handling>
+			<accel>5/15</accel>
+			<speed>60</speed>
+			<pilot>0</pilot>
+			<body>17</body>
+			<armor>10</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>23F</avail>
+			<cost>4200000</cost>
+			<mods>
+				<name>Amenities, Squatter</name>
+				<name>Off-Road Suspension</name>
+				<name>Life Support Level 1</name>
+				<name>Lock-On Countermeasures</name>
+				<name>Obsolete</name>
+				<name rating="8">Run Flat Tires</name>
+				<name>Smoke Projector</name>
+				<name>Weapon Mount (Normal, External, Turret, Manual)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>78</page>
+		</vehicle>
+		<vehicle>
+			<name>AIFV II (Infantry Fighting Vehicle)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>-2</handling>
+			<accel>10/15</accel>
+			<speed>60</speed>
+			<pilot>1</pilot>
+			<body>16</body>
+			<armor>8</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>20R</avail>
+			<cost>385000</cost>
+			<mods>
+				<name>Amenities, Squatter</name>
+				<name>Amphibious Operation Level 1</name>
+				<name>Life Support Level 1</name>
+				<name>Gun Port</name>
+				<name>Gun Port</name>
+				<name>Gun Port</name>
+				<name>Obsolete</name>
+				<name>Tracked Vehicle, Permanent</name>
+				<name>Weapon Mount (Reinforced, External, Turret, Remote)</name>
+				<name>Weapon Mount (Normal, Internal, Turret, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>79</page>
+		</vehicle>
+		<vehicle>
+			<name>Piranha (Armored Personnel Carrier)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>1</handling>
+			<accel>10/20</accel>
+			<speed>100</speed>
+			<pilot>0</pilot>
+			<body>16</body>
+			<armor>10</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>18R</avail>
+			<cost>250000</cost>
+			<mods>
+				<name>Amenities, Squatter</name>
+				<name>Obsolete</name>
+				<name>Off-Road Suspension</name>
+				<name rating="8">Run Flat Tires</name>
+				<name>Smoke Projector</name>
+				<name>Weapon Mount (Normal, External, Turret, Manual)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>80</page>
+		</vehicle>
+		<vehicle>
+			<name>EH101 (Utility Helicopter)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>1</handling>
+			<accel>10/20</accel>
+			<speed>300</speed>
+			<pilot>2</pilot>
+			<body>21</body>
+			<armor>2</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>14R</avail>
+			<cost>415000</cost>
+			<mods>
+				<name>Amenities, Squatter</name>
+				<name>Improved Takeoff and Landing Level 2</name>
+				<name>Lock-On Countermeasures</name>
+				<name>Obsolete</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, Internal, Flexible, Manual)</name>
+				<name>Weapon Mount (Normal, Internal, Flexible, Manual)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>81</page>
+		</vehicle>
+		<vehicle>
+			<name>WAH-64 Apache (Attack Helicopter)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>1</handling>
+			<accel>10/30</accel>
+			<speed>290</speed>
+			<pilot>0</pilot>
+			<body>16</body>
+			<armor>9</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>21F</avail>
+			<cost>5275000</cost>
+			<mods>
+				<name>Improved Takeoff and Landing Level 2</name>
+				<name>Lock-On Countermeasures</name>
+				<name>Obsolete</name>
+				<name>Weapon Mount (Reinforced, External, Flexible, Remote)</name>
+				<name>Ammo Bins</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>30mm Auto Cannon</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>82</page>
+		</vehicle>
+		<vehicle>
+			<name>Wildcat (Utility Helicopter)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>2</handling>
+			<accel>10/20</accel>
+			<speed>290</speed>
+			<pilot>1</pilot>
+			<body>16</body>
+			<armor>3</armor>
+			<sensor>2</sensor>
+			<devicerating>4</devicerating>
+			<avail>18F</avail>
+			<cost>4700000</cost>
+			<mods>
+				<name>Amenities, Squatter</name>
+				<name>Improved Takeoff and Landing Level 2</name>
+				<name>Weapon Mount (Normal, Internal, Flexible, Manual)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>83</page>
+		</vehicle>
+		<vehicle>
+			<name>V-22 Osprey (Transport Aircraft)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>1</handling>
+			<accel>30/100</accel>
+			<speed>500</speed>
+			<pilot>1</pilot>
+			<body>25</body>
+			<armor>1</armor>
+			<sensor>1</sensor>
+			<devicerating>4</devicerating>
+			<avail>16R</avail>
+			<cost>1785000</cost>
+			<mods>
+				<name>Amenities, Squatter</name>
+				<name>Improved Takeoff and Landing Level 2</name>
+				<name>Obsolete</name>
+				<name>Weapon Mount (Normal, External, Flexible, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<source>EWA</source>
+			<page>84</page>
+		</vehicle>
+		<vehicle>
+			<name>Rafale (Tactical Aircraft)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>1</handling>
+			<accel>80/320</accel>
+			<speed>2100</speed>
+			<pilot>2</pilot>
+			<body>15</body>
+			<armor>1</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>26F</avail>
+			<cost>7150000</cost>
+			<mods>
+				<name rating="1">ECM</name>
+				<name>Ejection Seats</name>
+				<name>Lock-On Countermeasures</name>
+				<name>Obsolete</name>
+				<name>Weapon Mount (Reinforced, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>30mm Auto Cannon</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>85</page>
+		</vehicle>
+		<vehicle>
+			<name>Lockheed F-35A Lightning (Tactical Aircraft)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>1</handling>
+			<accel>100/400</accel>
+			<speed>1900</speed>
+			<pilot>2</pilot>
+			<body>17</body>
+			<armor>2</armor>
+			<sensor>3</sensor>
+			<devicerating>4</devicerating>
+			<avail>28F</avail>
+			<cost>13250000</cost>
+			<mods>
+				<name rating="1">ECM</name>
+				<name>Ejection Seats</name>
+				<name>Lock-On Countermeasures</name>
+				<name rating="2">Signature Masking</name>
+				<name>Obsolete</name>
+				<name>Weapon Mount (Reinforced, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+				<gear rating="1">ECCM</gear>
+			</gears>
+			<weapons>
+				<weapon>
+					<name>25mm Rotary Cannon</name>
+				</weapon>
+			</weapons>
+			<source>EWA</source>
+			<page>86</page>
+		</vehicle>
+		<vehicle>
+			<name>Nightwraith MK.1 (Tactical Aircraft)</name>
+			<category>Military, Security and Medical Craft</category>
+			<handling>2</handling>
+			<accel>80/320</accel>
+			<speed>1500</speed>
+			<pilot>3</pilot>
+			<body>19</body>
+			<armor>3</armor>
+			<sensor>4</sensor>
+			<devicerating>4</devicerating>
+			<avail>36F</avail>
+			<cost>21450000</cost>
+			<mods>
+				<name rating="1">ECM</name>
+				<name>Ejection Seats</name>
+				<name>Lock-On Countermeasures</name>
+				<name>Obsolescent</name>
+				<name rating="4">Signature Masking</name>
+				<name>Weapon Mount (Reinforced, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Reinforced, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, Internal, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+				<name>Weapon Mount (Normal, External, Fixed, Remote)</name>
+			</mods>
+			<gears>
+				<gear>Vehicle Sensor</gear>
+				<gear rating="2">ECCM</gear>
+			</gears>
+			<source>EWA</source>
+			<page>87</page>
+		</vehicle>
 	</vehicles>
 	<mods>
 		<mod>
@@ -14000,6 +15454,84 @@
 			</bonus>
 			<source>SR4</source>
 			<page>0</page>
+		</mod>
+		<mod>
+			<name>Drop Tank</name>
+			<category>All</category>
+			<rating>0</rating>
+			<limit>Aircraft Only</limit>
+			<slots>1</slots>
+			<avail>4</avail>
+			<cost>1000</cost>
+			<bonus>
+				<handling>-1</handling>
+			</bonus>
+			<source>EWA</source>
+			<page>42</page>
+		</mod>
+		<mod>
+			<name>Ejection Rack, Twin Rack</name>
+			<category>Standard</category>
+			<rating>0</rating>
+			<slots>0</slots>
+			<avail>6R</avail>
+			<cost>250</cost>
+			<source>EWA</source>
+			<page>48</page>
+		</mod>
+		<mod>
+			<name>Ejection Rack, Triple Rack</name>
+			<category>Standard</category>
+			<rating>0</rating>
+			<slots>0</slots>
+			<avail>6R</avail>
+			<cost>500</cost>
+			<source>EWA</source>
+			<page>48</page>
+		</mod>
+		<mod>
+			<name>Ejection Rack, Quad Rack</name>
+			<category>Standard</category>
+			<rating>0</rating>
+			<slots>0</slots>
+			<avail>8R</avail>
+			<cost>750</cost>
+			<source>EWA</source>
+			<page>48</page>
+		</mod>
+		<mod>
+			<name>Ejection Rack, Sextuple Rack</name>
+			<category>Standard</category>
+			<rating>0</rating>
+			<slots>0</slots>
+			<avail>8F</avail>
+			<cost>1500</cost>
+			<source>EWA</source>
+			<page>48</page>
+		</mod>
+		<mod>
+			<name>Ferry Tank</name>
+			<category>All</category>
+			<rating>0</rating>
+			<limit>Aircraft Only</limit>
+			<slots>1</slots>
+			<avail>4</avail>
+			<cost>2200</cost>
+			<bonus>
+				<handling>-2</handling>
+			</bonus>
+			<source>EWA</source>
+			<page>56</page>
+		</mod>
+		<mod>
+			<name>Cruise Missile Aerial Launch System</name>
+			<category>Standard</category>
+			<rating>0</rating>
+			<slots>0</slots>
+			<avail>28F</avail>
+			<cost>1600</cost>
+			<source>EWA</source>
+			<page>60</page>
 		</mod>
 	</mods>
 </chummer>
