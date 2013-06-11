@@ -98,6 +98,7 @@ namespace Chummer
 			ThrowSTR = 84,
 			IgnoreCMPenaltyStun = 85,
 			IgnoreCMPenaltyPhysical = 86,
+			CyborgEssence = 87,
         }
 
         public enum ImprovementSource
@@ -332,6 +333,8 @@ namespace Chummer
 					return ImprovementType.IgnoreCMPenaltyStun;
 				case "IgnoreCMPenaltyPhysical":
 					return ImprovementType.IgnoreCMPenaltyPhysical;
+				case "CyborgEssence":
+					return ImprovementType.CyborgEssence;
 				default:
 					return ImprovementType.Skill;
 			}
@@ -2306,6 +2309,12 @@ namespace Chummer
 				if (NodeExists(nodBonus, "ignorecmpenaltyphysical"))
 				{
 					CreateImprovement("", objImprovementSource, strSourceName, Improvement.ImprovementType.IgnoreCMPenaltyPhysical, "");
+				}
+
+				// Check for a Cyborg Essence which will permanently set the character's ESS to 0.1.
+				if (NodeExists(nodBonus, "cyborgessence"))
+				{
+					CreateImprovement("", objImprovementSource, strSourceName, Improvement.ImprovementType.CyborgEssence, "");
 				}
 
 				// Check for Select Sprite.

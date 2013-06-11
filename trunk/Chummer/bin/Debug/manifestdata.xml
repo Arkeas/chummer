@@ -3,7 +3,7 @@
 	<file>
 		<name>chummer.exe</name>
 		<type>Application</type>
-		<version>0.0.0.478</version>
+		<version>0.0.0.480</version>
 		<description>Chummer</description>
 		<notes>- Chummer Application</notes>
 	</file>
@@ -192,7 +192,7 @@
 	<file>
 		<name>data/cyberware.xml</name>
 		<type>Data Files</type>
-		<version>-891</version>
+		<version>-890</version>
 		<description>Cyberware</description>
 		<notes>- Cyberware data file</notes>
 	</file>
@@ -283,7 +283,7 @@
 	<file>
 		<name>data/qualities.xml</name>
 		<type>Data Files</type>
-		<version>-874</version>
+		<version>-873</version>
 		<description>Qualities</description>
 		<notes>- Qualities data file</notes>
 	</file>
@@ -339,7 +339,7 @@
 	<file>
 		<name>data/weapons.xml</name>
 		<type>Data Files</type>
-		<version>-846</version>
+		<version>-845</version>
 		<description>Weapons</description>
 		<notes>- Weapons data file</notes>
 	</file>

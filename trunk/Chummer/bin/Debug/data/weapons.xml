@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-846</version>
+	<version>-845</version>
 	<categories>
 		<category>Blades</category>
 		<category>Clubs</category>
@@ -2865,6 +2865,9 @@
 				<mount>Barrel</mount>
 				<mount>Top</mount>
 			</accessorymounts>
+			<mods>
+				<mod>Electronic Firing</mod>
+			</mods>
 			<source>AR</source>
 			<page>22</page>
 		</weapon>

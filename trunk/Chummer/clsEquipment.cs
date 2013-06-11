@@ -5671,6 +5671,15 @@ namespace Chummer
 				strDamageExtra = "(f)";
 				strDamage = strDamage.Replace("(f)", string.Empty);
 			}
+
+			// Look for splash damage info.
+			if (strDamage.Contains("("))
+			{
+				string strSplash = strDamage.Substring(strDamage.IndexOf("("), strDamage.IndexOf(")") - strDamage.IndexOf("(") + 1);
+				strDamageExtra += " " + strSplash;
+				strDamage = strDamage.Replace(strSplash, string.Empty).Trim();
+			}
+
 			// Replace the division sign with "div" since we're using XPath.
 			strDamage = strDamage.Replace("/", " div ");
 

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-874</version>
+	<version>-873</version>
 	<categories>
 		<category>Positive</category>
 		<category>Negative</category>
@@ -906,7 +906,7 @@
 		</quality>
 		<quality>
 			<name>Climate Adaptation (Desert)</name>
-			<bp>5</bp>
+			<bp>10</bp>
 			<category>Positive</category>
 			<bonus />
 			<required>
