@@ -8019,6 +8019,7 @@ namespace Chummer
 
 				objGear.Parent = null;
 				objGear.Quantity = intMove;
+				objGear.Location = string.Empty;
 				objGearNode.Text = objGear.DisplayName;
 				objGearNode.ContextMenuStrip = cmsVehicleGear;
 
@@ -18411,6 +18412,7 @@ namespace Chummer
 			_objCharacter.Weapons.Remove(objWeapon);
 			objMod.Weapons.Add(objWeapon);
 			objWeapon.VehicleMounted = true;
+			objWeapon.Location = string.Empty;
 
 			// Move the TreeNode to the Vehicle Mod.
 			TreeNode objNode = new TreeNode();

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-891</version>
+	<version>-890</version>
 	<grades>
 		<grade>
 			<name>Standard</name>
@@ -3615,6 +3615,27 @@
 			<cost>3500</cost>
 			<source>WS</source>
 			<page>14</page>
+		</cyberware>
+		<cyberware>
+			<name>Cranial Containment Unit</name>
+			<category>Headware</category>
+			<rating>1</rating>
+			<ess>0</ess>
+			<capacity>0</capacity>
+			<avail>0</avail>
+			<cost>0</cost>
+			<allowgear>
+			<gearcategory>Commlink</gearcategory>
+			</allowgear>
+			<bonus>
+				<conditionmonitor>
+					<thresholdoffset>6</thresholdoffset>
+				</conditionmonitor>
+				<cyborgessence />
+				<matrixinitiativepassadd>1</matrixinitiativepassadd>
+			</bonus>
+			<source>AU</source>
+			<page>158</page>
 		</cyberware>
 	</cyberwares>
 	<suites>

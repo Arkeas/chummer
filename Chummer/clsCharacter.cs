@@ -3545,6 +3545,16 @@ namespace Chummer
 				// Deduct the Essence Hole value.
 				decESS -= decHole;
 
+				// If the character has a fixed Essence Improvement, permanently fix their Essence at its value.
+				foreach (Improvement objImprovement in _lstImprovements)
+				{
+					if (objImprovement.ImproveType == Improvement.ImprovementType.CyborgEssence && objImprovement.Enabled)
+					{
+						decESS = 0.1m;
+						break;
+					}
+				}
+
 				return decESS;
 			}
 		}

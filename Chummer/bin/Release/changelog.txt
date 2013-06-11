@@ -1,3 +1,7 @@
+Build 480
+- added support for <cyborgessence /> to the Improvement Manager which permanently reduces a character's Essence to 0.1.
+- Weapons that deal splash damage such as Grenades now have their bonus damage from More Lethal Gameplay and Weapon Mods calculated properly
+
 Build 478
 - Gear now retains its given name when moved between a character's Gear and Vehicle
 - when moving Gear between the character's Gear and Vehicles, items must also have matching custom/assigned names and notes in order to be considered a match and stack
