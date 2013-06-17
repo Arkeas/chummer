@@ -436,7 +436,7 @@ namespace Chummer
 
 					// Look through the Weapons file and grab the names of items that are part of the appropriate Exotic Category or use the matching Exoctic Skill.
 					XmlDocument objXmlWeaponDocument = XmlManager.Instance.Load("weapons.xml");
-					XmlNodeList objXmlWeaponList = objXmlWeaponDocument.SelectNodes("/chummer/weapons/weapon[category = \"" + objSkill.Name + "s\" or useskill = \"" + objSkill.Name + "s\"]");
+					XmlNodeList objXmlWeaponList = objXmlWeaponDocument.SelectNodes("/chummer/weapons/weapon[category = \"" + objSkill.Name + "s\" or useskill = \"" + objSkill.Name + "\"]");
 					foreach (XmlNode objXmlWeapon in objXmlWeaponList)
 					{
 						if (objXmlWeapon["translate"] != null)

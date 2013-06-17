@@ -325,7 +325,7 @@
 	<file>
 		<name>data/vehicles.xml</name>
 		<type>Data Files</type>
-		<version>-873</version>
+		<version>-872</version>
 		<description>Vehicles</description>
 		<notes>- Vehicles data file</notes>
 	</file>
