@@ -2356,7 +2356,7 @@ namespace Chummer
 			XmlDocument objXmlDocument = XmlManager.Instance.Load("skills.xml");
 
 			// Populate the Skills list.
-			XmlNodeList objXmlSkillList = objXmlDocument.SelectNodes("/chummer/skills/skill[not(exotic)]");
+			XmlNodeList objXmlSkillList = objXmlDocument.SelectNodes("/chummer/skills/skill[not(exotic) and (" + Options.BookXPath() + ")]");
 
 			// First pass, build up a list of all of the Skills so we can sort them in alphabetical order for the current language.
 			List<ListItem> lstSkillOrder = new List<ListItem>();
