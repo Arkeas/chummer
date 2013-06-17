@@ -505,7 +505,7 @@ namespace Chummer
 
 					// Look through the Weapons file and grab the names of items that are part of the appropriate Exotic Category or use the matching Exoctic Skill.
 					XmlDocument objXmlWeaponDocument = XmlManager.Instance.Load("weapons.xml");
-					XmlNodeList objXmlWeaponList = objXmlWeaponDocument.SelectNodes("/chummer/weapons/weapon[category = \"" + objSkill.Name + "s\" or useskill = \"" + objSkill.Name + "s\"]");
+					XmlNodeList objXmlWeaponList = objXmlWeaponDocument.SelectNodes("/chummer/weapons/weapon[category = \"" + objSkill.Name + "s\" or useskill = \"" + objSkill.Name + "\"]");
 					foreach (XmlNode objXmlWeapon in objXmlWeaponList)
 					{
 						if (objXmlWeapon["translate"] != null)
@@ -21373,8 +21373,119 @@ namespace Chummer
 				lblLOG.Text = _objCharacter.LOG.Value.ToString();
 				lblWIL.Text = _objCharacter.WIL.Value.ToString();
 				lblEDG.Text = _objCharacter.EDG.Value.ToString();
-				lblMAG.Text = (_objCharacter.MAG.Value - intEssenceLoss).ToString();
-				lblRES.Text = (_objCharacter.RES.Value - intEssenceLoss).ToString();
+				if (_objCharacter.MAG.Value - intEssenceLoss < 0)
+					lblMAG.Text = "0";
+				else
+					lblMAG.Text = (_objCharacter.MAG.Value - intEssenceLoss).ToString();
+				if (_objCharacter.RES.Value - intEssenceLoss < 0)
+					lblRES.Text = "0";
+				else
+					lblRES.Text = (_objCharacter.RES.Value - intEssenceLoss).ToString();
+
+				// If the Attribute reaches 0, the character has burned out.
+				if (_objCharacter.MAG.Value - intEssenceLoss < 1 && _objCharacter.MAGEnabled)
+				{
+					_objCharacter.MAG.Value = 0;
+					_objCharacter.MAG.MetatypeMinimum = 0;
+					_objCharacter.MAG.MetatypeMaximum = 0;
+					_objCharacter.MAG.MetatypeAugmentedMaximum = 0;
+
+					if (_objCharacter.MAGEnabled)
+					{
+						// Move all MAG-linked Active Skills to Knowledge Skills.
+						List<Skill> lstNewSkills = new List<Skill>();
+						foreach (Skill objSkill in _objCharacter.Skills)
+						{
+							if (objSkill.Attribute == "MAG" && objSkill.Rating > 0)
+							{
+								int i = panKnowledgeSkills.Controls.Count;
+								Skill objKnowledge = new Skill(_objCharacter);
+
+								SkillControl objSkillControl = new SkillControl();
+								objKnowledge.Name = objSkill.Name;
+								objSkillControl.SkillObject = objKnowledge;
+
+								// Attach an EventHandler for the RatingChanged and SpecializationChanged Events.
+								objSkillControl.RatingChanged += objKnowledgeSkill_RatingChanged;
+								objSkillControl.SpecializationChanged += objSkill_SpecializationChanged;
+								objSkillControl.DeleteSkill += objKnowledgeSkill_DeleteSkill;
+								objSkillControl.SkillKarmaClicked += objKnowledgeSkill_KarmaClicked;
+								objSkillControl.DiceRollerClicked += objSkill_DiceRollerClicked;
+
+								objSkillControl.KnowledgeSkill = true;
+								objSkillControl.AllowDelete = true;
+								if (objSkill.Rating > 7)
+									objSkillControl.SkillRatingMaximum = objSkill.Rating;
+								else
+									objSkillControl.SkillRatingMaximum = 6;
+								objSkillControl.SkillRating = objSkill.Rating;
+								objSkillControl.SkillCategory = "Professional";
+								// Set the SkillControl's Location since scrolling the Panel causes it to actually change the child Controls' Locations.
+								objSkillControl.Location = new Point(0, objSkillControl.Height * i + panKnowledgeSkills.AutoScrollPosition.Y);
+								panKnowledgeSkills.Controls.Add(objSkillControl);
+
+								lstNewSkills.Add(objKnowledge);
+							}
+						}
+						foreach (Skill objSkill in lstNewSkills)
+							_objCharacter.Skills.Add(objSkill);
+					}
+
+					_objCharacter.MAGEnabled = false;
+					_objCharacter.MagicianEnabled = false;
+					_objCharacter.AdeptEnabled = false;
+				}
+				if (_objCharacter.RES.Value - intEssenceLoss < 1 && _objCharacter.RESEnabled)
+				{
+					_objCharacter.RES.Value = 0;
+					_objCharacter.RES.MetatypeMinimum = 0;
+					_objCharacter.RES.MetatypeMinimum = 0;
+					_objCharacter.RES.MetatypeAugmentedMaximum = 0;
+
+					if (_objCharacter.RESEnabled)
+					{
+						// Move all RES-linked Active Skills to Knowledge Skills.
+						List<Skill> lstNewSkills = new List<Skill>();
+						foreach (Skill objSkill in _objCharacter.Skills)
+						{
+							if (objSkill.Attribute == "RES" && objSkill.Rating > 0)
+							{
+								int i = panKnowledgeSkills.Controls.Count;
+								Skill objKnowledge = new Skill(_objCharacter);
+
+								SkillControl objSkillControl = new SkillControl();
+								objKnowledge.Name = objSkill.Name;
+								objSkillControl.SkillObject = objKnowledge;
+
+								// Attach an EventHandler for the RatingChanged and SpecializationChanged Events.
+								objSkillControl.RatingChanged += objKnowledgeSkill_RatingChanged;
+								objSkillControl.SpecializationChanged += objSkill_SpecializationChanged;
+								objSkillControl.DeleteSkill += objKnowledgeSkill_DeleteSkill;
+								objSkillControl.SkillKarmaClicked += objKnowledgeSkill_KarmaClicked;
+								objSkillControl.DiceRollerClicked += objSkill_DiceRollerClicked;
+
+								objSkillControl.KnowledgeSkill = true;
+								objSkillControl.AllowDelete = true;
+								if (objSkill.Rating > 7)
+									objSkillControl.SkillRatingMaximum = objSkill.Rating;
+								else
+									objSkillControl.SkillRatingMaximum = 6;
+								objSkillControl.SkillRating = objSkill.Rating;
+								objSkillControl.SkillCategory = "Professional";
+								// Set the SkillControl's Location since scrolling the Panel causes it to actually change the child Controls' Locations.
+								objSkillControl.Location = new Point(0, objSkillControl.Height * i + panKnowledgeSkills.AutoScrollPosition.Y);
+								panKnowledgeSkills.Controls.Add(objSkillControl);
+
+								lstNewSkills.Add(objKnowledge);
+							}
+						}
+						foreach (Skill objSkill in lstNewSkills)
+							_objCharacter.Skills.Add(objSkill);
+					}
+
+					_objCharacter.RESEnabled = false;
+					_objCharacter.TechnomancerEnabled = false;
+				}
 
 				// If the character is an A.I., set the Edge MetatypeMaximum to their Rating.
 				if (_objCharacter.Metatype.EndsWith("A.I.") || _objCharacter.MetatypeCategory == "Technocritters" || _objCharacter.MetatypeCategory == "Protosapients")
@@ -23267,122 +23378,6 @@ namespace Chummer
 				objWeaponNode.ContextMenuStrip = cmsWeapon;
 				treWeapons.Nodes[0].Nodes.Add(objWeaponNode);
 				treWeapons.Nodes[0].Expand();
-			}
-
-			// Determine the lowest whole number for the character's Essence after adding the 'Ware.
-			decimal decEndingESS = Math.Floor(_objCharacter.Essence);
-			decimal decDifferent = decStartingESS - decEndingESS;
-
-			if (decDifferent > 0.0m && (!_objOptions.ESSLossReducesMaximumOnly && !_objCharacter.OverrideSpecialAttributeEssenceLoss))
-			{
-				// Permanently reduce the character's MAG/RES Attributes.
-				_objCharacter.MAG.Value -= Convert.ToInt32(decDifferent);
-				_objCharacter.RES.Value -= Convert.ToInt32(decDifferent);
-
-				// If the Attribute reaches 0, the character has burned out.
-				if (_objCharacter.MAG.Value < 1)
-				{
-					_objCharacter.MAG.Value = 0;
-					_objCharacter.MAG.MetatypeMinimum = 0;
-					_objCharacter.MAG.MetatypeMaximum = 0;
-					_objCharacter.MAG.MetatypeAugmentedMaximum = 0;
-
-					if (_objCharacter.MAGEnabled)
-					{
-						// Move all MAG-linked Active Skills to Knowledge Skills.
-						List<Skill> lstNewSkills = new List<Skill>();
-						foreach (Skill objSkill in _objCharacter.Skills)
-						{
-							if (objSkill.Attribute == "MAG" && objSkill.Rating > 0)
-							{
-								int i = panKnowledgeSkills.Controls.Count;
-								Skill objKnowledge = new Skill(_objCharacter);
-
-								SkillControl objSkillControl = new SkillControl();
-								objKnowledge.Name = objSkill.Name;
-								objSkillControl.SkillObject = objKnowledge;
-
-								// Attach an EventHandler for the RatingChanged and SpecializationChanged Events.
-								objSkillControl.RatingChanged += objKnowledgeSkill_RatingChanged;
-								objSkillControl.SpecializationChanged += objSkill_SpecializationChanged;
-								objSkillControl.DeleteSkill += objKnowledgeSkill_DeleteSkill;
-								objSkillControl.SkillKarmaClicked += objKnowledgeSkill_KarmaClicked;
-								objSkillControl.DiceRollerClicked += objSkill_DiceRollerClicked;
-
-								objSkillControl.KnowledgeSkill = true;
-								objSkillControl.AllowDelete = true;
-								if (objSkill.Rating > 7)
-									objSkillControl.SkillRatingMaximum = objSkill.Rating;
-								else
-									objSkillControl.SkillRatingMaximum = 6;
-								objSkillControl.SkillRating = objSkill.Rating;
-								objSkillControl.SkillCategory = "Professional";
-								// Set the SkillControl's Location since scrolling the Panel causes it to actually change the child Controls' Locations.
-								objSkillControl.Location = new Point(0, objSkillControl.Height * i + panKnowledgeSkills.AutoScrollPosition.Y);
-								panKnowledgeSkills.Controls.Add(objSkillControl);
-
-								lstNewSkills.Add(objKnowledge);
-							}
-						}
-						foreach (Skill objSkill in lstNewSkills)
-							_objCharacter.Skills.Add(objSkill);
-					}
-
-					_objCharacter.MAGEnabled = false;
-					_objCharacter.MagicianEnabled = false;
-					_objCharacter.AdeptEnabled = false;
-				}
-				if (_objCharacter.RES.Value < 1)
-				{
-					_objCharacter.RES.Value = 0;
-					_objCharacter.RES.MetatypeMinimum = 0;
-					_objCharacter.RES.MetatypeMinimum = 0;
-					_objCharacter.RES.MetatypeAugmentedMaximum = 0;
-
-					if (_objCharacter.RESEnabled)
-					{
-						// Move all RES-linked Active Skills to Knowledge Skills.
-						List<Skill> lstNewSkills = new List<Skill>();
-						foreach (Skill objSkill in _objCharacter.Skills)
-						{
-							if (objSkill.Attribute == "RES" && objSkill.Rating > 0)
-							{
-								int i = panKnowledgeSkills.Controls.Count;
-								Skill objKnowledge = new Skill(_objCharacter);
-
-								SkillControl objSkillControl = new SkillControl();
-								objKnowledge.Name = objSkill.Name;
-								objSkillControl.SkillObject = objKnowledge;
-
-								// Attach an EventHandler for the RatingChanged and SpecializationChanged Events.
-								objSkillControl.RatingChanged += objKnowledgeSkill_RatingChanged;
-								objSkillControl.SpecializationChanged += objSkill_SpecializationChanged;
-								objSkillControl.DeleteSkill += objKnowledgeSkill_DeleteSkill;
-								objSkillControl.SkillKarmaClicked += objKnowledgeSkill_KarmaClicked;
-								objSkillControl.DiceRollerClicked += objSkill_DiceRollerClicked;
-
-								objSkillControl.KnowledgeSkill = true;
-								objSkillControl.AllowDelete = true;
-								if (objSkill.Rating > 7)
-									objSkillControl.SkillRatingMaximum = objSkill.Rating;
-								else
-									objSkillControl.SkillRatingMaximum = 6;
-								objSkillControl.SkillRating = objSkill.Rating;
-								objSkillControl.SkillCategory = "Professional";
-								// Set the SkillControl's Location since scrolling the Panel causes it to actually change the child Controls' Locations.
-								objSkillControl.Location = new Point(0, objSkillControl.Height * i + panKnowledgeSkills.AutoScrollPosition.Y);
-								panKnowledgeSkills.Controls.Add(objSkillControl);
-
-								lstNewSkills.Add(objKnowledge);
-							}
-						}
-						foreach (Skill objSkill in lstNewSkills)
-							_objCharacter.Skills.Add(objSkill);
-					}
-
-					_objCharacter.RESEnabled = false;
-					_objCharacter.TechnomancerEnabled = false;
-				}
 			}
 
 			_objFunctions.SortTree(treCyberware);
