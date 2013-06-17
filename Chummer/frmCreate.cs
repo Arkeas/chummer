@@ -362,7 +362,7 @@ namespace Chummer
 			objXmlDocument = XmlManager.Instance.Load("skills.xml");
 
 			// Populate the Skills Controls.
-			XmlNodeList objXmlNodeList = objXmlDocument.SelectNodes("/chummer/skills/skill");
+			XmlNodeList objXmlNodeList = objXmlDocument.SelectNodes("/chummer/skills/skill[" + _objCharacter.Options.BookXPath() + "]");
 			// Counter to keep track of the number of Controls that have been added to the Panel so we can determine their vertical positioning.
 			int i = -1;
 			foreach (Skill objSkill in _objCharacter.Skills)

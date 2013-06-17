@@ -356,7 +356,7 @@ namespace Chummer
 			List<ListItem> lstComplexFormSkills = new List<ListItem>();
 
 			// Populate the Skills Controls.
-			XmlNodeList objXmlNodeList = objXmlDocument.SelectNodes("/chummer/skills/skill");
+			XmlNodeList objXmlNodeList = objXmlDocument.SelectNodes("/chummer/skills/skill[" + _objCharacter.Options.BookXPath() + "]");
 			// Counter to keep track of the number of Controls that have been added to the Panel so we can determine their vertical positioning.
 			int i = -1;
 			foreach (Skill objSkill in _objCharacter.Skills)
@@ -13789,6 +13789,46 @@ namespace Chummer
 					chkJoinGroup.Checked = true;
 					_objCharacter.GroupMember = true;
 					_blnSkipRefresh = false;
+					break;
+				case KarmaExpenseType.RemoveQuality:
+					// Add the Quality back to the character.
+					TreeNode objQualityNode = new TreeNode();
+					List<Weapon> objWeapons = new List<Weapon>();
+					List<TreeNode> objWeaponNodes = new List<TreeNode>();
+
+					Quality objAddQuality = new Quality(_objCharacter);
+					XmlDocument objXmlQualityDocument = XmlManager.Instance.Load("qualities.xml");
+					XmlNode objXmlQualityNode = objXmlQualityDocument.SelectSingleNode("/chummer/qualities/quality[name = \"" + objEntry.Undo.ObjectId + "\"]");
+					objAddQuality.Create(objXmlQualityNode, _objCharacter, QualitySource.Selected, objQualityNode, objWeapons, objWeaponNodes, objEntry.Undo.Extra);
+
+					objQualityNode.ContextMenuStrip = cmsQuality;
+
+					// Add the Quality to the appropriate parent node.
+					if (objAddQuality.Type == QualityType.Positive)
+					{
+						treQualities.Nodes[0].Nodes.Add(objQualityNode);
+						treQualities.Nodes[0].Expand();
+					}
+					else
+					{
+						treQualities.Nodes[1].Nodes.Add(objQualityNode);
+						treQualities.Nodes[1].Expand();
+					}
+					_objCharacter.Qualities.Add(objAddQuality);
+
+					// Add any created Weapons to the character.
+					foreach (Weapon objWeapon in objWeapons)
+						_objCharacter.Weapons.Add(objWeapon);
+
+					// Create the Weapon Node if one exists.
+					foreach (TreeNode objWeaponNode in objWeaponNodes)
+					{
+						objWeaponNode.ContextMenuStrip = cmsWeapon;
+						treWeapons.Nodes[0].Nodes.Add(objWeaponNode);
+						treWeapons.Nodes[0].Expand();
+					}
+
+					_objFunctions.SortTree(treQualities);
 					break;
 				case KarmaExpenseType.ManualAdd:
 				case KarmaExpenseType.ManualSubtract:
