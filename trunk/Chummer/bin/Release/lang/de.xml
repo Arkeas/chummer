@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-945</version>
+	<version>-944</version>
 	<name>Deutsch (DE)</name>
 	<strings>
 		<string>
@@ -4125,7 +4125,7 @@
 		</string>
 		<string>
 			<key>Label_Options_Defaults</key>
-			<text>Standartwerte für neue Charaktere</text>
+			<text>Standardwerte für neue Charaktere</text>
 		</string>
 		<string>
 			<key>Label_Options_CyberlimbCount</key>
@@ -6359,7 +6359,7 @@
 		<!-- Version 396 -->
 		<string>
 			<key>Checkbox_BaseArmor</key>
-			<text>Teil der Standartrüstung</text>
+			<text>Teil der Standardrüstung</text>
 		</string>
 		<string>
 			<key>Checkbox_DoNotAffectMaximum</key>
@@ -6538,7 +6538,7 @@
 		</string>
 		<string>
 			<key>Label_Options_DefaultCharacterSheet</key>
-			<text>Standart Charakaterbogen:</text>
+			<text>Standard Charakaterbogen:</text>
 		</string>
 		<string>
 			<key>Menu_Main_DumpshockThread</key>
@@ -6551,7 +6551,7 @@
 		</string>
 		<string>
 			<key>Message_Options_RestoreDefaults</key>
-			<text>Wollen Sie den Inhalt dieses Reiters wirklich auf die Standartwerte zurück setzen?</text>
+			<text>Wollen Sie den Inhalt dieses Reiters wirklich auf die Standardwerte zurück setzen?</text>
 		</string>
 		<string>
 			<key>MessageTitle_Options_RestoreDefaults</key>
@@ -6577,7 +6577,6 @@
 		<string>
 			<key>Button_Options_PDFTest</key>
 			<text>Test - Seite 5 öffnen</text>
-			<!--Denke wird nicht verwendet. Debug Button? -->
 		</string>
 		<string>
 			<key>Checkbox_Options_DatesIncludeTime</key>
@@ -6591,6 +6590,54 @@
 		<string>
 			<key>String_ExpensePurchaseCyberwareSuite</key>
 			<text>Cyberware-Set erwerben</text>
+		</string>
+		<string>
+			<key>Message_IncorrectGameVersion_SR4</key>
+			<text>Diese Sicherungsdatei ist für Shadowrun 4 vorgesehen, während diese Version von Chummer für Shadowrun 5 ist. Bitte benutze die Version für Shadowrun 4 von Chummer um diese Datei zu öffnen.</text>
+		</string>
+		<string>
+			<key>Message_IncorrectGameVersion_SR5</key>
+			<text>Diese Sicherungsdatei ist für Shadowrun 5 vorgesehen, während diese Version von Chummer für Shadowrun 4 ist. Bitte benutze die Version für Shadowrun 5 von Chummer um diese Datei zu öffnen.</text>
+		</string>
+		<string>
+			<key>MessageTitle_IncorrectGameVersion</key>
+			<text>Falsche Spiel-Edition</text>
+		</string>
+		<string>
+			<key>String_SpellExtended</key>
+			<text>Ausgedehnt</text>
+		</string>
+		<string>
+			<key>Label_DiceRoller_Threshold</key>
+			<text>Mindestwurf:</text>
+		</string>
+		<string>
+			<key>String_DiceRoller_Success</key>
+			<text>Erfolg</text>
+		</string>
+		<string>
+			<key>String_DiceRoller_Failure</key>
+			<text>Fehlschalg</text>
+		</string>
+		<string>
+			<key>Checkbox_Options_LocalisedUpdatesOnly</key>
+			<text>Lade Aktualisierungen nur in der von mir gewählten Sprache.</text>
+		</string>
+		<string>
+			<key>Checkbox_Option_PrintToFileFirst</key>
+			<text>Linux Druckfehler-Fix nutzen.</text>
+		</string>
+		<string>
+			<key>Checkbox_Aerodynamic</key>
+			<text>Aerodynamisch</text>
+		</string>
+		<string>
+			<key>Checkbox_SelectSpell_ExtendedSpell</key>
+			<text>Ausgedehnter Spruch</text>
+		</string>
+		<string>
+			<key>Tip_SelectSpell_ExtendedSpell</key>
+			<text>Sprüche mit ausgedehnter Reichweite haben eine Reichweite von (Kraft x MAG x 10) Metern aber einen um +2 erhöten Entzugswert.</text>
 		</string>
 	</strings>
 </chummer>

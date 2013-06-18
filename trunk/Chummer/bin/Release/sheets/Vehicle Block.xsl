@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- Vehicle sheet based on the Shadowrun 4th Edition Character Sheet -->
 <!-- Created by KeyMasterOfGozer -->
-<!-- Version -994 -->
+<!-- Version -993 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
 	<xsl:include href="ConditionMonitor.xslt"/>
 	<xsl:template match="/characters/character">
@@ -491,6 +491,13 @@
       </xsl:if>  <!-- End Vehicle Ranged Weapons Section -->
     </td>
   </tr>
+  <xsl:if test="notes != ''">
+	<tr>
+		<td colspan="2">
+			<p><br /><strong>Notes: </strong><xsl:value-of select="notes" /><br /><br /></p>
+		</td>
+	</tr>
+  </xsl:if>
   <tr>
     <td colspan="2">
       <xsl:call-template name="ConditionMonitor">

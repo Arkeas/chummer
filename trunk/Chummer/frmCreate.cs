@@ -13186,8 +13186,8 @@ namespace Chummer
 
 		private void chkGearHomeNode_CheckedChanged(object sender, EventArgs e)
 		{
-			Commlink objGear = new Commlink(_objCharacter);
-			objGear = (Commlink)_objFunctions.FindGear(treGear.SelectedNode.Tag.ToString(), _objCharacter.Gear);
+			Gear objGear = new Gear(_objCharacter);
+			objGear = (Gear)_objFunctions.FindGear(treGear.SelectedNode.Tag.ToString(), _objCharacter.Gear);
 			objGear.HomeNode = chkGearHomeNode.Checked;
 			RefreshSelectedGear();
 			UpdateCharacterInfo();
@@ -17680,7 +17680,7 @@ namespace Chummer
 					lblGearAP.Visible = false;
 				}
 
-				if ((_objCharacter.Metatype.EndsWith("A.I.") || _objCharacter.MetatypeCategory == "Technocritters" || _objCharacter.MetatypeCategory == "Protosapients") && objGear.GetType() == typeof(Commlink))
+				if ((_objCharacter.Metatype.EndsWith("A.I.") || _objCharacter.MetatypeCategory == "Technocritters" || _objCharacter.MetatypeCategory == "Protosapients") && (objGear.GetType() == typeof(Commlink) || objGear.Category == "Nexus"))
 				{
 					chkGearHomeNode.Visible = true;
 					chkGearHomeNode.Checked = objGear.HomeNode;
