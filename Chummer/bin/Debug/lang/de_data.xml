@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-979</version>
+	<version>-977</version>
 	<chummer file="armor.xml">
 		<categories>
 			<category translate="Panzerung">Armor</category>
@@ -517,10 +517,20 @@
 				<page>372</page>
 				<translate>Urban-Explorer-Helm</translate>
 			</armor>
-			<armor>
-				<name>Military Helmet</name>
+			<armor exists="False">
+				<name>Military Helmet (Rating 4)</name>
 				<page>57</page>
-				<translate>Militärhelm</translate>
+				<translate>Militärhelm (Stufe 4)</translate>
+			</armor>
+			<armor exists="False">
+				<name>Military Helmet (Rating 5)</name>
+				<page>57</page>
+				<translate>Militärhelm (Stufe 5)</translate>
+			</armor>
+			<armor exists="False">
+				<name>Military Helmet (Rating 6)</name>
+				<page>57</page>
+				<translate>Militärhelm (Stufe 6)</translate>
 			</armor>
 			<armor>
 				<name>Kabuto Helmet</name>
@@ -867,6 +877,11 @@
 				<page>51</page>
 				<translate>Rheingold zeitloS Aurora Blazer (Ensemble)</translate>
 			</armor>
+			<armor exists="False">
+				<name>Runflat Sandals</name>
+				<page>155</page>
+				<translate>Runflat-Sandalen</translate>
+			</armor>
 			<armor>
 				<name>SecureTech PPP Armor (Ensemble)</name>
 				<page>55</page>
@@ -945,11 +960,6 @@
 				<translate>Strahlenschutz</translate>
 			</mod>
 			<mod>
-				<name>Runflat Sandals</name>
-				<page>155</page>
-				<translate>Runflat-Sandalen</translate>
-			</mod>
-			<mod>
 				<name>Ruthenium Polymer Coating</name>
 				<page>56</page>
 				<translate>Rutheniumpolymer-Überzug</translate>
@@ -964,10 +974,20 @@
 				<page>372</page>
 				<translate>Wärmedämpfung</translate>
 			</mod>
-			<mod>
-				<name>Responsive Interface Gear</name>
+			<mod exists="False">
+				<name>Responsive Interface Gear (Helmet, Cold Sim)</name>
 				<page>177</page>
-				<translate>Reaktionsinterfacegeräte</translate>
+				<translate>Reaktionsinterfacegeräte (Helm, Kaltes Sim)</translate>
+			</mod>
+			<mod exists="False">
+				<name>Responsive Interface Gear (Helmet, Hot Sim)</name>
+				<page>177</page>
+				<translate>Reaktionsinterfacegeräte (Helm, Heißes Sim)</translate>
+			</mod>
+			<mod exists="False">
+				<name>Responsive Interface Gear (Armor)</name>
+				<page>177</page>
+				<translate>Reaktionsinterfacegeräte (Panzerung)</translate>
 			</mod>
 			<mod>
 				<name>Quizzel Dragon Wings</name>
@@ -1204,6 +1224,11 @@
 				<page>48</page>
 				<translate>durchsichtiger Rutheniumpolymerüberzug</translate>
 			</mod>
+			<mod>
+				<name>Internal Air Tank</name>
+				<page>342</page>
+				<translate>Interner Lufttank</translate>
+			</mod>
 		</mods>
 	</chummer>
 	<chummer file="bioware.xml">
@@ -1314,7 +1339,7 @@
 				<translate>Metabolismusfilter</translate>
 			</bioware>
 			<bioware>
-				<name>Chloroplash Skin</name>
+				<name>Chloroplast Skin</name>
 				<page>65</page>
 				<translate>Chloroplasthaut</translate>
 			</bioware>
@@ -2034,7 +2059,7 @@
 			</book>
 			<book>
 				<name>Parazoology</name>
-				<translate>Parazoology</translate>
+				<translate>Parazoologie</translate>
 				<code>PZ</code>
 			</book>
 			<book>
@@ -2095,7 +2120,7 @@
 			<book>
 				<name>The Way of the Adept</name>
 				<translate>Weg des Adepten</translate>
-				<code>WA</code>
+				<code>WdA</code>
 			</book>
 			<book>
 				<name>State of the Art: 2073</name>
@@ -2132,6 +2157,26 @@
 				<translate>Safehouses</translate>
 				<code>SH</code>
 			</book>
+			<book exists="False">
+				<name>Euro War Antiques</name>
+				<translate>Eurokrieg-Antiquitäten</translate>
+				<code>EA</code>
+			</book>
+			<book exists="False">
+				<name>Used Car Lot</name>
+				<translate>Vertraute Fahrzeuge</translate>
+				<code>VF</code>
+			</book>
+			<book exists="False">
+				<name>The Way of the Samurai</name>
+				<translate>Der Weg des Samurai</translate>
+				<code>WdS</code>
+			</book>
+			<book exists="False">
+				<name>The Clutch of Dragons</name>
+				<translate>Drachenbrut</translate>
+				<code>DB</code>
+			</book>
 		</books>
 	</chummer>
 	<chummer file="critterpowers.xml">
@@ -2144,6 +2189,7 @@
 			<category translate="Gestaltwandler">Shapeshifter</category>
 			<category translate="">Toxic Critter Powers</category>
 			<category translate="Schwächen">Weakness</category>
+			<category translate="Echos">Echoes</category>
 		</categories>
 		<powers>
 			<power>
@@ -2887,6 +2933,11 @@
 				<translate>Erzwungener Schlaf</translate>
 			</power>
 			<power>
+				<name>Vanish</name>
+				<page>89</page>
+				<translate>Entschwinden</translate>
+			</power>
+			<power>
 				<name>Attribute Enhancement</name>
 				<page>37</page>
 				<translate>Attributverbesserung</translate>
@@ -2915,6 +2966,191 @@
 				<name>Chimeric Ability</name>
 				<page>37</page>
 				<translate>Chimärenfähigkeit</translate>
+			</power>
+			<power>
+				<name>Firewall Upgrade</name>
+				<page>284</page>
+				<translate>Firewall-Upgrade</translate>
+			</power>
+			<power>
+				<name>NeuroFilter</name>
+				<page>284</page>
+				<translate>Neurofilter</translate>
+			</power>
+			<power>
+				<name>Overclocking</name>
+				<page>284</page>
+				<translate>Prozessbeschleunigung</translate>
+			</power>
+			<power>
+				<name>Resonance Link</name>
+				<page>284</page>
+				<translate>Resonanzverbindung</translate>
+			</power>
+			<power>
+				<name>System Upgrade</name>
+				<page>284</page>
+				<translate>System-Upgrade</translate>
+			</power>
+			<power>
+				<name>Amplification</name>
+				<page>156</page>
+				<translate>Verstärkung</translate>
+			</power>
+			<power>
+				<name>Biowire</name>
+				<page>156</page>
+				<translate>Biowire</translate>
+			</power>
+			<power>
+				<name>Blur</name>
+				<page>158</page>
+				<translate>Unschärfe</translate>
+			</power>
+			<power>
+				<name>Coenesthesia</name>
+				<page>156</page>
+				<translate>Bauchgefühl</translate>
+			</power>
+			<power>
+				<name>Defragmentation</name>
+				<page>157</page>
+				<translate>Defragmentierung</translate>
+			</power>
+			<power>
+				<name>E-sensing</name>
+				<page>157</page>
+				<translate>Elektrosensibilität</translate>
+			</power>
+			<power>
+				<name>Flexible Touch</name>
+				<page>157</page>
+				<translate>Flüchtige Berührung</translate>
+			</power>
+			<power>
+				<name>Immersion</name>
+				<page>158</page>
+				<translate>Versenkung</translate>
+			</power>
+			<power>
+				<name>Info Sortilege</name>
+				<page>157</page>
+				<translate>Informationsgespür</translate>
+			</power>
+			<power>
+				<name>Living ECM</name>
+				<page>158</page>
+				<translate>Lebendes ECM</translate>
+			</power>
+			<power>
+				<name>Macro</name>
+				<page>158</page>
+				<translate>Makro</translate>
+			</power>
+			<power>
+				<name>Multiprocessing</name>
+				<page>158</page>
+				<translate>Simultanverarbeitung</translate>
+			</power>
+			<power>
+				<name>Sift</name>
+				<page>158</page>
+				<translate>Sieb</translate>
+			</power>
+			<power>
+				<name>Skinlink</name>
+				<page>158</page>
+				<translate>Skinlink</translate>
+			</power>
+			<power>
+				<name>Sparky</name>
+				<page>158</page>
+				<translate>Resonanzschock</translate>
+			</power>
+			<power>
+				<name>Sprite Link</name>
+				<page>158</page>
+				<translate>Spriteverbindung</translate>
+			</power>
+			<power>
+				<name>Swap</name>
+				<page>157</page>
+				<translate>Halten</translate>
+			</power>
+			<power>
+				<name>Widget Crafting</name>
+				<page>159</page>
+				<translate>Widget-Herstellung</translate>
+			</power>
+			<power>
+				<name>Acceleration</name>
+				<page>159</page>
+				<translate>Beschleunigung</translate>
+			</power>
+			<power>
+				<name>Advanced Overclocking</name>
+				<page>159</page>
+				<translate>Erweiterte Prozessbeschleunigung</translate>
+			</power>
+			<power>
+				<name>Enhanced Resonance Link</name>
+				<page>159</page>
+				<translate>Verbesserte Resonanzverbindung</translate>
+			</power>
+			<power>
+				<name>Mesh Reality</name>
+				<page>160</page>
+				<translate>Verzahnte Realität</translate>
+			</power>
+			<power>
+				<name>Mind Over Machine</name>
+				<page>159</page>
+				<translate>Maschinenbeherrschung</translate>
+			</power>
+			<power>
+				<name>Resonance Exchange</name>
+				<page>159</page>
+				<translate>Resonanzaustausch</translate>
+			</power>
+			<power>
+				<name>Resonance Trodes</name>
+				<page>159</page>
+				<translate>Resonanzberührung</translate>
+			</power>
+			<power>
+				<name>Connectivity</name>
+				<page>195</page>
+				<translate>Anbindung</translate>
+			</power>
+			<power>
+				<name>Feral Resonance</name>
+				<page>195</page>
+				<translate>Wilde Resonanz</translate>
+			</power>
+			<power>
+				<name>Bio-Radar</name>
+				<page>195</page>
+				<translate>Bio-Radar</translate>
+			</power>
+			<power>
+				<name>Contaminate</name>
+				<page>192</page>
+				<translate>Kontamination</translate>
+			</power>
+			<power>
+				<name>Malfunction</name>
+				<page>192</page>
+				<translate>Fehlfunktion</translate>
+			</power>
+			<power>
+				<name>Pryon</name>
+				<page>193</page>
+				<translate>Pryon</translate>
+			</power>
+			<power>
+				<name>Siphon</name>
+				<page>193</page>
+				<translate>Siphon</translate>
 			</power>
 		</powers>
 	</chummer>
@@ -6914,107 +7150,242 @@
 				<page>168</page>
 				<translate>Freefall-Balanceverstärker</translate>
 			</cyberware>
+			<cyberware exists="False">
+				<name>Boosted Reflexes</name>
+				<page>15</page>
+				<translate>Reflexverstärkung</translate>
+			</cyberware>
+			<cyberware exists="False">
+				<name>Arm Blade</name>
+				<page>15</page>
+				<translate>Armklinge</translate>
+			</cyberware>
+			<cyberware exists="False">
+				<name>Cranial Containment Unit</name>
+				<page>166</page>
+				<translate>Zerebral-Schutzkapsel</translate>
+			</cyberware>
 		</cyberwares>
 		<suites>
 			<suite>
 				<name>Aztechnology Topo</name>
 				<translate>Aztechnology Topo</translate>
+				<page>50</page>
 			</suite>
 			<suite>
 				<name>Clockwerk Bright Cloud Basic</name>
 				<translate>Clockwerk Bright Cloud Basic</translate>
+				<page>50</page>
 			</suite>
 			<suite>
 				<name>Clockwerk Bright Cloud Alpha</name>
 				<translate>Clockwerk Bright Cloud Alpha</translate>
+				<page>50</page>
 			</suite>
 			<suite>
 				<name>Clockwerk Bright Cloud Beta</name>
 				<translate>Clockwerk Bright Cloud Beta</translate>
+				<page>50</page>
 			</suite>
 			<suite>
 				<name>Evo Aquanaut Basic</name>
 				<translate>Evo Aquanaut Basic</translate>
+				<page>50</page>
 			</suite>
 			<suite>
 				<name>Evo Aquanaut Professional</name>
 				<translate>Evo Aquanaut Professional</translate>
+				<page>50</page>
 			</suite>
 			<suite>
 				<name>Evo Aquanaut Luxury</name>
 				<translate>Evo Aquanaut Luxus</translate>
+				<page>50</page>
 			</suite>
 			<suite>
 				<name>NeoNET/Spin-X Sternschutz Standard ZK</name>
 				<translate>NeoNET/SpIn-X Sternschutz Standard ZK</translate>
+				<page>50</page>
 			</suite>
 			<suite>
 				<name>NeoNET/Spin-X Sternschutz Alpha ZK</name>
 				<translate>NeoNET/SpIn-X Sternschutz Alpha ZK</translate>
+				<page>50</page>
 			</suite>
 			<suite>
 				<name>Saeder-Krupp Signifier Prime Basic</name>
 				<translate>Saeder-Krupp Signifier Prime Basic</translate>
+				<page>51</page>
 			</suite>
 			<suite>
 				<name>Saeder-Krupp Signifier Prime Alpha</name>
 				<translate>Saeder-Krupp Signifier Prime Alpha</translate>
+				<page>51</page>
 			</suite>
 			<suite>
 				<name>Saeder-Krupp Signifier Prime Beta</name>
 				<translate>Saeder-Krupp Signifier Prime Beta</translate>
+				<page>51</page>
 			</suite>
 			<suite>
 				<name>Lone Star SWAT</name>
 				<translate>Lone Star SWAT</translate>
+				<page>50</page>
 			</suite>
 			<suite>
 				<name>Lone Star SWAT Watchman</name>
 				<translate>Lone Star SWAT Watchman</translate>
+				<page>50</page>
 			</suite>
 			<suite>
 				<name>Shiawase Executive Suite Silverline</name>
 				<translate>Shiawase Executive Suite Silverline</translate>
+				<page>51</page>
 			</suite>
 			<suite>
 				<name>Shiawase Executive Suite Goldline</name>
 				<translate>Shiawase Executive Suite Goldline</translate>
+				<page>51</page>
 			</suite>
 			<suite>
 				<name>Saeder-Krupp Cyberlogician Standard Civilian</name>
 				<translate>Saeder-Krupp Cyberlogician Zivilversion Standard</translate>
+				<page>50</page>
 			</suite>
 			<suite>
 				<name>Saeder-Krupp Cyberlogician Deluxe Civilian</name>
 				<translate>Saeder-Krupp Cyberlogician Zivilversion Deluxe</translate>
+				<page>50</page>
 			</suite>
 			<suite>
 				<name>Saeder-Krupp Cyberlogician Standard Military</name>
 				<translate>Saeder-Krupp Cyberlogician Militärversion Standard</translate>
+				<page>50</page>
 			</suite>
 			<suite>
 				<name>Saeder-Krupp Cyberlogician Deluxe Military</name>
 				<translate>Saeder-Krupp Cyberlogician Militärversion Deluxe</translate>
+				<page>50</page>
 			</suite>
 			<suite>
 				<name>Urban Kshatriya Alpha</name>
 				<translate>Urban Kshatriya Alpha</translate>
+				<page>51</page>
 			</suite>
 			<suite>
 				<name>Urban Kshatriya Beta</name>
 				<translate>Urban Kshatriya Beta</translate>
+				<page>51</page>
 			</suite>
 			<suite>
 				<name>Zeiss SenseSation Basic</name>
 				<translate>Zeiss SenseSation Basic</translate>
+				<page>51</page>
 			</suite>
 			<suite>
 				<name>Zeiss SenseSation Livecaster</name>
 				<translate>Zeiss SenseSation Livecaster</translate>
+				<page>51</page>
 			</suite>
 			<suite>
 				<name>Zeiss SenseSation Executive</name>
 				<translate>Zeiss SenseSation Executive</translate>
+				<page>51</page>
+			</suite>
+			<suite exists="False">
+				<name>Cerebrotech Crystal Optics Clearseer</name>
+				<translate>Cerebrotech Crystal Optics Clearseer</translate>
+				<page>12</page>
+			</suite>
+			<suite exists="False">
+				<name>Cerebrotech Crystal Optics Clearseer Firewatch</name>
+				<translate>Cerebrotech Crystal Optics Clearseer Firewatch</translate>
+				<page>12</page>
+			</suite>
+			<suite exists="False">
+				<name>Mitsuhama NeoBushido</name>
+				<translate>Mitsuhama NeoBushido</translate>
+				<page>12</page>
+			</suite>
+			<suite exists="False">
+				<name>Mitsuhama NeoBushido Elite Samurai</name>
+				<translate>Mitsuhama NeoBushido Elite Samurai</translate>
+				<page>12</page>
+			</suite>
+			<suite exists="False">
+				<name>Spin-X Olympian</name>
+				<translate>Spin-X Olympian</translate>
+				<page>12</page>
+			</suite>
+			<suite exists="False">
+				<name>Mitsuhama Spidersuite</name>
+				<translate>Mitsuhama Spidersuite</translate>
+				<page>12</page>
+			</suite>
+			<suite exists="False">
+				<name>Saeder-Krupp Höllensturm Artillery Suite</name>
+				<translate>Saeder-Krupp Höllensturm Artillery Suite</translate>
+				<page>12</page>
+			</suite>
+			<suite exists="False">
+				<name>Saeder-Krupp Höllensturm Artillery Suite Overwatch</name>
+				<translate>Saeder-Krupp Höllensturm Artillery Suite Overwatch</translate>
+				<page>12</page>
+			</suite>
+			<suite exists="False">
+				<name>NeoNET Streetwise Courier Suite</name>
+				<translate>NeoNET Streetwise Courier Suite</translate>
+				<page>13</page>
+			</suite>
+			<suite exists="False">
+				<name>Shiawase Reccear Recon Suite</name>
+				<translate>Shiawase Reccear Recon Suite</translate>
+				<page>13</page>
+			</suite>
+			<suite exists="False">
+				<name>Shiawase Reccear Elite Suite</name>
+				<translate>Shiawase Reccear Elite Suite</translate>
+				<page>13</page>
+			</suite>
+			<suite exists="False">
+				<name>Universal Omnitech Infiltr8R</name>
+				<translate>Universal Omnitech Infiltr8R</translate>
+				<page>13</page>
+			</suite>
+			<suite exists="False">
+				<name>Universal Omnitech Glenn Space Survivorsuite</name>
+				<translate>Universal Omnitech Armstrong Space Survivor</translate>
+				<page>13</page>
+			</suite>
+			<suite exists="False">
+				<name>Urban Gunfighter</name>
+				<translate>Urban Gunfighter</translate>
+				<page>13</page>
+			</suite>
+			<suite exists="False">
+				<name>Urban Gunfighter Aleph</name>
+				<translate>Urban Gunfighter Aleph</translate>
+				<page>13</page>
+			</suite>
+			<suite exists="False">
+				<name>Spin-X Handyman</name>
+				<translate>Spin-X Handyman</translate>
+				<page>14</page>
+			</suite>
+			<suite exists="False">
+				<name>Ares Bodyguard</name>
+				<translate>Ares Bodyguard</translate>
+				<page>14</page>
+			</suite>
+			<suite exists="False">
+				<name>Ares Bodyguard Pro</name>
+				<translate>Ares Bodyguard Pro</translate>
+				<page>14</page>
+			</suite>
+			<suite exists="False">
+				<name>Aztechnology Cipactli</name>
+				<translate>Aztechnology Cipactli</translate>
+				<page>14</page>
 			</suite>
 		</suites>
 	</chummer>
@@ -7156,7 +7527,7 @@
 				<translate>Verzahnte Realität</translate>
 			</echo>
 			<echo>
-				<name>Mind Over machine</name>
+				<name>Mind Over Machine</name>
 				<page>159</page>
 				<translate>Maschinenbeherrschung</translate>
 			</echo>
@@ -7224,7 +7595,7 @@
 			<category translate="Einbruchswerkzeug">B&amp;E Gear</category>
 			<category translate="Biomedikamente">Biomeds</category>
 			<category translate="Biotech">Biotech</category>
-			<category translate="">Camouflage Gear</category>
+			<category translate="Tarnausrüstung">Camouflage Gear</category>
 			<category translate="Camping- und Überlebensausrüstung">Camping and Survival Gear</category>
 			<category translate="Chemsniffer-Abwehr">Chem-Sniffer Defenses</category>
 			<category translate="Chemtech">Chemtech</category>
@@ -7297,7 +7668,7 @@
 			<category translate="Zauberformeln">Spell Formulae</category>
 			<category translate="Spionage Spielezeug">Spy Toys</category>
 			<category translate="Speichermedien">Storage Media</category>
-			<category translate="">Surveillance Gear</category>
+			<category translate="Überlebensausrüstung">Surveillance Gear</category>
 			<category translate="Taktische AR-Software">Tactical AR Software</category>
 			<category translate="Telematische Infrastruktur-Software">Telematics Infrastructure Software</category>
 			<category translate="Werkzeug">Tools</category>
@@ -7308,6 +7679,20 @@
 			<category translate="Sichtverstärkung">Vision Enhancements</category>
 			<category translate="WiFi-Abschirmung">Wireless Negation</category>
 			<category translate="Tiere">Animals</category>
+			<category translate="Erwachte Mineralien">Awakened Minerals</category>
+			<category translate="Getränke">Beverages</category>
+			<category translate="Chemikalien">Chemicals</category>
+			<category translate="Cyberdecks">Cyberdecks</category>
+			<category translate="Cyberdeckoptionen">Cyberdeck Options</category>
+			<category translate="Cyberterminals">Cyberterminals</category>
+			<category translate="Koffer">Luggage</category>
+			<category translate="Magische Verbindungen">Magical Alloys</category>
+			<category translate="Farben">Paints</category>
+			<category translate="Pflanzen">Plants</category>
+			<category translate="Reagenzien">Reagents</category>
+			<category translate="Simsinn-Drogen">Simsense Drugs</category>
+			<category translate="Überwachungs- und Sicherheitsausrüstung">Surveillance and Security Devices</category>
+			<category translate="Echte Elemente">True Elements</category>
 		</categories>
 		<gears>
 			<gear>
@@ -7904,6 +8289,11 @@
 				<name>Trailblazer</name>
 				<page>122</page>
 				<translate>Fährtensucher</translate>
+			</gear>
+			<gear exists="False">
+				<name>Custom Autosoft</name>
+				<page>122</page>
+				<translate>Fertigkeits-Autosoft</translate>
 			</gear>
 			<gear>
 				<name>Suite: Basic User</name>
@@ -9827,7 +10217,7 @@
 				<translate>Universal-Mirror-Leichensack</translate>
 			</gear>
 			<gear>
-				<name>Universal Mirror Hodd</name>
+				<name>Universal Mirror Hood</name>
 				<page>197</page>
 				<translate>Universal-Mirror-Kapuze</translate>
 			</gear>
@@ -10944,6 +11334,11 @@
 				<translate>Ersatzladestreifen</translate>
 			</gear>
 			<gear>
+				<name>Spare Clip (HK Urban Fighter)</name>
+				<page>367f</page>
+				<translate>Ersatzladestreifen (HK Urban Fighter)</translate>
+			</gear>
+			<gear>
 				<name>Ammo Drum/Box</name>
 				<page>36</page>
 				<translate>Munitionskasten/-trommel</translate>
@@ -11286,91 +11681,91 @@
 				<translate>Grenate Plugin: Gecko</translate>
 			</gear>
 			<gear>
-				<name>Minigranate: Instant Snare</name>
+				<name>Minigrenade: Instant Snare</name>
 				<page>205</page>
 				<translate>Minigranate: Instant-Fangnetz</translate>
 			</gear>
 			<gear>
-				<name>Minigranate: Slick</name>
+				<name>Minigrenade: Slick</name>
 				<page>205</page>
 				<translate>Minigranate: Glitschgranate</translate>
 			</gear>
 			<gear>
-				<name>Minigranate: Esprit Petite Brume</name>
+				<name>Minigrenade: Esprit Petite Brume</name>
 				<page>73</page>
 				<translate>Minigranate: Esprit Petite Brume</translate>
 			</gear>
 			<gear>
-				<name>Minigranate: Flare</name>
+				<name>Minigrenade: Flare</name>
 				<page>40</page>
 				<translate>Minigranate: Leucht</translate>
 			</gear>
 			<gear>
-				<name>Minigranate: Flash</name>
+				<name>Minigrenade: Flash</name>
 				<page>40</page>
 				<translate>Minigranate: Blitz</translate>
 			</gear>
 			<gear>
-				<name>Minigranate: Incendiary</name>
+				<name>Minigrenade: Incendiary</name>
 				<page>40</page>
 				<translate>Minigranate: Brand</translate>
 			</gear>
 			<gear>
-				<name>Minigranate: Ink</name>
+				<name>Minigrenade: Ink</name>
 				<page>40</page>
 				<translate>Minigranate: Tinte</translate>
 			</gear>
 			<gear>
-				<name>Minigranate: Splash</name>
+				<name>Minigrenade: Splash</name>
 				<page>40</page>
 				<translate>Minigranate: Splash</translate>
 			</gear>
 			<gear>
-				<name>Minigranate: White Phosphorus</name>
+				<name>Minigrenade: White Phosphorus</name>
 				<page>40</page>
 				<translate>Minigranate: Weißer Phosphor</translate>
 			</gear>
 			<gear>
-				<name>Minigranate: Flash-Bang</name>
+				<name>Minigrenade: Flash-Bang</name>
 				<page>371</page>
 				<translate>Minigranate: Betäubung</translate>
 			</gear>
 			<gear>
-				<name>Minigranate: Flash-Pak</name>
+				<name>Minigrenade: Flash-Pak</name>
 				<page>371</page>
 				<translate>Minigranate: Flash-Pack</translate>
 			</gear>
 			<gear>
-				<name>Minigranate: Fragmentation</name>
+				<name>Minigrenade: Fragmentation</name>
 				<page>371</page>
 				<translate>Minigranate: Splitter</translate>
 				&gt;
 			</gear>
 			<gear>
-				<name>Minigranate: High Explosive</name>
+				<name>Minigrenade: High Explosive</name>
 				<page>371</page>
 				<translate>Minigranate: Spreng</translate>
 				&gt;
 			</gear>
 			<gear>
-				<name>Minigranate: Gas</name>
+				<name>Minigrenade: Gas</name>
 				<page>371</page>
 				<translate>Minigranate: Gas</translate>
 			</gear>
 			<gear>
-				<name>Minigranate: Smoke</name>
+				<name>Minigrenade: Smoke</name>
 				<page>371</page>
 				<translate>Minigranate: Rauch</translate>
 				&gt;
 			</gear>
 			<gear>
-				<name>Minigranate: Thermal Smoke</name>
+				<name>Minigrenade: Thermal Smoke</name>
 				<page>371</page>
 				<translate>Minigranate: IR-Rauch</translate>
 				&gt;&gt;
 			</gear>
 			<gear>
-				<name>Minigranate: Monofilament</name>
+				<name>Minigrenade: Monofilament</name>
 				<page>157</page>
 				<translate>Minigranate: Monofilament</translate>
 			</gear>
@@ -12403,7 +12798,7 @@
 				<translate>Singularity Seeker</translate>
 			</gear>
 			<gear>
-				<name>Software Programm Suite</name>
+				<name>Software Programming Suite</name>
 				<page>127</page>
 				<translate>Software-Programmiersuite</translate>
 			</gear>
@@ -13870,6 +14265,977 @@
 				<name>Horizon Canteen System</name>
 				<page>168</page>
 				<translate>Horizon Canteen System</translate>
+			</gear>
+			<gear exists="False">
+				<name>Austras Kok</name>
+				<page>4</page>
+				<translate>
+				</translate>
+			</gear>
+			<gear exists="False">
+				<name>Black Mana Orchid</name>
+				<page>22</page>
+				<translate>Schwarze Manaorchidee</translate>
+			</gear>
+			<gear exists="False">
+				<name>Brazilian Kiwi</name>
+				<page>6</page>
+				<translate>Brasilianische Kiwi</translate>
+			</gear>
+			<gear exists="False">
+				<name>Chimera Tree</name>
+				<page>7</page>
+				<translate>Chimärenbaum</translate>
+			</gear>
+			<gear exists="False">
+				<name>Devil's Breath</name>
+				<page>24</page>
+				<translate>Teufelsatem</translate>
+			</gear>
+			<gear exists="False">
+				<name>Divining Lotus</name>
+				<page>26</page>
+				<translate>Weissagungslotus</translate>
+			</gear>
+			<gear exists="False">
+				<name>Hag Bolete</name>
+				<page>10</page>
+				<translate>Hexenröhrling</translate>
+			</gear>
+			<gear exists="False">
+				<name>Jani Fern</name>
+				<page>11</page>
+				<translate>Jani-Farn</translate>
+			</gear>
+			<gear exists="False">
+				<name>Laésal Tree</name>
+				<page>13</page>
+				<translate>Laésalbaum</translate>
+			</gear>
+			<gear exists="False">
+				<name>Metadrake</name>
+				<page>14</page>
+				<translate>Metalraune</translate>
+			</gear>
+			<gear exists="False">
+				<name>Molu</name>
+				<page>15</page>
+				<translate>Moly</translate>
+			</gear>
+			<gear exists="False">
+				<name>Nahala Aloe</name>
+				<page>16</page>
+				<translate>Nahala-Aloe</translate>
+			</gear>
+			<gear exists="False">
+				<name>Porqupod Tree</name>
+				<page>18</page>
+				<translate>Porqupodbaum</translate>
+			</gear>
+			<gear exists="False">
+				<name>Raskovnik</name>
+				<page>19</page>
+				<translate>Raskovnik</translate>
+			</gear>
+			<gear exists="False">
+				<name>Sangre Del Diablo</name>
+				<page>20</page>
+				<translate>Sangre Del Diablo</translate>
+			</gear>
+			<gear exists="False">
+				<name>Sleeping Willow</name>
+				<page>21</page>
+				<translate>Schlafweide</translate>
+			</gear>
+			<gear exists="False">
+				<name>Spider Fern</name>
+				<page>23</page>
+				<translate>Spinnenfarn</translate>
+			</gear>
+			<gear exists="False">
+				<name>Weeping Tree</name>
+				<page>25</page>
+				<translate>Weinender Baum</translate>
+			</gear>
+			<gear exists="False">
+				<name>Whipcord Viper Lily</name>
+				<page>17</page>
+				<translate>Peitschenschnur-Vipernlilie</translate>
+			</gear>
+			<gear exists="False">
+				<name>Xutuli</name>
+				<page>27</page>
+				<translate>Xutuli</translate>
+			</gear>
+			<gear exists="False">
+				<name>Yann Orchid</name>
+				<page>28</page>
+				<translate>Yann-Orchidee</translate>
+			</gear>
+			<gear exists="False">
+				<name>Ziba Tree</name>
+				<page>29</page>
+				<translate>Ziebabaum</translate>
+			</gear>
+			<gear exists="False">
+				<name>Gomorrah Apple Tree</name>
+				<page>30</page>
+				<translate>Gomorrah-Apfelbaum</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herculean Strangleknots</name>
+				<page>31</page>
+				<translate>Herkulischer WürgeknötericH</translate>
+			</gear>
+			<gear exists="False">
+				<name>Slum Slime</name>
+				<page>32</page>
+				<translate>Slumschleim</translate>
+			</gear>
+			<gear exists="False">
+				<name>Tumblenaut Weed</name>
+				<page>33</page>
+				<translate>Steppenwirbler</translate>
+			</gear>
+			<gear exists="False">
+				<name>Umdhlebi</name>
+				<page>34</page>
+				<translate>Umdhlebi</translate>
+			</gear>
+			<gear exists="False">
+				<name>Dropping Pine</name>
+				<page>35</page>
+				<translate>Fallkiefer</translate>
+			</gear>
+			<gear exists="False">
+				<name>Walking Banana Tree</name>
+				<page>36</page>
+				<translate>Gehender Bananenbaum</translate>
+			</gear>
+			<gear exists="False">
+				<name>Thorn Blades</name>
+				<page>38</page>
+				<translate>Dornenhalme</translate>
+			</gear>
+			<gear exists="False">
+				<name>Teapot Fern</name>
+				<page>39</page>
+				<translate>Teekannenfarn</translate>
+			</gear>
+			<gear exists="False">
+				<name>Detective Fichus</name>
+				<page>37</page>
+				<translate>Detektiv-Feige</translate>
+			</gear>
+			<gear exists="False">
+				<name>Pelagos, Valley Green Chardonay (bottle)</name>
+				<page>42</page>
+				<translate>Pelagos, Valley Green Chardonay (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Pelagos, Napa Yellow (bottle)</name>
+				<page>42</page>
+				<translate>Pelagos, Napa Yellow (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Pelagos, Pacific Blue (bottle)</name>
+				<page>42</page>
+				<translate>Pelagos, Pacific Blue (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Pelagos, Spanish Gold (bottle)</name>
+				<page>42</page>
+				<translate>Pelagos, Spanish Gold (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Pelagos, Mediterranean (bottle)</name>
+				<page>42</page>
+				<translate>Pelagos, Mediterranean (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Pelagos, Red Tide (bottle)</name>
+				<page>42</page>
+				<translate>Pelagos, Red Tide (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Pelagos, Gaia Blue (bottle)</name>
+				<page>42</page>
+				<translate>Pelagos, Gaia Blue (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Pelagos, Martian Crimson (bottle)</name>
+				<page>42</page>
+				<translate>Pelagos, Martian Crimson (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Pelagos, Venusians Pale (bottle)</name>
+				<page>42</page>
+				<translate>Pelagos, Venusians Pale (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Alamestra (bottle)</name>
+				<page>43</page>
+				<translate>Alamestra (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Cara'Sir Kirsch (bottle)</name>
+				<page>43</page>
+				<translate>Cara'Sir Kirsch (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Cetheral (six pack)</name>
+				<page>43</page>
+				<translate>Cetheral (Sechserträger)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Näch (six pack)</name>
+				<page>43</page>
+				<translate>Näch (Sechserträger)</translate>
+			</gear>
+			<gear exists="False">
+				<name>KéValan Frunte (bottle)</name>
+				<page>43</page>
+				<translate>KéValan Frunte (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Sil Oineäm (12 oz.)</name>
+				<page>43</page>
+				<translate>Sil Oineäm (325 ml.)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Sérentaneyo Laésate (bottle)</name>
+				<page>43</page>
+				<translate>Sérentaneyo Laésate (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Taéngelé (Falan) (bottle)</name>
+				<page>43</page>
+				<translate>Taéngelé (Falan) (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Taéngelé (Gheal) (bottle)</name>
+				<page>43</page>
+				<translate>Taéngelé (Gheal) (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Tir Lacrima White (bottle)</name>
+				<page>43</page>
+				<translate>Tir Lacrima White (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Tir Lacrima Rosé (bottle)</name>
+				<page>43</page>
+				<translate>Tir Lacrima Rosé (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Tolanestéa Kirsch (bottle)</name>
+				<page>43</page>
+				<translate>Tolanestéa Kirsch (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Tolanestéa Gewürztraminer (bottle)</name>
+				<page>43</page>
+				<translate>Tolanestéa Gewürztraminer (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Soy Kefir (bottle)</name>
+				<page>44</page>
+				<translate>Soykefir (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Soy Kumiss (bottle)</name>
+				<page>44</page>
+				<translate>Soykumys (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Soykaf (12 oz.)</name>
+				<page>44</page>
+				<translate>Soykaf (325 ml.)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Synthohol (six pack)</name>
+				<page>44</page>
+				<translate>Synthohol (Sechserträger)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Soda (six pack)</name>
+				<page>44</page>
+				<translate>Soda (Sechserträger)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Hurlg (bottle)</name>
+				<page>44</page>
+				<translate>Hurlg (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Scotch (bottle)</name>
+				<page>44</page>
+				<translate>Scotch (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Scotch (shot)</name>
+				<page>44</page>
+				<translate>Scotch (Kurzer)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Beer (bottle)</name>
+				<page>45</page>
+				<translate>Bier (Flasche)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Ammo: Deathdealer</name>
+				<page>33</page>
+				<translate>Munition: Deathdealer</translate>
+			</gear>
+			<gear exists="False">
+				<name>Vehicle Missile: Riptide Torpedo</name>
+				<page>24</page>
+				<translate>Fahrzeugrakete: Riptide</translate>
+			</gear>
+			<gear exists="False">
+				<name>Vehicle Missile: Cranston Surface-to-Air Missile</name>
+				<page>25</page>
+				<translate>Fahrzeugrakete: Cranston</translate>
+			</gear>
+			<gear exists="False">
+				<name>Rocket: Dagger Anti-Tank</name>
+				<page>25</page>
+				<translate>Rakete: Dagger</translate>
+			</gear>
+			<gear exists="False">
+				<name>Vehicle Missile: SA-53 Surface-to-Air Missile</name>
+				<page>27</page>
+				<translate>Fahrzeugrakete: SA-53</translate>
+			</gear>
+			<gear exists="False">
+				<name>Vehicle Missile: Bulwark Surface-to-Air Missile</name>
+				<page>27</page>
+				<translate>Fahrzeugrakete: Bulwark</translate>
+			</gear>
+			<gear exists="False">
+				<name>Vehicle Missile: Stealth Shadow</name>
+				<page>28</page>
+				<translate>Fahrzeugrakete: Stealth Shadow</translate>
+			</gear>
+			<gear exists="False">
+				<name>Cruise Missile: EMTACAR</name>
+				<page>29</page>
+				<translate>Marschflugkörper: EMTACAR</translate>
+			</gear>
+			<gear exists="False">
+				<name>Cruise Missile: Regulus 68</name>
+				<page>29</page>
+				<translate>Marschflugkörper: Regulus 68</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: MTR Anti-Tank</name>
+				<page>30</page>
+				<translate>Rakete: MTR</translate>
+			</gear>
+			<gear exists="False">
+				<name>Rocket: Zuni IX</name>
+				<page>30</page>
+				<translate>Rakete: Zuni IX</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: Inferno Anti-Tank</name>
+				<page>31</page>
+				<translate>Rakete: Inferno</translate>
+			</gear>
+			<gear>
+				<name>Ammo: Freeze Foam</name>
+				<page>88</page>
+				<translate>Munition: Hartschaum</translate>
+			</gear>
+			<gear>
+				<name>Rocket: Basic HE Artillery</name>
+				<page>13</page>
+				<translate>Rakete: Standard HE-Artillerie</translate>
+			</gear>
+			<gear exists="False">
+				<name>Angel's Vitae (Healing Potion)</name>
+				<page>51</page>
+				<translate>Lebensengel (Heiltrank)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Bad Dog No Biscuit (BNDB) Solution</name>
+				<page>51</page>
+				<translate>BHKL-Lösung (Böser Hund, kein Leckerli)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Broken Fang (Potion)</name>
+				<page>51</page>
+				<translate>Gebrochener Giftzahn (Trank)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Kuman-nhepa</name>
+				<page>51</page>
+				<translate>Kuman-nhepa</translate>
+			</gear>
+			<gear exists="False">
+				<name>Lot's Curse</name>
+				<page>51</page>
+				<translate>Lots Fluch</translate>
+			</gear>
+			<gear exists="False">
+				<name>Panacean Dressing</name>
+				<page>51</page>
+				<translate>Allheilumschlag</translate>
+			</gear>
+			<gear exists="False">
+				<name>Doppelgänger Juice</name>
+				<page>51</page>
+				<translate>Doppelgängersaft</translate>
+			</gear>
+			<gear exists="False">
+				<name>War</name>
+				<page>51</page>
+				<translate>Krieg</translate>
+			</gear>
+			<gear exists="False">
+				<name>Water Breathing</name>
+				<page>52</page>
+				<translate>Wasseratem</translate>
+			</gear>
+			<gear exists="False">
+				<name>Cat's Haste</name>
+				<page>52</page>
+				<translate>Katzenhast</translate>
+			</gear>
+			<gear exists="False">
+				<name>Hawk Eye</name>
+				<page>52</page>
+				<translate>Falkenauge</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mana Grounding</name>
+				<page>52</page>
+				<translate>Manaerdung</translate>
+			</gear>
+			<gear exists="False">
+				<name>Soul Strike</name>
+				<page>52</page>
+				<translate>Seelenschlag</translate>
+			</gear>
+			<gear exists="False">
+				<name>Shrouding Shadow</name>
+				<page>52</page>
+				<translate>Verschleiernder Schatten</translate>
+			</gear>
+			<gear exists="False">
+				<name>Steel Spine</name>
+				<page>52</page>
+				<translate>Stählernes Rückgrat</translate>
+			</gear>
+			<gear exists="False">
+				<name>Wingman</name>
+				<page>52</page>
+				<translate>Flügelmann</translate>
+			</gear>
+			<gear exists="False">
+				<name>Molu Root</name>
+				<page>52</page>
+				<translate>Molywurzel</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mana Inhibiting Oil</name>
+				<page>52</page>
+				<translate>Manahemmendes Öl</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Blood, Raw</name>
+				<page>224</page>
+				<translate>Blut, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Blood, Refined</name>
+				<page>224</page>
+				<translate>Blut, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Blood, Radical</name>
+				<page>224</page>
+				<translate>Blut, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Fur, Raw</name>
+				<page>224</page>
+				<translate>Pelz, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Fur, Refined</name>
+				<page>224</page>
+				<translate>Pelz, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Fur, Radical</name>
+				<page>224</page>
+				<translate>Pelz, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Scales, Raw</name>
+				<page>224</page>
+				<translate>Schuppen, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Scales, Refined</name>
+				<page>224</page>
+				<translate>Schuppen, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Scales, Radical</name>
+				<page>224</page>
+				<translate>Schuppen, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Skin, Raw</name>
+				<page>224</page>
+				<translate>Haut, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Skin, Refined</name>
+				<page>224</page>
+				<translate>Haut, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Skin, Radical</name>
+				<page>224</page>
+				<translate>Haut, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Silk, Raw</name>
+				<page>224</page>
+				<translate>Seide, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Silk, Refined</name>
+				<page>224</page>
+				<translate>Seide, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Silk, Radical</name>
+				<page>224</page>
+				<translate>Seide, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Intact Pelt, Raw</name>
+				<page>224</page>
+				<translate>Intaktes Fell, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Intact Pelt, Refined</name>
+				<page>224</page>
+				<translate>Intaktes Fell, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Intact Pelt, Radical</name>
+				<page>224</page>
+				<translate>Intaktes Fell, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Ivory, Raw</name>
+				<page>224</page>
+				<translate>Elfenbein, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Ivory, Refined</name>
+				<page>224</page>
+				<translate>Elfenbein, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Ivory, Radical</name>
+				<page>224</page>
+				<translate>Elfenbein, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Venom, Raw</name>
+				<page>224</page>
+				<translate>Gift, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Venom, Refined</name>
+				<page>224</page>
+				<translate>Gift, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Animal Venom, Radical</name>
+				<page>224</page>
+				<translate>Gift, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Sap, Raw</name>
+				<page>224</page>
+				<translate>Saft, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Sap, Refined</name>
+				<page>224</page>
+				<translate>Saft, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Sap, Radical</name>
+				<page>224</page>
+				<translate>Saft, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Petals, Raw</name>
+				<page>224</page>
+				<translate>Blüten, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Petals, Refined</name>
+				<page>224</page>
+				<translate>Blüten, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Petals, Radical</name>
+				<page>224</page>
+				<translate>Blüten, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Leaves, Raw</name>
+				<page>224</page>
+				<translate>Blatt, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Leaves, Refined</name>
+				<page>224</page>
+				<translate>Blatt, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Leavs, Radical</name>
+				<page>224</page>
+				<translate>Blatt, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Bark, Raw</name>
+				<page>224</page>
+				<translate>Rinde, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Bark, Refined</name>
+				<page>224</page>
+				<translate>Rinde, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Bark, Radical</name>
+				<page>224</page>
+				<translate>Rinde, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Cotton, Raw</name>
+				<page>224</page>
+				<translate>Baumwolle, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Cotton, Refined</name>
+				<page>224</page>
+				<translate>Baumwolle, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Cotton, Radical</name>
+				<page>224</page>
+				<translate>Baumwolle, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Fruit, Raw</name>
+				<page>224</page>
+				<translate>Frucht, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Fruit, Refined</name>
+				<page>224</page>
+				<translate>Frucht, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Fruit, Radical</name>
+				<page>224</page>
+				<translate>Frucht, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Rare Hardwood, Raw</name>
+				<page>224</page>
+				<translate>Edelholz, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Rare Hardwood, Refined</name>
+				<page>224</page>
+				<translate>Edelholz, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Herbal Rare Hardwood, Radical</name>
+				<page>224</page>
+				<translate>Edelholz, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Metal Iron, Raw</name>
+				<page>224</page>
+				<translate>Eisen, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Metal Iron, Refined</name>
+				<page>224</page>
+				<translate>Eisen, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Metal Iron, Radical</name>
+				<page>224</page>
+				<translate>Eisen, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Metal Copper, Raw</name>
+				<page>224</page>
+				<translate>Kupfer, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Metal Copper, Refined</name>
+				<page>224</page>
+				<translate>Kupfer, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Metal Copper, Radical</name>
+				<page>224</page>
+				<translate>Kupfer, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Metal Silver, Raw</name>
+				<page>224</page>
+				<translate>Silber, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Metal Silver, Refined</name>
+				<page>224</page>
+				<translate>Silber, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Metal Silver, Radical</name>
+				<page>224</page>
+				<translate>Silber, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Metal Mercury, Raw</name>
+				<page>224</page>
+				<translate>Quecksilber, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Metal Mercury, Refined</name>
+				<page>224</page>
+				<translate>Quecksilber, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Metal Mercury, Radical</name>
+				<page>224</page>
+				<translate>Quecksilber, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Metal Gold, Raw</name>
+				<page>224</page>
+				<translate>Gold, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Metal Gold, Refined</name>
+				<page>224</page>
+				<translate>Gold, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Metal Gold, Radical</name>
+				<page>224</page>
+				<translate>Gold, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mineral Crystal, Raw</name>
+				<page>224</page>
+				<translate>Kristall, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mineral Crystal, Refined</name>
+				<page>224</page>
+				<translate>Kristall, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mineral Crystal, Radical</name>
+				<page>224</page>
+				<translate>Kristall, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mineral Fossil, Raw</name>
+				<page>224</page>
+				<translate>Fossil, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mineral Fossil, Refined</name>
+				<page>224</page>
+				<translate>Fossil, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mineral Fossil, Radical</name>
+				<page>224</page>
+				<translate>Fossil, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mineral Obsidian, Raw</name>
+				<page>224</page>
+				<translate>Obsidian, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mineral Obsidian, Refined</name>
+				<page>224</page>
+				<translate>Obsidian, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mineral Obsidian, Radical</name>
+				<page>224</page>
+				<translate>Obsidian, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mineral Semi-Precious Gem, Raw</name>
+				<page>224</page>
+				<translate>Halbedelstein, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mineral Semi-Precious Gem, Refined</name>
+				<page>224</page>
+				<translate>Halbedelstein, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mineral Semi-Precious Gem, Radical</name>
+				<page>224</page>
+				<translate>Halbedelstein, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mineral Precious Gem, Raw</name>
+				<page>224</page>
+				<translate>Edelstein, Roh</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mineral Precious Gem, Refined</name>
+				<page>224</page>
+				<translate>Edelstein, Geläutert</translate>
+			</gear>
+			<gear exists="False">
+				<name>Mineral Precious Gem, Radical</name>
+				<page>224</page>
+				<translate>Edelstein, Radikal</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: AIM-120 AMRAAM (Air-to-Air Missile System)</name>
+				<page>8</page>
+				<translate>Rakete: AIM-120 AMRAAM</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: BGM-71 TOW</name>
+				<page>8</page>
+				<translate>Rakete: BGM-71 TOW</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: R-73 (AA-11 Archer)</name>
+				<page>24</page>
+				<translate>Rakete: R-73 (AA-11 Archer)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: R-77 (AA-12 Adder)</name>
+				<page>24</page>
+				<translate>Rakete: R-77 (AA-12 Adder)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: Kornet (AT-14 Spriggan)</name>
+				<page>25</page>
+				<translate>Rakete: Kornet (AT-14 Spriggan)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: Khrizantema (AT-15 Springer)</name>
+				<page>25</page>
+				<translate>Rakete: Chrisantema (AT-15 Springer)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: Vikhr (AT-16 Scallion)</name>
+				<page>26</page>
+				<translate>Rakete: Wicher (AT-16 Scallion)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: Vikhr (AT-16 Scallion), Thermobaric</name>
+				<page>26</page>
+				<translate>Rakete: Wicher (AT-16 Scallion), Thermobar</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: Vikhr (AT-16 Scallion), Fragmentation</name>
+				<page>26</page>
+				<translate>Rakete: Wicher (AT-16 Scallion), Splitter</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: Reflexes (AT-16 Sniper)</name>
+				<page>26</page>
+				<translate>Rakete: Refleks (AT-16 Sniper)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: IRIS-T (Air-to-Air Missile)</name>
+				<page>37</page>
+				<translate>Rakete: IRIS-T</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: Meteor (Air-to-Air Missile)</name>
+				<page>37</page>
+				<translate>Rakete: Meteor</translate>
+			</gear>
+			<gear exists="False">
+				<name>Cruise Missile: Taurus KEPD 400 (Cruise Missile)</name>
+				<page>38</page>
+				<translate>Marschflugkörper: Taurus KEPD 400</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: AGM-65 Maverick (Air-to-Air Missile)</name>
+				<page>38</page>
+				<translate>Rakete: AGM-65 Maverick</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: R-60 (AA-8 Aphid)</name>
+				<page>49</page>
+				<translate>Rakete: R-60 (AA-8 Aphid)</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: Hellfire (Anti-Tank Missile)</name>
+				<page>49</page>
+				<translate>Rakete: AGM114 Hellfire</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: GBU-39 (Glide Bomb)</name>
+				<page>50</page>
+				<translate>Rakete: GBU-39 SDB</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: AGM-154 JSOW (Glide Bomb)</name>
+				<page>60</page>
+				<translate>Rakete: AGM154 JSOW</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: ASRAAM (Air-to-Air Missile)</name>
+				<page>67</page>
+				<translate>Rakete: AIM-132 ASRAAM</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: Scorpion (Surface-to-Air Missile)</name>
+				<page>67</page>
+				<translate>Rakete: Scorpion</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: Brimstone (Air-to-Surface Missile)</name>
+				<page>68</page>
+				<translate>Rakete: Brimstone</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: Magic IV (Air-to-Air Missile)</name>
+				<page>68</page>
+				<translate>Rakete: Magic IV</translate>
+			</gear>
+			<gear exists="False">
+				<name>Missile: Aster 18 (Surface-to-Air Missile)</name>
+				<page>69</page>
+				<translate>Rakete: Aster 18</translate>
+			</gear>
+			<gear exists="False">
+				<name>Cruise Missile: Storm Shadow</name>
+				<page>69</page>
+				<translate>Marschflugkörper: Storm Shadow</translate>
 			</gear>
 		</gears>
 	</chummer>
@@ -19679,6 +21045,76 @@
 				<page>84</page>
 				<translate>Infiziert: Sukuyan</translate>
 			</quality>
+			<quality exists="False">
+				<name>Bodyguard</name>
+				<page>10</page>
+				<translate>Bodyguard</translate>
+			</quality>
+			<quality exists="False">
+				<name>Merc</name>
+				<page>11</page>
+				<translate>Söldner</translate>
+			</quality>
+			<quality exists="False">
+				<name>Panzer</name>
+				<page>10</page>
+				<translate>Panzer</translate>
+			</quality>
+			<quality exists="False">
+				<name>Razerboy</name>
+				<page>10</page>
+				<translate>Messerklaue</translate>
+			</quality>
+			<quality exists="False">
+				<name>Ronin (Bioware)</name>
+				<page>11</page>
+				<translate>Ronin (Bioware)</translate>
+			</quality>
+			<quality exists="False">
+				<name>Ronin (Cyberware)</name>
+				<page>11</page>
+				<translate>Ronin (Cyberware)</translate>
+			</quality>
+			<quality exists="False">
+				<name>Sharpshooter</name>
+				<page>11</page>
+				<translate>Scharfschütze</translate>
+			</quality>
+			<quality exists="False">
+				<name>Street Ninja</name>
+				<page>12</page>
+				<translate>Straßenninja</translate>
+			</quality>
+			<quality exists="False">
+				<name>True Drake</name>
+				<page>184</page>
+				<translate>Wahrer Drake</translate>
+			</quality>
+			<quality exists="False">
+				<name>True Drake (+1 Power)</name>
+				<page>184</page>
+				<translate>Wahrer Drake (+1 Kraft)</translate>
+			</quality>
+			<quality exists="False">
+				<name>True Drake (+2 Powers)</name>
+				<page>184</page>
+				<translate>Wahrer Drake (+5 Kräfte)</translate>
+			</quality>
+			<quality exists="False">
+				<name>True Drake (+3 Powers)</name>
+				<page>184</page>
+				<translate>Wahrer Drake (+5 Kräfte)</translate>
+			</quality>
+			<quality exists="False">
+				<name>True Drake (+4 Powers)</name>
+				<page>184</page>
+				<translate>Wahrer Drake (+5 Kräfte)</translate>
+			</quality>
+			<quality exists="False">
+				<name>True Drake (+5 Powers)</name>
+				<page>184</page>
+				<translate>Wahrer Drake (+5 Kräfte)</translate>
+			</quality>
 		</qualities>
 	</chummer>
 	<chummer file="skills.xml">
@@ -21649,6 +23085,7 @@
 			<category translate="Heilzauber">Health</category>
 			<category translate="Illusionszauber">Illusion</category>
 			<category translate="Manipulationszauber">Manipulation</category>
+			<category translate="Geomatisches Ritual">Geomancy Ritual</category>
 		</categories>
 		<spells>
 			<spell>
@@ -24939,6 +26376,466 @@
 				<page>166</page>
 				<translate>Renraku Polar Bear</translate>
 			</vehicle>
+			<vehicle exists="False">
+				<name>XM-E3 (Large)</name>
+				<page>4</page>
+				<translate>XM-E3</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Tan Dem (Medium)</name>
+				<page>5</page>
+				<translate>Tan Dem</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>A70 (Small)</name>
+				<page>6</page>
+				<translate>A70</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Blood Scythe (Medium)</name>
+				<page>7</page>
+				<translate>Blood Scythe</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>A-74 MK 2 (Large)</name>
+				<page>8</page>
+				<translate>A-74 MK 2</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Nizhinyi BMV-3 (APC)</name>
+				<page>9</page>
+				<translate>Nizhinyi BMV-3</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>M-173 (APC)</name>
+				<page>10</page>
+				<translate>M-173</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>GD Longstreet (Infantry Fighting Vehicle)</name>
+				<page>11</page>
+				<translate>GD Longstreet</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Bridgette (Tactical Vehicle)</name>
+				<page>12</page>
+				<translate>Bridgette</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Lockheed Mamba (Artillery Vehicle)</name>
+				<page>13</page>
+				<translate>Lockheed Mamba</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>TR-73 (Transport Plane)</name>
+				<page>14</page>
+				<translate>TR-73</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>B-6 LeMay (Tactical Aircraft)</name>
+				<page>15</page>
+				<translate>B-6 LeMay</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>A-17 (Tactical Aircraft)</name>
+				<page>16</page>
+				<translate>A-17</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Dassault Zeta Bravo (Tactical Aircraft)</name>
+				<page>17</page>
+				<translate>Dassault Zeta Bravo</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Hunt-Class Frigate (Corvette)</name>
+				<page>18</page>
+				<translate>Hunt-Klasse</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Florida-Class SSGN (Submarine)</name>
+				<page>19</page>
+				<translate>Florida-Klasse</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Hensley-Class Destroyer (Destroyer)</name>
+				<page>20</page>
+				<translate>Hensley-Klasse</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>M-1A4 Abrams (Main Battle Tank)</name>
+				<page>4</page>
+				<translate>M-1A4 Abrams</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>M-2A4 Bradley (Infantry Fighting Vehicle)</name>
+				<page>5</page>
+				<translate>M-2A4 Bradley</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>M-1126A2 Stryker (APC)</name>
+				<page>6</page>
+				<translate>M-1126A2 Stryker</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>HMMWV (Utility Vehicle)</name>
+				<page>7</page>
+				<translate>HMMWV</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>SLAMRAAM (Anti-Aircraft Missile System)</name>
+				<page>8</page>
+				<translate>HUMRAAM</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>T-90UM (Main Battle Tank)</name>
+				<page>11</page>
+				<translate>T-90UM</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>T-18 (Main Battle Tank)</name>
+				<page>12</page>
+				<translate>T-180</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>BMP-5 IFV (Battle Tank)</name>
+				<page>13</page>
+				<translate>BMP-5</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>BTR-20 (APC)</name>
+				<page>14</page>
+				<translate>BTR-20</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>ZSU-30-4 (Air Defense System)</name>
+				<page>15</page>
+				<translate>ZSU-30-4</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>MI-28 Havoc (Attack Helicopter)</name>
+				<page>16</page>
+				<translate>MI-28 Havoc</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>KA-50 Hokum (Attack Helicopter)</name>
+				<page>17</page>
+				<translate>KA-50 Hokum</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>KA-60 Hellion (Attack Helicopter)</name>
+				<page>18</page>
+				<translate>KA-100 Hellion</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>SU-27 Flanker (Tactical Aircraft)</name>
+				<page>19</page>
+				<translate>SU-27 Flanker</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>SU-35 Flanker-E (Tactical Aircraft)</name>
+				<page>20</page>
+				<translate>SU-35 Flanker-E</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>SU-45 Fantasy (Tactical Aircraft)</name>
+				<page>21</page>
+				<translate>SU-45 Fantasy</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>KMA7-C Leopard (Heavy Tank)</name>
+				<page>28</page>
+				<translate>KMA7-C Leopard</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Leopard 2A8 (Main Battle Tank)</name>
+				<page>29</page>
+				<translate>Leopard 2A8</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Leopard 3A1 (Main Battle Tank)</name>
+				<page>30</page>
+				<translate>Leopard 3A1</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Puma (Infantry Fighting Vehicle)</name>
+				<page>31</page>
+				<translate>Puma</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Marder IV (Infantry Fighting Vehicle)</name>
+				<page>32</page>
+				<translate>Marder 4</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Mantiss II (Air Defense System)</name>
+				<page>33</page>
+				<translate>Mantis 2</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Eurofighter Tranche 2 (Tactical Aircraft)</name>
+				<page>35</page>
+				<translate>Eurofighter Typhoon Tranche 2</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>NH90 (Utility Helicopter)</name>
+				<page>34</page>
+				<translate>NH90</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Altay (Main Battle Tank)</name>
+				<page>40</page>
+				<translate>Altay</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>M-48A5T3 (Main Battle Tank)</name>
+				<page>41</page>
+				<translate>M-48A5T3</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>BMP-3 (Infantry Fighting Vehicle)</name>
+				<page>42</page>
+				<translate>BMP-3</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>ZSU-30-2 (Anti-Aircraft System)</name>
+				<page>43</page>
+				<translate>ZSU-30-2</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>T-129 Mongoose (Attack Helicopter)</name>
+				<page>44</page>
+				<translate>T-129 Atak</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>MiG-29SMT Fulcrum (Tactical Aircraft)</name>
+				<page>45</page>
+				<translate>MiG-29SMT Fulcrum-E</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Challenger III (Main Battle Tank)</name>
+				<page>52</page>
+				<translate>Challenger 3</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Ariete C-4 (Main Battle Tank)</name>
+				<page>53</page>
+				<translate>C4 Ariete</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Sabre (Light Tank)</name>
+				<page>54</page>
+				<translate>Knight</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Warrior (Infantry Fighting Vehicle)</name>
+				<page>55</page>
+				<translate>Warrior</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Boxer (Armored Personnel Carrier)</name>
+				<page>56</page>
+				<translate>Boxer</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>AIFV II (Infantry Fighting Vehicle)</name>
+				<page>57</page>
+				<translate>AIFV II</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Piranha (Armored Personnel Carrier)</name>
+				<page>58</page>
+				<translate>Piranha</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>EH101 (Utility Helicopter)</name>
+				<page>59</page>
+				<translate>EH101</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>WAH-64 Apache (Attack Helicopter)</name>
+				<page>60</page>
+				<translate>WAH-64 Apache</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Wildcat (Utility Helicopter)</name>
+				<page>61</page>
+				<translate>AW159 Wildcat</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>V-22 Osprey (Transport Aircraft)</name>
+				<page>62</page>
+				<translate>V-22 Osprey</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Rafale (Tactical Aircraft)</name>
+				<page>63</page>
+				<translate>Rafale</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Lockheed F-35A Lightning (Tactical Aircraft)</name>
+				<page>64</page>
+				<translate>F-35A Lightning II</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Nightwraith MK.1 (Tactical Aircraft)</name>
+				<page>65</page>
+				<translate>Nightwraith MK.1</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>DocWagon HTR (HTR Ambulance)</name>
+				<page>97</page>
+				<translate>DocWagon HTR</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Huitzilopochtli (Cyborg Bodyguard)</name>
+				<page>198</page>
+				<translate>Huitzilopochtli</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Thundercloud Pinto (Off-Road Bike)</name>
+				<page>4</page>
+				<translate>Thundercloud Pinto</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>BMW Blitzen 2050 (Combat Bike)</name>
+				<page>5</page>
+				<translate>BMW Blitzen 2050</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Honda Viking (Motorcycle)</name>
+				<page>6</page>
+				<translate>Honda Viking</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Entertainment Systems Papoose (Scooter)</name>
+				<page>7</page>
+				<translate>Entertainment Systems Papoose</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Yamaha Rapier (Racing Bike)</name>
+				<page>8</page>
+				<translate>Yamaha Rapier</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Rolls Royce Phaeton (Limousine)</name>
+				<page>9</page>
+				<translate>Rolls Royce Phaeton</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Ford-Canada Bison (RV)</name>
+				<page>10</page>
+				<translate>Ford-Canada Bison</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Rolls Royce Prairie Cat (RV)</name>
+				<page>11</page>
+				<translate>Rolls Royce Prairie Cat</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Lockheed-Chenowth LSV (ATV)</name>
+				<page>12</page>
+				<translate>Lockheed-Chenowth Light Strike</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Ford Americar (Sedan)</name>
+				<page>13</page>
+				<translate>Ford Americar</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Toyota Elite (Sedan)</name>
+				<page>14</page>
+				<translate>Toyota Elite</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Gaz-Willies Nomad (Pickup Truck)</name>
+				<page>15</page>
+				<translate>Gaz-Willies Nomad</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Land Rover Model 2046 (SUV)</name>
+				<page>16</page>
+				<translate>Land Rover Model 2046</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Nissan-Holden Brumley (SUV)</name>
+				<page>17</page>
+				<translate>Nissan-Holden Brumley</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Honda-GM 3220 (Sports Car)</name>
+				<page>18</page>
+				<translate>Honda-GM 3220</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Saab Dynamit 778 TI (Sports Car)</name>
+				<page>19</page>
+				<translate>Saab Dynamit 778 TI</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Leyland-Zil Tsarina (Subcompact)</name>
+				<page>20</page>
+				<translate>Leyland-Zil Tsarina</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Mitsubishi Runabout (Subcompact)</name>
+				<page>21</page>
+				<translate>Mitsubishi Runabout</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Volkswagen Elektro (Subcompact)</name>
+				<page>22</page>
+				<translate>Volkswagen Elektro</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Conestoga Trailblazer (Tractor Trailer)</name>
+				<page>23</page>
+				<translate>Conestoga Trailblazer</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Conestoga Trailblazer with Trailer (Tractor Trailer)</name>
+				<page>23</page>
+				<translate>Conestoga Trailblazer mit Auflieger</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>GMC 4201 Series (Large Transport)</name>
+				<page>24</page>
+				<translate>GMC 4201 Series</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Ares Mobmaster (Security Vehicle)</name>
+				<page>25</page>
+				<translate>Ares Mobmaster</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Doc Wagon Citymaster (Ambulance)</name>
+				<page>26</page>
+				<translate>Doc Wagon Citymaster</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Leyland-Rover Transport (Passenger Van)</name>
+				<page>27</page>
+				<translate>Leyland-Rover Transport</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Renault-Fiat Eurovan (Passenger Van)</name>
+				<page>28</page>
+				<translate>Renault-Fiat Eurovan</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Volkswagen Supercombi III (Passenger Van)</name>
+				<page>29</page>
+				<translate>Volkswagen Supercombi III</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Black Arrow (Large)</name>
+				<page>191</page>
+				<translate>Black Arrow</translate>
+			</vehicle>
+			<vehicle exists="False">
+				<name>Aztechnology Lockheed Skynight</name>
+				<page>191</page>
+				<translate>Aztechnology Lockheed Skynight</translate>
+			</vehicle>
 		</vehicles>
 		<mods>
 			<mod>
@@ -26203,7 +28100,7 @@
 			</mod>
 			<mod>
 				<name>Sail Power</name>
-				<page>DW 3</page>
+				<page>3</page>
 				<translate>Segelantrieb</translate>
 			</mod>
 			<mod>
@@ -26471,6 +28368,66 @@
 				<page>125</page>
 				<translate>Mercedes PE Commando Tarnaufsätze</translate>
 			</mod>
+			<mod exists="False">
+				<name>Reduced Economy</name>
+				<page>3</page>
+				<translate>Schlechtere Wirtschaftlichkeit</translate>
+			</mod>
+			<mod exists="False">
+				<name>Pinto Canopy</name>
+				<page>4</page>
+				<translate>Pinto Dach</translate>
+			</mod>
+			<mod exists="False">
+				<name>Retrofit</name>
+				<page>15</page>
+				<translate>Aufgefrischt</translate>
+			</mod>
+			<mod exists="False">
+				<name>Ares Doru Launch System</name>
+				<page>24</page>
+				<translate>Ares Doru Abschusssystem</translate>
+			</mod>
+			<mod exists="False">
+				<name>Generic Mod</name>
+				<page>0</page>
+				<translate>Generische Modifikation</translate>
+			</mod>
+			<mod exists="False">
+				<name>Drop Tank</name>
+				<page>20</page>
+				<translate>Abwurftank</translate>
+			</mod>
+			<mod exists="False">
+				<name>Ejection Rack, Twin Rack</name>
+				<page>26</page>
+				<translate>Doppellafette</translate>
+			</mod>
+			<mod exists="False">
+				<name>Ejection Rack, Triple Rack</name>
+				<page>26</page>
+				<translate>Dreifachlafette</translate>
+			</mod>
+			<mod exists="False">
+				<name>Ejection Rack, Quad Rack</name>
+				<page>26</page>
+				<translate>Vierfachlafette</translate>
+			</mod>
+			<mod exists="False">
+				<name>Ejection Rack, Sextuple Rack</name>
+				<page>26</page>
+				<translate>Sechsfachlafette</translate>
+			</mod>
+			<mod exists="False">
+				<name>Ferry Tank</name>
+				<page>35</page>
+				<translate>Zusatztanks</translate>
+			</mod>
+			<mod exists="False">
+				<name>Cruise Missile Aerial Launch System</name>
+				<page>38</page>
+				<translate>Abschussvorrichtung für Marschflugkörper</translate>
+			</mod>
 		</mods>
 	</chummer>
 	<chummer file="weapons.xml">
@@ -26636,6 +28593,11 @@
 				<name>Sword</name>
 				<page>360</page>
 				<translate>Schwert</translate>
+			</weapon>
+			<weapon>
+				<name>Gentleman's Cane Sword</name>
+				<page>154</page>
+				<translate>Gehstock mit Schwert</translate>
 			</weapon>
 			<weapon>
 				<name>Sword Cane</name>
@@ -27096,6 +29058,11 @@
 				<name>Defiance Protector</name>
 				<page>21</page>
 				<translate>Defiance Protektor</translate>
+			</weapon>
+			<weapon>
+				<name>Jupiter Taser Ranged</name>
+				<page>21</page>
+				<translate>Jupiter Taser</translate>
 			</weapon>
 			<weapon>
 				<name>Jupiter Taser Club</name>
@@ -27693,9 +29660,9 @@
 				<translate>Ranger Arms SM-4</translate>
 			</weapon>
 			<weapon>
-				<name>Walter MA-2100</name>
+				<name>Walther MA-2100</name>
 				<page>365</page>
-				<translate>Walter MA-2100</translate>
+				<translate>Walther MA-2100</translate>
 			</weapon>
 			<weapon>
 				<name>Altmayr SP</name>
@@ -28748,87 +30715,87 @@
 				<translate>Kommlink: Monofilament-Garotte</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: Flash-Bang</name>
+				<name>Minigrenade: Flash-Bang</name>
 				<page>370</page>
 				<translate>Minigranate: Betäubung</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: Flash-Pak</name>
+				<name>Minigrenade: Flash-Pak</name>
 				<page>370</page>
 				<translate>Minigranate: Flash-Pack</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: Fragmentation</name>
+				<name>Minigrenade: Fragmentation</name>
 				<page>370</page>
 				<translate>Minigranate: Splitter</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: High Explosive</name>
+				<name>Minigrenade: High Explosive</name>
 				<page>370</page>
 				<translate>Minigranate: Spreng</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: Gas</name>
+				<name>Minigrenade: Gas</name>
 				<page>370</page>
 				<translate>Minigranate: Gas</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: Smoke</name>
+				<name>Minigrenade: Smoke</name>
 				<page>370</page>
 				<translate>Minigranate: Rauch</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: Thermal Smoke</name>
+				<name>Minigrenade: Thermal Smoke</name>
 				<page>370</page>
 				<translate>Minigranate: IR-Rauch</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: Monofilament</name>
+				<name>Minigrenade: Monofilament</name>
 				<page>173</page>
 				<translate>Minigranate: Monofilament</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: Instant Snare</name>
+				<name>Minigrenade: Instant Snare</name>
 				<page>205</page>
 				<translate>Minigranate: Instant-Fangnetz</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: Slick</name>
+				<name>Minigrenade: Slick</name>
 				<page>205</page>
 				<translate>Minigranate: Glitschgranate</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: Flare</name>
+				<name>Minigrenade: Flare</name>
 				<page>41</page>
 				<translate>Minigranate: Leucht</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: Flash</name>
+				<name>Minigrenade: Flash</name>
 				<page>41</page>
 				<translate>Minigranate: Blitz</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: Incendiary</name>
+				<name>Minigrenade: Incendiary</name>
 				<page>41</page>
 				<translate>Minigranate: Brand</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: Ink</name>
+				<name>Minigrenade: Ink</name>
 				<page>41</page>
 				<translate>Minigranate: Tinte</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: Splash</name>
+				<name>Minigrenade: Splash</name>
 				<page>41</page>
 				<translate>Minigranate: Splash</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: White Phosphorus</name>
+				<name>Minigrenade: White Phosphorus</name>
 				<page>41</page>
 				<translate>Minigranate: Weißer Phosphor</translate>
 			</weapon>
 			<weapon>
-				<name>Minigranate: Esprit Petite Brume</name>
+				<name>Minigrenade: Esprit Petite Brume</name>
 				<page>64</page>
 				<translate>Minigranate: Esprit Petite Brume</translate>
 			</weapon>
@@ -29276,6 +31243,601 @@
 				<name>Arctic Suppressor</name>
 				<page>164</page>
 				<translate>Arctic Suppressor</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Izom Aphrodite</name>
+				<page>4</page>
+				<translate>Izom Aphrodite</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Izom Aphrodite Grenade Launcher</name>
+				<page>4</page>
+				<translate>Izom Aphrodite Granatwerfer</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Izom SS-374</name>
+				<page>5</page>
+				<translate>Izom SS-374</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Izom CSM-419</name>
+				<page>6</page>
+				<translate>Izom CSM-419</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Izom PHP-131</name>
+				<page>7</page>
+				<translate>Izom PHP-131</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Izom RP-71</name>
+				<page>8</page>
+				<translate>Izom RP-71</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Izom HP-49B</name>
+				<page>9</page>
+				<translate>Izom HP-49B</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Terracotta Arms Caravan</name>
+				<page>10</page>
+				<translate>Terracotta Arms Caravan</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Terracotta Arms Mordred</name>
+				<page>11</page>
+				<translate>Terracotta Arms Mordred</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Terracotta Arms Pup</name>
+				<page>12</page>
+				<translate>Terracotta Arms Pup</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Terracotta Arms Pup w/ Silencer</name>
+				<page>12</page>
+				<translate>Terracotta Arms Pup mit Schalldämpfer</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Terracotta Arms AM-47</name>
+				<page>13</page>
+				<translate>Terracotta Arms AM-47</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Ultimax 47</name>
+				<page>14</page>
+				<translate>Ultimax 47</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Ultimax 68</name>
+				<page>15</page>
+				<translate>Ultimax 68</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Ultimax 83</name>
+				<page>16</page>
+				<translate>Ultimax 83</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Nemesis Arms Spratley Stalwart</name>
+				<page>18</page>
+				<translate>Nemesis Arms Spratley Stalwart</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Nemesis Arms Praetorian</name>
+				<page>19</page>
+				<translate>Nemesis Arms Praetorian</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Shiawase Arms Tsunami</name>
+				<page>20</page>
+				<translate>Shiawase Arms Tsunami</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Shiawase Arms Type K2072</name>
+				<page>21</page>
+				<translate>Shiawase Arms Type K2072</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Shiawase Arms Copernicus</name>
+				<page>22</page>
+				<translate>Shiawase Arms Copernicus</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Shiawase Arms Carp Hunter</name>
+				<page>23</page>
+				<translate>Shiawase Arms Carp Hunter</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Shiawase Arms Riot Guard</name>
+				<page>24</page>
+				<translate>Shiawase Arms Riot Guard</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Shiawase Arms Hearth Protector</name>
+				<page>25</page>
+				<translate>Shiawase Arms Hearth Protector</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Shiawase Arms Light Tactical</name>
+				<page>26</page>
+				<translate>Shiawase Arms Light Tactical</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Shiawase Arms Heavy Tactical</name>
+				<page>27</page>
+				<translate>Shiawase Arms Heavy Tactical</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Shiawase Arms Police Response</name>
+				<page>28</page>
+				<translate>Shiawase Arms Police Response</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Shiawase Arms Tactical Model 71</name>
+				<page>29</page>
+				<translate>Shiawase Arms Tactical Model 71</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Shiawase Arms Tactical Model 69</name>
+				<page>30</page>
+				<translate>Shiawase Arms Tactical Model 69</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Shiawase Arms Tactical Model 73</name>
+				<page>31</page>
+				<translate>Shiawase Arms Tactical Model 73</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Onotari Arms Assault Laser</name>
+				<page>34</page>
+				<translate>Onotari Arms Assault Laser</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Onotari Arms Room Sweeper</name>
+				<page>35</page>
+				<translate>Onotari Arms Room Sweeper</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Onotari Arms Violator</name>
+				<page>36</page>
+				<translate>Onotari Arms Violator</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Onotari Arms Steadfast</name>
+				<page>37</page>
+				<translate>Onotari Arms Steadfast</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Onotari Arms Security Special</name>
+				<page>38</page>
+				<translate>Onotari Arms Security Special</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Onotari Arms Sierra Libra</name>
+				<page>39</page>
+				<translate>Onotari Arms Sierra Libra</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Onotari Arms Rhino Hunter</name>
+				<page>40</page>
+				<translate>Onotari Arms Rhino Hunter</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Onotari Arms Punisher</name>
+				<page>41</page>
+				<translate>Onotari Arms Punisher</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Onotari Arms Kali</name>
+				<page>42</page>
+				<translate>Onotari Arms Kali</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>JP-K49</name>
+				<page>43</page>
+				<translate>Onotari Arms JP-K49</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>L-493</name>
+				<page>44</page>
+				<translate>Onotari Arms L-493</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Onotari Urban Hunter</name>
+				<page>45</page>
+				<translate>Onotari Urban Hunter</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Cavalier Arms Lancer</name>
+				<page>47</page>
+				<translate>Cavalier Arms Lancer</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Cavalier Arms Lancer Grenade Launcher</name>
+				<page>47</page>
+				<translate>Cavalier Arms Lancer Grenade Launcher</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Cavalier Arms Sheriff</name>
+				<page>48</page>
+				<translate>Cavalier Arms Sheriff</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Cavalier Arms Dragoon</name>
+				<page>49</page>
+				<translate>Cavalier Arms Dragoon</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Browning Mega-Power</name>
+				<page>50</page>
+				<translate>Browning Mega-Power</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Marlin M-58</name>
+				<page>51</page>
+				<translate>Marlin M-58</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Charter Arms Curse</name>
+				<page>52</page>
+				<translate>Charter Arms Curse</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Type 84B</name>
+				<page>53</page>
+				<translate>Type 84B</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>CZ-64</name>
+				<page>54</page>
+				<translate>CZ-64</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Krime Cannon</name>
+				<page>55</page>
+				<translate>Krime Cannon</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Krime Stopper</name>
+				<page>56</page>
+				<translate>Krime Stopper</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Barrens Special</name>
+				<page>57</page>
+				<translate>Barrens Special</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Barrens Special Melee</name>
+				<page>57</page>
+				<translate>Barrens Special Melee</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>AN-74</name>
+				<page>21</page>
+				<translate>AN-74</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>HK MG-14</name>
+				<page>22</page>
+				<translate>HK MG-14</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Ares Pulse Fire</name>
+				<page>23</page>
+				<translate>Ares Pulse Fire</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Vehicle Missile: Riptide Torpedo</name>
+				<page>24</page>
+				<translate>Fahrzeugrakete: Riptide</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Medusa Point Defense Laser</name>
+				<page>25</page>
+				<translate>Medusa Verteidigungslaser</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Vehicle Missile: Cranston Surface-to-Air Missile</name>
+				<page>25</page>
+				<translate>Fahrzeugrakete: Cranston</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Rocket: Dagger Anti-Tank</name>
+				<page>25</page>
+				<translate>Rakete: Dagger</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Ribble</name>
+				<page>26</page>
+				<translate>Ribble</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Vehicle Missile: SA-53 Surface-to-Air Missile</name>
+				<page>27</page>
+				<translate>Fahrzeugrakete: SA-53</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Vehicle Missile: Bulwark Surface-to-Air Missile</name>
+				<page>27</page>
+				<translate>Fahrzeugrakete: Bulwark</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Vehicle Missile: Stealth Shadow</name>
+				<page>28</page>
+				<translate>Fahrzeugrakete: Stealth Shadow</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Cruise Missile: EMTACAR</name>
+				<page>29</page>
+				<translate>Marschflugkörper: EMTACAR</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Cruise Missile: Regulus 68</name>
+				<page>29</page>
+				<translate>Marschflugkörper: Regulus 68</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: MTR Anti-Tank</name>
+				<page>30</page>
+				<translate>Rakete: MTR</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Rocket: Zuni IX</name>
+				<page>30</page>
+				<translate>Rakete: Zuni IX</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: Inferno Anti-Tank</name>
+				<page>31</page>
+				<translate>Rakete: Inferno</translate>
+			</weapon>
+			<weapon>
+				<name>Monofilament Chainsaw</name>
+				<page>382</page>
+				<translate>Monofilament-Kettensäge</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Arm Blade</name>
+				<page>15</page>
+				<translate>Armklinge</translate>
+			</weapon>
+			<weapon>
+				<name>Rocket: Basic HE Artillery</name>
+				<page>13</page>
+				<translate>Rakete: Standard HE-Artillerie</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: AIM-120 AMRAAM (Air-to-Air Missile System)</name>
+				<page>8</page>
+				<translate>Rakete: AIM-120 AMRAAM</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: BGM-71 TOW</name>
+				<page>8</page>
+				<translate>Rakete: BGM-71 TOW</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>AGS-35</name>
+				<page>22</page>
+				<translate>AGS-35</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>AN-94</name>
+				<page>23</page>
+				<translate>AN-94</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: R-73 (AA-11 Archer)</name>
+				<page>24</page>
+				<translate>Rakete: R-73 (AA-11 Archer)</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: R-77 (AA-12 Adder)</name>
+				<page>24</page>
+				<translate>Rakete: R-77 (AA-12 Adder)</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: Kornet (AT-14 Spriggan)</name>
+				<page>25</page>
+				<translate>Rakete: Kornet (AT-14 Spriggan)</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: Khrizantema (AT-15 Springer)</name>
+				<page>25</page>
+				<translate>Rakete: Chrisantema (AT-15 Springer)</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: Vikhr (AT-16 Scallion)</name>
+				<page>26</page>
+				<translate>Rakete: Wicher (AT-16 Scallion)</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: Vikhr (AT-16 Scallion), Thermobaric</name>
+				<page>26</page>
+				<translate>Rakete: Wicher (AT-16 Scallion), Thermobar</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: Vikhr (AT-16 Scallion), Fragmentation</name>
+				<page>26</page>
+				<translate>Rakete: Wicher (AT-16 Scallion), Splitter</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: Reflexes (AT-16 Sniper)</name>
+				<page>26</page>
+				<translate>Rakete: Refleks (AT-16 Sniper)</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>HK416</name>
+				<page>36</page>
+				<translate>HK416</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: IRIS-T (Air-to-Air Missile)</name>
+				<page>37</page>
+				<translate>Rakete: IRIS-T</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: Meteor (Air-to-Air Missile)</name>
+				<page>37</page>
+				<translate>Rakete: Meteor</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Cruise Missile: Taurus KEPD 400 (Cruise Missile)</name>
+				<page>38</page>
+				<translate>Marschflugkörper: Taurus KEPD 400</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: AGM-65 Maverick (Air-to-Air Missile)</name>
+				<page>38</page>
+				<translate>Rakete: AGM-65 Maverick</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>AK-74</name>
+				<page>46</page>
+				<translate>AK-74</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>RPK-74</name>
+				<page>47</page>
+				<translate>RPK-74</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>G-3</name>
+				<page>48</page>
+				<translate>G3</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: R-60 (AA-8 Aphid)</name>
+				<page>49</page>
+				<translate>Rakete: R-60 (AA-8 Aphid)</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: Hellfire (Anti-Tank Missile)</name>
+				<page>49</page>
+				<translate>Rakete: AGM114 Hellfire</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: GBU-39 (Glide Bomb)</name>
+				<page>50</page>
+				<translate>Rakete: GBU-39 SDB</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: AGM-154 JSOW (Glide Bomb)</name>
+				<page>60</page>
+				<translate>Rakete: AGM154 JSOW</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>FAMAS</name>
+				<page>66</page>
+				<translate>FAMAS</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: ASRAAM (Air-to-Air Missile)</name>
+				<page>67</page>
+				<translate>Rakete: AIM-132 ASRAAM</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: Scorpion (Surface-to-Air Missile)</name>
+				<page>67</page>
+				<translate>Rakete: Scorpion</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: Brimstone (Air-to-Surface Missile)</name>
+				<page>68</page>
+				<translate>Rakete: Brimstone</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: Magic IV (Air-to-Air Missile)</name>
+				<page>68</page>
+				<translate>Rakete: Magic IV</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Missile: Aster 18 (Surface-to-Air Missile)</name>
+				<page>69</page>
+				<translate>Rakete: Aster 18</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Cruise Missile: Storm Shadow</name>
+				<page>69</page>
+				<translate>Marschflugkörper: Storm Shadow</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>120mm</name>
+				<page>69</page>
+				<translate>120mm</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>125mm</name>
+				<page>69</page>
+				<translate>125mm</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>105mm</name>
+				<page>69</page>
+				<translate>105mm</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>100mm</name>
+				<page>69</page>
+				<translate>100mm</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>35mm Auto Cannon</name>
+				<page>69</page>
+				<translate>35mm Maschinenkanone</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>30mm Auto Cannon</name>
+				<page>69</page>
+				<translate>30mm Maschinenkanone</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>25mm Rotary Cannon</name>
+				<page>69</page>
+				<translate>25mm Gatlingkanone</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>20mm Gatling Cannon</name>
+				<page>69</page>
+				<translate>20mm Gatlingkanone</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>M-2HB</name>
+				<page>69</page>
+				<translate>M-2HB</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>Kort</name>
+				<page>69</page>
+				<translate>Kort</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>M-240</name>
+				<page>69</page>
+				<translate>M-240</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>PKT</name>
+				<page>69</page>
+				<translate>PKM</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>MG3A1</name>
+				<page>69</page>
+				<translate>MG3A1</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>MG4</name>
+				<page>69</page>
+				<translate>MG4</translate>
+			</weapon>
+			<weapon exists="False">
+				<name>M-73</name>
+				<page>69</page>
+				<translate>M73</translate>
 			</weapon>
 		</weapons>
 		<accessories>
@@ -30105,6 +32667,11 @@
 				<name>Personalized Grip, Melee</name>
 				<page>156</page>
 				<translate>Angepasster Griff, Nahkampf</translate>
+			</mod>
+			<mod exists="False">
+				<name>DP Penalty</name>
+				<page>0</page>
+				<translate>Verringerter Schaden</translate>
 			</mod>
 		</mods>
 	</chummer>

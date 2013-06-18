@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-873</version>
+	<version>-872</version>
 	<categories>
 		<category>Personal Mobility Vehicles</category>
 		<category>Bikes</category>
@@ -2788,7 +2788,7 @@
 		</vehicle>
 		<vehicle>
 			<name>Hawker-Siddley Mixcoatl (Roto-drone)</name>
-			<category>Military, Security and Medical Craft</category>
+			<category>Drones: Medium</category>
 			<handling>1</handling>
 			<accel>10/20</accel>
 			<speed>90</speed>
@@ -2806,7 +2806,7 @@
 				<name>Weapon Mount (Normal, External, Flexible, Remote)</name>
 			</mods>
 			<gears>
-				<gear>Extra-Large Vehicle Sensor</gear>
+				<gear>Large Drone Sensor</gear>
 			</gears>
 			<source>MST</source>
 			<page>35</page>

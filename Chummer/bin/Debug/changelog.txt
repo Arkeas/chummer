@@ -1,9 +1,11 @@
-Build XXX
+Build 483
 - undoing a Removed Negative Quality Expense now adds the Quality back to the character
 - only Skills from currently active sourcebooks are shown in the Skills list
 - hopefully fixed the issue with MAG/RES, Essence penalties, and the Essence Loss Only Reduces MAG/RES Maximum house rule status
 - MAG and RES should no longer show values less than 0 in Career Mode
 - fixed an issue that caused non-Exotic Weapons that use an Exotic Weapon Skill to not appear properly in the Exotic Weapon Skill Specialization list
+- Nexi can now be marked as being a Home Node for an A.I.
+- added Vehicles Notes to the Vehicle Block sheet
 
 Build 480
 - added support for <cyborgessence /> to the Improvement Manager which permanently reduces a character's Essence to 0.1.

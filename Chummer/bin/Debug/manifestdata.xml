@@ -3,7 +3,7 @@
 	<file>
 		<name>chummer.exe</name>
 		<type>Application</type>
-		<version>0.0.0.480</version>
+		<version>0.0.0.483</version>
 		<description>Chummer</description>
 		<notes>- Chummer Application</notes>
 	</file>
@@ -73,7 +73,7 @@
 	<file>
 		<name>sheets/Vehicle Block.xsl</name>
 		<type>Character Sheets</type>
-		<version>-994</version>
+		<version>-993</version>
 		<description>Vehicle Stat Block</description>
 		<notes>- Vehicle Stat Block</notes>
 	</file>
