@@ -99,6 +99,7 @@ namespace Chummer
 			IgnoreCMPenaltyStun = 85,
 			IgnoreCMPenaltyPhysical = 86,
 			CyborgEssence = 87,
+			EssenceMax = 88,
         }
 
         public enum ImprovementSource
@@ -335,6 +336,8 @@ namespace Chummer
 					return ImprovementType.IgnoreCMPenaltyPhysical;
 				case "CyborgEssence":
 					return ImprovementType.CyborgEssence;
+				case "EssenceMax":
+					return ImprovementType.EssenceMax;
 				default:
 					return ImprovementType.Skill;
 			}
@@ -2315,6 +2318,12 @@ namespace Chummer
 				if (NodeExists(nodBonus, "cyborgessence"))
 				{
 					CreateImprovement("", objImprovementSource, strSourceName, Improvement.ImprovementType.CyborgEssence, "");
+				}
+
+				// Check for Maximum Essence which will permanently modify the character's Maximum Essence value.
+				if (NodeExists(nodBonus, "essencemax"))
+				{
+					CreateImprovement("", objImprovementSource, strSourceName, Improvement.ImprovementType.EssenceMax, "", ValueToInt(nodBonus["essencemax"].InnerText, intRating));
 				}
 
 				// Check for Select Sprite.

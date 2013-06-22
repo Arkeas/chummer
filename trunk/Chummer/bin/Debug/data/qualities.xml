@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-873</version>
+	<version>-872</version>
 	<categories>
 		<category>Positive</category>
 		<category>Negative</category>
@@ -497,6 +497,7 @@
 			<name>Biocompatability (Cyberware)</name>
 			<bp>10</bp>
 			<category>Positive</category>
+			<metagenetic>yes</metagenetic>
 			<bonus>
 				<cyberwareessmultiplier>90</cyberwareessmultiplier>
 			</bonus>

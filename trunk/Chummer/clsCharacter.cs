@@ -60,6 +60,7 @@ namespace Chummer
 		private int _intBurntStreetCred = 0;
 		private int _intNuyen = 0;
 		private int _intMaxAvail = 12;
+		private decimal _decEssenceAtSpecialStart = 6.0m;
 
 		// General character info.
 		private string _strName = "";
@@ -255,6 +256,9 @@ namespace Chummer
 			objWriter.WriteElementString("movement", _strMovement);
 			// <mutantcritterbaseskills />
 			objWriter.WriteElementString("mutantcritterbaseskills", _intMutantCritterBaseSkills.ToString());
+
+			// <essenceatspecialstart />
+			objWriter.WriteElementString("essenceatspecialstart", _decEssenceAtSpecialStart.ToString());
 
 			// <name />
 			objWriter.WriteElementString("name", _strName);
@@ -746,6 +750,14 @@ namespace Chummer
 			// Load the character's settings file.
 			if (!_objOptions.Load(_strSettingsFileName))
 				return false;
+
+			try
+			{
+				_decEssenceAtSpecialStart = Convert.ToDecimal(objXmlCharacter["essenceatspecialstart"].InnerText, GlobalOptions.Instance.CultureInfo);
+			}
+			catch
+			{
+			}
 			
 			// Metatype information.
 			_strMetatype = objXmlCharacter["metatype"].InnerText;
@@ -3343,6 +3355,8 @@ namespace Chummer
 			{
 				bool blnOldValue = _blnMAGEnabled;
 				_blnMAGEnabled = value;
+				if (value)
+					_decEssenceAtSpecialStart = Essence;
 				try
 				{
 					if (blnOldValue != value)
@@ -3442,6 +3456,8 @@ namespace Chummer
 			{
 				bool blnOldValue = _blnRESEnabled;
 				_blnRESEnabled = value;
+				if (value)
+					_decEssenceAtSpecialStart = Essence;
 				try
 				{
 					if (blnOldValue != value)
@@ -3510,6 +3526,17 @@ namespace Chummer
 			set
 			{
 				_strGroupNotes = value;
+			}
+		}
+
+		/// <summary>
+		/// Essence the character had when the first gained access to MAG/RES.
+		/// </summary>
+		public decimal EssenceAtSpecialStart
+		{
+			get
+			{
+				return _decEssenceAtSpecialStart;
 			}
 		}
 
@@ -3660,7 +3687,7 @@ namespace Chummer
 		{
 			get
 			{
-				decimal decESS = Convert.ToDecimal(_attESS.MetatypeMaximum, GlobalOptions.Instance.CultureInfo) + Convert.ToDecimal(_objImprovementManager.ValueOf(Improvement.ImprovementType.Essence), GlobalOptions.Instance.CultureInfo);
+				decimal decESS = Convert.ToDecimal(_attESS.MetatypeMaximum, GlobalOptions.Instance.CultureInfo) + Convert.ToDecimal(_objImprovementManager.ValueOf(Improvement.ImprovementType.EssenceMax), GlobalOptions.Instance.CultureInfo);
 				return decESS;
 			}
 		}
@@ -3674,7 +3701,7 @@ namespace Chummer
 			{
 				int intReturn = 0;
 				// Subtract the character's current Essence from its maximum. Round the remaining amount up to get the total penalty to MAG and RES.
-				intReturn = Convert.ToInt32(Math.Ceiling(EssenceMaximum - Essence));
+				intReturn = Convert.ToInt32(Math.Ceiling(EssenceAtSpecialStart + _objImprovementManager.ValueOf(Improvement.ImprovementType.EssenceMax) - Essence));
 
 				return intReturn;
 			}
