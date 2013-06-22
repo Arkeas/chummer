@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-991</version>
+	<version>-990</version>
 	<improvements>
 		<improvement>
 			<name>Attribute</name>
@@ -498,6 +498,16 @@
 			</fields>
 			<xml><![CDATA[<name>ESS</name><val>{val}</val><min>0</min><max>0</max><aug>0</aug>]]></xml>
 			<page>Adjusts the character's Essence by the value entered. Positive values increase Essence. Negative values decrease Essence.</page>
+		</improvement>
+		<improvement>
+			<name>Essence Maximum</name>
+			<id>essencemax</id>
+			<internal>essencemax</internal>
+			<fields>
+				<field>val</field>
+			</fields>
+			<xml><![CDATA[{val}]]></xml>
+			<page>Adjusts the character's Maximum Essence by the value entered. Positive values increase Maximum Essence. Negative values decrease Maximum Essence.</page>
 		</improvement>
 		<improvement>
 			<name>Throwing Weapon Range</name>

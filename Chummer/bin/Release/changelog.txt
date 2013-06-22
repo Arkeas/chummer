@@ -1,3 +1,10 @@
+Build 484
+- added support for <essencemax /> to the Improvement Manager which increases the character's maximum Essence
+- changed the Essence Custom Improvement to only affect the current value of the character's Essence as intended
+- characters now record their Essence when MAG/RES is added to them and use that point to determine Essence Penalties instead of basing it on the Metatype's maximum Essence value (corrects issues for Latent Technomancer/Latent Awakening)
+- fixed an issue where Melee Weapons would incorrectly believe they contained splash damage in their DVs and showed their DV formula instead of their calculated DV
+- changed how Weapons calculate their Ammo capacity to correct an issue with adding the Extended Clip Weapon Mod to Weapons that have multiple clips
+
 Build 483
 - undoing a Removed Negative Quality Expense now adds the Quality back to the character
 - only Skills from currently active sourcebooks are shown in the Skills list

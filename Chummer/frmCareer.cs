@@ -21572,12 +21572,12 @@ namespace Chummer
 
 				// Disable the Magic or Resonance Karma buttons if they have reached their current limits.
 				if (_objCharacter.MAGEnabled)
-					cmdImproveMAG.Enabled = !(_objCharacter.MAG.Value - intEssenceLoss >= _objCharacter.MAG.MetatypeMaximum + _objCharacter.InitiateGrade - _objCharacter.EssencePenalty);
+					cmdImproveMAG.Enabled = !(_objCharacter.MAG.Value - intEssenceLoss >= _objCharacter.MAG.TotalMaximum);
 				else
 					cmdImproveMAG.Enabled = false;
 
 				if (_objCharacter.RESEnabled)
-					cmdImproveRES.Enabled = !(_objCharacter.RES.Value - intEssenceLoss >= _objCharacter.RES.MetatypeMaximum + _objCharacter.SubmersionGrade - _objCharacter.EssencePenalty);
+					cmdImproveRES.Enabled = !(_objCharacter.RES.Value - intEssenceLoss >= _objCharacter.RES.TotalMaximum);
 				else
 					cmdImproveRES.Enabled = false;
 

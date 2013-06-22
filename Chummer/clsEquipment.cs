@@ -5673,7 +5673,7 @@ namespace Chummer
 			}
 
 			// Look for splash damage info.
-			if (strDamage.Contains("("))
+			if (strDamage.Contains("/m)"))
 			{
 				string strSplash = strDamage.Substring(strDamage.IndexOf("("), strDamage.IndexOf(")") - strDamage.IndexOf("(") + 1);
 				strDamageExtra += " " + strSplash;
@@ -5881,9 +5881,11 @@ namespace Chummer
 		/// </summary>
 		public string CalculatedAmmo(bool blnForceEnglish = false)
 		{
-			int intAmmoBonus = 0;
-			string strReturn = _strAmmo;
+			string[] strSplit = new string[] { " " };
+			string[] strAmmos = _strAmmo.Split(strSplit, StringSplitOptions.None);
+			string strReturn = "";
 			bool blnAdditionalClip = false;
+			int intAmmoBonus = 0;
 
 			foreach (WeaponMod objMod in _lstWeaponMods)
 			{
@@ -5901,74 +5903,45 @@ namespace Chummer
 				intAmmoBonus += objMod.AmmoBonus;
 			}
 
-			if (intAmmoBonus != 0)
+			foreach (string strAmmo in strAmmos)
 			{
-				double dblBonus = Convert.ToDouble(intAmmoBonus, GlobalOptions.Instance.CultureInfo) / 100.0;
-				int intPos = 0;
-				int intLastPos = 0;
-				strReturn = "";
-				while (intPos > -1)
+				string strThisAmmo = strAmmo;
+				if (strThisAmmo.Contains("("))
 				{
-					intPos = _strAmmo.IndexOf("(", intPos, StringComparison.InvariantCulture);
-					if (intPos > 0)
+					int intAmmo = 0;
+					string strAmmoString = "";
+					string strPrepend = "";
+					try
 					{
-						string strSubstring = _strAmmo.Substring(intLastPos, intPos - intLastPos);
-						int intBreak = strSubstring.LastIndexOf(" ");
-						if (intBreak < 0)
-							intBreak = strSubstring.LastIndexOf("/");
-
-						int intValue = 0;
-						if (intBreak > -1)
+						strThisAmmo = strThisAmmo.Substring(0, strThisAmmo.IndexOf("("));
+						if (strThisAmmo.Contains("x"))
 						{
-							strReturn += strSubstring.Substring(0, intBreak + 1);
-							intValue = Convert.ToInt32(strSubstring.Substring(intBreak + 1));
+							strPrepend = strThisAmmo.Substring(0, strThisAmmo.IndexOf("x") + 1);
+							strThisAmmo = strThisAmmo.Substring(strThisAmmo.IndexOf("x") + 1, strThisAmmo.Length - (strThisAmmo.IndexOf("x") + 1));
 						}
-						else
-							intValue = Convert.ToInt32(strSubstring);
 
-						intValue += Convert.ToInt32(Math.Ceiling(Convert.ToDouble(intValue, GlobalOptions.Instance.CultureInfo) * dblBonus));
-						strReturn += intValue.ToString();
-						intLastPos = intPos;
-						intPos++;
-					}
-				}
-				strReturn += _strAmmo.Substring(intLastPos, _strAmmo.Length - intLastPos);
-			}
-
-			// If this is an Underbarrel Weapon, halve the ammo quantity. This only applies to Underbarrel Weapons that are not included as part of the parent Weapon by default.
-			if (_blnUnderbarrel && !_blnIncludedInWeapon)
-			{
-				string[] strSplit = new string[] { " " };
-				string[] strAmmos = strReturn.Split(strSplit, StringSplitOptions.None);
-				strReturn = "";
-				foreach (string strAmmo in strAmmos)
-				{
-					string strThisAmmo = strAmmo;
-					if (strThisAmmo.Contains("("))
-					{
-						int intAmmo = 0;
-						string strAmmoString = "";
-						string strPrepend = "";
-						try
-						{
-							strThisAmmo = strThisAmmo.Substring(0, strThisAmmo.IndexOf("("));
-							if (strThisAmmo.Contains("x"))
-							{
-								strPrepend = strThisAmmo.Substring(0, strThisAmmo.IndexOf("x") + 1);
-								strThisAmmo = strThisAmmo.Substring(strThisAmmo.IndexOf("x") + 1, strThisAmmo.Length - (strThisAmmo.IndexOf("x") + 1));
-							}
+						// If this is an Underbarrel Weapons that has been added, cut the Ammo capacity in half.
+						if (IsUnderbarrelWeapon && !IncludedInWeapon)
 							intAmmo = Convert.ToInt32(strThisAmmo) / 2;
-							strAmmoString = intAmmo.ToString();
-							if (strPrepend != "")
-								strAmmoString = strPrepend + strAmmoString;
-						}
-						catch
+						else
+							intAmmo = Convert.ToInt32(strThisAmmo);
+
+						if (intAmmoBonus != 0)
 						{
+							double dblBonus = Convert.ToDouble(intAmmoBonus, GlobalOptions.Instance.CultureInfo) / 100.0;
+							intAmmo += Convert.ToInt32(Math.Ceiling(Convert.ToDouble(intAmmo, GlobalOptions.Instance.CultureInfo) * dblBonus));
 						}
-						strThisAmmo = strAmmoString + strAmmo.Substring(strAmmo.IndexOf("("), strAmmo.Length - strAmmo.IndexOf("("));
+
+						strAmmoString = intAmmo.ToString();
+						if (strPrepend != "")
+							strAmmoString = strPrepend + strAmmoString;
 					}
-					strReturn += strThisAmmo + " ";
+					catch
+					{
+					}
+					strThisAmmo = strAmmoString + strAmmo.Substring(strAmmo.IndexOf("("), strAmmo.Length - strAmmo.IndexOf("("));
 				}
+				strReturn += strThisAmmo + " ";
 			}
 
 			// If the Additional Clip flag is on, increment the clip multiplier.
