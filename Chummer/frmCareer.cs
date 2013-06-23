@@ -3640,7 +3640,7 @@ namespace Chummer
 		private void nudMysticAdeptMAGMagician_ValueChanged(object sender, EventArgs e)
 		{
 			_objCharacter.MAGMagician = Convert.ToInt32(nudMysticAdeptMAGMagician.Value);
-			_objCharacter.MAGAdept = Convert.ToInt32(_objCharacter.MAG.TotalValue - nudMysticAdeptMAGMagician.Value);
+			_objCharacter.MAGAdept = Convert.ToInt32(_objCharacter.MAG.Value - nudMysticAdeptMAGMagician.Value - _objCharacter.EssencePenalty);
 
 			UpdateCharacterInfo();
 
@@ -21886,7 +21886,7 @@ namespace Chummer
 				int intCharacterMAG = _objCharacter.MAG.TotalValue;
 				if (_objCharacter.AdeptEnabled && _objCharacter.MagicianEnabled)
 				{
-					_objCharacter.MAGAdept = Convert.ToInt32(_objCharacter.MAG.TotalValue - nudMysticAdeptMAGMagician.Value);
+					_objCharacter.MAGAdept = Convert.ToInt32(_objCharacter.MAG.Value - nudMysticAdeptMAGMagician.Value - _objCharacter.EssencePenalty);
 					lblMysticAdeptMAGAdept.Text = _objCharacter.MAGAdept.ToString();
 					intCharacterMAG = _objCharacter.MAGMagician;
 				}
