@@ -17729,15 +17729,6 @@ namespace Chummer
 					}
 				}
 
-				// If the character has an Essence Penalty, this needs to be added as a positive value to the character's MAG/RES so that it's correctly shown in Career Mode.
-				if (_objCharacter.EssencePenalty > 0 && (_objCharacter.MAGEnabled || _objCharacter.RESEnabled))
-				{
-					if (_objCharacter.MAGEnabled)
-						_objCharacter.MAG.Value += _objCharacter.EssencePenalty;
-					if (_objCharacter.RESEnabled)
-						_objCharacter.RES.Value += _objCharacter.EssencePenalty;
-				}
-
 				_objCharacter.Save();
 				_blnIsDirty = false;
 				blnSaved = true;
@@ -17762,6 +17753,15 @@ namespace Chummer
 						objKarmaUndo.CreateKarma(KarmaExpenseType.ManualAdd, "");
 						objKarma.Undo = objKarmaUndo;
 					}
+				}
+
+				// If the character has an Essence Penalty, this needs to be added as a positive value to the character's MAG/RES so that it's correctly shown in Career Mode.
+				if (_objCharacter.EssencePenalty > 0 && (_objCharacter.MAGEnabled || _objCharacter.RESEnabled))
+				{
+					if (_objCharacter.MAGEnabled)
+						_objCharacter.MAG.Value += _objCharacter.EssencePenalty;
+					if (_objCharacter.RESEnabled)
+						_objCharacter.RES.Value += _objCharacter.EssencePenalty;
 				}
 
 				// Create an Expense Entry for Starting Nuyen.

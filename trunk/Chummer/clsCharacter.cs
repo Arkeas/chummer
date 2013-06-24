@@ -3355,7 +3355,7 @@ namespace Chummer
 			{
 				bool blnOldValue = _blnMAGEnabled;
 				_blnMAGEnabled = value;
-				if (value)
+				if (value && Created)
 					_decEssenceAtSpecialStart = Essence;
 				try
 				{
@@ -3456,7 +3456,7 @@ namespace Chummer
 			{
 				bool blnOldValue = _blnRESEnabled;
 				_blnRESEnabled = value;
-				if (value)
+				if (value && Created)
 					_decEssenceAtSpecialStart = Essence;
 				try
 				{
