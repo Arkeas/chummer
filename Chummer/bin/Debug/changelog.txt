@@ -1,3 +1,9 @@
+Build 487
+- changed when MAG/RES value is calculated when saving to Career Mode to hopefully get this working properly
+
+Build 486
+- Essence value when access to MAG/RES is gained is now only recorded in Career Mode as intended
+
 Build 485
 - fixed an issue where MAG/RES values are not saved correctly if the character has an Essence Penalty when moving to Career Mode
 - fixed an issue in Career Mode where the Magician/Adept MAG split was calculated based on Maximum MAG instead of actual MAG
