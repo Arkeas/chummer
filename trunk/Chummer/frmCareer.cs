@@ -21886,7 +21886,7 @@ namespace Chummer
 				int intCharacterMAG = _objCharacter.MAG.TotalValue;
 				if (_objCharacter.AdeptEnabled && _objCharacter.MagicianEnabled)
 				{
-					_objCharacter.MAGAdept = Convert.ToInt32(_objCharacter.MAG.Value - nudMysticAdeptMAGMagician.Value - _objCharacter.EssencePenalty);
+					_objCharacter.MAGAdept = Convert.ToInt32(_objCharacter.MAG.TotalValue - nudMysticAdeptMAGMagician.Value);
 					lblMysticAdeptMAGAdept.Text = _objCharacter.MAGAdept.ToString();
 					intCharacterMAG = _objCharacter.MAGMagician;
 				}
