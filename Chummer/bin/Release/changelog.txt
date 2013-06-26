@@ -1,3 +1,7 @@
+Build 489
+- fixed an issue where the Mystic Adept MAG split would apply Essence Penalties to the Adept portion of MAG a second time
+- fixed an issue where using Save As would not fix MAG/RES correctly before moving to Career Mode; Save and Save As now use the same code
+
 Build 488
 - corrected an issue where saving the character would not take regional number settings into consideration, causing Essence Penalties to be calculated incorrectly in regions that do not use "." to indicate decimal places
 

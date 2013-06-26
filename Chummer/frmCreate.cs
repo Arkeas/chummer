@@ -17739,46 +17739,7 @@ namespace Chummer
 			// If this character has just been saved as Created, close this form and re-open the character which will open it in the Career window instead.
 			if (blnSaved && chkCharacterCreated.Checked)
 			{
-				// If the character was built with Karma, record their staring Karma amount (if any).
-				if (_objCharacter.BuildMethod == CharacterBuildMethod.Karma)
-				{
-					if (_objCharacter.Karma > 0)
-					{
-						ExpenseLogEntry objKarma = new ExpenseLogEntry();
-						objKarma.Create(_objCharacter.Karma, "Starting Karma", ExpenseType.Karma, DateTime.Now);
-						_objCharacter.ExpenseEntries.Add(objKarma);
-
-						// Create an Undo entry so that the starting Karma amount can be modified if needed.
-						ExpenseUndo objKarmaUndo = new ExpenseUndo();
-						objKarmaUndo.CreateKarma(KarmaExpenseType.ManualAdd, "");
-						objKarma.Undo = objKarmaUndo;
-					}
-				}
-
-				// If the character has an Essence Penalty, this needs to be added as a positive value to the character's MAG/RES so that it's correctly shown in Career Mode.
-				if (_objCharacter.EssencePenalty > 0 && (_objCharacter.MAGEnabled || _objCharacter.RESEnabled))
-				{
-					if (_objCharacter.MAGEnabled)
-						_objCharacter.MAG.Value += _objCharacter.EssencePenalty;
-					if (_objCharacter.RESEnabled)
-						_objCharacter.RES.Value += _objCharacter.EssencePenalty;
-				}
-
-				// Create an Expense Entry for Starting Nuyen.
-				ExpenseLogEntry objNuyen = new ExpenseLogEntry();
-				objNuyen.Create(_objCharacter.Nuyen, "Starting Nuyen", ExpenseType.Nuyen, DateTime.Now);
-				_objCharacter.ExpenseEntries.Add(objNuyen);
-
-				// Create an Undo entry so that the Starting Nuyen amount can be modified if needed.
-				ExpenseUndo objNuyenUndo = new ExpenseUndo();
-				objNuyenUndo.CreateNuyen(NuyenExpenseType.ManualAdd, "");
-				objNuyen.Undo = objNuyenUndo;
-
-				_blnSkipToolStripRevert = true;
-				_objCharacter.Save();
-
-				GlobalOptions.Instance.MainForm.LoadCharacter(_objCharacter.FileName, false);
-				this.Close();
+				SaveCharacterAsCreated();
 			}
 
 			return blnSaved;
@@ -17829,32 +17790,57 @@ namespace Chummer
 			// If this character has just been saved as Created, close this form and re-open the character which will open it in the Career window instead.
 			if (blnSaved && chkCharacterCreated.Checked)
 			{
-				// If the character was built with Karma, record their staring Karma amount (if any).
-				if (_objCharacter.BuildMethod == CharacterBuildMethod.Karma)
-				{
-					if (_objCharacter.Karma > 0)
-					{
-						ExpenseLogEntry objKarma = new ExpenseLogEntry();
-						objKarma.Create(_objCharacter.Karma, "Starting Karma", ExpenseType.Karma, DateTime.Now);
-						_objCharacter.ExpenseEntries.Add(objKarma);
-					}
-				}
-
-				// Create an Expense Entry for Starting Nuyen.
-				ExpenseLogEntry objNuyen = new ExpenseLogEntry();
-				objNuyen.Create(_objCharacter.Nuyen, "Starting Nuyen", ExpenseType.Nuyen, DateTime.Now);
-				_objCharacter.ExpenseEntries.Add(objNuyen);
-				_blnSkipToolStripRevert = true;
-
-				frmCareer frmCharacter = new frmCareer(_objCharacter);
-				frmCharacter.MdiParent = this.MdiParent;
-				frmCharacter.WindowState = FormWindowState.Maximized;
-				frmCharacter.Loading = true;
-				frmCharacter.Show();
-				this.Close();
+				SaveCharacterAsCreated();
 			}
 
 			return blnSaved;
+		}
+
+		/// <summary>
+		/// Save the character as Created and re-open it in Career Mode.
+		/// </summary>
+		private void SaveCharacterAsCreated()
+		{
+			// If the character was built with Karma, record their staring Karma amount (if any).
+			if (_objCharacter.BuildMethod == CharacterBuildMethod.Karma)
+			{
+				if (_objCharacter.Karma > 0)
+				{
+					ExpenseLogEntry objKarma = new ExpenseLogEntry();
+					objKarma.Create(_objCharacter.Karma, "Starting Karma", ExpenseType.Karma, DateTime.Now);
+					_objCharacter.ExpenseEntries.Add(objKarma);
+
+					// Create an Undo entry so that the starting Karma amount can be modified if needed.
+					ExpenseUndo objKarmaUndo = new ExpenseUndo();
+					objKarmaUndo.CreateKarma(KarmaExpenseType.ManualAdd, "");
+					objKarma.Undo = objKarmaUndo;
+				}
+			}
+
+			// If the character has an Essence Penalty, this needs to be added as a positive value to the character's MAG/RES so that it's correctly shown in Career Mode.
+			if (_objCharacter.EssencePenalty > 0 && (_objCharacter.MAGEnabled || _objCharacter.RESEnabled))
+			{
+				if (_objCharacter.MAGEnabled)
+					_objCharacter.MAG.Value += _objCharacter.EssencePenalty;
+				if (_objCharacter.RESEnabled)
+					_objCharacter.RES.Value += _objCharacter.EssencePenalty;
+			}
+
+			// Create an Expense Entry for Starting Nuyen.
+			ExpenseLogEntry objNuyen = new ExpenseLogEntry();
+			objNuyen.Create(_objCharacter.Nuyen, "Starting Nuyen", ExpenseType.Nuyen, DateTime.Now);
+			_objCharacter.ExpenseEntries.Add(objNuyen);
+
+			// Create an Undo entry so that the Starting Nuyen amount can be modified if needed.
+			ExpenseUndo objNuyenUndo = new ExpenseUndo();
+			objNuyenUndo.CreateNuyen(NuyenExpenseType.ManualAdd, "");
+			objNuyen.Undo = objNuyenUndo;
+
+			_blnSkipToolStripRevert = true;
+			_objCharacter.Save();
+
+			GlobalOptions.Instance.MainForm.LoadCharacter(_objCharacter.FileName, false);
+			this.Close();
 		}
 
 		/// <summary>
