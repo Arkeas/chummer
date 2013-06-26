@@ -258,7 +258,7 @@ namespace Chummer
 			objWriter.WriteElementString("mutantcritterbaseskills", _intMutantCritterBaseSkills.ToString());
 
 			// <essenceatspecialstart />
-			objWriter.WriteElementString("essenceatspecialstart", _decEssenceAtSpecialStart.ToString());
+			objWriter.WriteElementString("essenceatspecialstart", Convert.ToDecimal(_decEssenceAtSpecialStart, GlobalOptions.Instance.CultureInfo).ToString());
 
 			// <name />
 			objWriter.WriteElementString("name", _strName);

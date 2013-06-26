@@ -1,3 +1,6 @@
+Build 488
+- corrected an issue where saving the character would not take regional number settings into consideration, causing Essence Penalties to be calculated incorrectly in regions that do not use "." to indicate decimal places
+
 Build 487
 - changed when MAG/RES value is calculated when saving to Career Mode to hopefully get this working properly
 
