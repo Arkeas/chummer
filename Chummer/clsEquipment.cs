@@ -5892,7 +5892,7 @@ namespace Chummer
 				// Replace the Ammo value.
 				if (objMod.AmmoReplace != "")
 				{
-					strReturn = objMod.AmmoReplace;
+					strAmmos = new string[] { objMod.AmmoReplace };
 					break;
 				}
 

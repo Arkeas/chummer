@@ -101,6 +101,7 @@
 			this.tabGeneral = new System.Windows.Forms.TabPage();
 			this.tabControl2 = new System.Windows.Forms.TabControl();
 			this.tabGlobal = new System.Windows.Forms.TabPage();
+			this.chkLocalisedUpdatesOnly = new System.Windows.Forms.CheckBox();
 			this.chkDatesIncludeTime = new System.Windows.Forms.CheckBox();
 			this.cmdPDFTest = new System.Windows.Forms.Button();
 			this.nudPDFOffset = new System.Windows.Forms.NumericUpDown();
@@ -275,7 +276,7 @@
 			this.lblSetting = new System.Windows.Forms.Label();
 			this.lblSettingName = new System.Windows.Forms.Label();
 			this.txtSettingName = new System.Windows.Forms.TextBox();
-			this.chkLocalisedUpdatesOnly = new System.Windows.Forms.CheckBox();
+			this.chkSpecialKarmaCost = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaComplexFormOption)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaMetamagic)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudKarmaInitiation)).BeginInit();
@@ -1087,6 +1088,17 @@
 			this.tabGlobal.Tag = "Tab_Options_Global";
 			this.tabGlobal.Text = "Global";
 			// 
+			// chkLocalisedUpdatesOnly
+			// 
+			this.chkLocalisedUpdatesOnly.AutoSize = true;
+			this.chkLocalisedUpdatesOnly.Location = new System.Drawing.Point(9, 130);
+			this.chkLocalisedUpdatesOnly.Name = "chkLocalisedUpdatesOnly";
+			this.chkLocalisedUpdatesOnly.Size = new System.Drawing.Size(254, 17);
+			this.chkLocalisedUpdatesOnly.TabIndex = 19;
+			this.chkLocalisedUpdatesOnly.Tag = "Checkbox_Options_LocalisedUpdatesOnly";
+			this.chkLocalisedUpdatesOnly.Text = "Only download updates in my selected language";
+			this.chkLocalisedUpdatesOnly.UseVisualStyleBackColor = true;
+			// 
 			// chkDatesIncludeTime
 			// 
 			this.chkDatesIncludeTime.AutoSize = true;
@@ -1459,6 +1471,7 @@
 			// tabPage1
 			// 
 			this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+			this.tabPage1.Controls.Add(this.chkSpecialKarmaCost);
 			this.tabPage1.Controls.Add(this.chkErgonomicProgramLimit);
 			this.tabPage1.Controls.Add(this.chkConfirmDelete);
 			this.tabPage1.Controls.Add(this.chkCalculateCommlinkResponse);
@@ -1479,7 +1492,7 @@
 			// chkErgonomicProgramLimit
 			// 
 			this.chkErgonomicProgramLimit.AutoSize = true;
-			this.chkErgonomicProgramLimit.Location = new System.Drawing.Point(6, 239);
+			this.chkErgonomicProgramLimit.Location = new System.Drawing.Point(6, 262);
 			this.chkErgonomicProgramLimit.Name = "chkErgonomicProgramLimit";
 			this.chkErgonomicProgramLimit.Size = new System.Drawing.Size(391, 17);
 			this.chkErgonomicProgramLimit.TabIndex = 16;
@@ -1490,7 +1503,7 @@
 			// chkCalculateCommlinkResponse
 			// 
 			this.chkCalculateCommlinkResponse.AutoSize = true;
-			this.chkCalculateCommlinkResponse.Location = new System.Drawing.Point(6, 216);
+			this.chkCalculateCommlinkResponse.Location = new System.Drawing.Point(6, 239);
 			this.chkCalculateCommlinkResponse.Name = "chkCalculateCommlinkResponse";
 			this.chkCalculateCommlinkResponse.Size = new System.Drawing.Size(350, 17);
 			this.chkCalculateCommlinkResponse.TabIndex = 8;
@@ -1512,7 +1525,7 @@
 			// chkAutomaticRegistration
 			// 
 			this.chkAutomaticRegistration.AutoSize = true;
-			this.chkAutomaticRegistration.Location = new System.Drawing.Point(6, 193);
+			this.chkAutomaticRegistration.Location = new System.Drawing.Point(6, 216);
 			this.chkAutomaticRegistration.Name = "chkAutomaticRegistration";
 			this.chkAutomaticRegistration.Size = new System.Drawing.Size(377, 17);
 			this.chkAutomaticRegistration.TabIndex = 7;
@@ -1534,7 +1547,7 @@
 			// chkAutomaticCopyProtection
 			// 
 			this.chkAutomaticCopyProtection.AutoSize = true;
-			this.chkAutomaticCopyProtection.Location = new System.Drawing.Point(6, 170);
+			this.chkAutomaticCopyProtection.Location = new System.Drawing.Point(6, 193);
 			this.chkAutomaticCopyProtection.Name = "chkAutomaticCopyProtection";
 			this.chkAutomaticCopyProtection.Size = new System.Drawing.Size(396, 17);
 			this.chkAutomaticCopyProtection.TabIndex = 6;
@@ -3049,16 +3062,16 @@
 			this.txtSettingName.Size = new System.Drawing.Size(190, 20);
 			this.txtSettingName.TabIndex = 3;
 			// 
-			// chkLocalisedUpdatesOnly
+			// chkSpecialKarmaCost
 			// 
-			this.chkLocalisedUpdatesOnly.AutoSize = true;
-			this.chkLocalisedUpdatesOnly.Location = new System.Drawing.Point(9, 130);
-			this.chkLocalisedUpdatesOnly.Name = "chkLocalisedUpdatesOnly";
-			this.chkLocalisedUpdatesOnly.Size = new System.Drawing.Size(254, 17);
-			this.chkLocalisedUpdatesOnly.TabIndex = 19;
-			this.chkLocalisedUpdatesOnly.Tag = "Checkbox_Options_LocalisedUpdatesOnly";
-			this.chkLocalisedUpdatesOnly.Text = "Only download updates in my selected language";
-			this.chkLocalisedUpdatesOnly.UseVisualStyleBackColor = true;
+			this.chkSpecialKarmaCost.AutoSize = true;
+			this.chkSpecialKarmaCost.Location = new System.Drawing.Point(6, 160);
+			this.chkSpecialKarmaCost.Name = "chkSpecialKarmaCost";
+			this.chkSpecialKarmaCost.Size = new System.Drawing.Size(373, 17);
+			this.chkSpecialKarmaCost.TabIndex = 17;
+			this.chkSpecialKarmaCost.Tag = "Checkbox_Options_SpecialKarmaCost";
+			this.chkSpecialKarmaCost.Text = "Karma cost for increasing Special Attributes is reduced with Essence Loss";
+			this.chkSpecialKarmaCost.UseVisualStyleBackColor = true;
 			// 
 			// frmOptions
 			// 
@@ -3416,5 +3429,6 @@
 		private System.Windows.Forms.CheckBox chkExtendAnyDetectionSpell;
 		private System.Windows.Forms.CheckBox chkPrintToFileFirst;
 		private System.Windows.Forms.CheckBox chkLocalisedUpdatesOnly;
+		private System.Windows.Forms.CheckBox chkSpecialKarmaCost;
 	}
 }

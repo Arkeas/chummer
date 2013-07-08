@@ -3,7 +3,7 @@
 	<file>
 		<name>chummer.exe</name>
 		<type>Application</type>
-		<version>0.0.0.489</version>
+		<version>0.0.0.490</version>
 		<description>Chummer</description>
 		<notes>- Chummer Application</notes>
 	</file>
@@ -108,7 +108,7 @@
 	<file>
 		<name>sheets/de/Shadowrun 4 Base.xslt</name>
 		<type>German Character Sheets</type>
-		<version>-890</version>
+		<version>-889</version>
 		<description>Shadowrun 4 Character Sheet Base</description>
 		<notes>- Character sheet based on the Shadowrun 4 sheet</notes>
 	</file>
@@ -143,7 +143,7 @@
 	<file>
 		<name>sheets/de/Vehicle Block.xsl</name>
 		<type>German Character Sheets</type>
-		<version>-994</version>
+		<version>-993</version>
 		<description>Vehicle Stat Block</description>
 		<notes>- Vehicle Stat Block</notes>
 	</file>

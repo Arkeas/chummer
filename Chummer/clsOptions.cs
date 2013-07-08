@@ -729,6 +729,7 @@ namespace Chummer
 		private bool _blnAutomaticCopyProtection = true;
 		private bool _blnAutomaticRegistration = true;
 		private bool _blnErgonomicProgramsLimit = true;
+		private bool _blnSpecialKarmaCostBasedOnShownValue = false;
 		private bool _blnExceedPositiveQualities = false;
 		private bool _blnExceedNegativeQualities = false;
 		private bool _blnExceedNegativeQualitiesLimit = false;
@@ -946,6 +947,8 @@ namespace Chummer
 			objWriter.WriteElementString("automaticregistration", _blnAutomaticRegistration.ToString());
 			// <ergonomicprogramlimit />
 			objWriter.WriteElementString("ergonomicprogramlimit", _blnErgonomicProgramsLimit.ToString());
+			// <specialkarmacostbasedonshownvalue />
+			objWriter.WriteElementString("specialkarmacostbasedonshownvalue", _blnSpecialKarmaCostBasedOnShownValue.ToString());
 			// <exceedpositivequalities />
 			objWriter.WriteElementString("exceedpositivequalities", _blnExceedPositiveQualities.ToString());
 			// <exceednegativequalities />
@@ -1335,6 +1338,14 @@ namespace Chummer
 			try
 			{
 				_blnErgonomicProgramsLimit = Convert.ToBoolean(objXmlDocument.SelectSingleNode("/settings/ergonomicprogramlimit").InnerText);
+			}
+			catch
+			{
+			}
+			// Whether or not Karma costs for increasing Special Attributes is based on the shown value instead of actual value.
+			try
+			{
+				_blnSpecialKarmaCostBasedOnShownValue = Convert.ToBoolean(objXmlDocument.SelectSingleNode("/settings/specialkarmacostbasedonshownvalue").InnerText);
 			}
 			catch
 			{
@@ -2592,6 +2603,21 @@ namespace Chummer
 			set
 			{
 				_blnErgonomicProgramsLimit = value;
+			}
+		}
+
+		/// <summary>
+		/// Whether or not the Karma cost for increasing Special Attributes is based on the shown value instead of actual value.
+		/// </summary>
+		public bool SpecialKarmaCostBasedOnShownValue
+		{
+			get
+			{
+				return _blnSpecialKarmaCostBasedOnShownValue;
+			}
+			set
+			{
+				_blnSpecialKarmaCostBasedOnShownValue = value;
 			}
 		}
 

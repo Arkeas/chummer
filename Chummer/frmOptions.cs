@@ -316,6 +316,7 @@ namespace Chummer
 			_objOptions.SpiritForceBasedOnTotalMAG = chkSpiritForceBasedOnTotalMAG.Checked;
 			_objOptions.SkillDefaultingIncludesModifiers = chkSkillDefaultingIncludesModifiers.Checked;
 			_objOptions.EnforceMaximumSkillRatingModifier = chkEnforceSkillMaximumModifiedRating.Checked;
+			_objOptions.SpecialKarmaCostBasedOnShownValue = chkSpecialKarmaCost.Checked;
 			_objOptions.CapSkillRating = chkCapSkillRating.Checked;
 			_objOptions.PrintExpenses = chkPrintExpenses.Checked;
 			_objOptions.FreeContacts = chkFreeKarmaContacts.Checked;
@@ -989,6 +990,16 @@ namespace Chummer
 			{
 			}
 			chkEnforceSkillMaximumModifiedRating.Checked = blnEnforceSkillMaximumModifiedRating;
+
+			bool blnSpecialKarmaCost = false;
+			try
+			{
+				blnSpecialKarmaCost = _objOptions.SpecialKarmaCostBasedOnShownValue;
+			}
+			catch
+			{
+			}
+			chkSpecialKarmaCost.Checked = blnSpecialKarmaCost;
 
 			bool blnCapSkillRating = false;
 			try
