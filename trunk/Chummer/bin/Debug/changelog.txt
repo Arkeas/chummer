@@ -1,3 +1,14 @@
+Build 490
+- corrected how Essence information is stored in regions that use something other than "." to separate decimal places would cause an error to be thrown
+- fixed an issue where ammoreplace values for Weapons were not being handled correctly
+- added an Option on the Miscellaneous tab: Karma cost for increasing Special Attributes is reduced with Essence Loss (see below)
+
+Karma cost for increasing Special Attributes is reduced with Essence Loss
+When the option is enabled, the Essence cost to improve MAG or RES is affected by Essence Loss. For example, the character an Essence Penalty of 1 and MAG of 3. Normally, Chummer calculates the cost based on its perceived MAG value of 4 (MAG 4 - Essence Penalty 1 = 3), meaning the cost of improving MAG would be for going from MAG 4 to MAG 5. With this option enabled, Chummer instead calculates the cost based on the shown value of 3, meaning the cost of improving MAG would be for going from MAG 3 to MAG 4. This only impacts Career Mode.
+
+New Strings
+- Checkbox_Options_SpecialKarmaCost
+
 Build 489
 - fixed an issue where the Mystic Adept MAG split would apply Essence Penalties to the Adept portion of MAG a second time
 - fixed an issue where using Save As would not fix MAG/RES correctly before moving to Career Mode; Save and Save As now use the same code

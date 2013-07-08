@@ -2,7 +2,7 @@
 <!-- この言語ファイルは AhonokoP が作成しました。連絡を取りたいときは"Dumpshock Forum"でAhonokoPにメッセージを送ってください -->
 <!-- Translated by AhonokoP. Contact me at "Dumpshock Forum" -->
 <chummer>
-	<version>-997</version>
+	<version>-996</version>
 	<name>日本語 (JP)</name>
 	<strings>
 		<!-- Common Strings -->
@@ -4966,6 +4966,10 @@
 			<text>自動的にアップデート</text>
 		</string>
 		<string>
+			<key>Checkbox_Options_LocalisedUpdatesOnly</key>
+			<text>選択した言語のアップデートのみをダウンロードする</text>
+		</string>
+		<string>
 			<key>Checkbox_Options_ConfirmDelete</key>
 			<text>アイテムの削除時に確認する</text>
 		</string>
@@ -5436,6 +5440,10 @@
 		<string>
 			<key>Checkbox_Option_PrintNotes</key>
 			<text>ノートを印刷</text>
+		</string>
+		<string>
+			<key>Checkbox_Option_PrintToFileFirst</key>
+			<text>Linux 上での印刷トラブルに対応させる</text>
 		</string>
 		<string>
 			<key>Label_Options_EssenceDecimals</key>

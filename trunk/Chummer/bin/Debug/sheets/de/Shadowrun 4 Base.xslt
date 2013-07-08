@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Character sheet based on the Shadowrun 4th Edition Character Sheet -->
 <!-- Created by Keith Rudolph, krudolph@gmail.com -->
-<!-- Version -890 -->
+<!-- Version -889 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
 	<xsl:include href="ConditionMonitor.xslt"/>
 	<xsl:template match="/characters/character">
@@ -252,7 +252,7 @@
 									<td width="10%">
 										<xsl:value-of select="composure" />
 									</td>
-									<td width="10%">Menschenkentnis:</td>
+									<td width="10%">Menschenkenntnis:</td>
 									<td width="10%">
 										<xsl:value-of select="judgeintentions" />
 									</td>

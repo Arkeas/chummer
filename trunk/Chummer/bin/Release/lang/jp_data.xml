@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- translated by AhonokoP. If you want to sent me a message, contact me at "Dumpshock Forum" -->
 <chummer>
-	<version>-998</version>
+	<version>-997</version>
 	<chummer file="armor.xml">
 		<categories>
 			<category translate="防具">Armor</category>
@@ -257,7 +257,7 @@
 				<page>67</page>
 			</bioware>
 			<bioware>
-				<name>Chloroplash Skin</name>
+				<name>Chloroplast Skin</name>
 				<translate>葉緑化皮膚</translate>
 				<page>67</page>
 			</bioware>
@@ -2529,6 +2529,11 @@
 				<translate>SEIES</translate>
 				<page>167</page>
 			</cyberware>
+			<cyberware>
+				<name>Cranial Containment Unit</name>
+				<translate>脳格納ユニット</translate>
+				<page>174</page>
+			</cyberware>
 		</cyberwares>
 		<suites>
 			<suite>
@@ -2665,6 +2670,7 @@
 			<category translate="サンプル機器">Peripherals</category>
 			<category translate="医薬品">Pharmaceuticals</category>
 			<category translate="プログラム・オプション">Program Options</category>
+			<category translate="原質">Reagents</category>
 			<category translate="RFID タグ">RFID Tags</category>
 			<category translate="拘束具">Security Devices</category>
 			<category translate="センサーの機能">Sensor Functions</category>
@@ -4851,6 +4857,381 @@
 				<name>Cutting Edge Peripheral</name>
 				<translate>機器: 最先端</translate>
 				<page>272</page>
+			</gear>
+			<gear>
+				<name>Animal Blood, Raw</name>
+				<translate>動物性原質 血液, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Blood, Refined</name>
+				<translate>動物性原質 血液, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Blood, Radical</name>
+				<translate>動物性原質 血液, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Fur, Raw</name>
+				<translate>動物性原質 毛皮, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Fur, Refined</name>
+				<translate>動物性原質 毛皮, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Fur, Radical</name>
+				<translate>動物性原質 毛皮, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Scales, Raw</name>
+				<translate>動物性原質 鱗, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Scales, Refined</name>
+				<translate>動物性原質 鱗, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Scales, Radical</name>
+				<translate>動物性原質 鱗, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Skin, Raw</name>
+				<translate>動物性原質 皮膚, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Skin, Refined</name>
+				<translate>動物性原質 皮膚, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Skin, Radical</name>
+				<translate>動物性原質 皮膚, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Silk, Raw</name>
+				<translate>動物性原質 絹, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Silk, Refined</name>
+				<translate>動物性原質 絹, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Silk, Radical</name>
+				<translate>動物性原質 絹, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Intact Pelt, Raw</name>
+				<translate>動物性原質 損傷のない生皮, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Intact Pelt, Refined</name>
+				<translate>動物性原質 損傷のない生皮, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Intact Pelt, Radical</name>
+				<translate>動物性原質 損傷のない生皮, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Ivory, Raw</name>
+				<translate>動物性原質 牙, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Ivory, Refined</name>
+				<translate>動物性原質 牙, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Ivory, Radical</name>
+				<translate>動物性原質 牙, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Venom, Raw</name>
+				<translate>動物性原質 毒, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Venom, Refined</name>
+				<translate>動物性原質 毒, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Animal Venom, Radical</name>
+				<translate>動物性原質 毒, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Sap, Raw</name>
+				<translate>植物性原質 樹液, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Sap, Refined</name>
+				<translate>植物性原質 樹液, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Sap, Radical</name>
+				<translate>植物性原質 樹液, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Petals, Raw</name>
+				<translate>植物性原質 花弁, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Petals, Refined</name>
+				<translate>植物性原質 花弁, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Petals, Radical</name>
+				<translate>植物性原質 花弁, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Leaves, Raw</name>
+				<translate>植物性原質 葉, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Leaves, Refined</name>
+				<translate>植物性原質 葉, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Leavs, Radical</name>
+				<translate>植物性原質 葉, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Bark, Raw</name>
+				<translate>植物性原質 樹皮, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Bark, Refined</name>
+				<translate>植物性原質 樹皮, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Bark, Radical</name>
+				<translate>植物性原質 樹皮, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Cotton, Raw</name>
+				<translate>植物性原質 綿, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Cotton, Refined</name>
+				<translate>植物性原質 綿, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Cotton, Radical</name>
+				<translate>植物性原質 綿, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Fruit, Raw</name>
+				<translate>植物性原質 果実, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Fruit, Refined</name>
+				<translate>植物性原質 果実, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Fruit, Radical</name>
+				<translate>植物性原質 果実, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Rare Hardwood, Raw</name>
+				<translate>植物性原質 希少な広葉樹材, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Rare Hardwood, Refined</name>
+				<translate>植物性原質 希少な広葉樹材, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Herbal Rare Hardwood, Radical</name>
+				<translate>植物性原質 希少な広葉樹材, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Metal Iron, Raw</name>
+				<translate>金属製原質 鉄, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Metal Iron, Refined</name>
+				<translate>金属製原質 鉄, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Metal Iron, Radical</name>
+				<translate>金属製原質 鉄, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Metal Copper, Raw</name>
+				<translate>金属製原質 銅, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Metal Copper, Refined</name>
+				<translate>金属製原質 銅, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Metal Copper, Radical</name>
+				<translate>金属製原質 銅, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Metal Silver, Raw</name>
+				<translate>金属製原質 銀, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Metal Silver, Refined</name>
+				<translate>金属製原質 銀, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Metal Silver, Radical</name>
+				<translate>金属製原質 銀, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Metal Mercury, Raw</name>
+				<translate>金属製原質 水銀, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Metal Mercury, Refined</name>
+				<translate>金属製原質 水銀, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Metal Mercury, Radical</name>
+				<translate>金属製原質 水銀, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Metal Gold, Raw</name>
+				<translate>金属製原質 金, 生</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Metal Gold, Refined</name>
+				<translate>金属製原質 金, 精錬</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Metal Gold, Radical</name>
+				<translate>金属製原質 金, 活性</translate>
+				<page>185</page>
+			</gear>
+			<gear>
+				<name>Mineral Crystal, Raw</name>
+				<translate>鉱物性原質 水晶, 生</translate>
+				<page>201</page>
+			</gear>
+			<gear>
+				<name>Mineral Crystal, Refined</name>
+				<translate>鉱物性原質 水晶, 精錬</translate>
+				<page>201</page>
+			</gear>
+			<gear>
+				<name>Mineral Crystal, Radical</name>
+				<translate>鉱物性原質 水晶, 活性</translate>
+				<page>201</page>
+			</gear>
+			<gear>
+				<name>Mineral Fossil, Raw</name>
+				<translate>鉱物性原質 化石, 生</translate>
+				<page>201</page>
+			</gear>
+			<gear>
+				<name>Mineral Fossil, Refined</name>
+				<translate>鉱物性原質 化石, 精錬</translate>
+				<page>201</page>
+			</gear>
+			<gear>
+				<name>Mineral Fossil, Radical</name>
+				<translate>鉱物性原質 化石, 活性</translate>
+				<page>201</page>
+			</gear>
+			<gear>
+				<name>Mineral Obsidian, Raw</name>
+				<translate>鉱物性原質 黒曜石, 生</translate>
+				<page>201</page>
+			</gear>
+			<gear>
+				<name>Mineral Obsidian, Refined</name>
+				<translate>鉱物性原質 黒曜石, 精錬</translate>
+				<page>201</page>
+			</gear>
+			<gear>
+				<name>Mineral Obsidian, Radical</name>
+				<translate>鉱物性原質 黒曜石, 活性</translate>
+				<page>201</page>
+			</gear>
+			<gear>
+				<name>Mineral Semi-Precious Gem, Raw</name>
+				<translate>鉱物性原質 半貴石, 生</translate>
+				<page>201</page>
+			</gear>
+			<gear>
+				<name>Mineral Semi-Precious Gem, Refined</name>
+				<translate>鉱物性原質 半貴石, 精錬</translate>
+				<page>201</page>
+			</gear>
+			<gear>
+				<name>Mineral Semi-Precious Gem, Radical</name>
+				<translate>鉱物性原質 半貴石, 活性</translate>
+				<page>201</page>
+			</gear>
+			<gear>
+				<name>Mineral Precious Gem, Raw</name>
+				<translate>鉱物性原質 貴石, 生</translate>
+				<page>201</page>
+			</gear>
+			<gear>
+				<name>Mineral Precious Gem, Refined</name>
+				<translate>鉱物性原質 貴石, 精錬</translate>
+				<page>201</page>
+			</gear>
+			<gear>
+				<name>Mineral Precious Gem, Radical</name>
+				<translate>鉱物性原質 貴石, 活性</translate>
+				<page>201</page>
 			</gear>
 		</gears>
 	</chummer>

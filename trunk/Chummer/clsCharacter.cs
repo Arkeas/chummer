@@ -258,7 +258,7 @@ namespace Chummer
 			objWriter.WriteElementString("mutantcritterbaseskills", _intMutantCritterBaseSkills.ToString());
 
 			// <essenceatspecialstart />
-			objWriter.WriteElementString("essenceatspecialstart", Convert.ToDecimal(_decEssenceAtSpecialStart, GlobalOptions.Instance.CultureInfo).ToString());
+			objWriter.WriteElementString("essenceatspecialstart", _decEssenceAtSpecialStart.ToString(GlobalOptions.Instance.CultureInfo));
 
 			// <name />
 			objWriter.WriteElementString("name", _strName);
@@ -754,6 +754,9 @@ namespace Chummer
 			try
 			{
 				_decEssenceAtSpecialStart = Convert.ToDecimal(objXmlCharacter["essenceatspecialstart"].InnerText, GlobalOptions.Instance.CultureInfo);
+				// fix to work around a mistake made when saving decimal values in previous versions.
+				if (_decEssenceAtSpecialStart > EssenceMaximum)
+					_decEssenceAtSpecialStart /= 10;
 			}
 			catch
 			{

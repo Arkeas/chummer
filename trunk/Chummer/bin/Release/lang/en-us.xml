@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <chummer>
-	<version>-905</version>
+	<version>-904</version>
 	<name>English (US)</name>
 	<strings>
 		<!-- Common Strings -->
@@ -5339,6 +5339,10 @@ Only one attribute may be at its Maximum value during character creation.</text>
 		<string>
 			<key>Checkbox_Options_ErgonomicProgramLimit</key>
 			<text>Ergonomic Programs do not affect a Commlink's effective Response (UN 114)</text>
+		</string>
+		<string>
+			<key>Checkbox_Options_SpecialKarmaCost</key>
+			<text>Karma cost for increasing Special Attributes is reduced with Essence Loss</text>
 		</string>
 		<string>
 			<key>Checkbox_Options_UseRestrictionsToRecoilCompensation</key>
